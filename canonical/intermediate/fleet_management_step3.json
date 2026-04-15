@@ -1,0 +1,5103 @@
+{
+  "module": "fleet_management",
+  "module_name": "Fleet Management",
+  "stats": {
+    "haiku_calls": 25,
+    "total_merged_reqs": 180,
+    "feature_haiku_calls": 25,
+    "rank_haiku_calls": 25
+  },
+  "capabilities": [
+    {
+      "id": "fleet.vehicle_register",
+      "name": "Vehicle & Asset Register",
+      "description": "Central master record for every vehicle and mobile asset in the fleet, with make, model, VIN, registration, insurance, and document storage.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo_fleet",
+        "fleetio",
+        "chevin_fleetwave",
+        "sap_vehicle",
+        "wikipedia_fleet"
+      ],
+      "requirements": [
+        {
+          "text": "Maintain vehicle master record with make, model, year, VIN, and registration number",
+          "source": "both",
+          "proxy_refs": [
+            "Vehicle master with make, model, year, and VIN",
+            "Registration number and expiry date tracking"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00957",
+              "text": "Organisation to automate the entire process of registering vehicles, capturing vehicle details (e.g. licence plate number, driver details, contact number) and managing carpark control for access to the organisation's premise",
+              "q_title": "Vehicle Registration",
+              "subsection": "Vehicle Registration",
+              "sources": [
+                "security__automated-visitor-management"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [
+            "security__automated-visitor-management"
+          ],
+          "feature_id": "vehicle_register.master_record",
+          "feature_name": "Vehicle Master Record",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Track registration expiry date and renewal status",
+          "source": "both",
+          "proxy_refs": [
+            "Registration number and expiry date tracking"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00957",
+              "text": "Organisation to automate the entire process of registering vehicles, capturing vehicle details (e.g. licence plate number, driver details, contact number) and managing carpark control for access to the organisation's premise",
+              "q_title": "Vehicle Registration",
+              "subsection": "Vehicle Registration",
+              "sources": [
+                "security__automated-visitor-management"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [
+            "security__automated-visitor-management"
+          ],
+          "feature_id": "vehicle_register.compliance_tracking",
+          "feature_name": "Compliance & Insurance Tracking",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Record insurance policy details including policy number, provider, and renewal date",
+          "source": "proxy",
+          "proxy_refs": [
+            "Insurance policy number, provider, and renewal date"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "vehicle_register.compliance_tracking",
+          "feature_name": "Compliance & Insurance Tracking",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Manage vehicle status lifecycle including ordered, active, in repair, and disposed states",
+          "source": "proxy",
+          "proxy_refs": [
+            "Vehicle status lifecycle (ordered, active, in repair, disposed)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "vehicle_register.lifecycle_management",
+          "feature_name": "Lifecycle & Status Management",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Support custom vehicle categories and tags for fleet segmentation and classification",
+          "source": "proxy",
+          "proxy_refs": [
+            "Custom categories and tags for fleet segmentation"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "vehicle_register.classification",
+          "feature_name": "Classification & Segmentation",
+          "criticality": "standard"
+        },
+        {
+          "text": "Store engine specifications including horsepower, fuel type, and CO2 emissions rating",
+          "source": "proxy",
+          "proxy_refs": [
+            "Engine specs: horsepower, fuel type, CO2 rating"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "vehicle_register.master_record",
+          "feature_name": "Vehicle Master Record",
+          "criticality": "standard"
+        },
+        {
+          "text": "Maintain document repository for service records, warranties, and compliance documentation",
+          "source": "proxy",
+          "proxy_refs": [
+            "Document repository for service records and warranties"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "vehicle_register.documentation",
+          "feature_name": "Documentation & Records",
+          "criticality": "standard"
+        },
+        {
+          "text": "Capture and maintain driver details and contact information linked to vehicles",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00957",
+              "text": "Organisation to automate the entire process of registering vehicles, capturing vehicle details (e.g. licence plate number, driver details, contact number) and managing carpark control for access to the organisation's premise",
+              "q_title": "Vehicle Registration",
+              "subsection": "Vehicle Registration",
+              "sources": [
+                "security__automated-visitor-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "security__automated-visitor-management"
+          ],
+          "feature_id": "vehicle_register.classification",
+          "feature_name": "Classification & Segmentation",
+          "criticality": "standard"
+        },
+        {
+          "text": "Capture and store vehicle photos and condition logs with historical tracking",
+          "source": "proxy",
+          "proxy_refs": [
+            "Photo and condition log per vehicle"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "vehicle_register.documentation",
+          "feature_name": "Documentation & Records",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Support automated vehicle registration workflow and data capture process",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00957",
+              "text": "Organisation to automate the entire process of registering vehicles, capturing vehicle details (e.g. licence plate number, driver details, contact number) and managing carpark control for access to the organisation's premise",
+              "q_title": "Vehicle Registration",
+              "subsection": "Vehicle Registration",
+              "sources": [
+                "security__automated-visitor-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "security__automated-visitor-management"
+          ],
+          "feature_id": "vehicle_register.data_capture",
+          "feature_name": "Automated Data Capture",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 8,
+        "imda_in": 1,
+        "merged_out": 10
+      },
+      "features": [
+        {
+          "id": "vehicle_register.master_record",
+          "name": "Vehicle Master Record",
+          "description": "Core vehicle identification and specifications including make, model, VIN, registration, and engine details.",
+          "req_idxs": [
+            0,
+            5
+          ]
+        },
+        {
+          "id": "vehicle_register.compliance_tracking",
+          "name": "Compliance & Insurance Tracking",
+          "description": "Monitor registration and insurance expiry dates, renewal status, and policy details.",
+          "req_idxs": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "vehicle_register.lifecycle_management",
+          "name": "Lifecycle & Status Management",
+          "description": "Track vehicle status transitions from ordered through active, repair, and disposal states.",
+          "req_idxs": [
+            3
+          ]
+        },
+        {
+          "id": "vehicle_register.classification",
+          "name": "Classification & Segmentation",
+          "description": "Apply custom categories, tags, and driver assignments for fleet organization and reporting.",
+          "req_idxs": [
+            4,
+            8
+          ]
+        },
+        {
+          "id": "vehicle_register.documentation",
+          "name": "Documentation & Records",
+          "description": "Store and manage service records, warranties, compliance documents, photos, and condition logs with history.",
+          "req_idxs": [
+            6,
+            7
+          ]
+        },
+        {
+          "id": "vehicle_register.data_capture",
+          "name": "Automated Data Capture",
+          "description": "Support automated workflows for vehicle registration and master data entry.",
+          "req_idxs": [
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.driver_management",
+      "name": "Driver Management",
+      "description": "Maintain driver records including licence details, training history, and vehicle assignment — ensuring the right driver is in the right vehicle with valid credentials.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo_fleet",
+        "samsara",
+        "verizon_connect",
+        "fleetio",
+        "wikipedia_fleet"
+      ],
+      "requirements": [
+        {
+          "text": "Maintain driver master records including licence class, licence number, and licence expiry date",
+          "source": "proxy",
+          "proxy_refs": [
+            "Driver master with licence class, number, and expiry"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "driver_management.driver_records",
+          "feature_name": "Driver Records",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Assign drivers to vehicles with effective date tracking",
+          "source": "proxy",
+          "proxy_refs": [
+            "Assign driver to vehicle with effective date"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "driver_management.driver_assignment",
+          "feature_name": "Driver Assignment",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Record and maintain training and certification history per driver",
+          "source": "proxy",
+          "proxy_refs": [
+            "Training and certification records per driver"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "driver_management.training_compliance",
+          "feature_name": "Training & Compliance",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Generate licence renewal reminders and compliance alerts based on expiry dates",
+          "source": "proxy",
+          "proxy_refs": [
+            "Licence renewal reminders and compliance alerts"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "driver_management.training_compliance",
+          "feature_name": "Training & Compliance",
+          "criticality": "must_have"
+        },
+        {
+          "text": "View scheduled next driver assignment for handover planning",
+          "source": "proxy",
+          "proxy_refs": [
+            "View scheduled next driver for handover planning"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "driver_management.driver_assignment",
+          "feature_name": "Driver Assignment",
+          "criticality": "standard"
+        },
+        {
+          "text": "Track driver availability and leave status",
+          "source": "proxy",
+          "proxy_refs": [
+            "Driver availability and leave tracking"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "driver_management.availability_management",
+          "feature_name": "Availability Management",
+          "criticality": "standard"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 6
+      },
+      "features": [
+        {
+          "id": "driver_management.driver_records",
+          "name": "Driver Records",
+          "description": "Maintain core driver master data including licence details and credentials.",
+          "req_idxs": [
+            0
+          ]
+        },
+        {
+          "id": "driver_management.driver_assignment",
+          "name": "Driver Assignment",
+          "description": "Assign drivers to vehicles with effective date tracking and handover planning.",
+          "req_idxs": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "driver_management.training_compliance",
+          "name": "Training & Compliance",
+          "description": "Track training history, certifications, and generate licence renewal alerts.",
+          "req_idxs": [
+            3,
+            4
+          ]
+        },
+        {
+          "id": "driver_management.availability_management",
+          "name": "Availability Management",
+          "description": "Monitor driver availability and leave status for scheduling.",
+          "req_idxs": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.fuel_management",
+      "name": "Fuel Management",
+      "description": "Record fuel purchases, track consumption per vehicle, and calculate cost per kilometre to identify waste and optimise fuel spend.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo_fleet",
+        "fleetio",
+        "samsara",
+        "verizon_connect",
+        "wikipedia_fleet"
+      ],
+      "requirements": [
+        {
+          "text": "Record fuel purchases with date, volume (litres), cost, and odometer reading",
+          "source": "proxy",
+          "proxy_refs": [
+            "Fuel log with date, litres, cost, and odometer reading"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "fuel_management.fuel_purchase_recording",
+          "feature_name": "Fuel Purchase Recording",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Calculate fuel consumption in standard units (litres per 100 km or km per litre)",
+          "source": "proxy",
+          "proxy_refs": [
+            "Fuel consumption calculation (L/100km or km/L)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "fuel_management.fuel_consumption_analysis",
+          "feature_name": "Fuel Consumption Analysis",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Calculate and report cost per kilometre for each vehicle",
+          "source": "proxy",
+          "proxy_refs": [
+            "Cost per kilometre per vehicle"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "fuel_management.fuel_consumption_analysis",
+          "feature_name": "Fuel Consumption Analysis",
+          "criticality": "standard"
+        },
+        {
+          "text": "Integrate with fuel card systems to automatically import transaction data",
+          "source": "proxy",
+          "proxy_refs": [
+            "Fuel card integration and transaction import"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "fuel_management.fuel_data_integration",
+          "feature_name": "Fuel Data Integration & Monitoring",
+          "criticality": "standard"
+        },
+        {
+          "text": "Track fuel type by transaction (petrol, diesel, electric charge)",
+          "source": "proxy",
+          "proxy_refs": [
+            "Fuel type tracking (petrol, diesel, EV charge)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "fuel_management.fuel_purchase_recording",
+          "feature_name": "Fuel Purchase Recording",
+          "criticality": "standard"
+        },
+        {
+          "text": "Generate alerts for anomalous fuel consumption patterns or spikes",
+          "source": "proxy",
+          "proxy_refs": [
+            "Anomaly alerts for unusual consumption spikes"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "fuel_management.fuel_data_integration",
+          "feature_name": "Fuel Data Integration & Monitoring",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 6
+      },
+      "features": [
+        {
+          "id": "fuel_management.fuel_purchase_recording",
+          "name": "Fuel Purchase Recording",
+          "description": "Capture and store fuel purchase transactions with volume, cost, and vehicle odometer data.",
+          "req_idxs": [
+            0,
+            4
+          ]
+        },
+        {
+          "id": "fuel_management.fuel_consumption_analysis",
+          "name": "Fuel Consumption Analysis",
+          "description": "Calculate and report fuel efficiency metrics and cost per kilometre for vehicles.",
+          "req_idxs": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "fuel_management.fuel_data_integration",
+          "name": "Fuel Data Integration & Monitoring",
+          "description": "Integrate fuel card systems and detect anomalous consumption patterns.",
+          "req_idxs": [
+            3,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.maintenance_scheduling",
+      "name": "Preventive Maintenance Scheduling",
+      "description": "Define service intervals by time or mileage, auto-generate upcoming service reminders, and ensure no vehicle misses a scheduled service.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo_fleet",
+        "fleetio",
+        "chevin_fleetwave",
+        "sap_vehicle"
+      ],
+      "requirements": [
+        {
+          "text": "Define service interval rules based on distance (kilometers), engine hours, or calendar days",
+          "source": "proxy",
+          "proxy_refs": [
+            "Service interval rules by km, hours, or calendar days"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "maintenance_scheduling.interval_definition",
+          "feature_name": "Interval Definition",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Automatically generate service reminders and alerts when vehicles approach scheduled maintenance intervals",
+          "source": "proxy",
+          "proxy_refs": [
+            "Auto-generated service reminders and alerts"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "maintenance_scheduling.reminder_alerts",
+          "feature_name": "Reminder & Alerts",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Maintain a complete service history log recording date, service type, vendor, and cost for each vehicle",
+          "source": "proxy",
+          "proxy_refs": [
+            "Service history log with date, type, vendor, and cost"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "maintenance_scheduling.service_history",
+          "feature_name": "Service History & Records",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Escalate notifications for overdue services to prevent vehicles from operating without required maintenance",
+          "source": "proxy",
+          "proxy_refs": [
+            "Overdue service escalation notifications"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "maintenance_scheduling.reminder_alerts",
+          "feature_name": "Reminder & Alerts",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Support multi-point inspection checklists to standardize preventive maintenance procedures",
+          "source": "proxy",
+          "proxy_refs": [
+            "Multi-point inspection checklists"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "maintenance_scheduling.service_history",
+          "feature_name": "Service History & Records",
+          "criticality": "standard"
+        },
+        {
+          "text": "Display upcoming maintenance schedule in calendar view for visibility and planning",
+          "source": "proxy",
+          "proxy_refs": [
+            "Upcoming maintenance calendar view"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "maintenance_scheduling.schedule_visibility",
+          "feature_name": "Schedule Visibility",
+          "criticality": "standard"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 6
+      },
+      "features": [
+        {
+          "id": "maintenance_scheduling.interval_definition",
+          "name": "Interval Definition",
+          "description": "Define service interval rules based on distance, engine hours, or calendar days.",
+          "req_idxs": [
+            0
+          ]
+        },
+        {
+          "id": "maintenance_scheduling.reminder_alerts",
+          "name": "Reminder & Alerts",
+          "description": "Generate service reminders and escalate notifications for approaching or overdue maintenance.",
+          "req_idxs": [
+            1,
+            5
+          ]
+        },
+        {
+          "id": "maintenance_scheduling.service_history",
+          "name": "Service History & Records",
+          "description": "Maintain complete service history logs and multi-point inspection checklists.",
+          "req_idxs": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": "maintenance_scheduling.schedule_visibility",
+          "name": "Schedule Visibility",
+          "description": "Display upcoming maintenance schedule in calendar view for planning and coordination.",
+          "req_idxs": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.maintenance_work_orders",
+      "name": "Maintenance Work Orders",
+      "description": "Create, assign, and track repair and maintenance work orders from request through completion, including parts, labour, and cost.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "fleetio",
+        "chevin_fleetwave",
+        "sap_vehicle"
+      ],
+      "requirements": [
+        {
+          "text": "Create work orders with vehicle identification, issue description, and priority level",
+          "source": "proxy",
+          "proxy_refs": [
+            "Work order with vehicle, issue description, and priority"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "maintenance_work_orders.wo_creation",
+          "feature_name": "Work Order Creation",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Assign work orders to internal mechanics or external service providers",
+          "source": "proxy",
+          "proxy_refs": [
+            "Assign to internal mechanic or external workshop"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "maintenance_work_orders.wo_assignment",
+          "feature_name": "Work Order Assignment",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Track work order lifecycle status including open, in progress, and complete states",
+          "source": "proxy",
+          "proxy_refs": [
+            "Track work order status (open, in progress, complete)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "maintenance_work_orders.wo_tracking",
+          "feature_name": "Work Order Tracking",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Record parts consumed and labour hours expended per work order",
+          "source": "proxy",
+          "proxy_refs": [
+            "Parts used and labour hours per work order"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "maintenance_work_orders.wo_costs",
+          "feature_name": "Cost & Resource Tracking",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Calculate and aggregate total repair costs by vehicle",
+          "source": "proxy",
+          "proxy_refs": [
+            "Total repair cost rolled up per vehicle"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "maintenance_work_orders.wo_costs",
+          "feature_name": "Cost & Resource Tracking",
+          "criticality": "standard"
+        },
+        {
+          "text": "Link work orders to warranty claims when applicable",
+          "source": "proxy",
+          "proxy_refs": [
+            "Link to warranty claim if applicable"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "maintenance_work_orders.wo_warranty",
+          "feature_name": "Warranty Integration",
+          "criticality": "standard"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 6
+      },
+      "features": [
+        {
+          "id": "maintenance_work_orders.wo_creation",
+          "name": "Work Order Creation",
+          "description": "Create and document maintenance work orders with vehicle details, issue descriptions, and priority classification.",
+          "req_idxs": [
+            0
+          ]
+        },
+        {
+          "id": "maintenance_work_orders.wo_assignment",
+          "name": "Work Order Assignment",
+          "description": "Assign work orders to internal mechanics or external service providers.",
+          "req_idxs": [
+            1
+          ]
+        },
+        {
+          "id": "maintenance_work_orders.wo_tracking",
+          "name": "Work Order Tracking",
+          "description": "Monitor work order lifecycle status from open through completion.",
+          "req_idxs": [
+            2
+          ]
+        },
+        {
+          "id": "maintenance_work_orders.wo_costs",
+          "name": "Cost & Resource Tracking",
+          "description": "Record parts consumption, labour hours, and calculate total repair costs by vehicle.",
+          "req_idxs": [
+            3,
+            4
+          ]
+        },
+        {
+          "id": "maintenance_work_orders.wo_warranty",
+          "name": "Warranty Integration",
+          "description": "Link work orders to warranty claims for claim management and tracking.",
+          "req_idxs": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.trip_mileage",
+      "name": "Trip & Mileage Tracking",
+      "description": "Record odometer readings, log trips with start and end points, and track vehicle utilisation to support cost allocation and replacement planning.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo_fleet",
+        "fleetio",
+        "samsara",
+        "verizon_connect",
+        "wikipedia_fleet"
+      ],
+      "requirements": [
+        {
+          "text": "Capture odometer readings manually or automatically at trip start and end points",
+          "source": "both",
+          "proxy_refs": [
+            "Odometer reading capture (manual or automatic)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "trip_mileage.odometer_capture",
+          "feature_name": "Odometer Capture",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Log trips with origin, destination, distance travelled, and trip purpose",
+          "source": "both",
+          "proxy_refs": [
+            "Trip log with start, end, distance, and purpose"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00276",
+              "text": "Can your solution track delivery trucks and status of deliveries for customer service officers",
+              "q_title": "Delivery Truck Tracking",
+              "subsection": "Delivery Truck Tracking",
+              "sources": [
+                "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [
+            "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+          ],
+          "feature_id": "trip_mileage.trip_logging",
+          "feature_name": "Trip Logging",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Classify trips as personal or business use",
+          "source": "proxy",
+          "proxy_refs": [
+            "Personal vs business trip classification"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "trip_mileage.trip_logging",
+          "feature_name": "Trip Logging",
+          "criticality": "standard"
+        },
+        {
+          "text": "Calculate vehicle utilisation rate as percentage of days in active use versus idle",
+          "source": "proxy",
+          "proxy_refs": [
+            "Vehicle utilisation rate (days in use vs idle)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "trip_mileage.utilisation_tracking",
+          "feature_name": "Utilisation Tracking",
+          "criticality": "standard"
+        },
+        {
+          "text": "Allocate mileage-based costs to cost centres or departments",
+          "source": "proxy",
+          "proxy_refs": [
+            "Mileage-based cost allocation to departments"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "trip_mileage.cost_allocation",
+          "feature_name": "Cost Allocation",
+          "criticality": "standard"
+        },
+        {
+          "text": "Generate alerts when cumulative distance approaches lease or warranty limits",
+          "source": "proxy",
+          "proxy_refs": [
+            "Distance alerts for lease or warranty limits"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "trip_mileage.lifecycle_monitoring",
+          "feature_name": "Lifecycle Monitoring",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Track real-time vehicle location and status via GPS or telematics integration",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01322",
+              "text": "Telematics and GPS tracking technology which provides the company a complete overview of its fleet's real-time location and operating condition",
+              "q_title": "Fleet Management and Tracking",
+              "subsection": "Fleet Management and Tracking",
+              "sources": [
+                "essential-business__fleet-management-system",
+                "logistics__transport-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-management-system",
+            "logistics__transport-management"
+          ],
+          "feature_id": "trip_mileage.gps_tracking",
+          "feature_name": "GPS & Telematics Integration",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Monitor delivery vehicle status and provide visibility to customer service operations",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00276",
+              "text": "Can your solution track delivery trucks and status of deliveries for customer service officers",
+              "q_title": "Delivery Truck Tracking",
+              "subsection": "Delivery Truck Tracking",
+              "sources": [
+                "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+          ],
+          "feature_id": "trip_mileage.gps_tracking",
+          "feature_name": "GPS & Telematics Integration",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 2,
+        "merged_out": 8
+      },
+      "features": [
+        {
+          "id": "trip_mileage.odometer_capture",
+          "name": "Odometer Capture",
+          "description": "Record odometer readings at trip start and end points manually or automatically.",
+          "req_idxs": [
+            0
+          ]
+        },
+        {
+          "id": "trip_mileage.trip_logging",
+          "name": "Trip Logging",
+          "description": "Log trips with origin, destination, distance, purpose, and personal/business classification.",
+          "req_idxs": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "trip_mileage.utilisation_tracking",
+          "name": "Utilisation Tracking",
+          "description": "Calculate vehicle utilisation rates and monitor active use versus idle periods.",
+          "req_idxs": [
+            3
+          ]
+        },
+        {
+          "id": "trip_mileage.cost_allocation",
+          "name": "Cost Allocation",
+          "description": "Allocate mileage-based costs to cost centres and departments for financial reporting.",
+          "req_idxs": [
+            4
+          ]
+        },
+        {
+          "id": "trip_mileage.lifecycle_monitoring",
+          "name": "Lifecycle Monitoring",
+          "description": "Track cumulative distance and alert when approaching lease or warranty limits.",
+          "req_idxs": [
+            5
+          ]
+        },
+        {
+          "id": "trip_mileage.gps_tracking",
+          "name": "GPS & Telematics Integration",
+          "description": "Track real-time vehicle location and status via GPS or telematics, with visibility to customer service.",
+          "req_idxs": [
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.cost_management",
+      "name": "Fleet Cost Management",
+      "description": "Track total cost of ownership per vehicle — fuel, maintenance, insurance, registration, depreciation — and compare against budget.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo_fleet",
+        "chevin_fleetwave",
+        "fleetio",
+        "sap_vehicle"
+      ],
+      "requirements": [
+        {
+          "text": "Calculate total cost of ownership per vehicle across all cost categories including fuel, maintenance, insurance, registration, and depreciation.",
+          "source": "proxy",
+          "proxy_refs": [
+            "TCO calculation per vehicle (all cost categories)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "cost_management.tco_calculation",
+          "feature_name": "Total Cost of Ownership Calculation",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Provide cost breakdown by category (fuel, repairs, insurance, tax, registration, depreciation) for individual vehicles and fleet segments.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Cost breakdown by category (fuel, repairs, insurance, tax)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "cost_management.cost_analysis",
+          "feature_name": "Cost Analysis & Reporting",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Compare budgeted costs against actual spend by vehicle, fleet segment, or cost category.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Budget vs actual spend per vehicle or fleet segment"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "cost_management.budget_variance",
+          "feature_name": "Budget Variance & Monitoring",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Calculate cost per kilometre for individual vehicles and fleet-wide aggregates.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Cost per kilometre per vehicle and fleet-wide"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "cost_management.cost_analysis",
+          "feature_name": "Cost Analysis & Reporting",
+          "criticality": "standard"
+        },
+        {
+          "text": "Analyze cost trends over time to identify spending patterns and anomalies.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Cost trend analysis over time"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "cost_management.cost_trends",
+          "feature_name": "Cost Trend Analysis",
+          "criticality": "standard"
+        },
+        {
+          "text": "Export cost reports and analysis data to the accounting system for financial consolidation.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Export cost reports to accounting system"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "cost_management.financial_integration",
+          "feature_name": "Financial System Integration",
+          "criticality": "standard"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 6
+      },
+      "features": [
+        {
+          "id": "cost_management.tco_calculation",
+          "name": "Total Cost of Ownership Calculation",
+          "description": "Calculate and aggregate total cost of ownership per vehicle across all cost categories.",
+          "req_idxs": [
+            0
+          ]
+        },
+        {
+          "id": "cost_management.cost_analysis",
+          "name": "Cost Analysis & Reporting",
+          "description": "Provide cost breakdowns by category and vehicle, and calculate cost per kilometre metrics.",
+          "req_idxs": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "cost_management.budget_variance",
+          "name": "Budget Variance & Monitoring",
+          "description": "Compare budgeted costs against actual spend and identify variances by vehicle or category.",
+          "req_idxs": [
+            3
+          ]
+        },
+        {
+          "id": "cost_management.cost_trends",
+          "name": "Cost Trend Analysis",
+          "description": "Analyze spending patterns and anomalies over time to support cost optimization.",
+          "req_idxs": [
+            4
+          ]
+        },
+        {
+          "id": "cost_management.financial_integration",
+          "name": "Financial System Integration",
+          "description": "Export cost reports and analysis data to accounting systems for consolidation.",
+          "req_idxs": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.reporting_dashboards",
+      "name": "Fleet Reporting & Dashboards",
+      "description": "Standard and custom reports and dashboards for fleet managers: vehicle status, cost summaries, maintenance compliance, driver performance, and fleet utilisation.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo_fleet",
+        "fleetio",
+        "samsara",
+        "chevin_fleetwave"
+      ],
+      "requirements": [
+        {
+          "text": "Fleet overview dashboard displaying vehicle status (active, in repair, disposed) and real-time location",
+          "source": "both",
+          "proxy_refs": [
+            "Fleet overview dashboard (active, in repair, disposed)"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00032",
+              "text": "Ability to allow supervision of multiple sites and teams (including location tracking) remotely through a centralised command centre",
+              "q_title": "Centralised Command Centre",
+              "subsection": "Centralised Command Centre",
+              "sources": [
+                "security__mobile-enabled-patrol-and-incident-management"
+              ]
+            },
+            {
+              "id": "req-01322",
+              "text": "Telematics and GPS tracking technology which provides the company a complete overview of its fleet's real-time location and operating condition",
+              "q_title": "Fleet Management and Tracking",
+              "subsection": "Fleet Management and Tracking",
+              "sources": [
+                "essential-business__fleet-management-system",
+                "logistics__transport-management"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "samsara"
+          ],
+          "solcat_citations": [
+            "essential-business__fleet-management-system",
+            "logistics__transport-management",
+            "security__mobile-enabled-patrol-and-incident-management"
+          ],
+          "feature_id": "reporting_dashboards.dashboards",
+          "feature_name": "Fleet Dashboards",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Maintenance compliance report tracking scheduled vs overdue maintenance tasks",
+          "source": "both",
+          "proxy_refs": [
+            "Maintenance compliance report (on time vs overdue)"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-01411",
+              "text": "Vehicle maintenance and servicing tasks",
+              "q_title": "Data Analytics and Insights for Vehicles",
+              "subsection": "Functional Requirements",
+              "sources": [
+                "essential-business__fleet-management-system",
+                "logistics__transport-management"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "samsara"
+          ],
+          "solcat_citations": [
+            "essential-business__fleet-management-system",
+            "logistics__transport-management"
+          ],
+          "feature_id": "reporting_dashboards.maintenance_compliance",
+          "feature_name": "Maintenance Compliance",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Cost summary reporting by vehicle, category, and period",
+          "source": "proxy",
+          "proxy_refs": [
+            "Cost summary by vehicle, category, and period"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "reporting_dashboards.cost_reporting",
+          "feature_name": "Cost Reporting",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Vehicle utilisation and idle-time reporting",
+          "source": "proxy",
+          "proxy_refs": [
+            "Vehicle utilisation and idle-time report"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "reporting_dashboards.operational_metrics",
+          "feature_name": "Operational Metrics",
+          "criticality": "standard"
+        },
+        {
+          "text": "Pivot table functionality and export to spreadsheet format",
+          "source": "proxy",
+          "proxy_refs": [
+            "Pivot table and export to spreadsheet"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "reporting_dashboards.report_tools",
+          "feature_name": "Report Tools & Distribution",
+          "criticality": "standard"
+        },
+        {
+          "text": "Drill-down capability from summary-level reports to individual vehicle detail",
+          "source": "proxy",
+          "proxy_refs": [
+            "Drill-down from summary to vehicle detail"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "reporting_dashboards.report_tools",
+          "feature_name": "Report Tools & Distribution",
+          "criticality": "standard"
+        },
+        {
+          "text": "Mileage and fuel consumption reporting",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00909",
+              "text": "Mileage and fuel consumption",
+              "q_title": "Data Analytics and Insights for Vehicles",
+              "subsection": "Functional Requirements",
+              "sources": [
+                "essential-business__fleet-management-system",
+                "logistics__transport-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-management-system",
+            "logistics__transport-management"
+          ],
+          "feature_id": "reporting_dashboards.operational_metrics",
+          "feature_name": "Operational Metrics",
+          "criticality": "standard"
+        },
+        {
+          "text": "Driver behaviour monitoring including speeding and dangerous driving alerts",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00605",
+              "text": "Drivers' behaviour (e.g. dangerous driving, speeding)",
+              "q_title": "Data Analytics and Insights for Vehicles",
+              "subsection": "Analytics Areas",
+              "sources": [
+                "logistics__transport-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "logistics__transport-management"
+          ],
+          "feature_id": "reporting_dashboards.driver_performance",
+          "feature_name": "Driver Performance",
+          "criticality": "standard"
+        },
+        {
+          "text": "Scheduled automated email distribution of reports to stakeholders",
+          "source": "proxy",
+          "proxy_refs": [
+            "Scheduled email reports to stakeholders"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "reporting_dashboards.report_tools",
+          "feature_name": "Report Tools & Distribution",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Centralised command centre view enabling remote supervision of multiple sites and teams",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00032",
+              "text": "Ability to allow supervision of multiple sites and teams (including location tracking) remotely through a centralised command centre",
+              "q_title": "Centralised Command Centre",
+              "subsection": "Centralised Command Centre",
+              "sources": [
+                "security__mobile-enabled-patrol-and-incident-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "security__mobile-enabled-patrol-and-incident-management"
+          ],
+          "feature_id": "reporting_dashboards.dashboards",
+          "feature_name": "Fleet Dashboards",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 7,
+        "imda_in": 5,
+        "merged_out": 10
+      },
+      "features": [
+        {
+          "id": "reporting_dashboards.dashboards",
+          "name": "Fleet Dashboards",
+          "description": "Real-time visual dashboards for fleet overview, vehicle status, and command centre supervision.",
+          "req_idxs": [
+            0,
+            9
+          ]
+        },
+        {
+          "id": "reporting_dashboards.cost_reporting",
+          "name": "Cost Reporting",
+          "description": "Financial summaries and cost analysis by vehicle, category, and time period.",
+          "req_idxs": [
+            1
+          ]
+        },
+        {
+          "id": "reporting_dashboards.maintenance_compliance",
+          "name": "Maintenance Compliance",
+          "description": "Tracking and reporting of scheduled versus overdue maintenance tasks.",
+          "req_idxs": [
+            2
+          ]
+        },
+        {
+          "id": "reporting_dashboards.operational_metrics",
+          "name": "Operational Metrics",
+          "description": "Vehicle utilisation, idle time, mileage, and fuel consumption reporting.",
+          "req_idxs": [
+            3,
+            4
+          ]
+        },
+        {
+          "id": "reporting_dashboards.driver_performance",
+          "name": "Driver Performance",
+          "description": "Monitoring and alerts for driver behaviour including speeding and dangerous driving.",
+          "req_idxs": [
+            5
+          ]
+        },
+        {
+          "id": "reporting_dashboards.report_tools",
+          "name": "Report Tools & Distribution",
+          "description": "Pivot tables, drill-down analysis, export functionality, and automated email distribution.",
+          "req_idxs": [
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.gps_telematics",
+      "name": "GPS Tracking & Telematics",
+      "description": "Real-time vehicle location via GPS, with breadcrumb trails, geofencing, speed alerts, and integration with on-board diagnostics (OBD) for engine data.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "samsara",
+        "verizon_connect",
+        "wikipedia_fleet"
+      ],
+      "requirements": [
+        {
+          "text": "Display real-time GPS location of individual vehicles on a map interface",
+          "source": "both",
+          "proxy_refs": [
+            "Real-time GPS location on a map per vehicle"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-01322",
+              "text": "Telematics and GPS tracking technology which provides the company a complete overview of its fleet's real-time location and operating condition",
+              "q_title": "Fleet Management and Tracking",
+              "subsection": "Fleet Management and Tracking",
+              "sources": [
+                "essential-business__fleet-management-system",
+                "logistics__transport-management"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [
+            "essential-business__fleet-management-system",
+            "logistics__transport-management"
+          ],
+          "feature_id": "gps_telematics.realtime_tracking",
+          "feature_name": "Real-Time Vehicle Tracking",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Enable centralized monitoring and supervision of multiple fleet sites and teams from a command centre",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00032",
+              "text": "Ability to allow supervision of multiple sites and teams (including location tracking) remotely through a centralised command centre",
+              "q_title": "Centralised Command Centre",
+              "subsection": "Centralised Command Centre",
+              "sources": [
+                "security__mobile-enabled-patrol-and-incident-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "security__mobile-enabled-patrol-and-incident-management"
+          ],
+          "feature_id": "gps_telematics.realtime_tracking",
+          "feature_name": "Real-Time Vehicle Tracking",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Provide historical breadcrumb trail with route replay capability for auditing and analysis",
+          "source": "proxy",
+          "proxy_refs": [
+            "Historical breadcrumb trail and route replay"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "gps_telematics.route_history",
+          "feature_name": "Route History & Playback",
+          "criticality": "standard"
+        },
+        {
+          "text": "Support creation and management of geofences with automated entry and exit alerts",
+          "source": "proxy",
+          "proxy_refs": [
+            "Geofence creation with entry and exit alerts"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "gps_telematics.geofencing_alerts",
+          "feature_name": "Geofencing & Boundary Alerts",
+          "criticality": "standard"
+        },
+        {
+          "text": "Generate alerts for excessive speed and idle-time violations",
+          "source": "proxy",
+          "proxy_refs": [
+            "Speed and idle-time alerts"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "gps_telematics.driver_behavior",
+          "feature_name": "Driver Behavior & Compliance",
+          "criticality": "standard"
+        },
+        {
+          "text": "Integrate with OBD-II systems to capture and display engine fault codes and vehicle diagnostics",
+          "source": "proxy",
+          "proxy_refs": [
+            "OBD-II integration for engine fault codes"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "gps_telematics.diagnostics_integration",
+          "feature_name": "Vehicle Diagnostics & OBD Integration",
+          "criticality": "standard"
+        },
+        {
+          "text": "Retain and display last-known position for vehicles that are temporarily offline",
+          "source": "proxy",
+          "proxy_refs": [
+            "Last-known position for offline vehicles"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "gps_telematics.realtime_tracking",
+          "feature_name": "Real-Time Vehicle Tracking",
+          "criticality": "standard"
+        },
+        {
+          "text": "Track delivery vehicle locations and delivery status for customer service visibility",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00276",
+              "text": "Can your solution track delivery trucks and status of deliveries for customer service officers",
+              "q_title": "Delivery Truck Tracking",
+              "subsection": "Delivery Truck Tracking",
+              "sources": [
+                "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+          ],
+          "feature_id": "gps_telematics.route_history",
+          "feature_name": "Route History & Playback",
+          "criticality": "standard"
+        },
+        {
+          "text": "Provide fleet journey analytics to support cost control, utilization optimization, and productivity improvement",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00313",
+              "text": "Companies to tailor the fleet journey, manage cost control, improve fleet utilisation, and improve productivity",
+              "q_title": "Customised Fleet Journey Management",
+              "subsection": "Customised Fleet Journey Management",
+              "sources": [
+                "logistics__transport-management"
+              ]
+            },
+            {
+              "id": "req-01315",
+              "text": "Tailor the fleet journey and manage cost control",
+              "q_title": "Customised Fleet Journey Management",
+              "subsection": "Customised Fleet Journey Management",
+              "sources": [
+                "essential-business__fleet-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-management-system",
+            "logistics__transport-management"
+          ],
+          "feature_id": "gps_telematics.analytics_insights",
+          "feature_name": "Fleet Analytics & Insights",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Capture and store in-cabin video from vehicle-mounted cameras with timestamp and date indexing",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00756",
+              "text": "Indoor Analogue Camera to capture the activity in vehicle cabin",
+              "q_title": "Vehicle Cabin Monitoring",
+              "subsection": "Vehicle Cabin Monitoring",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "gps_telematics.video_lpr",
+          "feature_name": "Video & License Plate Capture",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Analyze and store captured license plate data with associated timestamp and entry/exit records",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00854",
+              "text": "Licence Plate Recognition Module – Analyse video for licence plates captured and stored according to the date and time of entry",
+              "q_title": "Real-Time Video Functions",
+              "subsection": "Additional Functions (Choose at least one)",
+              "sources": [
+                "security__surveillance-and-analytics"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "security__surveillance-and-analytics"
+          ],
+          "feature_id": "gps_telematics.video_lpr",
+          "feature_name": "Video & License Plate Capture",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 7,
+        "merged_out": 11
+      },
+      "features": [
+        {
+          "id": "gps_telematics.realtime_tracking",
+          "name": "Real-Time Vehicle Tracking",
+          "description": "Live GPS location display, map visualization, and offline position retention for fleet vehicles.",
+          "req_idxs": [
+            0,
+            5,
+            6
+          ]
+        },
+        {
+          "id": "gps_telematics.route_history",
+          "name": "Route History & Playback",
+          "description": "Historical breadcrumb trails, route replay, and audit trail analysis for vehicle movements.",
+          "req_idxs": [
+            1,
+            7
+          ]
+        },
+        {
+          "id": "gps_telematics.geofencing_alerts",
+          "name": "Geofencing & Boundary Alerts",
+          "description": "Geofence creation, management, and automated entry/exit notifications.",
+          "req_idxs": [
+            2
+          ]
+        },
+        {
+          "id": "gps_telematics.driver_behavior",
+          "name": "Driver Behavior & Compliance",
+          "description": "Speed and idle-time violation alerts with performance monitoring.",
+          "req_idxs": [
+            3
+          ]
+        },
+        {
+          "id": "gps_telematics.diagnostics_integration",
+          "name": "Vehicle Diagnostics & OBD Integration",
+          "description": "OBD-II data capture, engine fault codes, and vehicle health monitoring.",
+          "req_idxs": [
+            4
+          ]
+        },
+        {
+          "id": "gps_telematics.analytics_insights",
+          "name": "Fleet Analytics & Insights",
+          "description": "Journey analytics, cost control, utilization optimization, and productivity reporting.",
+          "req_idxs": [
+            8
+          ]
+        },
+        {
+          "id": "gps_telematics.video_lpr",
+          "name": "Video & License Plate Capture",
+          "description": "In-cabin video recording and license plate recognition with timestamp indexing.",
+          "req_idxs": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.route_planning",
+      "name": "Route Planning & Optimisation",
+      "description": "Plan multi-stop delivery or service routes, optimise for distance, time, or fuel cost, and adapt routes in real time based on traffic.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "samsara",
+        "oracle_otm",
+        "sap_vehicle",
+        "wikipedia_fleet"
+      ],
+      "requirements": [
+        {
+          "text": "Automatically generate and optimise routes based on configurable criteria such as destination, delivery time window, order size, and vehicle type",
+          "source": "both",
+          "proxy_refs": [
+            "Route optimisation by distance, time, or cost"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00481",
+              "text": "Does your solution auto-generate and optimise delivery schedules or routes according to pre-set criteria such as destination, delivering time, menu type, or order size",
+              "q_title": "Delivery Route Optimisation",
+              "subsection": "Delivery Route Optimisation",
+              "sources": [
+                "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "oracle_otm",
+            "samsara",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [
+            "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+          ],
+          "feature_id": "route_planning.route_generation",
+          "feature_name": "Route Generation & Optimisation",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Optimise routes by distance, time, or cost metrics",
+          "source": "proxy",
+          "proxy_refs": [
+            "Route optimisation by distance, time, or cost"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_otm",
+            "samsara",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "route_planning.route_generation",
+          "feature_name": "Route Generation & Optimisation",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Enforce delivery time-window constraints during route planning and optimisation",
+          "source": "proxy",
+          "proxy_refs": [
+            "Delivery time-window constraints"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_otm",
+            "samsara",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "route_planning.route_generation",
+          "feature_name": "Route Generation & Optimisation",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Plan multi-stop routes with support for manual adjustment via drag-and-drop interface",
+          "source": "proxy",
+          "proxy_refs": [
+            "Multi-stop route planning with drag-and-drop"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_otm",
+            "samsara",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "route_planning.route_execution",
+          "feature_name": "Route Execution & Guidance",
+          "criticality": "standard"
+        },
+        {
+          "text": "Compare planned routes against actual executed routes to identify deviations and performance gaps",
+          "source": "proxy",
+          "proxy_refs": [
+            "Planned vs actual route comparison"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_otm",
+            "samsara",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "route_planning.route_analytics",
+          "feature_name": "Route Analytics & Performance",
+          "criticality": "standard"
+        },
+        {
+          "text": "Measure and report on fleet utilisation and productivity improvements resulting from route optimisation",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00313",
+              "text": "Companies to tailor the fleet journey, manage cost control, improve fleet utilisation, and improve productivity",
+              "q_title": "Customised Fleet Journey Management",
+              "subsection": "Customised Fleet Journey Management",
+              "sources": [
+                "logistics__transport-management"
+              ]
+            },
+            {
+              "id": "req-01315",
+              "text": "Tailor the fleet journey and manage cost control",
+              "q_title": "Customised Fleet Journey Management",
+              "subsection": "Customised Fleet Journey Management",
+              "sources": [
+                "essential-business__fleet-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-management-system",
+            "logistics__transport-management"
+          ],
+          "feature_id": "route_planning.route_analytics",
+          "feature_name": "Route Analytics & Performance",
+          "criticality": "standard"
+        },
+        {
+          "text": "Integrate real-time traffic and road condition data to dynamically adjust routes during execution",
+          "source": "proxy",
+          "proxy_refs": [
+            "Real-time traffic and road-condition adjustments"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_otm",
+            "samsara",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "route_planning.route_execution",
+          "feature_name": "Route Execution & Guidance",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Provide turn-by-turn navigation guidance to drivers integrated with the route plan",
+          "source": "proxy",
+          "proxy_refs": [
+            "Driver turn-by-turn navigation integration"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_otm",
+            "samsara",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "route_planning.route_execution",
+          "feature_name": "Route Execution & Guidance",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Collect and analyse route execution data to continuously improve route optimisation algorithms",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00483",
+              "text": "Does your solution automate route planning and optimisation based on data collected",
+              "q_title": "Route Planning and Optimisation",
+              "subsection": "Route Planning and Optimisation",
+              "sources": [
+                "essential-business__fleet-management-system",
+                "logistics__transport-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-management-system",
+            "logistics__transport-management"
+          ],
+          "feature_id": "route_planning.route_analytics",
+          "feature_name": "Route Analytics & Performance",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 4,
+        "merged_out": 9
+      },
+      "features": [
+        {
+          "id": "route_planning.route_generation",
+          "name": "Route Generation & Optimisation",
+          "description": "Automatically generate and optimise multi-stop routes based on configurable criteria and metrics.",
+          "req_idxs": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "id": "route_planning.route_execution",
+          "name": "Route Execution & Guidance",
+          "description": "Manage route execution with real-time adjustments, navigation, and driver support.",
+          "req_idxs": [
+            0,
+            3,
+            6
+          ]
+        },
+        {
+          "id": "route_planning.route_analytics",
+          "name": "Route Analytics & Performance",
+          "description": "Analyse route execution data, compare planned vs actual routes, and measure fleet productivity improvements.",
+          "req_idxs": [
+            5,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.driver_safety",
+      "name": "Driver Safety & Behaviour Scoring",
+      "description": "Monitor driving behaviour (harsh braking, speeding, distraction) and generate safety scores to reduce accidents and insurance costs.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "samsara",
+        "verizon_connect",
+        "wikipedia_fleet"
+      ],
+      "requirements": [
+        {
+          "text": "Calculate driver safety score based on detected driving events and behaviours",
+          "source": "both",
+          "proxy_refs": [
+            "Driver safety score based on driving events"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00603",
+              "text": "Driver behaviour monitoring to uncover poor driving habit (e.g. harsh braking and acceleration, harsh cornering, tailgating and speeding, etc)",
+              "q_title": "Driver Behaviour Monitoring",
+              "subsection": "Driver Behaviour Monitoring",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "driver_safety.scoring_reporting",
+          "feature_name": "Safety Scoring & Reporting",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Detect harsh braking, acceleration, and cornering events",
+          "source": "both",
+          "proxy_refs": [
+            "Harsh braking, acceleration, and cornering detection"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00603",
+              "text": "Driver behaviour monitoring to uncover poor driving habit (e.g. harsh braking and acceleration, harsh cornering, tailgating and speeding, etc)",
+              "q_title": "Driver Behaviour Monitoring",
+              "subsection": "Driver Behaviour Monitoring",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "driver_safety.event_detection",
+          "feature_name": "Driving Event Detection",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Monitor speeding relative to posted speed limits and generate alerts",
+          "source": "both",
+          "proxy_refs": [
+            "Speeding alerts relative to posted limits"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00603",
+              "text": "Driver behaviour monitoring to uncover poor driving habit (e.g. harsh braking and acceleration, harsh cornering, tailgating and speeding, etc)",
+              "q_title": "Driver Behaviour Monitoring",
+              "subsection": "Driver Behaviour Monitoring",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "driver_safety.event_detection",
+          "feature_name": "Driving Event Detection",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Detect distracted driving including phone use and send alerts to driver",
+          "source": "both",
+          "proxy_refs": [
+            "Distracted driving detection (phone use, fatigue)"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00604",
+              "text": "Driver Status Monitoring System (DSMS) to detect and alert the driver of fatigue events (e.g. closing of eyes) and distractions (e.g. making phone calls)",
+              "q_title": "Fleet Safety Management",
+              "subsection": "Safety Features",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "driver_safety.distraction_monitoring",
+          "feature_name": "Distraction Monitoring",
+          "criticality": "standard"
+        },
+        {
+          "text": "Send real-time coaching and safety alerts to driver during trip",
+          "source": "proxy",
+          "proxy_refs": [
+            "Coaching alerts sent to driver in real time"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "driver_safety.distraction_monitoring",
+          "feature_name": "Distraction Monitoring",
+          "criticality": "standard"
+        },
+        {
+          "text": "Generate safety leaderboards and trend reports for driver performance comparison and analysis",
+          "source": "proxy",
+          "proxy_refs": [
+            "Safety leaderboard and trend reports"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "driver_safety.scoring_reporting",
+          "feature_name": "Safety Scoring & Reporting",
+          "criticality": "standard"
+        },
+        {
+          "text": "Detect tailgating and unsafe following distance",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00603",
+              "text": "Driver behaviour monitoring to uncover poor driving habit (e.g. harsh braking and acceleration, harsh cornering, tailgating and speeding, etc)",
+              "q_title": "Driver Behaviour Monitoring",
+              "subsection": "Driver Behaviour Monitoring",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "driver_safety.event_detection",
+          "feature_name": "Driving Event Detection",
+          "criticality": "standard"
+        },
+        {
+          "text": "Detect driver fatigue through eye closure and drowsiness indicators",
+          "source": "imda",
+          "proxy_refs": [
+            "Distracted driving detection (phone use, fatigue)"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00604",
+              "text": "Driver Status Monitoring System (DSMS) to detect and alert the driver of fatigue events (e.g. closing of eyes) and distractions (e.g. making phone calls)",
+              "q_title": "Fleet Safety Management",
+              "subsection": "Safety Features",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "driver_safety.event_detection",
+          "feature_name": "Driving Event Detection",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Generate forward collision warning alerts for potential vehicle-to-vehicle collisions",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00073",
+              "text": "Advanced Driver Assistance System (ADAS) to alert the driver of potential collisions (e.g. forward collision warning, lane departure warning, and pedestrian or cyclist collision warning, etc)",
+              "q_title": "Fleet Safety Management",
+              "subsection": "Safety Features",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "driver_safety.collision_avoidance",
+          "feature_name": "Collision Avoidance Alerts",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Generate lane departure warning alerts when vehicle drifts from lane",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00073",
+              "text": "Advanced Driver Assistance System (ADAS) to alert the driver of potential collisions (e.g. forward collision warning, lane departure warning, and pedestrian or cyclist collision warning, etc)",
+              "q_title": "Fleet Safety Management",
+              "subsection": "Safety Features",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "driver_safety.collision_avoidance",
+          "feature_name": "Collision Avoidance Alerts",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Generate pedestrian and cyclist collision warning alerts",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00073",
+              "text": "Advanced Driver Assistance System (ADAS) to alert the driver of potential collisions (e.g. forward collision warning, lane departure warning, and pedestrian or cyclist collision warning, etc)",
+              "q_title": "Fleet Safety Management",
+              "subsection": "Safety Features",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "driver_safety.collision_avoidance",
+          "feature_name": "Collision Avoidance Alerts",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Detect blind spot hazards and alert driver of pedestrians, cyclists, motorcyclists, or workers in blind spot",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00193",
+              "text": "Blind Spot Detection System to improve situational awareness and alert the driver of pedestrian, cyclist or motorcyclist, or worker in the vehicle's blind spot",
+              "q_title": "Fleet Safety Management",
+              "subsection": "Safety Features",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "driver_safety.collision_avoidance",
+          "feature_name": "Collision Avoidance Alerts",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 4,
+        "merged_out": 12
+      },
+      "features": [
+        {
+          "id": "driver_safety.event_detection",
+          "name": "Driving Event Detection",
+          "description": "Detect and classify unsafe driving events including harsh maneuvers, speeding, fatigue, and following distance violations.",
+          "req_idxs": [
+            1,
+            2,
+            4,
+            10
+          ]
+        },
+        {
+          "id": "driver_safety.collision_avoidance",
+          "name": "Collision Avoidance Alerts",
+          "description": "Generate real-time warnings for forward collisions, lane departures, blind spot hazards, and pedestrian/cyclist risks.",
+          "req_idxs": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "id": "driver_safety.distraction_monitoring",
+          "name": "Distraction Monitoring",
+          "description": "Detect distracted driving behaviors such as phone use and send immediate alerts to the driver.",
+          "req_idxs": [
+            3,
+            5
+          ]
+        },
+        {
+          "id": "driver_safety.scoring_reporting",
+          "name": "Safety Scoring & Reporting",
+          "description": "Calculate driver safety scores and generate leaderboards and trend reports for performance analysis and comparison.",
+          "req_idxs": [
+            0,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.compliance_regulatory",
+      "name": "Compliance & Regulatory Management",
+      "description": "Track regulatory obligations — road tax, COE (Singapore), vehicle inspections, driver hours, and certifications — with expiry alerts to avoid fines and downtime.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "chevin_fleetwave",
+        "fleetio",
+        "wikipedia_fleet"
+      ],
+      "requirements": [
+        {
+          "text": "Track road tax and COE expiry dates with automated renewal alerts to prevent regulatory violations and vehicle downtime.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Road tax and COE expiry tracking with renewal alerts"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "compliance_regulatory.vehicle_compliance",
+          "feature_name": "Vehicle Compliance Tracking",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Manage periodic vehicle inspection due dates and send notifications before expiry.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Periodic vehicle inspection due-date management"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "compliance_regulatory.vehicle_compliance",
+          "feature_name": "Vehicle Compliance Tracking",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Track driver licence and permit expiry dates with advance alert notifications.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Driver licence and permit expiry alerts"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "compliance_regulatory.driver_compliance",
+          "feature_name": "Driver Compliance Tracking",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Log and monitor driver hours and rest-period compliance against regulatory requirements.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Driver hours and rest-period compliance logging"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "compliance_regulatory.driver_compliance",
+          "feature_name": "Driver Compliance Tracking",
+          "criticality": "standard"
+        },
+        {
+          "text": "Store and organize regulatory documents (certificates, permits, inspection records) per vehicle for audit and compliance verification.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Regulatory document storage per vehicle"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "compliance_regulatory.compliance_documentation",
+          "feature_name": "Compliance Documentation",
+          "criticality": "standard"
+        },
+        {
+          "text": "Provide a compliance status dashboard displaying the validity state (valid, expiring soon, expired) of all tracked regulatory obligations.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Compliance status dashboard (valid, expiring, expired)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "compliance_regulatory.compliance_visibility",
+          "feature_name": "Compliance Status Dashboard",
+          "criticality": "standard"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 6
+      },
+      "features": [
+        {
+          "id": "compliance_regulatory.vehicle_compliance",
+          "name": "Vehicle Compliance Tracking",
+          "description": "Monitor vehicle-level regulatory obligations including road tax, COE, and inspections with expiry alerts.",
+          "req_idxs": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "compliance_regulatory.driver_compliance",
+          "name": "Driver Compliance Tracking",
+          "description": "Track driver licences, permits, and hours-of-service compliance with advance notifications.",
+          "req_idxs": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": "compliance_regulatory.compliance_documentation",
+          "name": "Compliance Documentation",
+          "description": "Store, organize, and manage regulatory documents and records for audit and verification purposes.",
+          "req_idxs": [
+            4
+          ]
+        },
+        {
+          "id": "compliance_regulatory.compliance_visibility",
+          "name": "Compliance Status Dashboard",
+          "description": "Provide real-time visibility into the validity state of all regulatory obligations across the fleet.",
+          "req_idxs": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.tyre_management",
+      "name": "Tyre Management",
+      "description": "Track tyre inventory, monitor tread depth, schedule rotations, and record replacements to maximise tyre life and safety.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "chevin_fleetwave",
+        "fleetio",
+        "sap_vehicle"
+      ],
+      "requirements": [
+        {
+          "text": "Maintain tyre inventory records including brand, size, and vehicle position",
+          "source": "proxy",
+          "proxy_refs": [
+            "Tyre inventory with brand, size, and position"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "tyre_management.tyre_inventory",
+          "feature_name": "Tyre Inventory Management",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Record and track tyre tread depth measurements over time",
+          "source": "proxy",
+          "proxy_refs": [
+            "Tread depth recording and wear tracking"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "tyre_management.tyre_monitoring",
+          "feature_name": "Tyre Condition Monitoring",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Record tyre replacement history per vehicle including date and reason",
+          "source": "proxy",
+          "proxy_refs": [
+            "Tyre replacement history per vehicle"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "tyre_management.tyre_replacement",
+          "feature_name": "Tyre Replacement & Alerts",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Generate alerts when tyre tread depth falls below minimum safety threshold",
+          "source": "proxy",
+          "proxy_refs": [
+            "Alerts for tyres below minimum tread threshold"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "tyre_management.tyre_replacement",
+          "feature_name": "Tyre Replacement & Alerts",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Monitor tyre wear patterns and degradation",
+          "source": "proxy",
+          "proxy_refs": [
+            "Tread depth recording and wear tracking"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "tyre_management.tyre_monitoring",
+          "feature_name": "Tyre Condition Monitoring",
+          "criticality": "standard"
+        },
+        {
+          "text": "Schedule tyre rotations based on distance travelled or calendar intervals",
+          "source": "proxy",
+          "proxy_refs": [
+            "Rotation schedule based on km or calendar"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "tyre_management.tyre_maintenance",
+          "feature_name": "Tyre Maintenance Scheduling",
+          "criticality": "standard"
+        },
+        {
+          "text": "Calculate cost per tyre and cost per kilometre for tyre operations",
+          "source": "proxy",
+          "proxy_refs": [
+            "Cost per tyre and cost per km for tyres"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "tyre_management.tyre_costing",
+          "feature_name": "Tyre Cost Analysis",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 7
+      },
+      "features": [
+        {
+          "id": "tyre_management.tyre_inventory",
+          "name": "Tyre Inventory Management",
+          "description": "Maintain and track tyre stock records including brand, size, and vehicle position.",
+          "req_idxs": [
+            0
+          ]
+        },
+        {
+          "id": "tyre_management.tyre_monitoring",
+          "name": "Tyre Condition Monitoring",
+          "description": "Record tread depth measurements, track wear patterns, and monitor tyre degradation over time.",
+          "req_idxs": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "tyre_management.tyre_maintenance",
+          "name": "Tyre Maintenance Scheduling",
+          "description": "Schedule and manage tyre rotations based on distance or calendar intervals.",
+          "req_idxs": [
+            3
+          ]
+        },
+        {
+          "id": "tyre_management.tyre_replacement",
+          "name": "Tyre Replacement & Alerts",
+          "description": "Record replacement history and generate safety alerts when tread depth falls below minimum thresholds.",
+          "req_idxs": [
+            4,
+            5
+          ]
+        },
+        {
+          "id": "tyre_management.tyre_costing",
+          "name": "Tyre Cost Analysis",
+          "description": "Calculate and analyse cost per tyre and cost per kilometre for tyre operations.",
+          "req_idxs": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.accident_incident",
+      "name": "Accident & Incident Tracking",
+      "description": "Record accidents and incidents with driver, vehicle, location, and damage details — feed into insurance claims, safety analysis, and driver coaching.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "chevin_fleetwave",
+        "fleetio",
+        "verizon_connect"
+      ],
+      "requirements": [
+        {
+          "text": "Record incident with date, time, location, and detailed description of what occurred",
+          "source": "proxy",
+          "proxy_refs": [
+            "Incident record with date, location, and description"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "verizon_connect"
+          ],
+          "solcat_citations": [],
+          "feature_id": "accident_incident.incident_documentation",
+          "feature_name": "Incident Documentation",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Link driver and vehicle to each incident record",
+          "source": "proxy",
+          "proxy_refs": [
+            "Driver and vehicle linked to each incident"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "verizon_connect"
+          ],
+          "solcat_citations": [],
+          "feature_id": "accident_incident.incident_documentation",
+          "feature_name": "Incident Documentation",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Capture and store photos and supporting documents as evidence for each incident",
+          "source": "proxy",
+          "proxy_refs": [
+            "Photo and document upload for evidence"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "verizon_connect"
+          ],
+          "solcat_citations": [],
+          "feature_id": "accident_incident.incident_documentation",
+          "feature_name": "Incident Documentation",
+          "criticality": "standard"
+        },
+        {
+          "text": "Document damage assessment and generate repair cost estimates",
+          "source": "proxy",
+          "proxy_refs": [
+            "Damage assessment and repair cost estimate"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "verizon_connect"
+          ],
+          "solcat_citations": [],
+          "feature_id": "accident_incident.incident_documentation",
+          "feature_name": "Incident Documentation",
+          "criticality": "standard"
+        },
+        {
+          "text": "Associate incident records with corresponding insurance claim records",
+          "source": "proxy",
+          "proxy_refs": [
+            "Link to insurance claim record"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "verizon_connect"
+          ],
+          "solcat_citations": [],
+          "feature_id": "accident_incident.incident_claims_integration",
+          "feature_name": "Claims & Insurance Integration",
+          "criticality": "standard"
+        },
+        {
+          "text": "Generate incident frequency reports by driver and by vehicle for safety analysis and driver coaching",
+          "source": "proxy",
+          "proxy_refs": [
+            "Incident frequency report per driver and vehicle"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "verizon_connect"
+          ],
+          "solcat_citations": [],
+          "feature_id": "accident_incident.incident_analysis_reporting",
+          "feature_name": "Analysis & Reporting",
+          "criticality": "standard"
+        },
+        {
+          "text": "Integrate forward collision warning, lane departure warning, and pedestrian/cyclist collision alerts from Advanced Driver Assistance System",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00073",
+              "text": "Advanced Driver Assistance System (ADAS) to alert the driver of potential collisions (e.g. forward collision warning, lane departure warning, and pedestrian or cyclist collision warning, etc)",
+              "q_title": "Fleet Safety Management",
+              "subsection": "Safety Features",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "accident_incident.adas_alerts",
+          "feature_name": "ADAS Alert Integration",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Integrate blind spot detection alerts for pedestrians, cyclists, motorcyclists, and workers",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00193",
+              "text": "Blind Spot Detection System to improve situational awareness and alert the driver of pedestrian, cyclist or motorcyclist, or worker in the vehicle's blind spot",
+              "q_title": "Fleet Safety Management",
+              "subsection": "Safety Features",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "accident_incident.safety_monitoring_alerts",
+          "feature_name": "Safety Monitoring Alerts",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Integrate driver fatigue and distraction detection alerts from Driver Status Monitoring System",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00604",
+              "text": "Driver Status Monitoring System (DSMS) to detect and alert the driver of fatigue events (e.g. closing of eyes) and distractions (e.g. making phone calls)",
+              "q_title": "Fleet Safety Management",
+              "subsection": "Safety Features",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "accident_incident.safety_monitoring_alerts",
+          "feature_name": "Safety Monitoring Alerts",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 3,
+        "merged_out": 9
+      },
+      "features": [
+        {
+          "id": "accident_incident.incident_documentation",
+          "name": "Incident Documentation",
+          "description": "Record and capture incident details, evidence, and damage assessment.",
+          "req_idxs": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "accident_incident.incident_claims_integration",
+          "name": "Claims & Insurance Integration",
+          "description": "Link incidents to insurance claims and manage claim associations.",
+          "req_idxs": [
+            4
+          ]
+        },
+        {
+          "id": "accident_incident.incident_analysis_reporting",
+          "name": "Analysis & Reporting",
+          "description": "Generate frequency reports and safety analytics by driver and vehicle.",
+          "req_idxs": [
+            5
+          ]
+        },
+        {
+          "id": "accident_incident.adas_alerts",
+          "name": "ADAS Alert Integration",
+          "description": "Capture forward collision, lane departure, and pedestrian/cyclist collision warnings.",
+          "req_idxs": [
+            6
+          ]
+        },
+        {
+          "id": "accident_incident.safety_monitoring_alerts",
+          "name": "Safety Monitoring Alerts",
+          "description": "Integrate blind spot detection and driver fatigue/distraction monitoring.",
+          "req_idxs": [
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.booking_reservation",
+      "name": "Vehicle Booking & Reservation",
+      "description": "Allow staff to book pool or shared vehicles for trips, with calendar-based availability, approval workflows, and key handover.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "odoo_fleet",
+        "chevin_fleetwave"
+      ],
+      "requirements": [
+        {
+          "text": "Display vehicle availability calendar with time-based booking slots",
+          "source": "proxy",
+          "proxy_refs": [
+            "Vehicle availability calendar with booking slots"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "odoo_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "booking_reservation.booking_management",
+          "feature_name": "Booking Management",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Enable staff to self-service book vehicles with optional approval workflow",
+          "source": "proxy",
+          "proxy_refs": [
+            "Self-service booking by staff with approval option"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "odoo_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "booking_reservation.booking_management",
+          "feature_name": "Booking Management",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Detect and prevent overlapping bookings for the same vehicle",
+          "source": "proxy",
+          "proxy_refs": [
+            "Booking conflict detection and resolution"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "odoo_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "booking_reservation.booking_management",
+          "feature_name": "Booking Management",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Provide key handover checklist and return verification process",
+          "source": "proxy",
+          "proxy_refs": [
+            "Key handover and return checklist"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "odoo_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "booking_reservation.handover_returns",
+          "feature_name": "Handover & Returns",
+          "criticality": "standard"
+        },
+        {
+          "text": "Generate booking usage reports by vehicle and department",
+          "source": "proxy",
+          "proxy_refs": [
+            "Booking usage report per vehicle and department"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "odoo_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "booking_reservation.booking_reporting",
+          "feature_name": "Booking Reporting",
+          "criticality": "standard"
+        },
+        {
+          "text": "Support recurring bookings for regular or repeating routes",
+          "source": "proxy",
+          "proxy_refs": [
+            "Recurring booking support for regular routes"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "odoo_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "booking_reservation.booking_management",
+          "feature_name": "Booking Management",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 6
+      },
+      "features": [
+        {
+          "id": "booking_reservation.booking_management",
+          "name": "Booking Management",
+          "description": "Self-service vehicle booking with availability calendar and conflict prevention.",
+          "req_idxs": [
+            0,
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "id": "booking_reservation.handover_returns",
+          "name": "Handover & Returns",
+          "description": "Key handover checklists and vehicle return verification processes.",
+          "req_idxs": [
+            3
+          ]
+        },
+        {
+          "id": "booking_reservation.booking_reporting",
+          "name": "Booking Reporting",
+          "description": "Usage analytics and reporting by vehicle and department.",
+          "req_idxs": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.insurance_claims",
+      "name": "Insurance & Claims Management",
+      "description": "Track insurance policies per vehicle, manage claims from incident through settlement, and monitor premium trends.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "chevin_fleetwave",
+        "fleetio"
+      ],
+      "requirements": [
+        {
+          "text": "Maintain an insurance policy register recording provider name, coverage type, policy number, and effective dates for each vehicle.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Insurance policy register with provider and coverage"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio"
+          ],
+          "solcat_citations": [],
+          "feature_id": "insurance_claims.policy_management",
+          "feature_name": "Policy Management",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Create and link claim records to specific incidents and vehicles, establishing a complete audit trail.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Claim record linked to incident and vehicle"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio"
+          ],
+          "solcat_citations": [],
+          "feature_id": "insurance_claims.claim_processing",
+          "feature_name": "Claim Processing",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Track claim status through defined workflow states: filed, under review, and settled.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Claim status tracking (filed, under review, settled)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio"
+          ],
+          "solcat_citations": [],
+          "feature_id": "insurance_claims.claim_processing",
+          "feature_name": "Claim Processing",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Generate alerts for upcoming policy renewal dates to ensure timely renewal and continuous coverage.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Policy renewal date alerts"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio"
+          ],
+          "solcat_citations": [],
+          "feature_id": "insurance_claims.policy_management",
+          "feature_name": "Policy Management",
+          "criticality": "standard"
+        },
+        {
+          "text": "Record excess (deductible) amounts and approved payout amounts for each claim.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Excess and payout amount logging"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio"
+          ],
+          "solcat_citations": [],
+          "feature_id": "insurance_claims.claim_financials",
+          "feature_name": "Claim Financials",
+          "criticality": "standard"
+        },
+        {
+          "text": "Maintain premium payment history and analyze premium trends per vehicle to identify cost patterns and anomalies.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Premium history and trend per vehicle"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio"
+          ],
+          "solcat_citations": [],
+          "feature_id": "insurance_claims.claim_financials",
+          "feature_name": "Claim Financials",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 6
+      },
+      "features": [
+        {
+          "id": "insurance_claims.policy_management",
+          "name": "Policy Management",
+          "description": "Maintain insurance policy records and monitor renewal schedules.",
+          "req_idxs": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "insurance_claims.claim_processing",
+          "name": "Claim Processing",
+          "description": "Create, link, and track claims through workflow states from filing to settlement.",
+          "req_idxs": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": "insurance_claims.claim_financials",
+          "name": "Claim Financials",
+          "description": "Record deductibles, payouts, and premium payment history with trend analysis.",
+          "req_idxs": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.procurement_disposal",
+      "name": "Fleet Procurement & Disposal",
+      "description": "Manage vehicle acquisition (purchase, lease, rental), replacement planning based on age or TCO, and disposal via auction, trade-in, or write-off.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "chevin_fleetwave",
+        "sap_vehicle",
+        "oracle_otm",
+        "wikipedia_fleet"
+      ],
+      "requirements": [
+        {
+          "text": "Support vehicle acquisition request submission and multi-level approval workflow",
+          "source": "proxy",
+          "proxy_refs": [
+            "Vehicle acquisition request and approval workflow"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "oracle_otm",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "procurement_disposal.acquisition_approval",
+          "feature_name": "Acquisition & Approval",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Track purchase, lease, and rental contracts with key terms and dates",
+          "source": "proxy",
+          "proxy_refs": [
+            "Purchase, lease, and rental contract tracking"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "oracle_otm",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "procurement_disposal.contract_management",
+          "feature_name": "Contract Management",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Manage lease payment schedules and trigger end-of-lease actions (renewal, return, purchase)",
+          "source": "proxy",
+          "proxy_refs": [
+            "Lease payment schedule and end-of-lease actions"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "oracle_otm",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "procurement_disposal.contract_management",
+          "feature_name": "Contract Management",
+          "criticality": "standard"
+        },
+        {
+          "text": "Plan vehicle replacement based on configurable thresholds (age, mileage, total cost of ownership)",
+          "source": "proxy",
+          "proxy_refs": [
+            "Replacement planning by age, mileage, or TCO threshold"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "oracle_otm",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "procurement_disposal.replacement_planning",
+          "feature_name": "Replacement Planning",
+          "criticality": "standard"
+        },
+        {
+          "text": "Record vehicle disposal method (auction, trade-in, scrap, donation) and track completion",
+          "source": "proxy",
+          "proxy_refs": [
+            "Disposal record (auction, trade-in, scrap, donation)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "oracle_otm",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "procurement_disposal.disposal_management",
+          "feature_name": "Disposal Management",
+          "criticality": "standard"
+        },
+        {
+          "text": "Calculate residual value estimates and maintain depreciation schedules for fleet vehicles",
+          "source": "proxy",
+          "proxy_refs": [
+            "Residual value estimation and depreciation schedule"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "oracle_otm",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "procurement_disposal.replacement_planning",
+          "feature_name": "Replacement Planning",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 6
+      },
+      "features": [
+        {
+          "id": "procurement_disposal.acquisition_approval",
+          "name": "Acquisition & Approval",
+          "description": "Vehicle acquisition request submission and multi-level approval workflow.",
+          "req_idxs": [
+            0
+          ]
+        },
+        {
+          "id": "procurement_disposal.contract_management",
+          "name": "Contract Management",
+          "description": "Track purchase, lease, and rental contracts with key terms, dates, and payment schedules.",
+          "req_idxs": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "procurement_disposal.replacement_planning",
+          "name": "Replacement Planning",
+          "description": "Plan vehicle replacement based on age, mileage, TCO, and residual value thresholds.",
+          "req_idxs": [
+            3,
+            5
+          ]
+        },
+        {
+          "id": "procurement_disposal.disposal_management",
+          "name": "Disposal Management",
+          "description": "Record and track vehicle disposal methods and completion status.",
+          "req_idxs": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.vendor_workshop",
+      "name": "Vendor & Workshop Management",
+      "description": "Maintain a register of external workshops and service vendors, track service quality, costs, and turnaround times.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "fleetio",
+        "chevin_fleetwave"
+      ],
+      "requirements": [
+        {
+          "text": "Maintain a register of workshops and service vendors with contact details, location, and service capabilities",
+          "source": "proxy",
+          "proxy_refs": [
+            "Workshop and vendor register with contact details"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio"
+          ],
+          "solcat_citations": [],
+          "feature_id": "vendor_workshop.vendor_registry",
+          "feature_name": "Vendor Registry",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Generate purchase orders for external repair and maintenance services",
+          "source": "proxy",
+          "proxy_refs": [
+            "Purchase order creation for external repairs"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio"
+          ],
+          "solcat_citations": [],
+          "feature_id": "vendor_workshop.vendor_selection",
+          "feature_name": "Vendor Selection & Procurement",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Assign preferred vendors by service type or repair category",
+          "source": "proxy",
+          "proxy_refs": [
+            "Preferred vendor assignment per service type"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio"
+          ],
+          "solcat_citations": [],
+          "feature_id": "vendor_workshop.vendor_selection",
+          "feature_name": "Vendor Selection & Procurement",
+          "criticality": "standard"
+        },
+        {
+          "text": "Compare service costs across multiple vendors for the same service type",
+          "source": "proxy",
+          "proxy_refs": [
+            "Service cost comparison across vendors"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio"
+          ],
+          "solcat_citations": [],
+          "feature_id": "vendor_workshop.vendor_selection",
+          "feature_name": "Vendor Selection & Procurement",
+          "criticality": "standard"
+        },
+        {
+          "text": "Track and rate vendor performance metrics including turnaround time and service quality",
+          "source": "proxy",
+          "proxy_refs": [
+            "Vendor performance rating (turnaround, quality)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio"
+          ],
+          "solcat_citations": [],
+          "feature_id": "vendor_workshop.vendor_performance",
+          "feature_name": "Vendor Performance & Warranty",
+          "criticality": "standard"
+        },
+        {
+          "text": "Track warranty coverage and expiration dates by vendor and service type",
+          "source": "proxy",
+          "proxy_refs": [
+            "Warranty tracking per vendor and service"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio"
+          ],
+          "solcat_citations": [],
+          "feature_id": "vendor_workshop.vendor_performance",
+          "feature_name": "Vendor Performance & Warranty",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 6
+      },
+      "features": [
+        {
+          "id": "vendor_workshop.vendor_registry",
+          "name": "Vendor Registry",
+          "description": "Maintain and organize workshop and service vendor master data with contact and capability information.",
+          "req_idxs": [
+            0
+          ]
+        },
+        {
+          "id": "vendor_workshop.vendor_selection",
+          "name": "Vendor Selection & Procurement",
+          "description": "Assign preferred vendors, compare costs, and generate purchase orders for external services.",
+          "req_idxs": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "id": "vendor_workshop.vendor_performance",
+          "name": "Vendor Performance & Warranty",
+          "description": "Track vendor performance metrics, service quality ratings, and warranty coverage management.",
+          "req_idxs": [
+            3,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.emissions_tracking",
+      "name": "Environmental & Emissions Tracking",
+      "description": "Monitor fleet carbon emissions, track EV transition progress, and generate sustainability reports for ESG compliance.",
+      "priority_proxy": "advanced",
+      "applicability": [
+        "enterprise"
+      ],
+      "sme_tier": "enterprise_only",
+      "cited_sources": [
+        "odoo_fleet",
+        "chevin_fleetwave",
+        "sap_vehicle",
+        "wikipedia_fleet"
+      ],
+      "requirements": [
+        {
+          "text": "Calculate and track CO2 emissions per vehicle and aggregate to fleet-wide totals",
+          "source": "proxy",
+          "proxy_refs": [
+            "CO2 emissions calculation per vehicle and fleet-wide"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "odoo_fleet",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "emissions_tracking.emissions_calculation",
+          "feature_name": "Emissions Calculation & Tracking",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Generate emissions reports segmented by fuel type and vehicle class",
+          "source": "proxy",
+          "proxy_refs": [
+            "Emissions reporting by fuel type and vehicle class"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "odoo_fleet",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "emissions_tracking.sustainability_reporting",
+          "feature_name": "Sustainability & ESG Reporting",
+          "criticality": "standard"
+        },
+        {
+          "text": "Track fleet composition breakdown between electric vehicles and internal combustion engine vehicles",
+          "source": "proxy",
+          "proxy_refs": [
+            "EV vs ICE fleet composition tracking"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "odoo_fleet",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "emissions_tracking.fleet_composition",
+          "feature_name": "Fleet Composition Monitoring",
+          "criticality": "standard"
+        },
+        {
+          "text": "Generate ESG and sustainability reports for compliance and stakeholder communication",
+          "source": "proxy",
+          "proxy_refs": [
+            "ESG and sustainability report generation"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "odoo_fleet",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "emissions_tracking.sustainability_reporting",
+          "feature_name": "Sustainability & ESG Reporting",
+          "criticality": "standard"
+        },
+        {
+          "text": "Log and monitor EV charging station usage and associated costs",
+          "source": "proxy",
+          "proxy_refs": [
+            "EV charging station usage and cost logging"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "odoo_fleet",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "emissions_tracking.fleet_composition",
+          "feature_name": "Fleet Composition Monitoring",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Track carbon offset initiatives and emissions reduction targets against actual performance",
+          "source": "proxy",
+          "proxy_refs": [
+            "Carbon offset and reduction target tracking"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "odoo_fleet",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "emissions_tracking.sustainability_reporting",
+          "feature_name": "Sustainability & ESG Reporting",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 6
+      },
+      "features": [
+        {
+          "id": "emissions_tracking.emissions_calculation",
+          "name": "Emissions Calculation & Tracking",
+          "description": "Calculate and aggregate CO2 emissions by vehicle and fleet-wide totals.",
+          "req_idxs": [
+            0
+          ]
+        },
+        {
+          "id": "emissions_tracking.fleet_composition",
+          "name": "Fleet Composition Monitoring",
+          "description": "Track EV and ICE vehicle breakdown and charging station usage.",
+          "req_idxs": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": "emissions_tracking.sustainability_reporting",
+          "name": "Sustainability & ESG Reporting",
+          "description": "Generate emissions reports, track reduction targets, and produce compliance documentation.",
+          "req_idxs": [
+            1,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.pool_car_sharing",
+      "name": "Pool Vehicle & Car Sharing",
+      "description": "Manage a shared vehicle pool with self-service booking, keyless access, usage-based billing, and automated return workflows.",
+      "priority_proxy": "advanced",
+      "applicability": [
+        "enterprise"
+      ],
+      "sme_tier": "enterprise_only",
+      "cited_sources": [
+        "chevin_fleetwave",
+        "sap_vehicle"
+      ],
+      "requirements": [
+        {
+          "text": "Enable self-service pool vehicle booking through mobile application with real-time availability display",
+          "source": "proxy",
+          "proxy_refs": [
+            "Self-service pool vehicle booking via app"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "pool_car_sharing.booking_access",
+          "feature_name": "Booking & Access",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Calculate and allocate vehicle usage costs to departments based on actual usage metrics (distance, duration, fuel consumption)",
+          "source": "proxy",
+          "proxy_refs": [
+            "Usage-based cost allocation to departments"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "pool_car_sharing.usage_billing",
+          "feature_name": "Usage & Billing",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Automate pre-trip vehicle inspection workflows with checklist capture and photo documentation",
+          "source": "proxy",
+          "proxy_refs": [
+            "Automated pre-trip and post-trip inspection"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "pool_car_sharing.inspections_condition",
+          "feature_name": "Inspections & Condition",
+          "criticality": "standard"
+        },
+        {
+          "text": "Automate post-trip vehicle inspection workflows with checklist capture and photo documentation",
+          "source": "proxy",
+          "proxy_refs": [
+            "Automated pre-trip and post-trip inspection"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "pool_car_sharing.inspections_condition",
+          "feature_name": "Inspections & Condition",
+          "criticality": "standard"
+        },
+        {
+          "text": "Capture vehicle condition reports including cleanliness status and damage documentation from users",
+          "source": "proxy",
+          "proxy_refs": [
+            "Vehicle cleanliness and damage reporting"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "pool_car_sharing.inspections_condition",
+          "feature_name": "Inspections & Condition",
+          "criticality": "standard"
+        },
+        {
+          "text": "Integrate keyless access mechanisms (smart locks, electronic key boxes) for automated vehicle unlock upon booking confirmation",
+          "source": "proxy",
+          "proxy_refs": [
+            "Keyless access integration (smart lock, key box)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "pool_car_sharing.booking_access",
+          "feature_name": "Booking & Access",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Generate pool vehicle utilization analytics to support capacity planning and right-sizing decisions",
+          "source": "proxy",
+          "proxy_refs": [
+            "Pool utilisation analytics and right-sizing"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "pool_car_sharing.analytics_reporting",
+          "feature_name": "Analytics & Reporting",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 7
+      },
+      "features": [
+        {
+          "id": "pool_car_sharing.booking_access",
+          "name": "Booking & Access",
+          "description": "Self-service booking and keyless vehicle access management.",
+          "req_idxs": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "pool_car_sharing.inspections_condition",
+          "name": "Inspections & Condition",
+          "description": "Pre-trip and post-trip vehicle inspections with damage and cleanliness reporting.",
+          "req_idxs": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "id": "pool_car_sharing.usage_billing",
+          "name": "Usage & Billing",
+          "description": "Track vehicle usage metrics and allocate costs to departments.",
+          "req_idxs": [
+            2
+          ]
+        },
+        {
+          "id": "pool_car_sharing.analytics_reporting",
+          "name": "Analytics & Reporting",
+          "description": "Generate utilization insights for capacity planning and fleet optimization.",
+          "req_idxs": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.analytics_ai",
+      "name": "Fleet Analytics & AI",
+      "description": "Advanced analytics and machine learning applied to fleet data — predictive maintenance, optimal replacement timing, anomaly detection, and demand forecasting.",
+      "priority_proxy": "advanced",
+      "applicability": [
+        "enterprise"
+      ],
+      "sme_tier": "enterprise_only",
+      "cited_sources": [
+        "samsara",
+        "oracle_otm",
+        "sap_vehicle"
+      ],
+      "requirements": [
+        {
+          "text": "Predictive maintenance based on vehicle usage patterns and historical data",
+          "source": "both",
+          "proxy_refs": [
+            "Predictive maintenance based on usage patterns"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-01411",
+              "text": "Vehicle maintenance and servicing tasks",
+              "q_title": "Data Analytics and Insights for Vehicles",
+              "subsection": "Functional Requirements",
+              "sources": [
+                "essential-business__fleet-management-system",
+                "logistics__transport-management"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "oracle_otm",
+            "samsara",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [
+            "essential-business__fleet-management-system",
+            "logistics__transport-management"
+          ],
+          "feature_id": "analytics_ai.predictive_maintenance",
+          "feature_name": "Predictive Maintenance",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Anomaly detection for fuel consumption and operational efficiency",
+          "source": "both",
+          "proxy_refs": [
+            "Fuel consumption anomaly detection"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00909",
+              "text": "Mileage and fuel consumption",
+              "q_title": "Data Analytics and Insights for Vehicles",
+              "subsection": "Functional Requirements",
+              "sources": [
+                "essential-business__fleet-management-system",
+                "logistics__transport-management"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "oracle_otm",
+            "samsara",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [
+            "essential-business__fleet-management-system",
+            "logistics__transport-management"
+          ],
+          "feature_id": "analytics_ai.operational_analytics",
+          "feature_name": "Operational Analytics",
+          "criticality": "standard"
+        },
+        {
+          "text": "Optimal vehicle replacement timing model based on age, condition, and cost analysis",
+          "source": "proxy",
+          "proxy_refs": [
+            "Optimal vehicle replacement timing model"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_otm",
+            "samsara",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "analytics_ai.asset_optimization",
+          "feature_name": "Asset Optimization",
+          "criticality": "standard"
+        },
+        {
+          "text": "AI-generated recommendations for maintenance scheduling and cost optimization",
+          "source": "proxy",
+          "proxy_refs": [
+            "AI-generated maintenance and cost recommendations"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_otm",
+            "samsara",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "analytics_ai.predictive_maintenance",
+          "feature_name": "Predictive Maintenance",
+          "criticality": "standard"
+        },
+        {
+          "text": "Driver risk prediction and behaviour analysis including dangerous driving and speeding detection",
+          "source": "both",
+          "proxy_refs": [
+            "Driver risk prediction from behaviour data"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00605",
+              "text": "Drivers' behaviour (e.g. dangerous driving, speeding)",
+              "q_title": "Data Analytics and Insights for Vehicles",
+              "subsection": "Analytics Areas",
+              "sources": [
+                "logistics__transport-management"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "oracle_otm",
+            "samsara",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [
+            "logistics__transport-management"
+          ],
+          "feature_id": "analytics_ai.driver_risk_analysis",
+          "feature_name": "Driver Risk Analysis",
+          "criticality": "advanced"
+        },
+        {
+          "text": "Fleet demand forecasting by season, project, or operational period",
+          "source": "proxy",
+          "proxy_refs": [
+            "Fleet demand forecasting by season or project"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_otm",
+            "samsara",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "analytics_ai.demand_forecasting",
+          "feature_name": "Demand Forecasting",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 3,
+        "merged_out": 6
+      },
+      "features": [
+        {
+          "id": "analytics_ai.predictive_maintenance",
+          "name": "Predictive Maintenance",
+          "description": "ML-based forecasting of vehicle maintenance needs using usage patterns and historical data.",
+          "req_idxs": [
+            0,
+            5
+          ]
+        },
+        {
+          "id": "analytics_ai.asset_optimization",
+          "name": "Asset Optimization",
+          "description": "Models for optimal vehicle replacement timing and lifecycle cost analysis.",
+          "req_idxs": [
+            1
+          ]
+        },
+        {
+          "id": "analytics_ai.operational_analytics",
+          "name": "Operational Analytics",
+          "description": "Anomaly detection and performance monitoring for fuel consumption and efficiency.",
+          "req_idxs": [
+            2
+          ]
+        },
+        {
+          "id": "analytics_ai.demand_forecasting",
+          "name": "Demand Forecasting",
+          "description": "Predictive modeling of fleet demand by season, project, and operational period.",
+          "req_idxs": [
+            3
+          ]
+        },
+        {
+          "id": "analytics_ai.driver_risk_analysis",
+          "name": "Driver Risk Analysis",
+          "description": "Behavior prediction and safety monitoring including dangerous driving and speeding detection.",
+          "req_idxs": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.mobile_access",
+      "name": "Mobile and Multi-Device Access",
+      "description": "The solution works on phones, tablets, and desktops so drivers and fleet managers can log data and check status from the field.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "fleetio",
+        "samsara",
+        "odoo_fleet"
+      ],
+      "requirements": [
+        {
+          "text": "Solution must be usable on phones, tablets, and desktops with responsive design that adapts to all screen sizes",
+          "source": "both",
+          "proxy_refs": [
+            "Usable on phone, tablet, and desktop",
+            "Responsive design for all screen sizes"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "mobile_access.responsive_design",
+          "feature_name": "Responsive Design",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Mobile application for drivers to log fuel consumption, vehicle inspections, and operational data from the field",
+          "source": "proxy",
+          "proxy_refs": [
+            "Driver mobile app for fuel logs and inspections"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "mobile_access.field_data_capture",
+          "feature_name": "Field Data Capture",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Cloud-hosted or browser-based deployment with no local desktop installation required",
+          "source": "proxy",
+          "proxy_refs": [
+            "Cloud-hosted or browser-based — no desktop install needed"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "mobile_access.cloud_deployment",
+          "feature_name": "Cloud Deployment",
+          "criticality": "standard"
+        },
+        {
+          "text": "Mobile application enabling drivers and dispatchers to track vehicle status and communicate directly with fleet coordinators and controllers",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00606",
+              "text": "Drivers/dispatchers with mobile application for tracking and direct communication and coordination with the coordinator/controller",
+              "q_title": "Mobile App for Drivers/Dispatchers",
+              "subsection": "Mobile App for Drivers/Dispatchers",
+              "sources": [
+                "logistics__transport-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "logistics__transport-management"
+          ],
+          "feature_id": "mobile_access.mobile_tracking_comms",
+          "feature_name": "Mobile Tracking & Communications",
+          "criticality": "standard"
+        },
+        {
+          "text": "Offline mode capability with automatic synchronization when network connectivity is restored",
+          "source": "proxy",
+          "proxy_refs": [
+            "Offline mode with sync when reconnected"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "fleetio",
+            "odoo_fleet",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "mobile_access.offline_sync",
+          "feature_name": "Offline Synchronization",
+          "criticality": "advanced"
+        }
+      ],
+      "stats": {
+        "proxy_in": 5,
+        "imda_in": 1,
+        "merged_out": 5
+      },
+      "features": [
+        {
+          "id": "mobile_access.responsive_design",
+          "name": "Responsive Design",
+          "description": "Adaptive user interface that functions seamlessly across phones, tablets, and desktops.",
+          "req_idxs": [
+            0
+          ]
+        },
+        {
+          "id": "mobile_access.cloud_deployment",
+          "name": "Cloud Deployment",
+          "description": "Browser-based or cloud-hosted solution requiring no local installation.",
+          "req_idxs": [
+            1
+          ]
+        },
+        {
+          "id": "mobile_access.field_data_capture",
+          "name": "Field Data Capture",
+          "description": "Mobile application for drivers to log fuel, inspections, and operational data from the field.",
+          "req_idxs": [
+            2
+          ]
+        },
+        {
+          "id": "mobile_access.offline_sync",
+          "name": "Offline Synchronization",
+          "description": "Offline mode with automatic data synchronization upon network restoration.",
+          "req_idxs": [
+            3
+          ]
+        },
+        {
+          "id": "mobile_access.mobile_tracking_comms",
+          "name": "Mobile Tracking & Communications",
+          "description": "Mobile application for real-time vehicle status tracking and direct communication between drivers and fleet coordinators.",
+          "req_idxs": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.data_governance",
+      "name": "Data Security, Privacy & Consent",
+      "description": "Data protection, consent management (PDPA), retention policies, and audit trails — universal PSG compliance requirement.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "samsara",
+        "chevin_fleetwave"
+      ],
+      "requirements": [
+        {
+          "text": "Capture and manage PDPA consent for collection and processing of driver personal data",
+          "source": "proxy",
+          "proxy_refs": [
+            "PDPA consent capture for driver personal data"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "data_governance.consent_mgmt",
+          "feature_name": "Consent Management",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Define and enforce data retention policies with automatic expiry-based deletion of personal data",
+          "source": "proxy",
+          "proxy_refs": [
+            "Data retention policy with expiry-based deletion"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "data_governance.data_retention",
+          "feature_name": "Data Retention & Deletion",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Process and execute data deletion requests in compliance with PDPA requirements",
+          "source": "proxy",
+          "proxy_refs": [
+            "Handle data deletion requests"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "data_governance.data_retention",
+          "feature_name": "Data Retention & Deletion",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Encrypt data at rest and in transit using industry-standard encryption protocols",
+          "source": "proxy",
+          "proxy_refs": [
+            "Encrypt data at rest and in transit"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "data_governance.encryption_security",
+          "feature_name": "Encryption & Security Controls",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Maintain comprehensive audit logs recording all access to and modifications of personal data",
+          "source": "proxy",
+          "proxy_refs": [
+            "Log who accessed or changed what"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "data_governance.audit_logging",
+          "feature_name": "Audit Logging",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Comply with PSG Cyber Essentials Mark baseline security controls",
+          "source": "proxy",
+          "proxy_refs": [
+            "Compliant with PSG Cyber Essentials Mark baseline"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "data_governance.encryption_security",
+          "feature_name": "Encryption & Security Controls",
+          "criticality": "must_have"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 1,
+        "merged_out": 6
+      },
+      "features": [
+        {
+          "id": "data_governance.consent_mgmt",
+          "name": "Consent Management",
+          "description": "Capture, record, and manage PDPA consent for driver personal data collection and processing.",
+          "req_idxs": [
+            0
+          ]
+        },
+        {
+          "id": "data_governance.data_retention",
+          "name": "Data Retention & Deletion",
+          "description": "Define retention policies, enforce automatic expiry-based deletion, and process PDPA deletion requests.",
+          "req_idxs": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "data_governance.encryption_security",
+          "name": "Encryption & Security Controls",
+          "description": "Encrypt data at rest and in transit, and implement PSG Cyber Essentials baseline security controls.",
+          "req_idxs": [
+            3,
+            5
+          ]
+        },
+        {
+          "id": "data_governance.audit_logging",
+          "name": "Audit Logging",
+          "description": "Maintain comprehensive audit logs of all access to and modifications of personal data.",
+          "req_idxs": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.user_access_roles",
+      "name": "User Accounts, Roles & Access Control",
+      "description": "Multiple staff can use the system with their own login, role-based permissions, and audit trail. Universal PSG requirement.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "fleetio",
+        "samsara",
+        "chevin_fleetwave"
+      ],
+      "requirements": [
+        {
+          "text": "Individual user accounts with unique login credentials",
+          "source": "proxy",
+          "proxy_refs": [
+            "Individual user accounts with unique login credentials"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "user_access_roles.user_auth",
+          "feature_name": "User Authentication",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Role-based access control with predefined roles (e.g., fleet manager, driver, administrator)",
+          "source": "proxy",
+          "proxy_refs": [
+            "Role-based permissions (fleet manager, driver, admin)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "user_access_roles.role_permissions",
+          "feature_name": "Role & Permissions Management",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Enforce role-based permissions to restrict data visibility and edit capabilities by role",
+          "source": "proxy",
+          "proxy_refs": [
+            "Restrict what each role can see and edit"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "user_access_roles.role_permissions",
+          "feature_name": "Role & Permissions Management",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Audit log recording all user logins and system actions with timestamps",
+          "source": "proxy",
+          "proxy_refs": [
+            "Audit log of user logins and actions"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "user_access_roles.audit_trail",
+          "feature_name": "Audit & Compliance Logging",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Deactivate user accounts when staff members leave the organization",
+          "source": "proxy",
+          "proxy_refs": [
+            "Deactivate users when they leave"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "user_access_roles.user_lifecycle",
+          "feature_name": "User Lifecycle Management",
+          "criticality": "standard"
+        },
+        {
+          "text": "Two-factor authentication for user login",
+          "source": "proxy",
+          "proxy_refs": [
+            "Two-factor authentication"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "user_access_roles.user_auth",
+          "feature_name": "User Authentication",
+          "criticality": "standard"
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 6
+      },
+      "features": [
+        {
+          "id": "user_access_roles.user_auth",
+          "name": "User Authentication",
+          "description": "Individual user accounts with unique credentials and multi-factor authentication.",
+          "req_idxs": [
+            0,
+            4
+          ]
+        },
+        {
+          "id": "user_access_roles.role_permissions",
+          "name": "Role & Permissions Management",
+          "description": "Predefined roles with granular permission enforcement for data visibility and edit capabilities.",
+          "req_idxs": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "user_access_roles.user_lifecycle",
+          "name": "User Lifecycle Management",
+          "description": "Account activation, deactivation, and status management for staff changes.",
+          "req_idxs": [
+            3
+          ]
+        },
+        {
+          "id": "user_access_roles.audit_trail",
+          "name": "Audit & Compliance Logging",
+          "description": "Complete audit log of user logins and system actions with timestamps for compliance.",
+          "req_idxs": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet.integration_import_export",
+      "name": "Data Import, Export & Integration",
+      "description": "Bring in existing fleet data and push data out to other systems — accounting, HR, telematics providers. Universal PSG requirement.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo_fleet",
+        "fleetio",
+        "chevin_fleetwave",
+        "sap_vehicle"
+      ],
+      "requirements": [
+        {
+          "text": "Import vehicle and driver master data from CSV or Excel files",
+          "source": "proxy",
+          "proxy_refs": [
+            "Import vehicles and drivers from CSV or Excel"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "integration_import_export.data_import",
+          "feature_name": "Data Import",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Export fleet data to CSV, Excel, and PDF formats",
+          "source": "proxy",
+          "proxy_refs": [
+            "Export fleet data to CSV, Excel, or PDF"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "integration_import_export.data_export",
+          "feature_name": "Data Export",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Ensure tight integration across all modules to enable unified data visibility and dashboard reporting",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00146",
+              "text": "Are the modules above tightly integrated such that information can be pulled from all modules to the dashboard",
+              "q_title": "Module Integration",
+              "subsection": "Module Integration",
+              "sources": [
+                "legal__practice-management-system-pms"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__practice-management-system-pms"
+          ],
+          "feature_id": "integration_import_export.unified_visibility",
+          "feature_name": "Unified Data Visibility",
+          "criticality": "must_have"
+        },
+        {
+          "text": "Integrate with accounting software systems (e.g., Xero, QuickBooks) for financial data synchronization",
+          "source": "proxy",
+          "proxy_refs": [
+            "Integrate with accounting software (Xero, QuickBooks)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "integration_import_export.system_integration",
+          "feature_name": "System Integration",
+          "criticality": "standard"
+        },
+        {
+          "text": "Provide API access for custom integrations with third-party systems",
+          "source": "proxy",
+          "proxy_refs": [
+            "API access for custom integrations"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "integration_import_export.system_integration",
+          "feature_name": "System Integration",
+          "criticality": "standard"
+        },
+        {
+          "text": "Import telematics device data from connected vehicle systems",
+          "source": "proxy",
+          "proxy_refs": [
+            "Telematics device data import"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "integration_import_export.data_import",
+          "feature_name": "Data Import",
+          "criticality": "standard"
+        },
+        {
+          "text": "Integrate with HR systems for driver record management and synchronization",
+          "source": "proxy",
+          "proxy_refs": [
+            "HR system integration for driver records"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "integration_import_export.system_integration",
+          "feature_name": "System Integration",
+          "criticality": "standard"
+        },
+        {
+          "text": "Support scheduled automated backups and data exports",
+          "source": "proxy",
+          "proxy_refs": [
+            "Scheduled backups and data export"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "integration_import_export.data_export",
+          "feature_name": "Data Export",
+          "criticality": "standard"
+        }
+      ],
+      "stats": {
+        "proxy_in": 7,
+        "imda_in": 1,
+        "merged_out": 8
+      },
+      "features": [
+        {
+          "id": "integration_import_export.data_import",
+          "name": "Data Import",
+          "description": "Ingest fleet master data and telematics from external sources.",
+          "req_idxs": [
+            0,
+            4
+          ]
+        },
+        {
+          "id": "integration_import_export.data_export",
+          "name": "Data Export",
+          "description": "Export fleet data in multiple formats with scheduled automation.",
+          "req_idxs": [
+            1,
+            6
+          ]
+        },
+        {
+          "id": "integration_import_export.system_integration",
+          "name": "System Integration",
+          "description": "Connect with accounting, HR, and third-party systems via APIs.",
+          "req_idxs": [
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "id": "integration_import_export.unified_visibility",
+          "name": "Unified Data Visibility",
+          "description": "Enable cross-module data synchronization and integrated reporting.",
+          "req_idxs": [
+            7
+          ]
+        }
+      ]
+    }
+  ]
+}

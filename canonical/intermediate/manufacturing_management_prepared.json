@@ -1,0 +1,299 @@
+{
+  "module": "manufacturing_management",
+  "stats": {
+    "raw_in_module": 21,
+    "after_noise_filter": 21,
+    "dropped_noise": 0,
+    "after_fuzzy_dedupe": 21,
+    "merged_via_fuzzy": 0
+  },
+  "requirements": [
+    {
+      "id": "req-00026",
+      "text": "A source of information on the sequence of processes involved to manufacture or assemble a product (e.g. technical drawing, Bill of Material (BOM), materials required and manufacturing process such as tools, equipment, instructions used to build the product",
+      "q_title": "Manufacturing Process Documentation",
+      "subsection": "Manufacturing Process Documentation",
+      "sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00146",
+      "text": "Are the modules above tightly integrated such that information can be pulled from all modules to the dashboard",
+      "q_title": "Module Integration",
+      "subsection": "Module Integration",
+      "sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "financial_management",
+        "human_resources_management",
+        "sales_and_crm",
+        "supply_chain_and_inventory",
+        "project_management",
+        "asset_management",
+        "manufacturing_management",
+        "field_service_management",
+        "fleet_management"
+      ]
+    },
+    {
+      "id": "req-00307",
+      "text": "Collection of quality data either through manual keying of information on screen by the operator or automatically through an interfaced connection with measurement equipment",
+      "q_title": "Quality Data Collection",
+      "subsection": "Quality Data Collection",
+      "sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00412",
+      "text": "Dashboard and reporting capabilities on recorded quality checks and statistical analysis",
+      "q_title": "Dashboard and Report Features",
+      "subsection": "Dashboard and Report Features",
+      "sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00530",
+      "text": "Does your solution create and dispatch daily work orders that include information such as execution sequence, work instructions, resources, etc",
+      "q_title": "Work Order Management",
+      "subsection": "Work Order Management",
+      "sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management",
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00533",
+      "text": "Does your solution display real-time insights on a user-friendly interface via the facility shopfloor monitor or mobile devices",
+      "q_title": "Real-time Shopfloor Insights",
+      "subsection": "Real-time Shopfloor Insights",
+      "sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00542",
+      "text": "Does your solution generate dashboards and report on insights such as e.g. overall equipment effectiveness, cycle time per part, number of parts per operator, number of scrapped parts, setup time per part",
+      "q_title": "Insights Dashboards and Reports",
+      "subsection": "Insights Dashboards and Reports",
+      "sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00543",
+      "text": "Does your solution generate notification alerts (e.g., via email or SMS) when equipment is down or shows signs of disruption",
+      "q_title": "Notification Alerts",
+      "subsection": "Notification Alerts",
+      "sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management",
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00556",
+      "text": "Does your solution integrate with third-party systems (e.g. ERP)",
+      "q_title": "System Integration and Connectivity",
+      "subsection": "System Integration and Connectivity",
+      "sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00557",
+      "text": "Does your solution integrate with third-party systems (e.g. ERP, CAD/CAM/PDM, MES and BI systems)",
+      "q_title": "System Integration and Connectivity",
+      "subsection": "System Integration and Connectivity",
+      "sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management",
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00558",
+      "text": "Does your solution integrate with third-party systems (e.g. ERP) for purposes such as retrieval of work orders and record of completed operations",
+      "q_title": "System Integration and Connectivity",
+      "subsection": "System Integration and Connectivity",
+      "sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00568",
+      "text": "Does your solution manage revisions to product design and update relevant manufacturing process changes that are impacted by the product design change",
+      "q_title": "Product Design Revision Management",
+      "subsection": "Product Design Revision Management",
+      "sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00569",
+      "text": "Does your solution monitor equipment status and downtime reason in real time via operator manual key in or automatic link with the equipment",
+      "q_title": "Real-time Equipment Status Monitoring",
+      "subsection": "Real-time Equipment Status Monitoring",
+      "sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management",
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00583",
+      "text": "Does your solution perform statistical analysis, detect trends and deviations for users to conclude about significant influences caused by equipment, batch, operator, temperature, etc",
+      "q_title": "Data Analytics",
+      "subsection": "Data Analytics",
+      "sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00588",
+      "text": "Does your solution scientifically create information such as machining parameters, cutting depth, spindle speed, and feed rates for increased productivity and quality in milling/turning",
+      "q_title": "Machining Information Generation",
+      "subsection": "Machining Information Generation",
+      "sources": [
+        "advanced-manufacturing__machining-dynamics-for-milling-turning"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00591",
+      "text": "Does your solution track and display real-time work completion status for each operation, based on data collected on the shopfloor (e.g. barcode scanners, manual key in)",
+      "q_title": "Shopfloor Work Completion Status Tracking",
+      "subsection": "Shopfloor Work Completion Status Tracking",
+      "sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00599",
+      "text": "Does your solution trigger alarms when measurements are out of specification and highlight quality issues to operators/inspectors for follow-ups",
+      "q_title": "Alert System",
+      "subsection": "Alert System",
+      "sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00680",
+      "text": "For users to generate stability lobes where Engineers can estimate their vibration resistant machining configuration with consideration of productivity and stability",
+      "q_title": "Stability Lobes Generation",
+      "subsection": "Stability Lobes Generation",
+      "sources": [
+        "advanced-manufacturing__machining-dynamics-for-milling-turning"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00788",
+      "text": "Integration with systems and software such as email, Know Your Customer (KYC) / Anti-Money Laundering (AML) functions, audit tools, document management systems, accounting software, and HR software",
+      "q_title": "System Integration",
+      "subsection": "System Integration",
+      "sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "supply_chain_and_inventory",
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-01321",
+      "text": "Technical drawings of components and materials used in each process",
+      "q_title": "Technical Drawing Management",
+      "subsection": "Technical Drawing Management",
+      "sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-01395",
+      "text": "Updates or notification alerts in the event when production equipment slows down or breaks down, affecting the entire production",
+      "q_title": "Production Equipment Monitoring and Alerts",
+      "subsection": "Production Equipment Monitoring and Alerts",
+      "sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management"
+      ]
+    }
+  ],
+  "dropped_noise": []
+}

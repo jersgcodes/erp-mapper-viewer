@@ -1,0 +1,5030 @@
+{
+  "module": "manufacturing_management",
+  "module_name": "Manufacturing Management",
+  "stats": {
+    "haiku_calls": 31,
+    "total_merged_reqs": 266
+  },
+  "capabilities": [
+    {
+      "id": "mfg.bom",
+      "name": "Bill of Materials (BOM)",
+      "description": "Structured definition of the components, quantities, and assembly relationships that make up a manufactured product. Foundation for every other manufacturing function.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo",
+        "erpnext",
+        "netsuite",
+        "sap_s4hana_pp",
+        "wikipedia_erp"
+      ],
+      "requirements": [
+        {
+          "text": "Support multi-level BOM structure with parent/child/sub-assembly hierarchy to represent complex product compositions",
+          "source": "proxy",
+          "proxy_refs": [
+            "Multi-level BOM with parent/child/sub-assembly hierarchy"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Define component quantities with unit-of-measure and scrap/waste factors for accurate material planning",
+          "source": "proxy",
+          "proxy_refs": [
+            "Component quantities with unit-of-measure and scrap factor"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Manage alternate and substitute components with configurable substitution rules and priority ranking",
+          "source": "proxy",
+          "proxy_refs": [
+            "Alternate / substitute components with substitution rules"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support phantom sub-assemblies that explode through to lower levels without creating intermediate inventory",
+          "source": "proxy",
+          "proxy_refs": [
+            "Phantom sub-assemblies (explode-through components for lean production)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Capture reference designators to specify component placement and location on assemblies",
+          "source": "proxy",
+          "proxy_refs": [
+            "Reference designators (which component goes where on the assembly)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Apply effectivity dates to control when components are added to or removed from BOMs",
+          "source": "proxy",
+          "proxy_refs": [
+            "Effectivity dates for component changes (in/out by date)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Distinguish between Engineering BOM and Manufacturing BOM to support design and production workflows",
+          "source": "proxy",
+          "proxy_refs": [
+            "Engineering BOM vs Manufacturing BOM distinction"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Calculate standard cost rollup from component costs to finished-good level",
+          "source": "proxy",
+          "proxy_refs": [
+            "Cost rollup from component costs to finished-good standard cost"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate where-used reports to identify all BOMs and products that reference a given component",
+          "source": "proxy",
+          "proxy_refs": [
+            "Where-used report (find all BOMs that reference a given component)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 9,
+        "imda_in": 0,
+        "merged_out": 9
+      }
+    },
+    {
+      "id": "mfg.routing",
+      "name": "Routings, Operations & Work Centers",
+      "description": "Defines the sequence of operations required to produce an item, the work centers each operation runs on, and the standard times for setup, run, and teardown.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo",
+        "erpnext",
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg",
+        "wikipedia_erp"
+      ],
+      "requirements": [
+        {
+          "text": "Routing defines an ordered sequence of operations required to manufacture or assemble a product",
+          "source": "both",
+          "proxy_refs": [
+            "Routing as an ordered sequence of operations"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00026",
+              "text": "A source of information on the sequence of processes involved to manufacture or assemble a product (e.g. technical drawing, Bill of Material (BOM), materials required and manufacturing process such as tools, equipment, instructions used to build the product",
+              "q_title": "Manufacturing Process Documentation",
+              "subsection": "Manufacturing Process Documentation",
+              "sources": [
+                "advanced-manufacturing__product-and-manufacturing-process-configuration"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__product-and-manufacturing-process-configuration"
+          ]
+        },
+        {
+          "text": "Work center master data includes capacity, cost rate, and efficiency metrics",
+          "source": "proxy",
+          "proxy_refs": [
+            "Work center master data (capacity, cost rate, efficiency)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Operations can be assigned to machine and labour resources with specified quantities or skill requirements",
+          "source": "proxy",
+          "proxy_refs": [
+            "Machine and labour resources per operation"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Each operation captures setup time, run time per piece, and teardown time",
+          "source": "proxy",
+          "proxy_refs": [
+            "Setup time, run time per piece, and teardown time"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Routing supports parallel and alternate operation paths for flexible manufacturing",
+          "source": "proxy",
+          "proxy_refs": [
+            "Parallel and alternate operation paths"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Multiple routing versions can be maintained with effectivity dates to manage engineering changes",
+          "source": "proxy",
+          "proxy_refs": [
+            "Routing versions with effectivity dates"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Operations link to BOM components consumed or produced at that manufacturing step",
+          "source": "proxy",
+          "proxy_refs": [
+            "Link operations to BOM components consumed at that step"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Work instructions and technical documentation can be attached to each operation",
+          "source": "both",
+          "proxy_refs": [
+            "Standard worksheet / work instruction attached to each operation"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00026",
+              "text": "A source of information on the sequence of processes involved to manufacture or assemble a product (e.g. technical drawing, Bill of Material (BOM), materials required and manufacturing process such as tools, equipment, instructions used to build the product",
+              "q_title": "Manufacturing Process Documentation",
+              "subsection": "Manufacturing Process Documentation",
+              "sources": [
+                "advanced-manufacturing__product-and-manufacturing-process-configuration"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__product-and-manufacturing-process-configuration"
+          ]
+        }
+      ],
+      "stats": {
+        "proxy_in": 8,
+        "imda_in": 2,
+        "merged_out": 8
+      }
+    },
+    {
+      "id": "mfg.work_orders",
+      "name": "Work Orders & Job Cards",
+      "description": "Create, schedule, execute, and close production work orders against BOMs and routings — the central operational artifact of a discrete manufacturing ERP.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo",
+        "erpnext",
+        "netsuite",
+        "sap_s4hana_pp",
+        "wikipedia_erp"
+      ],
+      "requirements": [
+        {
+          "text": "Create work orders from sales orders, master production schedule, or manual entry",
+          "source": "both",
+          "proxy_refs": [
+            "Work order creation from sales order, MPS, or manual"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Automatically reserve components from bill of materials upon work order creation",
+          "source": "proxy",
+          "proxy_refs": [
+            "Automatic component reservation from BOM"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate job cards or operation cards for each routing step with execution sequence and work instructions",
+          "source": "both",
+          "proxy_refs": [
+            "Job card / operation card per routing step"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00530",
+              "text": "Does your solution create and dispatch daily work orders that include information such as execution sequence, work instructions, resources, etc",
+              "q_title": "Work Order Management",
+              "subsection": "Work Order Management",
+              "sources": [
+                "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+          ]
+        },
+        {
+          "text": "Dispatch work orders daily with assigned resources and execution sequence",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00530",
+              "text": "Does your solution create and dispatch daily work orders that include information such as execution sequence, work instructions, resources, etc",
+              "q_title": "Work Order Management",
+              "subsection": "Work Order Management",
+              "sources": [
+                "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+          ]
+        },
+        {
+          "text": "Issue materials against work orders via backflush or pick list",
+          "source": "proxy",
+          "proxy_refs": [
+            "Material issue against work order (backflush or pick)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Record labour time and attendance per operation",
+          "source": "proxy",
+          "proxy_refs": [
+            "Labour time booking per operation"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Capture scrap and rework quantities against work orders",
+          "source": "proxy",
+          "proxy_refs": [
+            "Scrap and rework capture on the work order"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Manage work order status lifecycle: planned, released, in-progress, completed, closed",
+          "source": "proxy",
+          "proxy_refs": [
+            "Work order status lifecycle (planned → released → in-progress → completed → closed)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support partial completion with remaining quantity carried forward to new work order",
+          "source": "proxy",
+          "proxy_refs": [
+            "Partial completion with remaining quantity carried forward"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Track actual versus planned variance for time, material consumption, and cost",
+          "source": "proxy",
+          "proxy_refs": [
+            "Actual vs planned variance capture (time, material, cost)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 9,
+        "imda_in": 1,
+        "merged_out": 10
+      }
+    },
+    {
+      "id": "mfg.mrp",
+      "name": "Material Requirements Planning (MRP)",
+      "description": "Net-requirements explosion from demand (sales orders + forecast) through BOMs and inventory policies, generating planned purchase and production orders to meet demand without stock-outs or excess.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo",
+        "netsuite",
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg",
+        "wikipedia_erp"
+      ],
+      "requirements": [
+        {
+          "text": "Aggregate demand from sales orders, forecasts, and stock transfers into a consolidated demand schedule",
+          "source": "proxy",
+          "proxy_refs": [
+            "Demand aggregation from sales orders, forecasts, and stock transfers"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Perform multi-level BOM explosion to calculate net requirements, netting against on-hand inventory and on-order quantities",
+          "source": "proxy",
+          "proxy_refs": [
+            "Multi-level BOM explosion net of on-hand and on-order quantities"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate planned purchase orders for externally sourced items based on net requirements",
+          "source": "proxy",
+          "proxy_refs": [
+            "Planned order generation for purchased items and manufactured items"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate planned production orders for internally manufactured items based on net requirements",
+          "source": "proxy",
+          "proxy_refs": [
+            "Planned order generation for purchased items and manufactured items"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Apply lot-sizing rules including fixed lot, lot-for-lot, economic order quantity, and period of supply methods",
+          "source": "proxy",
+          "proxy_refs": [
+            "Lot-size rules (fixed, lot-for-lot, economic, period of supply)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Apply safety-stock and reorder-point policies per item to protect against demand and supply variability",
+          "source": "proxy",
+          "proxy_refs": [
+            "Safety-stock and reorder-point policies per item"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Offset planned order dates by supplier or manufacturing lead times to calculate required start dates",
+          "source": "proxy",
+          "proxy_refs": [
+            "Lead-time offsetting for start-date calculation"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate MRP exception messages identifying orders to expedite, defer, cancel, or release based on plan changes",
+          "source": "proxy",
+          "proxy_refs": [
+            "MRP exception messages (expedite, defer, cancel, release)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support what-if scenario analysis by running MRP plans with alternative demand, supply, or policy parameters",
+          "source": "proxy",
+          "proxy_refs": [
+            "What-if MRP run for scenario testing"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Provide visibility of dependent demand traceability from finished goods through all component levels to raw materials",
+          "source": "proxy",
+          "proxy_refs": [
+            "Dependent demand visibility from finished good to raw material"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 9,
+        "imda_in": 0,
+        "merged_out": 10
+      }
+    },
+    {
+      "id": "mfg.production_scheduling",
+      "name": "Production Scheduling & Capacity Planning",
+      "description": "Assign work orders to work centers across a time horizon, respecting finite capacity and operation sequence — distinct from MRP which generates orders without regard to capacity.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo",
+        "netsuite",
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg",
+        "wikipedia_mes"
+      ],
+      "requirements": [
+        {
+          "text": "Support both infinite and finite capacity scheduling modes to allow flexible planning across different scenarios",
+          "source": "proxy",
+          "proxy_refs": [
+            "Infinite and finite capacity scheduling modes"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Provide work center load visualization (Gantt chart or resource timeline) to display scheduled operations and available capacity",
+          "source": "proxy",
+          "proxy_refs": [
+            "Work center load view (Gantt or resource chart)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Enable forward scheduling from operation start date and backward scheduling from due date to optimize schedule feasibility",
+          "source": "proxy",
+          "proxy_refs": [
+            "Forward scheduling from start date, backward from due date"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support interactive rescheduling with drag-and-drop capability and real-time conflict detection to identify capacity violations",
+          "source": "proxy",
+          "proxy_refs": [
+            "Drag-and-drop rescheduling with conflict detection"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate capacity utilization reports and identify bottleneck work centers to guide capacity planning decisions",
+          "source": "proxy",
+          "proxy_refs": [
+            "Capacity utilisation reports and bottleneck identification"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Enable what-if scenario modeling to evaluate alternative scheduling strategies and their impact on delivery dates and resource utilization",
+          "source": "proxy",
+          "proxy_refs": [
+            "What-if scheduling scenarios"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support calendar exceptions including holidays, shift patterns, and planned downtime to reflect actual work center availability",
+          "source": "proxy",
+          "proxy_refs": [
+            "Calendar exceptions (holidays, shifts, planned downtime)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Apply finite-capacity sequencing with setup-time minimization to reduce changeover delays and improve work center efficiency",
+          "source": "proxy",
+          "proxy_refs": [
+            "Finite-capacity sequencing with setup-time minimisation"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 8,
+        "imda_in": 0,
+        "merged_out": 8
+      }
+    },
+    {
+      "id": "mfg.shop_floor_execution",
+      "name": "Shop Floor Execution & MES",
+      "description": "Real-time shop-floor interface for operators: start/stop operations, record output, scan materials, capture quality, report downtime. Bridges ERP work orders (ISA-95 level 4) and the physical process (level 2).",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "odoo",
+        "netsuite",
+        "wikipedia_mes",
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg"
+      ],
+      "requirements": [
+        {
+          "text": "Provide operator interface (tablet, HMI, or mobile device) at each work center for real-time shop-floor data entry and monitoring",
+          "source": "both",
+          "proxy_refs": [
+            "Operator tablet or HMI interface per work center"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00533",
+              "text": "Does your solution display real-time insights on a user-friendly interface via the facility shopfloor monitor or mobile devices",
+              "q_title": "Real-time Shopfloor Insights",
+              "subsection": "Real-time Shopfloor Insights",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+          ]
+        },
+        {
+          "text": "Capture operation start, pause, and stop events with precise timestamps",
+          "source": "proxy",
+          "proxy_refs": [
+            "Start / pause / stop of operations with time capture"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support barcode and lot/serial number scanning for material consumption tracking and traceability",
+          "source": "proxy",
+          "proxy_refs": [
+            "Barcode and lot/serial scanning for component consumption"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Display real-time work-in-progress (WIP) status and work completion progress for each operation",
+          "source": "both",
+          "proxy_refs": [
+            "Real-time work-in-progress (WIP) visibility"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00591",
+              "text": "Does your solution track and display real-time work completion status for each operation, based on data collected on the shopfloor (e.g. barcode scanners, manual key in)",
+              "q_title": "Shopfloor Work Completion Status Tracking",
+              "subsection": "Shopfloor Work Completion Status Tracking",
+              "sources": [
+                "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+          ]
+        },
+        {
+          "text": "Record downtime events with reason codes and duration",
+          "source": "proxy",
+          "proxy_refs": [
+            "Downtime capture with reason code"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate and send notifications (email, SMS, or in-app alerts) when equipment downtime or disruptions are detected",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00543",
+              "text": "Does your solution generate notification alerts (e.g., via email or SMS) when equipment is down or shows signs of disruption",
+              "q_title": "Notification Alerts",
+              "subsection": "Notification Alerts",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+          ]
+        },
+        {
+          "text": "Display digital work instructions and standard operating procedures at the work center",
+          "source": "proxy",
+          "proxy_refs": [
+            "Digital work instructions displayed at the machine"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Capture in-process quality measurements and checks at the work center",
+          "source": "proxy",
+          "proxy_refs": [
+            "In-process quality checks at the work center"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Trigger alarms and highlight quality issues to operators and inspectors when measurements exceed specification limits",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00599",
+              "text": "Does your solution trigger alarms when measurements are out of specification and highlight quality issues to operators/inspectors for follow-ups",
+              "q_title": "Alert System",
+              "subsection": "Alert System",
+              "sources": [
+                "advanced-manufacturing__manufacturing-quality-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__manufacturing-quality-management"
+          ]
+        },
+        {
+          "text": "Record scrap and defective units at the work center with reason codes",
+          "source": "proxy",
+          "proxy_refs": [
+            "Scrap recording at the work center"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support offline operation with automatic data synchronization when connectivity is restored",
+          "source": "proxy",
+          "proxy_refs": [
+            "Offline operation with sync on reconnect"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 9,
+        "imda_in": 4,
+        "merged_out": 11
+      }
+    },
+    {
+      "id": "mfg.quality_management",
+      "name": "Quality Management (QM)",
+      "description": "Plan, execute, and record quality inspections against materials, work in progress, and finished goods, with non-conformance tracking and corrective-action workflows.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo",
+        "erpnext",
+        "netsuite",
+        "sap_s4hana_pp",
+        "wikipedia_mes"
+      ],
+      "requirements": [
+        {
+          "text": "Define and maintain inspection plans by material, operation, or sampling rule",
+          "source": "proxy",
+          "proxy_refs": [
+            "Inspection plans by material, operation, or sampling rule"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support incoming, in-process, and final inspection types",
+          "source": "proxy",
+          "proxy_refs": [
+            "Incoming, in-process, and final inspection types"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Define quality characteristics with tolerance limits and acceptance criteria",
+          "source": "proxy",
+          "proxy_refs": [
+            "Quality characteristics with tolerance limits"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Determine sample sizes and apply acceptance sampling rules (AQL)",
+          "source": "proxy",
+          "proxy_refs": [
+            "Sample-size determination and acceptance sampling (AQL)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Collect quality measurement data via manual entry or automated interface with measurement equipment",
+          "source": "both",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00307",
+              "text": "Collection of quality data either through manual keying of information on screen by the operator or automatically through an interfaced connection with measurement equipment",
+              "q_title": "Quality Data Collection",
+              "subsection": "Quality Data Collection",
+              "sources": [
+                "advanced-manufacturing__manufacturing-quality-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__manufacturing-quality-management"
+          ]
+        },
+        {
+          "text": "Trigger alerts and highlight out-of-specification measurements to operators and inspectors",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00599",
+              "text": "Does your solution trigger alarms when measurements are out of specification and highlight quality issues to operators/inspectors for follow-ups",
+              "q_title": "Alert System",
+              "subsection": "Alert System",
+              "sources": [
+                "advanced-manufacturing__manufacturing-quality-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__manufacturing-quality-management"
+          ]
+        },
+        {
+          "text": "Record non-conformances and defects with cause codes",
+          "source": "proxy",
+          "proxy_refs": [
+            "Non-conformance / defect recording with cause codes"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Apply hold or quarantine status to inspected lots pending disposition",
+          "source": "proxy",
+          "proxy_refs": [
+            "Hold / quarantine status on inspected lots"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Manage corrective and preventive action (CAPA) workflows",
+          "source": "proxy",
+          "proxy_refs": [
+            "Corrective and preventive action (CAPA) workflow"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate statistical process control (SPC) charts",
+          "source": "proxy",
+          "proxy_refs": [
+            "Statistical process control (SPC) charts"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate certificate of analysis (COA) and certificate of conformance (COC)",
+          "source": "proxy",
+          "proxy_refs": [
+            "Certificate of analysis (COA) and certificate of conformance (COC) generation"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Maintain complete audit trail of quality activities per lot or serial number",
+          "source": "proxy",
+          "proxy_refs": [
+            "Quality audit trail per lot/serial"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 10,
+        "imda_in": 2,
+        "merged_out": 12
+      }
+    },
+    {
+      "id": "mfg.inventory_wip",
+      "name": "Inventory & Work-in-Progress Tracking",
+      "description": "Manufacturing-specific inventory management: raw materials, WIP, and finished goods tracked by lot, serial, or bin across production locations.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo",
+        "erpnext",
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg"
+      ],
+      "requirements": [
+        {
+          "text": "Track raw material, work-in-progress, and finished-goods inventory in separate logical buckets",
+          "source": "proxy",
+          "proxy_refs": [
+            "Raw material, WIP, and finished-good inventory buckets"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Maintain lot and serial number traceability through every production step",
+          "source": "proxy",
+          "proxy_refs": [
+            "Lot and serial tracking through every production step"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Manage bin and location assignments for inventory within production facilities",
+          "source": "proxy",
+          "proxy_refs": [
+            "Bin and location management inside the plant"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support backflush consumption of materials upon work order completion",
+          "source": "proxy",
+          "proxy_refs": [
+            "Backflush consumption at work order close"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Enable cycle counting operations on production lines",
+          "source": "proxy",
+          "proxy_refs": [
+            "Cycle counting on production lines"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Reserve inventory stock for planned work orders",
+          "source": "proxy",
+          "proxy_refs": [
+            "Stock reservation for planned work orders"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Designate and manage quality hold and quarantine locations for non-conforming inventory",
+          "source": "proxy",
+          "proxy_refs": [
+            "Quality hold / quarantine locations"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Revalue inventory at period close for accounting purposes",
+          "source": "proxy",
+          "proxy_refs": [
+            "Stock revaluation at period close"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 8,
+        "imda_in": 0,
+        "merged_out": 8
+      }
+    },
+    {
+      "id": "mfg.product_costing",
+      "name": "Product Costing & Variance Analysis",
+      "description": "Calculate standard and actual cost of manufactured goods, post production variances to finance, and provide cost visibility to planners and accountants.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "netsuite",
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg",
+        "wikipedia_erp"
+      ],
+      "requirements": [
+        {
+          "text": "Calculate standard cost per item as sum of standard material, labour, and overhead costs",
+          "source": "proxy",
+          "proxy_refs": [
+            "Standard cost calculation (material + labour + overhead) per item"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Roll up actual costs from work order material, labour, and overhead consumption to finished goods and work-in-progress",
+          "source": "proxy",
+          "proxy_refs": [
+            "Actual cost rollup from work order material, labour, and overhead consumption"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Calculate and report standard vs actual cost variance by work order and accounting period",
+          "source": "proxy",
+          "proxy_refs": [
+            "Standard vs actual variance by work order and period"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Decompose variances into categories: purchase price, material usage, labour efficiency, labour rate, and yield",
+          "source": "proxy",
+          "proxy_refs": [
+            "Variance categories (purchase price, usage, efficiency, rate, yield)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Value work-in-progress inventory at period close using standard or actual cost method",
+          "source": "proxy",
+          "proxy_refs": [
+            "Work-in-progress valuation at period close"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Split cost components into fixed, variable, and overhead categories for analysis and reporting",
+          "source": "proxy",
+          "proxy_refs": [
+            "Cost component split (fixed / variable / overhead)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support multiple costing methods: standard cost, moving average, FIFO, and actual cost",
+          "source": "proxy",
+          "proxy_refs": [
+            "Multiple costing methods (standard, average, FIFO, actual)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Revalue inventory and adjust cost of goods sold when item standard cost changes",
+          "source": "proxy",
+          "proxy_refs": [
+            "Inventory revaluation on cost change"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_erp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 8,
+        "imda_in": 0,
+        "merged_out": 8
+      }
+    },
+    {
+      "id": "mfg.engineering_change",
+      "name": "Engineering Change Management (ECO / ECR)",
+      "description": "Formal workflow for proposing, reviewing, approving, and implementing changes to BOMs, routings, and product specifications — with full audit trail and impact assessment.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "odoo",
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg",
+        "infor_cloudsuite"
+      ],
+      "requirements": [
+        {
+          "text": "Capture engineering change requests with proposer identification, change reason, and documented impact assessment",
+          "source": "both",
+          "proxy_refs": [
+            "Engineering change request (ECR) with proposer, reason, and impact"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00568",
+              "text": "Does your solution manage revisions to product design and update relevant manufacturing process changes that are impacted by the product design change",
+              "q_title": "Product Design Revision Management",
+              "subsection": "Product Design Revision Management",
+              "sources": [
+                "advanced-manufacturing__product-and-manufacturing-process-configuration"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__product-and-manufacturing-process-configuration"
+          ]
+        },
+        {
+          "text": "Enforce formal approval workflow for engineering change orders with defined authorization levels",
+          "source": "proxy",
+          "proxy_refs": [
+            "Engineering change order (ECO) approval workflow"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Analyze and display impact of proposed changes across affected BOMs, routings, and open work orders",
+          "source": "proxy",
+          "proxy_refs": [
+            "Impact analysis across affected BOMs, routings, and open work orders"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Define and enforce effectivity dates for change implementation using date-based, serial-based, or lot-based cutover logic",
+          "source": "proxy",
+          "proxy_refs": [
+            "Effectivity date for change rollout (by date, by serial, by lot)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Manage use-up of existing component inventory before transitioning to changed specifications",
+          "source": "proxy",
+          "proxy_refs": [
+            "Use-up logic for existing component stock before cut-over"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support batching of multiple engineering change orders against a single BOM for coordinated implementation",
+          "source": "proxy",
+          "proxy_refs": [
+            "ECO batching (merge multiple ECOs against one BOM)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Maintain complete change history and audit trail for all affected items, including who changed what and when",
+          "source": "proxy",
+          "proxy_refs": [
+            "Change history and audit trail per affected item"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Integrate with product lifecycle management system to synchronize design changes and maintain CAD as source of truth",
+          "source": "proxy",
+          "proxy_refs": [
+            "Integration with PLM system for CAD source of truth"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 8,
+        "imda_in": 1,
+        "merged_out": 8
+      }
+    },
+    {
+      "id": "mfg.plm_product_data",
+      "name": "Product Lifecycle Management (PLM) & Product Data",
+      "description": "Master product data and its evolution across the lifecycle, from concept through design, production, service, and retirement. In a pure manufacturing ERP this is typically integration with a separate PLM tool; in suites like Odoo it's a built-in module.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "odoo",
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg"
+      ],
+      "requirements": [
+        {
+          "text": "Maintain item master records with revision control, tracking changes and versions across the product lifecycle",
+          "source": "both",
+          "proxy_refs": [
+            "Item master with revision control"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00026",
+              "text": "A source of information on the sequence of processes involved to manufacture or assemble a product (e.g. technical drawing, Bill of Material (BOM), materials required and manufacturing process such as tools, equipment, instructions used to build the product",
+              "q_title": "Manufacturing Process Documentation",
+              "subsection": "Manufacturing Process Documentation",
+              "sources": [
+                "advanced-manufacturing__product-and-manufacturing-process-configuration"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__product-and-manufacturing-process-configuration"
+          ]
+        },
+        {
+          "text": "Store and manage product documentation including technical drawings, specifications, test procedures, and process instructions",
+          "source": "both",
+          "proxy_refs": [
+            "Document management on items (CAD drawings, specs, test procedures)",
+            "Version comparison between item revisions"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00026",
+              "text": "A source of information on the sequence of processes involved to manufacture or assemble a product (e.g. technical drawing, Bill of Material (BOM), materials required and manufacturing process such as tools, equipment, instructions used to build the product",
+              "q_title": "Manufacturing Process Documentation",
+              "subsection": "Manufacturing Process Documentation",
+              "sources": [
+                "advanced-manufacturing__product-and-manufacturing-process-configuration"
+              ]
+            },
+            {
+              "id": "req-01321",
+              "text": "Technical drawings of components and materials used in each process",
+              "q_title": "Technical Drawing Management",
+              "subsection": "Technical Drawing Management",
+              "sources": [
+                "advanced-manufacturing__product-and-manufacturing-process-configuration"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__product-and-manufacturing-process-configuration"
+          ]
+        },
+        {
+          "text": "Compare and display differences between item revisions to track design and specification changes",
+          "source": "proxy",
+          "proxy_refs": [
+            "Version comparison between item revisions"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Define and enforce item status lifecycle stages (in-design, pre-production, active, obsolete) with appropriate access and change controls",
+          "source": "proxy",
+          "proxy_refs": [
+            "Item status lifecycle (in-design → pre-production → active → obsolete)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Classify products and enable search and filtering by attributes, material properties, and compliance characteristics",
+          "source": "proxy",
+          "proxy_refs": [
+            "Classification and search by attribute"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Maintain bill of materials (BOM) with component lists, quantities, and material specifications required for manufacturing or assembly",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00026",
+              "text": "A source of information on the sequence of processes involved to manufacture or assemble a product (e.g. technical drawing, Bill of Material (BOM), materials required and manufacturing process such as tools, equipment, instructions used to build the product",
+              "q_title": "Manufacturing Process Documentation",
+              "subsection": "Manufacturing Process Documentation",
+              "sources": [
+                "advanced-manufacturing__product-and-manufacturing-process-configuration"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__product-and-manufacturing-process-configuration"
+          ]
+        },
+        {
+          "text": "Document manufacturing and assembly processes including sequence of operations, tools, equipment, and work instructions",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00026",
+              "text": "A source of information on the sequence of processes involved to manufacture or assemble a product (e.g. technical drawing, Bill of Material (BOM), materials required and manufacturing process such as tools, equipment, instructions used to build the product",
+              "q_title": "Manufacturing Process Documentation",
+              "subsection": "Manufacturing Process Documentation",
+              "sources": [
+                "advanced-manufacturing__product-and-manufacturing-process-configuration"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__product-and-manufacturing-process-configuration"
+          ]
+        },
+        {
+          "text": "Track and manage compliance documentation for regulatory requirements (REACH, RoHS, conflict minerals)",
+          "source": "proxy",
+          "proxy_refs": [
+            "Compliance documentation (REACH, RoHS, conflict minerals)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Provide integration points with external PLM systems (e.g., Windchill, Teamcenter, Arena) for organizations using dedicated PLM tools",
+          "source": "proxy",
+          "proxy_refs": [
+            "Integration point with external PLM (Windchill, Teamcenter, Arena)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 7,
+        "imda_in": 3,
+        "merged_out": 9
+      }
+    },
+    {
+      "id": "mfg.subcontracting",
+      "name": "Subcontract & Outsourced Manufacturing",
+      "description": "Send materials to an external manufacturer who performs part or all of the production and returns finished or semi-finished goods. Distinct from a simple purchase because the organisation owns the material throughout.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "erpnext",
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg",
+        "infor_cloudsuite"
+      ],
+      "requirements": [
+        {
+          "text": "Define a subcontract bill of materials specifying materials to be supplied to the external manufacturer",
+          "source": "proxy",
+          "proxy_refs": [
+            "Subcontract BOM defining materials supplied to the subcontractor"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Create a subcontract purchase order that references the subcontract BOM and terms with the external manufacturer",
+          "source": "proxy",
+          "proxy_refs": [
+            "Subcontract purchase order referencing the subcontract BOM"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Transfer materials to the subcontractor location while retaining ownership of the supplied materials",
+          "source": "proxy",
+          "proxy_refs": [
+            "Material transfer to subcontractor location with ownership retained"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Track inventory of supplied materials held at the subcontractor location",
+          "source": "proxy",
+          "proxy_refs": [
+            "Tracking of on-hand subcontractor inventory"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Receive finished or semi-finished goods from the subcontractor and automatically consume the supplied materials from inventory",
+          "source": "proxy",
+          "proxy_refs": [
+            "Receipt of finished good with consumption of supplied material"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Separate service charge costing from material cost in subcontract invoicing",
+          "source": "proxy",
+          "proxy_refs": [
+            "Service charge costing separate from material cost"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Allocate scrap and yield losses between the subcontractor and the material owner",
+          "source": "proxy",
+          "proxy_refs": [
+            "Scrap and yield loss allocation between subcontractor and owner"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate subcontractor performance reports including on-time delivery, quality, and yield metrics",
+          "source": "proxy",
+          "proxy_refs": [
+            "Subcontractor performance reporting"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 8,
+        "imda_in": 0,
+        "merged_out": 8
+      }
+    },
+    {
+      "id": "mfg.process_manufacturing",
+      "name": "Process & Batch Manufacturing",
+      "description": "Manufacturing mode for industries making fluids, powders, chemicals, pharmaceuticals, and food — where production is by recipe, yields are variable, and by-products, co-products, and reverse BOMs matter.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise",
+        "industry_specific"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg",
+        "infor_cloudsuite"
+      ],
+      "requirements": [
+        {
+          "text": "Support recipe and formula master data as the primary production specification, replacing traditional bill of materials for process manufacturing",
+          "source": "proxy",
+          "proxy_refs": [
+            "Recipe and formula master (replaces BOM for process mode)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Treat batch or lot as the primary production unit with unique identification and tracking throughout the manufacturing lifecycle",
+          "source": "proxy",
+          "proxy_refs": [
+            "Batch/lot as the primary production unit"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Model variable yield with comparison between theoretical yield and actual yield per batch",
+          "source": "proxy",
+          "proxy_refs": [
+            "Variable yield modelling with theoretical vs actual"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support generation of by-products and co-products from a single batch production run",
+          "source": "proxy",
+          "proxy_refs": [
+            "By-product and co-product generation from a single batch"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Track potency and assay values for active ingredients within each batch",
+          "source": "proxy",
+          "proxy_refs": [
+            "Potency / assay tracking for active ingredients"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Maintain batch genealogy with forward and backward traceability linking raw materials to finished goods and vice versa",
+          "source": "proxy",
+          "proxy_refs": [
+            "Batch genealogy (forward and backward)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Track shelf life, expiry date, and re-test date attributes per batch",
+          "source": "proxy",
+          "proxy_refs": [
+            "Shelf life, expiry, and re-test date per batch"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate and maintain electronic batch records (EBR) for regulatory compliance and audit trails",
+          "source": "proxy",
+          "proxy_refs": [
+            "Regulatory batch record (electronic batch record, EBR)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support recipe scaling to adjust ingredient quantities and process parameters for different batch sizes",
+          "source": "proxy",
+          "proxy_refs": [
+            "Recipe scaling for different batch sizes"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 9,
+        "imda_in": 0,
+        "merged_out": 9
+      }
+    },
+    {
+      "id": "mfg.discrete_modes",
+      "name": "Mixed-Mode & Configure-to-Order Manufacturing",
+      "description": "Support organisations that run multiple manufacturing modes simultaneously — discrete, repetitive, make-to-stock, make-to-order, engineer-to-order, configure-to-order — from the same system.",
+      "priority_proxy": "advanced",
+      "applicability": [
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": null,
+      "cited_sources": [
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg",
+        "infor_cloudsuite"
+      ],
+      "requirements": [
+        {
+          "text": "Support per-item manufacturing mode assignment (discrete, repetitive, process, project)",
+          "source": "proxy",
+          "proxy_refs": [
+            "Per-item manufacturing mode (discrete, repetitive, process, project)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support multiple order fulfillment strategies (make-to-stock, make-to-order, engineer-to-order, configure-to-order)",
+          "source": "proxy",
+          "proxy_refs": [
+            "Make-to-stock (MTS), make-to-order (MTO), engineer-to-order (ETO), configure-to-order (CTO)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Provide product configurator with rules and constraints for configure-to-order items",
+          "source": "proxy",
+          "proxy_refs": [
+            "Product configurator with rules and constraints for CTO"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate bill of materials dynamically based on configurator selections",
+          "source": "proxy",
+          "proxy_refs": [
+            "Dynamic BOM generation from configurator selections"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support repetitive and flow manufacturing with line rate-based scheduling",
+          "source": "proxy",
+          "proxy_refs": [
+            "Repetitive / flow manufacturing with line rate scheduling"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Enable kanban pull signals for repetitive production control",
+          "source": "proxy",
+          "proxy_refs": [
+            "Kanban pull signals for repetitive production"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support mixed-model sequencing on shared production lines",
+          "source": "proxy",
+          "proxy_refs": [
+            "Mixed-model sequencing on a shared line"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Calculate product cost rollup adjusted for the assigned manufacturing mode",
+          "source": "proxy",
+          "proxy_refs": [
+            "Cost rollup adjusted to the manufacturing mode"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 8,
+        "imda_in": 0,
+        "merged_out": 8
+      }
+    },
+    {
+      "id": "mfg.demand_planning",
+      "name": "Demand Planning & Forecasting",
+      "description": "Generate the demand signal that feeds MRP: statistical forecasts, sales-and-operations planning (S&OP) inputs, and collaborative planning with customers and suppliers.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "netsuite",
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg"
+      ],
+      "requirements": [
+        {
+          "text": "Generate statistical forecasts using standard methods (moving average, exponential smoothing, Croston's method) based on historical demand data",
+          "source": "proxy",
+          "proxy_refs": [
+            "Statistical forecast generation (moving average, exponential smoothing, Croston)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support forecast generation at multiple aggregation levels including item, product family, and geographic region",
+          "source": "proxy",
+          "proxy_refs": [
+            "Forecast at multiple aggregation levels (item, family, region)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Adjust forecasts for historical sales patterns, promotional events, and other documented demand drivers",
+          "source": "proxy",
+          "proxy_refs": [
+            "Sales history and promotional impact adjustment"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Collect collaborative forecast inputs and adjustments from sales, marketing, and customer stakeholders",
+          "source": "proxy",
+          "proxy_refs": [
+            "Collaborative forecast input from sales, marketing, customers"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Measure and report forecast accuracy using standard metrics (MAPE, bias) to track performance over time",
+          "source": "proxy",
+          "proxy_refs": [
+            "Forecast accuracy measurement (MAPE, bias)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support Sales & Operations Planning (S&OP) cycle workflows including demand review, supply review, and executive consensus phases",
+          "source": "proxy",
+          "proxy_refs": [
+            "S&OP cycle support (demand review, supply review, exec S&OP)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Enforce demand forecast consensus and formal sign-off workflow with defined approvers and audit trail",
+          "source": "proxy",
+          "proxy_refs": [
+            "Demand consensus and sign-off workflow"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Consume actual sales orders against the demand forecast to track forecast consumption and remaining demand signal",
+          "source": "proxy",
+          "proxy_refs": [
+            "Forecast consumption by actual sales orders"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 8,
+        "imda_in": 0,
+        "merged_out": 8
+      }
+    },
+    {
+      "id": "mfg.capacity_sop",
+      "name": "Rough-Cut Capacity & S&OP Integration",
+      "description": "High-level capacity check that validates the feasibility of the master production schedule against critical resources before MRP explodes the detail — the bridge between S&OP and MRP.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg"
+      ],
+      "requirements": [
+        {
+          "text": "Perform rough-cut capacity planning (RCCP) across critical work centers to validate master production schedule feasibility",
+          "source": "proxy",
+          "proxy_refs": [
+            "Rough-cut capacity planning (RCCP) for critical work centers"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Maintain resource profiles per item, defining standard load (labor hours, machine hours, or equivalent) per unit produced",
+          "source": "proxy",
+          "proxy_refs": [
+            "Resource profile per item (load per unit)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Execute feasibility checks comparing planned production load against available capacity by time period and work center",
+          "source": "proxy",
+          "proxy_refs": [
+            "Feasibility check against available capacity by period"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support S&OP scenario modeling to evaluate capacity constraints against demand forecasts and business plans",
+          "source": "proxy",
+          "proxy_refs": [
+            "S&OP scenario modelling (capacity vs demand)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Compare constrained and unconstrained production plans to identify capacity bottlenecks and trade-offs",
+          "source": "proxy",
+          "proxy_refs": [
+            "Constrained-vs-unconstrained plan comparison"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Enable what-if analysis for alternative capacity scenarios including overtime, additional shifts, and outsourcing options",
+          "source": "proxy",
+          "proxy_refs": [
+            "What-if overtime, extra shift, or outsource scenarios"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate master production schedule from the approved S&OP plan",
+          "source": "proxy",
+          "proxy_refs": [
+            "Master production schedule (MPS) generation from approved plan"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 7,
+        "imda_in": 0,
+        "merged_out": 7
+      }
+    },
+    {
+      "id": "mfg.shop_floor_iot",
+      "name": "IoT, Machine Integration & Data Collection",
+      "description": "Direct integration with production equipment and sensors for automated data capture — OEE, status, output, downtime, cycle times — without operator manual entry.",
+      "priority_proxy": "advanced",
+      "applicability": [
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": null,
+      "cited_sources": [
+        "odoo",
+        "sap_s4hana_pp",
+        "wikipedia_mes"
+      ],
+      "requirements": [
+        {
+          "text": "Support machine connectivity via standard industrial protocols (OPC-UA, Modbus, MQTT, REST) for automated data exchange",
+          "source": "proxy",
+          "proxy_refs": [
+            "Machine connectivity via OPC-UA, Modbus, MQTT, or REST"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Automatically capture and record machine operating status (running, idle, stopped/down) without operator manual entry",
+          "source": "both",
+          "proxy_refs": [
+            "Automatic status capture (running, idle, down)"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00569",
+              "text": "Does your solution monitor equipment status and downtime reason in real time via operator manual key in or automatic link with the equipment",
+              "q_title": "Real-time Equipment Status Monitoring",
+              "subsection": "Real-time Equipment Status Monitoring",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+          ]
+        },
+        {
+          "text": "Automatically record production cycle counts and output quantities from connected equipment",
+          "source": "proxy",
+          "proxy_refs": [
+            "Automatic cycle count and output recording"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Collect quality data through automatic interface with measurement equipment or manual operator entry as fallback",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00307",
+              "text": "Collection of quality data either through manual keying of information on screen by the operator or automatically through an interfaced connection with measurement equipment",
+              "q_title": "Quality Data Collection",
+              "subsection": "Quality Data Collection",
+              "sources": [
+                "advanced-manufacturing__manufacturing-quality-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__manufacturing-quality-management"
+          ]
+        },
+        {
+          "text": "Infer and record downtime reasons automatically from machine state data and equipment signals",
+          "source": "proxy",
+          "proxy_refs": [
+            "Automatic downtime reason inference from machine state"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Ingest sensor data for in-process parameters and production conditions",
+          "source": "proxy",
+          "proxy_refs": [
+            "Sensor data ingestion for in-process parameters"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Integrate with process historian systems (e.g., PI, Ignition) for centralized telemetry storage and retrieval",
+          "source": "proxy",
+          "proxy_refs": [
+            "Integration with process historians (PI, Ignition)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support edge gateway deployment for secure data collection on isolated plant-floor networks",
+          "source": "proxy",
+          "proxy_refs": [
+            "Edge gateway support for plant-floor network isolation"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Store machine telemetry and time-series data with appropriate retention and query performance",
+          "source": "proxy",
+          "proxy_refs": [
+            "Time-series storage for machine telemetry"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate real-time alerts and notifications when equipment performance degrades or equipment stops, with impact visibility across production",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01395",
+              "text": "Updates or notification alerts in the event when production equipment slows down or breaks down, affecting the entire production",
+              "q_title": "Production Equipment Monitoring and Alerts",
+              "subsection": "Production Equipment Monitoring and Alerts",
+              "sources": [
+                "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+          ]
+        }
+      ],
+      "stats": {
+        "proxy_in": 8,
+        "imda_in": 3,
+        "merged_out": 10
+      }
+    },
+    {
+      "id": "mfg.oee_performance",
+      "name": "OEE & Manufacturing Performance Analytics",
+      "description": "Canonical manufacturing KPIs and dashboards for plant managers: availability, performance, quality, OEE, throughput, yield.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "odoo",
+        "sap_s4hana_pp",
+        "wikipedia_mes",
+        "netsuite"
+      ],
+      "requirements": [
+        {
+          "text": "Calculate Overall Equipment Effectiveness (OEE) as the product of availability, performance, and quality metrics",
+          "source": "both",
+          "proxy_refs": [
+            "Overall Equipment Effectiveness (OEE) calculation (availability × performance × quality)"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00542",
+              "text": "Does your solution generate dashboards and report on insights such as e.g. overall equipment effectiveness, cycle time per part, number of parts per operator, number of scrapped parts, setup time per part",
+              "q_title": "Insights Dashboards and Reports",
+              "subsection": "Insights Dashboards and Reports",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+          ]
+        },
+        {
+          "text": "Report throughput metrics by production line, shift, and work center",
+          "source": "both",
+          "proxy_refs": [
+            "Throughput per line, per shift, per work center"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00542",
+              "text": "Does your solution generate dashboards and report on insights such as e.g. overall equipment effectiveness, cycle time per part, number of parts per operator, number of scrapped parts, setup time per part",
+              "q_title": "Insights Dashboards and Reports",
+              "subsection": "Insights Dashboards and Reports",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+          ]
+        },
+        {
+          "text": "Calculate and track first-pass yield and rolled-throughput yield",
+          "source": "proxy",
+          "proxy_refs": [
+            "First-pass yield and rolled-throughput yield"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Compare planned versus actual production output by period",
+          "source": "proxy",
+          "proxy_refs": [
+            "Planned vs actual production per period"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Analyze and categorize downtime by root cause reason",
+          "source": "both",
+          "proxy_refs": [
+            "Downtime analysis by reason category"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00569",
+              "text": "Does your solution monitor equipment status and downtime reason in real time via operator manual key in or automatic link with the equipment",
+              "q_title": "Real-time Equipment Status Monitoring",
+              "subsection": "Real-time Equipment Status Monitoring",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+          ]
+        },
+        {
+          "text": "Report scrap rate by item and work center",
+          "source": "both",
+          "proxy_refs": [
+            "Scrap rate reporting by item and work center"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00542",
+              "text": "Does your solution generate dashboards and report on insights such as e.g. overall equipment effectiveness, cycle time per part, number of parts per operator, number of scrapped parts, setup time per part",
+              "q_title": "Insights Dashboards and Reports",
+              "subsection": "Insights Dashboards and Reports",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+          ]
+        },
+        {
+          "text": "Track cycle time and lead time trends over time",
+          "source": "both",
+          "proxy_refs": [
+            "Cycle time and lead time trending"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00542",
+              "text": "Does your solution generate dashboards and report on insights such as e.g. overall equipment effectiveness, cycle time per part, number of parts per operator, number of scrapped parts, setup time per part",
+              "q_title": "Insights Dashboards and Reports",
+              "subsection": "Insights Dashboards and Reports",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+          ]
+        },
+        {
+          "text": "Provide hierarchical drill-down capability from plant-level to individual machine-level metrics",
+          "source": "proxy",
+          "proxy_refs": [
+            "Drill-down dashboards from plant to machine"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support configurable KPI targets with automated threshold-based alerts",
+          "source": "proxy",
+          "proxy_refs": [
+            "Configurable KPI targets with threshold alerts"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Capture and report on quality check results with statistical analysis",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00412",
+              "text": "Dashboard and reporting capabilities on recorded quality checks and statistical analysis",
+              "q_title": "Dashboard and Report Features",
+              "subsection": "Dashboard and Report Features",
+              "sources": [
+                "advanced-manufacturing__manufacturing-quality-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__manufacturing-quality-management"
+          ]
+        },
+        {
+          "text": "Display real-time performance insights on user-friendly dashboards accessible via shopfloor monitors and mobile devices",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00533",
+              "text": "Does your solution display real-time insights on a user-friendly interface via the facility shopfloor monitor or mobile devices",
+              "q_title": "Real-time Shopfloor Insights",
+              "subsection": "Real-time Shopfloor Insights",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+          ]
+        },
+        {
+          "text": "Monitor equipment status and downtime reasons in real time via manual operator input or automatic equipment integration",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00569",
+              "text": "Does your solution monitor equipment status and downtime reason in real time via operator manual key in or automatic link with the equipment",
+              "q_title": "Real-time Equipment Status Monitoring",
+              "subsection": "Real-time Equipment Status Monitoring",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+          ]
+        },
+        {
+          "text": "Perform statistical trend analysis and deviation detection to identify significant influences by equipment, batch, operator, environmental factors, and other variables",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00583",
+              "text": "Does your solution perform statistical analysis, detect trends and deviations for users to conclude about significant influences caused by equipment, batch, operator, temperature, etc",
+              "q_title": "Data Analytics",
+              "subsection": "Data Analytics",
+              "sources": [
+                "advanced-manufacturing__manufacturing-quality-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__manufacturing-quality-management"
+          ]
+        }
+      ],
+      "stats": {
+        "proxy_in": 9,
+        "imda_in": 5,
+        "merged_out": 13
+      }
+    },
+    {
+      "id": "mfg.traceability_genealogy",
+      "name": "Lot/Serial Traceability & Genealogy",
+      "description": "End-to-end forward and backward traceability from raw material lot through every production step to customer shipment — required for food, pharma, automotive, and aerospace. Supports recall.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise",
+        "industry_specific"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo",
+        "netsuite",
+        "sap_s4hana_pp",
+        "wikipedia_mes"
+      ],
+      "requirements": [
+        {
+          "text": "Support forward traceability from raw material lot through all production steps to finished goods and customer shipment",
+          "source": "proxy",
+          "proxy_refs": [
+            "Forward trace (from raw lot → finished goods → customers)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support backward traceability from finished goods to all input material lots and components used in production",
+          "source": "proxy",
+          "proxy_refs": [
+            "Backward trace (from finished good → all input lots)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Provide genealogy tree visualization showing material and component relationships across multiple assembly levels",
+          "source": "proxy",
+          "proxy_refs": [
+            "Genealogy tree visualisation across assembly levels"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Maintain serial number as-built records for each finished unit, capturing all components and production parameters",
+          "source": "proxy",
+          "proxy_refs": [
+            "Serial number as-built record per finished unit"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Track lot expiry dates and shelf-life constraints for materials and finished goods",
+          "source": "proxy",
+          "proxy_refs": [
+            "Lot expiry and shelf-life tracking"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate recall lists by querying traceability data to identify all affected lots, serial numbers, and customer shipments",
+          "source": "proxy",
+          "proxy_refs": [
+            "Recall list generation from a trace query"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support regulatory traceability requirements including FDA 21 CFR Part 11, EU FMD, and FSMA compliance",
+          "source": "proxy",
+          "proxy_refs": [
+            "Regulatory traceability (FDA 21 CFR Part 11, EU FMD, FSMA)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Integrate with customer labeling and barcode standards including GS1 and UDI formats",
+          "source": "proxy",
+          "proxy_refs": [
+            "Integration with customer label and barcode standards (GS1, UDI)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 8,
+        "imda_in": 0,
+        "merged_out": 8
+      }
+    },
+    {
+      "id": "mfg.repair_returns",
+      "name": "Repair, Rework & Returned-Goods Manufacturing",
+      "description": "Handle goods that come back from customers or fail internal quality, and need to go through a rework or repair process — distinct from normal production because the input is a finished good, not raw material.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "odoo",
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg"
+      ],
+      "requirements": [
+        {
+          "text": "Create and manage repair orders distinct from standard work orders, with separate identification and tracking",
+          "source": "proxy",
+          "proxy_refs": [
+            "Repair order distinct from work order"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support disassembly BOMs for tear-down and component inspection operations",
+          "source": "proxy",
+          "proxy_refs": [
+            "Disassembly BOM for tear-down operations"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Enable selection and substitution of replacement components during repair execution",
+          "source": "proxy",
+          "proxy_refs": [
+            "Replacement-component selection during repair"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Classify repairs as warranty or billable to support cost allocation and customer invoicing",
+          "source": "proxy",
+          "proxy_refs": [
+            "Warranty-vs-billable repair classification"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Link repair orders to Return Merchandise Authorisation (RMA) records for traceability",
+          "source": "proxy",
+          "proxy_refs": [
+            "Return Merchandise Authorisation (RMA) linkage"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Route and rework existing work-in-progress without requiring scrap or restart of production",
+          "source": "proxy",
+          "proxy_refs": [
+            "Rework routing on existing WIP without scrapping"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Track repair costs separately from new-build manufacturing costs for financial reporting and analysis",
+          "source": "proxy",
+          "proxy_refs": [
+            "Cost-of-repair tracking separate from new-build cost"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Capture and record failure analysis data on returned goods for quality and continuous improvement",
+          "source": "proxy",
+          "proxy_refs": [
+            "Failure-analysis capture on returned goods"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 8,
+        "imda_in": 0,
+        "merged_out": 8
+      }
+    },
+    {
+      "id": "mfg.safety_compliance",
+      "name": "Manufacturing Safety, EHS & Regulatory Compliance",
+      "description": "Environmental, health and safety integration tied to manufacturing: PPE requirements, hazardous-material handling, incident capture, and regulatory reporting.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg",
+        "infor_cloudsuite"
+      ],
+      "requirements": [
+        {
+          "text": "Flag hazardous materials on bill of materials with safety classification and handling requirements",
+          "source": "proxy",
+          "proxy_refs": [
+            "Hazardous material flagging on BOM components"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Attach and retrieve safety data sheets (SDS) linked to materials and components",
+          "source": "proxy",
+          "proxy_refs": [
+            "Safety data sheet (SDS) attached to material"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Define and enforce personal protective equipment (PPE) requirements per operation or work center",
+          "source": "proxy",
+          "proxy_refs": [
+            "PPE requirement lookup per operation"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Enforce lockout/tagout procedures and verification at operation start",
+          "source": "proxy",
+          "proxy_refs": [
+            "Lockout / tagout procedure enforcement at operation start"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Verify worker certification and qualifications before allowing operation assignment",
+          "source": "proxy",
+          "proxy_refs": [
+            "Worker qualification check (is this operator certified for this operation?)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Capture and record safety incidents and near-miss events on the shop floor with context and corrective actions",
+          "source": "proxy",
+          "proxy_refs": [
+            "Incident and near-miss capture on the shop floor"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Track environmental emissions and waste generation per batch or production run",
+          "source": "proxy",
+          "proxy_refs": [
+            "Environmental emissions and waste tracking per batch"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate regulatory compliance reports for OSHA, EPA, and EU REACH requirements",
+          "source": "proxy",
+          "proxy_refs": [
+            "Regulatory reporting (OSHA, EPA, EU REACH)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 8,
+        "imda_in": 0,
+        "merged_out": 8
+      }
+    },
+    {
+      "id": "mfg.labor_management",
+      "name": "Labour Tracking & Shop Floor Time Management",
+      "description": "Track operator time against operations and work orders, feed payroll and costing, and provide visibility into labour efficiency and utilisation.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg",
+        "wikipedia_mes"
+      ],
+      "requirements": [
+        {
+          "text": "Capture operator clock-in and clock-out time per operation or work order",
+          "source": "proxy",
+          "proxy_refs": [
+            "Operator clock-in / clock-out per operation"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Record indirect labour time (meetings, setup, cleanup, maintenance) separately from direct operation time",
+          "source": "proxy",
+          "proxy_refs": [
+            "Indirect time capture (meetings, setup, cleanup)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support crew-based time entry to record a single time entry for multiple workers on the same task",
+          "source": "proxy",
+          "proxy_refs": [
+            "Crew-based time entry (one entry for multiple workers)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Calculate labour efficiency by comparing actual time worked against standard time for operations",
+          "source": "proxy",
+          "proxy_refs": [
+            "Labour efficiency vs standard time"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Maintain a skill matrix defining which operators are qualified to perform specific operations",
+          "source": "proxy",
+          "proxy_refs": [
+            "Skill matrix — which operators are qualified for which operations"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Calculate incentive and piece-rate compensation based on labour time and output",
+          "source": "proxy",
+          "proxy_refs": [
+            "Incentive / piece-rate calculation"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Transfer labour hours and time data to payroll system for wage calculation and processing",
+          "source": "proxy",
+          "proxy_refs": [
+            "Integration with payroll system for hours transfer"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 7,
+        "imda_in": 0,
+        "merged_out": 7
+      }
+    },
+    {
+      "id": "mfg.energy_sustainability",
+      "name": "Energy, Utility & Sustainability Tracking",
+      "description": "Capture energy and utility consumption per production run, attribute to products, and feed sustainability and carbon reporting — increasingly required for CBAM, CSRD, and similar regulations.",
+      "priority_proxy": "advanced",
+      "applicability": [
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": null,
+      "cited_sources": [
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg"
+      ],
+      "requirements": [
+        {
+          "text": "Capture utility meter readings (electricity, gas, water, steam) per work center or production line.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Utility meter reading per work center (electricity, gas, water, steam)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Allocate energy and utility costs to work orders and finished products for cost accounting.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Energy cost allocation per work order and product"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Calculate and track carbon footprint (Scope 1 and Scope 2 emissions) per manufactured unit.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Carbon footprint (scope 1 + 2) per manufactured unit"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Monitor and record water consumption and wastewater generation by production area.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Water usage and wastewater tracking"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Track waste streams by category (recyclable, hazardous, landfill) and volume.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Waste stream tracking (recyclable, hazardous, landfill)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Integrate energy and sustainability data with corporate sustainability reporting systems.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Integration with corporate sustainability reporting"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support regulatory emissions reporting requirements (CBAM, EU ETS, and similar schemes).",
+          "source": "proxy",
+          "proxy_refs": [
+            "Regulatory emissions reporting (CBAM, EU ETS)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 7,
+        "imda_in": 0,
+        "merged_out": 7
+      }
+    },
+    {
+      "id": "mfg.maintenance_integration",
+      "name": "Maintenance Integration (CMMS / EAM Linkage)",
+      "description": "Bridge between the manufacturing module and the asset/maintenance module: planned downtime for PM, automatic work requests on breakdown, shared calendar for production scheduling.",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "odoo",
+        "sap_s4hana_pp",
+        "wikipedia_mes"
+      ],
+      "requirements": [
+        {
+          "text": "Work center must be linked to a maintainable asset record to enable traceability between production and maintenance operations.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Work center tied to a maintainable asset record"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Planned preventive maintenance downtime must block or reserve capacity on the production calendar to prevent scheduling conflicts.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Planned PM downtime blocks the production calendar"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "System must automatically generate maintenance requests when equipment breakdown or fault conditions are detected.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Automatic maintenance request on machine fault / downtime reason"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Production and maintenance work must be viewable in a unified calendar to enable coordinated scheduling and resource planning.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Joint calendar view of production and maintenance work"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Mean Time Between Failures (MTBF) and Mean Time To Repair (MTTR) metrics must be visible to production planners for capacity and scheduling decisions.",
+          "source": "proxy",
+          "proxy_refs": [
+            "MTBF / MTTR visible to production planners"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Operators must be able to trigger maintenance requests directly from the HMI when issues are detected.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Maintenance requests trigger-able from operator HMI"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Condition-based preventive maintenance must be automatically triggered based on meter readings or sensor data thresholds.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Condition-based PM triggered by meter readings or sensor data"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "odoo",
+            "sap_s4hana_pp",
+            "wikipedia_mes"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "System must send notification alerts when production equipment experiences slowdown, breakdown, or disruption affecting production.",
+          "source": "both",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01395",
+              "text": "Updates or notification alerts in the event when production equipment slows down or breaks down, affecting the entire production",
+              "q_title": "Production Equipment Monitoring and Alerts",
+              "subsection": "Production Equipment Monitoring and Alerts",
+              "sources": [
+                "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+              ]
+            },
+            {
+              "id": "req-00543",
+              "text": "Does your solution generate notification alerts (e.g., via email or SMS) when equipment is down or shows signs of disruption",
+              "q_title": "Notification Alerts",
+              "subsection": "Notification Alerts",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+            "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+          ]
+        }
+      ],
+      "stats": {
+        "proxy_in": 7,
+        "imda_in": 2,
+        "merged_out": 8
+      }
+    },
+    {
+      "id": "mfg.digital_thread_twin",
+      "name": "Digital Thread & Manufacturing Digital Twin",
+      "description": "Continuous data linkage from design intent through as-planned to as-built, and a simulation model (\"digital twin\") of the production system used for scheduling, training, and continuous improvement.",
+      "priority_proxy": "advanced",
+      "applicability": [
+        "enterprise"
+      ],
+      "sme_tier": null,
+      "cited_sources": [
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg"
+      ],
+      "requirements": [
+        {
+          "text": "Maintain continuous linkage from design revision through manufacturing BOM to as-built record for each unit",
+          "source": "proxy",
+          "proxy_refs": [
+            "Linkage from design revision → manufacturing BOM → as-built record"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Enable side-by-side comparison of as-designed, as-planned, and as-built states at the unit level",
+          "source": "proxy",
+          "proxy_refs": [
+            "As-designed vs as-planned vs as-built comparison per unit"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Provide 3D geometric representation of the plant floor layout and equipment configuration",
+          "source": "proxy",
+          "proxy_refs": [
+            "3D digital twin of the plant floor"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support discrete-event simulation of production schedules to predict throughput and resource utilization",
+          "source": "proxy",
+          "proxy_refs": [
+            "Discrete-event simulation of the production schedule"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Enable what-if scenario modeling for line rebalancing, bottleneck identification, and removal",
+          "source": "proxy",
+          "proxy_refs": [
+            "What-if simulation for line re-balancing and bottleneck removal"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Provide operator training simulation mode that mirrors production workflows without requiring live equipment access",
+          "source": "proxy",
+          "proxy_refs": [
+            "Operator training mode using the twin without touching real equipment"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Implement closed-loop feedback mechanism to capture shop-floor data and propagate insights back to design and planning",
+          "source": "proxy",
+          "proxy_refs": [
+            "Closed-loop feedback from shop-floor data back to design"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 7,
+        "imda_in": 0,
+        "merged_out": 7
+      }
+    },
+    {
+      "id": "mfg.multi_site_intercompany",
+      "name": "Multi-Site & Inter-Company Manufacturing",
+      "description": "Coordinate production across multiple plants within the same enterprise — network planning, cross-site transfers, intercompany sales, and global visibility.",
+      "priority_proxy": "advanced",
+      "applicability": [
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": null,
+      "cited_sources": [
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg",
+        "infor_cloudsuite"
+      ],
+      "requirements": [
+        {
+          "text": "Maintain plant-level master data with cross-plant item harmonization to ensure consistent product definitions across the manufacturing network",
+          "source": "proxy",
+          "proxy_refs": [
+            "Plant-level master data with cross-plant item harmonisation"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Plan supply network demand and capacity across multiple sites to optimize production allocation and material flow",
+          "source": "proxy",
+          "proxy_refs": [
+            "Supply network planning across sites"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Create and manage inter-plant transfer orders with real-time in-transit visibility and tracking",
+          "source": "proxy",
+          "proxy_refs": [
+            "Inter-plant transfer orders with in-transit visibility"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Post intercompany sales transactions automatically when goods transfer between plants",
+          "source": "proxy",
+          "proxy_refs": [
+            "Intercompany sales posting on cross-plant transfer"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Calculate global available-to-promise (ATP) across all plants to support order promising and demand fulfillment",
+          "source": "proxy",
+          "proxy_refs": [
+            "Global ATP (available-to-promise) across the network"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Execute centralized production planning with distributed execution across multiple manufacturing sites",
+          "source": "proxy",
+          "proxy_refs": [
+            "Central production planning with distributed execution"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Manage cross-plant bill-of-materials and routing consistency to ensure standardized production processes across the network",
+          "source": "proxy",
+          "proxy_refs": [
+            "Cross-plant BOM and routing consistency management"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "infor_cloudsuite",
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 7,
+        "imda_in": 0,
+        "merged_out": 7
+      }
+    },
+    {
+      "id": "mfg.ai_ml_analytics",
+      "name": "AI / ML for Manufacturing",
+      "description": "Applied machine learning inside the manufacturing flow — predictive quality, yield optimisation, anomaly detection, AI-driven scheduling, and predictive maintenance of production assets.",
+      "priority_proxy": "advanced",
+      "applicability": [
+        "enterprise"
+      ],
+      "sme_tier": null,
+      "cited_sources": [
+        "sap_s4hana_pp",
+        "oracle_fusion_mfg"
+      ],
+      "requirements": [
+        {
+          "text": "Forecast scrap and defect rates from in-process production data to enable proactive quality intervention",
+          "source": "proxy",
+          "proxy_refs": [
+            "Predictive quality — forecast scrap or defect rate from in-process data"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Generate yield optimisation recommendations based on analysis of historical production runs",
+          "source": "proxy",
+          "proxy_refs": [
+            "Yield optimisation recommendations from historical runs"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Detect anomalies in real-time sensor streams and alert operators to out-of-specification conditions",
+          "source": "proxy",
+          "proxy_refs": [
+            "Anomaly detection on sensor streams"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Perform statistical analysis to identify trends and deviations in production data, enabling users to assess the influence of equipment, batch, operator, and environmental factors",
+          "source": "both",
+          "proxy_refs": [
+            "Automated root-cause analysis from multi-source shop floor data"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00583",
+              "text": "Does your solution perform statistical analysis, detect trends and deviations for users to conclude about significant influences caused by equipment, batch, operator, temperature, etc",
+              "q_title": "Data Analytics",
+              "subsection": "Data Analytics",
+              "sources": [
+                "advanced-manufacturing__manufacturing-quality-management"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__manufacturing-quality-management"
+          ]
+        },
+        {
+          "text": "Optimise production schedules using AI-driven recommendations to improve resource utilisation and throughput",
+          "source": "proxy",
+          "proxy_refs": [
+            "AI-assisted schedule optimisation"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Perform automated root-cause analysis by correlating multi-source shop floor data to identify production issues",
+          "source": "proxy",
+          "proxy_refs": [
+            "Automated root-cause analysis from multi-source shop floor data"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Integrate vision-based quality inspection to automatically detect visual defects and non-conformances",
+          "source": "proxy",
+          "proxy_refs": [
+            "Vision-based quality inspection integration"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Improve demand forecasting accuracy using machine learning models trained on historical sales and market data",
+          "source": "proxy",
+          "proxy_refs": [
+            "Demand forecast improvement with ML models"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "oracle_fusion_mfg",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 7,
+        "imda_in": 1,
+        "merged_out": 8
+      }
+    },
+    {
+      "id": "mfg.mobile_access",
+      "name": "Mobile and Multi-Device Access",
+      "description": "The solution works on phones, tablets, and desktops. Universal requirement — PSG asks every vendor \"is this cloud and multi-device accessible?\" as the first question on every sol cat. Factory supervisors and operators need mobile access to production data.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo",
+        "erpnext",
+        "netsuite"
+      ],
+      "requirements": [
+        {
+          "text": "Solution is accessible via web browser on phones, tablets, and desktop computers without requiring local installation",
+          "source": "proxy",
+          "proxy_refs": [
+            "Usable on phone, tablet, and desktop",
+            "Cloud-hosted or browser-based — no desktop install needed"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "User interface automatically adapts to different screen sizes and device orientations",
+          "source": "proxy",
+          "proxy_refs": [
+            "Responsive design that works on all screen sizes"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Users can view production schedules and real-time shop floor status from mobile devices",
+          "source": "proxy",
+          "proxy_refs": [
+            "Access production schedules and shop floor status from a mobile device"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Mobile users receive push notifications or alerts for quality failures and machine downtime events",
+          "source": "proxy",
+          "proxy_refs": [
+            "Receive alerts for quality failures or machine downtime on mobile"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Mobile devices can capture and process barcode and QR codes using the device camera",
+          "source": "proxy",
+          "proxy_refs": [
+            "Barcode and QR scanning via mobile camera"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 5
+      }
+    },
+    {
+      "id": "mfg.data_governance",
+      "name": "Data Security, Privacy & Consent",
+      "description": "Data hygiene, retention policies, audit trails, and basic access security. Universal — PSG requires every pre-approved vendor to meet PDPA compliance, Cyber Essentials Mark, and VA/PT audits regardless of which module they cover.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo",
+        "netsuite",
+        "sap_s4hana_pp"
+      ],
+      "requirements": [
+        {
+          "text": "Capture and maintain audit trail of PDPA consent for employee and supplier data",
+          "source": "proxy",
+          "proxy_refs": [
+            "PDPA consent capture and audit trail for employee and supplier data"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Implement data retention policies with automatic expiry-based deletion",
+          "source": "proxy",
+          "proxy_refs": [
+            "Data retention policy with expiry-based deletion"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Process and execute data deletion requests from employees and business partners",
+          "source": "proxy",
+          "proxy_refs": [
+            "Handle data deletion requests from employees or partners"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Encrypt data at rest and in transit",
+          "source": "proxy",
+          "proxy_refs": [
+            "Encrypt data at rest and in transit"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Log all access and modifications to production and quality records with user identification",
+          "source": "proxy",
+          "proxy_refs": [
+            "Log who accessed or changed production and quality records"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Meet PSG Cyber Essentials Mark baseline security requirements",
+          "source": "proxy",
+          "proxy_refs": [
+            "Compliant with PSG Cyber Essentials Mark baseline"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 0,
+        "merged_out": 6
+      }
+    },
+    {
+      "id": "mfg.user_access_roles",
+      "name": "User Accounts, Roles & Access Control",
+      "description": "Multiple staff can use the system, each with their own login, role-based permissions, and audit of what they did. Universal — any SME with more than one employee needs this, and PSG requires access control as part of its Cyber Essentials baseline.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo",
+        "erpnext",
+        "netsuite",
+        "sap_s4hana_pp"
+      ],
+      "requirements": [
+        {
+          "text": "Create individual user accounts with unique login credentials for each system user",
+          "source": "proxy",
+          "proxy_refs": [
+            "Create individual user accounts with unique login credentials"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Implement role-based access control with predefined roles (e.g., plant manager, planner, operator, view-only)",
+          "source": "proxy",
+          "proxy_refs": [
+            "Role-based permissions (plant manager, planner, operator, view-only)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Enforce role-based permissions to restrict data visibility and edit capabilities by user role",
+          "source": "proxy",
+          "proxy_refs": [
+            "Restrict what each role can see and edit"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support user account deactivation when staff leave the organization",
+          "source": "proxy",
+          "proxy_refs": [
+            "Deactivate users when they leave"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support single sign-on integration with common identity providers (Google, Microsoft)",
+          "source": "proxy",
+          "proxy_refs": [
+            "Single sign-on support (Google, Microsoft)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Enforce two-factor authentication for all user logins",
+          "source": "proxy",
+          "proxy_refs": [
+            "Two-factor authentication for all users"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Maintain an audit log recording all user logins and system actions with timestamps and user identification",
+          "source": "proxy",
+          "proxy_refs": [
+            "Audit log of user logins and actions"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 7,
+        "imda_in": 0,
+        "merged_out": 7
+      }
+    },
+    {
+      "id": "mfg.integration_import_export",
+      "name": "Data Import, Export & Integration",
+      "description": "Bring in existing production data and push data out to other tools — spreadsheets, accounting software, other systems. Universal — every SME already has data somewhere else and needs to export for their accountant, tax filing, or business analysis. PSG asks every sol cat about data extraction and integration.",
+      "priority_proxy": "must_have",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "required",
+      "cited_sources": [
+        "odoo",
+        "erpnext",
+        "netsuite",
+        "sap_s4hana_pp"
+      ],
+      "requirements": [
+        {
+          "text": "Import bill of materials, items, and routings from CSV or Excel files",
+          "source": "proxy",
+          "proxy_refs": [
+            "Import BOMs, items, and routings from CSV or Excel"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Export production data to CSV, Excel, or PDF formats on demand",
+          "source": "proxy",
+          "proxy_refs": [
+            "Export production data to CSV, Excel, or PDF on demand"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Integrate with accounting software such as Xero and QuickBooks",
+          "source": "both",
+          "proxy_refs": [
+            "Integrate with common accounting software (Xero, QuickBooks)"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00788",
+              "text": "Integration with systems and software such as email, Know Your Customer (KYC) / Anti-Money Laundering (AML) functions, audit tools, document management systems, accounting software, and HR software",
+              "q_title": "System Integration",
+              "subsection": "System Integration",
+              "sources": [
+                "legal__practice-management-system-pms"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": [
+            "legal__practice-management-system-pms"
+          ]
+        },
+        {
+          "text": "Provide REST API access for custom integrations with third-party systems",
+          "source": "both",
+          "proxy_refs": [
+            "API access for custom integrations"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00556",
+              "text": "Does your solution integrate with third-party systems (e.g. ERP)",
+              "q_title": "System Integration and Connectivity",
+              "subsection": "System Integration and Connectivity",
+              "sources": [
+                "advanced-manufacturing__manufacturing-quality-management"
+              ]
+            },
+            {
+              "id": "req-00557",
+              "text": "Does your solution integrate with third-party systems (e.g. ERP, CAD/CAM/PDM, MES and BI systems)",
+              "q_title": "System Integration and Connectivity",
+              "subsection": "System Integration and Connectivity",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            },
+            {
+              "id": "req-00558",
+              "text": "Does your solution integrate with third-party systems (e.g. ERP) for purposes such as retrieval of work orders and record of completed operations",
+              "q_title": "System Integration and Connectivity",
+              "subsection": "System Integration and Connectivity",
+              "sources": [
+                "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+            "advanced-manufacturing__manufacturing-quality-management",
+            "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+          ]
+        },
+        {
+          "text": "Support webhook-based event notifications for real-time system-to-system communication",
+          "source": "proxy",
+          "proxy_refs": [
+            "Webhook support for event-based integrations"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Enable data exchange with supply chain partners using EDI or API protocols",
+          "source": "proxy",
+          "proxy_refs": [
+            "Connect with supply chain partners via EDI or API"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support scheduled automated backups and data exports",
+          "source": "proxy",
+          "proxy_refs": [
+            "Scheduled backups and data export"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo",
+            "sap_s4hana_pp"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Integrate with CAD/CAM/PDM systems for design and manufacturing data exchange",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00557",
+              "text": "Does your solution integrate with third-party systems (e.g. ERP, CAD/CAM/PDM, MES and BI systems)",
+              "q_title": "System Integration and Connectivity",
+              "subsection": "System Integration and Connectivity",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+          ]
+        },
+        {
+          "text": "Integrate with MES (Manufacturing Execution Systems) for shop floor data synchronization",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00557",
+              "text": "Does your solution integrate with third-party systems (e.g. ERP, CAD/CAM/PDM, MES and BI systems)",
+              "q_title": "System Integration and Connectivity",
+              "subsection": "System Integration and Connectivity",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+          ]
+        },
+        {
+          "text": "Integrate with business intelligence and analytics systems for reporting and dashboards",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00557",
+              "text": "Does your solution integrate with third-party systems (e.g. ERP, CAD/CAM/PDM, MES and BI systems)",
+              "q_title": "System Integration and Connectivity",
+              "subsection": "System Integration and Connectivity",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+          ]
+        },
+        {
+          "text": "Retrieve work orders and record completed operations from integrated ERP systems",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00558",
+              "text": "Does your solution integrate with third-party systems (e.g. ERP) for purposes such as retrieval of work orders and record of completed operations",
+              "q_title": "System Integration and Connectivity",
+              "subsection": "System Integration and Connectivity",
+              "sources": [
+                "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+          ]
+        },
+        {
+          "text": "Integrate with document management systems for centralized file storage and retrieval",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00788",
+              "text": "Integration with systems and software such as email, Know Your Customer (KYC) / Anti-Money Laundering (AML) functions, audit tools, document management systems, accounting software, and HR software",
+              "q_title": "System Integration",
+              "subsection": "System Integration",
+              "sources": [
+                "legal__practice-management-system-pms"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__practice-management-system-pms"
+          ]
+        },
+        {
+          "text": "Integrate with HR software for workforce and labor data synchronization",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00788",
+              "text": "Integration with systems and software such as email, Know Your Customer (KYC) / Anti-Money Laundering (AML) functions, audit tools, document management systems, accounting software, and HR software",
+              "q_title": "System Integration",
+              "subsection": "System Integration",
+              "sources": [
+                "legal__practice-management-system-pms"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__practice-management-system-pms"
+          ]
+        },
+        {
+          "text": "Integrate with email systems for notification and communication workflows",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00788",
+              "text": "Integration with systems and software such as email, Know Your Customer (KYC) / Anti-Money Laundering (AML) functions, audit tools, document management systems, accounting software, and HR software",
+              "q_title": "System Integration",
+              "subsection": "System Integration",
+              "sources": [
+                "legal__practice-management-system-pms"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__practice-management-system-pms"
+          ]
+        },
+        {
+          "text": "Support integration with audit and compliance tools for regulatory reporting",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00788",
+              "text": "Integration with systems and software such as email, Know Your Customer (KYC) / Anti-Money Laundering (AML) functions, audit tools, document management systems, accounting software, and HR software",
+              "q_title": "System Integration",
+              "subsection": "System Integration",
+              "sources": [
+                "legal__practice-management-system-pms"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__practice-management-system-pms"
+          ]
+        },
+        {
+          "text": "Consolidate data from all system modules into unified dashboards and reports",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00146",
+              "text": "Are the modules above tightly integrated such that information can be pulled from all modules to the dashboard",
+              "q_title": "Module Integration",
+              "subsection": "Module Integration",
+              "sources": [
+                "legal__practice-management-system-pms"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__practice-management-system-pms"
+          ]
+        }
+      ],
+      "stats": {
+        "proxy_in": 7,
+        "imda_in": 5,
+        "merged_out": 16
+      }
+    }
+  ]
+}

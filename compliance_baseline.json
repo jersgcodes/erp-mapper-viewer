@@ -1,0 +1,247 @@
+{
+  "source": "PSG Pre-Approval Guide (Productivity Solutions Grant)",
+  "description": "Singapore's PSG pre-approval requires every vendor to meet a baseline of regulatory and cybersecurity requirements regardless of which ERP module they cover. These apply uniformly across all 89 PSG solution categories.",
+  "groups": [
+    {
+      "id": "cem",
+      "name": "Cyber Essentials Mark (CEM)",
+      "short": "CEM",
+      "description": "Singapore's CSA Cyber Essentials Mark is a baseline cybersecurity certification. PSG-approved vendors must attain CEM for ICT Vendors (if they are the Product Principal) or hold an equivalent accepted certification (if they are a reseller). This is the cornerstone of PSG's compliance floor.",
+      "raw_item_count": 2,
+      "total_sol_cat_occurrences": 88,
+      "checklist": [
+        {
+          "text": "Do you hold Cyber Essentials Mark certification as the Product Principal?",
+          "rationale": "Confirms vendor meets PSG's baseline cybersecurity requirement for solution originators.",
+          "source_refs": [
+            {
+              "text": "Are you the Product Principal of the solution that you are submitting for pre-approval",
+              "question_title": "Cybersecurity Compliance - Cyber Essentials Mark (CEM)",
+              "sol_cat_count": 87
+            },
+            {
+              "text": "🟡 Preferred - CEM for Product Principal",
+              "question_title": "Cybersecurity Compliance - Cyber Essentials Mark (CEM)",
+              "sol_cat_count": 1
+            }
+          ]
+        },
+        {
+          "text": "If not Product Principal, do you hold an accepted equivalent certification?",
+          "rationale": "Allows resellers to demonstrate compliance via alternative recognized cybersecurity standards.",
+          "source_refs": [
+            {
+              "text": "Are you the Product Principal of the solution that you are submitting for pre-approval",
+              "question_title": "Cybersecurity Compliance - Cyber Essentials Mark (CEM)",
+              "sol_cat_count": 87
+            },
+            {
+              "text": "🟡 Preferred - CEM for Product Principal",
+              "question_title": "Cybersecurity Compliance - Cyber Essentials Mark (CEM)",
+              "sol_cat_count": 1
+            }
+          ]
+        },
+        {
+          "text": "Can you provide current CEM certificate or equivalent certification documentation?",
+          "rationale": "Enables PSG to verify compliance status before pre-approval is granted.",
+          "source_refs": [
+            {
+              "text": "🟡 Preferred - CEM for Product Principal",
+              "question_title": "Cybersecurity Compliance - Cyber Essentials Mark (CEM)",
+              "sol_cat_count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pdpa",
+      "name": "Personal Data Protection (PDPA)",
+      "short": "PDPA",
+      "description": "Singapore's Personal Data Protection Act (PDPA) governs how digital solutions collect, use, disclose, process, and dispose of personal data. PSG requires every pre-approved solution to support PDPA obligations — consent capture, purpose limitation, retention rules, and access rights.",
+      "raw_item_count": 10,
+      "total_sol_cat_occurrences": 139,
+      "checklist": [
+        {
+          "text": "Solution collects, uses, discloses, processes, or disposes of personal data",
+          "rationale": "Determines whether PDPA obligations apply; foundational trigger for all downstream requirements.",
+          "source_refs": [
+            {
+              "text": "Does your digital solution collect, use, disclose, process or dispose personal data",
+              "question_title": "Personal Data Collection",
+              "sol_cat_count": 38
+            }
+          ]
+        },
+        {
+          "text": "Vendor completed Personal Data Protection Requirements form at go.gov.sg/pdp",
+          "rationale": "PSG mandates formal attestation; demonstrates vendor has assessed and documented PDPA compliance obligations.",
+          "source_refs": [
+            {
+              "text": "To comply with this requirement, you MUST complete the Personal Data Protection Requirements form at https://go.gov.sg/pdp.",
+              "question_title": "Personal Data Protection",
+              "sol_cat_count": 17
+            }
+          ]
+        },
+        {
+          "text": "Solution enforces role-based access controls and multi-factor authentication for personal data",
+          "rationale": "Ensures only authorised users access personal data; core control for PDPA access rights and security.",
+          "source_refs": [
+            {
+              "text": "Have strict access controls in place to ensure that only authorised users can access the recorded footage, including measures such as multi-factor authentication and role-based access controls",
+              "question_title": "Personal Data and Cybersecurity",
+              "sol_cat_count": 1
+            }
+          ]
+        },
+        {
+          "text": "Solution encrypts personal data at rest and in transit",
+          "rationale": "Protects personal data confidentiality; required safeguard under PDPA and PSG cybersecurity baseline.",
+          "source_refs": [
+            {
+              "text": "Allow encryption of video footage that can only be accessed by authorised users",
+              "question_title": "Personal Data and Cybersecurity",
+              "sol_cat_count": 1
+            }
+          ]
+        },
+        {
+          "text": "Solution implements automated data retention and deletion policies per PDPA",
+          "rationale": "Enforces purpose limitation and retention rules; prevents unauthorised data hoarding.",
+          "source_refs": [
+            {
+              "text": "Digital solutions that collect, use, disclose, process or dispose personal data should incorporate features that support the obligations under the Personal Data Protection Act (2020).",
+              "question_title": "Personal Data Protection",
+              "sol_cat_count": 63
+            },
+            {
+              "text": "Can your solution demonstrate compliance with the following Personal Data Protection requirements",
+              "question_title": "Personal Data Protection",
+              "sol_cat_count": 15
+            }
+          ]
+        },
+        {
+          "text": "Solution maintains regular data backups with documented recovery procedures",
+          "rationale": "Ensures business continuity and data integrity; supports PDPA obligation to protect personal data.",
+          "source_refs": [
+            {
+              "text": "Conduct regular data backup to ensure data recovery in the event of a system failure or other disaster",
+              "question_title": "Personal Data and Cybersecurity",
+              "sol_cat_count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vapt",
+      "name": "Vulnerability Assessment & Penetration Testing (VA/PT)",
+      "short": "VA/PT",
+      "description": "PSG requires vendors to submit a comprehensive VA/PT report dated no more than 12 months before checklist submission, conducted by a qualified third party. The scope must cover network security, application security, data protection, access control, API security, and (where applicable) cloud security.",
+      "raw_item_count": 10,
+      "total_sol_cat_occurrences": 139,
+      "checklist": [
+        {
+          "text": "VA/PT report dated within 12 months before checklist submission by qualified third party.",
+          "rationale": "Ensures assessment is current and conducted by competent external auditor, not self-assessed.",
+          "source_refs": [
+            {
+              "text": "Please submit the VA/PT report (dated maximum 1 year from the checklist submission date). The VA/PT Report must include Executive summary; Detailed findings and risk ratings; Remediation recommendations; Evidence of vulnerability fixes or mitigation plans; Testing methodology used; Scope of assessment; Assessor's qualifications and certifications.",
+              "question_title": "Vulnerability Assessment/Penetration Testing (VA/PT)",
+              "sol_cat_count": 63
+            },
+            {
+              "text": "Has your solution undergone a comprehensive security vulnerability assessment/penetration testing (VA/PT) conducted by a qualified third-party within the last 12 months? The scope of the VA/PT must cover network security; application security; data protection measures and access control (if applicable); API security testing (if applicable); Cloud security configuration review (if applicable). Specifically, for web application security, the scope must cover minimally all OWASP Top 10 vulnerabilities.",
+              "question_title": "Vulnerability Assessment/Penetration Testing (VA/PT)",
+              "sol_cat_count": 14
+            },
+            {
+              "text": "Has your solution undergone a comprehensive security vulnerability assessment/penetration testing (VA/PT) conducted by a qualified third-party within the last 12 months",
+              "question_title": "Vulnerability Assessment/Penetration Testing (VA/PT)",
+              "sol_cat_count": 1
+            }
+          ]
+        },
+        {
+          "text": "VA/PT scope covers network, application, data protection, access control, and API security.",
+          "rationale": "Mandates comprehensive testing across all critical attack surfaces relevant to ERP systems.",
+          "source_refs": [
+            {
+              "text": "The scope of the VA/PT must cover network security; application security; data protection measures and access control (if applicable); API security testing (if applicable); Cloud security configuration review (if applicable). Specifically, for web application security, the scope must cover minimally all OWASP Top 10 vulnerabilities.",
+              "question_title": "Vulnerability Assessment/Penetration Testing (VA/PT)",
+              "sol_cat_count": 17
+            },
+            {
+              "text": "Has your solution undergone a comprehensive security vulnerability assessment/penetration testing (VA/PT) conducted by a qualified third-party within the last 12 months? The scope of the VA/PT must cover network security; application security; data protection measures and access control (if applicable); API security testing (if applicable); Cloud security configuration review (if applicable). Specifically, for web application security, the scope must cover minimally all OWASP Top 10 vulnerabilities.",
+              "question_title": "Vulnerability Assessment/Penetration Testing (VA/PT)",
+              "sol_cat_count": 14
+            }
+          ]
+        },
+        {
+          "text": "VA/PT assessor holds CREST certification or equivalent recognised security professional credential.",
+          "rationale": "Guarantees assessor has independently verified expertise to conduct rigorous testing.",
+          "source_refs": [
+            {
+              "text": "Qualified third-party refers to: CREST-certified companies [ https://www.crest-approved.org/members/] or companies with security professional with relevant CREST certifications; Security professionals with recognised certifications such as: Offensive Security Certified Professional (OSCP); EC-Council Certified Penetration Testing Professional (CPENT); GIAC Penetration Tester (GPEN); or other equivalent industry-recognised certifications.",
+              "question_title": "Vulnerability Assessment/Penetration Testing (VA/PT)",
+              "sol_cat_count": 8
+            },
+            {
+              "text": "Qualified third-party refers to: CREST-certified companies [https://www.crest-approved.org/members/] or companies with security professional with relevant CREST certifications; Security professionals with recognised certifications such as: Offensive Security Certified Professional (OSCP); EC-Council Certified Penetration Testing Professional (CPENT); GIAC Penetration Tester (GPEN); or other equivalent industry-recognised certifications.",
+              "question_title": "Vulnerability Assessment/Penetration Testing (VA/PT)",
+              "sol_cat_count": 3
+            },
+            {
+              "text": "CREST-certified companies [https://www.crest-approved.org/members/] or companies with security professional with relevant CREST certifications; Security professionals with recognised certifications such as: Offensive Security Certified Professional (OSCP); EC-Council Certified Penetration Testing Professional (CPENT); GIAC Penetration Tester (GPEN); or other equivalent industry-recognised certifications.",
+              "question_title": "Vulnerability Assessment/Penetration Testing (VA/PT)",
+              "sol_cat_count": 1
+            }
+          ]
+        },
+        {
+          "text": "VA/PT report includes executive summary, detailed findings with risk ratings, and remediation recommendations.",
+          "rationale": "Ensures report is complete, actionable, and demonstrates understanding of vulnerabilities found.",
+          "source_refs": [
+            {
+              "text": "Please submit the VA/PT report (dated maximum 1 year from the checklist submission date). The VA/PT Report must include Executive summary; Detailed findings and risk ratings; Remediation recommendations; Evidence of vulnerability fixes or mitigation plans; Testing methodology used; Scope of assessment; Assessor's qualifications and certifications.",
+              "question_title": "Vulnerability Assessment/Penetration Testing (VA/PT)",
+              "sol_cat_count": 63
+            }
+          ]
+        },
+        {
+          "text": "Cloud security configuration review included in VA/PT scope if solution uses cloud infrastructure.",
+          "rationale": "Addresses cloud-specific risks that traditional network testing may not fully cover.",
+          "source_refs": [
+            {
+              "text": "The scope of the VA/PT must cover network security; application security; data protection measures and access control (if applicable); API security testing (if applicable); Cloud security configuration review (if applicable). Specifically, for web application security, the scope must cover minimally all OWASP Top 10 vulnerabilities.",
+              "question_title": "Vulnerability Assessment/Penetration Testing (VA/PT)",
+              "sol_cat_count": 17
+            }
+          ]
+        },
+        {
+          "text": "Resellers provide VA/PT report from product principal or SOC 2 Type II with technical details.",
+          "rationale": "Allows resellers to leverage vendor assessments while maintaining evidence of security testing.",
+          "source_refs": [
+            {
+              "text": "If you are the reseller of the solution, please obtain the VA/PT report from your product principal. SOC 2 Type II report can be accepted if the detailed technical vulnerability assessment results are part of the SOC2 Type II scope.",
+              "question_title": "Vulnerability Assessment/Penetration Testing (VA/PT)",
+              "sol_cat_count": 23
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "raw_items": 22,
+    "haiku_calls": 3,
+    "groups": 3,
+    "total_checklist_items": 15
+  }
+}

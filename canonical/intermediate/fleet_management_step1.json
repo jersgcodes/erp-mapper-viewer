@@ -1,0 +1,501 @@
+{
+  "module": "fleet_management",
+  "stats": {
+    "input_reqs": 20,
+    "unique_section_pairs": 16,
+    "placed_via_section_lookup": 18,
+    "placed_via_fallback": 2,
+    "unmapped": 0,
+    "total_placements": 32,
+    "unique_reqs_placed": 20
+  },
+  "placements": {
+    "fleet.vehicle_register": [
+      {
+        "id": "req-00957",
+        "text": "Organisation to automate the entire process of registering vehicles, capturing vehicle details (e.g. licence plate number, driver details, contact number) and managing carpark control for access to the organisation's premise",
+        "q_title": "Vehicle Registration",
+        "subsection": "Vehicle Registration",
+        "sources": [
+          "security__automated-visitor-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.vehicle_register"
+        ]
+      }
+    ],
+    "fleet.driver_management": [],
+    "fleet.fuel_management": [],
+    "fleet.maintenance_scheduling": [],
+    "fleet.maintenance_work_orders": [],
+    "fleet.trip_mileage": [
+      {
+        "id": "req-00276",
+        "text": "Can your solution track delivery trucks and status of deliveries for customer service officers",
+        "q_title": "Delivery Truck Tracking",
+        "subsection": "Delivery Truck Tracking",
+        "sources": [
+          "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.gps_telematics",
+          "fleet.trip_mileage"
+        ]
+      },
+      {
+        "id": "req-01322",
+        "text": "Telematics and GPS tracking technology which provides the company a complete overview of its fleet's real-time location and operating condition",
+        "q_title": "Fleet Management and Tracking",
+        "subsection": "Fleet Management and Tracking",
+        "sources": [
+          "essential-business__fleet-management-system",
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.gps_telematics",
+          "fleet.trip_mileage",
+          "fleet.reporting_dashboards"
+        ]
+      }
+    ],
+    "fleet.cost_management": [],
+    "fleet.reporting_dashboards": [
+      {
+        "id": "req-00032",
+        "text": "Ability to allow supervision of multiple sites and teams (including location tracking) remotely through a centralised command centre",
+        "q_title": "Centralised Command Centre",
+        "subsection": "Centralised Command Centre",
+        "sources": [
+          "security__mobile-enabled-patrol-and-incident-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.reporting_dashboards",
+          "fleet.gps_telematics"
+        ]
+      },
+      {
+        "id": "req-00605",
+        "text": "Drivers' behaviour (e.g. dangerous driving, speeding)",
+        "q_title": "Data Analytics and Insights for Vehicles",
+        "subsection": "Analytics Areas",
+        "sources": [
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.analytics_ai",
+          "fleet.reporting_dashboards"
+        ]
+      },
+      {
+        "id": "req-00909",
+        "text": "Mileage and fuel consumption",
+        "q_title": "Data Analytics and Insights for Vehicles",
+        "subsection": "Functional Requirements",
+        "sources": [
+          "essential-business__fleet-management-system",
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.analytics_ai",
+          "fleet.reporting_dashboards"
+        ]
+      },
+      {
+        "id": "req-01322",
+        "text": "Telematics and GPS tracking technology which provides the company a complete overview of its fleet's real-time location and operating condition",
+        "q_title": "Fleet Management and Tracking",
+        "subsection": "Fleet Management and Tracking",
+        "sources": [
+          "essential-business__fleet-management-system",
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.gps_telematics",
+          "fleet.trip_mileage",
+          "fleet.reporting_dashboards"
+        ]
+      },
+      {
+        "id": "req-01411",
+        "text": "Vehicle maintenance and servicing tasks",
+        "q_title": "Data Analytics and Insights for Vehicles",
+        "subsection": "Functional Requirements",
+        "sources": [
+          "essential-business__fleet-management-system",
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.analytics_ai",
+          "fleet.reporting_dashboards"
+        ]
+      }
+    ],
+    "fleet.gps_telematics": [
+      {
+        "id": "req-00032",
+        "text": "Ability to allow supervision of multiple sites and teams (including location tracking) remotely through a centralised command centre",
+        "q_title": "Centralised Command Centre",
+        "subsection": "Centralised Command Centre",
+        "sources": [
+          "security__mobile-enabled-patrol-and-incident-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.reporting_dashboards",
+          "fleet.gps_telematics"
+        ]
+      },
+      {
+        "id": "req-00276",
+        "text": "Can your solution track delivery trucks and status of deliveries for customer service officers",
+        "q_title": "Delivery Truck Tracking",
+        "subsection": "Delivery Truck Tracking",
+        "sources": [
+          "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.gps_telematics",
+          "fleet.trip_mileage"
+        ]
+      },
+      {
+        "id": "req-00313",
+        "text": "Companies to tailor the fleet journey, manage cost control, improve fleet utilisation, and improve productivity",
+        "q_title": "Customised Fleet Journey Management",
+        "subsection": "Customised Fleet Journey Management",
+        "sources": [
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.route_planning",
+          "fleet.gps_telematics"
+        ]
+      },
+      {
+        "id": "req-01315",
+        "text": "Tailor the fleet journey and manage cost control",
+        "q_title": "Customised Fleet Journey Management",
+        "subsection": "Customised Fleet Journey Management",
+        "sources": [
+          "essential-business__fleet-management-system"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.route_planning",
+          "fleet.gps_telematics"
+        ]
+      },
+      {
+        "id": "req-01322",
+        "text": "Telematics and GPS tracking technology which provides the company a complete overview of its fleet's real-time location and operating condition",
+        "q_title": "Fleet Management and Tracking",
+        "subsection": "Fleet Management and Tracking",
+        "sources": [
+          "essential-business__fleet-management-system",
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.gps_telematics",
+          "fleet.trip_mileage",
+          "fleet.reporting_dashboards"
+        ]
+      },
+      {
+        "id": "req-00756",
+        "text": "Indoor Analogue Camera to capture the activity in vehicle cabin",
+        "q_title": "Vehicle Cabin Monitoring",
+        "subsection": "Vehicle Cabin Monitoring",
+        "sources": [
+          "essential-business__fleet-safety-management-system"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fleet.gps_telematics"
+        ]
+      },
+      {
+        "id": "req-00854",
+        "text": "Licence Plate Recognition Module – Analyse video for licence plates captured and stored according to the date and time of entry",
+        "q_title": "Real-Time Video Functions",
+        "subsection": "Additional Functions (Choose at least one)",
+        "sources": [
+          "security__surveillance-and-analytics"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fleet.gps_telematics"
+        ]
+      }
+    ],
+    "fleet.route_planning": [
+      {
+        "id": "req-00313",
+        "text": "Companies to tailor the fleet journey, manage cost control, improve fleet utilisation, and improve productivity",
+        "q_title": "Customised Fleet Journey Management",
+        "subsection": "Customised Fleet Journey Management",
+        "sources": [
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.route_planning",
+          "fleet.gps_telematics"
+        ]
+      },
+      {
+        "id": "req-00481",
+        "text": "Does your solution auto-generate and optimise delivery schedules or routes according to pre-set criteria such as destination, delivering time, menu type, or order size",
+        "q_title": "Delivery Route Optimisation",
+        "subsection": "Delivery Route Optimisation",
+        "sources": [
+          "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.route_planning"
+        ]
+      },
+      {
+        "id": "req-00483",
+        "text": "Does your solution automate route planning and optimisation based on data collected",
+        "q_title": "Route Planning and Optimisation",
+        "subsection": "Route Planning and Optimisation",
+        "sources": [
+          "essential-business__fleet-management-system",
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.route_planning"
+        ]
+      },
+      {
+        "id": "req-01315",
+        "text": "Tailor the fleet journey and manage cost control",
+        "q_title": "Customised Fleet Journey Management",
+        "subsection": "Customised Fleet Journey Management",
+        "sources": [
+          "essential-business__fleet-management-system"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.route_planning",
+          "fleet.gps_telematics"
+        ]
+      }
+    ],
+    "fleet.driver_safety": [
+      {
+        "id": "req-00073",
+        "text": "Advanced Driver Assistance System (ADAS) to alert the driver of potential collisions (e.g. forward collision warning, lane departure warning, and pedestrian or cyclist collision warning, etc)",
+        "q_title": "Fleet Safety Management",
+        "subsection": "Safety Features",
+        "sources": [
+          "essential-business__fleet-safety-management-system"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.driver_safety",
+          "fleet.accident_incident"
+        ]
+      },
+      {
+        "id": "req-00193",
+        "text": "Blind Spot Detection System to improve situational awareness and alert the driver of pedestrian, cyclist or motorcyclist, or worker in the vehicle's blind spot",
+        "q_title": "Fleet Safety Management",
+        "subsection": "Safety Features",
+        "sources": [
+          "essential-business__fleet-safety-management-system"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.driver_safety",
+          "fleet.accident_incident"
+        ]
+      },
+      {
+        "id": "req-00603",
+        "text": "Driver behaviour monitoring to uncover poor driving habit (e.g. harsh braking and acceleration, harsh cornering, tailgating and speeding, etc)",
+        "q_title": "Driver Behaviour Monitoring",
+        "subsection": "Driver Behaviour Monitoring",
+        "sources": [
+          "essential-business__fleet-safety-management-system"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.driver_safety"
+        ]
+      },
+      {
+        "id": "req-00604",
+        "text": "Driver Status Monitoring System (DSMS) to detect and alert the driver of fatigue events (e.g. closing of eyes) and distractions (e.g. making phone calls)",
+        "q_title": "Fleet Safety Management",
+        "subsection": "Safety Features",
+        "sources": [
+          "essential-business__fleet-safety-management-system"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.driver_safety",
+          "fleet.accident_incident"
+        ]
+      }
+    ],
+    "fleet.compliance_regulatory": [],
+    "fleet.tyre_management": [],
+    "fleet.accident_incident": [
+      {
+        "id": "req-00073",
+        "text": "Advanced Driver Assistance System (ADAS) to alert the driver of potential collisions (e.g. forward collision warning, lane departure warning, and pedestrian or cyclist collision warning, etc)",
+        "q_title": "Fleet Safety Management",
+        "subsection": "Safety Features",
+        "sources": [
+          "essential-business__fleet-safety-management-system"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.driver_safety",
+          "fleet.accident_incident"
+        ]
+      },
+      {
+        "id": "req-00193",
+        "text": "Blind Spot Detection System to improve situational awareness and alert the driver of pedestrian, cyclist or motorcyclist, or worker in the vehicle's blind spot",
+        "q_title": "Fleet Safety Management",
+        "subsection": "Safety Features",
+        "sources": [
+          "essential-business__fleet-safety-management-system"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.driver_safety",
+          "fleet.accident_incident"
+        ]
+      },
+      {
+        "id": "req-00604",
+        "text": "Driver Status Monitoring System (DSMS) to detect and alert the driver of fatigue events (e.g. closing of eyes) and distractions (e.g. making phone calls)",
+        "q_title": "Fleet Safety Management",
+        "subsection": "Safety Features",
+        "sources": [
+          "essential-business__fleet-safety-management-system"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.driver_safety",
+          "fleet.accident_incident"
+        ]
+      }
+    ],
+    "fleet.booking_reservation": [],
+    "fleet.insurance_claims": [],
+    "fleet.procurement_disposal": [],
+    "fleet.vendor_workshop": [],
+    "fleet.emissions_tracking": [],
+    "fleet.pool_car_sharing": [],
+    "fleet.analytics_ai": [
+      {
+        "id": "req-00605",
+        "text": "Drivers' behaviour (e.g. dangerous driving, speeding)",
+        "q_title": "Data Analytics and Insights for Vehicles",
+        "subsection": "Analytics Areas",
+        "sources": [
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.analytics_ai",
+          "fleet.reporting_dashboards"
+        ]
+      },
+      {
+        "id": "req-00909",
+        "text": "Mileage and fuel consumption",
+        "q_title": "Data Analytics and Insights for Vehicles",
+        "subsection": "Functional Requirements",
+        "sources": [
+          "essential-business__fleet-management-system",
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.analytics_ai",
+          "fleet.reporting_dashboards"
+        ]
+      },
+      {
+        "id": "req-01411",
+        "text": "Vehicle maintenance and servicing tasks",
+        "q_title": "Data Analytics and Insights for Vehicles",
+        "subsection": "Functional Requirements",
+        "sources": [
+          "essential-business__fleet-management-system",
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.analytics_ai",
+          "fleet.reporting_dashboards"
+        ]
+      }
+    ],
+    "fleet.mobile_access": [
+      {
+        "id": "req-00606",
+        "text": "Drivers/dispatchers with mobile application for tracking and direct communication and coordination with the coordinator/controller",
+        "q_title": "Mobile App for Drivers/Dispatchers",
+        "subsection": "Mobile App for Drivers/Dispatchers",
+        "sources": [
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.mobile_access"
+        ]
+      }
+    ],
+    "fleet.data_governance": [
+      {
+        "id": "req-00666",
+        "text": "Fleet security features (e.g. remote locking)",
+        "q_title": "Fleet Security Features",
+        "subsection": "Fleet Security Features",
+        "sources": [
+          "essential-business__fleet-safety-management-system"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.data_governance"
+        ]
+      }
+    ],
+    "fleet.user_access_roles": [],
+    "fleet.integration_import_export": [
+      {
+        "id": "req-00146",
+        "text": "Are the modules above tightly integrated such that information can be pulled from all modules to the dashboard",
+        "q_title": "Module Integration",
+        "subsection": "Module Integration",
+        "sources": [
+          "legal__practice-management-system-pms"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.integration_import_export"
+        ]
+      }
+    ]
+  },
+  "unmapped": []
+}

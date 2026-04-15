@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<title>PSG ERP Module Spec — Singapore SME</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --panel: #ffffff;
+    --border: #e2e5ea;
+    --text: #1a1f2b;
+    --muted: #6b7380;
+    --accent: #2563eb;
+    --required: #16a34a;
+    --preferred: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    padding: 32px 40px 28px;
+  }
+  header h1 {
+    margin: 0 0 8px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  header p.lede {
+    margin: 0 0 16px;
+    color: var(--muted);
+    max-width: 820px;
+    font-size: 14px;
+  }
+  header .totals {
+    display: flex;
+    gap: 32px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+  header .totals > div {
+    display: flex;
+    flex-direction: column;
+  }
+  header .totals strong {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  header .totals span {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 40px 60px;
+  }
+  h2.section {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 36px 0 14px;
+    color: var(--text);
+  }
+  p.section-lede {
+    color: var(--muted);
+    margin: -8px 0 14px;
+    max-width: 820px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 18px;
+  }
+  a.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 22px 16px;
+    color: var(--text);
+    text-decoration: none;
+    display: block;
+    transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  }
+  a.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
+  }
+  .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+  }
+  .card-head h2 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .card-head .slug {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .kv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px 14px;
+    margin-bottom: 14px;
+  }
+  .kv-grid > div {
+    display: flex;
+    flex-direction: column;
+  }
+  .kv-grid strong {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .kv-grid span {
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .families-row {
+    margin: 10px 0 14px;
+  }
+  .families-label {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  ul.families {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  li.family {
+    background: #eef2f7;
+    color: var(--text);
+    font-size: 11px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+  }
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .open {
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-left: auto;
+  }
+  table {
+    width: 100%;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  th, td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  thead th {
+    background: #fafbfd;
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  tbody th[scope="row"] {
+    font-weight: 500;
+    color: var(--text);
+    background: #fafbfd;
+  }
+  tbody tr:last-child td, tbody tr:last-child th {
+    border-bottom: none;
+  }
+  .matrix td {
+    text-align: center;
+    font-size: 16px;
+    color: var(--required);
+    font-weight: 600;
+  }
+  footer {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px 40px 40px;
+    color: var(--muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+  }
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  h3.subsection {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 24px 0 8px;
+    color: var(--text);
+  }
+  .svg-frame {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 10px 0 20px;
+    overflow-x: auto;
+  }
+  .svg-frame svg { width: 100%; height: auto; display: block; }
+  .cross-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 4px 0 14px;
+  }
+  .cross-stats > div {
+    display: flex;
+    flex-direction: column;
+  }
+  .cross-stats strong {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .cross-stats span {
+    font-size: 11px;
+    color: var(--muted);
+  }
+  ul.kind-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 0 0 10px;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  ul.kind-legend li { display: flex; align-items: center; gap: 6px; }
+  .kind-dot {
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 2px;
+  }
+  .combo-picker {
+    background: var(--panel);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 8px 0 16px;
+  }
+  .combo-label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
+  .combo-options { display: flex; gap: 12px; flex-wrap: wrap; }
+  .combo-check {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .combo-check input { display: none; }
+  .combo-chip {
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 2px solid;
+    transition: opacity 0.15s, transform 0.1s;
+  }
+  .combo-check input:not(:checked) + .combo-chip {
+    opacity: 0.35;
+    transform: scale(0.96);
+  }
+  .combo-check input:checked + .combo-chip {
+    opacity: 1;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  .combo-summary {
+    background: #f0f4ff;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 13px;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+  .combo-empty {
+    color: var(--muted);
+    font-style: italic;
+    margin: 20px 0;
+  }
+  .combo-pair { margin-bottom: 24px; }
+  .combo-pair-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: var(--text);
+  }
+  .combo-pair-count {
+    font-weight: 400;
+    color: var(--muted);
+    font-size: 12px;
+    margin-left: 8px;
+  }
+  .combo-table {
+    width: 100%;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  .combo-table th {
+    background: #fafbfd;
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .combo-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.45;
+  }
+  .combo-cap { font-weight: 500; white-space: nowrap; }
+  .combo-kind { font-weight: 500; font-size: 11px; }
+  .combo-strength { font-size: 11px; }
+  .combo-hard { background: #fef2f2; }
+  .combo-soft { }
+  .combo-tier-required { color: var(--required); font-weight: 600; font-size: 11px; }
+  .combo-tier-preferred { color: var(--preferred); font-size: 11px; }
+  .combo-tier-optional { color: var(--muted); font-size: 11px; }
+  .combo-vq { font-size: 12px; color: var(--text); max-width: 420px; }
+  .combo-table tr:hover { background: #f5f6f8; }
+</style>
+</head>
+<body>
+
+<style>
+  .top-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e5ea;
+    padding: 0 24px;
+    flex-shrink: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .top-bar-inner {
+    display: flex;
+    align-items: stretch;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 2px;
+  }
+  .top-bar-brand {
+    font-size: 12px;
+    color: #6b7380;
+    padding: 14px 18px 14px 0;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-right: 1px solid #e2e5ea;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .top-bar-link:hover {
+    color: #2563eb;
+    background: #f5f6f8;
+  }
+  .top-bar-link.active {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+</style>
+<nav class="top-bar">
+  <div class="top-bar-inner">
+    <span class="top-bar-brand">PSG ERP Spec</span>
+    <a class="top-bar-link active" href="index.html">Overview</a>
+    <a class="top-bar-link" href="canonical_sales_and_crm.html">Sales & CRM</a>
+    <a class="top-bar-link" href="canonical_financial_management.html">Financial</a>
+    <a class="top-bar-link" href="canonical_human_resources_management.html">HR</a>
+    <a class="top-bar-link" href="canonical_supply_chain_and_inventory.html">Supply Chain</a>
+    <a class="top-bar-link" href="canonical_manufacturing_management.html">Manufacturing</a>
+    <a class="top-bar-link" href="canonical_project_management.html">Project Mgmt</a>
+    <a class="top-bar-link" href="canonical_asset_management.html">Asset Mgmt</a>
+    <a class="top-bar-link" href="canonical_field_service_management.html">Field Service</a>
+    <a class="top-bar-link" href="canonical_fleet_management.html">Fleet</a>
+    <a class="top-bar-link" href="canonical_others.html">Other</a>
+    <a class="top-bar-link" href="integrations.html">Integrations</a>
+  </div>
+</nav>
+
+<header>
+  <h1>PSG ERP Module Spec — Singapore SME</h1>
+  <p class="lede">
+    A canonical, stakeholder-ready ERP requirements spec for Singapore SMEs, synthesised from
+    IMDA's PSG Pre-Approval Guide (89 solution categories, 14 verticals) merged with proxy
+    research from mainstream ERPs (NetSuite, Odoo, ERPNext, Salesforce, SAP, Xero, and
+    others). Every requirement is traceable to its source.
+  </p>
+  <div class="totals">
+    <div><strong>10 / 10</strong><span>modules canonical-ready</span></div>
+    <div><strong>293</strong><span>capabilities</span></div>
+    <div><strong>2744</strong><span>detailed requirements</span></div>
+    <div><strong>218</strong><span>vendor questionnaire items</span></div>
+  </div>
+</header>
+
+<main>
+  <h2 class="section">Modules</h2>
+  <p class="section-lede">
+    Click any card to open the standalone per-module viewer (Overview, Review, Compliance, Domain Map).
+  </p>
+  <div class="cards">
+    
+        <a class="card" href="canonical_asset_management.html">
+          <div class="card-head">
+            <h2>Asset Management</h2>
+            <span class="slug">asset_management</span>
+          </div>
+          <div class="kv-grid">
+            <div><strong>30</strong><span>capabilities</span></div>
+            <div><strong>238</strong><span>requirements</span></div>
+            <div><strong>131</strong><span>features</span></div>
+            <div><strong>141</strong><span>SME-minimum items</span></div>
+            <div><strong>13 / 8</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 36</strong><span>pillars / statements</span></div>
+          </div>
+          <div class="families-row">
+            <div class="families-label">Families (6):</div>
+            <ul class="families"><li class="family">Platform & Data</li><li class="family">Asset Register & Lifecycle</li><li class="family">Maintenance Operations</li><li class="family">Reliability & Compliance</li><li class="family">Capital & Commercial</li><li class="family">Analytics & Intelligence</li></ul>
+          </div>
+          <div class="card-footer">
+            <span class="badge">6 family narratives</span>
+            <span class="badge">4 diagrams</span>
+            <span class="open">Open viewer →</span>
+          </div>
+        </a>
+        
+
+        <a class="card" href="canonical_field_service_management.html">
+          <div class="card-head">
+            <h2>Field Service Management</h2>
+            <span class="slug">field_service_management</span>
+          </div>
+          <div class="kv-grid">
+            <div><strong>30</strong><span>capabilities</span></div>
+            <div><strong>214</strong><span>requirements</span></div>
+            <div><strong>128</strong><span>features</span></div>
+            <div><strong>142</strong><span>SME-minimum items</span></div>
+            <div><strong>14 / 11</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 29</strong><span>pillars / statements</span></div>
+          </div>
+          <div class="families-row">
+            <div class="families-label">Families (6):</div>
+            <ul class="families"><li class="family">Platform & Data</li><li class="family">Work Order Core</li><li class="family">Scheduling & Dispatch</li><li class="family">Equipment & Inventory</li><li class="family">Service Contracts</li><li class="family">Analytics & Intelligence</li></ul>
+          </div>
+          <div class="card-footer">
+            <span class="badge">6 family narratives</span>
+            <span class="badge">4 diagrams</span>
+            <span class="open">Open viewer →</span>
+          </div>
+        </a>
+        
+
+        <a class="card" href="canonical_financial_management.html">
+          <div class="card-head">
+            <h2>Financial Management</h2>
+            <span class="slug">financial_management</span>
+          </div>
+          <div class="kv-grid">
+            <div><strong>30</strong><span>capabilities</span></div>
+            <div><strong>324</strong><span>requirements</span></div>
+            <div><strong>159</strong><span>features</span></div>
+            <div><strong>197</strong><span>SME-minimum items</span></div>
+            <div><strong>16 / 9</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 34</strong><span>pillars / statements</span></div>
+          </div>
+          <div class="families-row">
+            <div class="families-label">Families (6):</div>
+            <ul class="families"><li class="family">Platform & Data</li><li class="family">Core Ledger & Close</li><li class="family">Revenue Cycle</li><li class="family">Expense Cycle</li><li class="family">Treasury & Compliance</li><li class="family">Planning & Analytics</li></ul>
+          </div>
+          <div class="card-footer">
+            <span class="badge">6 family narratives</span>
+            <span class="badge">4 diagrams</span>
+            <span class="open">Open viewer →</span>
+          </div>
+        </a>
+        
+
+        <a class="card" href="canonical_fleet_management.html">
+          <div class="card-head">
+            <h2>Fleet Management</h2>
+            <span class="slug">fleet_management</span>
+          </div>
+          <div class="kv-grid">
+            <div><strong>25</strong><span>capabilities</span></div>
+            <div><strong>180</strong><span>requirements</span></div>
+            <div><strong>109</strong><span>features</span></div>
+            <div><strong>103</strong><span>SME-minimum items</span></div>
+            <div><strong>12 / 6</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 29</strong><span>pillars / statements</span></div>
+          </div>
+          <div class="families-row">
+            <div class="families-label">Families (6):</div>
+            <ul class="families"><li class="family">Platform & Data</li><li class="family">Vehicle Registry</li><li class="family">Driver & Safety</li><li class="family">Maintenance & Workshop</li><li class="family">Operations & Logistics</li><li class="family">Cost & Compliance</li></ul>
+          </div>
+          <div class="card-footer">
+            <span class="badge">13 family narratives</span>
+            <span class="badge">4 diagrams</span>
+            <span class="open">Open viewer →</span>
+          </div>
+        </a>
+        
+
+        <a class="card" href="canonical_human_resources_management.html">
+          <div class="card-head">
+            <h2>Human Resources Management</h2>
+            <span class="slug">human_resources_management</span>
+          </div>
+          <div class="kv-grid">
+            <div><strong>31</strong><span>capabilities</span></div>
+            <div><strong>319</strong><span>requirements</span></div>
+            <div><strong>156</strong><span>features</span></div>
+            <div><strong>216</strong><span>SME-minimum items</span></div>
+            <div><strong>16 / 10</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 33</strong><span>pillars / statements</span></div>
+          </div>
+          <div class="families-row">
+            <div class="families-label">Families (6):</div>
+            <ul class="families"><li class="family">Platform & Data</li><li class="family">Core HR</li><li class="family">Time & Attendance</li><li class="family">Payroll & Statutory</li><li class="family">Talent & Growth</li><li class="family">Lifecycle & Analytics</li></ul>
+          </div>
+          <div class="card-footer">
+            <span class="badge">6 family narratives</span>
+            <span class="badge">4 diagrams</span>
+            <span class="open">Open viewer →</span>
+          </div>
+        </a>
+        
+
+        <a class="card" href="canonical_manufacturing_management.html">
+          <div class="card-head">
+            <h2>Manufacturing Management</h2>
+            <span class="slug">manufacturing_management</span>
+          </div>
+          <div class="kv-grid">
+            <div><strong>31</strong><span>capabilities</span></div>
+            <div><strong>266</strong><span>requirements</span></div>
+            <div><strong>146</strong><span>features</span></div>
+            <div><strong>151</strong><span>SME-minimum items</span></div>
+            <div><strong>14 / 8</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 32</strong><span>pillars / statements</span></div>
+          </div>
+          <div class="families-row">
+            <div class="families-label">Families (6):</div>
+            <ul class="families"><li class="family">Platform & Data</li><li class="family">Product Engineering</li><li class="family">Production Execution</li><li class="family">Quality & Compliance</li><li class="family">Planning & Costing</li><li class="family">Maintenance & Analytics</li></ul>
+          </div>
+          <div class="card-footer">
+            <span class="badge">6 family narratives</span>
+            <span class="badge">4 diagrams</span>
+            <span class="open">Open viewer →</span>
+          </div>
+        </a>
+        
+
+        <a class="card" href="canonical_others.html">
+          <div class="card-head">
+            <h2>Others (Cross-Cutting)</h2>
+            <span class="slug">others</span>
+          </div>
+          <div class="kv-grid">
+            <div><strong>24</strong><span>capabilities</span></div>
+            <div><strong>289</strong><span>requirements</span></div>
+            <div><strong>124</strong><span>features</span></div>
+            <div><strong>160</strong><span>SME-minimum items</span></div>
+            <div><strong>9 / 11</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 43</strong><span>pillars / statements</span></div>
+          </div>
+          <div class="families-row">
+            <div class="families-label">Families (5):</div>
+            <ul class="families"><li class="family">Platform & Data</li><li class="family">Productivity & Collaboration</li><li class="family">Workflow & Automation</li><li class="family">Intelligence & Analytics</li><li class="family">Customisation & Integration</li></ul>
+          </div>
+          <div class="card-footer">
+            <span class="badge">5 family narratives</span>
+            <span class="badge">4 diagrams</span>
+            <span class="open">Open viewer →</span>
+          </div>
+        </a>
+        
+
+        <a class="card" href="canonical_project_management.html">
+          <div class="card-head">
+            <h2>Project Management</h2>
+            <span class="slug">project_management</span>
+          </div>
+          <div class="kv-grid">
+            <div><strong>29</strong><span>capabilities</span></div>
+            <div><strong>244</strong><span>requirements</span></div>
+            <div><strong>131</strong><span>features</span></div>
+            <div><strong>139</strong><span>SME-minimum items</span></div>
+            <div><strong>12 / 10</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 35</strong><span>pillars / statements</span></div>
+          </div>
+          <div class="families-row">
+            <div class="families-label">Families (6):</div>
+            <ul class="families"><li class="family">Platform & Data</li><li class="family">Project Core</li><li class="family">Time & Resources</li><li class="family">Financial Control</li><li class="family">Delivery & Tracking</li><li class="family">Analytics & Reporting</li></ul>
+          </div>
+          <div class="card-footer">
+            <span class="badge">6 family narratives</span>
+            <span class="badge">4 diagrams</span>
+            <span class="open">Open viewer →</span>
+          </div>
+        </a>
+        
+
+        <a class="card" href="canonical_sales_and_crm.html">
+          <div class="card-head">
+            <h2>Sales & Customer Relationship Management</h2>
+            <span class="slug">sales_and_crm</span>
+          </div>
+          <div class="kv-grid">
+            <div><strong>32</strong><span>capabilities</span></div>
+            <div><strong>376</strong><span>requirements</span></div>
+            <div><strong>168</strong><span>features</span></div>
+            <div><strong>168</strong><span>SME-minimum items</span></div>
+            <div><strong>9 / 9</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 43</strong><span>pillars / statements</span></div>
+          </div>
+          <div class="families-row">
+            <div class="families-label">Families (6):</div>
+            <ul class="families"><li class="family">Platform & Data</li><li class="family">Sales Pipeline</li><li class="family">Marketing</li><li class="family">Commerce</li><li class="family">Customer Service</li><li class="family">Analytics</li></ul>
+          </div>
+          <div class="card-footer">
+            <span class="badge">6 family narratives</span>
+            <span class="badge">4 diagrams</span>
+            <span class="open">Open viewer →</span>
+          </div>
+        </a>
+        
+
+        <a class="card" href="canonical_supply_chain_and_inventory.html">
+          <div class="card-head">
+            <h2>Supply Chain & Inventory</h2>
+            <span class="slug">supply_chain_and_inventory</span>
+          </div>
+          <div class="kv-grid">
+            <div><strong>31</strong><span>capabilities</span></div>
+            <div><strong>294</strong><span>requirements</span></div>
+            <div><strong>150</strong><span>features</span></div>
+            <div><strong>156</strong><span>SME-minimum items</span></div>
+            <div><strong>14 / 7</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 30</strong><span>pillars / statements</span></div>
+          </div>
+          <div class="families-row">
+            <div class="families-label">Families (6):</div>
+            <ul class="families"><li class="family">Platform & Data</li><li class="family">Inventory Core</li><li class="family">Procurement</li><li class="family">Warehouse & Logistics</li><li class="family">Planning & Compliance</li><li class="family">Analytics & Intelligence</li></ul>
+          </div>
+          <div class="card-footer">
+            <span class="badge">6 family narratives</span>
+            <span class="badge">4 diagrams</span>
+            <span class="open">Open viewer →</span>
+          </div>
+        </a>
+        
+  </div>
+
+  <h2 class="section">Cross-module comparison</h2>
+  <p class="section-lede">
+    Side-by-side totals across every canonical module. Useful for sanity-checking coverage and spotting gaps.
+  </p>
+  <table>
+    <thead>
+      <tr><th scope="col">Metric</th><th>Asset Management</th><th>Field Service Management</th><th>Financial Management</th><th>Fleet Management</th><th>Human Resources Management</th><th>Manufacturing Management</th><th>Others (Cross-Cutting)</th><th>Project Management</th><th>Sales & Customer Relationship Management</th><th>Supply Chain & Inventory</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Capabilities</th><td>30</td><td>30</td><td>30</td><td>25</td><td>31</td><td>31</td><td>24</td><td>29</td><td>32</td><td>31</td></tr>
+<tr><th scope="row">Requirements (all)</th><td>238</td><td>214</td><td>324</td><td>180</td><td>319</td><td>266</td><td>289</td><td>244</td><td>376</td><td>294</td></tr>
+<tr><th scope="row">Features</th><td>131</td><td>128</td><td>159</td><td>109</td><td>156</td><td>146</td><td>124</td><td>131</td><td>168</td><td>150</td></tr>
+<tr><th scope="row">SME-minimum items</th><td>141</td><td>142</td><td>197</td><td>103</td><td>216</td><td>151</td><td>160</td><td>139</td><td>168</td><td>156</td></tr>
+<tr><th scope="row">Vendor Qs — Required</th><td>13</td><td>14</td><td>16</td><td>12</td><td>16</td><td>14</td><td>9</td><td>12</td><td>9</td><td>14</td></tr>
+<tr><th scope="row">Vendor Qs — Preferred</th><td>8</td><td>11</td><td>9</td><td>6</td><td>10</td><td>8</td><td>11</td><td>10</td><td>9</td><td>7</td></tr>
+<tr><th scope="row">Family narratives</th><td>6</td><td>6</td><td>6</td><td>13</td><td>6</td><td>6</td><td>5</td><td>6</td><td>6</td><td>6</td></tr>
+<tr><th scope="row">Reference diagrams</th><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+<tr><th scope="row">Families</th><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>5</td><td>6</td><td>6</td><td>6</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">Universal platform capabilities</h2>
+  <p class="section-lede">
+    Every ERP module inherits four universal platform capabilities that PSG asks about on every sol cat.
+    These appear as Required across all modules.
+  </p>
+  <table class="matrix">
+    <thead>
+      <tr><th scope="col">Capability</th><th>Asset Management</th><th>Field Service Management</th><th>Financial Management</th><th>Fleet Management</th><th>Human Resources Management</th><th>Manufacturing Management</th><th>Others (Cross-Cutting)</th><th>Project Management</th><th>Sales & Customer Relationship Management</th><th>Supply Chain & Inventory</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Mobile & Multi-Device</th><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><th scope="row">Data Security & PDPA</th><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><th scope="row">User Accounts & RBAC</th><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><th scope="row">Import / Export / API</th><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+    </tbody>
+  </table>
+
+  
+  <h2 class="section">Cross-module interactions (Haiku-proposed draft)</h2>
+  <p class="section-lede">
+    A first-pass map of how these three modules talk to each other. Every edge was
+    proposed by Claude Haiku from the canonical specs, then passed through basic
+    validation. <strong>This is a draft</strong> — review and edit
+    <code>data/cross_module_proposed.yaml</code>, then rerun the index build.
+  </p>
+  <div class="cross-stats">
+    <div><strong>546</strong><span>total edges</span></div>
+    <div><strong>238</strong><span>critical (hard + required)</span></div>
+    <div><strong>245 / 301</strong><span>hard / soft</span></div>
+    <div><strong>239 / 222 / 85</strong><span>required / preferred / optional</span></div>
+  </div>
+  <p class="section-lede"><strong>260</strong> data flow · <strong>137</strong> dependency · <strong>92</strong> shared master · <strong>57</strong> process trigger</p>
+
+  <h3 class="subsection">Module-level flow count</h3>
+  <p class="section-lede">
+    How many edges run between each pair of modules. "Hard" edges break the business
+    process if absent; "soft" edges are valuable but not fatal.
+  </p>
+  <div class="svg-frame"><svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Module interaction overview">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563" /></marker>
+</defs>
+<line x1="241.9" y1="331.7" x2="415.7" y2="144.6" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="274.8" y="228.2" width="108" height="20" rx="10" ry="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1" />
+<text x="328.8" y="242.2" text-anchor="middle" font-size="11" font-family="-apple-system, sans-serif" fill="#1a1f2b">4 flows (1 hard)</text>
+<line x1="594.0" y1="358.0" x2="306.0" y2="358.0" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="393.0" y="348.0" width="114" height="20" rx="10" ry="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1" />
+<text x="450.0" y="362.0" text-anchor="middle" font-size="11" font-family="-apple-system, sans-serif" fill="#1a1f2b">13 flows (6 hard)</text>
+<line x1="675.7" y1="315.4" x2="501.9" y2="128.3" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="534.8" y="211.8" width="108" height="20" rx="10" ry="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1" />
+<text x="588.8" y="225.8" text-anchor="middle" font-size="11" font-family="-apple-system, sans-serif" fill="#1a1f2b">4 flows (2 hard)</text>
+<line x1="398.1" y1="128.3" x2="224.3" y2="315.4" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="254.2" y="211.8" width="114" height="20" rx="10" ry="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1" />
+<text x="311.2" y="225.8" text-anchor="middle" font-size="11" font-family="-apple-system, sans-serif" fill="#1a1f2b">15 flows (6 hard)</text>
+<line x1="484.3" y1="144.6" x2="658.1" y2="331.7" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="517.2" y="228.2" width="108" height="20" rx="10" ry="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1" />
+<text x="571.2" y="242.2" text-anchor="middle" font-size="11" font-family="-apple-system, sans-serif" fill="#1a1f2b">4 flows (1 hard)</text>
+<rect x="340.0" y="46.0" width="220" height="88" rx="14" ry="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5" />
+<text x="450" y="95" text-anchor="middle" font-size="17" font-weight="600" font-family="-apple-system, sans-serif" fill="#1a1f2b">Sales & CRM</text>
+<rect x="80.0" y="326.0" width="220" height="88" rx="14" ry="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5" />
+<text x="190" y="375" text-anchor="middle" font-size="17" font-weight="600" font-family="-apple-system, sans-serif" fill="#1a1f2b">Financial</text>
+<rect x="600.0" y="326.0" width="220" height="88" rx="14" ry="14" fill="#fef3c7" stroke="#d97706" stroke-width="2.5" />
+<text x="710" y="375" text-anchor="middle" font-size="17" font-weight="600" font-family="-apple-system, sans-serif" fill="#1a1f2b">HR</text>
+</svg></div>
+
+  <h3 class="subsection">Capability-level swimlane (critical edges only)</h3>
+  <p class="section-lede">
+    Showing the <strong>238 hard + required</strong> integrations between
+    capabilities. Solid lines are hard dependencies; hover a line for the full
+    description. Soft and preferred edges are hidden in this view — open
+    <code>data/cross_module_proposed.yaml</code> for the full list.
+  </p>
+  <ul class="kind-legend"><li><span class="kind-dot" style="background:#2563eb"></span>Data flow</li><li><span class="kind-dot" style="background:#ea8b00"></span>Dependency</li><li><span class="kind-dot" style="background:#9333ea"></span>Shared master</li><li><span class="kind-dot" style="background:#16a34a"></span>Process trigger</li></ul>
+  <div class="svg-frame"><svg viewBox="0 0 1100 808" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Capability swimlane across modules">
+<defs>
+<marker id="arr-flows_to" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb" /></marker>
+<marker id="arr-depends_on" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ea8b00" /></marker>
+<marker id="arr-shares_master" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9333ea" /></marker>
+<marker id="arr-triggers" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a" /></marker>
+</defs>
+<rect x="60" y="30" width="300" height="42" rx="8" ry="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2" />
+<text x="210.0" y="57.0" text-anchor="middle" font-size="15" font-weight="600" font-family="-apple-system, sans-serif" fill="#1a1f2b">Sales & CRM (14)</text>
+<rect x="430" y="30" width="300" height="42" rx="8" ry="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2" />
+<text x="580.0" y="57.0" text-anchor="middle" font-size="15" font-weight="600" font-family="-apple-system, sans-serif" fill="#1a1f2b">Financial (16)</text>
+<rect x="800" y="30" width="300" height="42" rx="8" ry="8" fill="#fef3c7" stroke="#d97706" stroke-width="2" />
+<text x="950.0" y="57.0" text-anchor="middle" font-size="15" font-weight="600" font-family="-apple-system, sans-serif" fill="#1a1f2b">HR (13)</text>
+<rect x="80.0" y="96" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.quotes_orders</title></rect>
+<text x="92.0" y="116.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Orders &amp; Invoicing</text>
+<rect x="80.0" y="138" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.contacts_accounts</title></rect>
+<text x="92.0" y="158.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Contact, Account &amp; Customer Master</text>
+<rect x="80.0" y="180" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.customer_service</title></rect>
+<text x="92.0" y="200.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Customer Service &amp; Case Management</text>
+<rect x="80.0" y="222" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.contract_management</title></rect>
+<text x="92.0" y="242.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Sales Contract &amp; Agreement Management</text>
+<rect x="80.0" y="264" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.integration_import_export</title></rect>
+<text x="92.0" y="284.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Data Import, Export &amp; Integration</text>
+<rect x="80.0" y="306" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.data_governance</title></rect>
+<text x="92.0" y="326.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Data Security, Privacy &amp; Consent</text>
+<rect x="80.0" y="348" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.commissions</title></rect>
+<text x="92.0" y="368.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Sales Commission &amp; Incentive Compensa…</text>
+<rect x="80.0" y="390" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.activities</title></rect>
+<text x="92.0" y="410.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Customer Interaction Log</text>
+<rect x="80.0" y="432" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.ecommerce_b2c</title></rect>
+<text x="92.0" y="452.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">E-Commerce Storefront (B2C)</text>
+<rect x="80.0" y="474" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.mobile_access</title></rect>
+<text x="92.0" y="494.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Mobile and Multi-Device Access</text>
+<rect x="80.0" y="516" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.opportunities_pipeline</title></rect>
+<text x="92.0" y="536.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Opportunity &amp; Pipeline Management</text>
+<rect x="80.0" y="558" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.pricing_discounts</title></rect>
+<text x="92.0" y="578.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Pricing, Discounts &amp; Promotions</text>
+<rect x="80.0" y="600" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.forecasting</title></rect>
+<text x="92.0" y="620.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Sales Forecasting &amp; Quota Management</text>
+<rect x="80.0" y="642" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.subscription_recurring</title></rect>
+<text x="92.0" y="662.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Subscription &amp; Recurring Revenue Mana…</text>
+<rect x="450.0" y="96" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.general_ledger</title></rect>
+<text x="462.0" y="116.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">General Ledger &amp; Chart of Accounts</text>
+<rect x="450.0" y="138" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.accounts_receivable</title></rect>
+<text x="462.0" y="158.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Accounts Receivable &amp; Customer Invoicing</text>
+<rect x="450.0" y="180" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.fixed_assets</title></rect>
+<text x="462.0" y="200.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Fixed Assets &amp; Depreciation</text>
+<rect x="450.0" y="222" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.tax_management</title></rect>
+<text x="462.0" y="242.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Tax Management &amp; GST Compliance</text>
+<rect x="450.0" y="264" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.payroll_posting</title></rect>
+<text x="462.0" y="284.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Payroll Integration &amp; GL Posting</text>
+<rect x="450.0" y="306" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.accounts_payable</title></rect>
+<text x="462.0" y="326.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Accounts Payable &amp; Vendor Bills</text>
+<rect x="450.0" y="348" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.integration_import_export</title></rect>
+<text x="462.0" y="368.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Data Import, Export &amp; Integration</text>
+<rect x="450.0" y="390" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.data_governance</title></rect>
+<text x="462.0" y="410.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Data Security, Privacy &amp; Consent</text>
+<rect x="450.0" y="432" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.purchase_finance</title></rect>
+<text x="462.0" y="452.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Purchase Orders &amp; Procurement (Financ…</text>
+<rect x="450.0" y="474" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.bank_cash_management</title></rect>
+<text x="462.0" y="494.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Bank &amp; Cash Management</text>
+<rect x="450.0" y="516" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.credit_collections</title></rect>
+<text x="462.0" y="536.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Credit Management &amp; Collections</text>
+<rect x="450.0" y="558" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.financial_reporting</title></rect>
+<text x="462.0" y="578.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Financial Reporting &amp; Statements</text>
+<rect x="450.0" y="600" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.lease_accounting</title></rect>
+<text x="462.0" y="620.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Lease Accounting (IFRS 16)</text>
+<rect x="450.0" y="642" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.period_close</title></rect>
+<text x="462.0" y="662.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Period Close &amp; Accrual Management</text>
+<rect x="450.0" y="684" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.project_accounting</title></rect>
+<text x="462.0" y="704.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Project Accounting &amp; Cost Centres</text>
+<rect x="450.0" y="726" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"><title>fin.user_access_roles</title></rect>
+<text x="462.0" y="746.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">User Accounts, Roles &amp; Access Control</text>
+<rect x="820.0" y="96" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"><title>hr.payroll_processing</title></rect>
+<text x="832.0" y="116.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Payroll Processing &amp; CPF Compliance</text>
+<rect x="820.0" y="138" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"><title>hr.employee_master</title></rect>
+<text x="832.0" y="158.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Employee Master Record &amp; HRIS Core</text>
+<rect x="820.0" y="180" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"><title>hr.time_attendance</title></rect>
+<text x="832.0" y="200.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Time &amp; Attendance</text>
+<rect x="820.0" y="222" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"><title>hr.data_governance</title></rect>
+<text x="832.0" y="242.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Data Security, Privacy &amp; Consent</text>
+<rect x="820.0" y="264" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"><title>hr.user_access_roles</title></rect>
+<text x="832.0" y="284.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">User Accounts, Roles &amp; Access Control</text>
+<rect x="820.0" y="306" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"><title>hr.integration_import_export</title></rect>
+<text x="832.0" y="326.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Data Import, Export &amp; Integration</text>
+<rect x="820.0" y="348" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"><title>hr.leave_management</title></rect>
+<text x="832.0" y="368.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Leave &amp; Time-Off Management</text>
+<rect x="820.0" y="390" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"><title>hr.overtime_variable_pay</title></rect>
+<text x="832.0" y="410.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Overtime &amp; Variable Pay Calculation</text>
+<rect x="820.0" y="432" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"><title>hr.expense_claims</title></rect>
+<text x="832.0" y="452.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Employee Expense &amp; Claims</text>
+<rect x="820.0" y="474" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"><title>hr.mobile_access</title></rect>
+<text x="832.0" y="494.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Mobile and Multi-Device Access</text>
+<rect x="820.0" y="516" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"><title>hr.onboarding_offboarding</title></rect>
+<text x="832.0" y="536.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Onboarding &amp; Offboarding Workflows</text>
+<rect x="820.0" y="558" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"><title>hr.statutory_reporting</title></rect>
+<text x="832.0" y="578.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Statutory HR Reporting (CPF, IRAS, MOM)</text>
+<rect x="820.0" y="600" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"><title>hr.payslips</title></rect>
+<text x="832.0" y="620.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Payslip Generation &amp; Distribution</text>
+<path d="M 450.0 238.0 C 380.5 238.0, 409.5 112.0, 340.0 112.0" fill="none" stroke="#ea8b00" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-depends_on)"><title>depends_on (hard, required): The CRM&#x27;s pricing and invoicing engine depends on the finance system&#x27;s tax configuration. Tax codes, rates, and exemption rules must be defined in the finance system and referenced by the CRM when calculating invoice totals.</title></path>
+<path d="M 820.0 154.0 C 750.5 154.0, 779.5 280.0, 710.0 280.0" fill="none" stroke="#9333ea" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-shares_master)"><title>shares_master (hard, required): The employee master record (name, ID, salary band, cost centre) is the single source of truth for both HR and Finance; changes to an employee&#x27;s cost centre or salary must be visible to Finance so that payroll GL postings go to the correct department and account.</title></path>
+<path d="M 820.0 112.0 C 750.5 112.0, 779.5 490.0, 710.0 490.0" fill="none" stroke="#2563eb" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-flows_to)"><title>flows_to (hard, required): The payroll run generates a salary disbursement file (bank transfer list) that flows to Finance&#x27;s bank module to record the outgoing cash payment and reconcile against the bank statement.</title></path>
+<path d="M 820.0 112.0 C 750.5 112.0, 779.5 112.0, 710.0 112.0" fill="none" stroke="#16a34a" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-triggers)"><title>triggers (hard, required): The completion of a payroll run triggers the automatic posting of salary, CPF, and tax entries to the GL; without this trigger, the GL will be out of balance and month-end close will be delayed.</title></path>
+<path d="M 820.0 112.0 C 750.5 112.0, 779.5 280.0, 710.0 280.0" fill="none" stroke="#2563eb" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-flows_to)"><title>flows_to (hard, required): The HR payroll run calculates gross-to-net pay and statutory deductions; these figures flow to Finance as journal entries (salary expense, CPF liability, tax withholding) that post to the general ledger. Without this flow, the P&amp;L and balance sheet will be incomplete and unreconciled.</title></path>
+<path d="M 820.0 112.0 C 750.5 112.0, 779.5 238.0, 710.0 238.0" fill="none" stroke="#2563eb" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-flows_to)"><title>flows_to (hard, required): Payroll calculates employee income tax withholding and CPF contributions, which must flow to Finance&#x27;s tax module to ensure the correct tax liability is accrued and the monthly IRAS submission is accurate.</title></path>
+<path d="M 820.0 574.0 C 750.5 574.0, 779.5 238.0, 710.0 238.0" fill="none" stroke="#2563eb" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-flows_to)"><title>flows_to (hard, required): HR&#x27;s statutory reporting module generates CPF and IRAS submissions; Finance&#x27;s tax module must receive the same figures to ensure the GL tax liability matches what was actually submitted to the authorities.</title></path>
+<path d="M 820.0 238.0 C 584.0 238.0, 576.0 322.0, 340.0 322.0" fill="none" stroke="#ea8b00" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-depends_on)"><title>depends_on (hard, required): Both HR and CRM hold sensitive personal data (employee records, customer contact details, communication history). Data governance policies (consent, retention, access control, audit trails) must be consistent across both systems to meet PDPA compliance and protect the SME from data breaches.</title></path>
+<path d="M 820.0 112.0 C 584.0 112.0, 576.0 364.0, 340.0 364.0" fill="none" stroke="#2563eb" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-flows_to)"><title>flows_to (hard, required): Sales commissions calculated in the CRM (based on deals closed, revenue, or quota attainment) must flow into payroll so they are included in the employee&#x27;s gross pay, CPF contributions, and payslip. This is a critical month-end integration.</title></path>
+<path d="M 340.0 154.0 C 409.5 154.0, 380.5 154.0, 450.0 154.0" fill="none" stroke="#9333ea" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-shares_master)"><title>shares_master (hard, required): The customer master record (name, address, tax ID, credit limit, payment terms) is shared between the CRM and AR. Changes to customer details in one system must sync to the other to avoid duplicate or conflicting records.</title></path>
+<path d="M 340.0 154.0 C 409.5 154.0, 380.5 532.0, 450.0 532.0" fill="none" stroke="#9333ea" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-shares_master)"><title>shares_master (hard, required): Customer credit limits, credit status, and collection notes are shared between the CRM and the credit/collections module. A customer flagged as high-risk in collections should be visible to sales reps to prevent over-extension.</title></path>
+<path d="M 340.0 154.0 C 409.5 154.0, 380.5 406.0, 450.0 406.0" fill="none" stroke="#ea8b00" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-depends_on)"><title>depends_on (hard, required): Customer data in the CRM is subject to PDPA and data protection rules. The finance system&#x27;s data governance policies (consent, retention, encryption) must be aligned with the CRM to ensure customer data is handled consistently across both systems.</title></path>
+<path d="M 340.0 112.0 C 409.5 112.0, 380.5 154.0, 450.0 154.0" fill="none" stroke="#2563eb" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-flows_to)"><title>flows_to (hard, required): When a sales order is confirmed and invoiced in the CRM, the invoice data flows to AR to create a customer invoice record, establish the outstanding balance, and trigger payment tracking. This is the primary revenue entry point into the finance system.</title></path>
+<path d="M 340.0 112.0 C 409.5 112.0, 380.5 112.0, 450.0 112.0" fill="none" stroke="#2563eb" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-flows_to)"><title>flows_to (hard, required): When an invoice is issued, the revenue and any tax are posted to the GL via the AR module. This ensures every sale is recorded in the double-entry ledger and flows into the profit and loss statement.</title></path>
+<path d="M 340.0 112.0 C 409.5 112.0, 380.5 238.0, 450.0 238.0" fill="none" stroke="#2563eb" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-flows_to)"><title>flows_to (hard, required): Sales invoices trigger tax calculation in the finance system. The CRM must pass the invoice line items, quantities, and tax codes to the tax engine so GST is calculated correctly and reported in the GST return.</title></path>
+<path d="M 340.0 364.0 C 576.0 364.0, 584.0 112.0, 820.0 112.0" fill="none" stroke="#ea8b00" stroke-width="1.8" opacity="0.72" marker-end="url(#arr-depends_on)"><title>depends_on (hard, required): Commission calculations depend on the employee master (to identify the sales rep, their employment status, and pay frequency) and payroll rules (tax treatment, CPF thresholds). Without accurate employee records, commissions cannot be calculated correctly.</title></path>
+</svg></div>
+
+  <p class="section-lede">
+    <a href="integrations.html" style="color:var(--accent);font-weight:500;text-decoration:none">
+    Open the full Integrations viewer →</a> to pick module combinations
+    and see the detailed integration checklist with vendor-facing questions.
+  </p>
+
+</main>
+
+<footer>
+  <p>
+    Generated by <code>scripts/build_index_viewer.py</code>. To add another module, canonicalise it
+    (<code>python3 -m pipeline.canonicalise &lt;slug&gt;</code>), build its viewer
+    (<code>python3 scripts/build_canonical_viewer.py &lt;slug&gt;</code>), then rerun this index.
+    Source on <a href="https://github.com/">GitHub</a> (local).
+  </p>
+</footer>
+
+</body>
+</html>
