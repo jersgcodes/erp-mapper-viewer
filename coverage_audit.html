@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Coverage Audit — PSG → ERP pipeline QA</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         color: #1f2937; background: #f9fafb; display: flex; flex-direction: column; min-height: 100vh; }
+  h1 { margin: 0 0 4px 0; font-size: 22px; }
+  .page { flex: 1; padding: 20px 28px 60px; max-width: 1400px; margin: 0 auto; width: 100%; }
+  .subtitle { color: #6b7280; font-size: 13px; margin-bottom: 20px; }
+  .stats { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+  .stat { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px 14px; min-width: 110px; }
+  .stat strong { font-size: 20px; display: block; color: #111827; }
+  .stat span { font-size: 12px; color: #6b7280; }
+  .stat.clean strong { color: #059669; }
+  .stat.leak strong { color: #ca8a04; }
+  .stat.low strong { color: #dc2626; }
+  .controls { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; margin-bottom: 14px;
+              position: sticky; top: 52px; z-index: 50; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .controls label { font-size: 12px; color: #4b5563; margin-right: 2px; }
+  select, input[type=search] { padding: 5px 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 13px; font-family: inherit; }
+  input[type=search] { min-width: 240px; }
+  .pill { padding: 3px 10px; border-radius: 999px; border: 1px solid #d1d5db; background: white; font-size: 12px; cursor: pointer; user-select: none; }
+  .pill.active { background: #111827; color: white; border-color: #111827; }
+  table { width: 100%; border-collapse: collapse; background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; font-size: 13px; }
+  th, td { padding: 8px 10px; border-bottom: 1px solid #f1f5f9; text-align: left; vertical-align: top; }
+  th { background: #f8fafc; font-weight: 600; font-size: 11px; color: #475569; text-transform: uppercase; letter-spacing: 0.04em; cursor: pointer; user-select: none; white-space: nowrap; }
+  th:hover { background: #f1f5f9; }
+  tbody tr:hover { background: #fafafa; }
+  .cov-bar { display: inline-block; width: 80px; height: 10px; background: #f3f4f6; border-radius: 3px; vertical-align: middle; overflow: hidden; margin-right: 6px; }
+  .cov-fill { height: 100%; background: linear-gradient(to right, #dc2626, #f59e0b, #10b981); }
+  .status { padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; letter-spacing: 0.03em; }
+  .status.CLEAN { background: #d1fae5; color: #065f46; }
+  .status.LEAK { background: #fef3c7; color: #92400e; }
+  .status.LOW { background: #fee2e2; color: #991b1b; }
+  .status\+LEAK, .status.LOW\+LEAK { background: #fecaca; color: #7f1d1d; }
+  .status.ORPHAN { background: #e5e7eb; color: #374151; }
+  .mod-tag { display: inline-block; font-size: 10px; padding: 1px 7px; margin: 0 2px 2px 0; border-radius: 999px; border: 1px solid; font-weight: 500; }
+  .slug { font-family: "SF Mono", Menlo, monospace; font-size: 11px; color: #374151; word-break: break-word; }
+  .leak-ind { font-size: 10px; color: #ca8a04; font-weight: 600; }
+  .dim { color: #9ca3af; font-size: 11px; }
+</style>
+</head>
+<body>
+<style>
+  .top-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e5ea;
+    padding: 0 24px;
+    flex-shrink: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .top-bar-inner {
+    display: flex;
+    align-items: stretch;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 2px;
+  }
+  .top-bar-brand {
+    font-size: 12px;
+    color: #6b7380;
+    padding: 14px 18px 14px 0;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-right: 1px solid #e2e5ea;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .top-bar-link:hover {
+    color: #2563eb;
+    background: #f5f6f8;
+  }
+  .top-bar-link.active {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+</style>
+<nav class="top-bar">
+  <div class="top-bar-inner">
+    <span class="top-bar-brand">PSG ERP Spec</span>
+    <a class="top-bar-link active" href="index.html">Overview</a>
+    <a class="top-bar-link" href="canonical_sales_and_crm.html">Sales & CRM</a>
+    <a class="top-bar-link" href="canonical_financial_management.html">Financial</a>
+    <a class="top-bar-link" href="canonical_human_resources_management.html">HR</a>
+    <a class="top-bar-link" href="canonical_supply_chain_and_inventory.html">Supply Chain</a>
+    <a class="top-bar-link" href="canonical_manufacturing_management.html">Manufacturing</a>
+    <a class="top-bar-link" href="canonical_project_management.html">Project Mgmt</a>
+    <a class="top-bar-link" href="canonical_asset_management.html">Asset Mgmt</a>
+    <a class="top-bar-link" href="canonical_field_service_management.html">Field Service</a>
+    <a class="top-bar-link" href="canonical_fleet_management.html">Fleet</a>
+    <a class="top-bar-link" href="canonical_others.html">Other</a>
+    <a class="top-bar-link" href="integrations.html">Integrations</a>
+  </div>
+</nav>
+
+<div class="page">
+  <h1>Coverage Audit</h1>
+  <div class="subtitle">For each IMDA sol cat: did its requirements land in the expected canonical ERP module(s)? Coverage excludes compliance/boilerplate (goes to compliance_baseline) and reqs tagged as pure "others" by Haiku (form filler, UI labels).</div>
+
+  <div class="stats">
+    <div class="stat"><strong>89</strong><span>sol cats</span></div>
+    <div class="stat"><strong>68.4%</strong><span>avg coverage</span></div>
+    <div class="stat clean"><strong>32</strong><span>clean</span></div>
+    <div class="stat leak"><strong>28</strong><span>leakage only</span></div>
+    <div class="stat low"><strong>29</strong><span>low coverage</span></div>
+    <div class="stat"><strong>0</strong><span>orphan</span></div>
+  </div>
+
+  <div class="controls">
+    <label>Status:</label>
+    <button class="pill active" data-status="ALL">All</button>
+    <button class="pill" data-status="CLEAN">CLEAN</button>
+    <button class="pill" data-status="LEAK">LEAK</button>
+    <button class="pill" data-status="LOW">LOW</button>
+    <button class="pill" data-status="LOW+LEAK">LOW+LEAK</button>
+    <button class="pill" data-status="ORPHAN">ORPHAN</button>
+
+    <label style="margin-left:12px">Seeded module:</label>
+    <select id="mod-filter"><option value="">Any</option></select>
+
+    <input type="search" id="search" placeholder="Search solcat slug...">
+  </div>
+
+  <table id="tbl">
+    <thead>
+      <tr>
+        <th data-sort="solcat">Sol cat</th>
+        <th data-sort="seeded">Seeded modules</th>
+        <th data-sort="raw">Raw</th>
+        <th data-sort="functional">Func</th>
+        <th data-sort="others">Others</th>
+        <th data-sort="countable">Count</th>
+        <th data-sort="landed">Landed</th>
+        <th data-sort="coverage">Coverage</th>
+        <th data-sort="by_module">Per module</th>
+        <th data-sort="leakage">Leakage</th>
+        <th data-sort="status">Status</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<script>
+const ROWS = [{"solcat": "advanced-manufacturing__real-time-production-scheduling-and-job-tracking", "seeded_modules": ["manufacturing_management", "project_management"], "raw_reqs": 24, "deduped_reqs_total": 12, "deduped_reqs_functional": 7, "tagged_others_only": 1, "countable": 6, "actually_in_canon": 5, "coverage_pct": 83.3, "by_module": {"manufacturing_management": 4, "project_management": 1}, "leakage": {"field_service_management": 3}, "status": "LEAK"}, {"solcat": "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection", "seeded_modules": ["manufacturing_management", "asset_management"], "raw_reqs": 27, "deduped_reqs_total": 15, "deduped_reqs_functional": 10, "tagged_others_only": 1, "countable": 9, "actually_in_canon": 9, "coverage_pct": 100.0, "by_module": {"manufacturing_management": 5, "asset_management": 6}, "leakage": {"field_service_management": 1}, "status": "LEAK"}, {"solcat": "advanced-manufacturing__manufacturing-quality-management", "seeded_modules": ["manufacturing_management"], "raw_reqs": 24, "deduped_reqs_total": 12, "deduped_reqs_functional": 7, "tagged_others_only": 0, "countable": 7, "actually_in_canon": 5, "coverage_pct": 71.4, "by_module": {"manufacturing_management": 5}, "leakage": {"asset_management": 2}, "status": "LEAK"}, {"solcat": "advanced-manufacturing__product-and-manufacturing-process-configuration", "seeded_modules": ["manufacturing_management"], "raw_reqs": 23, "deduped_reqs_total": 11, "deduped_reqs_functional": 6, "tagged_others_only": 2, "countable": 4, "actually_in_canon": 3, "coverage_pct": 75.0, "by_module": {"manufacturing_management": 3}, "leakage": {"field_service_management": 1}, "status": "LEAK"}, {"solcat": "advanced-manufacturing__machining-dynamics-for-milling-turning", "seeded_modules": ["manufacturing_management"], "raw_reqs": 17, "deduped_reqs_total": 5, "deduped_reqs_functional": 3, "tagged_others_only": 0, "countable": 3, "actually_in_canon": 0, "coverage_pct": 0.0, "by_module": {"manufacturing_management": 0}, "leakage": {}, "status": "LOW"}, {"solcat": "advanced-manufacturing__computer-aided-design-and-computer-aided-manufacturing-cad-cam", "seeded_modules": ["manufacturing_management"], "raw_reqs": 22, "deduped_reqs_total": 10, "deduped_reqs_functional": 5, "tagged_others_only": 5, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"manufacturing_management": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "built-environment__3d-modeling-immersive-visualisation-and-analysis", "seeded_modules": ["others"], "raw_reqs": 29, "deduped_reqs_total": 17, "deduped_reqs_functional": 15, "tagged_others_only": 15, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "built-environment__digital-contract-management-digital-payment", "seeded_modules": ["financial_management", "project_management"], "raw_reqs": 37, "deduped_reqs_total": 23, "deduped_reqs_functional": 18, "tagged_others_only": 3, "countable": 15, "actually_in_canon": 9, "coverage_pct": 60.0, "by_module": {"financial_management": 7, "project_management": 2}, "leakage": {"supply_chain_and_inventory": 4}, "status": "LEAK"}, {"solcat": "built-environment__quantity-surveying-and-valuation", "seeded_modules": ["financial_management", "project_management"], "raw_reqs": 16, "deduped_reqs_total": 5, "deduped_reqs_functional": 3, "tagged_others_only": 1, "countable": 2, "actually_in_canon": 1, "coverage_pct": 50.0, "by_module": {"financial_management": 1, "project_management": 1}, "leakage": {}, "status": "LOW"}, {"solcat": "built-environment__smart-inspection-and-management", "seeded_modules": ["field_service_management", "project_management"], "raw_reqs": 31, "deduped_reqs_total": 17, "deduped_reqs_functional": 12, "tagged_others_only": 10, "countable": 2, "actually_in_canon": 1, "coverage_pct": 50.0, "by_module": {"field_service_management": 1, "project_management": 0}, "leakage": {"human_resources_management": 1}, "status": "LOW+LEAK"}, {"solcat": "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw", "seeded_modules": ["field_service_management", "project_management"], "raw_reqs": 20, "deduped_reqs_total": 9, "deduped_reqs_functional": 4, "tagged_others_only": 4, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"field_service_management": 0, "project_management": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "built-environment__coordinated-regulatory-approvals-and-rule-based-model-checker", "seeded_modules": ["project_management", "others"], "raw_reqs": 20, "deduped_reqs_total": 4, "deduped_reqs_functional": 4, "tagged_others_only": 4, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"project_management": 0, "others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "built-environment__data-and-ai-driven-decision-support-system", "seeded_modules": ["project_management", "others"], "raw_reqs": 33, "deduped_reqs_total": 11, "deduped_reqs_functional": 8, "tagged_others_only": 8, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"project_management": 0, "others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "built-environment__built-environment-digital-platform", "seeded_modules": ["project_management", "others"], "raw_reqs": 62, "deduped_reqs_total": 41, "deduped_reqs_functional": 37, "tagged_others_only": 9, "countable": 28, "actually_in_canon": 23, "coverage_pct": 82.1, "by_module": {"project_management": 23, "others": 0}, "leakage": {"field_service_management": 2, "financial_management": 1, "human_resources_management": 1, "supply_chain_and_inventory": 1}, "status": "LEAK"}, {"solcat": "cybersecurity__secure-protect-virus-malware-protection", "seeded_modules": ["others"], "raw_reqs": 24, "deduped_reqs_total": 11, "deduped_reqs_functional": 11, "tagged_others_only": 11, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "cybersecurity__secure-protect-firewall", "seeded_modules": ["others"], "raw_reqs": 22, "deduped_reqs_total": 9, "deduped_reqs_functional": 9, "tagged_others_only": 9, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "cybersecurity__backup", "seeded_modules": ["others"], "raw_reqs": 23, "deduped_reqs_total": 10, "deduped_reqs_functional": 10, "tagged_others_only": 10, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "cybersecurity__integrated-anti-malware-firewall-and-backup", "seeded_modules": ["others"], "raw_reqs": 39, "deduped_reqs_total": 26, "deduped_reqs_functional": 26, "tagged_others_only": 23, "countable": 3, "actually_in_canon": 0, "coverage_pct": 0.0, "by_module": {"others": 0}, "leakage": {"asset_management": 3}, "status": "LOW+LEAK"}, {"solcat": "early-childhood__pre-school-management-system", "seeded_modules": ["sales_and_crm", "human_resources_management", "financial_management"], "raw_reqs": 79, "deduped_reqs_total": 62, "deduped_reqs_functional": 59, "tagged_others_only": 35, "countable": 24, "actually_in_canon": 9, "coverage_pct": 37.5, "by_module": {"sales_and_crm": 2, "human_resources_management": 4, "financial_management": 3}, "leakage": {"asset_management": 1}, "status": "LOW+LEAK"}, {"solcat": "early-childhood__e-forms-for-pre-school", "seeded_modules": ["others"], "raw_reqs": 44, "deduped_reqs_total": 24, "deduped_reqs_functional": 22, "tagged_others_only": 21, "countable": 1, "actually_in_canon": 0, "coverage_pct": 0.0, "by_module": {"others": 0}, "leakage": {}, "status": "LOW"}, {"solcat": "early-childhood__pre-school-management-system-+-e-forms-for-pre-school", "seeded_modules": ["sales_and_crm", "human_resources_management", "financial_management", "others"], "raw_reqs": 96, "deduped_reqs_total": 79, "deduped_reqs_functional": 76, "tagged_others_only": 51, "countable": 25, "actually_in_canon": 9, "coverage_pct": 36.0, "by_module": {"sales_and_crm": 2, "human_resources_management": 4, "financial_management": 3, "others": 0}, "leakage": {"asset_management": 1}, "status": "LOW+LEAK"}, {"solcat": "early-childhood__data-mining-and-analytics-centre-operations", "seeded_modules": ["project_management", "others", "human_resources_management"], "raw_reqs": 40, "deduped_reqs_total": 26, "deduped_reqs_functional": 26, "tagged_others_only": 20, "countable": 6, "actually_in_canon": 3, "coverage_pct": 50.0, "by_module": {"project_management": 0, "others": 0, "human_resources_management": 3}, "leakage": {}, "status": "LOW"}, {"solcat": "early-childhood__data-mining-and-analytics-child-development", "seeded_modules": ["others"], "raw_reqs": 39, "deduped_reqs_total": 22, "deduped_reqs_functional": 22, "tagged_others_only": 22, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "early-childhood__data-mining-and-analytics-centre-operations-and-child-development", "seeded_modules": ["project_management", "others", "human_resources_management"], "raw_reqs": 57, "deduped_reqs_total": 41, "deduped_reqs_functional": 41, "tagged_others_only": 35, "countable": 6, "actually_in_canon": 3, "coverage_pct": 50.0, "by_module": {"project_management": 0, "others": 0, "human_resources_management": 3}, "leakage": {}, "status": "LOW"}, {"solcat": "early-childhood__talent-attraction-platform", "seeded_modules": ["human_resources_management"], "raw_reqs": 41, "deduped_reqs_total": 24, "deduped_reqs_functional": 24, "tagged_others_only": 7, "countable": 17, "actually_in_canon": 16, "coverage_pct": 94.1, "by_module": {"human_resources_management": 16}, "leakage": {}, "status": "CLEAN"}, {"solcat": "early-childhood__learning-platform-for-cpd-and-mentoring", "seeded_modules": ["human_resources_management"], "raw_reqs": 48, "deduped_reqs_total": 32, "deduped_reqs_functional": 32, "tagged_others_only": 22, "countable": 10, "actually_in_canon": 9, "coverage_pct": 90.0, "by_module": {"human_resources_management": 9}, "leakage": {}, "status": "CLEAN"}, {"solcat": "early-childhood__video-analytics-for-safety-and-security", "seeded_modules": ["others"], "raw_reqs": 40, "deduped_reqs_total": 24, "deduped_reqs_functional": 22, "tagged_others_only": 22, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "early-childhood__vacancy-and-waitlist-management", "seeded_modules": ["sales_and_crm"], "raw_reqs": 31, "deduped_reqs_total": 18, "deduped_reqs_functional": 16, "tagged_others_only": 13, "countable": 3, "actually_in_canon": 2, "coverage_pct": 66.7, "by_module": {"sales_and_crm": 2}, "leakage": {"human_resources_management": 1}, "status": "LEAK"}, {"solcat": "essential-business__human-resource-management-system-hrms", "seeded_modules": ["human_resources_management"], "raw_reqs": 33, "deduped_reqs_total": 20, "deduped_reqs_functional": 17, "tagged_others_only": 2, "countable": 15, "actually_in_canon": 10, "coverage_pct": 66.7, "by_module": {"human_resources_management": 10}, "leakage": {"financial_management": 2}, "status": "LEAK"}, {"solcat": "essential-business__human-resource-e-scheduling-system", "seeded_modules": ["human_resources_management"], "raw_reqs": 27, "deduped_reqs_total": 15, "deduped_reqs_functional": 15, "tagged_others_only": 4, "countable": 11, "actually_in_canon": 10, "coverage_pct": 90.9, "by_module": {"human_resources_management": 10}, "leakage": {"project_management": 1}, "status": "LEAK"}, {"solcat": "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin", "seeded_modules": ["human_resources_management"], "raw_reqs": 22, "deduped_reqs_total": 6, "deduped_reqs_functional": 6, "tagged_others_only": 1, "countable": 5, "actually_in_canon": 2, "coverage_pct": 40.0, "by_module": {"human_resources_management": 2}, "leakage": {"financial_management": 2}, "status": "LOW+LEAK"}, {"solcat": "essential-business__employee-rewards-and-recognition", "seeded_modules": ["human_resources_management"], "raw_reqs": 27, "deduped_reqs_total": 11, "deduped_reqs_functional": 10, "tagged_others_only": 4, "countable": 6, "actually_in_canon": 0, "coverage_pct": 0.0, "by_module": {"human_resources_management": 0}, "leakage": {}, "status": "LOW"}, {"solcat": "essential-business__applicant-tracking-and-sourcing-system", "seeded_modules": ["human_resources_management"], "raw_reqs": 30, "deduped_reqs_total": 17, "deduped_reqs_functional": 17, "tagged_others_only": 2, "countable": 15, "actually_in_canon": 15, "coverage_pct": 100.0, "by_module": {"human_resources_management": 15}, "leakage": {}, "status": "CLEAN"}, {"solcat": "essential-business__customer-relationship-management-crm", "seeded_modules": ["sales_and_crm"], "raw_reqs": 50, "deduped_reqs_total": 33, "deduped_reqs_functional": 33, "tagged_others_only": 5, "countable": 28, "actually_in_canon": 18, "coverage_pct": 64.3, "by_module": {"sales_and_crm": 18}, "leakage": {"field_service_management": 1, "financial_management": 1}, "status": "LEAK"}, {"solcat": "essential-business__e-loyalty-and-marketing-automation", "seeded_modules": ["sales_and_crm"], "raw_reqs": 61, "deduped_reqs_total": 45, "deduped_reqs_functional": 45, "tagged_others_only": 8, "countable": 37, "actually_in_canon": 34, "coverage_pct": 91.9, "by_module": {"sales_and_crm": 34}, "leakage": {"financial_management": 2}, "status": "LEAK"}, {"solcat": "essential-business__e-commerce-online-shop-b2c", "seeded_modules": ["sales_and_crm"], "raw_reqs": 70, "deduped_reqs_total": 54, "deduped_reqs_functional": 54, "tagged_others_only": 4, "countable": 50, "actually_in_canon": 24, "coverage_pct": 48.0, "by_module": {"sales_and_crm": 24}, "leakage": {"financial_management": 6, "supply_chain_and_inventory": 16}, "status": "LOW+LEAK"}, {"solcat": "essential-business__inventory-management-and-sales-management-system", "seeded_modules": ["sales_and_crm", "supply_chain_and_inventory"], "raw_reqs": 66, "deduped_reqs_total": 56, "deduped_reqs_functional": 49, "tagged_others_only": 0, "countable": 49, "actually_in_canon": 39, "coverage_pct": 79.6, "by_module": {"sales_and_crm": 9, "supply_chain_and_inventory": 31}, "leakage": {"asset_management": 1, "financial_management": 5}, "status": "LEAK"}, {"solcat": "essential-business__accounting-management-+-sales-management-system", "seeded_modules": ["financial_management", "sales_and_crm"], "raw_reqs": 64, "deduped_reqs_total": 46, "deduped_reqs_functional": 44, "tagged_others_only": 1, "countable": 43, "actually_in_canon": 29, "coverage_pct": 67.4, "by_module": {"financial_management": 20, "sales_and_crm": 11}, "leakage": {"asset_management": 1, "supply_chain_and_inventory": 8}, "status": "LEAK"}, {"solcat": "essential-business__accounting-management-+-inventory-management-+-sales-management-system", "seeded_modules": ["financial_management", "sales_and_crm", "supply_chain_and_inventory"], "raw_reqs": 91, "deduped_reqs_total": 69, "deduped_reqs_functional": 67, "tagged_others_only": 1, "countable": 66, "actually_in_canon": 59, "coverage_pct": 89.4, "by_module": {"financial_management": 20, "sales_and_crm": 10, "supply_chain_and_inventory": 31}, "leakage": {"asset_management": 1}, "status": "LEAK"}, {"solcat": "essential-business__fleet-management-system", "seeded_modules": ["fleet_management"], "raw_reqs": 26, "deduped_reqs_total": 8, "deduped_reqs_functional": 5, "tagged_others_only": 0, "countable": 5, "actually_in_canon": 5, "coverage_pct": 100.0, "by_module": {"fleet_management": 5}, "leakage": {}, "status": "CLEAN"}, {"solcat": "essential-business__fleet-safety-management-system", "seeded_modules": ["fleet_management"], "raw_reqs": 27, "deduped_reqs_total": 9, "deduped_reqs_functional": 6, "tagged_others_only": 0, "countable": 6, "actually_in_canon": 5, "coverage_pct": 83.3, "by_module": {"fleet_management": 5}, "leakage": {}, "status": "CLEAN"}, {"solcat": "essential-business__digital-marketing-packages", "seeded_modules": ["sales_and_crm"], "raw_reqs": 46, "deduped_reqs_total": 33, "deduped_reqs_functional": 32, "tagged_others_only": 22, "countable": 10, "actually_in_canon": 2, "coverage_pct": 20.0, "by_module": {"sales_and_crm": 2}, "leakage": {"field_service_management": 1, "project_management": 2}, "status": "LOW+LEAK"}, {"solcat": "essential-business__document-management-and-mobile-access-system", "seeded_modules": ["others"], "raw_reqs": 36, "deduped_reqs_total": 17, "deduped_reqs_functional": 15, "tagged_others_only": 15, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "essential-business__multichannel-e-commerce-software-mes", "seeded_modules": ["sales_and_crm", "supply_chain_and_inventory"], "raw_reqs": 32, "deduped_reqs_total": 14, "deduped_reqs_functional": 12, "tagged_others_only": 2, "countable": 10, "actually_in_canon": 8, "coverage_pct": 80.0, "by_module": {"sales_and_crm": 5, "supply_chain_and_inventory": 6}, "leakage": {"financial_management": 1}, "status": "LEAK"}, {"solcat": "essential-business__chatbots-for-customer-engagement", "seeded_modules": ["sales_and_crm"], "raw_reqs": 58, "deduped_reqs_total": 45, "deduped_reqs_functional": 41, "tagged_others_only": 20, "countable": 21, "actually_in_canon": 12, "coverage_pct": 57.1, "by_module": {"sales_and_crm": 12}, "leakage": {"supply_chain_and_inventory": 1}, "status": "LOW+LEAK"}, {"solcat": "essential-business__marketing-and-sales-content-generation", "seeded_modules": ["sales_and_crm"], "raw_reqs": 47, "deduped_reqs_total": 35, "deduped_reqs_functional": 32, "tagged_others_only": 21, "countable": 11, "actually_in_canon": 9, "coverage_pct": 81.8, "by_module": {"sales_and_crm": 9}, "leakage": {}, "status": "CLEAN"}, {"solcat": "essential-business__carbon-management-solution", "seeded_modules": ["others"], "raw_reqs": 76, "deduped_reqs_total": 70, "deduped_reqs_functional": 64, "tagged_others_only": 53, "countable": 11, "actually_in_canon": 0, "coverage_pct": 0.0, "by_module": {"others": 0}, "leakage": {"asset_management": 2, "financial_management": 1, "supply_chain_and_inventory": 1}, "status": "LOW+LEAK"}, {"solcat": "essential-business__field-service-management", "seeded_modules": ["field_service_management"], "raw_reqs": 26, "deduped_reqs_total": 16, "deduped_reqs_functional": 13, "tagged_others_only": 3, "countable": 10, "actually_in_canon": 6, "coverage_pct": 60.0, "by_module": {"field_service_management": 6}, "leakage": {"asset_management": 2, "human_resources_management": 1, "project_management": 1, "supply_chain_and_inventory": 1}, "status": "LEAK"}, {"solcat": "essential-business__ai-accounting-automation", "seeded_modules": ["financial_management"], "raw_reqs": 23, "deduped_reqs_total": 15, "deduped_reqs_functional": 12, "tagged_others_only": 4, "countable": 8, "actually_in_canon": 7, "coverage_pct": 87.5, "by_module": {"financial_management": 7}, "leakage": {}, "status": "CLEAN"}, {"solcat": "essential-business__automated-order-management", "seeded_modules": ["sales_and_crm", "supply_chain_and_inventory"], "raw_reqs": 23, "deduped_reqs_total": 11, "deduped_reqs_functional": 11, "tagged_others_only": 4, "countable": 7, "actually_in_canon": 4, "coverage_pct": 57.1, "by_module": {"sales_and_crm": 4, "supply_chain_and_inventory": 2}, "leakage": {}, "status": "LOW"}, {"solcat": "essential-business__cross-border-e-commerce-packages", "seeded_modules": ["sales_and_crm", "supply_chain_and_inventory"], "raw_reqs": 44, "deduped_reqs_total": 32, "deduped_reqs_functional": 27, "tagged_others_only": 20, "countable": 7, "actually_in_canon": 2, "coverage_pct": 28.6, "by_module": {"sales_and_crm": 1, "supply_chain_and_inventory": 1}, "leakage": {"project_management": 1}, "status": "LOW+LEAK"}, {"solcat": "essential-business__gen-ai-digital-training-system", "seeded_modules": ["human_resources_management", "others"], "raw_reqs": 26, "deduped_reqs_total": 13, "deduped_reqs_functional": 8, "tagged_others_only": 8, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"human_resources_management": 0, "others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "estate-agency__document-management-and-transaction-records-submission-for-estate-agents", "seeded_modules": ["sales_and_crm", "others"], "raw_reqs": 36, "deduped_reqs_total": 18, "deduped_reqs_functional": 15, "tagged_others_only": 12, "countable": 3, "actually_in_canon": 2, "coverage_pct": 66.7, "by_module": {"sales_and_crm": 2, "others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "food-services__connected-business-suite", "seeded_modules": ["sales_and_crm", "supply_chain_and_inventory", "financial_management", "human_resources_management"], "raw_reqs": 40, "deduped_reqs_total": 22, "deduped_reqs_functional": 20, "tagged_others_only": 12, "countable": 8, "actually_in_canon": 3, "coverage_pct": 37.5, "by_module": {"sales_and_crm": 3, "supply_chain_and_inventory": 1, "financial_management": 0, "human_resources_management": 0}, "leakage": {}, "status": "LOW"}, {"solcat": "legal__practice-management-system-pms", "seeded_modules": ["project_management", "financial_management"], "raw_reqs": 26, "deduped_reqs_total": 14, "deduped_reqs_functional": 10, "tagged_others_only": 2, "countable": 8, "actually_in_canon": 4, "coverage_pct": 50.0, "by_module": {"project_management": 4, "financial_management": 2}, "leakage": {"asset_management": 1, "field_service_management": 1, "fleet_management": 1, "human_resources_management": 1, "manufacturing_management": 2, "sales_and_crm": 1, "supply_chain_and_inventory": 2}, "status": "LOW+LEAK"}, {"solcat": "legal__document-management-system-dms", "seeded_modules": ["others"], "raw_reqs": 31, "deduped_reqs_total": 19, "deduped_reqs_functional": 15, "tagged_others_only": 15, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "legal__matters-management-and-collaboration-tool", "seeded_modules": ["project_management"], "raw_reqs": 31, "deduped_reqs_total": 19, "deduped_reqs_functional": 15, "tagged_others_only": 11, "countable": 4, "actually_in_canon": 4, "coverage_pct": 100.0, "by_module": {"project_management": 4}, "leakage": {"financial_management": 1}, "status": "LEAK"}, {"solcat": "legal__online-legal-research-system", "seeded_modules": ["others"], "raw_reqs": 43, "deduped_reqs_total": 19, "deduped_reqs_functional": 13, "tagged_others_only": 13, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "legal__document-assembly-software", "seeded_modules": ["others"], "raw_reqs": 46, "deduped_reqs_total": 22, "deduped_reqs_functional": 16, "tagged_others_only": 15, "countable": 1, "actually_in_canon": 0, "coverage_pct": 0.0, "by_module": {"others": 0}, "leakage": {}, "status": "LOW"}, {"solcat": "legal__document-review-software", "seeded_modules": ["others"], "raw_reqs": 45, "deduped_reqs_total": 21, "deduped_reqs_functional": 15, "tagged_others_only": 15, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "legal__ediscovery-tool", "seeded_modules": ["others"], "raw_reqs": 37, "deduped_reqs_total": 23, "deduped_reqs_functional": 19, "tagged_others_only": 19, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "legal__legal-chatbot", "seeded_modules": ["sales_and_crm", "others"], "raw_reqs": 32, "deduped_reqs_total": 17, "deduped_reqs_functional": 12, "tagged_others_only": 11, "countable": 1, "actually_in_canon": 1, "coverage_pct": 100.0, "by_module": {"sales_and_crm": 1, "others": 0}, "leakage": {"field_service_management": 1}, "status": "LEAK"}, {"solcat": "legal__risk-assessment-solution-kyc-aml", "seeded_modules": ["others"], "raw_reqs": 42, "deduped_reqs_total": 24, "deduped_reqs_functional": 19, "tagged_others_only": 19, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "legal__evidence-management-platform", "seeded_modules": ["others"], "raw_reqs": 34, "deduped_reqs_total": 16, "deduped_reqs_functional": 11, "tagged_others_only": 11, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "legal__speech-transcription-for-legal-matters", "seeded_modules": ["others"], "raw_reqs": 32, "deduped_reqs_total": 14, "deduped_reqs_functional": 10, "tagged_others_only": 10, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "legal__translation-software", "seeded_modules": ["others"], "raw_reqs": 31, "deduped_reqs_total": 13, "deduped_reqs_functional": 9, "tagged_others_only": 9, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "logistics__networked-trade-platform-value-added-services", "seeded_modules": ["supply_chain_and_inventory"], "raw_reqs": 41, "deduped_reqs_total": 22, "deduped_reqs_functional": 19, "tagged_others_only": 6, "countable": 13, "actually_in_canon": 2, "coverage_pct": 15.4, "by_module": {"supply_chain_and_inventory": 2}, "leakage": {"financial_management": 1, "sales_and_crm": 4}, "status": "LOW+LEAK"}, {"solcat": "logistics__inventory-management", "seeded_modules": ["supply_chain_and_inventory"], "raw_reqs": 33, "deduped_reqs_total": 15, "deduped_reqs_functional": 12, "tagged_others_only": 3, "countable": 9, "actually_in_canon": 8, "coverage_pct": 88.9, "by_module": {"supply_chain_and_inventory": 8}, "leakage": {"asset_management": 1}, "status": "LEAK"}, {"solcat": "logistics__warehouse-management", "seeded_modules": ["supply_chain_and_inventory"], "raw_reqs": 37, "deduped_reqs_total": 19, "deduped_reqs_functional": 15, "tagged_others_only": 2, "countable": 13, "actually_in_canon": 10, "coverage_pct": 76.9, "by_module": {"supply_chain_and_inventory": 10}, "leakage": {"asset_management": 1, "financial_management": 1}, "status": "LEAK"}, {"solcat": "logistics__active-cold-chain-management", "seeded_modules": ["supply_chain_and_inventory", "fleet_management"], "raw_reqs": 35, "deduped_reqs_total": 17, "deduped_reqs_functional": 14, "tagged_others_only": 9, "countable": 5, "actually_in_canon": 2, "coverage_pct": 40.0, "by_module": {"supply_chain_and_inventory": 2, "fleet_management": 0}, "leakage": {}, "status": "LOW"}, {"solcat": "logistics__transport-management", "seeded_modules": ["supply_chain_and_inventory", "fleet_management"], "raw_reqs": 35, "deduped_reqs_total": 17, "deduped_reqs_functional": 14, "tagged_others_only": 3, "countable": 11, "actually_in_canon": 8, "coverage_pct": 72.7, "by_module": {"supply_chain_and_inventory": 1, "fleet_management": 7}, "leakage": {"field_service_management": 1, "human_resources_management": 1}, "status": "LEAK"}, {"solcat": "logistics__freight-management", "seeded_modules": ["supply_chain_and_inventory", "fleet_management"], "raw_reqs": 49, "deduped_reqs_total": 31, "deduped_reqs_functional": 27, "tagged_others_only": 5, "countable": 22, "actually_in_canon": 10, "coverage_pct": 45.5, "by_module": {"supply_chain_and_inventory": 10, "fleet_management": 0}, "leakage": {"financial_management": 4, "sales_and_crm": 1}, "status": "LOW+LEAK"}, {"solcat": "personal-care-services__salon-management-system", "seeded_modules": ["sales_and_crm", "human_resources_management", "financial_management"], "raw_reqs": 74, "deduped_reqs_total": 56, "deduped_reqs_functional": 54, "tagged_others_only": 7, "countable": 47, "actually_in_canon": 31, "coverage_pct": 66.0, "by_module": {"sales_and_crm": 20, "human_resources_management": 9, "financial_management": 3}, "leakage": {"field_service_management": 2, "project_management": 1, "supply_chain_and_inventory": 4}, "status": "LEAK"}, {"solcat": "retail__integrated-pos-with-mobile-features", "seeded_modules": ["sales_and_crm", "financial_management"], "raw_reqs": 33, "deduped_reqs_total": 19, "deduped_reqs_functional": 19, "tagged_others_only": 5, "countable": 14, "actually_in_canon": 6, "coverage_pct": 42.9, "by_module": {"sales_and_crm": 5, "financial_management": 1}, "leakage": {"project_management": 1, "supply_chain_and_inventory": 1}, "status": "LOW+LEAK"}, {"solcat": "retail__electronic-shelf-label-esl", "seeded_modules": ["sales_and_crm", "supply_chain_and_inventory"], "raw_reqs": 26, "deduped_reqs_total": 10, "deduped_reqs_functional": 9, "tagged_others_only": 8, "countable": 1, "actually_in_canon": 1, "coverage_pct": 100.0, "by_module": {"sales_and_crm": 1, "supply_chain_and_inventory": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "retail__self-checkout-solution", "seeded_modules": ["sales_and_crm", "financial_management"], "raw_reqs": 30, "deduped_reqs_total": 14, "deduped_reqs_functional": 14, "tagged_others_only": 11, "countable": 3, "actually_in_canon": 2, "coverage_pct": 66.7, "by_module": {"sales_and_crm": 2, "financial_management": 0}, "leakage": {"supply_chain_and_inventory": 1}, "status": "LEAK"}, {"solcat": "retail__in-store-analytics", "seeded_modules": ["sales_and_crm", "others"], "raw_reqs": 30, "deduped_reqs_total": 14, "deduped_reqs_functional": 13, "tagged_others_only": 8, "countable": 5, "actually_in_canon": 4, "coverage_pct": 80.0, "by_module": {"sales_and_crm": 4, "others": 0}, "leakage": {"supply_chain_and_inventory": 1}, "status": "LEAK"}, {"solcat": "retail__omnichannel-retail-management-ocrm", "seeded_modules": ["sales_and_crm", "supply_chain_and_inventory"], "raw_reqs": 28, "deduped_reqs_total": 16, "deduped_reqs_functional": 11, "tagged_others_only": 3, "countable": 8, "actually_in_canon": 5, "coverage_pct": 62.5, "by_module": {"sales_and_crm": 4, "supply_chain_and_inventory": 1}, "leakage": {}, "status": "CLEAN"}, {"solcat": "security__mobile-enabled-patrol-and-incident-management", "seeded_modules": ["field_service_management"], "raw_reqs": 26, "deduped_reqs_total": 9, "deduped_reqs_functional": 8, "tagged_others_only": 5, "countable": 3, "actually_in_canon": 2, "coverage_pct": 66.7, "by_module": {"field_service_management": 2}, "leakage": {"fleet_management": 1}, "status": "LEAK"}, {"solcat": "security__automated-visitor-management", "seeded_modules": ["others"], "raw_reqs": 23, "deduped_reqs_total": 6, "deduped_reqs_functional": 5, "tagged_others_only": 4, "countable": 1, "actually_in_canon": 0, "coverage_pct": 0.0, "by_module": {"others": 0}, "leakage": {"fleet_management": 1}, "status": "LOW+LEAK"}, {"solcat": "security__surveillance-and-analytics", "seeded_modules": ["others"], "raw_reqs": 36, "deduped_reqs_total": 23, "deduped_reqs_functional": 22, "tagged_others_only": 21, "countable": 1, "actually_in_canon": 0, "coverage_pct": 0.0, "by_module": {"others": 0}, "leakage": {"fleet_management": 1}, "status": "LOW+LEAK"}, {"solcat": "security__security-collaboration-platform", "seeded_modules": ["field_service_management", "others"], "raw_reqs": 34, "deduped_reqs_total": 17, "deduped_reqs_functional": 16, "tagged_others_only": 15, "countable": 1, "actually_in_canon": 0, "coverage_pct": 0.0, "by_module": {"field_service_management": 0, "others": 0}, "leakage": {"asset_management": 1}, "status": "LOW+LEAK"}, {"solcat": "tourism-travel-agent__travel-management-system-e-commerce", "seeded_modules": ["sales_and_crm"], "raw_reqs": 122, "deduped_reqs_total": 102, "deduped_reqs_functional": 97, "tagged_others_only": 20, "countable": 77, "actually_in_canon": 30, "coverage_pct": 39.0, "by_module": {"sales_and_crm": 30}, "leakage": {"financial_management": 11, "supply_chain_and_inventory": 8}, "status": "LOW+LEAK"}, {"solcat": "tourism-travel-agent__travel-management-system-operations", "seeded_modules": ["sales_and_crm", "project_management"], "raw_reqs": 82, "deduped_reqs_total": 63, "deduped_reqs_functional": 63, "tagged_others_only": 11, "countable": 52, "actually_in_canon": 17, "coverage_pct": 32.7, "by_module": {"sales_and_crm": 17, "project_management": 0}, "leakage": {"field_service_management": 1, "financial_management": 10, "supply_chain_and_inventory": 11}, "status": "LOW+LEAK"}, {"solcat": "tourism-travel-agent__travel-evisa", "seeded_modules": ["others"], "raw_reqs": 21, "deduped_reqs_total": 4, "deduped_reqs_functional": 4, "tagged_others_only": 4, "countable": 0, "actually_in_canon": 0, "coverage_pct": 100.0, "by_module": {"others": 0}, "leakage": {}, "status": "CLEAN"}, {"solcat": "wholesale__enterprise-resource-planning-erp-software-for-wholesale", "seeded_modules": ["financial_management", "sales_and_crm", "supply_chain_and_inventory", "human_resources_management"], "raw_reqs": 94, "deduped_reqs_total": 69, "deduped_reqs_functional": 67, "tagged_others_only": 1, "countable": 66, "actually_in_canon": 52, "coverage_pct": 78.8, "by_module": {"financial_management": 18, "sales_and_crm": 13, "supply_chain_and_inventory": 21, "human_resources_management": 2}, "leakage": {"asset_management": 1, "fleet_management": 2}, "status": "LEAK"}, {"solcat": "wholesale__sales-management", "seeded_modules": ["sales_and_crm"], "raw_reqs": 28, "deduped_reqs_total": 13, "deduped_reqs_functional": 11, "tagged_others_only": 1, "countable": 10, "actually_in_canon": 7, "coverage_pct": 70.0, "by_module": {"sales_and_crm": 7}, "leakage": {"financial_management": 2, "supply_chain_and_inventory": 1}, "status": "LEAK"}, {"solcat": "wholesale__inventory-management", "seeded_modules": ["supply_chain_and_inventory"], "raw_reqs": 28, "deduped_reqs_total": 13, "deduped_reqs_functional": 12, "tagged_others_only": 1, "countable": 11, "actually_in_canon": 11, "coverage_pct": 100.0, "by_module": {"supply_chain_and_inventory": 11}, "leakage": {"asset_management": 1}, "status": "LEAK"}, {"solcat": "wholesale__custom-clearance", "seeded_modules": ["supply_chain_and_inventory"], "raw_reqs": 22, "deduped_reqs_total": 5, "deduped_reqs_functional": 4, "tagged_others_only": 2, "countable": 2, "actually_in_canon": 2, "coverage_pct": 100.0, "by_module": {"supply_chain_and_inventory": 2}, "leakage": {}, "status": "CLEAN"}];
+const MODULE_SHORT = {"sales_and_crm": "Sales & CRM", "financial_management": "Financial", "human_resources_management": "HR", "supply_chain_and_inventory": "Supply Chain", "manufacturing_management": "Manufacturing", "project_management": "Project Mgmt", "asset_management": "Asset Mgmt", "field_service_management": "Field Service", "fleet_management": "Fleet", "others": "Other"};
+const MODULE_FILL = {"sales_and_crm": "#dcfce7", "financial_management": "#dbeafe", "human_resources_management": "#fef3c7", "supply_chain_and_inventory": "#e0f2fe", "manufacturing_management": "#fce7f3", "project_management": "#f3e8ff", "asset_management": "#fef3c7", "field_service_management": "#d1fae5", "fleet_management": "#fee2e2", "others": "#f3f4f6"};
+const MODULE_STROKE = {"sales_and_crm": "#16a34a", "financial_management": "#2563eb", "human_resources_management": "#d97706", "supply_chain_and_inventory": "#0284c7", "manufacturing_management": "#db2777", "project_management": "#9333ea", "asset_management": "#ca8a04", "field_service_management": "#059669", "fleet_management": "#dc2626", "others": "#6b7280"};
+
+let statusFilter = "ALL";
+let modFilter = "";
+let sortBy = "coverage";
+let sortDir = 1; // 1 asc, -1 desc
+
+// Populate module filter
+const allMods = new Set();
+ROWS.forEach(r => r.seeded_modules.forEach(m => allMods.add(m)));
+const modSel = document.getElementById("mod-filter");
+Array.from(allMods).sort().forEach(m => {
+  const o = document.createElement("option"); o.value = m; o.textContent = MODULE_SHORT[m] || m; modSel.appendChild(o);
+});
+
+document.querySelectorAll("[data-status]").forEach(p => {
+  p.addEventListener("click", () => {
+    document.querySelectorAll("[data-status]").forEach(x => x.classList.remove("active"));
+    p.classList.add("active");
+    statusFilter = p.dataset.status;
+    render();
+  });
+});
+modSel.addEventListener("change", e => { modFilter = e.target.value; render(); });
+document.getElementById("search").addEventListener("input", render);
+
+document.querySelectorAll("th[data-sort]").forEach(th => {
+  th.addEventListener("click", () => {
+    if (sortBy === th.dataset.sort) sortDir *= -1;
+    else { sortBy = th.dataset.sort; sortDir = 1; }
+    render();
+  });
+});
+
+function modTag(m) {
+  const label = MODULE_SHORT[m] || m;
+  const fill = MODULE_FILL[m] || "#f3f4f6";
+  const stroke = MODULE_STROKE[m] || "#6b7280";
+  return `<span class="mod-tag" style="background:${fill};border-color:${stroke};color:${stroke}">${escapeHtml(label)}</span>`;
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
+function renderRow(r) {
+  const cov = r.coverage_pct;
+  const byModule = Object.entries(r.by_module || {}).map(([k,v])=>`${escapeHtml(MODULE_SHORT[k]||k)}:${v}`).join(" · ");
+  const leak = Object.entries(r.leakage || {}).map(([k,v])=>`${escapeHtml(MODULE_SHORT[k]||k)}:${v}`).join(" · ");
+  return `<tr>
+    <td><span class="slug">${escapeHtml(r.solcat)}</span></td>
+    <td>${r.seeded_modules.map(modTag).join("")}</td>
+    <td>${r.raw_reqs}</td>
+    <td>${r.deduped_reqs_functional}</td>
+    <td class="dim">${r.tagged_others_only || 0}</td>
+    <td>${r.countable || 0}</td>
+    <td>${r.actually_in_canon}</td>
+    <td><span class="cov-bar"><span class="cov-fill" style="width:${cov}%"></span></span>${cov.toFixed(0)}%</td>
+    <td class="dim">${byModule || "—"}</td>
+    <td class="leak-ind">${leak || ""}</td>
+    <td><span class="status ${escapeHtml(r.status).replace('+','\\+')}" data-status="${escapeHtml(r.status)}">${escapeHtml(r.status)}</span></td>
+  </tr>`;
+}
+
+function render() {
+  const q = document.getElementById("search").value.toLowerCase().trim();
+  let filtered = ROWS.filter(r => {
+    if (statusFilter !== "ALL" && r.status !== statusFilter) return false;
+    if (modFilter && !r.seeded_modules.includes(modFilter)) return false;
+    if (q && !r.solcat.toLowerCase().includes(q)) return false;
+    return true;
+  });
+
+  const sortKey = {
+    solcat: r => r.solcat,
+    seeded: r => r.seeded_modules.join(","),
+    raw: r => r.raw_reqs,
+    functional: r => r.deduped_reqs_functional,
+    others: r => r.tagged_others_only || 0,
+    countable: r => r.countable || 0,
+    landed: r => r.actually_in_canon,
+    coverage: r => r.coverage_pct,
+    by_module: r => Object.values(r.by_module||{}).reduce((a,b)=>a+b,0),
+    leakage: r => Object.values(r.leakage||{}).reduce((a,b)=>a+b,0),
+    status: r => r.status,
+  }[sortBy];
+
+  filtered.sort((a,b) => {
+    const va = sortKey(a), vb = sortKey(b);
+    if (va < vb) return -sortDir;
+    if (va > vb) return sortDir;
+    return 0;
+  });
+
+  document.querySelector("#tbl tbody").innerHTML = filtered.map(renderRow).join("");
+}
+
+render();
+</script>
+</body>
+</html>
