@@ -1238,11 +1238,11 @@ function renderSidebar() {
     const jumpList = document.getElementById("overviewJumpList");
     const order = DATA.family_order.length > 0 ? DATA.family_order : Object.keys(DATA.family_totals);
     jumpList.innerHTML = order.map((fam) => {
-      const tot = DATA.family_totals[fam] || { required: 0, preferred: 0 };
+      const tot = DATA.family_totals[fam] || { required_qs: 0, preferred_qs: 0 };
       return `<li data-fam="${escapeHtml(fam)}">
         <div style="flex:1;">
           <div class="cap-name">${escapeHtml(fam)}</div>
-          <div class="cap-meta">${tot.required} required · ${tot.preferred} preferred</div>
+          <div class="cap-meta">${tot.required_qs} required · ${tot.preferred_qs} preferred</div>
         </div>
       </li>`;
     }).join("");
