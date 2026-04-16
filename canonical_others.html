@@ -1248,17 +1248,10 @@ function renderSidebar() {
     }).join("");
     jumpList.querySelectorAll("li").forEach((li) => {
       li.onclick = () => {
-        // Switch to Review tab first
-        state.topView = "review";
-        renderTopNav();
-        renderBody();
-        // Family sections in Review have id="fam-{tier}-{fam_safe}" — try required first
+        // Scroll to the family section within the Overview itself
         const safe = li.dataset.fam.replace(/[^a-z0-9]/gi, "_");
-        const el = document.getElementById("fam-required-" + safe)
-               || document.getElementById("fam-preferred-" + safe)
-               || document.getElementById("fam-" + safe);
+        const el = document.getElementById("ov-fam-" + safe);
         if (el) {
-          el.classList.remove("collapsed");
           el.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       };
@@ -1682,8 +1675,9 @@ function renderCompactList(tier) {
       `;
     }).join("");
 
+    const ovFamId = "ov-fam-" + fam.replace(/[^a-z0-9]/gi, "_");
     return `
-      <div class="compact-family">
+      <div class="compact-family" id="${ovFamId}">
         <div class="compact-family-header">${escapeHtml(fam)} (${caps.length})</div>
         ${qsHtml}
       </div>
