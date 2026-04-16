@@ -1248,7 +1248,15 @@ function renderSidebar() {
     }).join("");
     jumpList.querySelectorAll("li").forEach((li) => {
       li.onclick = () => {
-        const el = document.getElementById("fam-" + li.dataset.fam.replace(/[^a-z0-9]/gi, "_"));
+        // Switch to Review tab first
+        state.topView = "review";
+        renderTopNav();
+        renderBody();
+        // Family sections in Review have id="fam-{tier}-{fam_safe}" — try required first
+        const safe = li.dataset.fam.replace(/[^a-z0-9]/gi, "_");
+        const el = document.getElementById("fam-required-" + safe)
+               || document.getElementById("fam-preferred-" + safe)
+               || document.getElementById("fam-" + safe);
         if (el) {
           el.classList.remove("collapsed");
           el.scrollIntoView({ behavior: "smooth", block: "start" });
