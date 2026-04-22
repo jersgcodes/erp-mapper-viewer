@@ -869,6 +869,8 @@
   }
   .tier-group.sme { background: rgba(187, 247, 208, 0.15); border-color: #dcfce7; }
   .tier-group.ent { background: rgba(254, 202, 202, 0.15); border-color: #fee2e2; }
+  .hide-dimmed-btn { padding: 2px 9px; border-radius: 999px; border: 1px solid #d1d5db; background: white; font-size: 10px; cursor: pointer; color: #374151; margin-left: 6px; }
+  .hide-dimmed-btn.active { background: #374151; color: white; border-color: #374151; }
 
   /* L1–L5 hierarchy markers */
   .l-marker {
@@ -1426,6 +1428,7 @@ const state = {
   overviewMode: "compact_required", // compact_required | compact_preferred | compact_all | detailed | uc_required | uc_preferred | uc_all
   sectorFilter: "__generic__", // null = All, "__generic__" = Generic only (default), or PSG sector name
   ucTierFilter: "standard", // baseline | standard | advanced | enterprise | all (cumulative: baseline ⊂ standard ⊂ advanced)
+  hideDimmed: false, // if true: hide dimmed UCs + dimmed specs entirely instead of showing grayed
 };
 
 // Helper — new 4-boolean schema on validation.reconciled.
@@ -1888,6 +1891,7 @@ function renderOverview() {
           <span class="sector-pill ent ${state.ucTierFilter === 'enterprise' ? 'active' : ''}" data-uctier="enterprise" title="Enterprise-only — multi-entity, ASC 606, AI/ML, 100k+ txns. Out of SME scope.">Enterprise <span class="pill-count">${ucEntCount}</span></span>
         </div>
         <span class="sector-pill ${state.ucTierFilter === 'all' ? 'active' : ''}" data-uctier="all" title="Show everything">All <span class="pill-count">${ucAllCount}</span></span>
+        <button id="hideDimmedBtn" class="hide-dimmed-btn ${state.hideDimmed ? 'active' : ''}" title="Toggle: hide grayed-out UCs and specs that don't match current filters">${state.hideDimmed ? 'Show all' : 'Hide dimmed'}</button>
       </div>
     ` : ''}
 
@@ -1990,6 +1994,15 @@ function renderOverview() {
     };
   });
 
+  // Hide dimmed toggle
+  const hdBtn = body.querySelector("#hideDimmedBtn");
+  if (hdBtn) {
+    hdBtn.onclick = () => {
+      state.hideDimmed = !state.hideDimmed;
+      renderAll();
+    };
+  }
+
   // Family section collapse/expand
   body.querySelectorAll(".collapsible-family").forEach((hdr) => {
     hdr.onclick = (e) => {
@@ -2068,10 +2081,7 @@ function computeOneLiner() {
   // L3: use case count (apply UC-tier filter if in uc_* mode)
   const ucTierMatch = (uc) => {
     if (!mode.startsWith("uc_")) return true; // don't filter UCs outside UC mode
-    const t = uc.validation && uc.validation.reconciled && uc.validation.reconciled.sme_tier;
-    if (state.ucTierFilter === "all") return true;
-    if (state.ucTierFilter === "sme_min") return t === "sme_core" || t === "sme_standard" || !t;
-    return t === state.ucTierFilter;
+    return ucMatchesTierFilter(uc, state.ucTierFilter);
   };
   let ucCount = 0, featSet = new Set(), specCount = 0;
   capsAfterTier.forEach(c => {
@@ -2242,12 +2252,7 @@ function renderUseCaseChecklist(tier) {
       const allUcs = c.generic_use_cases || [];
       // Render ALL UCs — apply UC tier filter as dim, not hide
       const ucs = allUcs;
-      const ucTierMatchLocal = (u) => {
-        const t = u.validation && u.validation.reconciled && u.validation.reconciled.sme_tier;
-        if (state.ucTierFilter === "all") return true;
-        if (state.ucTierFilter === "sme_min") return t === "sme_core" || t === "sme_standard" || !t;
-        return t === state.ucTierFilter;
-      };
+      const ucTierMatchLocal = (u) => ucMatchesTierFilter(u, state.ucTierFilter);
       const vq = c.vendor_questions;
       const tierBadge = c.sme_tier
         ? `<span class="uc-tier-badge uc-tier-${c.sme_tier}">${escapeHtml(c.sme_tier)}</span>`
@@ -2295,6 +2300,7 @@ function renderUseCaseChecklist(tier) {
               const reqsHtml = fg.reqs.slice(0, 5).map((r) => {
                 const sc = r.sector_coverage;
                 const reqDimmed = state.sectorFilter ? !reqMatchesSector(r, state.sectorFilter) : false;
+                if (reqDimmed && state.hideDimmed) return null;
                 const psgCount = sc ? (sc.psg_sector_count || sc.psg_sectors && sc.psg_sectors.length || 0) : 0;
                 const psgList = sc && (sc.psg_sectors || []).length > 0 ? sc.psg_sectors.join(', ') : '';
                 const imdaList = sc && (sc.verticals || []).length > 0 ? sc.verticals.join(', ') : '';
@@ -2313,7 +2319,7 @@ function renderUseCaseChecklist(tier) {
                   ${scTag} ${verTag}
                   ${escapeHtml(r.text)}
                 </div>`;
-              }).join("");
+              }).filter(x => x !== null).join("");
               const moreCount = fg.reqs.length > 5 ? `<div class="uc-drill-more">+${fg.reqs.length - 5} more</div>` : "";
               return `
                 <div class="uc-drill-feat">
@@ -2332,6 +2338,7 @@ function renderUseCaseChecklist(tier) {
             const ucMappedFeats = (uc.mapped_features || []).slice(0, 10).join(", ");
             const ucTierLabel = ucTier ? ucTier.replace('_', ' ') : '(untagged)';
             const ucDimmed = !ucTierMatchLocal(uc);
+            if (ucDimmed && state.hideDimmed) return null;
             const ucTooltip = `UC tier: ${ucTierLabel}\nMaps to: ${ucMappedCaps}\nFeatures: ${ucMappedFeats}${(uc.mapped_features || []).length > 10 ? " ..." : ""}`;
             return `
               <div class="uc-checklist-item collapsed ${ucDimmed ? 'psg-dimmed' : ''}" data-uc-idx="${i}" data-uc-tier="${ucTier}" title="${escapeHtml(ucTooltip)}">
@@ -2350,7 +2357,7 @@ function renderUseCaseChecklist(tier) {
                 </div>
               </div>
             `;
-          }).join("") + (dimmedUcCount > 0 ? `<div class="uc-checklist-note">${dimmedUcCount} use case${dimmedUcCount !== 1 ? 's' : ''} dimmed (outside UC tier filter '${state.ucTierFilter.replace('_',' ')}')</div>` : "")
+          }).filter(x => x !== null).join("") + (!state.hideDimmed && dimmedUcCount > 0 ? `<div class="uc-checklist-note">${dimmedUcCount} use case${dimmedUcCount !== 1 ? 's' : ''} dimmed (outside UC tier filter '${state.ucTierFilter.replace('_',' ')}')</div>` : "")
         : `<div class="uc-checklist-empty">No use cases generated for this capability.</div>`;
 
       // Sources for this capability
