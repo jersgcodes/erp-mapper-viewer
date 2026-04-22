@@ -77,8 +77,13 @@
             "verticals": [
               "Security"
             ],
+            "psg_sectors": [
+              "Security"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -126,8 +131,13 @@
             "verticals": [
               "Security"
             ],
+            "psg_sectors": [
+              "Security"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -161,8 +171,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -196,8 +209,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -231,8 +247,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "config_check",
@@ -266,8 +285,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -291,7 +313,7 @@
           "solcat_citations": [],
           "feature_id": "vehicle_register.documentation",
           "feature_name": "Documentation & Records",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #7",
@@ -301,13 +323,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display document repository or attachments section linked to vehicle record."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Capture and maintain driver details and contact information linked to vehicles",
@@ -330,7 +356,7 @@
           ],
           "feature_id": "vehicle_register.classification",
           "feature_name": "Classification & Segmentation",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #8",
@@ -342,13 +368,19 @@
             "verticals": [
               "Security"
             ],
+            "psg_sectors": [
+              "Security"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Show driver details section linked to vehicle with contact information fields."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Capture and store vehicle photos and condition logs with historical tracking",
@@ -367,7 +399,7 @@
           "solcat_citations": [],
           "feature_id": "vehicle_register.documentation",
           "feature_name": "Documentation & Records",
-          "criticality": "advanced",
+          "criticality": "standard",
           "sme_attribution": {
             "status": "excluded",
             "reason": "advanced-tier — not minimum"
@@ -375,13 +407,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
             "instruction": "Upload vehicle photo and condition log, then verify historical tracking of changes."
-          }
+          },
+          "criticality_prev": "advanced"
         },
         {
           "text": "Support automated vehicle registration workflow and data capture process",
@@ -414,8 +450,13 @@
             "verticals": [
               "Security"
             ],
+            "psg_sectors": [
+              "Security"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "config_check",
@@ -601,6 +642,75 @@
           }
         ],
         "total_input_items": 8
+      },
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "Office-based service; minimal fleet operations"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Manages production equipment and material handling vehicles"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Construction sites require heavy equipment and vehicle tracking"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Centre-based operations; no significant fleet needs"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Field service teams require vehicle and equipment management"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Waste collection and environmental work require fleet management"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "Minimal vehicle fleet; primarily office-based operations"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Delivery vehicles and cold chain asset tracking essential"
+          },
+          "Marine & Offshore": {
+            "relevant": true,
+            "reason": "Vessels and offshore equipment require comprehensive asset tracking"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Transport vehicles for livestock and animal care operations"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Delivery vehicles and equipment for nursery operations"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Service-based; minimal fleet or asset requirements"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Specialized equipment and mobile assets require tracking"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Delivery vehicles and logistics fleet management needed"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Patrol vehicles and mobile security equipment tracking"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Distribution vehicles and warehouse equipment management"
+          }
+        }
       }
     },
     {
@@ -649,8 +759,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -684,8 +797,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -719,8 +835,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -754,8 +873,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "config_check",
@@ -789,8 +911,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -824,8 +949,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -964,6 +1092,75 @@
           }
         ],
         "total_input_items": 5
+      },
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "Office-based service, minimal fleet operations"
+          },
+          "Advanced Manufacturing": {
+            "relevant": false,
+            "reason": "Factory-based production, limited driver needs"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Site visits, equipment transport, crew management"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Centre-based operations, minimal fleet requirements"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Field service visits, equipment transport needs"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Waste collection, vehicle fleet operations critical"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "Office-based, minimal commercial fleet needs"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Delivery operations, food transport compliance"
+          },
+          "Marine & Offshore": {
+            "relevant": false,
+            "reason": "Maritime operations, not land-based fleet"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Animal transport, specialized vehicle operations"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Product delivery, distribution fleet management"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Centre or home-based, minimal fleet operations"
+          },
+          "Precision Engineering": {
+            "relevant": false,
+            "reason": "Factory-based production, limited fleet needs"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Delivery operations, logistics fleet management"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Mobile patrols, vehicle-based operations"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Distribution, delivery fleet operations essential"
+          }
+        }
       }
     },
     {
@@ -1012,8 +1209,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -1047,8 +1247,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -1072,7 +1275,7 @@
           "solcat_citations": [],
           "feature_id": "fuel_management.fuel_consumption_analysis",
           "feature_name": "Fuel Consumption Analysis",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #3",
@@ -1082,13 +1285,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
             "instruction": "Generate report showing calculated cost per kilometre for vehicles."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Integrate with fuel card systems to automatically import transaction data",
@@ -1117,8 +1324,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "config_check",
@@ -1142,7 +1352,7 @@
           "solcat_citations": [],
           "feature_id": "fuel_management.fuel_purchase_recording",
           "feature_name": "Fuel Purchase Recording",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #5",
@@ -1152,13 +1362,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display fuel type field in transaction entry (petrol, diesel, electric charge options)."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Generate alerts for anomalous fuel consumption patterns or spikes",
@@ -1185,8 +1399,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "config_check",
@@ -1309,6 +1526,75 @@
           }
         ],
         "total_input_items": 5
+      },
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "Office-based service, minimal fleet operations"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Fleet for logistics, material transport, delivery"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Construction vehicles, site transport, equipment movement"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Childcare centres, no significant fleet needs"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Field service vehicles, site visits, equipment transport"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Waste collection, cleaning vehicles, fleet-heavy operations"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "Minimal fleet, mostly office-based operations"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Delivery vehicles, distribution, cold chain transport"
+          },
+          "Marine & Offshore": {
+            "relevant": false,
+            "reason": "Fuel management for vessels, not road vehicles"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Transport vehicles for livestock, feed, supplies"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Delivery vehicles, distribution, transport operations"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Service-based, minimal fleet requirements"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Field service vehicles, site visits, equipment transport"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Delivery vehicles, logistics, supply chain transport"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Patrol vehicles, mobile security operations, fleet management"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Distribution vehicles, logistics, bulk transport operations"
+          }
+        }
       }
     },
     {
@@ -1355,8 +1641,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -1389,8 +1678,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -1423,8 +1715,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -1457,8 +1752,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -1491,8 +1789,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -1515,7 +1816,7 @@
           "solcat_citations": [],
           "feature_id": "maintenance_scheduling.schedule_visibility",
           "feature_name": "Schedule Visibility",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #5",
@@ -1525,13 +1826,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display calendar view showing upcoming maintenance schedules for multiple vehicles."
-          }
+          },
+          "criticality_prev": "standard"
         }
       ],
       "stats": {
@@ -1657,6 +1962,75 @@
           }
         ],
         "total_input_items": 5
+      },
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "No fleet vehicles or maintenance requirements"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Fleet vehicles for logistics and material transport"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Construction vehicles and equipment maintenance critical"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Minimal or no fleet operations"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Service vehicles and equipment maintenance needed"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Fleet vehicles essential for waste and cleaning operations"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "Limited fleet; not core business requirement"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Delivery vehicles and refrigerated transport maintenance"
+          },
+          "Marine & Offshore": {
+            "relevant": true,
+            "reason": "Vessel and equipment preventive maintenance critical"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Transport vehicles for animal care operations"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Delivery and equipment vehicles require maintenance"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Minimal fleet requirements"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Equipment and machinery maintenance scheduling essential"
+          },
+          "Retail": {
+            "relevant": false,
+            "reason": "Limited fleet; not primary operational need"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Patrol vehicles and equipment maintenance required"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Delivery and logistics fleet maintenance critical"
+          }
+        }
       }
     },
     {
@@ -1701,8 +2075,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -1734,8 +2111,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -1767,8 +2147,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -1800,8 +2183,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -1833,8 +2219,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -1856,7 +2245,7 @@
           "solcat_citations": [],
           "feature_id": "maintenance_work_orders.wo_warranty",
           "feature_name": "Warranty Integration",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #5",
@@ -1866,13 +2255,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
             "instruction": "Link work order to warranty claim and verify bidirectional relationship established."
-          }
+          },
+          "criticality_prev": "standard"
         }
       ],
       "stats": {
@@ -2009,6 +2402,75 @@
           }
         ],
         "total_input_items": 5
+      },
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "No fleet or equipment maintenance operations"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Equipment maintenance critical for production uptime"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Facility and equipment maintenance management needed"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Minimal fleet or maintenance work order needs"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Equipment and tool maintenance essential for operations"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Fleet vehicles and equipment maintenance tracking required"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "No significant fleet or maintenance operations"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Equipment and delivery fleet maintenance important"
+          },
+          "Marine & Offshore": {
+            "relevant": true,
+            "reason": "Vessel and equipment maintenance critical for safety"
+          },
+          "Non-Food Animals": {
+            "relevant": false,
+            "reason": "Minimal fleet or maintenance work order requirements"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Equipment and vehicle maintenance for operations"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Limited fleet or maintenance work order needs"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Equipment maintenance critical for precision operations"
+          },
+          "Retail": {
+            "relevant": false,
+            "reason": "Minimal fleet or maintenance work order requirements"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Vehicle fleet maintenance and tracking essential"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Fleet and warehouse equipment maintenance needed"
+          }
+        }
       }
     },
     {
@@ -2057,8 +2519,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -2106,8 +2571,13 @@
             "verticals": [
               "Wholesale"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -2131,7 +2601,7 @@
           "solcat_citations": [],
           "feature_id": "trip_mileage.trip_logging",
           "feature_name": "Trip Logging",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #3",
@@ -2141,13 +2611,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Show trip classification dropdown or toggle for personal versus business use."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Calculate vehicle utilisation rate as percentage of days in active use versus idle",
@@ -2166,7 +2640,7 @@
           "solcat_citations": [],
           "feature_id": "trip_mileage.utilisation_tracking",
           "feature_name": "Utilisation Tracking",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #4",
@@ -2176,13 +2650,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display vehicle utilisation rate metric showing active days versus idle days percentage."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Allocate mileage-based costs to cost centres or departments",
@@ -2201,7 +2679,7 @@
           "solcat_citations": [],
           "feature_id": "trip_mileage.cost_allocation",
           "feature_name": "Cost Allocation",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #5",
@@ -2211,13 +2689,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
             "instruction": "Allocate mileage costs to cost centre and verify allocation appears in cost reports."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Generate alerts when cumulative distance approaches lease or warranty limits",
@@ -2236,7 +2718,7 @@
           "solcat_citations": [],
           "feature_id": "trip_mileage.lifecycle_monitoring",
           "feature_name": "Lifecycle Monitoring",
-          "criticality": "advanced",
+          "criticality": "standard",
           "sme_attribution": {
             "status": "excluded",
             "reason": "advanced-tier — not minimum"
@@ -2244,13 +2726,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
             "instruction": "Approach lease/warranty limit threshold and verify alert notification triggers."
-          }
+          },
+          "criticality_prev": "advanced"
         },
         {
           "text": "Track real-time vehicle location and status via GPS or telematics integration",
@@ -2286,8 +2772,13 @@
               "Essential Business",
               "Logistics"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 2,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -2325,8 +2816,13 @@
             "verticals": [
               "Wholesale"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -2472,6 +2968,75 @@
           }
         ],
         "total_input_items": 5
+      },
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "Office-based service; minimal vehicle fleet operations"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Logistics and material transport within operations"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Site visits and equipment transport across locations"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Stationary facility-based service; no fleet requirement"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Field service visits and equipment transportation"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Waste collection and site service vehicle operations"
+          },
+          "Estate Agency": {
+            "relevant": true,
+            "reason": "Property viewings and client transport via vehicles"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Delivery and distribution fleet management"
+          },
+          "Marine & Offshore": {
+            "relevant": false,
+            "reason": "Maritime operations; not land-based vehicle tracking"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Transport of animals and supplies to locations"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Delivery and distribution of plants and supplies"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Primarily facility-based; minimal fleet needs"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Equipment transport and field service operations"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Delivery and logistics for multi-location operations"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Patrol vehicles and mobile security operations"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Distribution and delivery fleet management"
+          }
+        }
       }
     },
     {
@@ -2518,8 +3083,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -2552,8 +3120,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -2586,8 +3157,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -2610,7 +3184,7 @@
           "solcat_citations": [],
           "feature_id": "cost_management.cost_analysis",
           "feature_name": "Cost Analysis & Reporting",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #4",
@@ -2620,13 +3194,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display cost per kilometre calculation for individual vehicles and fleet aggregate."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Analyze cost trends over time to identify spending patterns and anomalies.",
@@ -2654,8 +3232,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -2678,7 +3259,7 @@
           "solcat_citations": [],
           "feature_id": "cost_management.financial_integration",
           "feature_name": "Financial System Integration",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #6",
@@ -2688,13 +3269,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "config_check",
             "instruction": "Verify export configuration to accounting system in integration settings."
-          }
+          },
+          "criticality_prev": "standard"
         }
       ],
       "stats": {
@@ -2841,6 +3426,75 @@
           }
         ],
         "total_input_items": 6
+      },
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "Office-based service; minimal fleet operations"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Logistics and material transport fleet management"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Construction vehicles and site transport costs"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Facility-based services; no significant fleet"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Field service vehicles and site transportation"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Waste collection and environmental service vehicles"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "Minimal fleet; primarily office-based operations"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Delivery vehicles and food transport logistics"
+          },
+          "Marine & Offshore": {
+            "relevant": false,
+            "reason": "Vessel-focused; different cost tracking model"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Transport and delivery vehicles for livestock"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Distribution and delivery vehicle fleet management"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Service-based; minimal fleet requirements"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Equipment transport and logistics vehicles"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Delivery and distribution fleet operations"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Patrol vehicles and security transport fleet"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Distribution and logistics vehicle fleet"
+          }
+        }
       }
     },
     {
@@ -2915,8 +3569,14 @@
               "Logistics",
               "Security"
             ],
+            "psg_sectors": [
+              "Security",
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 2,
             "sol_cat_count": 3,
-            "is_generic": true
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -2966,8 +3626,13 @@
               "Essential Business",
               "Logistics"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 2,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -3000,8 +3665,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -3024,7 +3692,7 @@
           "solcat_citations": [],
           "feature_id": "reporting_dashboards.operational_metrics",
           "feature_name": "Operational Metrics",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #4",
@@ -3034,13 +3702,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display vehicle utilisation and idle-time report with metrics visible."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Pivot table functionality and export to spreadsheet format",
@@ -3058,7 +3730,7 @@
           "solcat_citations": [],
           "feature_id": "reporting_dashboards.report_tools",
           "feature_name": "Report Tools & Distribution",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #5",
@@ -3068,13 +3740,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
             "instruction": "Create pivot table, manipulate dimensions, and export to spreadsheet format."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Drill-down capability from summary-level reports to individual vehicle detail",
@@ -3092,7 +3768,7 @@
           "solcat_citations": [],
           "feature_id": "reporting_dashboards.report_tools",
           "feature_name": "Report Tools & Distribution",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #6",
@@ -3102,13 +3778,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
             "instruction": "Click summary row to drill down to individual vehicle detail records."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Mileage and fuel consumption reporting",
@@ -3133,7 +3813,7 @@
           ],
           "feature_id": "reporting_dashboards.operational_metrics",
           "feature_name": "Operational Metrics",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #7",
@@ -3146,13 +3826,19 @@
               "Essential Business",
               "Logistics"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 2,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Show mileage and fuel consumption report with period filters applied."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Driver behaviour monitoring including speeding and dangerous driving alerts",
@@ -3175,7 +3861,7 @@
           ],
           "feature_id": "reporting_dashboards.driver_performance",
           "feature_name": "Driver Performance",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #8",
@@ -3187,13 +3873,19 @@
             "verticals": [
               "Logistics"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display driver behaviour dashboard with speeding and dangerous driving alerts."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Scheduled automated email distribution of reports to stakeholders",
@@ -3211,7 +3903,7 @@
           "solcat_citations": [],
           "feature_id": "reporting_dashboards.report_tools",
           "feature_name": "Report Tools & Distribution",
-          "criticality": "advanced",
+          "criticality": "standard",
           "sme_attribution": {
             "status": "excluded",
             "reason": "advanced-tier — not minimum"
@@ -3219,13 +3911,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "config_check",
             "instruction": "Show scheduled report configuration with email recipients and distribution frequency."
-          }
+          },
+          "criticality_prev": "advanced"
         },
         {
           "text": "Centralised command centre view enabling remote supervision of multiple sites and teams",
@@ -3258,8 +3954,13 @@
             "verticals": [
               "Security"
             ],
+            "psg_sectors": [
+              "Security"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -3448,6 +4149,75 @@
           }
         ],
         "total_input_items": 8
+      },
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "No fleet operations in accounting services"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Manage logistics and material transport fleets"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Track construction vehicles and site transport"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "No significant fleet management needs"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Monitor service vehicles and field engineer transport"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Essential for waste collection and disposal vehicles"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "Minimal fleet operations in property services"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Track delivery and distribution vehicles"
+          },
+          "Marine & Offshore": {
+            "relevant": false,
+            "reason": "Fleet management differs from vessel operations"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Manage transport for livestock and animal services"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Track delivery and distribution vehicles"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Minimal fleet requirements in personal services"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Monitor service and logistics vehicles"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Essential for delivery and store transport operations"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Track patrol and response vehicles"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Critical for distribution and logistics operations"
+          }
+        }
       }
     },
     {
@@ -3509,8 +4279,13 @@
               "Essential Business",
               "Logistics"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 2,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -3550,8 +4325,13 @@
             "verticals": [
               "Security"
             ],
+            "psg_sectors": [
+              "Security"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -3573,7 +4353,7 @@
           "solcat_citations": [],
           "feature_id": "gps_telematics.route_history",
           "feature_name": "Route History & Playback",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #3",
@@ -3583,13 +4363,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
             "instruction": "Select vehicle and play historical route replay with breadcrumb trail animation."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Support creation and management of geofences with automated entry and exit alerts",
@@ -3606,7 +4390,7 @@
           "solcat_citations": [],
           "feature_id": "gps_telematics.geofencing_alerts",
           "feature_name": "Geofencing & Boundary Alerts",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #4",
@@ -3616,13 +4400,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
             "instruction": "Create geofence on map, trigger entry/exit event, and verify alert generation."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Generate alerts for excessive speed and idle-time violations",
@@ -3639,7 +4427,7 @@
           "solcat_citations": [],
           "feature_id": "gps_telematics.driver_behavior",
           "feature_name": "Driver Behavior & Compliance",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #5",
@@ -3649,13 +4437,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Show alerts dashboard displaying excessive speed and idle-time violations."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Integrate with OBD-II systems to capture and display engine fault codes and vehicle diagnostics",
@@ -3672,7 +4464,7 @@
           "solcat_citations": [],
           "feature_id": "gps_telematics.diagnostics_integration",
           "feature_name": "Vehicle Diagnostics & OBD Integration",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #6",
@@ -3682,13 +4474,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display vehicle diagnostics screen showing OBD-II engine fault codes and data."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Retain and display last-known position for vehicles that are temporarily offline",
@@ -3705,7 +4501,7 @@
           "solcat_citations": [],
           "feature_id": "gps_telematics.realtime_tracking",
           "feature_name": "Real-Time Vehicle Tracking",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #7",
@@ -3715,13 +4511,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Show offline vehicle with last-known position displayed on map interface."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Track delivery vehicle locations and delivery status for customer service visibility",
@@ -3744,7 +4544,7 @@
           ],
           "feature_id": "gps_telematics.route_history",
           "feature_name": "Route History & Playback",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #8",
@@ -3756,13 +4556,19 @@
             "verticals": [
               "Wholesale"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display delivery vehicle locations and delivery status on map or list view."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Provide fleet journey analytics to support cost control, utilization optimization, and productivity improvement",
@@ -3795,7 +4601,7 @@
           ],
           "feature_id": "gps_telematics.analytics_insights",
           "feature_name": "Fleet Analytics & Insights",
-          "criticality": "advanced",
+          "criticality": "standard",
           "sme_attribution": {
             "status": "excluded",
             "reason": "advanced-tier — not minimum"
@@ -3806,13 +4612,19 @@
               "Essential Business",
               "Logistics"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 2,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Show fleet journey analytics report with cost, utilisation, and productivity metrics."
-          }
+          },
+          "criticality_prev": "advanced"
         },
         {
           "text": "Capture and store in-cabin video from vehicle-mounted cameras with timestamp and date indexing",
@@ -3845,8 +4657,11 @@
             "verticals": [
               "Essential Business"
             ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "config_check",
@@ -3884,8 +4699,13 @@
             "verticals": [
               "Security"
             ],
+            "psg_sectors": [
+              "Security"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -4082,6 +4902,75 @@
           }
         ],
         "total_input_items": 8
+      },
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "Office-based service; no fleet operations"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Manages logistics, material transport, delivery operations"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Construction sites require equipment, worker transport tracking"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Childcare centers; minimal fleet requirements"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Field engineers need vehicle tracking, site visit management"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Waste collection, maintenance vehicles require route optimization"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "Property sales; limited fleet management needs"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Delivery vehicles, cold chain logistics, distribution tracking"
+          },
+          "Marine & Offshore": {
+            "relevant": false,
+            "reason": "Maritime operations; GPS telematics not primary need"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Livestock transport, veterinary service vehicles tracking"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Distribution, delivery vehicles for plant logistics"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Service-based; minimal fleet operations"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Field service, equipment delivery, technician dispatch"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Delivery vehicles, store supply chain, logistics management"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Patrol vehicles, guard dispatch, real-time monitoring"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Distribution vehicles, inventory transport, delivery optimization"
+          }
+        }
       }
     },
     {
@@ -4139,8 +5028,13 @@
             "verticals": [
               "Wholesale"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -4171,8 +5065,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -4203,8 +5100,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -4235,8 +5135,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -4267,8 +5170,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -4317,8 +5223,13 @@
               "Essential Business",
               "Logistics"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 2,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -4349,8 +5260,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -4381,8 +5295,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -4423,8 +5340,13 @@
               "Essential Business",
               "Logistics"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 2,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -4471,7 +5393,76 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null
+      "vendor_questions": null,
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "Office-based service, no field delivery or routing needs"
+          },
+          "Advanced Manufacturing": {
+            "relevant": false,
+            "reason": "Factory-based production, minimal multi-stop routing requirements"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Site visits and inspections across multiple locations daily"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Centre-based operations, no multi-stop delivery routes"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Field engineers visit multiple client sites for service calls"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Waste collection and environmental work across multiple sites"
+          },
+          "Estate Agency": {
+            "relevant": true,
+            "reason": "Agents conduct property viewings across multiple locations"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Food delivery and distribution to multiple customer locations"
+          },
+          "Marine & Offshore": {
+            "relevant": false,
+            "reason": "Operations at fixed marine facilities, not multi-stop routing"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Veterinary or animal service visits to multiple locations"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Delivery of plants and nursery products to multiple customers"
+          },
+          "Personal Care Services": {
+            "relevant": true,
+            "reason": "Home-based services requiring visits to multiple client locations"
+          },
+          "Precision Engineering": {
+            "relevant": false,
+            "reason": "Factory-based production, minimal field routing needs"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Multi-outlet operations and delivery to multiple store locations"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Security patrols and monitoring across multiple client sites"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Distribution to multiple retail and business customer locations"
+          }
+        }
+      }
     },
     {
       "id": "fleet.driver_safety",
@@ -4529,8 +5520,11 @@
             "verticals": [
               "Essential Business"
             ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -4576,8 +5570,11 @@
             "verticals": [
               "Essential Business"
             ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -4623,8 +5620,11 @@
             "verticals": [
               "Essential Business"
             ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -4670,8 +5670,11 @@
             "verticals": [
               "Essential Business"
             ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "not_verifiable",
@@ -4693,7 +5696,7 @@
           "solcat_citations": [],
           "feature_id": "driver_safety.distraction_monitoring",
           "feature_name": "Distraction Monitoring",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #5",
@@ -4703,13 +5706,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Show real-time coaching alert UI with message content and delivery timestamp."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Generate safety leaderboards and trend reports for driver performance comparison and analysis",
@@ -4726,7 +5733,7 @@
           "solcat_citations": [],
           "feature_id": "driver_safety.scoring_reporting",
           "feature_name": "Safety Scoring & Reporting",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #6",
@@ -4736,13 +5743,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display safety leaderboard and trend report comparing multiple drivers' performance metrics."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Detect tailgating and unsafe following distance",
@@ -4777,8 +5788,11 @@
             "verticals": [
               "Essential Business"
             ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -4822,8 +5836,11 @@
             "verticals": [
               "Essential Business"
             ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "not_verifiable",
@@ -4861,8 +5878,11 @@
             "verticals": [
               "Essential Business"
             ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -4900,8 +5920,11 @@
             "verticals": [
               "Essential Business"
             ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -4939,8 +5962,11 @@
             "verticals": [
               "Essential Business"
             ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -4978,8 +6004,11 @@
             "verticals": [
               "Essential Business"
             ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -5139,6 +6168,75 @@
           }
         ],
         "total_input_items": 6
+      },
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "Office-based service, minimal fleet operations"
+          },
+          "Advanced Manufacturing": {
+            "relevant": false,
+            "reason": "Factory-based production, limited vehicle usage"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Construction sites require vehicle transport and safety"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Centre-based care, minimal commercial fleet needs"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Field-based work requires vehicle fleet management"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Waste collection and environmental work use vehicles"
+          },
+          "Estate Agency": {
+            "relevant": true,
+            "reason": "Agents use vehicles for property viewings regularly"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Food delivery and distribution require fleet safety"
+          },
+          "Marine & Offshore": {
+            "relevant": false,
+            "reason": "Maritime operations, not road vehicle focused"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Animal transport and farm operations use vehicles"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Distribution and delivery operations use vehicles"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Service-based, minimal fleet requirements"
+          },
+          "Precision Engineering": {
+            "relevant": false,
+            "reason": "Manufacturing-focused, limited vehicle operations"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Delivery and logistics operations require fleet safety"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Security patrols and transport use vehicles extensively"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Distribution and logistics operations use fleet vehicles"
+          }
+        }
       }
     },
     {
@@ -5183,8 +6281,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -5216,8 +6317,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -5249,8 +6353,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -5272,7 +6379,7 @@
           "solcat_citations": [],
           "feature_id": "compliance_regulatory.driver_compliance",
           "feature_name": "Driver Compliance Tracking",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #3",
@@ -5282,13 +6389,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display driver hours and rest-period compliance log against regulatory thresholds."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Store and organize regulatory documents (certificates, permits, inspection records) per vehicle for audit and compliance verification.",
@@ -5305,7 +6416,7 @@
           "solcat_citations": [],
           "feature_id": "compliance_regulatory.compliance_documentation",
           "feature_name": "Compliance Documentation",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #4",
@@ -5315,13 +6426,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Show document storage interface with regulatory documents organized by vehicle and type."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Provide a compliance status dashboard displaying the validity state (valid, expiring soon, expired) of all tracked regulatory obligations.",
@@ -5338,7 +6453,7 @@
           "solcat_citations": [],
           "feature_id": "compliance_regulatory.compliance_visibility",
           "feature_name": "Compliance Status Dashboard",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #5",
@@ -5348,13 +6463,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display compliance dashboard showing valid/expiring/expired status for all obligations."
-          }
+          },
+          "criticality_prev": "standard"
         }
       ],
       "stats": {
@@ -5484,6 +6603,75 @@
           }
         ],
         "total_input_items": 5
+      },
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "Office-based service, minimal fleet operations"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Operates delivery and logistics vehicles for distribution"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Construction sites require heavy equipment and transport vehicles"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Childcare centers have minimal or no fleet needs"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Field service teams use vehicles for site visits"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Waste collection and environmental work require fleet management"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "Agents use personal vehicles, minimal fleet operations"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Food delivery and distribution requires vehicle compliance tracking"
+          },
+          "Marine & Offshore": {
+            "relevant": false,
+            "reason": "Maritime operations, not road vehicle fleet focused"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Animal transport and farm operations need vehicle compliance"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Distribution and delivery of plants requires fleet management"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Service-based, minimal fleet requirements"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Field service and parts delivery require vehicle compliance"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Delivery and logistics operations need fleet compliance tracking"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Security patrols and transport require vehicle compliance management"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Distribution and logistics operations require fleet compliance"
+          }
+        }
       }
     },
     {
@@ -5525,8 +6713,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -5556,8 +6747,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -5587,8 +6781,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -5618,8 +6815,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -5649,8 +6849,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -5680,8 +6883,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -5711,8 +6917,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -5771,7 +6980,76 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null
+      "vendor_questions": null,
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "No fleet operations or vehicle management needs"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Manages material handling vehicles and forklifts"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Construction vehicles require tyre maintenance tracking"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "No fleet or vehicle operations involved"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Service vehicles need tyre maintenance management"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Waste collection and environmental vehicles need tracking"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "Minimal fleet operations or vehicle management"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Delivery and logistics vehicles require tyre management"
+          },
+          "Marine & Offshore": {
+            "relevant": false,
+            "reason": "Maritime operations, not land-based vehicle fleets"
+          },
+          "Non-Food Animals": {
+            "relevant": false,
+            "reason": "Animal care focus, minimal fleet requirements"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": false,
+            "reason": "Horticulture focus, minimal fleet operations"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Service-based, minimal vehicle fleet needs"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Service and delivery vehicles need tyre tracking"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Delivery vehicles and logistics require tyre management"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Patrol and response vehicles need tyre maintenance"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Distribution vehicles require comprehensive tyre management"
+          }
+        }
+      }
     },
     {
       "id": "fleet.accident_incident",
@@ -5815,8 +7093,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -5848,8 +7129,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -5871,7 +7155,7 @@
           "solcat_citations": [],
           "feature_id": "accident_incident.incident_documentation",
           "feature_name": "Incident Documentation",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #3",
@@ -5881,13 +7165,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
             "instruction": "Walk through uploading and storing photos/documents to an incident record."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Document damage assessment and generate repair cost estimates",
@@ -5904,7 +7192,7 @@
           "solcat_citations": [],
           "feature_id": "accident_incident.incident_documentation",
           "feature_name": "Incident Documentation",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #4",
@@ -5914,13 +7202,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display damage assessment form and repair cost estimate generated for an incident."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Associate incident records with corresponding insurance claim records",
@@ -5937,7 +7229,7 @@
           "solcat_citations": [],
           "feature_id": "accident_incident.incident_claims_integration",
           "feature_name": "Claims & Insurance Integration",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #5",
@@ -5947,13 +7239,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Show incident record linked to insurance claim with cross-reference visible."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Generate incident frequency reports by driver and by vehicle for safety analysis and driver coaching",
@@ -5970,7 +7266,7 @@
           "solcat_citations": [],
           "feature_id": "accident_incident.incident_analysis_reporting",
           "feature_name": "Analysis & Reporting",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #6",
@@ -5980,13 +7276,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display incident frequency report filtered by driver and vehicle with safety metrics."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Integrate forward collision warning, lane departure warning, and pedestrian/cyclist collision alerts from Advanced Driver Assistance System",
@@ -6019,8 +7319,11 @@
             "verticals": [
               "Essential Business"
             ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "not_verifiable",
@@ -6058,8 +7361,11 @@
             "verticals": [
               "Essential Business"
             ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "not_verifiable",
@@ -6097,8 +7403,11 @@
             "verticals": [
               "Essential Business"
             ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "not_verifiable",
@@ -6253,6 +7562,75 @@
           }
         ],
         "total_input_items": 6
+      },
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "Office-based service; minimal fleet operations"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Fleet for logistics, material transport, site visits"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Construction vehicles, site transport, safety critical"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Minimal fleet; not core to operations"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Field service vehicles, technician transport essential"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Waste collection, recycling vehicles, safety priority"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "Limited fleet; not primary business function"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Delivery vehicles, food safety, transport compliance"
+          },
+          "Marine & Offshore": {
+            "relevant": false,
+            "reason": "Maritime focus; land vehicle tracking not applicable"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Transport of animals, welfare, safety monitoring"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": false,
+            "reason": "Minimal fleet requirements; not core operation"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Service-based; limited vehicle fleet needs"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Field service, equipment transport, safety critical"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Delivery vehicles, logistics, multi-site operations"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Patrol vehicles, incident response, safety essential"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Distribution fleet, logistics, transport operations"
+          }
+        }
       }
     },
     {
@@ -6295,8 +7673,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -6327,8 +7708,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -6359,8 +7743,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -6381,7 +7768,7 @@
           "solcat_citations": [],
           "feature_id": "booking_reservation.handover_returns",
           "feature_name": "Handover & Returns",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #4",
@@ -6391,13 +7778,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display key handover checklist and vehicle return verification form."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Generate booking usage reports by vehicle and department",
@@ -6413,7 +7804,7 @@
           "solcat_citations": [],
           "feature_id": "booking_reservation.booking_reporting",
           "feature_name": "Booking Reporting",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #5",
@@ -6423,13 +7814,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Show booking usage report with metrics filtered by vehicle and department."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Support recurring bookings for regular or repeating routes",
@@ -6445,7 +7840,7 @@
           "solcat_citations": [],
           "feature_id": "booking_reservation.booking_management",
           "feature_name": "Booking Management",
-          "criticality": "advanced",
+          "criticality": "standard",
           "sme_attribution": {
             "status": "excluded",
             "reason": "advanced-tier — not minimum"
@@ -6453,13 +7848,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display recurring booking creation screen with repeat frequency options configured."
-          }
+          },
+          "criticality_prev": "advanced"
         }
       ],
       "stats": {
@@ -6577,6 +7976,75 @@
           }
         ],
         "total_input_items": 5
+      },
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "Office-based service, minimal vehicle fleet needs"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Site visits, logistics, multi-location operations"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Site inspections, client visits, project management"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Stationary facilities, limited transportation needs"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Field work, site visits, client meetings"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Mobile operations, multiple site visits daily"
+          },
+          "Estate Agency": {
+            "relevant": true,
+            "reason": "Property viewings, client transport, field work"
+          },
+          "Food": {
+            "relevant": false,
+            "reason": "Production-focused, limited shared vehicle use"
+          },
+          "Marine & Offshore": {
+            "relevant": true,
+            "reason": "Site access, personnel transport, operations"
+          },
+          "Non-Food Animals": {
+            "relevant": false,
+            "reason": "Facility-based operations, minimal fleet needs"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": false,
+            "reason": "Location-based business, limited vehicle sharing"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Client-based services, minimal fleet requirements"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Site visits, client meetings, logistics"
+          },
+          "Retail": {
+            "relevant": false,
+            "reason": "Store-based operations, minimal fleet needs"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Mobile patrols, multi-site operations, personnel transport"
+          },
+          "Wholesale Trade": {
+            "relevant": false,
+            "reason": "Warehouse-focused, dedicated delivery vehicles"
+          }
+        }
       }
     },
     {
@@ -6619,8 +8087,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -6651,8 +8122,13 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": [
+              "audit_trail"
+            ]
           },
           "verification": {
             "method": "screenshot",
@@ -6683,8 +8159,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -6705,7 +8184,7 @@
           "solcat_citations": [],
           "feature_id": "insurance_claims.policy_management",
           "feature_name": "Policy Management",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #4",
@@ -6715,13 +8194,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "config_check",
             "instruction": "Verify renewal alert configuration and show upcoming renewal notification example."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Record excess (deductible) amounts and approved payout amounts for each claim.",
@@ -6737,7 +8220,7 @@
           "solcat_citations": [],
           "feature_id": "insurance_claims.claim_financials",
           "feature_name": "Claim Financials",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #5",
@@ -6747,13 +8230,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display claim record showing excess amount and approved payout amount recorded."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Maintain premium payment history and analyze premium trends per vehicle to identify cost patterns and anomalies.",
@@ -6769,7 +8256,7 @@
           "solcat_citations": [],
           "feature_id": "insurance_claims.claim_financials",
           "feature_name": "Claim Financials",
-          "criticality": "advanced",
+          "criticality": "standard",
           "sme_attribution": {
             "status": "excluded",
             "reason": "advanced-tier — not minimum"
@@ -6777,13 +8264,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Show premium payment history and trend analysis report per vehicle."
-          }
+          },
+          "criticality_prev": "advanced"
         }
       ],
       "stats": {
@@ -6905,6 +8396,75 @@
           }
         ],
         "total_input_items": 5
+      },
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "No fleet operations or vehicle insurance needs"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "May operate delivery/logistics fleet vehicles"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Construction firms operate site vehicles and equipment"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "No fleet operations typical in childcare"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Service vehicles for on-site engineering work"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Waste/recycling operations require fleet management"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "Minimal fleet operations in property sales"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Delivery and logistics fleet for food distribution"
+          },
+          "Marine & Offshore": {
+            "relevant": false,
+            "reason": "Vessel management differs from vehicle fleet"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Transport vehicles for livestock/animal operations"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Delivery vehicles for plant distribution"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Minimal fleet requirements in personal care"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Service and delivery vehicles for operations"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Delivery and logistics fleet for retail operations"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Patrol and transport vehicles for security services"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Distribution fleet for wholesale goods delivery"
+          }
+        }
       }
     },
     {
@@ -6948,8 +8508,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -6980,8 +8543,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -7012,8 +8578,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -7044,8 +8613,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "config_check",
@@ -7076,8 +8648,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -7108,8 +8683,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -7160,7 +8738,76 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null
+      "vendor_questions": null,
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "Office-based service; minimal fleet requirements"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Manages production vehicles, forklifts, logistics fleet"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Construction sites require heavy equipment, transport vehicles"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Stationary facilities; no significant fleet operations"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Field service vehicles for site visits and equipment transport"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Waste collection, recycling trucks, service vehicles essential"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "Minimal fleet; agents use personal vehicles"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Delivery vans, refrigerated trucks for distribution"
+          },
+          "Marine & Offshore": {
+            "relevant": true,
+            "reason": "Support vessels, crew transport, offshore logistics fleet"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Transport vehicles for livestock, feed, veterinary services"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Delivery vehicles, transport for plants and supplies"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Service-based; minimal or no fleet requirements"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Logistics and equipment transport for manufacturing"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Delivery vans, stock transport, store logistics vehicles"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Patrol vehicles, transport for personnel and equipment"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Distribution trucks, logistics fleet for bulk goods"
+          }
+        }
+      }
     },
     {
       "id": "fleet.vendor_workshop",
@@ -7199,8 +8846,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -7229,8 +8879,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -7259,8 +8912,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "config_check",
@@ -7289,8 +8945,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -7319,8 +8978,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -7349,8 +9011,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -7394,7 +9059,76 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null
+      "vendor_questions": null,
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "No fleet or workshop operations in accounting services"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Manages equipment maintenance and external service vendors"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Tracks construction equipment and contractor service quality"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Minimal fleet or external workshop service needs"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Manages equipment maintenance and vendor performance tracking"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Tracks vehicle fleet maintenance and service vendors"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "Limited fleet management or workshop service requirements"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Manages delivery vehicles and equipment maintenance vendors"
+          },
+          "Marine & Offshore": {
+            "relevant": true,
+            "reason": "Critical for vessel and equipment maintenance tracking"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Manages transport vehicles and veterinary service vendors"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Tracks equipment maintenance and horticultural service vendors"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Minimal fleet or external workshop service needs"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Manages specialized equipment maintenance and vendor quality"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Tracks delivery fleet and maintenance service vendors"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Manages patrol vehicle fleet and maintenance vendors"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Manages logistics fleet and equipment service vendors"
+          }
+        }
+      }
     },
     {
       "id": "fleet.emissions_tracking",
@@ -7428,7 +9162,7 @@
           "solcat_citations": [],
           "feature_id": "emissions_tracking.emissions_calculation",
           "feature_name": "Emissions Calculation & Tracking",
-          "criticality": "must_have",
+          "criticality": "advanced",
           "sme_attribution": {
             "status": "orphaned",
             "reason": "eligible but not referenced in rollup"
@@ -7436,13 +9170,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Show CO2 emissions calculation and tracking per vehicle with fleet-wide aggregation."
-          }
+          },
+          "criticality_prev": "must_have"
         },
         {
           "text": "Generate emissions reports segmented by fuel type and vehicle class",
@@ -7460,7 +9198,7 @@
           "solcat_citations": [],
           "feature_id": "emissions_tracking.sustainability_reporting",
           "feature_name": "Sustainability & ESG Reporting",
-          "criticality": "standard",
+          "criticality": "advanced",
           "sme_attribution": {
             "status": "orphaned",
             "reason": "eligible but not referenced in rollup"
@@ -7468,13 +9206,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display emissions report segmented by fuel type and vehicle class."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Track fleet composition breakdown between electric vehicles and internal combustion engine vehicles",
@@ -7492,7 +9234,7 @@
           "solcat_citations": [],
           "feature_id": "emissions_tracking.fleet_composition",
           "feature_name": "Fleet Composition Monitoring",
-          "criticality": "standard",
+          "criticality": "advanced",
           "sme_attribution": {
             "status": "orphaned",
             "reason": "eligible but not referenced in rollup"
@@ -7500,13 +9242,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Show fleet composition breakdown chart comparing electric vehicles and ICE vehicles."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Generate ESG and sustainability reports for compliance and stakeholder communication",
@@ -7524,7 +9270,7 @@
           "solcat_citations": [],
           "feature_id": "emissions_tracking.sustainability_reporting",
           "feature_name": "Sustainability & ESG Reporting",
-          "criticality": "standard",
+          "criticality": "advanced",
           "sme_attribution": {
             "status": "orphaned",
             "reason": "eligible but not referenced in rollup"
@@ -7532,13 +9278,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display ESG and sustainability report generated for compliance and stakeholder communication."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Log and monitor EV charging station usage and associated costs",
@@ -7564,8 +9314,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -7596,8 +9349,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -7641,7 +9397,76 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null
+      "vendor_questions": null,
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "No fleet operations; office-based professional services"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Fleet for logistics, ESG reporting requirements"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Construction vehicles, site transport, sustainability tracking"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Minimal fleet operations; not core business need"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Field service vehicles, emissions monitoring for compliance"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Core business involves waste/recycling fleets, emissions critical"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "Limited fleet; not primary operational requirement"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Distribution and delivery fleets, cold chain logistics"
+          },
+          "Marine & Offshore": {
+            "relevant": true,
+            "reason": "Vessel operations, fuel tracking, maritime emissions"
+          },
+          "Non-Food Animals": {
+            "relevant": false,
+            "reason": "Minimal fleet dependency; not core operation"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": false,
+            "reason": "Limited transport needs; not primary business focus"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Service-based; minimal fleet operations"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Field service vehicles, logistics for component delivery"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Distribution networks, delivery fleets, sustainability reporting"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Patrol vehicles, mobile operations, emissions tracking"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Distribution fleets, logistics operations, ESG compliance"
+          }
+        }
+      }
     },
     {
       "id": "fleet.pool_car_sharing",
@@ -7671,7 +9496,7 @@
           "solcat_citations": [],
           "feature_id": "pool_car_sharing.booking_access",
           "feature_name": "Booking & Access",
-          "criticality": "must_have",
+          "criticality": "advanced",
           "sme_attribution": {
             "status": "orphaned",
             "reason": "eligible but not referenced in rollup"
@@ -7679,13 +9504,19 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": [
+              "mobile_access"
+            ]
           },
           "verification": {
             "method": "demo",
             "instruction": "Book a pool vehicle via mobile app showing real-time availability and confirmation flow."
-          }
+          },
+          "criticality_prev": "must_have"
         },
         {
           "text": "Calculate and allocate vehicle usage costs to departments based on actual usage metrics (distance, duration, fuel consumption)",
@@ -7701,7 +9532,7 @@
           "solcat_citations": [],
           "feature_id": "pool_car_sharing.usage_billing",
           "feature_name": "Usage & Billing",
-          "criticality": "must_have",
+          "criticality": "advanced",
           "sme_attribution": {
             "status": "orphaned",
             "reason": "eligible but not referenced in rollup"
@@ -7709,13 +9540,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Show cost allocation report by department based on distance, duration, and fuel consumption."
-          }
+          },
+          "criticality_prev": "must_have"
         },
         {
           "text": "Automate pre-trip vehicle inspection workflows with checklist capture and photo documentation",
@@ -7731,7 +9566,7 @@
           "solcat_citations": [],
           "feature_id": "pool_car_sharing.inspections_condition",
           "feature_name": "Inspections & Condition",
-          "criticality": "standard",
+          "criticality": "advanced",
           "sme_attribution": {
             "status": "orphaned",
             "reason": "eligible but not referenced in rollup"
@@ -7739,13 +9574,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
             "instruction": "Complete pre-trip inspection workflow with checklist and photo documentation capture."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Automate post-trip vehicle inspection workflows with checklist capture and photo documentation",
@@ -7761,7 +9600,7 @@
           "solcat_citations": [],
           "feature_id": "pool_car_sharing.inspections_condition",
           "feature_name": "Inspections & Condition",
-          "criticality": "standard",
+          "criticality": "advanced",
           "sme_attribution": {
             "status": "orphaned",
             "reason": "eligible but not referenced in rollup"
@@ -7769,13 +9608,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
             "instruction": "Complete post-trip inspection workflow with checklist and photo documentation capture."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Capture vehicle condition reports including cleanliness status and damage documentation from users",
@@ -7791,7 +9634,7 @@
           "solcat_citations": [],
           "feature_id": "pool_car_sharing.inspections_condition",
           "feature_name": "Inspections & Condition",
-          "criticality": "standard",
+          "criticality": "advanced",
           "sme_attribution": {
             "status": "orphaned",
             "reason": "eligible but not referenced in rollup"
@@ -7799,13 +9642,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display vehicle condition report form capturing cleanliness status and damage documentation."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Integrate keyless access mechanisms (smart locks, electronic key boxes) for automated vehicle unlock upon booking confirmation",
@@ -7829,8 +9676,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "not_verifiable",
@@ -7859,8 +9709,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -7912,7 +9765,76 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null
+      "vendor_questions": null,
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "Office-based service; minimal vehicle fleet needs"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Large facilities require inter-site transport logistics"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Multi-site projects need shared vehicle management"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Stationary centers; limited fleet requirements"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Field-based work requires shared vehicle access"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Mobile operations across multiple sites daily"
+          },
+          "Estate Agency": {
+            "relevant": true,
+            "reason": "Agents need flexible vehicle access for viewings"
+          },
+          "Food": {
+            "relevant": false,
+            "reason": "Production-focused; limited shared fleet use"
+          },
+          "Marine & Offshore": {
+            "relevant": true,
+            "reason": "Port/facility operations require transport coordination"
+          },
+          "Non-Food Animals": {
+            "relevant": false,
+            "reason": "Specialized operations; minimal shared vehicles"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": false,
+            "reason": "Site-based operations; limited fleet needs"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "Client-based services; minimal fleet requirements"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Multi-facility operations need transport management"
+          },
+          "Retail": {
+            "relevant": false,
+            "reason": "Store-based; limited shared vehicle applications"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Mobile patrols require flexible vehicle access"
+          },
+          "Wholesale Trade": {
+            "relevant": false,
+            "reason": "Warehouse-focused; dedicated fleet typically owned"
+          }
+        }
+      }
     },
     {
       "id": "fleet.analytics_ai",
@@ -7958,7 +9880,7 @@
           ],
           "feature_id": "analytics_ai.predictive_maintenance",
           "feature_name": "Predictive Maintenance",
-          "criticality": "must_have",
+          "criticality": "advanced",
           "sme_attribution": {
             "status": "orphaned",
             "reason": "eligible but not referenced in rollup"
@@ -7969,13 +9891,19 @@
               "Essential Business",
               "Logistics"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 2,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Display predictive maintenance recommendations based on usage patterns and historical data analysis."
-          }
+          },
+          "criticality_prev": "must_have"
         },
         {
           "text": "Anomaly detection for fuel consumption and operational efficiency",
@@ -8017,8 +9945,13 @@
               "Essential Business",
               "Logistics"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 2,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -8048,8 +9981,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -8071,7 +10007,7 @@
           "solcat_citations": [],
           "feature_id": "analytics_ai.predictive_maintenance",
           "feature_name": "Predictive Maintenance",
-          "criticality": "standard",
+          "criticality": "advanced",
           "sme_attribution": {
             "status": "orphaned",
             "reason": "eligible but not referenced in rollup"
@@ -8079,13 +10015,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
             "instruction": "Show AI-generated maintenance scheduling recommendations with cost optimization details."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Driver risk prediction and behaviour analysis including dangerous driving and speeding detection",
@@ -8124,8 +10064,13 @@
             "verticals": [
               "Logistics"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "demo",
@@ -8155,8 +10100,11 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "screenshot",
@@ -8214,7 +10162,76 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null
+      "vendor_questions": null,
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "No fleet operations in accounting services"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Internal logistics and material handling fleet optimization"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Construction vehicle fleet maintenance and scheduling"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Minimal or no fleet management requirements"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Service vehicles and equipment fleet management"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Waste collection and environmental vehicle fleets"
+          },
+          "Estate Agency": {
+            "relevant": false,
+            "reason": "Limited fleet operations in property services"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Delivery and logistics fleet for food distribution"
+          },
+          "Marine & Offshore": {
+            "relevant": true,
+            "reason": "Vessel and equipment fleet analytics critical"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Transport and logistics fleet for animal products"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": false,
+            "reason": "Minimal fleet requirements for nursery operations"
+          },
+          "Personal Care Services": {
+            "relevant": false,
+            "reason": "No significant fleet operations in personal care"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Internal logistics and specialized equipment fleets"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Delivery and distribution fleet optimization"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Patrol vehicle and mobile asset fleet management"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Distribution and logistics fleet operations"
+          }
+        }
+      }
     },
     {
       "id": "fleet.mobile_access",
@@ -8259,8 +10276,13 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": [
+              "responsive_design"
+            ]
           },
           "verification": {
             "method": "demo",
@@ -8292,8 +10314,14 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": [
+              "mobile_access",
+              "mobile_access"
+            ]
           },
           "verification": {
             "method": "demo",
@@ -8315,7 +10343,7 @@
           "solcat_citations": [],
           "feature_id": "mobile_access.cloud_deployment",
           "feature_name": "Cloud Deployment",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #3",
@@ -8325,13 +10353,17 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": false,
+            "cross_cutting": null
           },
           "verification": {
             "method": "config_check",
             "instruction": "Confirm cloud/browser deployment with no local installation required in system settings."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Mobile application enabling drivers and dispatchers to track vehicle status and communicate directly with fleet coordinators and controllers",
@@ -8366,8 +10398,15 @@
             "verticals": [
               "Logistics"
             ],
+            "psg_sectors": [
+              "Wholesale Trade"
+            ],
+            "psg_sector_count": 1,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": [
+              "mobile_access"
+            ]
           },
           "verification": {
             "method": "demo",
@@ -8397,8 +10436,13 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": [
+              "offline_mode"
+            ]
           },
           "verification": {
             "method": "demo",
@@ -8523,6 +10567,75 @@
           }
         ],
         "total_input_items": 4
+      },
+      "sector_relevance": {
+        "generic": false,
+        "sectors": {
+          "Accountancy": {
+            "relevant": false,
+            "reason": "Office-based work, minimal field operations needs"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Factory floor monitoring and logistics coordination"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Site inspections and on-site project management"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "Stationary facility-based operations"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Field engineers need mobile access to job sites"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Mobile teams conducting site assessments and monitoring"
+          },
+          "Estate Agency": {
+            "relevant": true,
+            "reason": "Agents need mobile access for property viewings"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Delivery and logistics operations in field"
+          },
+          "Marine & Offshore": {
+            "relevant": true,
+            "reason": "Vessel and offshore operations require mobile coordination"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Field-based animal care and farm operations"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Field monitoring and mobile inventory management"
+          },
+          "Personal Care Services": {
+            "relevant": true,
+            "reason": "Mobile therapists and service providers on-site"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Field service engineers need mobile access"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Store operations and mobile point-of-sale"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Mobile patrols and real-time incident reporting"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Logistics and warehouse mobile operations"
+          }
+        }
       }
     },
     {
@@ -8565,8 +10678,13 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": [
+              "pdpa_compliance"
+            ]
           },
           "verification": {
             "method": "screenshot",
@@ -8597,8 +10715,12 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
           },
           "verification": {
             "method": "config_check",
@@ -8629,8 +10751,13 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": [
+              "pdpa_compliance"
+            ]
           },
           "verification": {
             "method": "demo",
@@ -8661,8 +10788,12 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
           },
           "verification": {
             "method": "config_check",
@@ -8693,8 +10824,12 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
           },
           "verification": {
             "method": "screenshot",
@@ -8725,8 +10860,13 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": [
+              "cyber_essentials"
+            ]
           },
           "verification": {
             "method": "not_verifiable",
@@ -8861,6 +11001,75 @@
           }
         ],
         "total_input_items": 5
+      },
+      "sector_relevance": {
+        "generic": true,
+        "sectors": {
+          "Accountancy": {
+            "relevant": true,
+            "reason": "Handle sensitive client financial data; PDPA compliance mandatory"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Manage employee and operational data; security critical"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Store client project data and personal information securely"
+          },
+          "Early Childhood": {
+            "relevant": true,
+            "reason": "Handle children's sensitive data; strict privacy regulations apply"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Protect client designs and personal employee information"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Manage compliance records and client data securely"
+          },
+          "Estate Agency": {
+            "relevant": true,
+            "reason": "Handle client personal and financial information; PDPA essential"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Protect customer and supplier data; food safety records"
+          },
+          "Marine & Offshore": {
+            "relevant": true,
+            "reason": "Secure operational and personnel safety data"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Manage customer and animal health records securely"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Protect customer and supplier information"
+          },
+          "Personal Care Services": {
+            "relevant": true,
+            "reason": "Handle sensitive client health and personal data"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Protect proprietary designs and employee information"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Manage customer payment and personal data securely"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Critical for protecting client and operational data"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Secure customer and supplier transaction data"
+          }
+        }
       }
     },
     {
@@ -8905,8 +11114,12 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
           },
           "verification": {
             "method": "screenshot",
@@ -8938,8 +11151,13 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": [
+              "rbac"
+            ]
           },
           "verification": {
             "method": "screenshot",
@@ -8971,8 +11189,12 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
           },
           "verification": {
             "method": "demo",
@@ -9004,8 +11226,13 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": [
+              "audit_trail"
+            ]
           },
           "verification": {
             "method": "screenshot",
@@ -9027,7 +11254,7 @@
           "solcat_citations": [],
           "feature_id": "user_access_roles.user_lifecycle",
           "feature_name": "User Lifecycle Management",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #3",
@@ -9037,13 +11264,18 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
           },
           "verification": {
             "method": "demo",
             "instruction": "Demonstrate deactivating a user account and verifying login access is denied."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Two-factor authentication for user login",
@@ -9070,8 +11302,13 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": [
+              "mfa"
+            ]
           },
           "verification": {
             "method": "demo",
@@ -9196,6 +11433,75 @@
           }
         ],
         "total_input_items": 4
+      },
+      "sector_relevance": {
+        "generic": true,
+        "sectors": {
+          "Accountancy": {
+            "relevant": true,
+            "reason": "Multi-user access with audit trails essential for compliance"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Role-based access controls critical for production security"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Multiple teams need controlled access to project data"
+          },
+          "Early Childhood": {
+            "relevant": true,
+            "reason": "Staff access control required for child safety compliance"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Project teams need role-based access to technical data"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Multi-user access with audit trails for regulatory compliance"
+          },
+          "Estate Agency": {
+            "relevant": true,
+            "reason": "Agent access control and transaction audit trails needed"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Staff access control required for food safety compliance"
+          },
+          "Marine & Offshore": {
+            "relevant": true,
+            "reason": "Crew and operations access control for safety compliance"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Staff access control for animal welfare compliance"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Multiple staff need controlled access to operations"
+          },
+          "Personal Care Services": {
+            "relevant": true,
+            "reason": "Staff access control required for client data protection"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Role-based access critical for quality and security"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Multi-user POS and inventory access control essential"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Access control and audit trails core to security operations"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Multi-user inventory and order access control needed"
+          }
+        }
       }
     },
     {
@@ -9242,8 +11548,12 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
           },
           "verification": {
             "method": "demo",
@@ -9276,8 +11586,12 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
           },
           "verification": {
             "method": "demo",
@@ -9317,8 +11631,12 @@
             "verticals": [
               "Legal"
             ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 1,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
           },
           "verification": {
             "method": "screenshot",
@@ -9341,7 +11659,7 @@
           "solcat_citations": [],
           "feature_id": "integration_import_export.system_integration",
           "feature_name": "System Integration",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #3",
@@ -9351,13 +11669,18 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
           },
           "verification": {
             "method": "config_check",
             "instruction": "Show integration settings page listing Xero/QuickBooks connectors and sync configuration options."
-          }
+          },
+          "criticality_prev": "standard"
         },
         {
           "text": "Provide API access for custom integrations with third-party systems",
@@ -9385,8 +11708,12 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
           },
           "verification": {
             "method": "config_check",
@@ -9419,8 +11746,12 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
           },
           "verification": {
             "method": "config_check",
@@ -9453,8 +11784,12 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
           },
           "verification": {
             "method": "config_check",
@@ -9477,7 +11812,7 @@
           "solcat_citations": [],
           "feature_id": "integration_import_export.data_export",
           "feature_name": "Data Export",
-          "criticality": "standard",
+          "criticality": "must_have",
           "sme_attribution": {
             "status": "rolled_up",
             "reason": "rolled up into SME item #7",
@@ -9487,13 +11822,18 @@
           "sector_coverage": {
             "vertical_count": 0,
             "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
             "sol_cat_count": 0,
-            "is_generic": false
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
           },
           "verification": {
             "method": "config_check",
             "instruction": "Show backup/export scheduling interface with frequency, retention, and destination settings configured."
-          }
+          },
+          "criticality_prev": "standard"
         }
       ],
       "stats": {
@@ -9661,6 +12001,75 @@
           }
         ],
         "total_input_items": 8
+      },
+      "sector_relevance": {
+        "generic": true,
+        "sectors": {
+          "Accountancy": {
+            "relevant": true,
+            "reason": "Need to import client data and export financial records"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Integrate fleet data with production and logistics systems"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Fleet management for site visits and material transport"
+          },
+          "Early Childhood": {
+            "relevant": false,
+            "reason": "No fleet operations or vehicle management needs"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Fleet tracking for on-site service delivery and logistics"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Critical for waste collection and environmental fleet operations"
+          },
+          "Estate Agency": {
+            "relevant": true,
+            "reason": "Fleet data for property viewings and agent transportation"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Fleet integration for delivery and supply chain management"
+          },
+          "Marine & Offshore": {
+            "relevant": true,
+            "reason": "Fleet management for vessel and offshore operations"
+          },
+          "Non-Food Animals": {
+            "relevant": true,
+            "reason": "Fleet for animal transport and veterinary service delivery"
+          },
+          "Orchid & Plant Nurseries": {
+            "relevant": true,
+            "reason": "Fleet for product distribution and nursery operations"
+          },
+          "Personal Care Services": {
+            "relevant": true,
+            "reason": "Fleet for mobile service delivery and client visits"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Fleet integration with manufacturing and logistics systems"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Fleet for delivery, logistics and multi-store operations"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Fleet tracking for patrol vehicles and security operations"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Fleet management for distribution and bulk transport"
+          }
+        }
       }
     }
   ],
