@@ -1528,15 +1528,38 @@ function reqMatchesSector(r, sectorName) {
   return false;
 }
 
-// Check if a capability has any matching reqs for the active sector filter
+// Treat a cap as effectively-generic when step 7b said `generic=false` but the
+// per-sector map shows a strong majority (≥75%) of sectors are relevant.
+// Step 7b was too strict — it only set generic=true for universally applicable
+// capabilities, hiding things like "Customer Interaction Log" (16/16 sectors
+// relevant) or "Asset Register" (16/16) from the Generic view.
+const _GENERIC_SECTOR_MAJORITY = 0.75;
+
+function _isEffectivelyGeneric(sr) {
+  if (!sr) return false;
+  if (sr.generic === true) return true;
+  // Case A: step 7b didn't produce sector data AND no verticals → assume generic
+  const verts = sr.applicable_verticals;
+  const hasVerticals = Array.isArray(verts) && verts.length > 0;
+  const sectors = sr.sectors || {};
+  const sectorKeys = Object.keys(sectors);
+  if (!hasVerticals && sectorKeys.length === 0) return true;
+  // Case B: majority of sectors relevant → effectively generic
+  if (sectorKeys.length > 0) {
+    const relevantCount = sectorKeys.filter(k => sectors[k]?.relevant === true).length;
+    if (relevantCount / sectorKeys.length >= _GENERIC_SECTOR_MAJORITY) return true;
+  }
+  return false;
+}
+
 function capMatchesSector(c, sectorName) {
   if (!sectorName) return true;
   // Prefer step 7b content-based sector_relevance (per capability)
   // sector_relevance is injected into viewer payload by scripts/build_canonical_viewer.py
   const sr = c.sector_relevance;
   if (sr) {
-    if (sectorName === "__generic__") return sr.generic === true;
-    if (sr.generic) return true; // generic = all sectors
+    if (sectorName === "__generic__") return _isEffectivelyGeneric(sr);
+    if (_isEffectivelyGeneric(sr)) return true; // generic-ish = all sectors
     const sd = sr.sectors && sr.sectors[sectorName];
     if (sd) return sd.relevant === true;
   }
