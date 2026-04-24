@@ -10698,7 +10698,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system forecast future demand using historical sales data, seasonal patterns, and trends to recommend safety stock levels and guide procurement planning?",
+        "free_text_prompt": "Describe how the system generates demand forecasts, adjusts for seasonality, calculates safety stock, and links forecasts to purchase order creation.",
+        "covers": [
+          {
+            "text": "Analyze historical demand data with trend detection to identify patterns and directional changes over time",
+            "rationale": ""
+          },
+          {
+            "text": "Recognize seasonal and cyclical demand patterns to adjust forecasts for recurring variations",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate safety stock recommendations based on forecast variability and service level targets",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate demand forecasts with procurement planning to drive purchase orders and supplier scheduling",
+            "rationale": ""
+          },
+          {
+            "text": "Configure and edit forecast models based on inventory levels, trends, and base demand inputs",
+            "rationale": ""
+          },
+          {
+            "text": "Measure forecast accuracy and track bias to continuously improve prediction quality",
+            "rationale": ""
+          },
+          {
+            "text": "Incorporate collaborative forecast input from sales and demand planning teams",
+            "rationale": ""
+          },
+          {
+            "text": "Report forecast versus actual variance to identify model performance gaps and adjustment needs",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -12095,7 +12135,43 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system capture import-related costs like freight, duties, and insurance, allocate them across purchase order line items using configurable methods, and update inventory unit costs accordingly?",
+        "free_text_prompt": "Please describe which allocation methods you support (e.g., by value, weight, quantity) and how landed costs flow into inventory valuation.",
+        "covers": [
+          {
+            "text": "Capture and record freight, duty, insurance, and handling charges associated with purchase receipts",
+            "rationale": ""
+          },
+          {
+            "text": "Allocate landed costs across purchase order line items using configurable allocation methods (by value, weight, volume, or quantity)",
+            "rationale": ""
+          },
+          {
+            "text": "Update item unit cost and inventory valuation based on allocated landed costs",
+            "rationale": ""
+          },
+          {
+            "text": "Link landed cost entries to specific purchase receipts and shipments for traceability",
+            "rationale": ""
+          },
+          {
+            "text": "Convert landed costs across multiple currencies at time of receipt or allocation",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate and estimate landed costs before shipment arrival for cost forecasting",
+            "rationale": ""
+          },
+          {
+            "text": "Report variances between estimated and actual landed costs for cost control and analysis",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 7,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -12195,7 +12271,7 @@
             "sap_mm"
           ],
           "solcat_citations": [],
-          "feature_id": "consignment_receipt",
+          "feature_id": "consignment.consignment_receipt",
           "feature_name": "Consignment Receipt & Ownership",
           "criticality": "must_have",
           "sme_attribution": {
@@ -12229,7 +12305,7 @@
             "sap_mm"
           ],
           "solcat_citations": [],
-          "feature_id": "consignment_receipt",
+          "feature_id": "consignment.consignment_receipt",
           "feature_name": "Consignment Receipt & Ownership",
           "criticality": "must_have",
           "sme_attribution": {
@@ -12263,7 +12339,7 @@
             "sap_mm"
           ],
           "solcat_citations": [],
-          "feature_id": "consignment_visibility",
+          "feature_id": "consignment.consignment_visibility",
           "feature_name": "Consignment Visibility & Reporting",
           "criticality": "standard",
           "sme_attribution": {
@@ -12297,7 +12373,7 @@
             "sap_mm"
           ],
           "solcat_citations": [],
-          "feature_id": "consignment_settlement",
+          "feature_id": "consignment.consignment_settlement",
           "feature_name": "Consignment Settlement & Invoicing",
           "criticality": "standard",
           "sme_attribution": {
@@ -12331,7 +12407,7 @@
             "sap_mm"
           ],
           "solcat_citations": [],
-          "feature_id": "consignment_visibility",
+          "feature_id": "consignment.consignment_visibility",
           "feature_name": "Consignment Visibility & Reporting",
           "criticality": "advanced",
           "sme_attribution": {
@@ -12365,7 +12441,7 @@
             "sap_mm"
           ],
           "solcat_citations": [],
-          "feature_id": "consignment_visibility",
+          "feature_id": "consignment.consignment_visibility",
           "feature_name": "Consignment Visibility & Reporting",
           "criticality": "advanced",
           "sme_attribution": {
@@ -12394,7 +12470,7 @@
       },
       "features": [
         {
-          "id": "consignment_receipt",
+          "id": "consignment.consignment_receipt",
           "name": "Consignment Receipt & Ownership",
           "description": "Receive and track consignment stock without creating financial liability until consumption.",
           "req_idxs": [
@@ -12403,7 +12479,7 @@
           ]
         },
         {
-          "id": "consignment_visibility",
+          "id": "consignment.consignment_visibility",
           "name": "Consignment Visibility & Reporting",
           "description": "Report and monitor consigned stock by location, supplier, and ownership status.",
           "req_idxs": [
@@ -12413,7 +12489,7 @@
           ]
         },
         {
-          "id": "consignment_settlement",
+          "id": "consignment.consignment_settlement",
           "name": "Consignment Settlement & Invoicing",
           "description": "Settle and invoice consumed consignment stock based on actual usage.",
           "req_idxs": [
@@ -12423,7 +12499,39 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system track inventory owned by suppliers or customers separately from your own stock, and automatically invoice based on actual consumption rather than receipt?",
+        "free_text_prompt": "Please describe how the system handles consignment receipt, ownership transfer on consumption, and settlement invoicing.",
+        "covers": [
+          {
+            "text": "Receive consignment stock into inventory without creating a financial liability or payable entry until consumption occurs",
+            "rationale": ""
+          },
+          {
+            "text": "Automatically transfer ownership of consignment stock to the company upon consumption or withdrawal",
+            "rationale": ""
+          },
+          {
+            "text": "Generate separate inventory reports distinguishing between owned stock and consigned stock by location and supplier",
+            "rationale": ""
+          },
+          {
+            "text": "Periodically settle and invoice consumed consignment stock to the supplier based on actual usage",
+            "rationale": ""
+          },
+          {
+            "text": "Track and manage consignment inventory held at customer premises with visibility into quantity and ownership status",
+            "rationale": ""
+          },
+          {
+            "text": "Generate aging reports for consignment stock to identify slow-moving or obsolete consigned items",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 6,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -13332,7 +13440,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system define quality inspection checkpoints at receipt and dispatch, record inspection results, and enforce hold or release decisions on inventory?",
+        "free_text_prompt": "Please describe how your system supports inspection templates, sampling strategies, and non-conformance tracking.",
+        "covers": [
+          {
+            "text": "Define quality inspection templates with configurable pass/fail criteria for different product types and inspection points",
+            "rationale": ""
+          },
+          {
+            "text": "Trigger quality inspections automatically at goods receipt and pre-dispatch checkpoints",
+            "rationale": ""
+          },
+          {
+            "text": "Place received goods in quarantine status pending inspection completion and release decision",
+            "rationale": ""
+          },
+          {
+            "text": "Record inspection results with pass/fail determination and enforce hold or release decisions on inventory",
+            "rationale": ""
+          },
+          {
+            "text": "Support configurable sampling strategies including 100% inspection and statistical sampling rules",
+            "rationale": ""
+          },
+          {
+            "text": "Create non-conformance reports documenting defects, root causes, and corrective actions",
+            "rationale": ""
+          },
+          {
+            "text": "Store and retrieve certificates of analysis and other quality documentation",
+            "rationale": ""
+          },
+          {
+            "text": "Generate vendor quality scorecards based on inspection history and non-conformance trends",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -13675,7 +13823,39 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system classify hazardous materials, enforce storage compatibility rules, and generate shipping documentation for dangerous goods?",
+        "free_text_prompt": "Describe how your solution handles hazmat classification, storage location restrictions, and dangerous goods shipping document generation.",
+        "covers": [
+          {
+            "text": "Classify hazardous materials by hazmat category and assign UN numbers per item",
+            "rationale": ""
+          },
+          {
+            "text": "Store and retrieve material safety data sheets (MSDS) for all hazardous items",
+            "rationale": ""
+          },
+          {
+            "text": "Enforce storage compatibility rules to prevent incompatible hazardous materials from being co-located",
+            "rationale": ""
+          },
+          {
+            "text": "Generate shipping documentation for dangerous goods shipments",
+            "rationale": ""
+          },
+          {
+            "text": "Track and enforce regulatory quantity limits for hazardous materials per storage location",
+            "rationale": ""
+          },
+          {
+            "text": "Track staff training and certification status for hazmat handling and storage",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 6,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -14046,7 +14226,43 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system optimise pick routing, manage labour allocation to warehouse tasks, and integrate with automated material handling equipment like conveyors or RFID readers?",
+        "free_text_prompt": "Please describe which warehouse automation features your system supports (e.g., pick path optimisation, labour task assignment, equipment integrations) and how they are configured.",
+        "covers": [
+          {
+            "text": "Direct putaway and picking workflows to assign optimal locations and sequences to workers",
+            "rationale": ""
+          },
+          {
+            "text": "Optimise pick path routing by zone or sequence to minimise travel distance and time",
+            "rationale": ""
+          },
+          {
+            "text": "Plan labour capacity and track worker productivity against warehouse tasks",
+            "rationale": ""
+          },
+          {
+            "text": "Read RFID tags for bulk receipt, inbound counting, and inventory verification",
+            "rationale": ""
+          },
+          {
+            "text": "Interleave picking and putaway tasks to reduce empty travel and improve labour utilisation",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate with conveyor and sortation systems for automated material movement",
+            "rationale": ""
+          },
+          {
+            "text": "Optimise item slotting based on velocity and demand patterns to reduce pick time",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 7,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -14146,7 +14362,7 @@
             "sap_mm"
           ],
           "solcat_citations": [],
-          "feature_id": "vmi_visibility",
+          "feature_id": "vmi.vmi_visibility",
           "feature_name": "Inventory Visibility",
           "criticality": "must_have",
           "sme_attribution": {
@@ -14180,7 +14396,7 @@
             "sap_mm"
           ],
           "solcat_citations": [],
-          "feature_id": "vmi_parameters",
+          "feature_id": "vmi.vmi_parameters",
           "feature_name": "Replenishment Parameters",
           "criticality": "must_have",
           "sme_attribution": {
@@ -14214,7 +14430,7 @@
             "sap_mm"
           ],
           "solcat_citations": [],
-          "feature_id": "vmi_parameters",
+          "feature_id": "vmi.vmi_parameters",
           "feature_name": "Replenishment Parameters",
           "criticality": "must_have",
           "sme_attribution": {
@@ -14248,7 +14464,7 @@
             "sap_mm"
           ],
           "solcat_citations": [],
-          "feature_id": "vmi_fulfillment",
+          "feature_id": "vmi.vmi_fulfillment",
           "feature_name": "Receipt & Performance",
           "criticality": "standard",
           "sme_attribution": {
@@ -14282,7 +14498,7 @@
             "sap_mm"
           ],
           "solcat_citations": [],
-          "feature_id": "vmi_fulfillment",
+          "feature_id": "vmi.vmi_fulfillment",
           "feature_name": "Receipt & Performance",
           "criticality": "standard",
           "sme_attribution": {
@@ -14316,7 +14532,7 @@
             "sap_mm"
           ],
           "solcat_citations": [],
-          "feature_id": "vmi_visibility",
+          "feature_id": "vmi.vmi_visibility",
           "feature_name": "Inventory Visibility",
           "criticality": "advanced",
           "sme_attribution": {
@@ -14345,7 +14561,7 @@
       },
       "features": [
         {
-          "id": "vmi_visibility",
+          "id": "vmi.vmi_visibility",
           "name": "Inventory Visibility",
           "description": "Share real-time stock levels and demand forecasts with vendors via portal or EDI.",
           "req_idxs": [
@@ -14354,7 +14570,7 @@
           ]
         },
         {
-          "id": "vmi_parameters",
+          "id": "vmi.vmi_parameters",
           "name": "Replenishment Parameters",
           "description": "Define and maintain min/max stock levels and authorize vendor-initiated orders within agreed bounds.",
           "req_idxs": [
@@ -14363,7 +14579,7 @@
           ]
         },
         {
-          "id": "vmi_fulfillment",
+          "id": "vmi.vmi_fulfillment",
           "name": "Receipt & Performance",
           "description": "Automatically process vendor shipments and track VMI metrics including fill rate and stockouts.",
           "req_idxs": [
@@ -14374,7 +14590,39 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system share real-time stock levels with vendors and allow them to initiate replenishment orders within agreed minimum and maximum parameters?",
+        "free_text_prompt": "Describe how vendors access stock visibility, what integration methods you support (portal, EDI, API), and how min/max parameters are configured and enforced.",
+        "covers": [
+          {
+            "text": "Share real-time stock levels with vendors via portal or EDI integration",
+            "rationale": ""
+          },
+          {
+            "text": "Allow vendors to initiate replenishment orders within agreed parameters",
+            "rationale": ""
+          },
+          {
+            "text": "Define and maintain minimum and maximum stock level agreements per item per vendor",
+            "rationale": ""
+          },
+          {
+            "text": "Automatically create receipts from vendor shipment notices",
+            "rationale": ""
+          },
+          {
+            "text": "Track VMI performance metrics including fill rate and stockout incidents",
+            "rationale": ""
+          },
+          {
+            "text": "Share demand forecasts with VMI partners to support their replenishment planning",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 6,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -14717,7 +14965,39 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system provide dashboards and reports that analyze spend by vendor and category, track savings against negotiated prices, and measure PO cycle time?",
+        "free_text_prompt": "Please describe which spend analysis reports and dashboards are available out-of-the-box, and whether users can drill down by vendor, category, and time period.",
+        "covers": [
+          {
+            "text": "Analyze and report spend by vendor, category, and time period with drill-down capability",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate and report purchase price variance between actual and negotiated contract prices",
+            "rationale": ""
+          },
+          {
+            "text": "Track and report savings realized against negotiated contract prices",
+            "rationale": ""
+          },
+          {
+            "text": "Measure and report PO cycle time from requisition creation to goods receipt",
+            "rationale": ""
+          },
+          {
+            "text": "Identify and flag maverick spend — purchases made outside of established contracts or preferred vendors",
+            "rationale": ""
+          },
+          {
+            "text": "Generate vendor performance scorecards including on-time delivery and quality metrics",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 6,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -15432,7 +15712,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system assign HS tariff codes to items, track country of origin, generate customs declarations, and manage export licences for cross-border shipments?",
+        "free_text_prompt": "Describe how your solution handles HS code assignment, customs document generation, and export compliance screening.",
+        "covers": [
+          {
+            "text": "Assign and maintain Harmonised System (HS) tariff codes for all tradeable items with associated duty rates and classifications",
+            "rationale": ""
+          },
+          {
+            "text": "Generate customs declaration documents in required format for submission to customs authorities",
+            "rationale": ""
+          },
+          {
+            "text": "Track and record country of origin for all inventory items to support trade agreement claims and customs declarations",
+            "rationale": ""
+          },
+          {
+            "text": "Manage export licences and perform restricted party screening against government sanction lists before shipment",
+            "rationale": ""
+          },
+          {
+            "text": "Assign Incoterms to shipments to define cost and responsibility allocation between buyer and seller",
+            "rationale": ""
+          },
+          {
+            "text": "Manage free trade agreement preference claims and eligibility rules to optimize duty treatment",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate with Singapore TradeNet or equivalent national customs clearance system for electronic declaration submission",
+            "rationale": ""
+          },
+          {
+            "text": "Track duty drawback and duty deferral claims to recover or defer import duties on eligible goods",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -17062,7 +17382,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system use machine learning to improve demand forecasting, detect unusual consumption patterns, and recommend replenishment quantities based on historical data?",
+        "free_text_prompt": "Please describe which AI/ML techniques you use for demand prediction, anomaly detection, and replenishment optimization, and whether these run automatically or require manual configuration.",
+        "covers": [
+          {
+            "text": "Demand prediction and forecasting for inventory planning and replenishment decisions",
+            "rationale": ""
+          },
+          {
+            "text": "Intelligent reorder point and replenishment quantity recommendations based on demand patterns",
+            "rationale": ""
+          },
+          {
+            "text": "Anomaly detection in stock consumption patterns to identify unusual demand behavior",
+            "rationale": ""
+          },
+          {
+            "text": "Predictive lead time estimation from suppliers to improve order timing and safety stock planning",
+            "rationale": ""
+          },
+          {
+            "text": "Automated classification and demand profile assignment for new inventory items",
+            "rationale": ""
+          },
+          {
+            "text": "Predictive alerts for supply chain disruptions, including material delivery delays that impact project timelines",
+            "rationale": ""
+          },
+          {
+            "text": "Demand sensing from external signals and real-time data sources to enhance forecast accuracy",
+            "rationale": ""
+          },
+          {
+            "text": "Natural language interface for querying inventory status, order information, and supply chain metrics",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {

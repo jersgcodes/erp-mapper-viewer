@@ -829,7 +829,7 @@
             "wikipedia_eam"
           ],
           "solcat_citations": [],
-          "feature_id": "lifecycle_states",
+          "feature_id": "lifecycle.lifecycle_states",
           "feature_name": "Lifecycle State Management",
           "criticality": "must_have",
           "sme_attribution": {
@@ -1053,7 +1053,7 @@
             "wikipedia_eam"
           ],
           "solcat_citations": [],
-          "feature_id": "lifecycle_states",
+          "feature_id": "lifecycle.lifecycle_states",
           "feature_name": "Lifecycle State Management",
           "criticality": "standard",
           "sme_attribution": {
@@ -1095,7 +1095,7 @@
           "solcat_citations": [
             "essential-business__field-service-management"
           ],
-          "feature_id": "lifecycle_visibility",
+          "feature_id": "lifecycle.lifecycle_visibility",
           "feature_name": "Lifecycle Visibility & Planning",
           "criticality": "must_have",
           "sme_attribution": {
@@ -1129,7 +1129,7 @@
       },
       "features": [
         {
-          "id": "lifecycle_states",
+          "id": "lifecycle.lifecycle_states",
           "name": "Lifecycle State Management",
           "description": "Define and enforce asset states from acquisition through disposal with audit trail.",
           "req_idxs": [
@@ -1164,7 +1164,7 @@
           ]
         },
         {
-          "id": "lifecycle_visibility",
+          "id": "lifecycle.lifecycle_visibility",
           "name": "Lifecycle Visibility & Planning",
           "description": "Provide asset managers access to lifecycle data and documentation for maintenance and operations.",
           "req_idxs": [
@@ -1391,7 +1391,7 @@
             "sap_s4hana_pm"
           ],
           "solcat_citations": [],
-          "feature_id": "depreciation_methods",
+          "feature_id": "depreciation.depreciation_methods",
           "feature_name": "Depreciation Methods",
           "criticality": "must_have",
           "sme_attribution": {
@@ -1499,7 +1499,7 @@
             "sap_s4hana_pm"
           ],
           "solcat_citations": [],
-          "feature_id": "depreciation_calculation",
+          "feature_id": "depreciation.depreciation_calculation",
           "feature_name": "Depreciation Calculation",
           "criticality": "standard",
           "sme_attribution": {
@@ -1573,7 +1573,7 @@
             "sap_s4hana_pm"
           ],
           "solcat_citations": [],
-          "feature_id": "depreciation_reporting",
+          "feature_id": "depreciation.depreciation_reporting",
           "feature_name": "Depreciation Reporting",
           "criticality": "standard",
           "sme_attribution": {
@@ -1645,7 +1645,7 @@
             "sap_s4hana_pm"
           ],
           "solcat_citations": [],
-          "feature_id": "depreciation_methods",
+          "feature_id": "depreciation.depreciation_methods",
           "feature_name": "Depreciation Methods",
           "criticality": "advanced",
           "sme_attribution": {
@@ -1674,7 +1674,7 @@
       },
       "features": [
         {
-          "id": "depreciation_methods",
+          "id": "depreciation.depreciation_methods",
           "name": "Depreciation Methods",
           "description": "Support multiple depreciation calculation approaches including time-based and usage-based methods.",
           "req_idxs": [
@@ -1691,7 +1691,7 @@
           ]
         },
         {
-          "id": "depreciation_calculation",
+          "id": "depreciation.depreciation_calculation",
           "name": "Depreciation Calculation",
           "description": "Calculate depreciation on a daily pro-rata basis for mid-period acquisitions and disposals.",
           "req_idxs": [
@@ -1715,7 +1715,7 @@
           ]
         },
         {
-          "id": "depreciation_reporting",
+          "id": "depreciation.depreciation_reporting",
           "name": "Depreciation Reporting",
           "description": "Report accumulated depreciation and net book value by asset, class, and cost center.",
           "req_idxs": [
@@ -6364,7 +6364,7 @@
             "wikipedia_eam"
           ],
           "solcat_citations": [],
-          "feature_id": "compliance_certification",
+          "feature_id": "compliance.compliance_certification",
           "feature_name": "Compliance Certification & Renewal",
           "criticality": "must_have",
           "sme_attribution": {
@@ -6608,7 +6608,7 @@
           ]
         },
         {
-          "id": "compliance_certification",
+          "id": "compliance.compliance_certification",
           "name": "Compliance Certification & Renewal",
           "description": "Maintain certificate registry with expiry tracking and automated renewal alerts.",
           "req_idxs": [
@@ -7183,7 +7183,7 @@
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "sap_s4hana_pm",
         "ibm_maximo",
@@ -7485,7 +7485,43 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system support formal Failure Mode and Effects Analysis with risk scoring, maintenance strategy recommendations per failure mode, and traceability to preventive maintenance plans?",
+        "free_text_prompt": "Please describe how the system captures failure modes, calculates risk priority, recommends maintenance strategies, and links FMEA findings to maintenance schedules.",
+        "covers": [
+          {
+            "text": "Maintain a Failure Mode and Effects Analysis (FMEA) register organized by asset class, documenting all identified failure modes for each asset type.",
+            "rationale": ""
+          },
+          {
+            "text": "Capture the chain of failure mode, root cause, effect, and detection method for each identified failure mode.",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate and record risk priority number (RPN) or equivalent criticality score for each failure mode using severity, occurrence probability, and detection difficulty.",
+            "rationale": ""
+          },
+          {
+            "text": "Recommend appropriate maintenance strategy per failure mode: run-to-failure, preventive maintenance, condition-based monitoring, or predictive maintenance.",
+            "rationale": ""
+          },
+          {
+            "text": "Maintain a reusable library of standard failure modes that can be applied across multiple asset classes to accelerate FMEA development.",
+            "rationale": ""
+          },
+          {
+            "text": "Establish traceability links between FMEA entries and the preventive maintenance plans they justify.",
+            "rationale": ""
+          },
+          {
+            "text": "Implement a formal review workflow to periodically update and validate FMEA analyses.",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 7,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -7554,7 +7590,8 @@
             "reason": "Limited asset maintenance requirements in distribution"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "asset.reliability_engineering",
@@ -7564,7 +7601,7 @@
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "ibm_maximo",
         "sap_s4hana_pm"
@@ -7848,7 +7885,43 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system identify chronically failing assets using failure metrics, perform Pareto analysis by asset, and support structured root cause analysis with corrective action tracking?",
+        "free_text_prompt": "Please describe how your system identifies bad-actor assets, aggregates failure data for analysis, and manages root cause investigations with follow-up actions.",
+        "covers": [
+          {
+            "text": "Perform Pareto analysis of failure counts aggregated by asset, asset class, and location to identify concentration of failures",
+            "rationale": ""
+          },
+          {
+            "text": "Identify chronically failing assets (bad actors) using metrics such as MTBF, total cost of failure, or cumulative downtime",
+            "rationale": ""
+          },
+          {
+            "text": "Support structured root cause analysis workflows with templates including 5-whys and fishbone diagram methods",
+            "rationale": ""
+          },
+          {
+            "text": "Assign corrective actions from root cause analysis investigations and track follow-up completion",
+            "rationale": ""
+          },
+          {
+            "text": "Maintain a standardized failure code taxonomy aligned with ISO 14224 or equivalent industry standard",
+            "rationale": ""
+          },
+          {
+            "text": "Track and visualize reliability growth trends following implementation of corrective actions",
+            "rationale": ""
+          },
+          {
+            "text": "Perform Weibull analysis on historical failure data to model time-to-failure distributions and predict failure patterns",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 7,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -7917,7 +7990,8 @@
             "reason": "Valuable for warehouse equipment and logistics system reliability"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "asset.shutdown_turnaround",
@@ -7928,7 +8002,7 @@
         "enterprise",
         "industry_specific"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "sap_s4hana_pm",
         "ibm_maximo"
@@ -8256,7 +8330,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system create and manage major shutdown or turnaround events as distinct planning objects, with critical-path scheduling, resource leveling, and event-level budget tracking separate from routine work orders?",
+        "free_text_prompt": "Describe how your solution structures shutdown events, handles critical-path scheduling, and tracks costs and resources at the event level.",
+        "covers": [
+          {
+            "text": "Create and manage shutdown/turnaround/outage events as distinct planning objects, separate from routine work orders",
+            "rationale": ""
+          },
+          {
+            "text": "Define event scope by aggregating work orders and inspections into a single shutdown plan",
+            "rationale": ""
+          },
+          {
+            "text": "Track and control costs against a fixed event budget with real-time visibility",
+            "rationale": ""
+          },
+          {
+            "text": "Schedule work on a critical path basis across the shutdown event window to identify and manage bottlenecks",
+            "rationale": ""
+          },
+          {
+            "text": "Level resources (labour, tools, contractors) across the event to optimize availability and utilization",
+            "rationale": ""
+          },
+          {
+            "text": "Enforce event-wide approval workflows distinct from individual work order approvals",
+            "rationale": ""
+          },
+          {
+            "text": "Provide daily progress dashboards and status reporting during the shutdown execution",
+            "rationale": ""
+          },
+          {
+            "text": "Capture post-event reports and lessons-learned documentation for continuous improvement",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -8325,7 +8439,8 @@
             "reason": "Warehouse operations have minimal critical asset shutdowns"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "asset.capital_projects",
@@ -8809,7 +8924,7 @@
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "ibm_maximo",
         "sap_s4hana_pm"
@@ -9099,7 +9214,43 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system model multi-year asset replacement scenarios, calculate remaining useful life, and prioritize replacement candidates to support long-range capital investment planning?",
+        "free_text_prompt": "Describe how the system supports scenario comparison (e.g., replace now vs. defer), remaining useful life calculation, and integration with capital budgeting.",
+        "covers": [
+          {
+            "text": "Calculate remaining useful life (RUL) for each asset based on age, condition assessment, and manufacturer specifications",
+            "rationale": ""
+          },
+          {
+            "text": "Maintain replacement cost and lead-time data by asset class to support investment planning",
+            "rationale": ""
+          },
+          {
+            "text": "Model multi-year capital investment plans across configurable time horizons (5, 10, 20 years)",
+            "rationale": ""
+          },
+          {
+            "text": "Compare replacement scenarios (immediate replacement, refurbishment, deferral) with cost and risk outcomes",
+            "rationale": ""
+          },
+          {
+            "text": "Prioritize asset replacement candidates using risk and cost criteria to optimize capital allocation",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate approved replacement plans with capital project creation and budgeting workflows",
+            "rationale": ""
+          },
+          {
+            "text": "Provide portfolio-level dashboard of asset health status and aggregate investment requirements",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 7,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -9168,7 +9319,8 @@
             "reason": "Warehouse equipment, material handling systems replacement"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "asset.linear_assets",
@@ -9178,7 +9330,7 @@
       "applicability": [
         "industry_specific"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "ibm_maximo",
         "sap_s4hana_pm"
@@ -9465,7 +9617,43 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system manage assets defined by distance ranges (start and end points) and track condition and work scope by linear segments rather than single locations?",
+        "free_text_prompt": "Describe how your system handles distance-based asset references, segment-level condition tracking, and work order scoping for linear assets.",
+        "covers": [
+          {
+            "text": "Support linear asset data model with start and end reference points to define asset extent",
+            "rationale": ""
+          },
+          {
+            "text": "Record asset measurements using distance-based references (km, mile markers) rather than point coordinates",
+            "rationale": ""
+          },
+          {
+            "text": "Attach condition data to linear segments with from-to distance ranges",
+            "rationale": ""
+          },
+          {
+            "text": "Define work order scope by linear extent (distance range) rather than single-point asset reference",
+            "rationale": ""
+          },
+          {
+            "text": "Support dynamic segmentation to split and merge linear segments while preserving historical records",
+            "rationale": ""
+          },
+          {
+            "text": "Track changes in ownership and maintenance responsibility by linear segment",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate with automated inspection systems (inspection trains, pipeline pigs) to capture condition data along linear assets",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 7,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -9534,7 +9722,8 @@
             "reason": "Wholesale distribution lacks linear asset tracking"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "asset.geospatial_gis",
@@ -9545,7 +9734,7 @@
         "enterprise",
         "industry_specific"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "ibm_maximo",
         "sap_s4hana_pm"
@@ -9825,7 +10014,43 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system display assets on an interactive map with GIS layer integration and support work order creation or route optimization from the map interface?",
+        "free_text_prompt": "Please describe which GIS platforms your system integrates with and how users create work orders or optimize routes using the map.",
+        "covers": [
+          {
+            "text": "Display asset register on interactive map with filtering and layer control capabilities",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate with GIS platforms (ESRI ArcGIS, QGIS, PostGIS) for data exchange and visualization",
+            "rationale": ""
+          },
+          {
+            "text": "Synchronize asset coordinates from authoritative GIS source to maintain single source of truth",
+            "rationale": ""
+          },
+          {
+            "text": "Overlay contextual GIS layers (land ownership, environmental zones, hazard areas) on asset map",
+            "rationale": ""
+          },
+          {
+            "text": "Create and manage work orders directly from map interface with drill-down to asset details",
+            "rationale": ""
+          },
+          {
+            "text": "Support geofence-based work assignment to dispatch crews to nearest or optimal assets",
+            "rationale": ""
+          },
+          {
+            "text": "Optimize inspection and maintenance routes across distributed asset locations",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 7,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -9894,7 +10119,8 @@
             "reason": "Inventory managed at warehouse facilities"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "asset.sla_commercial",
@@ -10949,7 +11175,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "sap_s4hana_pm",
         "ibm_maximo"
@@ -11272,7 +11498,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system provide analytical tools to optimize spare-parts inventory levels by analyzing demand patterns, lead times, and costs to recommend what to stock and where?",
+        "free_text_prompt": "Describe which analytical methods (e.g., safety stock calculation, ABC classification, obsolescence detection, multi-site pooling) your system uses to support stocking decisions.",
+        "covers": [
+          {
+            "text": "Classify spare parts by consumption value and criticality to prioritize inventory management efforts",
+            "rationale": ""
+          },
+          {
+            "text": "Identify slow-moving and obsolete inventory to reduce carrying costs and write-off risk",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate economic order quantity per part to minimize total procurement and holding costs",
+            "rationale": ""
+          },
+          {
+            "text": "Determine optimal safety stock levels based on demand variability and supplier lead times",
+            "rationale": ""
+          },
+          {
+            "text": "Track supersession and alternate-part relationships to optimize stock consolidation and reduce redundant inventory",
+            "rationale": ""
+          },
+          {
+            "text": "Model stock-out costs including production downtime, penalties, and expedited shipping to inform stocking decisions",
+            "rationale": ""
+          },
+          {
+            "text": "Enable pooled or shared spare-parts inventory across multiple sites to reduce total stock while maintaining service levels",
+            "rationale": ""
+          },
+          {
+            "text": "Perform what-if scenario analysis to evaluate the impact of stocking-policy changes on cost and service levels",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -11341,7 +11607,8 @@
             "reason": "Logistics equipment maintenance requires spare parts"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "asset.mobile_disconnected",
@@ -11832,7 +12099,7 @@
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "ibm_maximo",
         "sap_s4hana_pm"
@@ -12118,7 +12385,43 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can your system display work instructions as AR overlays on physical assets or digital twins, and support remote expert collaboration with real-time annotations?",
+        "free_text_prompt": "Please describe how your solution enables AR work instruction display, the devices supported, and how remote collaboration features work.",
+        "covers": [
+          {
+            "text": "Create and maintain a 3D digital twin of physical assets linked to their master records",
+            "rationale": ""
+          },
+          {
+            "text": "Display work instructions as AR overlays on physical assets via tablet or headset devices",
+            "rationale": ""
+          },
+          {
+            "text": "Provide step-by-step AR guidance with hands-free navigation for work execution",
+            "rationale": ""
+          },
+          {
+            "text": "Enable remote expert collaboration via video call with real-time AR annotations on the asset or twin",
+            "rationale": ""
+          },
+          {
+            "text": "Support 'what-if' maintenance simulation scenarios using the digital twin",
+            "rationale": ""
+          },
+          {
+            "text": "Ingest and synchronize 3D geometry from CAD and BIM sources for twin creation and updates",
+            "rationale": ""
+          },
+          {
+            "text": "Provide training mode allowing users to practice procedures on the digital twin without affecting the physical asset",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 7,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -12187,7 +12490,8 @@
             "reason": "Limited equipment maintenance or technical complexity"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "asset.leasing",
@@ -12690,7 +12994,7 @@
         "enterprise",
         "industry_specific"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "ibm_maximo",
         "sap_s4hana_pm"
@@ -13015,7 +13319,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system track patch and firmware versions for connected OT assets, identify known vulnerabilities against them, and maintain an audit trail of changes and remote access?",
+        "free_text_prompt": "Describe how the system integrates vulnerability data, enforces change approval workflows, and links OT asset security incidents to your audit log.",
+        "covers": [
+          {
+            "text": "Track patch level and firmware version for each connected OT asset",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate CVE feeds and map known vulnerabilities to each asset",
+            "rationale": ""
+          },
+          {
+            "text": "Enforce lockout and approval workflow for patch and firmware changes",
+            "rationale": ""
+          },
+          {
+            "text": "Maintain audit trail of all remote-access sessions to OT assets",
+            "rationale": ""
+          },
+          {
+            "text": "Map OT network zones and conduits (per IEC 62443) to asset locations",
+            "rationale": ""
+          },
+          {
+            "text": "Maintain security incident history per asset with integration to IT security tools",
+            "rationale": ""
+          },
+          {
+            "text": "Register and track compensating controls for assets that cannot be patched",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate risk score per asset combining criticality, vulnerability exposure, and network exposure",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -13084,7 +13428,8 @@
             "reason": "No significant operational technology systems"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "asset.mobile_access",

@@ -1975,7 +1975,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "ms_365",
         "odoo_platform",
@@ -2698,7 +2698,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system include built-in team messaging with channels, threaded discussions, and activity feeds that link to ERP records?",
+        "free_text_prompt": "Please describe how users access messaging channels, whether threads and mentions are supported, and how ERP record changes appear in the activity feed.",
+        "covers": [
+          {
+            "text": "Support real-time chat and messaging functionality",
+            "rationale": ""
+          },
+          {
+            "text": "Support team channels organized by department, project, or topic",
+            "rationale": ""
+          },
+          {
+            "text": "Enable threaded conversations with user mentions and emoji reactions",
+            "rationale": ""
+          },
+          {
+            "text": "Allow file and document sharing within conversations",
+            "rationale": ""
+          },
+          {
+            "text": "Display activity feed showing record changes, approvals, and comments",
+            "rationale": ""
+          },
+          {
+            "text": "Provide full-text search across all messages, threads, and shared content",
+            "rationale": ""
+          },
+          {
+            "text": "Display user presence and status indicators",
+            "rationale": ""
+          },
+          {
+            "text": "Offer full collaboration functionality on mobile devices (iOS and Android)",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": true,
         "sectors": {
@@ -2767,7 +2807,8 @@
             "reason": "Order coordination, inventory updates, supplier communication"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "other.workflow_automation",
@@ -8272,7 +8313,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "ms_365",
         "google_workspace",
@@ -9329,7 +9370,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system include AI-powered natural-language search, auto-generated summaries, and smart recommendations that work across multiple ERP modules?",
+        "free_text_prompt": "Please describe which ERP modules the AI assistant covers and provide examples of natural-language queries or recommendations it can generate.",
+        "covers": [
+          {
+            "text": "Natural-language search across ERP data to retrieve records matching user intent (e.g., 'show overdue invoices over $5k')",
+            "rationale": ""
+          },
+          {
+            "text": "Chatbot interface for self-service queries with configurable conversation boundaries and knowledge base",
+            "rationale": ""
+          },
+          {
+            "text": "Auto-generated summaries of key records (customer history, project status, document overviews)",
+            "rationale": ""
+          },
+          {
+            "text": "Smart field suggestions and auto-completion based on historical patterns and user context",
+            "rationale": ""
+          },
+          {
+            "text": "Automatic document classification and type recognition (e.g., invoice, contract, report)",
+            "rationale": ""
+          },
+          {
+            "text": "Optical Character Recognition (OCR) to make images and scanned documents searchable and indexable",
+            "rationale": ""
+          },
+          {
+            "text": "Source citation and reference tracking to reduce hallucination risk in factual responses",
+            "rationale": ""
+          },
+          {
+            "text": "Upload and integration of company-specific knowledge bases, brand guidelines, and contextual materials to customize AI outputs",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": true,
         "sectors": {
@@ -9398,7 +9479,8 @@
             "reason": "AI search and recommendations optimize order management and supplier insights"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "other.backup_disaster_recovery",
@@ -11251,7 +11333,7 @@
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "ms_365",
         "odoo_platform",
@@ -11567,7 +11649,43 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system maintain a single authoritative master record for each customer, product, vendor, and employee with automatic deduplication and validation rules applied across all modules?",
+        "free_text_prompt": "Describe how your system prevents duplicate master records, enforces data quality rules, and synchronizes changes across modules.",
+        "covers": [
+          {
+            "text": "Golden record management with cross-module deduplication to maintain a single authoritative version of each master entity (customer, product, vendor, employee) across all ERP modules",
+            "rationale": ""
+          },
+          {
+            "text": "Data quality rules and validation engine applied automatically on master record creation and update to enforce consistency and completeness",
+            "rationale": ""
+          },
+          {
+            "text": "Data stewardship workflow enabling users to propose, review, and approve changes to master records with audit trail",
+            "rationale": ""
+          },
+          {
+            "text": "Mass data import capability with built-in cleansing, mapping, and validation to onboard and reconcile large volumes of master data",
+            "rationale": ""
+          },
+          {
+            "text": "Master data synchronization across integrated systems to propagate approved changes and maintain consistency in real-time or batch mode",
+            "rationale": ""
+          },
+          {
+            "text": "Location master data management to support multi-site operations and geographic data requirements",
+            "rationale": ""
+          },
+          {
+            "text": "Data lineage tracking to record which system created, modified, or synchronized each master record and when",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 7,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": true,
         "sectors": {
@@ -11636,7 +11754,8 @@
             "reason": "Product, customer, supplier master data critical for distribution"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "other.compliance_audit",
@@ -14637,7 +14756,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "docusign",
         "odoo_platform",
@@ -15066,7 +15185,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system capture legally binding electronic signatures on documents within the ERP workflow, with signer authentication and a tamper-evident audit trail?",
+        "free_text_prompt": "Please describe whether you provide built-in e-signing or integrate with third-party providers, and confirm support for multi-signer workflows and document templates.",
+        "covers": [
+          {
+            "text": "Send documents for electronic signature from within the ERP workflow",
+            "rationale": ""
+          },
+          {
+            "text": "Authenticate signers via email, SMS OTP, or identity verification methods",
+            "rationale": ""
+          },
+          {
+            "text": "Store signed documents with tamper-evident audit trail and immutable record of signature events",
+            "rationale": ""
+          },
+          {
+            "text": "Support multi-signer workflows with configurable signing order and sequence",
+            "rationale": ""
+          },
+          {
+            "text": "Maintain template library for frequently used documents requiring signatures",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate with third-party e-signature providers (DocuSign, Adobe Sign) or provide built-in signing capability",
+            "rationale": ""
+          },
+          {
+            "text": "Support electronic signing of prescribed Estate Agency Agreements",
+            "rationale": ""
+          },
+          {
+            "text": "Enable digital completion of Option to Purchase and Sale and Purchase Agreements for uncompleted private residential properties",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": true,
         "sectors": {
@@ -15135,7 +15294,8 @@
             "reason": "Purchase orders, supplier contracts, delivery confirmations"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "other.print_label",

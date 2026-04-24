@@ -9514,7 +9514,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "netsuite",
         "sap_s4hana_finance",
@@ -9863,7 +9863,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system automatically eliminate inter-company transactions, translate foreign subsidiary currencies, and produce consolidated financial statements for multi-entity groups?",
+        "free_text_prompt": "Please describe how your system handles inter-company elimination, currency translation methods, and consolidated reporting across subsidiaries.",
+        "covers": [
+          {
+            "text": "Support multi-entity organizational hierarchy with configurable ownership percentages and parent-subsidiary relationships",
+            "rationale": ""
+          },
+          {
+            "text": "Automatically identify, tag, and balance inter-company transactions across legal entities",
+            "rationale": ""
+          },
+          {
+            "text": "Generate and post inter-company elimination entries to remove inter-company sales, receivables, payables, and profits from consolidated results",
+            "rationale": ""
+          },
+          {
+            "text": "Translate foreign subsidiary financial statements to group reporting currency using configurable exchange rates and translation methods",
+            "rationale": ""
+          },
+          {
+            "text": "Produce consolidated trial balance and consolidated financial statements (income statement, balance sheet, cash flow) at group level",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate and report minority (non-controlling) interest in subsidiary earnings and equity",
+            "rationale": ""
+          },
+          {
+            "text": "Record and amortize goodwill and fair-value adjustments arising from business acquisitions",
+            "rationale": ""
+          },
+          {
+            "text": "Maintain parallel local-GAAP and group-GAAP accounting books with reconciliation between the two",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -9932,7 +9972,8 @@
             "reason": "Multi-warehouse distributors need consolidation"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "fin.revenue_recognition",
@@ -9943,7 +9984,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "netsuite",
         "sage_intacct",
@@ -10310,7 +10351,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system support the five-step ASC 606 / IFRS 15 revenue recognition model, including contract terms capture, performance obligation allocation, and deferred revenue tracking for bundled or subscription arrangements?",
+        "free_text_prompt": "Please describe how your system identifies performance obligations, allocates transaction price, and tracks revenue recognition timing for multi-element contracts.",
+        "covers": [
+          {
+            "text": "Maintain a contract master data repository that captures contract terms, identified performance obligations, and their characteristics (distinct goods/services, timing, pricing).",
+            "rationale": ""
+          },
+          {
+            "text": "Build and maintain a standalone selling price (SSP) library with methods for determining SSP (observable market price, adjusted market assessment, expected cost plus margin) for all distinct performance obligations.",
+            "rationale": ""
+          },
+          {
+            "text": "Automatically allocate transaction price to identified performance obligations using SSP-based proportional allocation or other systematic methods.",
+            "rationale": ""
+          },
+          {
+            "text": "Classify each performance obligation as satisfied at a point in time or over time, and apply the appropriate recognition method (immediate vs. systematic over the satisfaction period).",
+            "rationale": ""
+          },
+          {
+            "text": "Track deferred revenue and contract liabilities, recognizing revenue as performance obligations are satisfied and updating balances for contract modifications.",
+            "rationale": ""
+          },
+          {
+            "text": "Handle contract modifications by reassessing performance obligations, transaction price, and allocation, and adjust revenue recognition prospectively or retrospectively as required.",
+            "rationale": ""
+          },
+          {
+            "text": "Estimate and constrain variable consideration (discounts, rebates, penalties, contingent fees) using the expected value or most likely amount method, applying the constraint principle to avoid overstatement.",
+            "rationale": ""
+          },
+          {
+            "text": "Generate ASC 606 / IFRS 15 disclosure reports including revenue by performance obligation type, timing of recognition, significant judgments, and contract asset/liability balances.",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -10379,7 +10460,8 @@
             "reason": "Simple product sales; limited bundled or complex arrangements"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "fin.credit_collections",
@@ -15480,7 +15562,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "netsuite",
         "sap_s4hana_finance",
@@ -15847,7 +15929,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system maintain a lease register, capitalise right-of-use assets and liabilities, calculate monthly amortisation and interest, and generate IFRS 16 disclosures?",
+        "free_text_prompt": "Please describe how your system handles lease classification, discount rate application, lease modifications, and exemptions for short-term or low-value leases.",
+        "covers": [
+          {
+            "text": "Maintain a lease register capturing lessor identity, lease term, payment schedule, and lease classification",
+            "rationale": ""
+          },
+          {
+            "text": "Capitalise right-of-use assets and corresponding lease liabilities on lease commencement",
+            "rationale": ""
+          },
+          {
+            "text": "Configure and apply discount rates (incremental borrowing rate or implicit rate) per lease",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate and post monthly amortisation of right-of-use assets and interest expense on lease liabilities",
+            "rationale": ""
+          },
+          {
+            "text": "Handle lease modifications and remeasure right-of-use assets and liabilities upon changes to lease terms or payments",
+            "rationale": ""
+          },
+          {
+            "text": "Apply short-term lease exemption (≤12 months) and low-value asset exemption to exclude qualifying leases from capitalisation",
+            "rationale": ""
+          },
+          {
+            "text": "Generate lease disclosure report for financial statement notes including lease obligations, payment schedules, and maturity analysis",
+            "rationale": ""
+          },
+          {
+            "text": "Process variable lease payments and adjust lease liability when payment amounts change",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -15916,7 +16038,8 @@
             "reason": "Wholesalers lease warehouses, equipment, vehicles"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "fin.treasury_investments",
@@ -15926,7 +16049,7 @@
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "sap_s4hana_finance",
         "netsuite",
@@ -16286,7 +16409,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system manage investment portfolios with mark-to-market valuation, IFRS 9 classification, and hedge accounting for derivatives?",
+        "free_text_prompt": "Please describe how the system handles investment registers, fair-value adjustments, hedge designation, and effectiveness testing.",
+        "covers": [
+          {
+            "text": "Maintain a comprehensive investment register capturing instrument type, counterparty, notional amount, maturity date, interest rate, and cost basis.",
+            "rationale": ""
+          },
+          {
+            "text": "Track fixed deposits and money-market placements with placement date, tenor, interest rate, and settlement details.",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate and post mark-to-market valuations to the general ledger at reporting dates, with supporting fair-value adjustments.",
+            "rationale": ""
+          },
+          {
+            "text": "Classify investments under IFRS 9 categories (amortized cost, fair value through OCI, fair value through P&L) and calculate expected credit loss impairment.",
+            "rationale": ""
+          },
+          {
+            "text": "Manage FX forward and swap contracts, including notional amounts, strike rates, settlement dates, and counterparty details.",
+            "rationale": ""
+          },
+          {
+            "text": "Accrue interest on investments and process maturity events, including principal repayment and reinvestment workflows.",
+            "rationale": ""
+          },
+          {
+            "text": "Monitor counterparty credit exposure and limits, with alerts for threshold breaches.",
+            "rationale": ""
+          },
+          {
+            "text": "Designate hedges and perform effectiveness testing to determine whether hedge accounting treatment is eligible under IFRS 9.",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -16355,7 +16518,8 @@
             "reason": "Distribution-focused; limited investment needs"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "fin.analytics_dashboards",
@@ -17417,7 +17581,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "netsuite",
         "sap_s4hana_finance",
@@ -18008,7 +18172,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system use machine learning to automate invoice processing, detect financial anomalies, and suggest bank reconciliations?",
+        "free_text_prompt": "Please describe which ML-powered finance workflows your system supports and the accuracy level achieved for automated data extraction and categorization.",
+        "covers": [
+          {
+            "text": "Extract key data points (dates, amounts, vendor names, line items) from invoices and receipts in multiple formats using OCR and machine learning.",
+            "rationale": ""
+          },
+          {
+            "text": "Automatically populate extracted invoice and receipt data into the accounting system with built-in validation checks before final entry.",
+            "rationale": ""
+          },
+          {
+            "text": "Detect anomalies and irregularities in journal entries, expenses, and payroll data.",
+            "rationale": ""
+          },
+          {
+            "text": "Flag suspicious patterns and potential fraud in payment runs and transactions.",
+            "rationale": ""
+          },
+          {
+            "text": "Automatically categorise financial documents (invoices, receipts) based on content, with support for user-defined categories.",
+            "rationale": ""
+          },
+          {
+            "text": "Automatically reconcile bank statements with ledger entries and provide reconciliation suggestions.",
+            "rationale": ""
+          },
+          {
+            "text": "Automatically categorise bank transactions based on content and historical patterns.",
+            "rationale": ""
+          },
+          {
+            "text": "Achieve and maintain invoice and receipt processing accuracy of 95% or higher, validated through cross-reference with manually verified data.",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -18077,7 +18281,8 @@
             "reason": "High-volume invoicing, supplier reconciliation, cashflow forecasting essential"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "fin.mobile_access",

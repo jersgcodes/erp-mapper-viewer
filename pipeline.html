@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ERP Mapper — Pipeline (Developer View)</title>
+  <style>
+    :root {
+      --bg: #f6f7fa;
+      --panel: #ffffff;
+      --border: #e2e5ea;
+      --text: #1a1f2b;
+      --muted: #6b7380;
+      --accent: #2563eb;
+      --ok: #10b981;
+      --warn: #f59e0b;
+      --err: #ef4444;
+      --mono: "SFMono-Regular", Menlo, Consolas, monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    main { max-width: 1400px; margin: 0 auto; padding: 24px; }
+    h1 { font-size: 22px; margin: 0 0 4px; }
+    h2 { font-size: 16px; margin: 28px 0 12px; }
+    h3 { font-size: 14px; margin: 16px 0 6px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .subtitle { color: var(--muted); margin: 0 0 20px; font-size: 13px; }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+    }
+    .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 16px; }
+    .kpi {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 14px;
+    }
+    .kpi-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    .kpi-value { font-size: 24px; font-weight: 600; margin-top: 4px; }
+    .kpi-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+    /* Pipeline step graph */
+    .pipeline-graph { overflow-x: auto; padding-bottom: 6px; }
+    .pipeline-row { display: flex; align-items: stretch; gap: 6px; min-width: max-content; }
+    .step-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      min-width: 170px;
+      max-width: 220px;
+      position: relative;
+      cursor: pointer;
+      transition: box-shadow 0.15s, border-color 0.15s;
+    }
+    .step-card:hover { border-color: var(--accent); box-shadow: 0 2px 6px rgba(37,99,235,0.12); }
+    .step-card.selected { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(37,99,235,0.2); }
+    .step-num { font-size: 10px; font-weight: 600; color: var(--muted); letter-spacing: 0.05em; }
+    .step-name { font-size: 13px; font-weight: 600; margin-top: 2px; }
+    .step-meta { font-size: 11px; color: var(--muted); margin-top: 6px; }
+    .step-count { font-size: 18px; font-weight: 600; margin-top: 4px; color: var(--accent); }
+    .step-tag {
+      display: inline-block; font-size: 10px; font-weight: 600;
+      padding: 2px 6px; border-radius: 3px; margin-right: 3px;
+      background: #eef2ff; color: #4338ca;
+    }
+    .step-tag.det { background: #ecfdf5; color: #047857; }
+    .step-tag.ai { background: #fef3c7; color: #92400e; }
+    .step-tag.uc { background: #fce7f3; color: #be185d; }
+    .arrow { align-self: center; color: var(--muted); font-size: 18px; padding: 0 2px; }
+
+    /* audit table */
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+    th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 600; }
+    tbody tr:hover { background: #f8fafc; }
+    .sev-p0 { background: #fee2e2; color: #991b1b; padding: 2px 6px; border-radius: 3px; font-size: 11px; font-weight: 600; }
+    .sev-p1 { background: #fef3c7; color: #92400e; padding: 2px 6px; border-radius: 3px; font-size: 11px; font-weight: 600; }
+    .sev-p2 { background: #eef2ff; color: #4338ca; padding: 2px 6px; border-radius: 3px; font-size: 11px; font-weight: 600; }
+    .count-zero { color: var(--ok); font-weight: 600; }
+    .count-nonzero { color: var(--err); font-weight: 600; }
+
+    /* step detail panel */
+    .detail-panel { margin-top: 14px; display: none; }
+    .detail-panel.open { display: block; }
+    .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .detail-grid .sub-panel {
+      border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px;
+      background: #fafbfc;
+    }
+    .detail-grid h4 { margin: 0 0 6px; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .detail-grid pre { margin: 0; font-family: var(--mono); font-size: 12px; white-space: pre-wrap; color: var(--text); }
+    .file-chip {
+      display: inline-block; font-family: var(--mono); font-size: 11px;
+      background: #f1f5f9; color: #334155; padding: 2px 6px; border-radius: 3px;
+      margin: 2px 3px 2px 0;
+    }
+
+    /* legend */
+    .legend { display: flex; gap: 10px; margin-top: 4px; }
+    .legend-item { display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--muted); }
+    .legend-swatch { width: 10px; height: 10px; border-radius: 2px; }
+    .sw-det { background: #ecfdf5; border: 1px solid #047857; }
+    .sw-ai { background: #fef3c7; border: 1px solid #92400e; }
+    .sw-uc { background: #fce7f3; border: 1px solid #be185d; }
+
+    /* per-module breakdown */
+    .module-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+    .mod-card { background: var(--panel); border: 1px solid var(--border); border-radius: 6px; padding: 10px 12px; }
+    .mod-name { font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+    .mod-stats { font-size: 12px; color: var(--muted); }
+
+    /* copy button */
+    .copy-btn { background: #f1f5f9; border: 1px solid var(--border); border-radius: 4px; padding: 2px 8px; font-size: 11px; cursor: pointer; margin-left: 4px; }
+    .copy-btn:hover { background: #e2e8f0; }
+  </style>
+</head>
+<body>
+<style>
+  .top-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e5ea;
+    padding: 0 24px;
+    flex-shrink: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .top-bar-inner {
+    display: flex;
+    align-items: stretch;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 2px;
+  }
+  .top-bar-brand {
+    font-size: 12px;
+    color: #6b7380;
+    padding: 14px 18px 14px 0;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-right: 1px solid #e2e5ea;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .top-bar-link:hover {
+    color: #2563eb;
+    background: #f5f6f8;
+  }
+  .top-bar-link.active {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  .top-bar-dropdown { position: relative; display: inline-flex; }
+  .top-bar-dropdown summary {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 14px 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    user-select: none;
+  }
+  .top-bar-dropdown summary::-webkit-details-marker { display: none; }
+  .top-bar-dropdown summary::after {
+    content: "";
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #6b7380;
+    margin-left: 7px;
+    transition: transform 0.12s;
+  }
+  .top-bar-dropdown[open] summary::after { transform: rotate(180deg); }
+  .top-bar-dropdown summary:hover { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown[open] summary { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown.active summary {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  .top-bar-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: -1px;
+    background: #ffffff;
+    border: 1px solid #e2e5ea;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    padding: 6px;
+    min-width: 220px;
+    z-index: 110;
+  }
+  .top-bar-dropdown-menu a {
+    display: block;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-radius: 4px;
+    line-height: 1.35;
+  }
+  .top-bar-dropdown-menu a:hover { background: #f1f5f9; color: #2563eb; }
+  .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
+  .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
+</style>
+<nav class="top-bar">
+  <div class="top-bar-inner">
+    <span class="top-bar-brand">PSG ERP Spec</span>
+    <a class="top-bar-link" href="index.html">Overview</a>
+    <a class="top-bar-link" href="canonical_sales_and_crm.html">Sales & CRM</a>
+    <a class="top-bar-link" href="canonical_financial_management.html">Financial</a>
+    <a class="top-bar-link" href="canonical_human_resources_management.html">HR</a>
+    <a class="top-bar-link" href="canonical_supply_chain_and_inventory.html">Supply Chain</a>
+    <a class="top-bar-link" href="canonical_manufacturing_management.html">Manufacturing</a>
+    <a class="top-bar-link" href="canonical_project_management.html">Project Mgmt</a>
+    <a class="top-bar-link" href="canonical_asset_management.html">Asset Mgmt</a>
+    <a class="top-bar-link" href="canonical_field_service_management.html">Field Service</a>
+    <a class="top-bar-link" href="canonical_fleet_management.html">Fleet</a>
+    <a class="top-bar-link" href="canonical_others.html">Other</a>
+    <a class="top-bar-link" href="integrations.html">Integrations</a>
+    <details class="top-bar-dropdown active"><summary>More</summary><div class="top-bar-dropdown-menu"><a class="" href="use_cases.html">Use Case Explorer<span class="sub">Cross-module UC checklist + comparisons</span></a><a class="" href="gap_analysis.html">Gaps<span class="sub">IMDA vs market vs AI gap registry</span></a><a class="" href="methodology.html">Methodology<span class="sub">How outputs were derived (stakeholder view)</span></a><a class="active" href="pipeline.html">Dev — Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 (SG-grounded) + L1 intra-module + L2 inter-module proposals awaiting review</span></a><a class="" href="../mocks/flows_tab.html">Flows (mock)<span class="sub">Workflow/flow tab design review — not wired to pipeline</span></a></div></details>
+  </div>
+</nav>
+<main>
+  <h1>Pipeline — Developer View</h1>
+  <p class="subtitle" id="subtitle">Step-by-step data flow for the PSG → ERP spec pipeline. Click any step for prompts, I/O files, and audit status. Generated 2026-04-24 08:02 UTC.</p>
+
+  <div class="kpi-row" id="kpi-row"></div>
+
+  <h2>Pipeline flow</h2>
+  <div class="panel">
+    <div class="legend">
+      <span class="legend-item"><span class="legend-swatch sw-det"></span>deterministic</span>
+      <span class="legend-item"><span class="legend-swatch sw-ai"></span>Haiku (LLM)</span>
+      <span class="legend-item"><span class="legend-swatch sw-uc"></span>UC-layer</span>
+    </div>
+    <div class="pipeline-graph" id="pipeline-graph" style="margin-top:10px;"></div>
+    <div class="detail-panel" id="detail-panel"></div>
+  </div>
+
+  <h2>Audit rules (R1–R11)</h2>
+  <div class="panel">
+    <p class="subtitle" style="margin-top:0;">Runs <code>scripts/audit_uc_pipeline.py</code>. P0 rules block CI; P1 are quality signals; P2 are advisories. R7 excludes infra plumbing caps (user_access, data_governance, AI/ML, mobile_access, audit_controls).</p>
+    <table id="audit-table">
+      <thead>
+        <tr><th>Rule</th><th>Description</th><th>Severity</th><th>Violations</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <h2>Per-module breakdown</h2>
+  <div class="panel">
+    <div class="module-grid" id="module-grid"></div>
+  </div>
+
+  <h2>Output files</h2>
+  <div class="panel">
+    <div id="output-files"></div>
+  </div>
+</main>
+
+<script>
+  const DATA = {"generated_at": "2026-04-24 08:02 UTC", "kpis": {"modules": 10, "capabilities": 293, "features": 1402, "specs": 2744, "use_cases": 2606, "ucs_with_features": 2605, "imda_coverage": 79, "imda_ucs": 2068, "vendor_questions": 293, "p0_violations": 51}, "steps": [{"id": "scrape", "label": "SCRAPE", "name": "IMDA PSG fetcher", "kind": ["det"], "purpose": "Fetches IMDA's pre-approval guide HTML for 89 sol cats. Full browser header set to avoid 403.", "source_file": "scraper/fetch_solcat.py", "inputs": ["https://preapproval-guide.imda.gov.sg/..."], "outputs": ["data/raw/*.html"], "output_count": 89, "output_label": "sol cats fetched", "audit_rules": [], "cost_note": null}, {"id": "parse", "label": "PARSE", "name": "HTML \u2192 structured reqs", "kind": ["det"], "purpose": "Parses IMDA HTML into JSON (main question, sub-questions, plain-text 'Main Question:' fallback for Advanced Manufacturing style).", "source_file": "scraper/parse.py", "inputs": ["data/raw/*.html"], "outputs": ["data/parsed/*.json"], "output_count": "auto", "output_label": "parsed requirements", "audit_rules": [], "cost_note": null}, {"id": "prepare", "label": "prepare", "name": "PSG slice + fuzzy dedupe", "kind": ["det"], "purpose": "Slices per-module PSG requirements from config/solcat_seeds.yaml mapping, strips noise, fuzzy-deduplicates near-identical reqs.", "source_file": "pipeline/steps/prepare.py", "inputs": ["data/parsed/*.json", "config/solcat_seeds.yaml"], "outputs": ["output/canonical/intermediate/prepared_*.json"], "output_count": null, "output_label": "per-module prepared JSON", "audit_rules": [], "cost_note": null}, {"id": "step1", "label": "1", "name": "Group into capabilities", "kind": ["ai"], "purpose": "Haiku groups PSG reqs + proxy reqs into canonical capabilities. Creates L2 layer.", "source_file": "pipeline/steps/step1_group.py", "inputs": ["output/canonical/intermediate/prepared_*.json", "proxies/*.yaml"], "outputs": ["output/canonical/intermediate/step1_*.json"], "output_count": 293, "output_label": "capabilities (L2)", "audit_rules": [], "cost_note": "~0.10/module"}, {"id": "step2", "label": "2", "name": "Merge per-cap reqs", "kind": ["ai"], "purpose": "Haiku merges duplicate/overlapping reqs within each capability. Outputs unified spec list.", "source_file": "pipeline/steps/step2_merge.py", "inputs": ["output/canonical/intermediate/step1_*.json"], "outputs": ["output/canonical/intermediate/step2_*.json"], "output_count": 2744, "output_label": "unified specs (L5)", "audit_rules": [], "cost_note": "~0.08/module"}, {"id": "step2_5", "label": "2.5", "name": "Cluster into features", "kind": ["ai"], "purpose": "Haiku clusters specs into features (L4). Establishes canonical feature_id format cap_short.feat_slug.", "source_file": "pipeline/steps/step2_5_features.py", "inputs": ["output/canonical/intermediate/step2_*.json"], "outputs": ["output/canonical/intermediate/step2_5_*.json"], "output_count": 1402, "output_label": "features (L4)", "audit_rules": ["R1", "R2"], "cost_note": "~0.05/module"}, {"id": "step3", "label": "3", "name": "Criticality ranking", "kind": ["ai"], "purpose": "Haiku ranks each spec must_have / standard / advanced. Informs tier assignment later.", "source_file": "pipeline/steps/step3_rank.py", "inputs": ["output/canonical/intermediate/step2_5_*.json"], "outputs": ["output/canonical/intermediate/step3_*.json"], "output_count": null, "output_label": "criticality tagged", "audit_rules": [], "cost_note": null}, {"id": "step4", "label": "4", "name": "SME minimum checklist", "kind": ["ai"], "purpose": "Haiku picks 3-8 SME-minimum items per capability. Stored on cap.sme_minimum.", "source_file": "pipeline/steps/step4_sme_minimum.py", "inputs": ["output/canonical/intermediate/step3_*.json"], "outputs": ["output/canonical/intermediate/step4_*.json"], "output_count": null, "output_label": "SME minimum sets", "audit_rules": [], "cost_note": null}, {"id": "step5", "label": "5", "name": "Module rollup", "kind": ["ai"], "purpose": "Haiku writes module pillars + family narratives (cap groupings).", "source_file": "pipeline/steps/step5_module_rollup.py", "inputs": ["output/canonical/intermediate/step4_*.json"], "outputs": ["output/canonical/intermediate/step5_*.json"], "output_count": null, "output_label": "module narratives", "audit_rules": [], "cost_note": null}, {"id": "step6", "label": "6", "name": "Vendor questions", "kind": ["ai"], "purpose": "Haiku synthesises one vendor-facing question per cap. Gates checklist visibility.", "source_file": "pipeline/steps/step6_vendor_questions.py", "inputs": ["output/canonical/intermediate/step5_*.json"], "outputs": ["output/canonical/intermediate/step6_*.json"], "output_count": 293, "output_label": "vendor questions", "audit_rules": ["R6"], "cost_note": null}, {"id": "step3b", "label": "3b", "name": "Revalidate criticality", "kind": ["ai"], "purpose": "Haiku re-checks criticality after SME + vendor_question context established.", "source_file": "pipeline/steps/step3b_revalidate_criticality.py", "inputs": ["output/canonical/intermediate/step6_*.json"], "outputs": ["output/canonical/intermediate/step3b_*.json"], "output_count": null, "output_label": "re-ranked", "audit_rules": [], "cost_note": null}, {"id": "step7", "label": "7", "name": "Sector tagging", "kind": ["det"], "purpose": "Traces each spec back to IMDA verticals + sol cats. Adds sector_coverage + cross-cutting patterns.", "source_file": "pipeline/steps/step7_sector_tag.py", "inputs": ["output/canonical/intermediate/step3b_*.json"], "outputs": ["output/canonical/intermediate/step7_*.json"], "output_count": null, "output_label": "sector-tagged", "audit_rules": [], "cost_note": null}, {"id": "step7b", "label": "7b", "name": "Cap-level sector relevance", "kind": ["ai"], "purpose": "Haiku classifies each cap's sector_relevance (generic vs sector-specific). Informs F3 Generic view filter.", "source_file": "pipeline/steps/step7b_sector_relevance.py", "inputs": ["output/canonical/intermediate/step7_*.json"], "outputs": ["output/canonical/intermediate/step7b_*.json"], "output_count": null, "output_label": "sector-classified", "audit_rules": ["R3"], "cost_note": null}, {"id": "step8", "label": "8", "name": "Verification tagging", "kind": ["ai"], "purpose": "Haiku classifies each spec screenshot / demo / config_check / not_verifiable.", "source_file": "pipeline/steps/step8_verification.py", "inputs": ["output/canonical/intermediate/step7b_*.json"], "outputs": ["output/canonical/<module>.json"], "output_count": null, "output_label": "canonical written", "audit_rules": [], "cost_note": null}, {"id": "gen_uc", "label": "UC-1", "name": "Generate UCs (1a/1b/1c)", "kind": ["ai", "uc"], "purpose": "Three-phase UC generation. 1a top-down from IMDA questions. 1b bottom-up from feature combinations with coverage sweep. 1c generic module-level. Writes canonical feature IDs.", "source_file": "pipeline/generate_use_cases.py", "inputs": ["output/canonical/*.json"], "outputs": ["output/use_cases_raw.json"], "output_count": 2606, "output_label": "raw UCs", "audit_rules": [], "cost_note": "~0.45 total"}, {"id": "cluster", "label": "UC-2", "name": "Dedup + cluster", "kind": ["ai", "uc"], "purpose": "Haiku deduplicates near-identical UCs, assigns similarity groups for cross-sol-cat comparison.", "source_file": "pipeline/cluster_use_cases.py", "inputs": ["output/use_cases_raw.json"], "outputs": ["output/use_cases.json"], "output_count": 2606, "output_label": "clustered UCs", "audit_rules": ["R10"], "cost_note": null}, {"id": "step10", "label": "10", "name": "Resolve feature IDs", "kind": ["det", "uc"], "purpose": "5-format feature-ID resolver. Normalises names/bare slugs/hash-separated refs to canonical cap_short.feat_slug. Drops cross-cap + unresolvable.", "source_file": "pipeline/steps/step10_fix_uc_mappings.py", "inputs": ["output/use_cases.json", "output/canonical/*.json"], "outputs": ["output/use_cases.json"], "output_count": null, "output_label": "resolved", "audit_rules": ["R1", "R2"], "cost_note": null}, {"id": "step10b", "label": "10b", "name": "Re-home empty UCs", "kind": ["ai", "uc"], "purpose": "Haiku re-homes UCs with empty mapped_features to a better primary cap.", "source_file": "pipeline/steps/step10b_rehome_empty_ucs.py", "inputs": ["output/use_cases.json"], "outputs": ["output/use_cases.json"], "output_count": null, "output_label": "re-homed", "audit_rules": ["R11"], "cost_note": null}, {"id": "step11", "label": "11", "name": "Generalise actors", "kind": ["ai", "uc"], "purpose": "Haiku rewrites each actor to one of 20 allowed labels (ALLOWED_ACTORS).", "source_file": "pipeline/steps/step11_generalise_actors.py", "inputs": ["output/use_cases.json"], "outputs": ["output/use_cases.json"], "output_count": null, "output_label": "actor-rewritten", "audit_rules": ["R9"], "cost_note": null}, {"id": "step9", "label": "9", "name": "Tier validation", "kind": ["ai", "uc"], "purpose": "Haiku classifies UC tier (baseline/standard/advanced/enterprise). Reconciles cumulative constraint + baseline-only-under-required-cap.", "source_file": "pipeline/steps/step9_validate_use_cases.py", "inputs": ["output/use_cases.json"], "outputs": ["output/use_cases.json"], "output_count": null, "output_label": "tier-tagged", "audit_rules": ["R4", "R8"], "cost_note": "~0.30"}, {"id": "step6b", "label": "6b", "name": "Missing vendor questions", "kind": ["ai", "uc"], "purpose": "Promotes non-SME caps that received UC assignments to sme_tier=preferred, generates missing vendor_question.", "source_file": "pipeline/steps/step6b_missing_vq.py", "inputs": ["output/use_cases.json", "output/canonical/*.json"], "outputs": ["output/canonical/*.json"], "output_count": null, "output_label": "promoted caps", "audit_rules": ["R6"], "cost_note": null}, {"id": "step10c", "label": "10c", "name": "Retrofit features", "kind": ["ai", "uc"], "purpose": "For UCs with empty mapped_features, Haiku picks 2-5 features from primary cap's feature list.", "source_file": "pipeline/steps/step10c_retrofit_features.py", "inputs": ["output/use_cases.json"], "outputs": ["output/use_cases.json"], "output_count": null, "output_label": "retrofitted", "audit_rules": ["R11"], "cost_note": null}, {"id": "step10d", "label": "10d", "name": "Re-home misplaced (same module)", "kind": ["ai", "uc"], "purpose": "Binary Haiku decision per UC: keep current cap or change to a better one within the SAME module. Strong keep bias.", "source_file": "pipeline/steps/step10d_rehome_misplaced.py", "inputs": ["output/use_cases.json"], "outputs": ["output/use_cases.json"], "output_count": null, "output_label": "semantically re-homed", "audit_rules": [], "cost_note": null}, {"id": "step10e", "label": "10e", "name": "Re-home cross-module", "kind": ["ai", "uc"], "purpose": "For R11 residuals, lifts same-module constraint and picks best cap across ALL modules.", "source_file": "pipeline/steps/step10e_cross_module_rehome.py", "inputs": ["output/use_cases.json"], "outputs": ["output/use_cases.json"], "output_count": null, "output_label": "cross-mod re-homed", "audit_rules": ["R11"], "cost_note": null}, {"id": "step10f", "label": "10f", "name": "Orphan coverage fill", "kind": ["ai", "uc"], "purpose": "Generates 1 UC per orphan business feature (non-infra caps). Eliminates R7 business orphans.", "source_file": "pipeline/steps/step10f_orphan_uc_gen.py", "inputs": ["output/use_cases.json", "output/canonical/*.json"], "outputs": ["output/use_cases.json"], "output_count": null, "output_label": "orphan UCs added", "audit_rules": ["R7"], "cost_note": null}, {"id": "audit", "label": "AUDIT", "name": "UC pipeline audit", "kind": ["det"], "purpose": "Deterministic check against 11 rules in docs/uc_spec.md. P0 blocks CI. Infra caps excluded from R7.", "source_file": "scripts/audit_uc_pipeline.py", "inputs": ["output/use_cases.json", "output/canonical/*.json"], "outputs": ["output/uc_audit.json"], "output_count": null, "output_label": "audit report", "audit_rules": ["R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "R10", "R11"], "cost_note": null}], "audit": {"rules": [{"rule": "R1", "description": "Feature ID format is cap_short.feature_slug", "severity": "P0", "count": 0}, {"rule": "R2", "description": "Feature resolves to primary cap's L4 list", "severity": "P0", "count": 0}, {"rule": "R3", "description": "Generic-cap UCs stay within generic verticals", "severity": "P0", "count": 51}, {"rule": "R4", "description": "Tier booleans respect baseline\u2282standard\u2282advanced", "severity": "P0", "count": 0}, {"rule": "R5", "description": "Exactly one primary capability per UC", "severity": "P1", "count": 0}, {"rule": "R6", "description": "Primary cap has a vendor_question (checklist visible)", "severity": "P1", "count": 0}, {"rule": "R7", "description": "Every business cap spec is covered by \u22651 UC", "severity": "P1", "count": 0}, {"rule": "R8", "description": "Baseline UCs live under sme_tier=required caps", "severity": "P1", "count": 0}, {"rule": "R9", "description": "Actor in ALLOWED_ACTORS (step 11 vocab)", "severity": "P1", "count": 0}, {"rule": "R10", "description": "No near-duplicate UCs within same cap", "severity": "P2", "count": 0}, {"rule": "R11", "description": "UC has \u22651 mapped_features", "severity": "P1", "count": 1}]}, "modules": [{"module": "asset_management", "module_name": "Asset Management", "capabilities": 30, "features": 131, "specs": 238, "vendor_questions": 30, "use_cases": 238, "p0": 0, "p1": 0}, {"module": "field_service_management", "module_name": "Field Service Management", "capabilities": 30, "features": 128, "specs": 214, "vendor_questions": 30, "use_cases": 236, "p0": 0, "p1": 0}, {"module": "financial_management", "module_name": "Financial Management", "capabilities": 30, "features": 159, "specs": 324, "vendor_questions": 30, "use_cases": 268, "p0": 3, "p1": 0}, {"module": "fleet_management", "module_name": "Fleet Management", "capabilities": 25, "features": 109, "specs": 180, "vendor_questions": 25, "use_cases": 209, "p0": 0, "p1": 0}, {"module": "human_resources_management", "module_name": "Human Resources Management", "capabilities": 31, "features": 156, "specs": 319, "vendor_questions": 31, "use_cases": 279, "p0": 5, "p1": 0}, {"module": "manufacturing_management", "module_name": "Manufacturing Management", "capabilities": 31, "features": 146, "specs": 266, "vendor_questions": 31, "use_cases": 243, "p0": 0, "p1": 0}, {"module": "others", "module_name": "Others (Cross-Cutting)", "capabilities": 24, "features": 124, "specs": 289, "vendor_questions": 24, "use_cases": 251, "p0": 40, "p1": 1}, {"module": "project_management", "module_name": "Project Management", "capabilities": 29, "features": 131, "specs": 244, "vendor_questions": 29, "use_cases": 247, "p0": 0, "p1": 0}, {"module": "sales_and_crm", "module_name": "Sales & Customer Relationship Management", "capabilities": 32, "features": 168, "specs": 376, "vendor_questions": 32, "use_cases": 308, "p0": 2, "p1": 0}, {"module": "supply_chain_and_inventory", "module_name": "Supply Chain & Inventory", "capabilities": 31, "features": 150, "specs": 294, "vendor_questions": 31, "use_cases": 327, "p0": 1, "p1": 0}], "files": [{"path": "output/canonical/<module>.json", "purpose": "canonical ERP spec (caps/features/specs/VQs) per module"}, {"path": "output/use_cases.json", "purpose": "clustered, validated, tier-tagged UCs across all modules"}, {"path": "output/use_cases_raw.json", "purpose": "pre-dedup UCs straight from Phase 1a/1b/1c"}, {"path": "output/uc_audit.json", "purpose": "audit report \u2014 first 50 violations per rule"}, {"path": "output/compliance_baseline.json", "purpose": "cross-cutting compliance items (PDPA, VA/PT, CEM)"}, {"path": "output/pipeline.html", "purpose": "this viewer"}, {"path": "output/index.html", "purpose": "overview viewer + nav landing"}, {"path": "output/canonical_<module>.html", "purpose": "per-module canonical viewer"}, {"path": "output/use_cases.html", "purpose": "cross-module use-case browser"}, {"path": "output/methodology.html", "purpose": "stakeholder methodology view"}, {"path": "output/gap_analysis.html", "purpose": "IMDA vs market vs AI gap registry"}, {"path": "output/integrations.html", "purpose": "cross-module edges diagram"}]};
+
+  // ---------- KPI row ----------
+  function renderKpis() {
+    const row = document.getElementById("kpi-row");
+    const k = DATA.kpis;
+    const cards = [
+      { label: "Modules", value: k.modules, sub: "canonical JSONs" },
+      { label: "Capabilities", value: k.capabilities, sub: `${k.features} features, ${k.specs} specs` },
+      { label: "Use cases", value: k.use_cases, sub: `${k.ucs_with_features} with L4 refs` },
+      { label: "IMDA coverage", value: k.imda_coverage + "%", sub: `${k.imda_ucs} / ${k.use_cases} UCs` },
+      { label: "Vendor questions", value: k.vendor_questions, sub: "checklist-visible caps" },
+      { label: "P0 audit violations", value: k.p0_violations, sub: k.p0_violations ? "BLOCKS CI" : "clean" },
+    ];
+    row.innerHTML = cards.map(c => `
+      <div class="kpi">
+        <div class="kpi-label">${c.label}</div>
+        <div class="kpi-value">${c.value}</div>
+        <div class="kpi-sub">${c.sub}</div>
+      </div>
+    `).join("");
+  }
+
+  // ---------- pipeline graph ----------
+  function renderPipeline() {
+    const host = document.getElementById("pipeline-graph");
+    // Group steps in rows of 6 so the flow wraps on narrower screens
+    const rows = [];
+    for (let i = 0; i < DATA.steps.length; i += 6) {
+      rows.push(DATA.steps.slice(i, i + 6));
+    }
+    host.innerHTML = rows.map(row => `
+      <div class="pipeline-row">
+        ${row.map((s, i) => `
+          ${i > 0 ? '<div class="arrow">→</div>' : ''}
+          <div class="step-card" data-step-id="${s.id}">
+            <div class="step-num">${s.label}</div>
+            <div class="step-name">${s.name}</div>
+            <div>
+              ${s.kind.map(k => `<span class="step-tag ${k}">${k === 'det' ? 'det' : k === 'ai' ? 'haiku' : 'uc'}</span>`).join("")}
+            </div>
+            <div class="step-count">${s.output_count != null ? s.output_count : "—"}</div>
+            <div class="step-meta">${s.output_label || ""}</div>
+          </div>
+        `).join("")}
+      </div>
+    `).join('<div style="height:8px;"></div>');
+
+    document.querySelectorAll(".step-card").forEach(card => {
+      card.addEventListener("click", () => {
+        document.querySelectorAll(".step-card").forEach(c => c.classList.remove("selected"));
+        card.classList.add("selected");
+        showStepDetail(card.dataset.stepId);
+      });
+    });
+  }
+
+  function showStepDetail(stepId) {
+    const s = DATA.steps.find(x => x.id === stepId);
+    if (!s) return;
+    const panel = document.getElementById("detail-panel");
+    panel.classList.add("open");
+    panel.innerHTML = `
+      <h3>${s.label} — ${s.name}</h3>
+      <div class="detail-grid">
+        <div class="sub-panel">
+          <h4>Purpose</h4>
+          <pre>${s.purpose || "—"}</pre>
+          <h4 style="margin-top:10px;">Kind</h4>
+          <div>${s.kind.map(k => `<span class="step-tag ${k}">${k}</span>`).join(" ")}</div>
+          <h4 style="margin-top:10px;">Source file</h4>
+          <div><span class="file-chip">${s.source_file}</span></div>
+        </div>
+        <div class="sub-panel">
+          <h4>Inputs</h4>
+          <div>${(s.inputs || []).map(f => `<span class="file-chip">${f}</span>`).join("") || "—"}</div>
+          <h4 style="margin-top:10px;">Outputs</h4>
+          <div>${(s.outputs || []).map(f => `<span class="file-chip">${f}</span>`).join("") || "—"}</div>
+          <h4 style="margin-top:10px;">Audit coverage</h4>
+          <div>${s.audit_rules && s.audit_rules.length ? s.audit_rules.map(r => `<span class="step-tag">${r}</span>`).join(" ") : "<span class='kpi-sub'>not covered by audit</span>"}</div>
+          ${s.cost_note ? `<h4 style="margin-top:10px;">Cost / triggers</h4><pre>${s.cost_note}</pre>` : ""}
+        </div>
+      </div>
+    `;
+  }
+
+  // ---------- audit table ----------
+  function renderAudit() {
+    const tbody = document.querySelector("#audit-table tbody");
+    tbody.innerHTML = DATA.audit.rules.map(r => `
+      <tr>
+        <td style="font-family:var(--mono); font-size:12px;">${r.rule}</td>
+        <td>${r.description}</td>
+        <td><span class="sev-${r.severity.toLowerCase()}">${r.severity}</span></td>
+        <td class="${r.count === 0 ? 'count-zero' : 'count-nonzero'}">${r.count}</td>
+      </tr>
+    `).join("");
+  }
+
+  // ---------- module grid ----------
+  function renderModules() {
+    const grid = document.getElementById("module-grid");
+    grid.innerHTML = DATA.modules.map(m => `
+      <div class="mod-card">
+        <div class="mod-name">${m.module_name}</div>
+        <div class="mod-stats">
+          ${m.capabilities} caps · ${m.features} features · ${m.specs} specs<br>
+          ${m.use_cases} UCs · ${m.vendor_questions} VQs<br>
+          ${m.p0 ? `<span style="color:var(--err);font-weight:600;">P0: ${m.p0}</span>` : '<span style="color:var(--ok);">P0: 0</span>'}
+          ${m.p1 ? ` · P1: ${m.p1}` : ''}
+        </div>
+      </div>
+    `).join("");
+  }
+
+  // ---------- output files ----------
+  function renderFiles() {
+    const host = document.getElementById("output-files");
+    host.innerHTML = DATA.files.map(f => `
+      <div style="margin-bottom:8px;">
+        <span class="file-chip">${f.path}</span>
+        <span style="font-size:12px;color:var(--muted);">— ${f.purpose}${f.size ? ' · ' + f.size : ''}</span>
+      </div>
+    `).join("");
+  }
+
+  renderKpis();
+  renderPipeline();
+  renderAudit();
+  renderModules();
+  renderFiles();
+</script>
+</body>
+</html>

@@ -5851,7 +5851,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "netsuite",
         "salesforce_sales_cloud",
@@ -6260,7 +6260,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system generate weighted sales forecasts from pipeline data, track quota attainment by individual and team, and roll up forecasts across your sales hierarchy for planning?",
+        "free_text_prompt": "Describe how forecasts are calculated from pipeline stages, how quota tracking works, and how multi-level rollup is performed.",
+        "covers": [
+          {
+            "text": "Calculate weighted sales forecasts from pipeline data using probability or stage-based weighting",
+            "rationale": ""
+          },
+          {
+            "text": "Define and maintain quotas by sales representative, team, region, product line, and period",
+            "rationale": ""
+          },
+          {
+            "text": "Track quota attainment as percentage to goal at individual and team levels",
+            "rationale": ""
+          },
+          {
+            "text": "Roll up forecasts across multi-level sales hierarchy (representative → team → region → enterprise)",
+            "rationale": ""
+          },
+          {
+            "text": "Categorize forecasts into committed, best-case, and worst-case scenarios",
+            "rationale": ""
+          },
+          {
+            "text": "Allow managers to override forecasts with full audit trail of changes and justifications",
+            "rationale": ""
+          },
+          {
+            "text": "Capture and retain forecast snapshots over time to enable accuracy analysis and trending",
+            "rationale": ""
+          },
+          {
+            "text": "Support what-if scenario modeling to evaluate impact of changes on forecast outcomes",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -6329,7 +6369,8 @@
             "reason": "Critical for demand planning, sales targets, and revenue forecasting"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "sales.reporting_analytics",
@@ -11489,7 +11530,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "netsuite",
         "ms_dynamics_365_ce",
@@ -12007,7 +12048,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system provide a B2B online ordering portal with customer-specific product catalogues, contract pricing, approval workflows, and net-payment terms enforcement?",
+        "free_text_prompt": "Please describe how the system handles customer-specific pricing, approval workflows, and credit/payment term validation.",
+        "covers": [
+          {
+            "text": "Display customer-specific product catalogue with pricing tailored to each buyer organisation",
+            "rationale": ""
+          },
+          {
+            "text": "Apply contract price lists automatically based on customer account",
+            "rationale": ""
+          },
+          {
+            "text": "Support requisition and approval workflows for buyer organisation internal controls",
+            "rationale": ""
+          },
+          {
+            "text": "Enforce net-payment terms (30/60/90 days) and validate customer credit limits before order confirmation",
+            "rationale": ""
+          },
+          {
+            "text": "Allow admin and sales users to create and manage product catalogue entries",
+            "rationale": ""
+          },
+          {
+            "text": "Enable creation and editing of product item descriptions including text, images, and metadata",
+            "rationale": ""
+          },
+          {
+            "text": "Enable quote request functionality as alternative to direct order placement",
+            "rationale": ""
+          },
+          {
+            "text": "Support multiple contacts per customer account with role-based access permissions",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -12076,7 +12157,8 @@
             "reason": "Core business model selling products to retailers and businesses"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "sales.cpq",
@@ -12087,7 +12169,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "salesforce_sales_cloud",
         "ms_dynamics_365_ce",
@@ -12487,7 +12569,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system include a product configurator with validation rules that calculates pricing for configured products and generates quote documents?",
+        "free_text_prompt": "Please describe how the configurator enforces compatibility rules, applies pricing logic, and integrates with your ERP's bill of materials and price books.",
+        "covers": [
+          {
+            "text": "Product configurator with validation rules and constraints to ensure only valid combinations are selected",
+            "rationale": ""
+          },
+          {
+            "text": "Enforce compatibility and incompatibility rules between product options and components",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate pricing for bundles, kits, and assembled product configurations",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate with ERP to retrieve bill of materials and cost data for configured products",
+            "rationale": ""
+          },
+          {
+            "text": "Select and apply appropriate price book based on volume, tiered pricing, or negotiated rates",
+            "rationale": ""
+          },
+          {
+            "text": "Route non-standard configurations and discount requests through approval workflow",
+            "rationale": ""
+          },
+          {
+            "text": "Generate proposal and quote documents from configurable templates",
+            "rationale": ""
+          },
+          {
+            "text": "Persist contract line items from quotes for renewal and repeat order processing",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -12556,7 +12678,8 @@
             "reason": "Standard products, volume-based pricing, no configuration rules"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "sales.commissions",
@@ -12567,7 +12690,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "netsuite",
         "salesforce_sales_cloud"
@@ -12917,7 +13040,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system calculate and allocate commissions based on configurable plans, quota attainment, and multiple sales representatives per deal, then integrate with payroll?",
+        "free_text_prompt": "Describe how your system handles plan design, quota tracking, multi-rep deal splits, and payroll integration.",
+        "covers": [
+          {
+            "text": "Define commission plans by role, territory, or product line with configurable parameters",
+            "rationale": ""
+          },
+          {
+            "text": "Support tiered commission rates based on quota attainment levels within a period",
+            "rationale": ""
+          },
+          {
+            "text": "Track quota attainment per sales representative per period",
+            "rationale": ""
+          },
+          {
+            "text": "Generate commission statements per representative per period for review and validation",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate calculated commissions with payroll for payment processing",
+            "rationale": ""
+          },
+          {
+            "text": "Allocate commissions across multiple sales representatives on a single deal",
+            "rationale": ""
+          },
+          {
+            "text": "Allow manual commission overrides and adjustments with approval workflow",
+            "rationale": ""
+          },
+          {
+            "text": "Support partner and channel partner commission plans with distinct rules and structures",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -12986,7 +13149,8 @@
             "reason": "Sales reps and distributors earn commissions"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "sales.partner_channel",
@@ -12997,7 +13161,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "netsuite",
         "salesforce_sales_cloud",
@@ -13438,7 +13602,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your solution provide a dedicated partner portal where resellers and distributors can register deals, access sales enablement content, and view commission tracking?",
+        "free_text_prompt": "Please describe the key features of your partner portal, including deal registration, content library access, and commission visibility capabilities.",
+        "covers": [
+          {
+            "text": "Partner portal with branded login and role-based access control",
+            "rationale": ""
+          },
+          {
+            "text": "Commission and royalty calculation, tracking, and reporting by partner",
+            "rationale": ""
+          },
+          {
+            "text": "Deal registration with first-come-first-served protection to prevent duplicate claims",
+            "rationale": ""
+          },
+          {
+            "text": "Lead distribution and assignment to partner accounts",
+            "rationale": ""
+          },
+          {
+            "text": "Partner training and certification tracking with completion status and expiry management",
+            "rationale": ""
+          },
+          {
+            "text": "Centralized content library for sales enablement materials (datasheets, pitch decks, case studies)",
+            "rationale": ""
+          },
+          {
+            "text": "Partner pricing, markup, and discount configuration by customer segment or geography",
+            "rationale": ""
+          },
+          {
+            "text": "Partner booking and transaction history visibility",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -13507,7 +13711,8 @@
             "reason": "Wholesalers work extensively with distributor networks"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "sales.territory",
@@ -13518,7 +13723,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_crm",
         "salesforce_sales_cloud",
@@ -13538,7 +13743,7 @@
             "salesforce_sales_cloud"
           ],
           "solcat_citations": [],
-          "feature_id": "territory_structure",
+          "feature_id": "territory.territory_structure",
           "feature_name": "Territory Definition & Hierarchy",
           "criticality": "must_have",
           "sme_attribution": {
@@ -13606,7 +13811,7 @@
             "salesforce_sales_cloud"
           ],
           "solcat_citations": [],
-          "feature_id": "territory_structure",
+          "feature_id": "territory.territory_structure",
           "feature_name": "Territory Definition & Hierarchy",
           "criticality": "standard",
           "sme_attribution": {
@@ -13640,7 +13845,7 @@
             "salesforce_sales_cloud"
           ],
           "solcat_citations": [],
-          "feature_id": "territory_structure",
+          "feature_id": "territory.territory_structure",
           "feature_name": "Territory Definition & Hierarchy",
           "criticality": "standard",
           "sme_attribution": {
@@ -13674,7 +13879,7 @@
             "salesforce_sales_cloud"
           ],
           "solcat_citations": [],
-          "feature_id": "territory_transitions",
+          "feature_id": "territory.territory_transitions",
           "feature_name": "Territory Transitions & Handoff",
           "criticality": "standard",
           "sme_attribution": {
@@ -13708,7 +13913,7 @@
             "salesforce_sales_cloud"
           ],
           "solcat_citations": [],
-          "feature_id": "territory_transitions",
+          "feature_id": "territory.territory_transitions",
           "feature_name": "Territory Transitions & Handoff",
           "criticality": "advanced",
           "sme_attribution": {
@@ -13805,7 +14010,7 @@
       },
       "features": [
         {
-          "id": "territory_structure",
+          "id": "territory.territory_structure",
           "name": "Territory Definition & Hierarchy",
           "description": "Define and organize territories across multiple levels and assignment criteria.",
           "req_idxs": [
@@ -13823,7 +14028,7 @@
           ]
         },
         {
-          "id": "territory_transitions",
+          "id": "territory.territory_transitions",
           "name": "Territory Transitions & Handoff",
           "description": "Manage ownership changes and deal reassignment when territories are modified.",
           "req_idxs": [
@@ -13843,7 +14048,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system automatically assign accounts and leads to sales representatives based on configurable territory rules such as geography, industry, account size, and handle reassignment when territories change?",
+        "free_text_prompt": "Describe how your system defines territory rules, routes records automatically, and manages handoffs when territory ownership changes.",
+        "covers": [
+          {
+            "text": "Define territory hierarchy with multiple levels (e.g., country, region, state, city, postal code) to support geographic-based territory assignment.",
+            "rationale": ""
+          },
+          {
+            "text": "Configure automatic account and lead routing rules based on territory definitions (geography, industry, account size, product interest) to assign to the correct sales representative.",
+            "rationale": ""
+          },
+          {
+            "text": "Assign territories based on industry or vertical classification to align sales coverage with customer segments.",
+            "rationale": ""
+          },
+          {
+            "text": "Assign territories based on account size or revenue tier to ensure appropriate sales resource allocation.",
+            "rationale": ""
+          },
+          {
+            "text": "Manage territory ownership changes and automatically handle in-flight deal handoff between sales representatives when territories are reassigned.",
+            "rationale": ""
+          },
+          {
+            "text": "Support territory planning and what-if modeling to evaluate the impact of proposed territory changes before implementation.",
+            "rationale": ""
+          },
+          {
+            "text": "Enable shared territories with split commission allocation when multiple sales representatives cover the same territory.",
+            "rationale": ""
+          },
+          {
+            "text": "Support overlay roles (e.g., specialists, sales engineers, partners) that operate across multiple territories without owning a primary territory.",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -13912,7 +14157,8 @@
             "reason": "Distribute customer accounts by region and product line"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "sales.mobile_access",
@@ -14946,7 +15192,7 @@
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "salesforce_sales_cloud",
         "ms_dynamics_365_ce",
@@ -15330,7 +15576,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your solution unify customer data from multiple touchpoints (web, email, app, store, support) into a single customer profile and enable real-time segmentation and activation to marketing channels?",
+        "free_text_prompt": "Please describe how your system resolves customer identity across different data sources and supports segment activation to email, SMS, or advertising platforms.",
+        "covers": [
+          {
+            "text": "Resolve customer identity across multiple identifiers including email, phone, cookie, device ID, and account ID to create a unified customer profile",
+            "rationale": ""
+          },
+          {
+            "text": "Maintain a single authoritative golden record per customer with consolidated data from all touchpoints",
+            "rationale": ""
+          },
+          {
+            "text": "Manage customer consent and communication preferences in compliance with GDPR, PDPA, and other privacy regulations",
+            "rationale": ""
+          },
+          {
+            "text": "Execute privacy-compliant data deletion and right-to-be-forgotten requests across all customer records",
+            "rationale": ""
+          },
+          {
+            "text": "Ingest customer events in real-time from web, mobile app, kiosk, point-of-sale, and physical store interactions",
+            "rationale": ""
+          },
+          {
+            "text": "Build and maintain customer segments with real-time recomputation as new data arrives",
+            "rationale": ""
+          },
+          {
+            "text": "Activate customer segments to marketing channels including email, digital advertising, push notifications, and SMS",
+            "rationale": ""
+          },
+          {
+            "text": "Model and report cross-channel attribution to understand customer journey and channel contribution to conversion",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -15399,7 +15685,8 @@
             "reason": "B2B bulk sales; CDP complexity not justified"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "sales.customer_journey",
@@ -15410,7 +15697,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "salesforce_sales_cloud",
         "ms_dynamics_365_ce",
@@ -15840,7 +16127,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system design and execute multi-channel, event-triggered customer journeys with conditional logic, measure conversion at each step, and track performance across email, SMS, and other channels?",
+        "free_text_prompt": "Describe how your solution enables journey design, what event triggers and channels are supported, and how conversion metrics are captured and reported.",
+        "covers": [
+          {
+            "text": "Support event-triggered journey entry points including form submissions, email opens, cart abandonment, purchases, and inactivity detection",
+            "rationale": ""
+          },
+          {
+            "text": "Execute multi-channel journey steps across email, SMS, push notifications, display ads, and in-app messaging",
+            "rationale": ""
+          },
+          {
+            "text": "Implement conditional branching logic based on customer attributes and behavioral signals",
+            "rationale": ""
+          },
+          {
+            "text": "Measure journey performance including reach, engagement rates, and conversion metrics at each step",
+            "rationale": ""
+          },
+          {
+            "text": "Provide a visual journey builder with node-and-edge interface to design multi-step customer workflows",
+            "rationale": ""
+          },
+          {
+            "text": "Configure wait periods, delays, and time-zone-aware message scheduling within journey steps",
+            "rationale": ""
+          },
+          {
+            "text": "Define re-entry rules and loop logic to control how customers can re-enter or repeat journey segments",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate with customer data platform audience segments to target and personalize journeys",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -15909,7 +16236,8 @@
             "reason": "B2B customer lifecycle, repeat orders, account management"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "sales.loyalty_rewards",
@@ -17560,7 +17888,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_sales",
         "netsuite",
@@ -17939,7 +18267,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system store contracts with key dates, track their lifecycle status, generate renewal alerts, and manage amendments with change visibility?",
+        "free_text_prompt": "Please describe how your system handles contract storage, renewal notifications, and amendment tracking.",
+        "covers": [
+          {
+            "text": "Maintain a contract register with key dates including start date, end date, and renewal date",
+            "rationale": ""
+          },
+          {
+            "text": "Track contract status through a defined lifecycle: draft, active, expired, renewed, or terminated",
+            "rationale": ""
+          },
+          {
+            "text": "Link contracts to related business entities including opportunities, orders, and invoices",
+            "rationale": ""
+          },
+          {
+            "text": "Generate automated renewal reminder alerts at configurable intervals (e.g., 90, 60, 30 days before expiration)",
+            "rationale": ""
+          },
+          {
+            "text": "Support amendment workflows with change tracking and red-line visibility",
+            "rationale": ""
+          },
+          {
+            "text": "Track contract obligations and deliverables with status monitoring",
+            "rationale": ""
+          },
+          {
+            "text": "Store contract documents with version control and audit trail",
+            "rationale": ""
+          },
+          {
+            "text": "Support contract and quotation templates to standardize customer acknowledgement and agreement capture",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -18008,7 +18376,8 @@
             "reason": "Manage supplier and customer agreements"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "sales.sales_enablement",
@@ -18019,7 +18388,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "salesforce_sales_cloud",
         "hubspot",
@@ -18351,7 +18720,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system provide a centralized library where sales reps can access, search, and share sales content (decks, templates, case studies, videos) with tracking of customer engagement and usage analytics?",
+        "free_text_prompt": "Please describe how content is organized, how engagement is tracked, and what analytics are available to measure content effectiveness.",
+        "covers": [
+          {
+            "text": "Centralized content library with hierarchical categorization and tagging to organize sales materials (pitch decks, datasheets, case studies, proposal templates, demo videos).",
+            "rationale": ""
+          },
+          {
+            "text": "Version control and approval workflow for content updates to ensure only authorized versions are in circulation.",
+            "rationale": ""
+          },
+          {
+            "text": "Search functionality with context-aware content recommendations for sales representatives.",
+            "rationale": ""
+          },
+          {
+            "text": "Curated onboarding and training playlists for new sales representatives.",
+            "rationale": ""
+          },
+          {
+            "text": "Battle cards and competitive intelligence materials to support rep conversations.",
+            "rationale": ""
+          },
+          {
+            "text": "Trackable content links that log when customers open or engage with shared materials.",
+            "rationale": ""
+          },
+          {
+            "text": "Content performance analytics showing usage frequency, engagement rates, and effectiveness metrics.",
+            "rationale": ""
+          },
+          {
+            "text": "Sales playbook definition with step-by-step workflows and triggered actions based on deal stage or customer context.",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -18420,7 +18829,8 @@
             "reason": "B2B wholesale sales benefit from product catalogs and proposals"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "sales.ai_insights",
@@ -18431,7 +18841,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_crm",
         "salesforce_sales_cloud",
@@ -19461,7 +19871,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system use machine learning to score leads and opportunities, predict customer churn, and recommend next-best actions for sales engagement?",
+        "free_text_prompt": "Please describe which predictive models are included (e.g., lead scoring, win probability, churn prediction) and how recommendations are delivered to users.",
+        "covers": [
+          {
+            "text": "Predictive lead scoring with confidence intervals to identify and prioritize high-potential prospects",
+            "rationale": ""
+          },
+          {
+            "text": "Opportunity win-probability modeling to forecast deal closure likelihood",
+            "rationale": ""
+          },
+          {
+            "text": "Next-best-action recommendations per contact to guide sales engagement strategy",
+            "rationale": ""
+          },
+          {
+            "text": "Churn and attrition prediction on existing customers to enable retention interventions",
+            "rationale": ""
+          },
+          {
+            "text": "AI-drafted email and reply suggestions with personalization based on customer profile and context",
+            "rationale": ""
+          },
+          {
+            "text": "Anomaly detection to identify stalled deals, at-risk quotas, and unusual customer behavior patterns",
+            "rationale": ""
+          },
+          {
+            "text": "Intelligent customer segmentation and targeting based on behavioral and preference analysis",
+            "rationale": ""
+          },
+          {
+            "text": "Predictive sales forecasting and pipeline conversion analysis",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -19530,7 +19980,8 @@
             "reason": "Large customer base requires segmentation and churn management"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "sales.voc_survey",
@@ -19542,7 +19993,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "hubspot",
         "ms_dynamics_365_ce",
@@ -20004,7 +20455,47 @@
         }
       ],
       "sme_minimum_note": null,
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system collect customer feedback through surveys, calculate NPS and satisfaction metrics, store responses on customer records, and trigger surveys based on customer events?",
+        "free_text_prompt": "Describe which survey channels you support, how feedback links to customer records, and which satisfaction metrics (NPS, CSAT, CES) your system calculates.",
+        "covers": [
+          {
+            "text": "Store survey responses and feedback history on the customer record for visibility across service and sales teams",
+            "rationale": ""
+          },
+          {
+            "text": "Survey builder supporting multiple question types (rating scales, multiple choice, open text, matrix, ranking)",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate and trend Net Promoter Score (NPS) with segmentation by customer cohort or time period",
+            "rationale": ""
+          },
+          {
+            "text": "Track Customer Satisfaction (CSAT) and Customer Effort Score (CES) metrics with historical trending",
+            "rationale": ""
+          },
+          {
+            "text": "Trigger surveys automatically based on customer lifecycle events (post-purchase, post-support interaction, renewal date)",
+            "rationale": ""
+          },
+          {
+            "text": "Deliver surveys across multiple channels including email, SMS, in-app messaging, and kiosk",
+            "rationale": ""
+          },
+          {
+            "text": "Aggregate survey responses and display results in dashboards with filtering and drill-down capability",
+            "rationale": ""
+          },
+          {
+            "text": "Apply sentiment analysis or manual tagging to open-text survey responses for thematic analysis",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -20073,7 +20564,8 @@
             "reason": "Customer feedback improves service delivery"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "sales.omnichannel_retail",
@@ -20084,7 +20576,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "netsuite",
         "odoo_sales",
@@ -20884,7 +21376,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system unify inventory, orders, and customer data across physical stores, online, and marketplace channels in a single view?",
+        "free_text_prompt": "Describe which channels your system integrates (POS, web, mobile, marketplaces) and how inventory and order information is synchronized across them.",
+        "covers": [
+          {
+            "text": "Integrate point-of-sale (POS) systems with central inventory and order management to enable real-time synchronization of transactions and stock levels across store locations.",
+            "rationale": ""
+          },
+          {
+            "text": "Maintain unified customer profiles across all sales channels (physical stores, web, mobile, marketplaces) with consistent identity and purchase history.",
+            "rationale": ""
+          },
+          {
+            "text": "Provide real-time cross-channel inventory visibility, showing available stock across all store locations and fulfillment channels in a single view.",
+            "rationale": ""
+          },
+          {
+            "text": "Centralize order management across all channels in a single dashboard, enabling unified order processing, fulfillment, and tracking regardless of sales source.",
+            "rationale": ""
+          },
+          {
+            "text": "Synchronize in-store and online customer experience, including product information, pricing, promotions, and availability, to ensure consistency across touchpoints.",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate with major marketplace platforms (Amazon, Shopee, Lazada, eBay) to synchronize product listings, inventory, and orders.",
+            "rationale": ""
+          },
+          {
+            "text": "Manage unified promotions and pricing rules that apply consistently across all sales channels, with ability to override by channel when needed.",
+            "rationale": ""
+          },
+          {
+            "text": "Support buy online, pick up in store (BOPIS) fulfillment, allowing customers to purchase through any channel and collect from a physical store location.",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -20953,7 +21485,8 @@
             "reason": "B2B wholesale, not consumer omnichannel retail"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "sales.telephony_comms",
@@ -20965,7 +21498,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_crm",
         "netsuite",
@@ -21489,7 +22022,47 @@
         }
       ],
       "sme_minimum_note": null,
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system enable click-to-dial from customer records, automatically log calls with outcomes, and support SMS or WhatsApp messaging directly within the CRM interface?",
+        "free_text_prompt": "Please describe which telephony platforms you integrate with and whether call recording and screen-pop on inbound calls are supported.",
+        "covers": [
+          {
+            "text": "Support voice conversations with customers through integrated telephony",
+            "rationale": ""
+          },
+          {
+            "text": "Enable click-to-dial from contact and opportunity records within the CRM interface",
+            "rationale": ""
+          },
+          {
+            "text": "Display customer information (screen-pop) automatically when an inbound call is received and matched to a contact record",
+            "rationale": ""
+          },
+          {
+            "text": "Automatically log all calls with duration, outcome, and associated contact or opportunity",
+            "rationale": ""
+          },
+          {
+            "text": "Record voice calls and store recordings within or linked to the CRM",
+            "rationale": ""
+          },
+          {
+            "text": "Send and receive SMS, WhatsApp, and Telegram messages directly from the CRM",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate live chat with automatic handoff to sales representatives",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate with major telephony platforms including Twilio, RingCentral, Asterisk, and enterprise PBX systems",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -21558,7 +22131,8 @@
             "reason": "Customer orders, supplier communication, sales management"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "sales.data_governance",

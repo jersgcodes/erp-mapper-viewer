@@ -254,6 +254,11 @@
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition: color 0.15s, border-color 0.15s, background 0.15s;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
   }
   .top-bar-link:hover {
     color: #2563eb;
@@ -264,6 +269,61 @@
     border-bottom-color: #2563eb;
     font-weight: 600;
   }
+  .top-bar-dropdown { position: relative; display: inline-flex; }
+  .top-bar-dropdown summary {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 14px 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    user-select: none;
+  }
+  .top-bar-dropdown summary::-webkit-details-marker { display: none; }
+  .top-bar-dropdown summary::after {
+    content: "";
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #6b7380;
+    margin-left: 7px;
+    transition: transform 0.12s;
+  }
+  .top-bar-dropdown[open] summary::after { transform: rotate(180deg); }
+  .top-bar-dropdown summary:hover { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown[open] summary { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown.active summary {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  .top-bar-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: -1px;
+    background: #ffffff;
+    border: 1px solid #e2e5ea;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    padding: 6px;
+    min-width: 220px;
+    z-index: 110;
+  }
+  .top-bar-dropdown-menu a {
+    display: block;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-radius: 4px;
+    line-height: 1.35;
+  }
+  .top-bar-dropdown-menu a:hover { background: #f1f5f9; color: #2563eb; }
+  .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
+  .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
 </style>
 <nav class="top-bar">
   <div class="top-bar-inner">
@@ -280,6 +340,7 @@
     <a class="top-bar-link" href="canonical_fleet_management.html">Fleet</a>
     <a class="top-bar-link" href="canonical_others.html">Other</a>
     <a class="top-bar-link active" href="integrations.html">Integrations</a>
+    <details class="top-bar-dropdown"><summary>More</summary><div class="top-bar-dropdown-menu"><a class="" href="use_cases.html">Use Case Explorer<span class="sub">Cross-module UC checklist + comparisons</span></a><a class="" href="gap_analysis.html">Gaps<span class="sub">IMDA vs market vs AI gap registry</span></a><a class="" href="methodology.html">Methodology<span class="sub">How outputs were derived (stakeholder view)</span></a><a class="" href="pipeline.html">Dev — Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 (SG-grounded) + L1 intra-module + L2 inter-module proposals awaiting review</span></a><a class="" href="../mocks/flows_tab.html">Flows (mock)<span class="sub">Workflow/flow tab design review — not wired to pipeline</span></a></div></details>
   </div>
 </nav>
 

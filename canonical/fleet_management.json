@@ -5393,7 +5393,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system automatically generate and optimise multi-stop delivery routes based on criteria like time windows, distance, and vehicle type, and adjust them in real time using traffic data?",
+        "free_text_prompt": "Describe how your system optimises routes, what criteria it supports, and how it handles real-time traffic updates during execution.",
+        "covers": [
+          {
+            "text": "Automatically generate and optimise routes based on configurable criteria such as destination, delivery time window, order size, and vehicle type",
+            "rationale": ""
+          },
+          {
+            "text": "Optimise routes by distance, time, or cost metrics",
+            "rationale": ""
+          },
+          {
+            "text": "Enforce delivery time-window constraints during route planning and optimisation",
+            "rationale": ""
+          },
+          {
+            "text": "Plan multi-stop routes with support for manual adjustment via drag-and-drop interface",
+            "rationale": ""
+          },
+          {
+            "text": "Compare planned routes against actual executed routes to identify deviations and performance gaps",
+            "rationale": ""
+          },
+          {
+            "text": "Measure and report on fleet utilisation and productivity improvements resulting from route optimisation",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate real-time traffic and road condition data to dynamically adjust routes during execution",
+            "rationale": ""
+          },
+          {
+            "text": "Provide turn-by-turn navigation guidance to drivers integrated with the route plan",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -6980,7 +7020,43 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system track tyre inventory by vehicle, monitor tread depth with automatic safety alerts, and schedule rotations based on distance or time intervals?",
+        "free_text_prompt": "Please describe how the system records tyre measurements, triggers alerts, and manages rotation scheduling.",
+        "covers": [
+          {
+            "text": "Maintain tyre inventory records including brand, size, and vehicle position",
+            "rationale": ""
+          },
+          {
+            "text": "Record and track tyre tread depth measurements over time",
+            "rationale": ""
+          },
+          {
+            "text": "Record tyre replacement history per vehicle including date and reason",
+            "rationale": ""
+          },
+          {
+            "text": "Generate alerts when tyre tread depth falls below minimum safety threshold",
+            "rationale": ""
+          },
+          {
+            "text": "Monitor tyre wear patterns and degradation",
+            "rationale": ""
+          },
+          {
+            "text": "Schedule tyre rotations based on distance travelled or calendar intervals",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate cost per tyre and cost per kilometre for tyre operations",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 7,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -8738,7 +8814,39 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system manage the complete vehicle lifecycle from acquisition requests through approval, track lease and purchase contracts, and support disposal planning with residual value tracking?",
+        "free_text_prompt": "Please describe how your system handles vehicle acquisition workflows, contract management, and disposal tracking including residual value or depreciation features.",
+        "covers": [
+          {
+            "text": "Support vehicle acquisition request submission and multi-level approval workflow",
+            "rationale": ""
+          },
+          {
+            "text": "Track purchase, lease, and rental contracts with key terms and dates",
+            "rationale": ""
+          },
+          {
+            "text": "Manage lease payment schedules and trigger end-of-lease actions (renewal, return, purchase)",
+            "rationale": ""
+          },
+          {
+            "text": "Plan vehicle replacement based on configurable thresholds (age, mileage, total cost of ownership)",
+            "rationale": ""
+          },
+          {
+            "text": "Record vehicle disposal method (auction, trade-in, scrap, donation) and track completion",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate residual value estimates and maintain depreciation schedules for fleet vehicles",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 6,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -9059,7 +9167,39 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system maintain a vendor register with service capabilities, generate purchase orders for external services, and track vendor performance metrics like turnaround time and quality ratings?",
+        "free_text_prompt": "Please describe how your system stores vendor information, manages service orders, and captures performance tracking data.",
+        "covers": [
+          {
+            "text": "Maintain a register of workshops and service vendors with contact details, location, and service capabilities",
+            "rationale": ""
+          },
+          {
+            "text": "Generate purchase orders for external repair and maintenance services",
+            "rationale": ""
+          },
+          {
+            "text": "Assign preferred vendors by service type or repair category",
+            "rationale": ""
+          },
+          {
+            "text": "Compare service costs across multiple vendors for the same service type",
+            "rationale": ""
+          },
+          {
+            "text": "Track and rate vendor performance metrics including turnaround time and service quality",
+            "rationale": ""
+          },
+          {
+            "text": "Track warranty coverage and expiration dates by vendor and service type",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 6,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -9138,7 +9278,7 @@
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": "enterprise_only",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_fleet",
         "chevin_fleetwave",
@@ -9397,7 +9537,39 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system track vehicle emissions by fuel type, monitor EV versus traditional vehicle composition, and generate sustainability reports for ESG compliance?",
+        "free_text_prompt": "Please describe how the system calculates and reports fleet emissions, tracks EV adoption progress, and supports ESG reporting requirements.",
+        "covers": [
+          {
+            "text": "Calculate and track CO2 emissions per vehicle and aggregate to fleet-wide totals",
+            "rationale": ""
+          },
+          {
+            "text": "Generate emissions reports segmented by fuel type and vehicle class",
+            "rationale": ""
+          },
+          {
+            "text": "Track fleet composition breakdown between electric vehicles and internal combustion engine vehicles",
+            "rationale": ""
+          },
+          {
+            "text": "Generate ESG and sustainability reports for compliance and stakeholder communication",
+            "rationale": ""
+          },
+          {
+            "text": "Log and monitor EV charging station usage and associated costs",
+            "rationale": ""
+          },
+          {
+            "text": "Track carbon offset initiatives and emissions reduction targets against actual performance",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 6,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -9466,7 +9638,8 @@
             "reason": "Distribution fleets, logistics operations, ESG compliance"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "fleet.pool_car_sharing",
@@ -9476,7 +9649,7 @@
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": "enterprise_only",
+      "sme_tier": "preferred",
       "cited_sources": [
         "chevin_fleetwave",
         "sap_vehicle"
@@ -9765,7 +9938,43 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system manage self-service vehicle pool bookings with real-time availability, automated usage-based billing by department, and inspection workflows with damage documentation?",
+        "free_text_prompt": "Please describe how your solution handles booking, cost allocation, and pre/post-trip inspection capture.",
+        "covers": [
+          {
+            "text": "Enable self-service pool vehicle booking through mobile application with real-time availability display",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate and allocate vehicle usage costs to departments based on actual usage metrics (distance, duration, fuel consumption)",
+            "rationale": ""
+          },
+          {
+            "text": "Automate pre-trip vehicle inspection workflows with checklist capture and photo documentation",
+            "rationale": ""
+          },
+          {
+            "text": "Automate post-trip vehicle inspection workflows with checklist capture and photo documentation",
+            "rationale": ""
+          },
+          {
+            "text": "Capture vehicle condition reports including cleanliness status and damage documentation from users",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate keyless access mechanisms (smart locks, electronic key boxes) for automated vehicle unlock upon booking confirmation",
+            "rationale": ""
+          },
+          {
+            "text": "Generate pool vehicle utilization analytics to support capacity planning and right-sizing decisions",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 7,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -9834,7 +10043,8 @@
             "reason": "Warehouse-focused; dedicated fleet typically owned"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "fleet.analytics_ai",
@@ -9844,7 +10054,7 @@
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": "enterprise_only",
+      "sme_tier": "preferred",
       "cited_sources": [
         "samsara",
         "oracle_otm",
@@ -10162,7 +10372,39 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system provide predictive analytics and AI-driven insights for fleet maintenance scheduling, vehicle replacement timing, and operational anomaly detection?",
+        "free_text_prompt": "Please describe which analytics capabilities you offer (e.g., predictive maintenance, anomaly detection, replacement forecasting) and how they are delivered to users.",
+        "covers": [
+          {
+            "text": "Predictive maintenance based on vehicle usage patterns and historical data",
+            "rationale": ""
+          },
+          {
+            "text": "Anomaly detection for fuel consumption and operational efficiency",
+            "rationale": ""
+          },
+          {
+            "text": "Optimal vehicle replacement timing model based on age, condition, and cost analysis",
+            "rationale": ""
+          },
+          {
+            "text": "AI-generated recommendations for maintenance scheduling and cost optimization",
+            "rationale": ""
+          },
+          {
+            "text": "Driver risk prediction and behaviour analysis including dangerous driving and speeding detection",
+            "rationale": ""
+          },
+          {
+            "text": "Fleet demand forecasting by season, project, or operational period",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 6,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -10231,7 +10473,8 @@
             "reason": "Distribution and logistics fleet operations"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "fleet.mobile_access",

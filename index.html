@@ -418,6 +418,11 @@
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition: color 0.15s, border-color 0.15s, background 0.15s;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
   }
   .top-bar-link:hover {
     color: #2563eb;
@@ -428,6 +433,61 @@
     border-bottom-color: #2563eb;
     font-weight: 600;
   }
+  .top-bar-dropdown { position: relative; display: inline-flex; }
+  .top-bar-dropdown summary {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 14px 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    user-select: none;
+  }
+  .top-bar-dropdown summary::-webkit-details-marker { display: none; }
+  .top-bar-dropdown summary::after {
+    content: "";
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #6b7380;
+    margin-left: 7px;
+    transition: transform 0.12s;
+  }
+  .top-bar-dropdown[open] summary::after { transform: rotate(180deg); }
+  .top-bar-dropdown summary:hover { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown[open] summary { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown.active summary {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  .top-bar-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: -1px;
+    background: #ffffff;
+    border: 1px solid #e2e5ea;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    padding: 6px;
+    min-width: 220px;
+    z-index: 110;
+  }
+  .top-bar-dropdown-menu a {
+    display: block;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-radius: 4px;
+    line-height: 1.35;
+  }
+  .top-bar-dropdown-menu a:hover { background: #f1f5f9; color: #2563eb; }
+  .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
+  .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
 </style>
 <nav class="top-bar">
   <div class="top-bar-inner">
@@ -444,6 +504,7 @@
     <a class="top-bar-link" href="canonical_fleet_management.html">Fleet</a>
     <a class="top-bar-link" href="canonical_others.html">Other</a>
     <a class="top-bar-link" href="integrations.html">Integrations</a>
+    <details class="top-bar-dropdown"><summary>More</summary><div class="top-bar-dropdown-menu"><a class="" href="use_cases.html">Use Case Explorer<span class="sub">Cross-module UC checklist + comparisons</span></a><a class="" href="gap_analysis.html">Gaps<span class="sub">IMDA vs market vs AI gap registry</span></a><a class="" href="methodology.html">Methodology<span class="sub">How outputs were derived (stakeholder view)</span></a><a class="" href="pipeline.html">Dev — Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 (SG-grounded) + L1 intra-module + L2 inter-module proposals awaiting review</span></a><a class="" href="../mocks/flows_tab.html">Flows (mock)<span class="sub">Workflow/flow tab design review — not wired to pipeline</span></a></div></details>
   </div>
 </nav>
 
@@ -459,7 +520,7 @@
     <div><strong>10 / 10</strong><span>modules canonical-ready</span></div>
     <div><strong>293</strong><span>capabilities</span></div>
     <div><strong>2744</strong><span>detailed requirements</span></div>
-    <div><strong>218</strong><span>vendor questionnaire items</span></div>
+    <div><strong>293</strong><span>vendor questionnaire items</span></div>
   </div>
 </header>
 
@@ -480,7 +541,7 @@
             <div><strong>238</strong><span>requirements</span></div>
             <div><strong>131</strong><span>features</span></div>
             <div><strong>141</strong><span>SME-minimum items</span></div>
-            <div><strong>13 / 8</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>13 / 17</strong><span>vendor Qs (req / pref)</span></div>
             <div><strong>6 / 36</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
@@ -505,7 +566,7 @@
             <div><strong>214</strong><span>requirements</span></div>
             <div><strong>128</strong><span>features</span></div>
             <div><strong>142</strong><span>SME-minimum items</span></div>
-            <div><strong>14 / 11</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>14 / 16</strong><span>vendor Qs (req / pref)</span></div>
             <div><strong>6 / 29</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
@@ -530,7 +591,7 @@
             <div><strong>324</strong><span>requirements</span></div>
             <div><strong>159</strong><span>features</span></div>
             <div><strong>197</strong><span>SME-minimum items</span></div>
-            <div><strong>16 / 9</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>16 / 14</strong><span>vendor Qs (req / pref)</span></div>
             <div><strong>6 / 34</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
@@ -555,7 +616,7 @@
             <div><strong>180</strong><span>requirements</span></div>
             <div><strong>109</strong><span>features</span></div>
             <div><strong>103</strong><span>SME-minimum items</span></div>
-            <div><strong>12 / 6</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>12 / 13</strong><span>vendor Qs (req / pref)</span></div>
             <div><strong>6 / 29</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
@@ -580,7 +641,7 @@
             <div><strong>319</strong><span>requirements</span></div>
             <div><strong>156</strong><span>features</span></div>
             <div><strong>216</strong><span>SME-minimum items</span></div>
-            <div><strong>16 / 10</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>16 / 15</strong><span>vendor Qs (req / pref)</span></div>
             <div><strong>6 / 33</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
@@ -605,7 +666,7 @@
             <div><strong>266</strong><span>requirements</span></div>
             <div><strong>146</strong><span>features</span></div>
             <div><strong>151</strong><span>SME-minimum items</span></div>
-            <div><strong>14 / 8</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>14 / 17</strong><span>vendor Qs (req / pref)</span></div>
             <div><strong>6 / 32</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
@@ -630,7 +691,7 @@
             <div><strong>289</strong><span>requirements</span></div>
             <div><strong>124</strong><span>features</span></div>
             <div><strong>160</strong><span>SME-minimum items</span></div>
-            <div><strong>9 / 11</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>9 / 15</strong><span>vendor Qs (req / pref)</span></div>
             <div><strong>6 / 43</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
@@ -655,7 +716,7 @@
             <div><strong>244</strong><span>requirements</span></div>
             <div><strong>131</strong><span>features</span></div>
             <div><strong>139</strong><span>SME-minimum items</span></div>
-            <div><strong>12 / 10</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>12 / 17</strong><span>vendor Qs (req / pref)</span></div>
             <div><strong>6 / 35</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
@@ -680,7 +741,7 @@
             <div><strong>376</strong><span>requirements</span></div>
             <div><strong>168</strong><span>features</span></div>
             <div><strong>168</strong><span>SME-minimum items</span></div>
-            <div><strong>9 / 9</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>9 / 23</strong><span>vendor Qs (req / pref)</span></div>
             <div><strong>6 / 43</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
@@ -705,7 +766,7 @@
             <div><strong>294</strong><span>requirements</span></div>
             <div><strong>150</strong><span>features</span></div>
             <div><strong>156</strong><span>SME-minimum items</span></div>
-            <div><strong>14 / 7</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>14 / 17</strong><span>vendor Qs (req / pref)</span></div>
             <div><strong>6 / 30</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
@@ -735,7 +796,7 @@
 <tr><th scope="row">Features</th><td>131</td><td>128</td><td>159</td><td>109</td><td>156</td><td>146</td><td>124</td><td>131</td><td>168</td><td>150</td></tr>
 <tr><th scope="row">SME-minimum items</th><td>141</td><td>142</td><td>197</td><td>103</td><td>216</td><td>151</td><td>160</td><td>139</td><td>168</td><td>156</td></tr>
 <tr><th scope="row">Vendor Qs — Required</th><td>13</td><td>14</td><td>16</td><td>12</td><td>16</td><td>14</td><td>9</td><td>12</td><td>9</td><td>14</td></tr>
-<tr><th scope="row">Vendor Qs — Preferred</th><td>8</td><td>11</td><td>9</td><td>6</td><td>10</td><td>8</td><td>11</td><td>10</td><td>9</td><td>7</td></tr>
+<tr><th scope="row">Vendor Qs — Preferred</th><td>17</td><td>16</td><td>14</td><td>13</td><td>15</td><td>17</td><td>15</td><td>17</td><td>23</td><td>17</td></tr>
 <tr><th scope="row">Family narratives</th><td>6</td><td>6</td><td>6</td><td>13</td><td>6</td><td>6</td><td>5</td><td>6</td><td>6</td><td>6</td></tr>
 <tr><th scope="row">Reference diagrams</th><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
 <tr><th scope="row">Families</th><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>5</td><td>6</td><td>7</td><td>6</td></tr>

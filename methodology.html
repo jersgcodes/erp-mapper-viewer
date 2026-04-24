@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How we derived the ERP spec — Methodology</title>
+  <style>
+    :root {
+      --bg: #f8f9fc;
+      --panel: #ffffff;
+      --border: #e2e5ea;
+      --text: #1a1f2b;
+      --muted: #6b7380;
+      --accent: #2563eb;
+      --ok: #10b981;
+      --imda: #1e3a8a;
+      --proxy: #92400e;
+      --both: #4338ca;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    main { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+    h1 { font-size: 30px; margin: 0 0 6px; }
+    h2 { font-size: 20px; margin: 36px 0 12px; }
+    h3 { font-size: 15px; margin: 18px 0 4px; font-weight: 600; }
+    .lede { color: var(--muted); font-size: 16px; margin: 0 0 24px; max-width: 720px; }
+    .panel {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+      padding: 20px 24px; margin-bottom: 18px;
+    }
+
+    /* Trust KPIs */
+    .trust-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 20px; }
+    .trust {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px;
+    }
+    .trust-value { font-size: 34px; font-weight: 700; color: var(--accent); letter-spacing: -0.02em; line-height: 1; }
+    .trust-label { font-size: 13px; color: var(--muted); margin-top: 6px; }
+    .trust-sub { font-size: 12px; color: var(--muted); margin-top: 3px; }
+
+    /* Lineage flow */
+    .lineage {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .stage {
+      background: #f8fafc; border: 1px solid var(--border); border-radius: 8px;
+      padding: 14px 12px; text-align: center;
+      position: relative;
+    }
+    .stage h4 {
+      margin: 0 0 4px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+    .stage .n { font-size: 22px; font-weight: 700; color: var(--accent); }
+    .stage .desc { font-size: 12px; color: var(--muted); margin-top: 4px; }
+    .stage::after {
+      content: "→"; position: absolute; right: -18px; top: 50%; transform: translateY(-50%);
+      color: var(--muted); font-size: 20px;
+    }
+    .stage:last-child::after { display: none; }
+
+    @media (max-width: 900px) {
+      .lineage { grid-template-columns: 1fr 1fr; }
+      .stage::after { display: none; }
+    }
+
+    /* Source split bar */
+    .source-bar {
+      display: flex; height: 26px; border-radius: 5px; overflow: hidden; margin: 10px 0 4px;
+      border: 1px solid var(--border);
+    }
+    .source-bar > div {
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 600; color: #fff;
+    }
+    .src-imda { background: var(--imda); }
+    .src-both { background: var(--both); }
+    .src-proxy { background: var(--proxy); }
+    .src-legend { display: flex; gap: 18px; font-size: 12px; color: var(--muted); margin-top: 4px; }
+    .src-legend .dot { width: 10px; height: 10px; border-radius: 2px; display: inline-block; margin-right: 4px; vertical-align: middle; }
+
+    /* Derivation table */
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+    th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 600; }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .bar {
+      display: inline-block; height: 6px; background: var(--accent); border-radius: 2px; vertical-align: middle;
+    }
+
+    /* Module cards */
+    .module-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+    .module-card {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .module-name { font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+    .module-stats { font-size: 13px; color: var(--muted); }
+
+    /* Callouts */
+    .callout {
+      background: #eff6ff; border-left: 3px solid var(--accent); padding: 12px 16px;
+      border-radius: 0 6px 6px 0; margin: 14px 0;
+      font-size: 14px; color: #1e3a8a;
+    }
+
+    /* Steps list */
+    .steps-list { counter-reset: step; padding: 0; list-style: none; margin: 0; }
+    .steps-list li {
+      counter-increment: step;
+      padding: 12px 0 12px 48px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+    .steps-list li:last-child { border-bottom: none; }
+    .steps-list li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 14px;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--accent); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 600; font-size: 13px;
+    }
+    .steps-list .step-title { font-weight: 600; font-size: 15px; }
+    .steps-list .step-desc { color: var(--muted); font-size: 14px; margin-top: 2px; }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .muted-link { color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+<style>
+  .top-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e5ea;
+    padding: 0 24px;
+    flex-shrink: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .top-bar-inner {
+    display: flex;
+    align-items: stretch;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 2px;
+  }
+  .top-bar-brand {
+    font-size: 12px;
+    color: #6b7380;
+    padding: 14px 18px 14px 0;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-right: 1px solid #e2e5ea;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .top-bar-link:hover {
+    color: #2563eb;
+    background: #f5f6f8;
+  }
+  .top-bar-link.active {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  .top-bar-dropdown { position: relative; display: inline-flex; }
+  .top-bar-dropdown summary {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 14px 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    user-select: none;
+  }
+  .top-bar-dropdown summary::-webkit-details-marker { display: none; }
+  .top-bar-dropdown summary::after {
+    content: "";
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #6b7380;
+    margin-left: 7px;
+    transition: transform 0.12s;
+  }
+  .top-bar-dropdown[open] summary::after { transform: rotate(180deg); }
+  .top-bar-dropdown summary:hover { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown[open] summary { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown.active summary {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  .top-bar-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: -1px;
+    background: #ffffff;
+    border: 1px solid #e2e5ea;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    padding: 6px;
+    min-width: 220px;
+    z-index: 110;
+  }
+  .top-bar-dropdown-menu a {
+    display: block;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-radius: 4px;
+    line-height: 1.35;
+  }
+  .top-bar-dropdown-menu a:hover { background: #f1f5f9; color: #2563eb; }
+  .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
+  .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
+</style>
+<nav class="top-bar">
+  <div class="top-bar-inner">
+    <span class="top-bar-brand">PSG ERP Spec</span>
+    <a class="top-bar-link" href="index.html">Overview</a>
+    <a class="top-bar-link" href="canonical_sales_and_crm.html">Sales & CRM</a>
+    <a class="top-bar-link" href="canonical_financial_management.html">Financial</a>
+    <a class="top-bar-link" href="canonical_human_resources_management.html">HR</a>
+    <a class="top-bar-link" href="canonical_supply_chain_and_inventory.html">Supply Chain</a>
+    <a class="top-bar-link" href="canonical_manufacturing_management.html">Manufacturing</a>
+    <a class="top-bar-link" href="canonical_project_management.html">Project Mgmt</a>
+    <a class="top-bar-link" href="canonical_asset_management.html">Asset Mgmt</a>
+    <a class="top-bar-link" href="canonical_field_service_management.html">Field Service</a>
+    <a class="top-bar-link" href="canonical_fleet_management.html">Fleet</a>
+    <a class="top-bar-link" href="canonical_others.html">Other</a>
+    <a class="top-bar-link" href="integrations.html">Integrations</a>
+    <details class="top-bar-dropdown active"><summary>More</summary><div class="top-bar-dropdown-menu"><a class="" href="use_cases.html">Use Case Explorer<span class="sub">Cross-module UC checklist + comparisons</span></a><a class="" href="gap_analysis.html">Gaps<span class="sub">IMDA vs market vs AI gap registry</span></a><a class="active" href="methodology.html">Methodology<span class="sub">How outputs were derived (stakeholder view)</span></a><a class="" href="pipeline.html">Dev — Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 (SG-grounded) + L1 intra-module + L2 inter-module proposals awaiting review</span></a><a class="" href="../mocks/flows_tab.html">Flows (mock)<span class="sub">Workflow/flow tab design review — not wired to pipeline</span></a></div></details>
+  </div>
+</nav>
+<main>
+  <h1>How we derived the ERP spec</h1>
+  <p class="lede">A reviewable, traceable synthesis of IMDA's Pre-Approval Guide requirements with mainstream ERP vendor knowledge — producing a checklist that's regulator-backed, market-aware, and SME-fit. Last regenerated <span id="ts">2026-04-24 08:02 UTC</span>.</p>
+
+  <div class="trust-row" id="trust-row"></div>
+
+  <h2>Data lineage — where the numbers come from</h2>
+  <div class="panel">
+    <p style="margin-top:0;color:var(--muted);">Every capability in the spec traces back to one of two inputs — the IMDA PSG guide (Singapore-regulator-backed) and public mainstream ERP vendor documentation. Every use case traces back to one of these capabilities.</p>
+    <div class="lineage" id="lineage"></div>
+  </div>
+
+  <h2>Source mix — how much of the spec is regulator-backed</h2>
+  <div class="panel">
+    <p style="margin-top:0;color:var(--muted);">Each capability-level requirement is tagged with its origin. <b>IMDA</b> = the PSG guide cites it; <b>proxy</b> = mainstream ERP vendors cover it but IMDA doesn't test; <b>both</b> = regulator-confirmed and market-standard.</p>
+    <div class="source-bar" id="source-bar"></div>
+    <div class="src-legend">
+      <span><span class="dot" style="background:var(--imda)"></span>IMDA-only</span>
+      <span><span class="dot" style="background:var(--both)"></span>Both</span>
+      <span><span class="dot" style="background:var(--proxy)"></span>Proxy-only (market gap)</span>
+    </div>
+  </div>
+
+  <h2>How use cases were derived</h2>
+  <div class="panel">
+    <p style="margin-top:0;color:var(--muted);">Each use case has a <b>derivation method</b> recorded on it — click any UC in the <a href="use_cases.html">Use Cases viewer</a> to inspect its provenance.</p>
+    <table id="deriv-table">
+      <thead>
+        <tr><th>Method</th><th>Description</th><th class="num">Use cases</th><th>Share</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <h2>12-step pipeline</h2>
+  <div class="panel">
+    <p style="margin-top:0;color:var(--muted);">Every transformation from raw PSG text to final use case is one named, re-runnable step with its own intermediate JSON. Full technical detail in the <a href="pipeline.html">developer pipeline view</a>.</p>
+    <ol class="steps-list">
+      <li>
+        <div class="step-title">Scrape + parse (deterministic)</div>
+        <div class="step-desc">89 IMDA sol cats fetched and parsed into structured requirements. Bot-protection handled in the fetcher.</div>
+      </li>
+      <li>
+        <div class="step-title">Group into capabilities (Haiku)</div>
+        <div class="step-desc">Each requirement is placed into one of ~30 canonical ERP capabilities per module.</div>
+      </li>
+      <li>
+        <div class="step-title">Merge IMDA + proxy (Haiku, per capability)</div>
+        <div class="step-desc">Duplicate/overlapping requirements are unified; every statement carries a source tag (imda / proxy / both) for audit.</div>
+      </li>
+      <li>
+        <div class="step-title">Cluster into features (Haiku)</div>
+        <div class="step-desc">Each requirement is assigned to one of 2-6 features per capability — a sub-capability layer for navigation.</div>
+      </li>
+      <li>
+        <div class="step-title">Re-rank criticality (Haiku)</div>
+        <div class="step-desc">Required / Preferred / Advanced based on merged context — not blindly inherited from either source.</div>
+      </li>
+      <li>
+        <div class="step-title">SME minimum rollup (Haiku)</div>
+        <div class="step-desc">3-8 stakeholder-ready statements per SME-applicable capability, each with a rationale.</div>
+      </li>
+      <li>
+        <div class="step-title">Vendor questions (Haiku)</div>
+        <div class="step-desc">One vendor-facing question per capability. Gates checklist visibility.</div>
+      </li>
+      <li>
+        <div class="step-title">Sector tagging (deterministic + Haiku)</div>
+        <div class="step-desc">Each requirement carries full IMDA sol-cat + vertical provenance; each capability is flagged generic vs sector-specific.</div>
+      </li>
+      <li>
+        <div class="step-title">Verification method (Haiku)</div>
+        <div class="step-desc">Each spec tagged as screenshot / demo / config_check / not_verifiable.</div>
+      </li>
+      <li>
+        <div class="step-title">Use case generation (Haiku, three phases)</div>
+        <div class="step-desc">Top-down from IMDA questions, bottom-up from feature combinations (with coverage sweep), and generic module-level rollups. Each UC carries a derivation method.</div>
+      </li>
+      <li>
+        <div class="step-title">Re-home + retrofit (Haiku)</div>
+        <div class="step-desc">Semantic re-homing to the best primary capability (within or across modules), with mapped-feature retrofits when needed.</div>
+      </li>
+      <li>
+        <div class="step-title">Tier validation + audit (Haiku + deterministic)</div>
+        <div class="step-desc">Baseline ⊂ Standard ⊂ Advanced cumulative tiers. 11 deterministic audit rules block bad outputs from shipping.</div>
+      </li>
+    </ol>
+  </div>
+
+  <h2>Per-module coverage</h2>
+  <div class="panel">
+    <p style="margin-top:0;color:var(--muted);">Ten ERP modules. Every module is canonicalised the same way, so counts are directly comparable.</p>
+    <div class="module-cards" id="module-cards"></div>
+  </div>
+
+  <h2>Trust &amp; traceability principles</h2>
+  <div class="panel">
+    <h3>Grounded</h3>
+    <p style="margin-top:2px;">Every requirement points to its origin — an IMDA question title, a mainstream vendor, or both. Nothing is generated without a cited source.</p>
+    <h3>Inspectable</h3>
+    <p style="margin-top:2px;">Every transformation produces an intermediate JSON file. Steps can be re-run independently and outputs diffed.</p>
+    <h3>Auditable</h3>
+    <p style="margin-top:2px;">11 deterministic audit rules run on every build. P0 violations block shipping. Report at <a href="pipeline.html">pipeline.html</a>.</p>
+    <h3>Reviewable</h3>
+    <p style="margin-top:2px;">Stakeholders see the final checklist; reviewers can drill down to the source text on either side of the merge.</p>
+  </div>
+
+  <p class="muted-link">Full technical write-up in <code>docs/methodology.md</code>. Pipeline provenance view for engineers: <a href="pipeline.html">pipeline.html</a>.</p>
+</main>
+
+<script>
+  const DATA = {"generated_at": "2026-04-24 08:02 UTC", "kpis": {"modules": 10, "capabilities": 293, "features": 1402, "specs": 2744, "use_cases": 2606, "traceable_pct": 100, "imda_coverage": 34, "imda_sol_cats": 89, "imda_verticals": 14}, "lineage": {"sol_cats": 89, "verticals": 14, "parsed_reqs": null, "capabilities": 293, "features": 1402, "specs": 2744, "use_cases": 2606}, "source_mix": {"imda": 517, "both": 418, "proxy": 1809}, "derivation": [{"key": "top_down", "label": "Top-down from IMDA question", "description": "Generated directly from an IMDA pre-approval question \u2014 tightest traceability back to the regulator.", "count": 114}, {"key": "bottom_up", "label": "Bottom-up from feature combination", "description": "Generated from combining 2-3 features that no single IMDA question prompted \u2014 fills market gaps IMDA doesn't test.", "count": 876}, {"key": "bottom_up_fill", "label": "Coverage fill (bottom-up)", "description": "Generated in a second pass to ensure every feature has \u22651 use case referencing it.", "count": 0}, {"key": "generic", "label": "Generic module rollup", "description": "Generic business scenarios that apply to any industry \u2014 the baseline of what any SME should demand from the capability.", "count": 1561}, {"key": "orphan_fill", "label": "Orphan feature fill", "description": "Targeted fill-in for business features no other UC covered \u2014 ensures full spec coverage.", "count": 45}, {"key": "other", "label": "Other / legacy", "description": "Use cases from earlier pipeline revisions whose derivation method is not tagged.", "count": 10}], "modules": [{"module_slug": "asset_management", "module_name": "Asset Management", "capabilities": 30, "features": 131, "specs": 238, "use_cases": 238, "imda_coverage": 16}, {"module_slug": "field_service_management", "module_name": "Field Service Management", "capabilities": 30, "features": 128, "specs": 214, "use_cases": 236, "imda_coverage": 23}, {"module_slug": "financial_management", "module_name": "Financial Management", "capabilities": 30, "features": 159, "specs": 324, "use_cases": 268, "imda_coverage": 25}, {"module_slug": "fleet_management", "module_name": "Fleet Management", "capabilities": 25, "features": 109, "specs": 180, "use_cases": 209, "imda_coverage": 23}, {"module_slug": "human_resources_management", "module_name": "Human Resources Management", "capabilities": 31, "features": 156, "specs": 319, "use_cases": 279, "imda_coverage": 34}, {"module_slug": "manufacturing_management", "module_name": "Manufacturing Management", "capabilities": 31, "features": 146, "specs": 266, "use_cases": 243, "imda_coverage": 15}, {"module_slug": "others", "module_name": "Others (Cross-Cutting)", "capabilities": 24, "features": 124, "specs": 289, "use_cases": 251, "imda_coverage": 71}, {"module_slug": "project_management", "module_name": "Project Management", "capabilities": 29, "features": 131, "specs": 244, "use_cases": 247, "imda_coverage": 32}, {"module_slug": "sales_and_crm", "module_name": "Sales & Customer Relationship Management", "capabilities": 32, "features": 168, "specs": 376, "use_cases": 308, "imda_coverage": 46}, {"module_slug": "supply_chain_and_inventory", "module_name": "Supply Chain & Inventory", "capabilities": 31, "features": 150, "specs": 294, "use_cases": 327, "imda_coverage": 40}]};
+
+  // Trust KPIs
+  function renderTrust() {
+    const row = document.getElementById("trust-row");
+    const k = DATA.kpis;
+    const cards = [
+      { value: k.modules, label: "ERP modules canonicalised", sub: "same method across all" },
+      { value: k.capabilities, label: "Capabilities defined", sub: `${k.features} features · ${k.specs} spec statements` },
+      { value: k.use_cases.toLocaleString(), label: "Use cases traced", sub: `${k.traceable_pct}% carry feature-level traceability` },
+      { value: k.imda_coverage + "%", label: "IMDA-backed", sub: `${k.imda_sol_cats} sol cats × ${k.imda_verticals} verticals` },
+    ];
+    row.innerHTML = cards.map(c => `
+      <div class="trust">
+        <div class="trust-value">${c.value}</div>
+        <div class="trust-label">${c.label}</div>
+        <div class="trust-sub">${c.sub}</div>
+      </div>
+    `).join("");
+  }
+
+  // Lineage stages
+  function renderLineage() {
+    const host = document.getElementById("lineage");
+    const l = DATA.lineage;
+    const stages = [
+      { title: "IMDA PSG", n: l.sol_cats, desc: `sol cats × ${l.verticals} verticals` },
+      { title: "Parsed", n: l.parsed_reqs ? l.parsed_reqs.toLocaleString() : "—", desc: "raw IMDA requirements" },
+      { title: "Capabilities", n: l.capabilities, desc: "canonical L2 groupings" },
+      { title: "Features + specs", n: `${l.features} · ${l.specs}`, desc: "L4 features · L5 spec statements" },
+      { title: "Use cases", n: l.use_cases.toLocaleString(), desc: "L3 checklist-visible UCs" },
+    ];
+    host.innerHTML = stages.map(s => `
+      <div class="stage">
+        <h4>${s.title}</h4>
+        <div class="n">${s.n}</div>
+        <div class="desc">${s.desc}</div>
+      </div>
+    `).join("");
+  }
+
+  // Source mix bar
+  function renderSourceBar() {
+    const host = document.getElementById("source-bar");
+    const s = DATA.source_mix;
+    const total = s.imda + s.both + s.proxy || 1;
+    const pct = x => ((x / total) * 100).toFixed(1);
+    host.innerHTML = `
+      <div class="src-imda" style="width:${pct(s.imda)}%">${pct(s.imda)}%</div>
+      <div class="src-both" style="width:${pct(s.both)}%">${pct(s.both)}%</div>
+      <div class="src-proxy" style="width:${pct(s.proxy)}%">${pct(s.proxy)}%</div>
+    `;
+  }
+
+  // Derivation table
+  function renderDeriv() {
+    const tbody = document.querySelector("#deriv-table tbody");
+    const total = DATA.derivation.reduce((n, d) => n + d.count, 0) || 1;
+    tbody.innerHTML = DATA.derivation.map(d => {
+      const pct = ((d.count / total) * 100).toFixed(1);
+      return `
+        <tr>
+          <td><b>${d.label}</b></td>
+          <td>${d.description}</td>
+          <td class="num">${d.count.toLocaleString()}</td>
+          <td><span class="bar" style="width:${Math.max(pct, 2)}%"></span> ${pct}%</td>
+        </tr>
+      `;
+    }).join("");
+  }
+
+  // Module cards
+  function renderModules() {
+    const host = document.getElementById("module-cards");
+    host.innerHTML = DATA.modules.map(m => `
+      <div class="module-card">
+        <div class="module-name">${m.module_name}</div>
+        <div class="module-stats">
+          ${m.capabilities} capabilities · ${m.features} features<br>
+          ${m.specs} spec statements · ${m.use_cases} use cases<br>
+          ${m.imda_coverage}% IMDA-backed
+        </div>
+      </div>
+    `).join("");
+  }
+
+  renderTrust();
+  renderLineage();
+  renderSourceBar();
+  renderDeriv();
+  renderModules();
+</script>
+</body>
+</html>

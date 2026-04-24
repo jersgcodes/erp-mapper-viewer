@@ -11578,7 +11578,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "workday_hcm",
         "sap_successfactors",
@@ -11921,7 +11921,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system identify critical roles, assess successor readiness, and track development plans for high-potential employees?",
+        "free_text_prompt": "Describe how your solution supports designation of critical roles, successor candidate nomination with readiness ratings, and individual development plan tracking.",
+        "covers": [
+          {
+            "text": "Identify and designate critical roles that require succession planning coverage",
+            "rationale": ""
+          },
+          {
+            "text": "Nominate successor candidates for critical roles with readiness assessment ratings",
+            "rationale": ""
+          },
+          {
+            "text": "Generate succession coverage reports and dashboards for leadership visibility",
+            "rationale": ""
+          },
+          {
+            "text": "Support 9-box grid analysis to evaluate employees on performance and potential dimensions",
+            "rationale": ""
+          },
+          {
+            "text": "Maintain talent pools organized by competency, role family, or organizational unit",
+            "rationale": ""
+          },
+          {
+            "text": "Create and track individual development plans for high-potential employees",
+            "rationale": ""
+          },
+          {
+            "text": "Flag and monitor retention risk for key talent and high-potential employees",
+            "rationale": ""
+          },
+          {
+            "text": "Assess internal mobility opportunities and role-fit scoring for employee transitions",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -11990,7 +12030,8 @@
             "reason": "Management and key account roles require talent readiness tracking"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "hr.engagement_surveys",
@@ -13119,7 +13160,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "workday_hcm",
         "sap_successfactors",
@@ -13486,7 +13527,39 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system forecast future headcount by department, track budgeted versus actual staffing levels, and model workforce scenarios such as hiring plans or restructuring with financial impact?",
+        "free_text_prompt": "Describe how your solution handles headcount forecasting, budget-to-actual comparison, and scenario modelling capabilities.",
+        "covers": [
+          {
+            "text": "Track budgeted headcount by department, role, and cost centre with support for effective-dated changes to positions",
+            "rationale": ""
+          },
+          {
+            "text": "Compare actual headcount and personnel costs against budget with variance reporting and analysis",
+            "rationale": ""
+          },
+          {
+            "text": "Maintain visibility of open requisitions and recruitment pipeline status",
+            "rationale": ""
+          },
+          {
+            "text": "Allocate workforce costs by project, cost centre, and business unit for financial planning and reporting",
+            "rationale": ""
+          },
+          {
+            "text": "Forecast attrition rates by employee segment and project forward-looking headcount impact",
+            "rationale": ""
+          },
+          {
+            "text": "Model workforce scenarios including hiring plans, headcount freezes, and organisational restructuring with financial impact",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 6,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -13555,7 +13628,8 @@
             "reason": "Logistics workforce needs headcount and recruitment forecasting"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "hr.shift_scheduling",
@@ -16548,7 +16622,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "workday_hcm",
         "sap_successfactors",
@@ -16889,7 +16963,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system provide structured case management for disciplinary and grievance matters, including confidential file storage, investigation documentation, hearing scheduling, and audit trails?",
+        "free_text_prompt": "Please describe how your system organizes cases, controls access to sensitive documents, and tracks the full lifecycle from investigation through appeal and closure.",
+        "covers": [
+          {
+            "text": "Maintain a case register recording disciplinary and grievance cases with type, severity level, and current status",
+            "rationale": ""
+          },
+          {
+            "text": "Enforce confidential document storage and role-based access control for case files and attachments",
+            "rationale": ""
+          },
+          {
+            "text": "Validate statutory notice-period compliance requirements before case closure or termination",
+            "rationale": ""
+          },
+          {
+            "text": "Provide warning letter templates and manage issuance workflow with delivery tracking",
+            "rationale": ""
+          },
+          {
+            "text": "Capture investigation notes, witness statements, and evidence documentation within case records",
+            "rationale": ""
+          },
+          {
+            "text": "Schedule disciplinary and grievance hearings with participant notification and outcome recording",
+            "rationale": ""
+          },
+          {
+            "text": "Support appeal and escalation paths with clear routing and decision documentation",
+            "rationale": ""
+          },
+          {
+            "text": "Link disciplinary cases to performance management and termination workflows",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": true,
         "sectors": {
@@ -16958,7 +17072,8 @@
             "reason": "Distributors need formal HR processes for workforce management"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "hr.exit_alumni",
@@ -16969,7 +17084,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "workday_hcm",
         "bamboohr",
@@ -17296,7 +17411,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system support configurable exit interview templates, structured capture of departure reasons, alumni profile maintenance, and alumni engagement communications?",
+        "free_text_prompt": "Describe how your solution handles exit interview workflows, attrition analytics, alumni contact management, and any integration with recruitment or referral processes.",
+        "covers": [
+          {
+            "text": "Provide configurable exit interview templates with scheduling capability to conduct structured interviews with departing employees",
+            "rationale": ""
+          },
+          {
+            "text": "Capture reason for leaving using a structured taxonomy to enable consistent categorization and analysis of attrition drivers",
+            "rationale": ""
+          },
+          {
+            "text": "Generate aggregate reporting on attrition reasons to identify trends and patterns across departments, roles, and time periods",
+            "rationale": ""
+          },
+          {
+            "text": "Maintain alumni profiles with opt-in contact information to preserve relationships with former employees",
+            "rationale": ""
+          },
+          {
+            "text": "Flag rehire eligibility status with documented reason to streamline recruitment of former employees",
+            "rationale": ""
+          },
+          {
+            "text": "Enable alumni communications including newsletters and event invitations to maintain engagement with former staff",
+            "rationale": ""
+          },
+          {
+            "text": "Track boomerang hires (returning former employees) to measure rehire success and identify patterns",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate alumni network with referral programme to leverage former employees as sources of candidate referrals",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -17365,7 +17520,8 @@
             "reason": "Operational roles; exit feedback improves retention and rehiring"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "hr.analytics_dashboards",
@@ -18282,7 +18438,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "workday_hcm",
         "sap_successfactors",
@@ -18856,7 +19012,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system use machine learning to support HR decisions such as candidate screening, attrition prediction, skill matching, or employee chatbot interactions?",
+        "free_text_prompt": "Please describe which HR use cases your ML capabilities address and how they integrate with your HRMS.",
+        "covers": [
+          {
+            "text": "Population-level analytics to identify and assess employee characteristics, trends, and performance patterns across the organization",
+            "rationale": ""
+          },
+          {
+            "text": "AI-powered resume parsing and candidate ranking to screen and evaluate job applicants",
+            "rationale": ""
+          },
+          {
+            "text": "Predictive modeling to identify employees at risk of attrition and forecast staff turnover",
+            "rationale": ""
+          },
+          {
+            "text": "Internal skill matching and mobility recommendations to identify suitable candidates for open roles",
+            "rationale": ""
+          },
+          {
+            "text": "Anomaly detection on payroll and timesheet data to identify irregularities and potential errors",
+            "rationale": ""
+          },
+          {
+            "text": "Conversational HR chatbot to answer policy questions, process leave and claims applications, update balances in HRMS, and support employee onboarding",
+            "rationale": ""
+          },
+          {
+            "text": "Predictive analytics on roster scheduling patterns to optimize staffing levels and forecast peak demand periods",
+            "rationale": ""
+          },
+          {
+            "text": "Bias detection and mitigation analysis in hiring decisions and performance review data",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -18925,7 +19121,8 @@
             "reason": "Logistics focus; recruitment and workforce planning support beneficial"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "hr.mobile_access",

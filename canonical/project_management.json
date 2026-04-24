@@ -1150,7 +1150,7 @@
             "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "task_management",
+          "feature_id": "task_management.task_management",
           "feature_name": "Task Management & Optimization",
           "criticality": "standard",
           "sme_attribution": {
@@ -1408,7 +1408,7 @@
           ]
         },
         {
-          "id": "task_management",
+          "id": "task_management.task_management",
           "name": "Task Management & Optimization",
           "description": "Reassign, reschedule, and reorder tasks to adapt to changing priorities.",
           "req_idxs": [
@@ -7564,7 +7564,39 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system manage formal change requests, assess their impact on budget and schedule, enforce approval workflows, and automatically update the project plan upon approval?",
+        "free_text_prompt": "Describe how your system captures change requests, evaluates impacts, routes approvals, and updates project baselines.",
+        "covers": [
+          {
+            "text": "Provide a change request form that captures description, justification, and initiator information",
+            "rationale": ""
+          },
+          {
+            "text": "Assess and document impact of proposed changes on project budget, schedule, and resource allocation",
+            "rationale": ""
+          },
+          {
+            "text": "Enforce multi-level approval workflow for change orders based on defined authorization rules",
+            "rationale": ""
+          },
+          {
+            "text": "Automatically update project plan, budget, and schedule upon change order approval",
+            "rationale": ""
+          },
+          {
+            "text": "Maintain a complete audit trail of all change orders with status history and decision records",
+            "rationale": ""
+          },
+          {
+            "text": "Link approved change orders to corresponding revised invoices, claims, or billing adjustments",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 6,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -7644,7 +7676,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "enterprise_only",
+      "sme_tier": "preferred",
       "cited_sources": [
         "oracle_primavera",
         "ms_project",
@@ -8065,7 +8097,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system manage multiple projects as a portfolio, allocate resources across them with conflict detection, and provide consolidated budget and status reporting at the programme level?",
+        "free_text_prompt": "Describe how your solution handles cross-project resource allocation, conflict resolution, and portfolio-level financial and status visibility.",
+        "covers": [
+          {
+            "text": "Allocate resources across multiple projects with conflict detection and resolution when the same resource is assigned to overlapping work",
+            "rationale": ""
+          },
+          {
+            "text": "Consolidate budget vs actual performance across all projects in the portfolio for overall financial visibility",
+            "rationale": ""
+          },
+          {
+            "text": "Organize projects into a hierarchical programme structure to group related projects under common governance",
+            "rationale": ""
+          },
+          {
+            "text": "Display portfolio-level dashboard showing health indicators and status for each project",
+            "rationale": ""
+          },
+          {
+            "text": "Track milestones and dependencies across projects to identify critical path and cross-project risks",
+            "rationale": ""
+          },
+          {
+            "text": "Reallocate resources between projects when work completes ahead of schedule or priorities shift",
+            "rationale": ""
+          },
+          {
+            "text": "Rank and prioritize projects using configurable scoring matrices to guide resource allocation decisions",
+            "rationale": ""
+          },
+          {
+            "text": "Model what-if scenarios for resource reallocation to evaluate impact before committing changes",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -8134,7 +8206,8 @@
             "reason": "Distribution and inventory focused, minimal project management needs"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "proj.resource_pool_skills",
@@ -8400,7 +8473,39 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system maintain a centralised directory of employee skills and certifications, and enable skill-based search to match resources to project staffing needs?",
+        "free_text_prompt": "Please describe how the system stores and searches employee skills, and whether it supports certification tracking and renewal alerts.",
+        "covers": [
+          {
+            "text": "Maintain centralised resource profiles containing skills, certifications, and experience history",
+            "rationale": ""
+          },
+          {
+            "text": "Enable skill-based search and matching to identify suitable resources for project staffing",
+            "rationale": ""
+          },
+          {
+            "text": "Track certification expiry dates and generate renewal alerts",
+            "rationale": ""
+          },
+          {
+            "text": "Generate bench reports identifying unallocated resources available for assignment",
+            "rationale": ""
+          },
+          {
+            "text": "Maintain cost rates and billing rates per resource or role",
+            "rationale": ""
+          },
+          {
+            "text": "Forecast resource demand versus supply by skill to identify gaps and surpluses",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 6,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -8479,7 +8584,7 @@
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": "enterprise_only",
+      "sme_tier": "preferred",
       "cited_sources": [
         "oracle_primavera",
         "ms_project",
@@ -8904,7 +9009,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system calculate earned value, schedule variance, cost variance, and performance indices (CPI/SPI) from planned value, actual costs, and work completion data?",
+        "free_text_prompt": "Please describe how the system captures work completion, calculates these metrics, and supports performance tracking and forecasting.",
+        "covers": [
+          {
+            "text": "Calculate planned value (PV) from the approved project baseline schedule and budget",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate earned value (EV) based on actual work completion percentage or milestone achievement",
+            "rationale": ""
+          },
+          {
+            "text": "Capture actual cost (AC) from timesheets, expense reports, and procurement transactions",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate schedule variance (SV) and cost variance (CV) from PV, EV, and AC",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate cost performance index (CPI) and schedule performance index (SPI)",
+            "rationale": ""
+          },
+          {
+            "text": "Calculate estimate at completion (EAC) and estimate to complete (ETC) using performance indices",
+            "rationale": ""
+          },
+          {
+            "text": "Generate EVM trend charts and dashboards showing performance metrics over project duration",
+            "rationale": ""
+          },
+          {
+            "text": "Support progress claims submission with verified work completion data and earned value reconciliation",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -8973,7 +9118,8 @@
             "reason": "Distribution business doesn't use project management"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "proj.expense_tracking",
@@ -9821,7 +9967,43 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system define and automate revenue recognition schedules by project using percentage-of-completion, milestone-based, or time-based methods, and generate ASC 606 / IFRS 15 compliance reports?",
+        "free_text_prompt": "Please describe which revenue recognition methods your system supports and how it handles deferred revenue, performance obligations, and reconciliation between recognized and billed revenue.",
+        "covers": [
+          {
+            "text": "Support revenue recognition schedule definition per project or contract",
+            "rationale": ""
+          },
+          {
+            "text": "Implement percentage-of-completion revenue recognition using cost-to-cost or effort-based methods",
+            "rationale": ""
+          },
+          {
+            "text": "Track and manage deferred revenue with scheduled release to recognized revenue",
+            "rationale": ""
+          },
+          {
+            "text": "Support milestone-based revenue recognition triggered by deliverable acceptance",
+            "rationale": ""
+          },
+          {
+            "text": "Allocate contract value across multiple performance obligations or contract elements",
+            "rationale": ""
+          },
+          {
+            "text": "Generate ASC 606 / IFRS 15 compliance reports for revenue recognition",
+            "rationale": ""
+          },
+          {
+            "text": "Reconcile forecasted revenue, recognized revenue, and billed amounts by project or contract",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 7,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -10773,7 +10955,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "enterprise_only",
+      "sme_tier": "preferred",
       "cited_sources": [
         "sap_ps",
         "oracle_primavera",
@@ -11106,7 +11288,47 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system track contractor costs, timesheets, and deliverable acceptance linked to project budgets?",
+        "free_text_prompt": "Describe how your solution manages contractor purchase orders, time approval, and work acceptance within project cost tracking.",
+        "covers": [
+          {
+            "text": "Maintain a contractor register with rates, contract terms, and compliance documentation",
+            "rationale": ""
+          },
+          {
+            "text": "Create and link sub-contract purchase orders to project phases",
+            "rationale": ""
+          },
+          {
+            "text": "Track contractor costs against project budget in real-time",
+            "rationale": ""
+          },
+          {
+            "text": "Capture and approve contractor timesheets",
+            "rationale": ""
+          },
+          {
+            "text": "Execute deliverable acceptance workflow for sub-contracted work",
+            "rationale": ""
+          },
+          {
+            "text": "Manage payment milestones and retention amounts",
+            "rationale": ""
+          },
+          {
+            "text": "Monitor insurance and certification compliance status for contractors",
+            "rationale": ""
+          },
+          {
+            "text": "Send automated reminders for contract renewal dates",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 8,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -11175,7 +11397,8 @@
             "reason": "Wholesale distribution does not involve project contractors"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "proj.analytics_profitability",
@@ -11476,7 +11699,43 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system calculate project profitability, analyze margins by project type or client, track resource utilisation trends, and report on-time and on-budget delivery performance?",
+        "free_text_prompt": "Please describe which of these analytics (profitability, margin analysis, utilisation tracking, delivery performance) your system provides and how they are accessed by leadership.",
+        "covers": [
+          {
+            "text": "Calculate and report project profitability as revenue minus all direct and indirect costs",
+            "rationale": ""
+          },
+          {
+            "text": "Analyze and report margin by project type, client, or team",
+            "rationale": ""
+          },
+          {
+            "text": "Track and analyze resource utilisation trends over time",
+            "rationale": ""
+          },
+          {
+            "text": "Report delivery performance metrics including on-time and on-budget completion rates",
+            "rationale": ""
+          },
+          {
+            "text": "Generate backlog and pipeline reports to support resource planning and forecasting",
+            "rationale": ""
+          },
+          {
+            "text": "Capture, store, and enable searchable access to lessons learned from completed projects",
+            "rationale": ""
+          },
+          {
+            "text": "Benchmark project performance metrics across similar project types",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 7,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {

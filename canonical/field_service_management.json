@@ -8658,7 +8658,39 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system assign work orders to subcontractors, track job completion, manage their rates and payment terms, and verify compliance requirements?",
+        "free_text_prompt": "Describe how your system handles subcontractor assignment, job tracking, rate management, and compliance verification.",
+        "covers": [
+          {
+            "text": "Maintain a registry of subcontractors with their skills, certifications, and qualifications",
+            "rationale": ""
+          },
+          {
+            "text": "Assign work orders and jobs to external subcontractor crews",
+            "rationale": ""
+          },
+          {
+            "text": "Track subcontractor job completion status and monitor work quality",
+            "rationale": ""
+          },
+          {
+            "text": "Define and manage subcontractor rate cards and payment terms",
+            "rationale": ""
+          },
+          {
+            "text": "Verify subcontractor compliance with insurance, licenses, and regulatory requirements",
+            "rationale": ""
+          },
+          {
+            "text": "Generate purchase orders for subcontracted work",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 6,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -9409,7 +9441,35 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system manage equipment swap-out workflows, track serial numbers of removed and replacement units, update installed base records, and manage return logistics and loaner equipment?",
+        "free_text_prompt": "Please describe how your system handles the swap-out process, serial number tracking, installed base updates, and loaner equipment management.",
+        "covers": [
+          {
+            "text": "Support swap-out workflow to replace faulty equipment with replacement units on-site",
+            "rationale": ""
+          },
+          {
+            "text": "Track and record serial numbers of removed (faulty) and installed (replacement) equipment during swap operations",
+            "rationale": ""
+          },
+          {
+            "text": "Automatically update installed base records when equipment is swapped or replaced",
+            "rationale": ""
+          },
+          {
+            "text": "Manage return-to-depot logistics for faulty units after swap-out",
+            "rationale": ""
+          },
+          {
+            "text": "Track loaner and temporary equipment issued during repair or swap-out cycles",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 5,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -10560,7 +10620,7 @@
             "servicetitan"
           ],
           "solcat_citations": [],
-          "feature_id": "customer_notifications",
+          "feature_id": "customer_notifications.customer_notifications",
           "feature_name": "Customer Notifications",
           "criticality": "must_have",
           "sme_attribution": {
@@ -10597,7 +10657,7 @@
             "servicetitan"
           ],
           "solcat_citations": [],
-          "feature_id": "customer_notifications",
+          "feature_id": "customer_notifications.customer_notifications",
           "feature_name": "Customer Notifications",
           "criticality": "must_have",
           "sme_attribution": {
@@ -10680,7 +10740,7 @@
             "servicetitan"
           ],
           "solcat_citations": [],
-          "feature_id": "customer_notifications",
+          "feature_id": "customer_notifications.customer_notifications",
           "feature_name": "Customer Notifications",
           "criticality": "must_have",
           "sme_attribution": {
@@ -10718,7 +10778,7 @@
             "servicetitan"
           ],
           "solcat_citations": [],
-          "feature_id": "customer_notifications",
+          "feature_id": "customer_notifications.customer_notifications",
           "feature_name": "Customer Notifications",
           "criticality": "standard",
           "sme_attribution": {
@@ -10870,7 +10930,7 @@
       },
       "features": [
         {
-          "id": "customer_notifications",
+          "id": "customer_notifications.customer_notifications",
           "name": "Customer Notifications",
           "description": "Automated messages to customers at key service milestones: appointment confirmation, ETA updates, completion summary, and follow-up.",
           "req_idxs": [
@@ -11345,7 +11405,39 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system forecast resource demand by skill and location, balance workload across teams, and alert on capacity gaps or overutilisation?",
+        "free_text_prompt": "Describe how the system forecasts demand, distributes work, and identifies capacity issues across your workforce.",
+        "covers": [
+          {
+            "text": "Display workforce capacity by team, region, and skill set",
+            "rationale": ""
+          },
+          {
+            "text": "Distribute workload across available technicians to balance utilisation",
+            "rationale": ""
+          },
+          {
+            "text": "Forecast resource demand based on contract pipeline and seasonal patterns",
+            "rationale": ""
+          },
+          {
+            "text": "Alert on overtime and underutilisation conditions",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate with HR systems to account for employee leave and availability",
+            "rationale": ""
+          },
+          {
+            "text": "Model what-if scenarios for hiring and training decisions",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 6,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -11860,7 +11952,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "salesforce_field_service",
         "dynamics_365_field_service",
@@ -12146,7 +12238,39 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Can the system ingest sensor data from connected equipment, define alert thresholds to automatically create work orders, and provide a dashboard for remote diagnostics and monitoring?",
+        "free_text_prompt": "Describe which IoT platforms or data sources your system integrates with, and how threshold-based alerts and the diagnostics dashboard function.",
+        "covers": [
+          {
+            "text": "Ingest telemetry data from IoT sensors and gateways into the ERP system",
+            "rationale": ""
+          },
+          {
+            "text": "Integrate with standard IoT platforms and cloud services for device connectivity and data ingestion",
+            "rationale": ""
+          },
+          {
+            "text": "Define threshold-based alert rules that automatically create work orders when sensor readings exceed configured limits",
+            "rationale": ""
+          },
+          {
+            "text": "Provide a remote diagnostics dashboard displaying real-time and historical sensor data for each connected asset",
+            "rationale": ""
+          },
+          {
+            "text": "Detect anomalies in equipment behavior using statistical analysis of historical sensor patterns",
+            "rationale": ""
+          },
+          {
+            "text": "Support remote firmware updates and device lifecycle management for connected equipment",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 6,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -12215,7 +12339,8 @@
             "reason": "Warehouse equipment and logistics monitoring"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "fsm.ai_ml",
@@ -12226,7 +12351,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "salesforce_field_service",
         "dynamics_365_field_service",
@@ -12519,7 +12644,39 @@
       ],
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
-      "vendor_questions": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your system use AI or machine learning to optimise field service scheduling, recommend technicians based on skills and location, or predict maintenance needs?",
+        "free_text_prompt": "Please describe which AI/ML capabilities you offer (scheduling optimisation, technician matching, predictive maintenance, or demand forecasting) and how they are implemented.",
+        "covers": [
+          {
+            "text": "AI-powered schedule optimisation to minimise technician travel time and maximise resource utilisation",
+            "rationale": ""
+          },
+          {
+            "text": "Intelligent technician recommendation based on skills, certifications, and proximity to job location",
+            "rationale": ""
+          },
+          {
+            "text": "Intelligent knowledge article and resolution suggestion based on fault codes and issue classification",
+            "rationale": ""
+          },
+          {
+            "text": "Automatic transformation of technician field notes into clear, structured work order reports",
+            "rationale": ""
+          },
+          {
+            "text": "Predictive maintenance scoring and risk assessment per asset to identify maintenance needs before failure",
+            "rationale": ""
+          },
+          {
+            "text": "Demand forecasting for parts and labour requirements",
+            "rationale": ""
+          }
+        ],
+        "total_input_items": 6,
+        "source": "step6b"
+      },
       "sector_relevance": {
         "generic": false,
         "sectors": {
@@ -12588,7 +12745,8 @@
             "reason": "Warehouse equipment maintenance and logistics scheduling"
           }
         }
-      }
+      },
+      "sme_tier_source": "step6b_promoted_from_ucs"
     },
     {
       "id": "fsm.mobile_access",
