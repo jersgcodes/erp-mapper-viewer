@@ -1450,7 +1450,7 @@
     <a class="top-bar-link" href="canonical_fleet_management.html">Fleet</a>
     <a class="top-bar-link active" href="canonical_others.html">Other</a>
     <a class="top-bar-link" href="integrations.html">Integrations</a>
-    <details class="top-bar-dropdown"><summary>More</summary><div class="top-bar-dropdown-menu"><a class="" href="use_cases.html">Use Case Explorer<span class="sub">Cross-module UC checklist + comparisons</span></a><a class="" href="gap_analysis.html">Gaps<span class="sub">IMDA vs market vs AI gap registry</span></a><a class="" href="methodology.html">Methodology<span class="sub">How outputs were derived (stakeholder view)</span></a><a class="" href="pipeline.html">Dev — Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flows_others.html">Flows (this module)<span class="sub">Partial-L3 UCs from workflows touching this module</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 (SG-grounded) + L1 intra-module + L2 inter-module proposals awaiting review</span></a><a class="" href="../mocks/flows_tab.html">Flows (mock)<span class="sub">Workflow/flow tab design review — not wired to pipeline</span></a></div></details>
+    <details class="top-bar-dropdown"><summary>More</summary><div class="top-bar-dropdown-menu"><a class="" href="use_cases.html">Use Case Explorer<span class="sub">Cross-module UC checklist + comparisons</span></a><a class="" href="gap_analysis.html">Gaps<span class="sub">IMDA vs market vs AI gap registry</span></a><a class="" href="methodology.html">Methodology<span class="sub">How outputs were derived (stakeholder view)</span></a><a class="" href="pipeline.html">Dev — Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flows_others.html">Flows (this module)<span class="sub">Partial-L3 UCs from workflows touching this module</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 (SG-grounded) + L1 intra-module + L2 inter-module proposals awaiting review</span></a></div></details>
   </div>
 </nav>
 <div class="layout">
@@ -2404,6 +2404,27 @@ function renderFlowsChecklist(flowsScope) {
   </div>`;
 }
 
+// Vendor slug → friendly label for the "Solutions supporting this flow" row.
+const VENDOR_LABELS = {
+  netsuite: "NetSuite", salesforce_sales_cloud: "Salesforce", hubspot: "HubSpot",
+  odoo: "Odoo", odoo_crm: "Odoo CRM", odoo_sales: "Odoo Sales", odoo_inventory: "Odoo Inventory",
+  odoo_manufacturing: "Odoo Mfg", odoo_accounting: "Odoo Accounting", odoo_hr: "Odoo HR",
+  odoo_project: "Odoo Project", odoo_fsm: "Odoo FSM", odoo_maintenance: "Odoo Maint.",
+  odoo_fleet: "Odoo Fleet", odoo_helpdesk: "Odoo Helpdesk",
+  erpnext: "ERPNext", sap_b1: "SAP B1", sap_s4: "SAP S/4", oracle_fusion: "Oracle Fusion",
+  oracle_netsuite: "NetSuite", workday: "Workday", zoho_crm: "Zoho CRM", zoho_books: "Zoho Books",
+  zoho_inventory: "Zoho Inv.", ms_dynamics_365_ce: "D365 CE", ms_dynamics_365_fo: "D365 F&O",
+  ms_dynamics_bc: "D365 BC", sage_intacct: "Sage Intacct", xero: "Xero", quickbooks: "QuickBooks",
+  freshservice: "Freshservice", servicenow: "ServiceNow", jira_service: "Jira Service",
+  maximo: "IBM Maximo", ibm_maximo: "IBM Maximo", fiix: "Fiix", upkeep: "UpKeep",
+  samsara: "Samsara", fleetio: "Fleetio", geotab: "Geotab",
+};
+
+function renderVendorChip(vendor) {
+  const label = VENDOR_LABELS[vendor] || vendor.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+  return `<span style="font-size:10px;padding:2px 7px;background:#f1f5f9;color:#334155;border:1px solid #cbd5e1;border-radius:10px;font-weight:500">${escapeHtml(label)}</span>`;
+}
+
 function renderPartialL3Question(p) {
   const { workflow, partial, steps } = p;
   const cats = workflow?.categories || { primary: "operational", secondary: [] };
@@ -2412,6 +2433,15 @@ function renderPartialL3Question(p) {
   const secondaryChips = (cats.secondary || []).map(s =>
     `<span style="background:transparent;color:${FLOW_CAT_COLOURS[s]||'#666'};border:1px solid ${FLOW_CAT_COLOURS[s]||'#666'};padding:1px 6px;border-radius:3px;font-size:9px;font-weight:700;letter-spacing:0.03em;text-transform:uppercase">${s}</span>`
   ).join(" ");
+
+  // Provenance badge: hand_crafted (manually authored) vs sg_baseline (framework-grounded)
+  const provenance = workflow?.provenance || "";
+  let provenanceChip = "";
+  if (provenance === "hand_crafted") {
+    provenanceChip = `<span title="Authored by hand — may lack source citation" style="background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:3px;font-size:9px;font-weight:700;letter-spacing:0.03em;text-transform:uppercase">hand-curated</span>`;
+  } else if (provenance === "sg_baseline") {
+    provenanceChip = `<span title="Derived from Singapore SME industry framework" style="background:#dcfce7;color:#166534;padding:1px 6px;border-radius:3px;font-size:9px;font-weight:700;letter-spacing:0.03em;text-transform:uppercase">SG baseline</span>`;
+  }
 
   // New schema: title (noun phrase) + description (already question-form) + example.
   // Backward compat: if only `header` present, phrase-as-question and no title/example.
@@ -2422,10 +2452,22 @@ function renderPartialL3Question(p) {
     : "";
   const exampleText = pu.example || "";
 
+  // Supporting solutions: vendors whose products cover this flow's capabilities.
+  // Aggregated at build time from vendor_citations in canonical requirements.
+  const supporting = workflow?.supporting_solutions || [];
+  const supportingRow = supporting.length
+    ? `<div style="margin-top:8px;padding-top:7px;border-top:1px dotted #e2e5ea;display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:10.5px;color:#6b7380">
+        <b style="color:#1a1f2b;font-size:10.5px;text-transform:uppercase;letter-spacing:0.04em;font-weight:700">Supported by:</b>
+        ${supporting.slice(0, 12).map(renderVendorChip).join("")}
+        ${supporting.length > 12 ? `<span style="font-size:10px;color:#94a3b8">+ ${supporting.length - 12} more</span>` : ""}
+      </div>`
+    : "";
+
   return `<div style="margin:14px 0;border:1px solid #e2e5ea;border-radius:8px;background:#fff;overflow:hidden">
     <div style="padding:12px 16px;background:#fafbfc;border-bottom:1px solid #e2e5ea">
       <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:5px;font-size:11px;color:#6b7380">
         <span style="background:#6366f1;color:#fff;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:600">${escapeHtml(workflow?.name || "")}</span>
+        ${provenanceChip}
         <span style="background:#eef2ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:9px;font-weight:700;letter-spacing:0.03em;text-transform:uppercase">${(workflow?.scope||"").replace("_","-")}</span>
         <span style="background:#ede9fe;color:#6d28d9;padding:1px 6px;border-radius:3px;font-size:9px;font-weight:700;letter-spacing:0.03em;text-transform:uppercase">${escapeHtml(workflow?.complexity||"")}</span>
         ${primaryChip}
@@ -2436,6 +2478,7 @@ function renderPartialL3Question(p) {
       </div>` : ""}
       ${descriptionText ? `<div style="font-size:13px;color:#334155;margin-top:5px;line-height:1.45">${escapeHtml(descriptionText)}</div>` : ""}
       ${exampleText ? `<div style="font-size:12px;color:#6b7380;margin-top:4px;line-height:1.4;font-style:italic">${escapeHtml(exampleText)}</div>` : ""}
+      ${supportingRow}
     </div>
     <div style="padding:6px 16px 12px">
       <div style="font-size:10.5px;color:#6b7380;text-transform:uppercase;letter-spacing:0.05em;font-weight:700;margin:8px 0 2px">Checks (${steps.length})</div>

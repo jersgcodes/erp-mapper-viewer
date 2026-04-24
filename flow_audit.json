@@ -1,0 +1,328 @@
+{
+  "summary": {
+    "total_violations": 51,
+    "per_source": {
+      "workflows.yaml": 33,
+      "proposed_flows_sme_baseline.yaml": 18,
+      "proposed_flows_intra.yaml": 0,
+      "proposed_flows_inter.yaml": 0
+    },
+    "by_rule": {
+      "R1_title": 0,
+      "R2_description": 0,
+      "R3_example": 0,
+      "R4_british_english": 3,
+      "R5_no_contractions": 0,
+      "R6_title_word_count": 48
+    },
+    "p0_any": false
+  },
+  "violations": [
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / order_to_cash / segment[sales-capture] / sub[s-order-capture]",
+      "message": "title at 3 words (guide recommends 4-8): 'Order Line Capture'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / order_to_cash / segment[fin-credit]",
+      "message": "title at 3 words (guide recommends 4-8): 'Credit Limit Verification'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / order_to_cash / segment[fin-billing] / sub[s-invoice]",
+      "message": "title at 3 words (guide recommends 4-8): 'Customer Invoice Generation'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / order_to_cash / segment[fin-billing] / sub[s-reconcile]",
+      "message": "title at 3 words (guide recommends 4-8): 'Bank Payment Reconciliation'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / order_to_cash / segment[fin-billing] / sub[s-dunning]",
+      "message": "title at 3 words (guide recommends 4-8): 'Overdue Receivable Collection'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / procure_to_pay / segment[sc-requisition] / sub[p-reorder-trigger]",
+      "message": "title at 3 words (guide recommends 4-8): 'Automatic Reorder Triggering'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / procure_to_pay / segment[fin-ap-pay] / sub[p-pay]",
+      "message": "title at 3 words (guide recommends 4-8): 'Supplier Payment Disbursement'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / procure_to_pay / segment[fin-ap-pay] / sub[p-payment-gateway]",
+      "message": "title at 3 words (guide recommends 4-8): 'Payment Gateway Execution'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / hire_to_retire / segment[hr-onboard]",
+      "message": "title at 3 words (guide recommends 4-8): 'New Hire Onboarding'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / hire_to_retire / segment[hr-employ]",
+      "message": "title at 3 words (guide recommends 4-8): 'Ongoing Employment Operations'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / hire_to_retire / segment[hr-employ] / sub[h-leave]",
+      "message": "title at 3 words (guide recommends 4-8): 'Leave Request Management'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / hire_to_retire / segment[hr-employ] / sub[h-payroll]",
+      "message": "title at 3 words (guide recommends 4-8): 'Monthly Payroll Processing'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / hire_to_retire / segment[hr-employ] / sub[h-performance]",
+      "message": "title at 3 words (guide recommends 4-8): 'Performance Review Cycle'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / hire_to_retire / segment[hr-employ] / sub[h-statutory]",
+      "message": "title at 3 words (guide recommends 4-8): 'Statutory Payroll Reporting'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / hire_to_retire / segment[hr-offboard] / sub[h-exit-process]",
+      "message": "title at 3 words (guide recommends 4-8): 'Exit Checklist Execution'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / month_end_close / segment[close-adjust] / sub[c-intercompany]",
+      "message": "title at 3 words (guide recommends 4-8): 'Inter-Company Elimination'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / month_end_close / segment[close-report] / sub[c-statements]",
+      "message": "title at 3 words (guide recommends 4-8): 'Financial Statement Production'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / month_end_close / segment[close-report] / sub[c-tax-return]",
+      "message": "title at 3 words (guide recommends 4-8): 'Tax Return Filing'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / month_end_close / segment[close-report] / sub[c-xbrl]",
+      "message": "title at 3 words (guide recommends 4-8): 'XBRL Statutory Filing'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / month_end_close / segment[close-report] / sub[c-mgmt-reports]",
+      "message": "title at 3 words (guide recommends 4-8): 'Management Dashboard Distribution'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / plan_to_produce / segment[mfg-plan] / sub[m-demand]",
+      "message": "title at 3 words (guide recommends 4-8): 'Demand Baseline Establishment'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / request_to_resolve / segment[fsm-close] / sub[f-report]",
+      "message": "title at 3 words (guide recommends 4-8): 'Service Report Completion'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / request_to_resolve / segment[fsm-close] / sub[f-notify]",
+      "message": "title at 3 words (guide recommends 4-8): 'Customer Completion Notification'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / asset_lifecycle / segment[asset-acquire] / sub[a-register]",
+      "message": "title at 3 words (guide recommends 4-8): 'Asset Record Creation'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / asset_lifecycle / segment[asset-acquire] / sub[a-commission]",
+      "message": "title at 3 words (guide recommends 4-8): 'Capital Project Commissioning'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / asset_lifecycle / segment[asset-operate] / sub[a-pm]",
+      "message": "title at 3 words (guide recommends 4-8): 'Preventive Maintenance Scheduling'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / asset_lifecycle / segment[asset-depreciate] / sub[a-depreciate]",
+      "message": "title at 3 words (guide recommends 4-8): 'Periodic Depreciation Posting'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / asset_lifecycle / segment[asset-depreciate] / sub[a-lease]",
+      "message": "title at 3 words (guide recommends 4-8): 'Lease Accounting Treatment'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / asset_lifecycle / segment[asset-dispose] / sub[a-retire]",
+      "message": "title at 3 words (guide recommends 4-8): 'Asset Retirement Posting'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / returns_rma / segment[rma-receive] / sub[r-receive]",
+      "message": "title at 3 words (guide recommends 4-8): 'Returned Goods Receipt'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / returns_rma / segment[rma-receive] / sub[r-inspect]",
+      "message": "title at 3 words (guide recommends 4-8): 'Return Condition Inspection'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / returns_rma / segment[rma-refund] / sub[r-credit-note]",
+      "message": "title at 3 words (guide recommends 4-8): 'Credit Note Issuance'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "workflows.yaml / returns_rma / segment[rma-refund] / sub[r-tax-reverse]",
+      "message": "title at 3 words (guide recommends 4-8): 'Return Tax Reversal'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-iras_gst_filing / segment[mytax-portal-submission]",
+      "message": "title at 3 words (guide recommends 4-8): 'MyTax Portal Submission'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-iras_gst_filing / segment[mytax-portal-submission] / sub[mytax-portal-submission-5]",
+      "message": "title at 3 words (guide recommends 4-8): 'Regulatory Compliance Validation'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-performance_management / segment[goal-setting-cascade]",
+      "message": "title at 3 words (guide recommends 4-8): 'Organisational Objective Cascade'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-tradenet_customs / segment[permit-approval-issuance] / sub[permit-approval-issuance-1]",
+      "message": "title at 3 words (guide recommends 4-8): 'Return Authorisation Workflow'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-apics_scor / segment[reverse-logistics-returns] / sub[reverse-logistics-returns-1]",
+      "message": "title at 3 words (guide recommends 4-8): 'Return Authorisation Workflow'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-mrp_cycle / segment[net-requirements-calculation]",
+      "message": "title at 3 words (guide recommends 4-8): 'Net Requirements Calculation'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-mrp_cycle / segment[planned-order-generation]",
+      "message": "title at 3 words (guide recommends 4-8): 'Planned Order Generation'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-shop_floor_control / segment[job-release-authorisation]",
+      "message": "title at 3 words (guide recommends 4-8): 'Job Release Authorisation'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-shop_floor_control / segment[dispatch-list-generation]",
+      "message": "title at 3 words (guide recommends 4-8): 'Dispatch List Generation'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-shop_floor_control / segment[operation-execution-tracking]",
+      "message": "title at 3 words (guide recommends 4-8): 'Operation Execution Tracking'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-shop_floor_control / segment[job-completion-reporting]",
+      "message": "title at 3 words (guide recommends 4-8): 'Job Completion Reporting'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-quality_capa / segment[nonconformance-record-creation]",
+      "message": "title at 3 words (guide recommends 4-8): 'Nonconformance Report Documentation'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-renewal_churn / segment[renewal-negotiation-management] / sub[renewal-negotiation-management-2]",
+      "message": "title at 3 words (guide recommends 4-8): 'Standardised Contract Execution'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-itil_request_fulfilment / segment[request-approval-authorisation] / sub[request-approval-authorisation-5]",
+      "message": "title at 3 words (guide recommends 4-8): 'Subcontractor Invoice Reconciliation'"
+    },
+    {
+      "rule": "R4_british_english",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-pmbok_process_groups / segment[project-plan-development] / sub[project-plan-development-3]",
+      "message": "US spelling: 'program'"
+    },
+    {
+      "rule": "R4_british_english",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-pmbok_process_groups / segment[project-performance-tracking] / sub[project-performance-tracking-2]",
+      "message": "US spelling: 'program'"
+    },
+    {
+      "rule": "R4_british_english",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-agile_sprint / segment[sprint-planning-setup] / sub[sprint-planning-setup-1]",
+      "message": "US spelling: 'program'"
+    },
+    {
+      "rule": "R6_title_word_count",
+      "severity": "P1",
+      "context": "proposed_flows_sme_baseline.yaml / sme-iso_55000_lifecycle / segment[preventive-maintenance-scheduling] / sub[preventive-maintenance-scheduling-1]",
+      "message": "title at 3 words (guide recommends 4-8): 'Security Vulnerability Remediation'"
+    }
+  ]
+}
