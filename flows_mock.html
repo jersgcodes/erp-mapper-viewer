@@ -1,0 +1,1092 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Flows — Order-to-Cash (grounded mock)</title>
+<style>
+  :root {
+    --bg:#f7f8fa; --panel:#fff; --border:#e2e5ea; --text:#1a1f2b; --muted:#6b7380;
+    --accent:#2563eb; --accent-bg:#eff6ff;
+    --warn:#ea580c; --warn-bg:#fff8f1;
+    --mono:"SFMono-Regular",Menlo,Consolas,monospace;
+    --sales:#fef3c7; --sales-border:#f59e0b;
+    --sc:#dbeafe;   --sc-border:#3b82f6;
+    --fin:#dcfce7;  --fin-border:#16a34a;
+    --fin-alt:#d1fae5; --fin-alt-border:#10b981;
+
+    /* Category colours */
+    --cat-operational:#2563eb;
+    --cat-master_data:#7c3aed;
+    --cat-lifecycle:#0d9488;
+    --cat-analytical:#f59e0b;
+    --cat-compliance:#dc2626;
+    --cat-strategic:#16a34a;
+    --cat-exception:#6b7280;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.55}
+  .mock-banner{background:#fef3c7;color:#92400e;padding:6px 16px;font-size:12px;text-align:center;border-bottom:1px solid #f59e0b}
+
+  header.page{padding:22px 24px 6px;max-width:1100px;margin:0 auto}
+  header.page h1{font-size:24px;margin:0 0 4px}
+  header.page p{margin:0 0 14px;color:var(--muted);font-size:13px}
+
+  main{max-width:1100px;margin:0 auto;padding:0 24px 40px}
+
+  /* ============ Flow top card ============ */
+  .flow-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+
+  .flow-top{padding:18px 22px;border-bottom:1px solid var(--border)}
+  .flow-top h2{font-size:22px;margin:0 0 6px;font-weight:600}
+  .flow-to{color:var(--muted);font-size:13px;margin:0 0 12px}
+  .flow-to b{color:var(--text)}
+
+  .meta-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+  .chip{font-size:10.5px;padding:3px 9px;border-radius:4px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;border:1px solid transparent}
+  .chip.scope{background:#eef2ff;color:#4338ca;border-color:#c7d2fe}
+  .chip.complexity{background:#ede9fe;color:#6d28d9;border-color:#ddd6fe}
+  .chip.count{background:#f1f5f9;color:#475569;border-color:#cbd5e1}
+  /* Option C — primary solid, secondary outlined */
+  .cat-chip{font-size:10.5px;padding:3px 9px;border-radius:4px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;border:1px solid}
+  .cat-chip.primary{color:#fff;border-color:transparent}
+  .cat-chip.secondary{background:transparent}
+  .cat-operational{--c:var(--cat-operational)}
+  .cat-master_data{--c:var(--cat-master_data)}
+  .cat-lifecycle{--c:var(--cat-lifecycle)}
+  .cat-analytical{--c:var(--cat-analytical)}
+  .cat-compliance{--c:var(--cat-compliance)}
+  .cat-strategic{--c:var(--cat-strategic)}
+  .cat-exception{--c:var(--cat-exception)}
+  .cat-chip.primary{background:var(--c)}
+  .cat-chip.secondary{color:var(--c);border-color:var(--c)}
+
+  /* Priority by sector — grouped rows */
+  .priority-block{background:#fafbfc;border:1px solid var(--border);border-radius:8px;padding:10px 14px;margin-top:6px}
+  .priority-head{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;font-weight:700}
+  .priority-row{display:flex;gap:8px;align-items:center;padding:3px 0;font-size:12px}
+  .priority-label{font-family:var(--mono);font-weight:700;color:#fff;padding:2px 8px;border-radius:3px;min-width:26px;text-align:center;font-size:11px}
+  .priority-label.p1{background:#1e3a8a}
+  .priority-label.p2{background:#2563eb}
+  .priority-label.p3{background:#60a5fa}
+  .priority-label.p4{background:#bfdbfe;color:#1e3a8a}
+  .priority-label.p5{background:#e5e7eb;color:#475569}
+  .priority-sectors{flex:1;color:var(--text)}
+  .priority-meaning{color:var(--muted);font-size:11px;font-style:italic}
+
+  /* ============ Controls ============ */
+  .flow-controls{padding:10px 22px;background:#fafbfc;border-bottom:1px solid var(--border);display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .variant-tabs{display:flex;gap:3px}
+  .vtab{padding:6px 13px;border:1px solid var(--border);background:#fff;border-radius:6px;font-size:12.5px;cursor:pointer;color:var(--text);font-weight:500}
+  .vtab:hover{border-color:var(--accent);color:var(--accent)}
+  .vtab.active{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:600}
+  .view-toggle{display:flex;border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-left:auto}
+  .view-toggle button{background:#fff;border:none;padding:6px 14px;font-size:12.5px;cursor:pointer;color:var(--text);font-weight:500}
+  .view-toggle button.active{background:var(--accent);color:#fff;font-weight:600}
+  .overlay-toggle{font-size:12px;color:var(--text);cursor:pointer;user-select:none;display:flex;align-items:center;gap:5px}
+
+  .variant-note{padding:10px 18px;background:var(--accent-bg);border-left:3px solid var(--accent);margin:14px 22px 8px;border-radius:0 6px 6px 0;font-size:12.5px;color:#1e3a8a}
+
+  /* ============ Vertical flow body ============ */
+  .flow-body{padding:18px 22px}
+  .segment-card{background:#fff;border:1px solid var(--border);border-left:4px solid var(--lane-color,#cbd5e1);border-radius:8px;margin:0 0 8px;padding:14px 18px}
+  .segment-card.sales{--lane-color:var(--sales-border)}
+  .segment-card.sc{--lane-color:var(--sc-border)}
+  .segment-card.fin{--lane-color:var(--fin-border)}
+  .segment-card.fin-alt{--lane-color:var(--fin-alt-border)}
+
+  .seg-head-row{display:flex;align-items:flex-start;gap:12px;margin-bottom:4px}
+  .seg-num{font-family:var(--mono);font-weight:700;color:var(--muted);font-size:13px;min-width:24px;padding-top:2px}
+  .seg-title{flex:1}
+  .seg-module{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-bottom:1px}
+  .seg-uc-header{font-size:16px;font-weight:600;margin:0}
+  .seg-uc-desc{font-size:13px;color:#334155;margin:6px 0 0}
+  .seg-meta{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0 0;font-size:11.5px;color:var(--muted)}
+  .seg-meta b{color:var(--text);font-weight:600}
+  .seg-parent-flows{display:flex;gap:4px;align-items:center}
+  .flow-tag{background:#f1f5f9;color:#475569;padding:1px 7px;border-radius:3px;font-size:11px;font-weight:500;text-decoration:none;border:1px solid #cbd5e1}
+  .flow-tag:hover{background:#e2e8f0}
+  .flow-tag.current{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+  /* Sub-steps inside card */
+  .expandable-section{margin-top:14px;border-top:1px dashed var(--border);padding-top:10px}
+  .section-head{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;font-weight:700;cursor:pointer;user-select:none;display:flex;align-items:center;gap:6px}
+  .section-head::before{content:"▸";display:inline-block;transition:transform .12s}
+  .expandable-section.open .section-head::before{transform:rotate(90deg)}
+  .section-body{display:none;margin-top:8px}
+  .expandable-section.open .section-body{display:block}
+
+  .substep{border:1px solid var(--border);border-radius:6px;padding:10px 12px;margin:6px 0;background:#fafbfc}
+  .substep-head{display:flex;align-items:flex-start;gap:8px}
+  .substep-num{font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;background:#475569;border-radius:3px;padding:1px 6px;margin-top:2px;min-width:26px;text-align:center;flex-shrink:0}
+  .substep-main{flex:1;min-width:0}
+  .substep-uc-header{font-size:13.5px;font-weight:600;margin:0}
+  .substep-uc-desc{font-size:12px;color:#475569;margin:3px 0 0}
+  .substep-uc-meta{font-size:11px;color:var(--muted);margin-top:4px;display:flex;gap:12px;flex-wrap:wrap}
+  .substep-uc-meta b{color:var(--text)}
+  .badge{font-size:9.5px;padding:1px 6px;border-radius:3px;font-weight:700;letter-spacing:0.03em;margin-left:6px;vertical-align:middle}
+  .badge.opt{background:#e0e7ff;color:#4338ca}
+  .badge.hitl{background:#fef3c7;color:#92400e}
+  .substep-cap{font-family:var(--mono);font-size:11px;color:var(--accent);margin-top:5px;cursor:pointer;user-select:none}
+  .substep-cap::after{content:" ▸";transition:transform .12s;display:inline-block}
+  .substep.specs-open .substep-cap::after{transform:rotate(90deg)}
+  .substep-specs{display:none;margin-top:8px;padding-top:8px;border-top:1px dashed var(--border)}
+  .substep.specs-open .substep-specs{display:block}
+  .substep-specs-head{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;font-weight:700;margin-bottom:5px}
+  .spec-row{font-size:11.5px;padding:4px 0;display:flex;gap:7px;line-height:1.45;border-top:1px dotted #eef0f3}
+  .spec-row:first-child{border-top:none}
+  .spec-src{display:inline-block;font-family:var(--mono);font-size:9px;padding:1px 5px;border-radius:3px;font-weight:700;flex-shrink:0;margin-top:2px;align-self:flex-start;text-transform:uppercase;letter-spacing:0.03em}
+  .spec-src.imda{background:#1e3a8a;color:#fff}
+  .spec-src.proxy{background:#92400e;color:#fff}
+  .spec-src.both{background:#4338ca;color:#fff}
+  .spec-text{flex:1}
+  .muted-substep{opacity:0.42}
+
+  /* Limits accordion */
+  .limit-item{display:flex;gap:8px;padding:5px 0;border-top:1px dotted #eef0f3;align-items:flex-start}
+  .limit-item:first-child{border-top:none}
+  .limit-type{font-family:var(--mono);font-size:9.5px;padding:2px 6px;border-radius:3px;font-weight:700;white-space:nowrap;flex-shrink:0;text-transform:uppercase;letter-spacing:0.03em}
+  .limit-type.high{background:#fee2e2;color:#991b1b}
+  .limit-type.medium{background:#fef3c7;color:#92400e}
+  .limit-type.low{background:#f1f5f9;color:#475569}
+  .limit-text{flex:1;font-size:12px;line-height:1.45}
+  .limit-deriv{color:var(--muted);font-size:10.5px;margin-top:2px;font-style:italic}
+  .limit-deriv code{font-family:var(--mono);background:rgba(0,0,0,0.04);padding:0 4px;border-radius:2px;font-style:normal}
+
+  /* ============ Transitions (between segment cards) ============ */
+  .transition{display:flex;flex-direction:column;align-items:center;padding:6px 0;margin:0;position:relative}
+  .transition-arrow{font-size:22px;color:var(--warn);line-height:1;margin-bottom:4px}
+  .transition-body{background:var(--warn-bg);border:1px solid #fed7aa;border-radius:8px;padding:10px 14px;width:80%;max-width:680px}
+  .transition-event{font-size:13px;font-weight:600;color:#9a3412;margin-bottom:2px}
+  .transition-desc{font-size:12px;color:#78350f;margin-bottom:6px;line-height:1.4}
+  .transition-edge{font-family:var(--mono);font-size:10.5px;color:#78350f;margin-bottom:6px}
+  .transition-edge b{color:#9a3412}
+  .transition-frictions{margin-top:6px;padding-top:6px;border-top:1px dashed #fed7aa}
+  .transition .section-head{color:#9a3412}
+  .transition[data-friction="0"] .transition-body{background:#f0fdf4;border-color:#bbf7d0}
+  .transition[data-friction="0"] .transition-event{color:#166534}
+  .transition[data-friction="0"] .transition-arrow{color:#22c55e}
+
+  /* ============ Checklist view ============ */
+  .cl-section{margin-bottom:20px}
+  .cl-seg-head{padding:8px 14px;background:#f1f5f9;border-left:4px solid var(--lane-color);border-radius:0 6px 6px 0;margin-bottom:8px}
+  .cl-seg-head.sales{--lane-color:var(--sales-border)}
+  .cl-seg-head.sc{--lane-color:var(--sc-border)}
+  .cl-seg-head.fin,.cl-seg-head.fin-alt{--lane-color:var(--fin-border)}
+  .cl-seg-head-top{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;font-weight:700}
+  .cl-seg-head-main{font-size:15px;font-weight:600;margin-top:2px}
+  .cl-seg-head-sub{font-size:12px;color:#475569;margin-top:3px}
+
+  .cl-item{padding:8px 14px;display:flex;gap:10px;align-items:flex-start;border-bottom:1px dashed #eef0f3;cursor:pointer}
+  .cl-item:hover{background:#fafbfc}
+  .cl-check{width:15px;height:15px;border:1.5px solid #94a3b8;border-radius:3px;flex-shrink:0;margin-top:2px;position:relative}
+  .cl-body{flex:1;min-width:0}
+  .cl-header{font-size:13.5px;font-weight:600}
+  .cl-desc{font-size:12px;color:#475569;margin-top:2px}
+  .cl-meta{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:3px}
+  .cl-meta b{color:var(--accent)}
+  .cl-specs{display:none;margin-top:8px;padding:8px 10px;background:#f8fafc;border-left:2px solid var(--accent);border-radius:0 4px 4px 0}
+  .cl-item.open .cl-specs{display:block}
+
+  .cl-transition{padding:10px 14px;background:var(--warn-bg);border:1px solid #fed7aa;border-left:3px solid var(--warn);border-radius:0 6px 6px 0;margin:8px 14px;font-size:12px}
+  .cl-transition b{color:#9a3412}
+
+  /* ============ Footer ============ */
+  .source-legend{padding:12px 22px;background:#fafbfc;border-top:1px solid var(--border);font-size:11px;color:var(--muted);line-height:1.6}
+  .source-legend b{color:var(--text)}
+
+  /* Utility */
+  .spec-src.inline{vertical-align:middle;margin-right:6px}
+</style>
+</head>
+<body>
+<div class="mock-banner">Flows mock — grounded in <code>output/canonical/{sales,sc,fin}.json</code>. Partial-L3 UCs phrased and traced to real caps &amp; specs. No Haiku, no fiction.</div>
+
+<header class="page">
+  <h1>Flows — Order-to-Cash (real-data mock)</h1>
+  <p>One flow shown end-to-end. Each segment is a <b>partial L3</b> — a module-scoped use-case summary that can be shown inside the per-module ERP viewer, with a link back to the full flow.</p>
+</header>
+
+<main>
+<div class="flow-card">
+
+  <div class="flow-top">
+    <h2>Order-to-Cash</h2>
+    <div class="flow-to">Trigger: <b>customer places an order</b> → Outcome: <b>cash collected, ledger reconciled, customer fulfilled</b></div>
+
+    <div class="meta-row" id="meta-row"></div>
+
+    <div class="priority-block" id="priority-block"></div>
+  </div>
+
+  <div class="flow-controls">
+    <div class="variant-tabs" id="variant-tabs"></div>
+    <label class="overlay-toggle">
+      <input type="checkbox" id="show-overlay"> show generic steps that the variant skips
+    </label>
+    <div class="view-toggle">
+      <button data-view="diagram" class="active">Flow diagram</button>
+      <button data-view="checklist">Checklist</button>
+    </div>
+  </div>
+
+  <div id="variant-note" class="variant-note" style="display:none"></div>
+
+  <div id="flow-body" class="flow-body"></div>
+
+  <div class="source-legend">
+    Spec source legend:
+    <span class="spec-src imda inline">IMDA</span> from IMDA PSG pre-approval guide ·
+    <span class="spec-src both inline">both</span> IMDA + mainstream proxy ·
+    <span class="spec-src proxy inline">proxy</span> proxy-only (market-leading, IMDA doesn't test).<br>
+    Limitation sources: <b>imda</b> = traced to IMDA sol cat · <b>proxy</b> = vendor research ·
+    <b>cross_module_edge</b> = <code>data/cross_module_scored.yaml</code> · <b>hand_authored</b> = flagged for human review.<br>
+    Each segment is a <b>partial L3 use case</b>: a module-scoped summary of its role in the flow. In the per-module ERP viewer this would appear alongside standalone scenario UCs, with a "part of Order-to-Cash" backlink.
+  </div>
+</div>
+</main>
+
+<script>
+// ============================================================
+// Taxonomy
+// ============================================================
+const SECTORS = ["generic","retail","fnb","wholesale","services","logistics","travel","manufacturing"];
+const SECTOR_LABELS = {
+  generic:"Generic SME", retail:"Retail", fnb:"F&B", wholesale:"Wholesale",
+  services:"Professional services", logistics:"Logistics", travel:"Travel", manufacturing:"Manufacturing"
+};
+
+// ============================================================
+// Real spec data — extracted from output/canonical/*.json
+// ============================================================
+const SPECS = {
+  "sales.contacts_accounts": {name:"Contact, Account & Customer Master", specs:[
+    {id:"r1",text:"Maintain contact master records with core attributes: name, title, email, phone, address, and language preference",source:"both"},
+    {id:"r2",text:"Maintain account/company master records with organizational hierarchy support (parent/subsidiary relationships)",source:"both"},
+    {id:"r3",text:"Track customer purchase history and transaction records",source:"both"},
+    {id:"r4",text:"Define and track contact roles and relationships within accounts",source:"proxy"},
+    {id:"r5",text:"Enforce GDPR/PDPA consent flags and data retention rules at the contact level",source:"proxy"},
+    {id:"r6",text:"Maintain unified activity feed tracking all customer interactions: emails, calls, meetings, orders, invoices, tickets, and feedback",source:"both"},
+    {id:"r7",text:"Support customer segmentation through tags and custom attributes",source:"both"},
+    {id:"r8",text:"Support multiple address types per account (billing, shipping, service)",source:"proxy"},
+    {id:"r9",text:"Detect and manage duplicate contact and account records with merge workflow",source:"proxy"},
+    {id:"r10",text:"Enable search, filtering, and tagging of customers by attributes and groups",source:"imda"},
+    {id:"r11",text:"Store and manage customer contracts with payment terms, quantities, and pricing details",source:"imda"}
+  ]},
+  "sales.quotes_orders": {name:"Orders & Invoicing", specs:[
+    {id:"r1",text:"Create orders with line items, quantities, and prices",source:"both"},
+    {id:"r2",text:"Generate invoices from orders",source:"both"},
+    {id:"r3",text:"Track order status through fulfilment stages (pending, confirmed, shipped, delivered)",source:"both"},
+    {id:"r4",text:"Record and track payment status against each invoice",source:"both"},
+    {id:"r5",text:"Send invoices and orders via email with PDF attachment",source:"both"},
+    {id:"r6",text:"Create quotations with line items and convert accepted quotes to orders",source:"both"},
+    {id:"r7",text:"Handle partial shipments and order amendments",source:"proxy"},
+    {id:"r8",text:"Maintain audit trail of all order and invoice changes",source:"proxy"},
+    {id:"r9",text:"Send automated order confirmation emails and notifications",source:"imda"},
+    {id:"r11",text:"Support multiple shipping options for customers",source:"imda"},
+    {id:"r13",text:"Manage sales activities including discounts, pricing, and inventory availability checks",source:"imda"},
+    {id:"r15",text:"Capture structured customer orders from documents (PDF, XLS) and convert to order records",source:"imda"},
+    {id:"r18",text:"Support workflow approval for order and package adjustments",source:"imda"}
+  ]},
+  "sales.pricing_discounts": {name:"Pricing, Discounts & Promotions", specs:[
+    {id:"r1",text:"Maintain multiple price lists segmented by customer group, region, currency, or product category with ability to assign price lists to customers or customer segments",source:"both"},
+    {id:"r2",text:"Define and apply quantity-based volume discounts with configurable break points and discount percentages or fixed amounts",source:"both"},
+    {id:"r3",text:"Configure discount approval workflows with role-based thresholds to control margin protection and pricing authority",source:"proxy"},
+    {id:"r4",text:"Display list price, net price, and margin visibility at the line item level to enable informed pricing decisions",source:"proxy"},
+    {id:"r5",text:"Set up and edit pricing rules and mark-ups to define base pricing logic and automatic adjustments",source:"imda"},
+    {id:"r6",text:"Create time-bound promotions with start and end dates, including seasonal and event-based pricing adjustments",source:"both"},
+    {id:"r7",text:"Manage coupon and promotional codes with redemption rules, usage limits, expiration dates, and applicability constraints",source:"both"},
+    {id:"r8",text:"Support multiple units of measure per SKU with automatic conversion and consistent pricing across different UOM presentations",source:"both"}
+  ]},
+  "fin.credit_collections": {name:"Credit Management & Collections", specs:[
+    {id:"r1",text:"Set and maintain customer credit limits with real-time exposure monitoring against current outstanding balance",source:"both"},
+    {id:"r2",text:"Automatically place credit hold on orders when customer exposure exceeds assigned credit limit",source:"proxy"},
+    {id:"r3",text:"Report on days sales outstanding (DSO) and aging of receivables by customer and time period",source:"proxy"},
+    {id:"r4",text:"Define and maintain customer-specific payment terms and payment modes",source:"imda"},
+    {id:"r5",text:"Assign and track customer credit scores and risk categories to inform credit decisions",source:"proxy"},
+    {id:"r6",text:"Configure and execute automated dunning sequences across multiple channels (email, SMS, letter) based on payment aging",source:"proxy"},
+    {id:"r7",text:"Record and track customer payment promises with automated follow-up reminders and status updates",source:"proxy"},
+    {id:"r8",text:"Capture, log, and manage customer payment disputes with resolution workflow and audit trail",source:"proxy"}
+  ]},
+  "sc.stock_levels": {name:"Stock Levels & Warehouse Management", specs:[
+    {id:"r1",text:"Real-time stock-on-hand visibility by warehouse, zone, aisle, rack, and bin location",source:"both"},
+    {id:"r2",text:"Track allocated, available, reserved, and in-transit inventory quantities",source:"both"},
+    {id:"r3",text:"Consolidated stock view across all warehouses and sales channels",source:"both"},
+    {id:"r4",text:"Lot and serial number tracking for asset and inventory traceability",source:"both"},
+    {id:"r5",text:"Real-time inventory updates upon order fulfillment, receipt, and stock movements",source:"both"},
+    {id:"r7",text:"Inventory status classification (available, quarantine, damaged, reserved, under-stock, over-stock)",source:"both"},
+    {id:"r8",text:"Automated low-stock and overstock threshold alerts and notifications",source:"both"},
+    {id:"r14",text:"Barcode and RFID technology integration for product tracking and identification",source:"both"}
+  ]},
+  "sc.warehouse_automation": {name:"Warehouse Automation & WMS Integration", specs:[
+    {id:"r1",text:"Direct putaway and picking workflows to assign optimal locations and sequences to workers",source:"proxy"},
+    {id:"r2",text:"Optimise pick path routing by zone or sequence to minimise travel distance and time",source:"proxy"},
+    {id:"r3",text:"Plan labour capacity and track worker productivity against warehouse tasks",source:"proxy"},
+    {id:"r4",text:"Read RFID tags for bulk receipt, inbound counting, and inventory verification",source:"proxy"},
+    {id:"r5",text:"Interleave picking and putaway tasks to reduce empty travel and improve labour utilisation",source:"proxy"},
+    {id:"r7",text:"Optimise item slotting based on velocity and demand patterns to reduce pick time",source:"proxy"}
+  ]},
+  "sc.stock_movements": {name:"Stock Movements & Transfers", specs:[
+    {id:"r1",text:"Support inter-warehouse stock transfers with in-transit tracking and visibility",source:"proxy"},
+    {id:"r2",text:"Enable internal location-to-location moves within a single warehouse",source:"proxy"},
+    {id:"r3",text:"Create transfer orders with expected and actual quantity reconciliation",source:"proxy"},
+    {id:"r5",text:"Maintain complete audit trail of all stock movements with user, timestamp, and reason",source:"proxy"},
+    {id:"r7",text:"Support batch transfer of multiple items in a single transfer document",source:"proxy"}
+  ]},
+  "fin.accounts_receivable": {name:"Accounts Receivable & Customer Invoicing", specs:[
+    {id:"r1",text:"Maintain customer master data including billing address, tax identification, and payment terms",source:"both"},
+    {id:"r2",text:"Create and edit sales invoices with line items, tax calculations, and discounts",source:"both"},
+    {id:"r3",text:"Apply customer payments against single or multiple invoices",source:"both"},
+    {id:"r4",text:"Process credit notes and refunds",source:"proxy"},
+    {id:"r5",text:"Support partial payments and allocation of payments across multiple invoices",source:"proxy"},
+    {id:"r6",text:"Generate customer statements and receivables ageing analysis",source:"proxy"},
+    {id:"r9",text:"Track payment status and history",source:"imda"},
+    {id:"r10",text:"Generate and distribute invoices via email with PDF attachment",source:"both"},
+    {id:"r11",text:"Auto-generate invoices from source documents such as sales orders or delivery notes",source:"proxy"},
+    {id:"r12",text:"Create recurring invoices for subscriptions and retainer arrangements",source:"proxy"},
+    {id:"r13",text:"Manage write-off and bad-debt provision workflows",source:"proxy"}
+  ]},
+  "fin.tax_management": {name:"Tax Management & GST Compliance", specs:[
+    {id:"r1",text:"Configure tax codes with rate, type, and reporting group for transaction classification",source:"both"},
+    {id:"r2",text:"Automatically calculate tax on sales and purchase transactions at line and document level",source:"both"},
+    {id:"r3",text:"Generate periodic tax return in country-specific format (e.g. GST F5 for Singapore)",source:"both"},
+    {id:"r4",text:"Track input tax and output tax separately for reconciliation and return filing",source:"proxy"},
+    {id:"r5",text:"Support country-specific fiscal localisation packages and compliance rules",source:"proxy"},
+    {id:"r7",text:"Handle tax-inclusive and tax-exclusive line item pricing",source:"proxy"},
+    {id:"r9",text:"Provide tax audit report with full calculation transparency and line-level detail",source:"proxy"}
+  ]},
+  "fin.einvoicing_peppol": {name:"E-Invoicing & PEPPOL / InvoiceNow", specs:[
+    {id:"r1",text:"Generate invoices in PEPPOL BIS Billing 3.0 format",source:"proxy"},
+    {id:"r2",text:"Validate invoices against PEPPOL schema before transmission",source:"proxy"},
+    {id:"r3",text:"Submit invoices via certified PEPPOL access point to InvoiceNow network",source:"proxy"},
+    {id:"r5",text:"Track invoice transmission status (sent, delivered, accepted, rejected)",source:"proxy"},
+    {id:"r7",text:"Look up and resolve PEPPOL participant identifiers and directory information",source:"proxy"}
+  ]},
+  "fin.bank_cash_management": {name:"Bank & Cash Management", specs:[
+    {id:"r1",text:"Automated reconciliation with configurable matching rules to identify and match transactions",source:"both"},
+    {id:"r2",text:"Compare bank statements with internal ledger records and highlight mismatches",source:"both"},
+    {id:"r3",text:"Support multiple bank accounts across different currencies",source:"proxy"},
+    {id:"r4",text:"Import bank statements in standard formats (OFX, QIF, CSV, CAMT.053, MT940)",source:"proxy"},
+    {id:"r5",text:"Manual reconciliation with drag-and-match interface for unmatched items",source:"proxy"},
+    {id:"r7",text:"Automated bank feeds from major financial institutions",source:"both"},
+    {id:"r13",text:"Age unreconciled items and manage clearing workflows",source:"proxy"}
+  ]}
+};
+
+// ============================================================
+// FLOW — Order-to-Cash — real data grounded
+// ============================================================
+const FLOW = {
+  id: "order_to_cash",
+  name: "Order-to-Cash",
+  categories: {primary:"operational", secondary:[]},
+  scope: "inter_module",
+  complexity: "advanced",
+  priority_by_sector: {
+    retail:1, fnb:1, wholesale:1,
+    generic:2, services:2, travel:2, logistics:2,
+    manufacturing:3
+  },
+  elements: [
+    {
+      kind:"segment", id:"sales-partial",
+      module:"sales_and_crm", module_label:"Sales & CRM", lane_class:"sales",
+      requirement: {
+        header: "Capture and prepare the order",
+        description: "Record the customer's order with line items and agreed pricing, and validate it before stock is committed.",
+        actor: "Sales",
+        outcome: "Validated, priced order ready for credit check"
+      },
+      parent_flows: [{id:"order_to_cash", label:"Order-to-Cash", current:true}, {id:"quote_to_cash", label:"Quote-to-Cash"}],
+      sub_steps: [
+        {
+          id:"s-customer-lookup",
+          requirement:{
+            header:"Identify the customer",
+            description:"Look up or create the customer with billing, shipping, and payment terms.",
+            actor:"Sales",
+            outcome:"Customer record in place"
+          },
+          cap_id:"sales.contacts_accounts",
+          spec_filter:["r1","r2","r3","r7","r8","r9","r10"]
+        },
+        {
+          id:"s-order-capture",
+          requirement:{
+            header:"Capture order lines",
+            description:"Record items, quantities, delivery, and payment terms.",
+            actor:"Sales",
+            outcome:"Order lines recorded"
+          },
+          cap_id:"sales.quotes_orders",
+          spec_filter:["r1","r3","r6","r9","r11","r13","r15","r18"]
+        },
+        {
+          id:"s-pricing", optional:true,
+          requirement:{
+            header:"Apply pricing and promotions",
+            description:"Apply the customer's price list, volume discounts, and active promotions.",
+            actor:"System",
+            outcome:"Order priced correctly"
+          },
+          cap_id:"sales.pricing_discounts",
+          spec_filter:["r1","r2","r4","r5","r6","r7"]
+        }
+      ],
+      limitations: [
+        {type:"data_ingress", severity:"high",
+         note:"Marketplace orders (Shopee / Lazada) require polling API or webhook integration with deduplication",
+         derivation:{source:"proxy", ref:"netsuite.multi_channel_orders"}},
+        {type:"channel_variation", severity:"medium",
+         note:"Email and phone orders are often re-keyed manually without OCR/voice-to-text assistance",
+         derivation:{source:"imda", ref:"solcat_crm"}},
+        {type:"master_data_drift", severity:"medium",
+         note:"Customer master may diverge between CRM, order entry, and billing without a single source of truth",
+         derivation:{source:"hand_authored", ref:"needs_vendor_verification"}}
+      ]
+    },
+    {
+      kind:"transition",
+      event:"Order triggers credit check",
+      description:"Before the order is confirmed for fulfilment, the system verifies the customer's credit limit against outstanding exposure.",
+      edge:"sales.quotes_orders → fin.credit_collections",
+      integration_type:"flows_to",
+      friction:[
+        {type:"cross_module_transition", severity:"medium",
+         note:"Order confirmation blocks on credit check API latency when run real-time",
+         derivation:{source:"cross_module_edge", ref:"sales.quotes_orders → fin.credit_collections"}},
+        {type:"human_in_loop", severity:"low",
+         note:"Limit breaches typically escalate to credit manager for override approval",
+         derivation:{source:"proxy", ref:"netsuite.credit_hold"}}
+      ]
+    },
+    {
+      kind:"segment", id:"fin-credit-partial",
+      module:"financial_management", module_label:"Finance", lane_class:"fin",
+      requirement: {
+        header: "Check credit before committing stock",
+        description: "Verify the order won't breach the customer's credit limit. Hold for review if it would.",
+        actor: "Finance",
+        outcome: "Order cleared or placed on credit hold"
+      },
+      parent_flows: [{id:"order_to_cash", label:"Order-to-Cash", current:true}, {id:"b2b_credit_onboarding", label:"B2B Credit Onboarding"}, {id:"returns_rma", label:"Returns / RMA"}],
+      sub_steps: [
+        {
+          id:"s-credit-check",
+          hitl:true,
+          requirement:{
+            header:"Verify credit limit",
+            description:"Compare outstanding exposure and pending orders against the limit. Flag a hold if breached.",
+            actor:"Finance",
+            outcome:"Credit approved or flagged"
+          },
+          cap_id:"fin.credit_collections",
+          spec_filter:["r1","r2","r3","r5"]
+        }
+      ]
+    },
+    {
+      kind:"transition",
+      event:"Credit approved → stock reservation",
+      description:"Once the order passes credit check, stock is reserved for fulfilment.",
+      edge:"sales.quotes_orders → sc.stock_levels",
+      integration_type:"flows_to",
+      friction:[
+        {type:"cross_module_transition", severity:"high",
+         note:"Batch sync between order and inventory causes over-promising; real-time API integration preferred",
+         derivation:{source:"cross_module_edge", ref:"sales.quotes_orders → sc.stock_levels"}},
+        {type:"data_mapping", severity:"medium",
+         note:"SKU aliasing between sales catalogue and inventory master must be reconciled",
+         derivation:{source:"proxy", ref:"odoo.sku_normalisation"}}
+      ]
+    },
+    {
+      kind:"segment", id:"sc-partial",
+      module:"supply_chain_and_inventory", module_label:"Supply Chain", lane_class:"sc",
+      requirement: {
+        header: "Reserve, pick, and ship",
+        description: "Reserve stock, pick it, pack it, dispatch. Inventory updates on ship.",
+        actor: "Warehouse",
+        outcome: "Order dispatched; inventory updated"
+      },
+      parent_flows: [{id:"order_to_cash", label:"Order-to-Cash", current:true}, {id:"transfer_fulfilment", label:"Transfer Fulfilment"}],
+      sub_steps: [
+        {
+          id:"s-reserve",
+          requirement:{
+            header:"Reserve stock",
+            description:"Mark ordered quantities as allocated so other orders can't claim them.",
+            actor:"System",
+            outcome:"Stock ring-fenced"
+          },
+          cap_id:"sc.stock_levels",
+          spec_filter:["r1","r2","r3","r5","r7","r8"]
+        },
+        {
+          id:"s-pick", optional:true,
+          requirement:{
+            header:"Pick items",
+            description:"Generate pick list, gather items from bins, scan to verify.",
+            actor:"Warehouse",
+            outcome:"Items picked and staged"
+          },
+          cap_id:"sc.warehouse_automation",
+          spec_filter:["r1","r2","r3","r7"]
+        },
+        {
+          id:"s-ship",
+          hitl:true,
+          requirement:{
+            header:"Pack and dispatch",
+            description:"Pack the order, generate carrier label, dispatch. Decrement inventory.",
+            actor:"Warehouse",
+            outcome:"Shipped with tracking"
+          },
+          cap_id:"sc.stock_movements",
+          spec_filter:["r1","r3","r5"]
+        }
+      ],
+      limitations: [
+        {type:"spec_implementation", severity:"medium",
+         note:"Single-warehouse assumption — multi-site fulfilment needs split-shipping logic",
+         derivation:{source:"proxy", ref:"sc.multi_warehouse"}},
+        {type:"channel_variation", severity:"low",
+         note:"Manual pick without scanner → higher error rate; barcode or voice-pick preferred",
+         derivation:{source:"proxy", ref:"netsuite.wms_pick"}}
+      ]
+    },
+    {
+      kind:"transition",
+      event:"Shipment confirmed → invoice triggered",
+      description:"Invoice is generated from shipping confirmation. Invoice-on-ship vs invoice-on-delivery is a business policy.",
+      edge:"sc.stock_movements → fin.accounts_receivable",
+      integration_type:"triggers",
+      friction:[
+        {type:"policy", severity:"low",
+         note:"Invoice-on-ship vs invoice-on-delivery is a business policy decision, not a tech gap",
+         derivation:{source:"hand_authored", ref:"policy_decision"}}
+      ]
+    },
+    {
+      kind:"segment", id:"fin-billing-partial",
+      module:"financial_management", module_label:"Finance", lane_class:"fin-alt",
+      requirement: {
+        header: "Bill, collect, and reconcile",
+        description: "Issue the invoice, track the receivable, match payment on arrival, chase overdue.",
+        actor: "Finance",
+        outcome: "Invoice paid and AR cleared"
+      },
+      parent_flows: [{id:"order_to_cash", label:"Order-to-Cash", current:true}, {id:"subscription_billing", label:"Subscription Billing"}],
+      sub_steps: [
+        {
+          id:"s-invoice",
+          requirement:{
+            header:"Issue invoice",
+            description:"Create invoice from shipment, apply tax and discounts, deliver to customer.",
+            actor:"Finance",
+            outcome:"Invoice delivered"
+          },
+          cap_id:"fin.accounts_receivable",
+          spec_filter:["r1","r2","r9","r10","r11","r12"]
+        },
+        {
+          id:"s-tax",
+          requirement:{
+            header:"Apply tax treatment",
+            description:"Apply line-level tax codes; feed results into the period return.",
+            actor:"System",
+            outcome:"Tax applied, return-ready"
+          },
+          cap_id:"fin.tax_management",
+          spec_filter:["r1","r2","r3","r7"]
+        },
+        {
+          id:"s-einvoice", optional:true,
+          requirement:{
+            header:"Transmit e-invoice",
+            description:"Package as PEPPOL/InvoiceNow structured format, transmit via access point.",
+            actor:"System",
+            outcome:"Structured invoice transmitted"
+          },
+          cap_id:"fin.einvoicing_peppol",
+          spec_filter:["r1","r2","r3","r5"]
+        },
+        {
+          id:"s-reconcile",
+          requirement:{
+            header:"Reconcile payment",
+            description:"Match incoming bank credits to invoices. Flag unmatched for review.",
+            actor:"Finance",
+            outcome:"Payment matched, AR updated"
+          },
+          cap_id:"fin.bank_cash_management",
+          spec_filter:["r1","r2","r4","r5","r7","r13"]
+        },
+        {
+          id:"s-dunning", optional:true,
+          requirement:{
+            header:"Chase overdue",
+            description:"Run automated reminders across channels as receivables age.",
+            actor:"Finance",
+            outcome:"Receivable collected or escalated"
+          },
+          cap_id:"fin.credit_collections",
+          spec_filter:["r3","r6","r7","r8"]
+        }
+      ],
+      limitations: [
+        {type:"data_ingress", severity:"medium",
+         note:"Bank feed ingestion lag delays payment allocation by 1-2 days on non-real-time feeds",
+         derivation:{source:"proxy", ref:"netsuite.bank_reco"}},
+        {type:"regulatory", severity:"medium",
+         note:"GST e-invoicing mandate — Singapore InvoiceNow progressive rollout from 2025",
+         derivation:{source:"imda", ref:"invoicenow_mandate"}}
+      ]
+    }
+  ],
+
+  variants: {
+    generic: {
+      label: "Generic SME",
+      note: null,
+      skip_segment_ids: [],
+      skip_substep_ids: [],
+      substep_overrides: {}
+    },
+    retail: {
+      label: "Retail (B2C POS)",
+      note: "Retail B2C via POS — customer lookup bypassed for cash customer, credit check bypassed, invoice collapses into receipt, payment is immediate. Dunning not applicable.",
+      skip_segment_ids: ["fin-credit-partial"],
+      skip_substep_ids: ["s-customer-lookup","s-einvoice","s-dunning"],
+      substep_overrides: {
+        "s-order-capture": {
+          requirement: {
+            header:"Capture POS sale",
+            description:"Cashier scans SKUs at POS, tenders cash/card, records sale with items, quantities, and payment.",
+            actor:"Cashier",
+            outcome:"Sale recorded at POS"
+          }
+        },
+        "s-invoice": {
+          requirement: {
+            header:"Print or email receipt",
+            description:"POS issues a receipt with tax breakdown (no AR cycle for cash-and-carry).",
+            actor:"POS System",
+            outcome:"Receipt delivered"
+          }
+        },
+        "s-reconcile": {
+          requirement: {
+            header:"Settle tender same-day",
+            description:"Daily settlement from card acquirer feed and cash drawer matched against POS transactions.",
+            actor:"Finance Team",
+            outcome:"Tender reconciled same-day"
+          }
+        }
+      },
+      added_limitations: {
+        "sales-partial": [
+          {type:"data_ingress", severity:"high",
+           note:"POS terminal → ERP sync (batch vs real-time) affects stock visibility during peak hours",
+           derivation:{source:"proxy", ref:"netsuite.pos"}}
+        ]
+      }
+    }
+  }
+};
+
+// ============================================================
+// State + helpers
+// ============================================================
+let VARIANT = "generic";
+let VIEW = "diagram";
+let SHOW_OVERLAY = false;
+
+function $(id){return document.getElementById(id);}
+function h(tag, attrs, ...children){
+  const el = document.createElement(tag);
+  if(attrs) for(const k in attrs){
+    if(k==="class") el.className = attrs[k];
+    else if(k==="html") el.innerHTML = attrs[k];
+    else if(k.startsWith("on")) el.addEventListener(k.slice(2), attrs[k]);
+    else if(k.startsWith("data-")) el.setAttribute(k, attrs[k]);
+    else el[k] = attrs[k];
+  }
+  children.flat().forEach(c=>{
+    if(c==null || c===false) return;
+    if(typeof c==="string" || typeof c==="number") el.appendChild(document.createTextNode(String(c)));
+    else if(c instanceof Node) el.appendChild(c);
+    // silently skip unexpected types instead of crashing
+  });
+  return el;
+}
+
+// ============================================================
+// Meta row — chips
+// ============================================================
+function renderMeta(){
+  const host = $("meta-row"); host.innerHTML="";
+  const {primary, secondary} = FLOW.categories;
+  host.appendChild(h("span", {class:`cat-chip primary cat-${primary}`}, primary));
+  secondary.forEach(s => host.appendChild(h("span", {class:`cat-chip secondary cat-${s}`}, s)));
+  host.appendChild(h("span", {class:"chip scope"}, FLOW.scope.replace("_","-")));
+  host.appendChild(h("span", {class:"chip complexity"}, FLOW.complexity));
+  const nSeg = FLOW.elements.filter(e=>e.kind==="segment").length;
+  const nCaps = new Set();
+  FLOW.elements.forEach(e=>{ if(e.kind==="segment") e.sub_steps.forEach(s=>nCaps.add(s.cap_id)); });
+  host.appendChild(h("span", {class:"chip count"}, `${nSeg} segments · ${nCaps.size} caps`));
+}
+
+// ============================================================
+// Priority block
+// ============================================================
+function renderPriority(){
+  const host = $("priority-block"); host.innerHTML = "";
+  host.appendChild(h("div", {class:"priority-head"}, "Priority by sector"));
+  const buckets = {1:[],2:[],3:[],4:[],5:[]};
+  for(const s of SECTORS){
+    const p = FLOW.priority_by_sector[s] ?? 5;
+    buckets[p].push(SECTOR_LABELS[s]);
+  }
+  const meaning = {1:"implement first", 2:"early priority", 3:"medium", 4:"later", 5:"nice-to-have"};
+  for(let p=1;p<=5;p++){
+    if(!buckets[p].length) continue;
+    host.appendChild(h("div", {class:"priority-row"},
+      h("span", {class:`priority-label p${p}`}, `P${p}`),
+      h("span", {class:"priority-sectors"}, buckets[p].join(" · ")),
+      h("span", {class:"priority-meaning"}, meaning[p])
+    ));
+  }
+}
+
+// ============================================================
+// Variant tabs + note
+// ============================================================
+function renderVariantTabs(){
+  const host = $("variant-tabs"); host.innerHTML="";
+  Object.entries(FLOW.variants).forEach(([k,v])=>{
+    host.appendChild(h("button", {
+      class:`vtab ${k===VARIANT?"active":""}`,
+      onclick: ()=>{ VARIANT=k; render(); }
+    }, v.label));
+  });
+}
+function renderVariantNote(){
+  const el = $("variant-note");
+  const n = FLOW.variants[VARIANT]?.note;
+  if(!n){el.style.display="none";return;}
+  el.style.display = "";
+  el.textContent = n;
+}
+
+// ============================================================
+// Apply variant: returns filtered elements with overrides baked in
+// ============================================================
+function applyVariant(){
+  const v = FLOW.variants[VARIANT];
+  return FLOW.elements.map(el=>{
+    if(el.kind==="transition"){
+      // transitions connecting to skipped segment are hidden (unless overlay)
+      if(VARIANT==="retail" && el.event.includes("credit check")) return {...el, _hidden:true};
+      return el;
+    }
+    // segment
+    if(v.skip_segment_ids.includes(el.id)) return {...el, _hidden:true};
+    const sub_steps = el.sub_steps.map(st=>{
+      const skipped = v.skip_substep_ids.includes(st.id);
+      const override = v.substep_overrides[st.id];
+      return {
+        ...st,
+        _skipped: skipped,
+        _requirement: override?.requirement || st.requirement
+      };
+    });
+    const extraLims = v.added_limitations?.[el.id] || [];
+    return {...el, _sub_steps: sub_steps, _limitations:[...(el.limitations||[]), ...extraLims]};
+  });
+}
+
+// ============================================================
+// Diagram view
+// ============================================================
+function renderDiagram(){
+  const host = $("flow-body"); host.innerHTML = "";
+  const elements = applyVariant();
+  let segIdx = 0;
+  elements.forEach(el=>{
+    if(el._hidden && !SHOW_OVERLAY) return;
+    if(el.kind==="segment"){
+      segIdx++;
+      host.appendChild(renderSegmentCard(el, segIdx));
+    } else {
+      host.appendChild(renderTransitionCard(el));
+    }
+  });
+}
+
+function renderSegmentCard(seg, idx){
+  const card = h("div", {class:`segment-card ${seg.lane_class}${seg._hidden?" muted-substep":""}`});
+
+  // head row
+  const titleWrap = h("div", {class:"seg-title"});
+  titleWrap.appendChild(h("div", {class:"seg-module"}, seg.module_label));
+  titleWrap.appendChild(h("h3", {class:"seg-uc-header"}, seg.requirement.title || seg.requirement.header || ""));
+  if (seg.requirement.description) titleWrap.appendChild(h("p", {class:"seg-uc-desc"}, seg.requirement.description));
+  if (seg.requirement.example) titleWrap.appendChild(h("p", {class:"seg-uc-desc", style:"font-style:italic;color:#6b7380"}, seg.requirement.example));
+  const meta = h("div", {class:"seg-meta"},
+    h("span", null, h("b", null, "Actor: "), seg.requirement.actor),
+    h("span", null, h("b", null, "Outcome: "), seg.requirement.outcome)
+  );
+  titleWrap.appendChild(meta);
+
+  // parent flows
+  const visibleSubSteps = (seg._sub_steps||[]).filter(s => !s._skipped || SHOW_OVERLAY);
+  const totalSpecs = visibleSubSteps.reduce((n,st)=>{
+    const specs = SPECS[st.cap_id]?.specs || [];
+    const filtered = st.spec_filter ? specs.filter(x=>st.spec_filter.includes(x.id)) : specs;
+    return n + filtered.length;
+  }, 0);
+
+  const metaRow2 = h("div", {class:"seg-meta"});
+  metaRow2.appendChild(h("span", null, h("b", null, `${visibleSubSteps.length} sub-steps`)));
+  metaRow2.appendChild(h("span", null, `${totalSpecs} specs`));
+  const pfWrap = h("span", {class:"seg-parent-flows"},
+    h("b", null, "Part of: ")
+  );
+  seg.parent_flows.forEach(pf=>{
+    pfWrap.appendChild(h("span", {class:`flow-tag ${pf.current?"current":""}`}, pf.label));
+  });
+  metaRow2.appendChild(pfWrap);
+  titleWrap.appendChild(metaRow2);
+
+  card.appendChild(h("div", {class:"seg-head-row"},
+    h("div", {class:"seg-num"}, `#${idx}`),
+    titleWrap
+  ));
+
+  // sub-steps section
+  const subStepsSection = h("div", {class:"expandable-section open"});
+  subStepsSection.appendChild(h("div", {
+    class:"section-head",
+    onclick: (e)=>{ e.currentTarget.parentElement.classList.toggle("open"); }
+  }, `Sub-steps (${visibleSubSteps.length})`));
+  const body = h("div", {class:"section-body"});
+  (seg._sub_steps||[]).forEach((st, si)=>{
+    if(st._skipped && !SHOW_OVERLAY) return;
+    body.appendChild(renderSubStep(st, si+1));
+  });
+  subStepsSection.appendChild(body);
+  card.appendChild(subStepsSection);
+
+  // limits section
+  const lims = seg._limitations || [];
+  if(lims.length){
+    const limsSection = h("div", {class:"expandable-section"});
+    limsSection.appendChild(h("div", {
+      class:"section-head",
+      onclick: (e)=>{ e.currentTarget.parentElement.classList.toggle("open"); }
+    }, `Known limits (${lims.length})`));
+    const lb = h("div", {class:"section-body"});
+    lims.forEach(l=>lb.appendChild(renderLimit(l)));
+    limsSection.appendChild(lb);
+    card.appendChild(limsSection);
+  }
+
+  return card;
+}
+
+function renderSubStep(st, idx){
+  const skipped = st._skipped;
+  const wrap = h("div", {class:`substep ${skipped?"muted-substep":""}`});
+  const mainWrap = h("div", {class:"substep-main"});
+
+  const hdr = h("div", null,
+    h("span", {class:"substep-uc-header"}, (st._requirement || st.requirement)?.title || (st._requirement || st.requirement)?.header || "")
+  );
+  if(st.optional) hdr.appendChild(h("span", {class:"badge opt"}, "opt"));
+  if(st.hitl) hdr.appendChild(h("span", {class:"badge hitl"}, "HITL"));
+  if(skipped) hdr.appendChild(h("span", {class:"badge opt"}, "not in variant"));
+  mainWrap.appendChild(hdr);
+  const _requirement = st._requirement || st.requirement;
+  if (_requirement?.description) mainWrap.appendChild(h("p", {class:"substep-uc-desc"}, _requirement.description));
+  if (_requirement?.example) mainWrap.appendChild(h("p", {class:"substep-uc-desc", style:"font-style:italic;color:#6b7380"}, _requirement.example));
+  mainWrap.appendChild(h("div", {class:"substep-uc-meta"},
+    h("span", null, h("b", null, "Actor: "), st._requirement?.actor || st.requirement.actor),
+    h("span", null, h("b", null, "Outcome: "), st._requirement?.outcome || st.requirement.outcome)
+  ));
+
+  // cap + specs
+  const cap = SPECS[st.cap_id];
+  const allSpecs = cap?.specs || [];
+  const specs = st.spec_filter ? allSpecs.filter(s=>st.spec_filter.includes(s.id)) : allSpecs;
+  const capLine = h("div", {
+    class:"substep-cap",
+    onclick:(e)=>{ e.currentTarget.closest(".substep").classList.toggle("specs-open"); }
+  }, `${st.cap_id}  ·  ${cap?.name || "?"}  ·  ${specs.length} specs`);
+  mainWrap.appendChild(capLine);
+
+  // specs inline
+  const specsWrap = h("div", {class:"substep-specs"});
+  specsWrap.appendChild(h("div", {class:"substep-specs-head"}, "Relevant specs in this cap (click cap-id to toggle)"));
+  specs.forEach(s=>{
+    specsWrap.appendChild(h("div", {class:"spec-row"},
+      h("span", {class:`spec-src ${s.source}`}, s.source),
+      h("span", {class:"spec-text"}, s.text)
+    ));
+  });
+  mainWrap.appendChild(specsWrap);
+
+  wrap.appendChild(h("div", {class:"substep-head"},
+    h("div", {class:"substep-num"}, idx),
+    mainWrap
+  ));
+  return wrap;
+}
+
+function renderTransitionCard(tr){
+  const hidden = tr._hidden && !SHOW_OVERLAY;
+  if(hidden) return h("div");
+  const friction = tr.friction || [];
+  const wrap = h("div", {class:"transition", "data-friction": friction.length});
+  wrap.appendChild(h("div", {class:"transition-arrow"}, "↓"));
+  const body = h("div", {class:"transition-body"});
+  body.appendChild(h("div", {class:"transition-event"}, tr.event));
+  body.appendChild(h("div", {class:"transition-desc"}, tr.description));
+  body.appendChild(h("div", {class:"transition-edge"}, "Cross-module edge: ", h("b", null, tr.edge), ` · integration_type: ${tr.integration_type}`));
+
+  if(friction.length){
+    const section = h("div", {class:"expandable-section transition-frictions"});
+    section.appendChild(h("div", {
+      class:"section-head",
+      onclick:(e)=>{ e.currentTarget.parentElement.classList.toggle("open"); }
+    }, `Friction (${friction.length})`));
+    const sbody = h("div", {class:"section-body"});
+    friction.forEach(f=>sbody.appendChild(renderLimit(f)));
+    section.appendChild(sbody);
+    body.appendChild(section);
+  } else {
+    body.appendChild(h("div", {style:"color:#166534;font-size:12px;margin-top:4px"}, "No known friction."));
+  }
+
+  wrap.appendChild(body);
+  return wrap;
+}
+
+function renderLimit(l){
+  const wrap = h("div", {class:"limit-item"});
+  wrap.appendChild(h("span", {class:`limit-type ${l.severity}`}, l.type));
+  const textWrap = h("div", {class:"limit-text"});
+  textWrap.appendChild(document.createTextNode(l.note));
+  const deriv = h("div", {class:"limit-deriv"});
+  deriv.appendChild(document.createTextNode("derived from: "));
+  deriv.appendChild(h("code", null, l.derivation.source));
+  if(l.derivation.ref){
+    deriv.appendChild(document.createTextNode(" · "));
+    deriv.appendChild(h("code", null, l.derivation.ref));
+  }
+  textWrap.appendChild(deriv);
+  wrap.appendChild(textWrap);
+  return wrap;
+}
+
+// ============================================================
+// Checklist view
+// ============================================================
+function renderChecklist(){
+  const host = $("flow-body"); host.innerHTML = "";
+  const elements = applyVariant();
+
+  elements.forEach(el=>{
+    if(el._hidden && !SHOW_OVERLAY) return;
+    if(el.kind==="segment"){
+      host.appendChild(renderChecklistSegment(el));
+    } else {
+      host.appendChild(renderChecklistTransition(el));
+    }
+  });
+}
+
+function renderChecklistSegment(seg){
+  const wrap = h("div", {class:"cl-section"});
+  const head = h("div", {class:`cl-seg-head ${seg.lane_class}`});
+  head.appendChild(h("div", {class:"cl-seg-head-top"}, seg.module_label));
+  head.appendChild(h("div", {class:"cl-seg-head-main"}, seg.requirement.title || seg.requirement.header || ""));
+  if (seg.requirement.description) head.appendChild(h("div", {class:"cl-seg-head-sub"}, seg.requirement.description));
+  if (seg.requirement.example) head.appendChild(h("div", {class:"cl-seg-head-sub", style:"font-style:italic;color:#6b7380"}, seg.requirement.example));
+  wrap.appendChild(head);
+
+  (seg._sub_steps||[]).forEach(st=>{
+    if(st._skipped && !SHOW_OVERLAY) return;
+    const item = h("div", {
+      class:`cl-item ${st._skipped?"muted-substep":""}`,
+      onclick:(e)=>{ e.currentTarget.classList.toggle("open"); }
+    });
+    item.appendChild(h("div", {class:"cl-check"}));
+    const body = h("div", {class:"cl-body"});
+    const _u = st._requirement || st.requirement;
+    const hdr = h("div", {class:"cl-header"}, _u?.title || _u?.header || "");
+    if(st.optional) hdr.appendChild(h("span", {class:"badge opt"}, "opt"));
+    if(st.hitl) hdr.appendChild(h("span", {class:"badge hitl"}, "HITL"));
+    body.appendChild(hdr);
+    if (_u?.description) body.appendChild(h("div", {class:"cl-desc"}, _u.description));
+    if (_u?.example) body.appendChild(h("div", {class:"cl-desc", style:"font-style:italic;color:#6b7380"}, _u.example));
+    const cap = SPECS[st.cap_id];
+    const allSpecs = cap?.specs || [];
+    const specs = st.spec_filter ? allSpecs.filter(s=>st.spec_filter.includes(s.id)) : allSpecs;
+    body.appendChild(h("div", {class:"cl-meta"}, "trace: ", h("b", null, st.cap_id), ` · ${specs.length} specs · actor: ${st._requirement?.actor||st.requirement.actor}`));
+    const specsWrap = h("div", {class:"cl-specs"});
+    specs.forEach(s=>specsWrap.appendChild(h("div", {class:"spec-row"},
+      h("span", {class:`spec-src ${s.source}`}, s.source),
+      h("span", {class:"spec-text"}, s.text)
+    )));
+    body.appendChild(specsWrap);
+    item.appendChild(body);
+    wrap.appendChild(item);
+  });
+  return wrap;
+}
+
+function renderChecklistTransition(tr){
+  if(tr._hidden && !SHOW_OVERLAY) return h("div");
+  const wrap = h("div", {class:"cl-transition"});
+  wrap.appendChild(h("div", null, h("b", null, "→ " + tr.event)));
+  wrap.appendChild(h("div", {style:"color:var(--muted);margin:3px 0 5px"}, tr.description));
+  wrap.appendChild(h("div", {class:"cl-meta"}, "edge: ", h("b", null, tr.edge)));
+  (tr.friction||[]).forEach(f=>wrap.appendChild(renderLimit(f)));
+  return wrap;
+}
+
+// ============================================================
+// Wire controls
+// ============================================================
+function wireControls(){
+  document.querySelectorAll(".view-toggle button").forEach(b=>{
+    b.addEventListener("click", ()=>{
+      VIEW = b.dataset.view;
+      document.querySelectorAll(".view-toggle button").forEach(x=>x.classList.toggle("active", x===b));
+      render();
+    });
+  });
+  $("show-overlay").addEventListener("change", e=>{
+    SHOW_OVERLAY = e.target.checked;
+    render();
+  });
+}
+
+// ============================================================
+// Main render
+// ============================================================
+function render(){
+  renderMeta();
+  renderPriority();
+  renderVariantTabs();
+  renderVariantNote();
+  if(VIEW==="diagram") renderDiagram();
+  else renderChecklist();
+}
+
+wireControls();
+render();
+</script>
+</body>
+</html>
