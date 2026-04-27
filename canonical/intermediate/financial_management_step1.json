@@ -4,9 +4,9 @@
     "input_reqs": 106,
     "unique_section_pairs": 72,
     "placed_via_section_lookup": 71,
-    "placed_via_fallback": 31,
+    "placed_via_fallback": 33,
     "unmapped": 7,
-    "total_placements": 115,
+    "total_placements": 116,
     "unique_reqs_placed": 99
   },
   "placements": {
@@ -352,23 +352,8 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "fin.accounts_receivable"
-        ]
-      },
-      {
-        "id": "req-01236",
-        "text": "Set up and edit modes of payment",
-        "q_title": "Customer Groups Management",
-        "subsection": "Functional Requirements",
-        "sources": [
-          "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-          "essential-business__accounting-management-+-sales-management-system",
-          "essential-business__inventory-management-and-sales-management-system",
-          "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "fin.accounts_receivable"
+          "fin.accounts_receivable",
+          "fin.payment_gateways"
         ]
       },
       {
@@ -381,7 +366,8 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "fin.accounts_receivable"
+          "fin.accounts_receivable",
+          "fin.payment_gateways"
         ]
       },
       {
@@ -597,21 +583,6 @@
           "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
           "essential-business__accounting-management-+-sales-management-system",
           "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "fin.financial_reporting",
-          "fin.analytics_dashboards"
-        ]
-      },
-      {
-        "id": "req-00424",
-        "text": "Deposit collection and refund management functionalities",
-        "q_title": "Finance Management - Preferred Features",
-        "subsection": "Finance Management - Preferred Features",
-        "sources": [
-          "early-childhood__pre-school-management-system",
-          "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
         ],
         "placed_via": "section_lookup",
         "capabilities": [
@@ -1177,6 +1148,52 @@
         "capabilities": [
           "fin.payment_gateways"
         ]
+      },
+      {
+        "id": "req-01224",
+        "text": "Set up and edit customer payment",
+        "q_title": "Sales and Delivery Management",
+        "subsection": "Functional Requirements",
+        "sources": [
+          "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+          "essential-business__accounting-management-+-sales-management-system",
+          "essential-business__inventory-management-and-sales-management-system"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fin.accounts_receivable",
+          "fin.payment_gateways"
+        ]
+      },
+      {
+        "id": "req-01236",
+        "text": "Set up and edit modes of payment",
+        "q_title": "Customer Groups Management",
+        "subsection": "Functional Requirements",
+        "sources": [
+          "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+          "essential-business__accounting-management-+-sales-management-system",
+          "essential-business__inventory-management-and-sales-management-system",
+          "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fin.payment_gateways"
+        ]
+      },
+      {
+        "id": "req-01252",
+        "text": "Set up and edit terms & modes of payment",
+        "q_title": "Customer Groups Management",
+        "subsection": "",
+        "sources": [
+          "essential-business__inventory-management-and-sales-management-system"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fin.accounts_receivable",
+          "fin.payment_gateways"
+        ]
       }
     ],
     "fin.xbrl_reporting": [],
@@ -1240,7 +1257,6 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "fin.financial_reporting",
           "fin.analytics_dashboards"
         ]
       },
