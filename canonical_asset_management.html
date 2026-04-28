@@ -154,18 +154,6 @@
     transition: background 0.1s;
   }
   .capability-list li:hover { background: #f1f4f9; }
-  .capability-list li.fam-heading {
-    cursor: default;
-    background: transparent;
-    padding: 14px 16px 4px 16px;
-    border-left: none;
-    text-transform: uppercase;
-    font-size: 10px;
-    letter-spacing: 0.06em;
-  }
-  .capability-list li.fam-heading:hover { background: transparent; }
-  .capability-list li.fam-heading .cap-name { font-size: 11px; font-weight: 700; color: var(--muted); }
-  .capability-list li.fam-heading .cap-meta { font-size: 9px; }
   .capability-list li.dimmed { opacity: 0.3; }
   .capability-list li.active {
     background: #eef2ff;
@@ -1740,16 +1728,16 @@ function renderSidebar() {
         return c.sme_tier === tierFilter;
       };
 
-      // Flat sub-module nav (no accordion — 2026-04-28 cleanup).
-      // Each family is a non-clickable heading; sub-modules render directly
-      // under it as clickable jump links. "Other" rolls up ungrouped caps.
+      // Single-layer sub-module nav (2026-04-28 cleanup).
+      // Family headings dropped — sub-module names already disambiguate
+      // (e.g. "Sales Transactions" already says it's in Sales). For
+      // ungrouped caps within a family, the "<Family> — Other" row keeps
+      // the family context inline.
       const familyBlocks = order.map((fam) => {
         if (fam === baselineFam) return "";  // Digital section rendered at tail; out of family list.
         const caps = (byFamilyAll[fam] || []).filter(c => (c.unified||[]).length > 0 && tierMatch(c));
         if (caps.length === 0) return "";
         const familySafe = fam.replace(/[^a-z0-9]/gi, "_");
-        const matchCaps = state.sectorFilter ? caps.filter(sectorMatch) : caps;
-        const famDimmed = state.sectorFilter && matchCaps.length === 0;
 
         const subList = subsByFam[fam] || [];
         const subModuleHtml = subList.map((sm) => {
@@ -1758,8 +1746,8 @@ function renderSidebar() {
           const smCapsMatch = state.sectorFilter ? smCaps.filter(sectorMatch) : smCaps;
           const dim = state.sectorFilter && smCapsMatch.length === 0;
           return `<li class="sm-jump" data-sm-id="${escapeHtml((sm.id || "").replace(/[^a-z0-9]/gi, "_"))}"${dim ? ' style="opacity:0.4"' : ''}>
-            <div style="flex:1;padding-left:10px">
-              <div class="cap-name" style="font-size:12px">${escapeHtml(sm.canonical_name || sm.id)}</div>
+            <div style="flex:1">
+              <div class="cap-name">${escapeHtml(sm.canonical_name || sm.id)}</div>
               <div class="cap-meta">${smCaps.length} cap${smCaps.length !== 1 ? 's' : ''}</div>
             </div>
           </li>`;
@@ -1767,24 +1755,13 @@ function renderSidebar() {
         const ungrouped = caps.filter((c) => !capSubMod[c.id]);
         const otherAnchorId = `${familySafe}_other`;
         const ungroupedHtml = ungrouped.length > 0 ? `<li class="sm-jump" data-sm-id="${escapeHtml(otherAnchorId)}">
-          <div style="flex:1;padding-left:10px">
-            <div class="cap-name" style="font-size:12px;font-style:italic">${escapeHtml(fam)} — Other</div>
+          <div style="flex:1">
+            <div class="cap-name" style="font-style:italic">${escapeHtml(fam)} — Other</div>
             <div class="cap-meta">${ungrouped.length} cap${ungrouped.length !== 1 ? 's' : ''}</div>
           </div>
         </li>` : "";
 
-        const label = state.sectorFilter
-          ? `${matchCaps.length}/${caps.length} match`
-          : `${caps.length} cap${caps.length !== 1 ? 's' : ''}`;
-        return `
-          <li class="fam-heading"${famDimmed ? ' style="opacity:0.4"' : ''}>
-            <div style="flex:1">
-              <div class="cap-name">${escapeHtml(fam)}</div>
-              <div class="cap-meta">${label}</div>
-            </div>
-          </li>
-          ${subModuleHtml}${ungroupedHtml}
-        `;
+        return subModuleHtml + ungroupedHtml;
       }).join("");
 
       // Digital cross-cutting (baseline) at tail — single anchor since they're not sub-grouped.
