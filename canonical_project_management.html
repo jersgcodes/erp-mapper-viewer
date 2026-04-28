@@ -3040,9 +3040,10 @@ function renderUseCaseChecklist(tier) {
 // =============================================================================
 // CHECKLIST VIEW STATE — two orthogonal axes (2026-04-25)
 //   - state.checklistView: "final" (default) | "build"
-//   - state.checklistTier: "required" (default) | "preferred" | "all"
-//                          (placeholder slot for "advanced" pending sme_tier
-//                           three-tier reconciliation; UI hidden today)
+//   - state.checklistTier: "required" (default) | "req_pref" | "preferred" |
+//                          "advanced" | "all"
+//                          (req_pref added 2026-04-28: Required + Preferred,
+//                           the IMDA Type 1 "buyer self-assessment" surface)
 // =============================================================================
 
 if (typeof state.checklistView === "undefined") state.checklistView = "final";
@@ -3064,6 +3065,7 @@ function renderChecklistToolbar() {
       <div style="display:flex;gap:4px;align-items:center">
         <span style="font-size:10px;color:#64748b;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-right:6px">Tier</span>
         ${tierBtn("required", "Required")}
+        ${tierBtn("req_pref", "Required + Preferred")}
         ${tierBtn("preferred", "Preferred")}
         ${tierBtn("advanced", "Advanced")}
         ${tierBtn("all", "All")}
@@ -3130,10 +3132,13 @@ function renderFinalChecklist() {
     }
   }
 
-  // Filter by tier (3-tier + all)
+  // Filter by tier (3-tier + req_pref + all)
   const tierMatch = (c) => {
     if (tier === "all") {
       return c.sme_tier === "required" || c.sme_tier === "preferred" || c.sme_tier === "advanced";
+    }
+    if (tier === "req_pref") {
+      return c.sme_tier === "required" || c.sme_tier === "preferred";
     }
     return c.sme_tier === tier;
   };
@@ -3252,8 +3257,19 @@ function renderFinalChecklist() {
   const subsByFamily = DATA.sub_modules_by_family || {};
 
   let rowNum = 1;
+  // UX overhaul 2026-04-28: cap-tier sort within sub-module — Required caps
+  // first, then Preferred, then Advanced. Stable so within-tier source order
+  // is preserved.
+  const _capTierRank = (c) => {
+    const t = (c.sme_tier || "").toLowerCase();
+    if (t === "required") return 0;
+    if (t === "preferred") return 1;
+    if (t === "advanced") return 2;
+    return 3;
+  };
   const groupCapsBySubModule = (caps, fam) => {
-    // Preserve sub-module declaration order from sub_modules.yaml.
+    // Preserve sub-module declaration order from sub_modules.yaml (already
+    // tier-priority sorted in the build payload).
     const subModulesInFamily = subsByFamily[fam] || [];
     const groups = new Map();          // sub_module_id -> { sm, caps[] }
     const ungrouped = [];
@@ -3268,6 +3284,11 @@ function renderFinalChecklist() {
         ungrouped.push(c);
       }
     }
+    // Sort caps within each sub-module by tier rank (R → P → A)
+    for (const g of groups.values()) {
+      g.caps.sort((a, b) => _capTierRank(a) - _capTierRank(b));
+    }
+    ungrouped.sort((a, b) => _capTierRank(a) - _capTierRank(b));
     return { groups, ungrouped };
   };
 
