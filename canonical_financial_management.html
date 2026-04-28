@@ -154,6 +154,18 @@
     transition: background 0.1s;
   }
   .capability-list li:hover { background: #f1f4f9; }
+  .capability-list li.fam-heading {
+    cursor: default;
+    background: transparent;
+    padding: 14px 16px 4px 16px;
+    border-left: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+  }
+  .capability-list li.fam-heading:hover { background: transparent; }
+  .capability-list li.fam-heading .cap-name { font-size: 11px; font-weight: 700; color: var(--muted); }
+  .capability-list li.fam-heading .cap-meta { font-size: 9px; }
   .capability-list li.dimmed { opacity: 0.3; }
   .capability-list li.active {
     background: #eef2ff;
@@ -1540,7 +1552,6 @@ const state = {
   ucTierFilter: "standard", // baseline | standard | advanced | enterprise | all (cumulative: baseline ⊂ standard ⊂ advanced)
   hideDimmed: false, // if true: hide dimmed UCs + dimmed specs entirely instead of showing grayed
   viewMode: "final", // final (buyer/IMDA — checklist) | build (authoring — UC, flows, drilldowns)
-  sidebarFamExpanded: {}, // FINAL-view sidebar: {family_safe_id: true} for expanded families. Collapse-default.
 };
 
 // Default modes per super-view, used when toggling FINAL ↔ BUILD.
@@ -1729,6 +1740,9 @@ function renderSidebar() {
         return c.sme_tier === tierFilter;
       };
 
+      // Flat sub-module nav (no accordion — 2026-04-28 cleanup).
+      // Each family is a non-clickable heading; sub-modules render directly
+      // under it as clickable jump links. "Other" rolls up ungrouped caps.
       const familyBlocks = order.map((fam) => {
         if (fam === baselineFam) return "";  // Digital section rendered at tail; out of family list.
         const caps = (byFamilyAll[fam] || []).filter(c => (c.unified||[]).length > 0 && tierMatch(c));
@@ -1736,9 +1750,7 @@ function renderSidebar() {
         const familySafe = fam.replace(/[^a-z0-9]/gi, "_");
         const matchCaps = state.sectorFilter ? caps.filter(sectorMatch) : caps;
         const famDimmed = state.sectorFilter && matchCaps.length === 0;
-        const expanded = !!state.sidebarFamExpanded?.[familySafe];
 
-        // Sub-modules inside this family — read from sub_modules_by_family + cap memberships.
         const subList = subsByFam[fam] || [];
         const subModuleHtml = subList.map((sm) => {
           const smCaps = caps.filter((c) => (capSubMod[c.id]?.id) === sm.id);
@@ -1752,7 +1764,6 @@ function renderSidebar() {
             </div>
           </li>`;
         }).join("");
-        // Caps not in any sub-module → "<Family> — Other" anchor
         const ungrouped = caps.filter((c) => !capSubMod[c.id]);
         const otherAnchorId = `${familySafe}_other`;
         const ungroupedHtml = ungrouped.length > 0 ? `<li class="sm-jump" data-sm-id="${escapeHtml(otherAnchorId)}">
@@ -1766,16 +1777,13 @@ function renderSidebar() {
           ? `${matchCaps.length}/${caps.length} match`
           : `${caps.length} cap${caps.length !== 1 ? 's' : ''}`;
         return `
-          <li class="fam-jump" data-fam="${escapeHtml(fam)}"${famDimmed ? ' style="opacity:0.4"' : ''}>
-            <div style="flex:1;display:flex;align-items:center;gap:6px">
-              <span class="fam-caret" style="display:inline-block;width:10px;color:var(--muted);font-size:9px">${expanded ? '▾' : '▸'}</span>
-              <div style="flex:1">
-                <div class="cap-name">${escapeHtml(fam)}</div>
-                <div class="cap-meta">${label}</div>
-              </div>
+          <li class="fam-heading"${famDimmed ? ' style="opacity:0.4"' : ''}>
+            <div style="flex:1">
+              <div class="cap-name">${escapeHtml(fam)}</div>
+              <div class="cap-meta">${label}</div>
             </div>
           </li>
-          ${expanded ? `<ul class="capability-list sub-list" data-parent-fam="${escapeHtml(fam)}">${subModuleHtml}${ungroupedHtml}</ul>` : ""}
+          ${subModuleHtml}${ungroupedHtml}
         `;
       }).join("");
 
@@ -1792,10 +1800,7 @@ function renderSidebar() {
 
       body.innerHTML = `
         <div class="family-section">
-          <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 16px 4px">
-            <span style="font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);font-weight:600">Jump to · ${tierFilter}</span>
-            <button id="sidebarExpandAll" style="font-size:10px;padding:2px 6px;border:1px solid var(--border);background:#fff;border-radius:3px;cursor:pointer;color:var(--muted)">Expand all</button>
-          </div>
+          <div style="padding:10px 16px 4px;font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);font-weight:600">Jump to · ${tierFilter}</div>
           <ul class="capability-list" id="overviewJumpList">${familyBlocks}${digitalHtml}</ul>
         </div>
         <div class="family-section">
@@ -1808,21 +1813,9 @@ function renderSidebar() {
         </div>
       `;
 
-      // Family expand/collapse handler
-      body.querySelectorAll(".fam-jump[data-fam]").forEach((li) => {
-        li.onclick = (e) => {
-          const fam = li.dataset.fam;
-          const safe = fam.replace(/[^a-z0-9]/gi, "_");
-          if (!state.sidebarFamExpanded) state.sidebarFamExpanded = {};
-          state.sidebarFamExpanded[safe] = !state.sidebarFamExpanded[safe];
-          renderSidebar();
-        };
-      });
-
       // Sub-module click handler — scroll to the sub-module's anchor in main pane
       body.querySelectorAll(".sm-jump").forEach((li) => {
-        li.onclick = (e) => {
-          e.stopPropagation();
+        li.onclick = () => {
           const smId = li.dataset.smId;
           const el = document.getElementById("ov-sm-" + smId);
           if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1838,28 +1831,7 @@ function renderSidebar() {
         };
       });
 
-      // Expand/collapse all
-      const xall = document.getElementById("sidebarExpandAll");
-      if (xall) {
-        const allExpanded = state.sidebarFamExpanded
-          && Object.keys(state.sidebarFamExpanded).length > 0
-          && Object.values(state.sidebarFamExpanded).every(v => v);
-        xall.textContent = allExpanded ? "Collapse all" : "Expand all";
-        xall.onclick = (e) => {
-          e.stopPropagation();
-          const order = DATA.family_order.length > 0 ? DATA.family_order : Object.keys(DATA.family_totals);
-          state.sidebarFamExpanded = state.sidebarFamExpanded || {};
-          if (allExpanded) {
-            state.sidebarFamExpanded = {};
-          } else {
-            for (const fam of order) {
-              if (fam === (DATA.baseline_family_name || "Platform & Data")) continue;
-              state.sidebarFamExpanded[fam.replace(/[^a-z0-9]/gi, "_")] = true;
-            }
-          }
-          renderSidebar();
-        };
-      }
+      // (no expand/collapse handler — sub-modules are always visible)
       return;
     }
 
