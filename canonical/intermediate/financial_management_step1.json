@@ -3,11 +3,11 @@
   "stats": {
     "input_reqs": 106,
     "unique_section_pairs": 72,
-    "placed_via_section_lookup": 71,
-    "placed_via_fallback": 33,
-    "unmapped": 7,
-    "total_placements": 116,
-    "unique_reqs_placed": 99
+    "placed_via_section_lookup": 72,
+    "placed_via_fallback": 36,
+    "unmapped": 5,
+    "total_placements": 120,
+    "unique_reqs_placed": 101
   },
   "placements": {
     "fin.general_ledger": [
@@ -273,6 +273,19 @@
         ]
       },
       {
+        "id": "req-00567",
+        "text": "Does your solution manage commission receipts and payouts",
+        "q_title": "Commission Receipt and Payouts Management",
+        "subsection": "Commission Receipt and Payouts Management",
+        "sources": [
+          "estate-agency__document-management-and-transaction-records-submission-for-estate-agents"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fin.accounts_receivable"
+        ]
+      },
+      {
         "id": "req-00770",
         "text": "integration with accounting management software to leverage on its capability to generate invoices",
         "q_title": "Invoice and Quotation Management",
@@ -313,6 +326,19 @@
         ]
       },
       {
+        "id": "req-00664",
+        "text": "Financial Institutions - solution allows users to access financing requests and supporting documents to process the requests within the system",
+        "q_title": "Invoice Financing Integration",
+        "subsection": "Invoice Financing Integration",
+        "sources": [
+          "built-environment__digital-contract-management-digital-payment"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fin.accounts_receivable"
+        ]
+      },
+      {
         "id": "req-00675",
         "text": "For recording of receipts and payments",
         "q_title": "Sales Management",
@@ -341,6 +367,20 @@
         ]
       },
       {
+        "id": "req-01220",
+        "text": "Set up and edit credit control (e.g. terms of payment, modes of payment, etc.)",
+        "q_title": "B2B Agent Management Features [Non-Mandatory]",
+        "subsection": "Core Functions",
+        "sources": [
+          "tourism-travel-agent__travel-management-system-e-commerce"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fin.credit_collections",
+          "fin.accounts_receivable"
+        ]
+      },
+      {
         "id": "req-01224",
         "text": "Set up and edit customer payment",
         "q_title": "Sales and Delivery Management",
@@ -352,8 +392,23 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "fin.accounts_receivable",
-          "fin.payment_gateways"
+          "fin.accounts_receivable"
+        ]
+      },
+      {
+        "id": "req-01236",
+        "text": "Set up and edit modes of payment",
+        "q_title": "Customer Groups Management",
+        "subsection": "Functional Requirements",
+        "sources": [
+          "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+          "essential-business__accounting-management-+-sales-management-system",
+          "essential-business__inventory-management-and-sales-management-system",
+          "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fin.accounts_receivable"
         ]
       },
       {
@@ -366,8 +421,7 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "fin.accounts_receivable",
-          "fin.payment_gateways"
+          "fin.accounts_receivable"
         ]
       },
       {
@@ -387,21 +441,6 @@
         ]
       },
       {
-        "id": "req-01373",
-        "text": "Track payment",
-        "q_title": "Booking Management Features",
-        "subsection": "Core Functions",
-        "sources": [
-          "tourism-travel-agent__travel-management-system-e-commerce",
-          "tourism-travel-agent__travel-management-system-operations"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "fin.accounts_receivable",
-          "fin.bank_cash_management"
-        ]
-      },
-      {
         "id": "req-01429",
         "text": "Warehouse billing and issuing of invoices based on activity, storage consumption, charge rates, and/or the customer's contract terms",
         "q_title": "Warehouse Billing System",
@@ -411,11 +450,26 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "fin.accounts_receivable"
+          "fin.accounts_receivable",
+          "fin.purchase_finance"
         ]
       }
     ],
     "fin.accounts_payable": [
+      {
+        "id": "req-00809",
+        "text": "Invoice processing: Integrate with company's accounting software to automatically extract relevant data from utility bills and fuel invoices.",
+        "q_title": "Data Collection",
+        "subsection": "Examples",
+        "sources": [
+          "essential-business__carbon-management-solution"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fin.integration_import_export",
+          "fin.accounts_payable"
+        ]
+      },
       {
         "id": "req-00903",
         "text": "Match supplier invoices to bookings",
@@ -535,8 +589,8 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "fin.accounts_receivable",
-          "fin.bank_cash_management"
+          "fin.bank_cash_management",
+          "fin.payment_gateways"
         ]
       }
     ],
@@ -781,7 +835,8 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "fin.financial_reporting"
+          "fin.financial_reporting",
+          "fin.project_accounting"
         ]
       }
     ],
@@ -831,7 +886,22 @@
         ]
       }
     ],
-    "fin.purchase_finance": [],
+    "fin.purchase_finance": [
+      {
+        "id": "req-01429",
+        "text": "Warehouse billing and issuing of invoices based on activity, storage consumption, charge rates, and/or the customer's contract terms",
+        "q_title": "Warehouse Billing System",
+        "subsection": "Warehouse Billing System",
+        "sources": [
+          "logistics__warehouse-management"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fin.accounts_receivable",
+          "fin.purchase_finance"
+        ]
+      }
+    ],
     "fin.project_accounting": [
       {
         "id": "req-00552",
@@ -871,6 +941,21 @@
         "capabilities": [
           "fin.project_accounting"
         ]
+      },
+      {
+        "id": "req-01374",
+        "text": "Track Profit and Loss of packages",
+        "q_title": "Tour Packaging Management Features [Non-Mandatory]",
+        "subsection": "Core Functions",
+        "sources": [
+          "tourism-travel-agent__travel-management-system-e-commerce",
+          "tourism-travel-agent__travel-management-system-operations"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fin.financial_reporting",
+          "fin.project_accounting"
+        ]
       }
     ],
     "fin.intercompany_consolidation": [],
@@ -886,7 +971,8 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "fin.credit_collections"
+          "fin.credit_collections",
+          "fin.accounts_receivable"
         ]
       }
     ],
@@ -1150,48 +1236,17 @@
         ]
       },
       {
-        "id": "req-01224",
-        "text": "Set up and edit customer payment",
-        "q_title": "Sales and Delivery Management",
-        "subsection": "Functional Requirements",
+        "id": "req-01373",
+        "text": "Track payment",
+        "q_title": "Booking Management Features",
+        "subsection": "Core Functions",
         "sources": [
-          "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-          "essential-business__accounting-management-+-sales-management-system",
-          "essential-business__inventory-management-and-sales-management-system"
+          "tourism-travel-agent__travel-management-system-e-commerce",
+          "tourism-travel-agent__travel-management-system-operations"
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "fin.accounts_receivable",
-          "fin.payment_gateways"
-        ]
-      },
-      {
-        "id": "req-01236",
-        "text": "Set up and edit modes of payment",
-        "q_title": "Customer Groups Management",
-        "subsection": "Functional Requirements",
-        "sources": [
-          "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-          "essential-business__accounting-management-+-sales-management-system",
-          "essential-business__inventory-management-and-sales-management-system",
-          "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "fin.payment_gateways"
-        ]
-      },
-      {
-        "id": "req-01252",
-        "text": "Set up and edit terms & modes of payment",
-        "q_title": "Customer Groups Management",
-        "subsection": "",
-        "sources": [
-          "essential-business__inventory-management-and-sales-management-system"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "fin.accounts_receivable",
+          "fin.bank_cash_management",
           "fin.payment_gateways"
         ]
       }
@@ -1669,7 +1724,8 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "fin.integration_import_export"
+          "fin.integration_import_export",
+          "fin.accounts_payable"
         ]
       },
       {
@@ -1712,17 +1768,6 @@
       "capabilities": []
     },
     {
-      "id": "req-00567",
-      "text": "Does your solution manage commission receipts and payouts",
-      "q_title": "Commission Receipt and Payouts Management",
-      "subsection": "Commission Receipt and Payouts Management",
-      "sources": [
-        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents"
-      ],
-      "placed_via": "fallback_llm",
-      "capabilities": []
-    },
-    {
       "id": "req-00574",
       "text": "Does your solution offer business financing solutions and allow businesses to compare and determine the optimal financing solutions for their financing needs",
       "q_title": "Business Financing Solutions",
@@ -1730,17 +1775,6 @@
       "sources": [
         "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
         "wholesale__sales-management"
-      ],
-      "placed_via": "fallback_llm",
-      "capabilities": []
-    },
-    {
-      "id": "req-00664",
-      "text": "Financial Institutions - solution allows users to access financing requests and supporting documents to process the requests within the system",
-      "q_title": "Invoice Financing Integration",
-      "subsection": "Invoice Financing Integration",
-      "sources": [
-        "built-environment__digital-contract-management-digital-payment"
       ],
       "placed_via": "fallback_llm",
       "capabilities": []

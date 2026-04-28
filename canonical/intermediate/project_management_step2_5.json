@@ -3,7 +3,7 @@
   "module_name": "Project Management",
   "stats": {
     "haiku_calls": 29,
-    "total_merged_reqs": 244,
+    "total_merged_reqs": 245,
     "feature_haiku_calls": 29
   },
   "capabilities": [
@@ -59,8 +59,8 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "project_master.project_lifecycle",
-          "feature_name": "Project Lifecycle & Status"
+          "feature_id": "project_master.project_execution",
+          "feature_name": "Project Execution & Tracking"
         },
         {
           "text": "Phase and milestone hierarchy within a project",
@@ -184,7 +184,7 @@
             "built-environment__built-environment-digital-platform"
           ],
           "feature_id": "project_master.project_execution",
-          "feature_name": "Project Execution & Monitoring"
+          "feature_name": "Project Execution & Tracking"
         },
         {
           "text": "Centralized project dashboard with site progress, coordination meetings, material stock levels, and payment records",
@@ -206,7 +206,7 @@
             "built-environment__built-environment-digital-platform"
           ],
           "feature_id": "project_master.project_execution",
-          "feature_name": "Project Execution & Monitoring"
+          "feature_name": "Project Execution & Tracking"
         },
         {
           "text": "Project scope of work definition and documentation",
@@ -289,18 +289,11 @@
           ]
         },
         {
-          "id": "project_master.project_lifecycle",
-          "name": "Project Lifecycle & Status",
-          "description": "Status workflow management across draft, active, on-hold, complete, and cancelled states.",
-          "req_idxs": [
-            1
-          ]
-        },
-        {
           "id": "project_master.project_execution",
-          "name": "Project Execution & Monitoring",
-          "description": "Task assignment, resource allocation, team coordination, and centralized project dashboard.",
+          "name": "Project Execution & Tracking",
+          "description": "Status lifecycle, task assignment, resource allocation, and centralized progress monitoring.",
           "req_idxs": [
+            1,
             7,
             8
           ]
@@ -340,15 +333,6 @@
               "sources": [
                 "legal__matters-management-and-collaboration-tool"
               ]
-            },
-            {
-              "id": "req-01345",
-              "text": "The project manager assigns tasks to team members, setting priorities and deadlines, and outlining all the scheduled and planned resources.",
-              "q_title": "Project Management",
-              "subsection": "Example",
-              "sources": [
-                "built-environment__built-environment-digital-platform"
-              ]
             }
           ],
           "vendor_citations": [
@@ -358,14 +342,13 @@
             "odoo_project"
           ],
           "solcat_citations": [
-            "built-environment__built-environment-digital-platform",
             "legal__matters-management-and-collaboration-tool"
           ],
           "feature_id": "task_management.task_creation",
           "feature_name": "Task Creation & Setup"
         },
         {
-          "text": "Support subtask hierarchy for decomposing work into smaller units",
+          "text": "Organize tasks into subtask hierarchies to break work into smaller units",
           "source": "proxy",
           "proxy_refs": [
             "Subtask hierarchy for breaking work into smaller units"
@@ -428,7 +411,7 @@
           "feature_name": "Task Planning & Dependencies"
         },
         {
-          "text": "Implement task status workflow with predefined states (to-do, in-progress, review, done)",
+          "text": "Manage task status workflow with predefined states (to-do, in-progress, review, done)",
           "source": "proxy",
           "proxy_refs": [
             "Task status workflow (to-do, in-progress, review, done)"
@@ -442,10 +425,10 @@
           ],
           "solcat_citations": [],
           "feature_id": "task_management.task_execution",
-          "feature_name": "Task Execution & Tracking"
+          "feature_name": "Task Execution & Workflow"
         },
         {
-          "text": "Enable drag-and-drop task reordering and status transitions",
+          "text": "Support drag-and-drop reordering and stage transitions for tasks",
           "source": "proxy",
           "proxy_refs": [
             "Drag-and-drop reordering and stage transitions"
@@ -459,10 +442,10 @@
           ],
           "solcat_citations": [],
           "feature_id": "task_management.task_execution",
-          "feature_name": "Task Execution & Tracking"
+          "feature_name": "Task Execution & Workflow"
         },
         {
-          "text": "Support checklists within tasks to track micro-steps and completion",
+          "text": "Create checklists within tasks to track micro-steps and completion",
           "source": "proxy",
           "proxy_refs": [
             "Checklists within tasks for micro-steps"
@@ -476,7 +459,7 @@
           ],
           "solcat_citations": [],
           "feature_id": "task_management.task_execution",
-          "feature_name": "Task Execution & Tracking"
+          "feature_name": "Task Execution & Workflow"
         },
         {
           "text": "Enable bulk task creation from predefined templates",
@@ -510,57 +493,24 @@
               ]
             },
             {
-              "id": "req-01342",
-              "text": "The platform provides a real-time dashboard for the main contractor to monitor work progress, while the project manager can generate reports on project status such as concrete poured, or man-hours worked, to share the data with internal and external stakeholders.",
-              "q_title": "Project Monitoring",
-              "subsection": "Example",
+              "id": "req-01143",
+              "text": "S to create, assign, and track tasks within each matter",
+              "q_title": "Task Management and Assignment",
+              "subsection": "Task Management and Assignment",
               "sources": [
-                "built-environment__built-environment-digital-platform"
+                "legal__matters-management-and-collaboration-tool"
               ]
             }
           ],
           "vendor_citations": [],
           "solcat_citations": [
-            "built-environment__built-environment-digital-platform",
             "legal__matters-management-and-collaboration-tool"
           ],
-          "feature_id": "task_management.task_execution",
-          "feature_name": "Task Execution & Tracking"
+          "feature_id": "task_management.task_tracking",
+          "feature_name": "Task Tracking & Progress"
         },
         {
-          "text": "Support dynamic task rescheduling and reassignment to handle urgent or unplanned work",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-00991",
-              "text": "Planning and coordination of change in work order sequences, postponing or incorporating urgent tasks due to unplanned issues",
-              "q_title": "Work Order Scheduling",
-              "subsection": "Work Order Scheduling",
-              "sources": [
-                "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
-              ]
-            },
-            {
-              "id": "req-00020",
-              "text": "A project manager reviews the day's site activity schedule on the platform, identifies areas with resource shortages, and reassigns manpower and materials to ensure smooth operations.",
-              "q_title": "Site Activity Monitoring",
-              "subsection": "Example",
-              "sources": [
-                "built-environment__built-environment-digital-platform"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
-            "built-environment__built-environment-digital-platform"
-          ],
-          "feature_id": "task_management",
-          "feature_name": "Task Management & Optimization"
-        },
-        {
-          "text": "Provide real-time dashboard for monitoring task and project progress",
+          "text": "Provide real-time dashboard to monitor work progress and task completion",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -578,11 +528,33 @@
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "task_management.task_visibility",
-          "feature_name": "Task Visibility & Alerts"
+          "feature_id": "task_management.task_tracking",
+          "feature_name": "Task Tracking & Progress"
         },
         {
-          "text": "Integrate calendar and scheduling features for task planning and coordination",
+          "text": "Generate reports on task and project status for internal and external stakeholders",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01342",
+              "text": "The platform provides a real-time dashboard for the main contractor to monitor work progress, while the project manager can generate reports on project status such as concrete poured, or man-hours worked, to share the data with internal and external stakeholders.",
+              "q_title": "Project Monitoring",
+              "subsection": "Example",
+              "sources": [
+                "built-environment__built-environment-digital-platform"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "built-environment__built-environment-digital-platform"
+          ],
+          "feature_id": "task_management.task_reporting",
+          "feature_name": "Task Reporting & Analytics"
+        },
+        {
+          "text": "Integrate calendar and scheduling features for task planning and resource allocation",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -603,10 +575,20 @@
               "sources": [
                 "personal-care-services__salon-management-system"
               ]
+            },
+            {
+              "id": "req-01345",
+              "text": "The project manager assigns tasks to team members, setting priorities and deadlines, and outlining all the scheduled and planned resources.",
+              "q_title": "Project Management",
+              "subsection": "Example",
+              "sources": [
+                "built-environment__built-environment-digital-platform"
+              ]
             }
           ],
           "vendor_citations": [],
           "solcat_citations": [
+            "built-environment__built-environment-digital-platform",
             "legal__practice-management-system-pms",
             "personal-care-services__salon-management-system"
           ],
@@ -614,38 +596,38 @@
           "feature_name": "Task Planning & Dependencies"
         },
         {
-          "text": "Send reminders and notifications for task deadlines and status changes",
+          "text": "Support task reassignment and resource reallocation to address scheduling conflicts",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {
-              "id": "req-00215",
-              "text": "Calendar functions with scheduling, reminders, and notifications pertaining to case management",
-              "q_title": "Calendar Management",
-              "subsection": "Calendar Management",
+              "id": "req-00020",
+              "text": "A project manager reviews the day's site activity schedule on the platform, identifies areas with resource shortages, and reassigns manpower and materials to ensure smooth operations.",
+              "q_title": "Site Activity Monitoring",
+              "subsection": "Example",
               "sources": [
-                "legal__practice-management-system-pms"
+                "built-environment__built-environment-digital-platform"
               ]
             }
           ],
           "vendor_citations": [],
           "solcat_citations": [
-            "legal__practice-management-system-pms"
+            "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "task_management.task_visibility",
-          "feature_name": "Task Visibility & Alerts"
+          "feature_id": "task_management.task_allocation",
+          "feature_name": "Task Assignment & Resource Management"
         }
       ],
       "stats": {
         "proxy_in": 8,
-        "imda_in": 11,
+        "imda_in": 10,
         "merged_out": 13
       },
       "features": [
         {
           "id": "task_management.task_creation",
           "name": "Task Creation & Setup",
-          "description": "Create tasks with core attributes, templates, and hierarchical structure.",
+          "description": "Create and configure tasks with core attributes, templates, and hierarchical structures.",
           "req_idxs": [
             0,
             1,
@@ -655,7 +637,7 @@
         {
           "id": "task_management.task_planning",
           "name": "Task Planning & Dependencies",
-          "description": "Define task priorities, dependencies, and scheduling relationships.",
+          "description": "Define task priorities, dependencies, and scheduling relationships for project sequencing.",
           "req_idxs": [
             2,
             3,
@@ -664,29 +646,36 @@
         },
         {
           "id": "task_management.task_execution",
-          "name": "Task Execution & Tracking",
-          "description": "Manage task status, progress, checklists, and workflow transitions.",
+          "name": "Task Execution & Workflow",
+          "description": "Manage task status transitions, checklists, and drag-and-drop workflow management.",
           "req_idxs": [
             4,
             5,
-            6,
-            8
+            6
           ]
         },
         {
-          "id": "task_management",
-          "name": "Task Management & Optimization",
-          "description": "Reassign, reschedule, and reorder tasks to adapt to changing priorities.",
+          "id": "task_management.task_tracking",
+          "name": "Task Tracking & Progress",
+          "description": "Monitor task progress, updates, and completion metrics across projects.",
           "req_idxs": [
+            8,
             9
           ]
         },
         {
-          "id": "task_management.task_visibility",
-          "name": "Task Visibility & Alerts",
-          "description": "Monitor progress via dashboards, reminders, and notifications.",
+          "id": "task_management.task_reporting",
+          "name": "Task Reporting & Analytics",
+          "description": "Generate task and project status reports for stakeholder visibility and decision-making.",
           "req_idxs": [
-            10,
+            10
+          ]
+        },
+        {
+          "id": "task_management.task_allocation",
+          "name": "Task Assignment & Resource Management",
+          "description": "Assign, reassign, and reallocate tasks to manage resource conflicts and workload balancing.",
+          "req_idxs": [
             12
           ]
         }
@@ -789,7 +778,7 @@
           "feature_name": "Time Entry"
         },
         {
-          "text": "Start and stop timer for real-time time tracking",
+          "text": "Start and stop timer for real-time hour tracking",
           "source": "proxy",
           "proxy_refs": [
             "Start/stop timer for real-time tracking"
@@ -823,7 +812,7 @@
           "feature_name": "Timesheet Management"
         },
         {
-          "text": "Route timesheets through approval workflow with submit, approve, and reject actions",
+          "text": "Route timesheets through approval workflow with submit, approve, and reject states",
           "source": "proxy",
           "proxy_refs": [
             "Timesheet approval workflow (submit, approve, reject)"
@@ -857,7 +846,7 @@
           "feature_name": "Timesheet Management"
         },
         {
-          "text": "Lock timesheet records after approval to prevent unauthorized edits",
+          "text": "Lock timesheet records after approval to prevent modification",
           "source": "proxy",
           "proxy_refs": [
             "Timesheet lock after approval to prevent edits"
@@ -891,7 +880,7 @@
           "feature_name": "Billing & Payroll Integration"
         },
         {
-          "text": "Generate itemized billing records from tracked time and expenses by case or project",
+          "text": "Enable itemised billing based on tracked time and expenses per case or project",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -922,7 +911,7 @@
         {
           "id": "time_tracking.time_entry",
           "name": "Time Entry",
-          "description": "Log and classify hours against projects, tasks, or activities with real-time tracking.",
+          "description": "Log and track hours against projects, tasks, or activities with real-time timer and billable classification.",
           "req_idxs": [
             0,
             1,
@@ -932,7 +921,7 @@
         {
           "id": "time_tracking.timesheet_management",
           "name": "Timesheet Management",
-          "description": "View, organize, and submit timesheet entries in weekly grid format with daily summaries.",
+          "description": "View, organize, and manage timesheet entries in weekly grid format with daily totals and overtime flagging.",
           "req_idxs": [
             3,
             5
@@ -941,7 +930,7 @@
         {
           "id": "time_tracking.timesheet_approval",
           "name": "Timesheet Approval",
-          "description": "Route timesheets through approval workflow with submit, approve, reject, and lock controls.",
+          "description": "Route timesheets through approval workflow with submit, approve, reject, and lock states.",
           "req_idxs": [
             4,
             6
@@ -950,7 +939,7 @@
         {
           "id": "time_tracking.billing_payroll_integration",
           "name": "Billing & Payroll Integration",
-          "description": "Allocate tracked time to payroll and generate itemized billing records for projects and cases.",
+          "description": "Integrate tracked time with payroll for labour cost allocation and enable itemised billing by project or case.",
           "req_idxs": [
             7,
             8
@@ -991,7 +980,7 @@
           ],
           "solcat_citations": [],
           "feature_id": "budget_cost.budget_setup",
-          "feature_name": "Budget Definition & Setup"
+          "feature_name": "Budget Definition & Maintenance"
         },
         {
           "text": "Track actual costs against budgeted amounts in real time across all cost categories.",
@@ -1019,8 +1008,8 @@
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "budget_cost.tracking_analysis",
-          "feature_name": "Tracking & Variance Analysis"
+          "feature_id": "budget_cost.cost_tracking",
+          "feature_name": "Actual Cost Tracking"
         },
         {
           "text": "Generate variance alerts when actual spend exceeds a configurable threshold percentage of budget.",
@@ -1036,11 +1025,11 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "budget_cost.tracking_analysis",
-          "feature_name": "Tracking & Variance Analysis"
+          "feature_id": "budget_cost.variance_monitoring",
+          "feature_name": "Variance Monitoring & Alerts"
         },
         {
-          "text": "Calculate labour costs automatically from timesheet hours multiplied by applicable rate cards.",
+          "text": "Calculate labour costs automatically from timesheet hours and labour rate cards.",
           "source": "proxy",
           "proxy_refs": [
             "Labour cost calculated from timesheet hours and rate cards"
@@ -1053,8 +1042,8 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "budget_cost.cost_capture",
-          "feature_name": "Cost Capture & Integration"
+          "feature_id": "budget_cost.cost_tracking",
+          "feature_name": "Actual Cost Tracking"
         },
         {
           "text": "Capture and track material and expense costs against the project.",
@@ -1070,11 +1059,11 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "budget_cost.cost_capture",
-          "feature_name": "Cost Capture & Integration"
+          "feature_id": "budget_cost.cost_tracking",
+          "feature_name": "Actual Cost Tracking"
         },
         {
-          "text": "Forecast cost-to-complete and estimate-at-completion based on current spend trends.",
+          "text": "Forecast cost-to-complete and estimate-at-completion based on current spending trends.",
           "source": "proxy",
           "proxy_refs": [
             "Cost-to-complete and estimate-at-completion forecasts"
@@ -1087,11 +1076,11 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "budget_cost.forecasting_reporting",
-          "feature_name": "Forecasting & Reporting"
+          "feature_id": "budget_cost.forecasting",
+          "feature_name": "Cost Forecasting & Reporting"
         },
         {
-          "text": "Maintain a complete audit trail of budget revisions with approval records.",
+          "text": "Maintain a complete revision history of budget changes with approval audit trail.",
           "source": "proxy",
           "proxy_refs": [
             "Budget revision history with approval trail"
@@ -1105,7 +1094,7 @@
           ],
           "solcat_citations": [],
           "feature_id": "budget_cost.budget_setup",
-          "feature_name": "Budget Definition & Setup"
+          "feature_name": "Budget Definition & Maintenance"
         },
         {
           "text": "Display actual versus planned expenditure in a dashboard view across all work packages.",
@@ -1126,8 +1115,8 @@
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "budget_cost.forecasting_reporting",
-          "feature_name": "Forecasting & Reporting"
+          "feature_id": "budget_cost.forecasting",
+          "feature_name": "Cost Forecasting & Reporting"
         }
       ],
       "stats": {
@@ -1138,35 +1127,35 @@
       "features": [
         {
           "id": "budget_cost.budget_setup",
-          "name": "Budget Definition & Setup",
-          "description": "Define and maintain project budgets organized by cost category with approval tracking.",
+          "name": "Budget Definition & Maintenance",
+          "description": "Create and maintain project budgets organized by cost category with revision history and approvals.",
           "req_idxs": [
             0,
             6
           ]
         },
         {
-          "id": "budget_cost.cost_capture",
-          "name": "Cost Capture & Integration",
-          "description": "Automatically capture labour, material, and expense costs from timesheets and transactions.",
+          "id": "budget_cost.cost_tracking",
+          "name": "Actual Cost Tracking",
+          "description": "Capture and record actual costs from timesheets, materials, expenses, and subcontractors in real time.",
           "req_idxs": [
+            1,
             3,
             4
           ]
         },
         {
-          "id": "budget_cost.tracking_analysis",
-          "name": "Tracking & Variance Analysis",
-          "description": "Track actual costs against budget in real time and alert on threshold breaches.",
+          "id": "budget_cost.variance_monitoring",
+          "name": "Variance Monitoring & Alerts",
+          "description": "Monitor budget performance and trigger alerts when spending approaches or exceeds configurable thresholds.",
           "req_idxs": [
-            1,
             2
           ]
         },
         {
-          "id": "budget_cost.forecasting_reporting",
-          "name": "Forecasting & Reporting",
-          "description": "Forecast cost-to-complete and display actual versus planned expenditure across work packages.",
+          "id": "budget_cost.forecasting",
+          "name": "Cost Forecasting & Reporting",
+          "description": "Project final costs and display actual versus planned expenditure across work packages and dashboards.",
           "req_idxs": [
             5,
             7
@@ -1193,41 +1182,65 @@
       ],
       "requirements": [
         {
-          "text": "Assign team members to projects and tasks with estimated effort hours",
-          "source": "proxy",
+          "text": "Assign team members to projects and tasks with specified effort hours",
+          "source": "both",
           "proxy_refs": [
             "Assign team members to projects and tasks with effort hours"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00373",
+              "text": "creation and posting of jobs, job transfer, job scheduling and assignment, job monitoring, etc.",
+              "q_title": "Electronic Proof of Delivery",
+              "subsection": "Transport Job Management Examples",
+              "sources": [
+                "logistics__transport-management"
+              ]
+            }
+          ],
           "vendor_citations": [
             "ms_project",
             "netsuite_srp",
             "oracle_primavera",
             "sap_ps"
           ],
-          "solcat_citations": [],
-          "feature_id": "resource_allocation.assignment_mgmt",
-          "feature_name": "Assignment Management"
+          "solcat_citations": [
+            "logistics__transport-management"
+          ],
+          "feature_id": "resource_allocation.assignment",
+          "feature_name": "Resource Assignment"
         },
         {
-          "text": "View resource availability across all active projects and assignments",
-          "source": "proxy",
+          "text": "View resource availability and capacity across all active projects",
+          "source": "both",
           "proxy_refs": [
             "View resource availability across all projects"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00020",
+              "text": "A project manager reviews the day's site activity schedule on the platform, identifies areas with resource shortages, and reassigns manpower and materials to ensure smooth operations.",
+              "q_title": "Site Activity Monitoring",
+              "subsection": "Example",
+              "sources": [
+                "built-environment__built-environment-digital-platform"
+              ]
+            }
+          ],
           "vendor_citations": [
             "ms_project",
             "netsuite_srp",
             "oracle_primavera",
             "sap_ps"
           ],
-          "solcat_citations": [],
+          "solcat_citations": [
+            "built-environment__built-environment-digital-platform"
+          ],
           "feature_id": "resource_allocation.capacity_planning",
-          "feature_name": "Capacity Planning"
+          "feature_name": "Capacity Planning & Visibility"
         },
         {
-          "text": "Display capacity heatmap or visual indicator showing over-allocated and under-allocated resources",
+          "text": "Display capacity heatmap or visual indicator showing over-allocation and under-allocation by resource",
           "source": "proxy",
           "proxy_refs": [
             "Capacity heatmap showing over- and under-allocation"
@@ -1241,10 +1254,10 @@
           ],
           "solcat_citations": [],
           "feature_id": "resource_allocation.capacity_planning",
-          "feature_name": "Capacity Planning"
+          "feature_name": "Capacity Planning & Visibility"
         },
         {
-          "text": "Support drag-and-drop resource scheduling on a timeline view",
+          "text": "Support drag-and-drop resource scheduling on timeline views",
           "source": "proxy",
           "proxy_refs": [
             "Drag-and-drop resource scheduling on a timeline"
@@ -1257,11 +1270,11 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "resource_allocation.scheduling_visualization",
-          "feature_name": "Scheduling & Visualization"
+          "feature_id": "resource_allocation.scheduling",
+          "feature_name": "Scheduling & Reallocation"
         },
         {
-          "text": "Integrate leave and public holiday calendar to exclude unavailable periods from capacity calculations",
+          "text": "Integrate leave and public holiday calendars to exclude unavailable periods from capacity calculations",
           "source": "proxy",
           "proxy_refs": [
             "Leave and public holiday calendar integration"
@@ -1274,11 +1287,11 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "resource_allocation.availability_management",
-          "feature_name": "Availability Management"
+          "feature_id": "resource_allocation.calendar_integration",
+          "feature_name": "Calendar & Absence Management"
         },
         {
-          "text": "Track and report utilisation rate as billable or assigned hours divided by available hours",
+          "text": "Track and report resource utilisation rates (billable or productive hours against available hours)",
           "source": "proxy",
           "proxy_refs": [
             "Utilisation rate tracking (billable hours / available hours)"
@@ -1291,11 +1304,11 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "resource_allocation.utilization_reporting",
-          "feature_name": "Utilization Reporting"
+          "feature_id": "resource_allocation.capacity_planning",
+          "feature_name": "Capacity Planning & Visibility"
         },
         {
-          "text": "Implement resource request and approval workflow for project assignments",
+          "text": "Implement resource request and approval workflow for allocation changes",
           "source": "proxy",
           "proxy_refs": [
             "Resource request and approval workflow"
@@ -1308,14 +1321,23 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "resource_allocation.assignment_mgmt",
-          "feature_name": "Assignment Management"
+          "feature_id": "resource_allocation.assignment",
+          "feature_name": "Resource Assignment"
         },
         {
-          "text": "Enable project managers to identify resource shortages and reassign personnel to balance workload across projects",
+          "text": "Enable reallocation and reassignment of resources in response to unplanned issues or urgent task changes",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
+            {
+              "id": "req-00991",
+              "text": "Planning and coordination of change in work order sequences, postponing or incorporating urgent tasks due to unplanned issues",
+              "q_title": "Work Order Scheduling",
+              "subsection": "Work Order Scheduling",
+              "sources": [
+                "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+              ]
+            },
             {
               "id": "req-00020",
               "text": "A project manager reviews the day's site activity schedule on the platform, identifies areas with resource shortages, and reassigns manpower and materials to ensure smooth operations.",
@@ -1328,13 +1350,36 @@
           ],
           "vendor_citations": [],
           "solcat_citations": [
+            "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "resource_allocation.capacity_planning",
-          "feature_name": "Capacity Planning"
+          "feature_id": "resource_allocation.scheduling",
+          "feature_name": "Scheduling & Reallocation"
         },
         {
-          "text": "Support integration with external project scheduling and management systems",
+          "text": "Support postponement or rescheduling of work orders and tasks due to resource constraints or priority changes",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00991",
+              "text": "Planning and coordination of change in work order sequences, postponing or incorporating urgent tasks due to unplanned issues",
+              "q_title": "Work Order Scheduling",
+              "subsection": "Work Order Scheduling",
+              "sources": [
+                "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+          ],
+          "feature_id": "resource_allocation.scheduling",
+          "feature_name": "Scheduling & Reallocation"
+        },
+        {
+          "text": "Integrate with existing external project scheduling and management systems",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1353,10 +1398,10 @@
             "built-environment__built-environment-digital-platform"
           ],
           "feature_id": "resource_allocation.system_integration",
-          "feature_name": "System Integration"
+          "feature_name": "External System Integration"
         },
         {
-          "text": "Define and manage business units or team profiles to categorise resources by skill, role, or department",
+          "text": "Define and manage business units or team profiles to support different resource types and skill categories",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1374,20 +1419,20 @@
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "resource_allocation.resource_organization",
-          "feature_name": "Resource Organization"
+          "feature_id": "resource_allocation.resource_setup",
+          "feature_name": "Resource Configuration"
         }
       ],
       "stats": {
         "proxy_in": 7,
         "imda_in": 6,
-        "merged_out": 10
+        "merged_out": 11
       },
       "features": [
         {
-          "id": "resource_allocation.assignment_mgmt",
-          "name": "Assignment Management",
-          "description": "Assign team members to projects and tasks with effort estimation and approval workflows.",
+          "id": "resource_allocation.assignment",
+          "name": "Resource Assignment",
+          "description": "Assign team members to projects and tasks with effort tracking and approval workflows.",
           "req_idxs": [
             0,
             6
@@ -1395,52 +1440,46 @@
         },
         {
           "id": "resource_allocation.capacity_planning",
-          "name": "Capacity Planning",
-          "description": "View resource availability, capacity heatmaps, and identify over/under-allocation across projects.",
+          "name": "Capacity Planning & Visibility",
+          "description": "Monitor resource availability, capacity utilisation, and identify over/under-allocation across projects.",
           "req_idxs": [
             1,
             2,
-            7
+            5
           ]
         },
         {
-          "id": "resource_allocation.scheduling_visualization",
-          "name": "Scheduling & Visualization",
-          "description": "Drag-and-drop timeline scheduling and interactive resource allocation views.",
+          "id": "resource_allocation.scheduling",
+          "name": "Scheduling & Reallocation",
+          "description": "Visualise and manage resource schedules with drag-and-drop tools, reallocation, and task rescheduling.",
           "req_idxs": [
-            3
+            3,
+            7,
+            8
           ]
         },
         {
-          "id": "resource_allocation.availability_management",
-          "name": "Availability Management",
-          "description": "Integrate leave and holiday calendars to calculate true resource availability.",
+          "id": "resource_allocation.calendar_integration",
+          "name": "Calendar & Absence Management",
+          "description": "Integrate leave and public holiday calendars to reflect true resource availability.",
           "req_idxs": [
             4
           ]
         },
         {
-          "id": "resource_allocation.utilization_reporting",
-          "name": "Utilization Reporting",
-          "description": "Track and report billable and assigned hours against available capacity.",
+          "id": "resource_allocation.resource_setup",
+          "name": "Resource Configuration",
+          "description": "Define business units, team profiles, and resource types to support skill-based allocation.",
           "req_idxs": [
-            5
-          ]
-        },
-        {
-          "id": "resource_allocation.resource_organization",
-          "name": "Resource Organization",
-          "description": "Define business units and team profiles to categorize resources by skill, role, or department.",
-          "req_idxs": [
-            9
+            10
           ]
         },
         {
           "id": "resource_allocation.system_integration",
-          "name": "System Integration",
+          "name": "External System Integration",
           "description": "Connect with external project scheduling and management systems.",
           "req_idxs": [
-            8
+            9
           ]
         }
       ]
@@ -1464,7 +1503,7 @@
       ],
       "requirements": [
         {
-          "text": "Generate time-and-materials invoices from approved timesheets and expense records",
+          "text": "Generate invoices from time-and-materials billing using approved timesheets and expense records",
           "source": "proxy",
           "proxy_refs": [
             "Time-and-materials billing from approved timesheets"
@@ -1481,7 +1520,7 @@
           "feature_name": "Invoice Generation"
         },
         {
-          "text": "Generate fixed-price invoices by milestone or deliverable completion",
+          "text": "Generate invoices for fixed-price contracts billed by milestone or deliverable completion",
           "source": "proxy",
           "proxy_refs": [
             "Fixed-price billing by milestone or deliverable"
@@ -1527,7 +1566,7 @@
           "feature_name": "Invoice Generation"
         },
         {
-          "text": "Manage retainer and deposit accounts with drawdown tracking against invoices",
+          "text": "Manage retainer and deposit accounts with drawdown tracking against invoiced amounts",
           "source": "proxy",
           "proxy_refs": [
             "Retainer and deposit management with drawdown tracking"
@@ -1540,11 +1579,11 @@
             "odoo_timesheets"
           ],
           "solcat_citations": [],
-          "feature_id": "billing_invoicing.billing_review_approval",
-          "feature_name": "Billing Review & Approval"
+          "feature_id": "billing_invoicing.revenue_recognition_settlement",
+          "feature_name": "Revenue Recognition & Settlement"
         },
         {
-          "text": "Consolidate multiple projects into a single invoice per customer",
+          "text": "Consolidate billing for multiple projects into a single invoice per customer",
           "source": "proxy",
           "proxy_refs": [
             "Consolidated invoice across multiple projects per customer"
@@ -1578,7 +1617,7 @@
           "feature_name": "Billing Rates & Consolidation"
         },
         {
-          "text": "Generate unbilled time and expense reports for billing review and approval",
+          "text": "Generate unbilled time and expense reports for billing review and approval before invoice generation",
           "source": "proxy",
           "proxy_refs": [
             "Unbilled time and expense report for billing review"
@@ -1595,11 +1634,26 @@
           "feature_name": "Billing Review & Approval"
         },
         {
-          "text": "Post invoices to accounts receivable and track payment settlement",
-          "source": "both",
+          "text": "Post generated invoices to accounts receivable for revenue recognition and collection tracking",
+          "source": "proxy",
           "proxy_refs": [
             "Integration with accounts receivable for invoice posting"
           ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext_projects",
+            "netsuite_srp",
+            "odoo_project",
+            "odoo_timesheets"
+          ],
+          "solcat_citations": [],
+          "feature_id": "billing_invoicing.revenue_recognition_settlement",
+          "feature_name": "Revenue Recognition & Settlement"
+        },
+        {
+          "text": "Support payment settlement processes linked to progress claims and work verification",
+          "source": "imda",
+          "proxy_refs": [],
           "imda_refs": [
             {
               "id": "req-00546",
@@ -1611,23 +1665,18 @@
               ]
             }
           ],
-          "vendor_citations": [
-            "erpnext_projects",
-            "netsuite_srp",
-            "odoo_project",
-            "odoo_timesheets"
-          ],
+          "vendor_citations": [],
           "solcat_citations": [
             "built-environment__digital-contract-management-digital-payment"
           ],
-          "feature_id": "billing_invoicing.ar_posting_settlement",
-          "feature_name": "AR Posting & Settlement"
+          "feature_id": "billing_invoicing.revenue_recognition_settlement",
+          "feature_name": "Revenue Recognition & Settlement"
         }
       ],
       "stats": {
         "proxy_in": 8,
         "imda_in": 1,
-        "merged_out": 8
+        "merged_out": 9
       },
       "features": [
         {
@@ -1652,18 +1701,19 @@
         {
           "id": "billing_invoicing.billing_review_approval",
           "name": "Billing Review & Approval",
-          "description": "Review and approve unbilled time, expenses, and retainer drawdowns before invoice generation.",
+          "description": "Generate unbilled time and expense reports for review and approval before invoice creation.",
           "req_idxs": [
-            3,
             6
           ]
         },
         {
-          "id": "billing_invoicing.ar_posting_settlement",
-          "name": "AR Posting & Settlement",
-          "description": "Post invoices to accounts receivable and track payment settlement.",
+          "id": "billing_invoicing.revenue_recognition_settlement",
+          "name": "Revenue Recognition & Settlement",
+          "description": "Post invoices to accounts receivable, manage retainer drawdowns, and process payment settlement linked to work verification.",
           "req_idxs": [
-            7
+            3,
+            7,
+            8
           ]
         }
       ]
@@ -1687,12 +1737,21 @@
       ],
       "requirements": [
         {
-          "text": "Project status dashboard with RAG (Red/Amber/Green) indicators and real-time progress visibility",
+          "text": "Project status dashboard with RAG (Red/Amber/Green) indicators showing overall health and progress",
           "source": "both",
           "proxy_refs": [
             "Project status dashboard with RAG indicators"
           ],
           "imda_refs": [
+            {
+              "id": "req-00410",
+              "text": "Customised dashboards and reporting capabilities to track the firm's operations, staff projects and client status",
+              "q_title": "Dashboards and Reports (PMS)",
+              "subsection": "Dashboards and Reports (PMS)",
+              "sources": [
+                "legal__practice-management-system-pms"
+              ]
+            },
             {
               "id": "req-01342",
               "text": "The platform provides a real-time dashboard for the main contractor to monitor work progress, while the project manager can generate reports on project status such as concrete poured, or man-hours worked, to share the data with internal and external stakeholders.",
@@ -1719,13 +1778,14 @@
             "odoo_project"
           ],
           "solcat_citations": [
-            "built-environment__built-environment-digital-platform"
+            "built-environment__built-environment-digital-platform",
+            "legal__practice-management-system-pms"
           ],
-          "feature_id": "reporting_dashboards.status_monitoring",
-          "feature_name": "Status Monitoring"
+          "feature_id": "reporting_dashboards.status_health_dashboards",
+          "feature_name": "Status & Health Dashboards"
         },
         {
-          "text": "Milestone tracker showing planned vs actual completion dates and on-time delivery status",
+          "text": "Milestone tracker displaying scheduled vs actual completion dates and on-time vs late deliverables",
           "source": "both",
           "proxy_refs": [
             "Milestone tracker showing on-time vs late deliverables"
@@ -1750,11 +1810,11 @@
           "solcat_citations": [
             "legal__matters-management-and-collaboration-tool"
           ],
-          "feature_id": "reporting_dashboards.status_monitoring",
-          "feature_name": "Status Monitoring"
+          "feature_id": "reporting_dashboards.status_health_dashboards",
+          "feature_name": "Status & Health Dashboards"
         },
         {
-          "text": "Budget vs actual cost report with variance analysis at project level",
+          "text": "Budget vs actual cost report per project with variance analysis",
           "source": "both",
           "proxy_refs": [
             "Budget vs actual cost report per project"
@@ -1779,11 +1839,11 @@
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "reporting_dashboards.financial_reporting",
-          "feature_name": "Financial Reporting"
+          "feature_id": "reporting_dashboards.financial_resource_reports",
+          "feature_name": "Financial & Resource Reports"
         },
         {
-          "text": "Team utilisation and resource availability report to identify allocation gaps and reallocation opportunities",
+          "text": "Team utilisation and availability report showing resource allocation and capacity across projects",
           "source": "both",
           "proxy_refs": [
             "Team utilisation and availability report"
@@ -1817,20 +1877,71 @@
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "reporting_dashboards.resource_reporting",
-          "feature_name": "Resource Reporting"
+          "feature_id": "reporting_dashboards.financial_resource_reports",
+          "feature_name": "Financial & Resource Reports"
         },
         {
-          "text": "Timesheet summary and labour cost tracking by project, person, or period",
-          "source": "both",
+          "text": "Timesheet summary report aggregated by project, person, or time period",
+          "source": "proxy",
           "proxy_refs": [
             "Timesheet summary by project, person, or period"
           ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "jira",
+            "ms_project",
+            "netsuite_srp",
+            "odoo_project"
+          ],
+          "solcat_citations": [],
+          "feature_id": "reporting_dashboards.financial_resource_reports",
+          "feature_name": "Financial & Resource Reports"
+        },
+        {
+          "text": "Custom report builder enabling users to define filters, grouping, and output format",
+          "source": "proxy",
+          "proxy_refs": [
+            "Custom report builder with filters and grouping"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "jira",
+            "ms_project",
+            "netsuite_srp",
+            "odoo_project"
+          ],
+          "solcat_citations": [],
+          "feature_id": "reporting_dashboards.custom_reporting_delivery",
+          "feature_name": "Custom Reporting & Delivery"
+        },
+        {
+          "text": "Scheduled automated report delivery via email on defined cadence",
+          "source": "proxy",
+          "proxy_refs": [
+            "Scheduled email report delivery"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "jira",
+            "ms_project",
+            "netsuite_srp",
+            "odoo_project"
+          ],
+          "solcat_citations": [],
+          "feature_id": "reporting_dashboards.custom_reporting_delivery",
+          "feature_name": "Custom Reporting & Delivery"
+        },
+        {
+          "text": "Drill-down navigation from portfolio-level summary views to individual project and task details",
+          "source": "both",
+          "proxy_refs": [
+            "Drill-down from portfolio summary to task detail"
+          ],
           "imda_refs": [
             {
-              "id": "req-01342",
-              "text": "The platform provides a real-time dashboard for the main contractor to monitor work progress, while the project manager can generate reports on project status such as concrete poured, or man-hours worked, to share the data with internal and external stakeholders.",
-              "q_title": "Project Monitoring",
+              "id": "req-01343",
+              "text": "The platform provides real-time insights on progress of project completion status, generate consolidated view into a dashboards, and allows stakeholders to export progress insights.",
+              "q_title": "BE Dashboards and Reports",
               "subsection": "Example",
               "sources": [
                 "built-environment__built-environment-digital-platform"
@@ -1846,81 +1957,70 @@
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "reporting_dashboards.financial_reporting",
-          "feature_name": "Financial Reporting"
+          "feature_id": "reporting_dashboards.status_health_dashboards",
+          "feature_name": "Status & Health Dashboards"
         },
         {
-          "text": "Custom report builder with configurable filters, grouping, and field selection",
-          "source": "proxy",
-          "proxy_refs": [
-            "Custom report builder with filters and grouping"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "jira",
-            "ms_project",
-            "netsuite_srp",
-            "odoo_project"
-          ],
-          "solcat_citations": [],
-          "feature_id": "reporting_dashboards.custom_reporting",
-          "feature_name": "Custom Reporting"
-        },
-        {
-          "text": "Scheduled automated report delivery via email to stakeholders",
-          "source": "proxy",
-          "proxy_refs": [
-            "Scheduled email report delivery"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "jira",
-            "ms_project",
-            "netsuite_srp",
-            "odoo_project"
-          ],
-          "solcat_citations": [],
-          "feature_id": "reporting_dashboards.custom_reporting",
-          "feature_name": "Custom Reporting"
-        },
-        {
-          "text": "Drill-down navigation from portfolio-level summary to individual project and task detail",
-          "source": "proxy",
-          "proxy_refs": [
-            "Drill-down from portfolio summary to task detail"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "jira",
-            "ms_project",
-            "netsuite_srp",
-            "odoo_project"
-          ],
-          "solcat_citations": [],
-          "feature_id": "reporting_dashboards.status_monitoring",
-          "feature_name": "Status Monitoring"
-        },
-        {
-          "text": "Consolidated operational dashboard tracking firm operations, staff projects, and client status",
+          "text": "Real-time dashboard for monitoring work progress and project completion status",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {
-              "id": "req-00410",
-              "text": "Customised dashboards and reporting capabilities to track the firm's operations, staff projects and client status",
-              "q_title": "Dashboards and Reports (PMS)",
-              "subsection": "Dashboards and Reports (PMS)",
+              "id": "req-01342",
+              "text": "The platform provides a real-time dashboard for the main contractor to monitor work progress, while the project manager can generate reports on project status such as concrete poured, or man-hours worked, to share the data with internal and external stakeholders.",
+              "q_title": "Project Monitoring",
+              "subsection": "Example",
               "sources": [
-                "legal__practice-management-system-pms"
+                "built-environment__built-environment-digital-platform"
+              ]
+            },
+            {
+              "id": "req-01343",
+              "text": "The platform provides real-time insights on progress of project completion status, generate consolidated view into a dashboards, and allows stakeholders to export progress insights.",
+              "q_title": "BE Dashboards and Reports",
+              "subsection": "Example",
+              "sources": [
+                "built-environment__built-environment-digital-platform"
               ]
             }
           ],
           "vendor_citations": [],
           "solcat_citations": [
-            "legal__practice-management-system-pms"
+            "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "reporting_dashboards.operational_dashboards",
-          "feature_name": "Operational Dashboards"
+          "feature_id": "reporting_dashboards.status_health_dashboards",
+          "feature_name": "Status & Health Dashboards"
+        },
+        {
+          "text": "Project progress reports capturing activity-specific metrics (e.g. work completed, man-hours, materials used)",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01342",
+              "text": "The platform provides a real-time dashboard for the main contractor to monitor work progress, while the project manager can generate reports on project status such as concrete poured, or man-hours worked, to share the data with internal and external stakeholders.",
+              "q_title": "Project Monitoring",
+              "subsection": "Example",
+              "sources": [
+                "built-environment__built-environment-digital-platform"
+              ]
+            },
+            {
+              "id": "req-00020",
+              "text": "A project manager reviews the day's site activity schedule on the platform, identifies areas with resource shortages, and reassigns manpower and materials to ensure smooth operations.",
+              "q_title": "Site Activity Monitoring",
+              "subsection": "Example",
+              "sources": [
+                "built-environment__built-environment-digital-platform"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "built-environment__built-environment-digital-platform"
+          ],
+          "feature_id": "reporting_dashboards.portfolio_oversight",
+          "feature_name": "Portfolio Oversight"
         },
         {
           "text": "Export capability for progress insights and reports to share with internal and external stakeholders",
@@ -1941,18 +2041,18 @@
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "reporting_dashboards.custom_reporting",
-          "feature_name": "Custom Reporting"
+          "feature_id": "reporting_dashboards.custom_reporting_delivery",
+          "feature_name": "Custom Reporting & Delivery"
         },
         {
-          "text": "Activity schedule visibility and reporting for site/operational oversight and resource gap identification",
+          "text": "Portfolio-level view enabling oversight of multiple concurrent projects and resource reallocation decisions",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {
-              "id": "req-00020",
-              "text": "A project manager reviews the day's site activity schedule on the platform, identifies areas with resource shortages, and reassigns manpower and materials to ensure smooth operations.",
-              "q_title": "Site Activity Monitoring",
+              "id": "req-01337",
+              "text": "The platform allows the firm to oversee multiple projects simultaneously, if workers complete their work on one project earlier than expected, the resource manager can reallocate these workers to another project. The platform also provides overall budget performance for budget reallocation.",
+              "q_title": "Portfolio-wide Visibility",
               "subsection": "Example",
               "sources": [
                 "built-environment__built-environment-digital-platform"
@@ -1963,60 +2063,54 @@
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "reporting_dashboards.resource_reporting",
-          "feature_name": "Resource Reporting"
+          "feature_id": "reporting_dashboards.portfolio_oversight",
+          "feature_name": "Portfolio Oversight"
         }
       ],
       "stats": {
         "proxy_in": 8,
         "imda_in": 6,
-        "merged_out": 11
+        "merged_out": 12
       },
       "features": [
         {
-          "id": "reporting_dashboards.status_monitoring",
-          "name": "Status Monitoring",
-          "description": "Real-time project health dashboards with RAG indicators, milestone tracking, and progress visibility.",
+          "id": "reporting_dashboards.status_health_dashboards",
+          "name": "Status & Health Dashboards",
+          "description": "Real-time visual dashboards displaying project health, progress, and milestone tracking with RAG indicators and drill-down navigation.",
           "req_idxs": [
             0,
             1,
-            7
+            7,
+            8
           ]
         },
         {
-          "id": "reporting_dashboards.financial_reporting",
-          "name": "Financial Reporting",
-          "description": "Budget tracking, cost analysis, and labour cost reporting with variance analysis.",
+          "id": "reporting_dashboards.financial_resource_reports",
+          "name": "Financial & Resource Reports",
+          "description": "Budget variance analysis, cost tracking, team utilisation, and timesheet aggregation reports.",
           "req_idxs": [
             2,
+            3,
             4
           ]
         },
         {
-          "id": "reporting_dashboards.resource_reporting",
-          "name": "Resource Reporting",
-          "description": "Team utilisation, resource availability, and activity schedule visibility for allocation and gap analysis.",
+          "id": "reporting_dashboards.custom_reporting_delivery",
+          "name": "Custom Reporting & Delivery",
+          "description": "Custom report builder, scheduled automated delivery, and export functionality for stakeholder communication.",
           "req_idxs": [
-            3,
+            5,
+            6,
             10
           ]
         },
         {
-          "id": "reporting_dashboards.custom_reporting",
-          "name": "Custom Reporting",
-          "description": "Configurable report builder, scheduled delivery, and export functionality for stakeholder communication.",
+          "id": "reporting_dashboards.portfolio_oversight",
+          "name": "Portfolio Oversight",
+          "description": "Multi-project portfolio views with activity-specific metrics and resource reallocation visibility.",
           "req_idxs": [
-            5,
-            6,
-            9
-          ]
-        },
-        {
-          "id": "reporting_dashboards.operational_dashboards",
-          "name": "Operational Dashboards",
-          "description": "Consolidated firm-wide view tracking operations, staff projects, and client status.",
-          "req_idxs": [
-            8
+            9,
+            11
           ]
         }
       ]
@@ -2116,7 +2210,7 @@
           "feature_name": "File Storage & Access Control"
         },
         {
-          "text": "Support real-time collaborative editing of documents and design files with concurrent multi-user access.",
+          "text": "Support real-time collaborative editing of shared documents and models with concurrent user access.",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -2124,6 +2218,15 @@
               "id": "req-00143",
               "text": "Architects and engineers collaboratively edit site plans and specifications in real-time, with version control ensuring team members are working with the latest information.",
               "q_title": "Document Management",
+              "subsection": "Example",
+              "sources": [
+                "built-environment__built-environment-digital-platform"
+              ]
+            },
+            {
+              "id": "req-01331",
+              "text": "The design team, contractors, and client representatives, share and update BIM models, link discussions to specific design elements, assign action items directly from shared project timelines, and schedule site visits based on shared calendars.",
+              "q_title": "Advanced Collaboration Functionality",
               "subsection": "Example",
               "sources": [
                 "built-environment__built-environment-digital-platform"
@@ -2144,7 +2247,7 @@
             "built-environment__built-environment-digital-platform"
           ],
           "feature_id": "document_collaboration.collaborative_editing",
-          "feature_name": "Collaborative Editing & Markup"
+          "feature_name": "Collaborative Editing & Synchronization"
         },
         {
           "text": "Enable comments, @mentions, and threaded discussions on tasks, projects, and specific document elements.",
@@ -2172,8 +2275,8 @@
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "document_collaboration.collaborative_editing",
-          "feature_name": "Collaborative Editing & Markup"
+          "feature_id": "document_collaboration.comments_discussions",
+          "feature_name": "Comments & Discussions"
         },
         {
           "text": "Display activity feed showing recent document uploads, edits, comments, and project changes with timestamps.",
@@ -2190,36 +2293,24 @@
           ],
           "solcat_citations": [],
           "feature_id": "document_collaboration.activity_notifications",
-          "feature_name": "Activity & Notifications"
+          "feature_name": "Activity Tracking & Notifications"
         },
         {
-          "text": "Send email notifications for document uploads, task updates, mentions, and assigned action items.",
-          "source": "both",
+          "text": "Send email notifications for document uploads, task updates, mentions, and collaborative changes.",
+          "source": "proxy",
           "proxy_refs": [
             "Email notifications for task updates and mentions"
           ],
-          "imda_refs": [
-            {
-              "id": "req-01331",
-              "text": "The design team, contractors, and client representatives, share and update BIM models, link discussions to specific design elements, assign action items directly from shared project timelines, and schedule site visits based on shared calendars.",
-              "q_title": "Advanced Collaboration Functionality",
-              "subsection": "Example",
-              "sources": [
-                "built-environment__built-environment-digital-platform"
-              ]
-            }
-          ],
+          "imda_refs": [],
           "vendor_citations": [
             "jira",
             "ms_project",
             "odoo_project",
             "wikipedia_pm_software"
           ],
-          "solcat_citations": [
-            "built-environment__built-environment-digital-platform"
-          ],
+          "solcat_citations": [],
           "feature_id": "document_collaboration.activity_notifications",
-          "feature_name": "Activity & Notifications"
+          "feature_name": "Activity Tracking & Notifications"
         },
         {
           "text": "Integrate with cloud storage providers (Google Drive, OneDrive, SharePoint) for seamless document synchronization and access.",
@@ -2244,19 +2335,62 @@
           "proxy_refs": [
             "Project wiki or knowledge base pages"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01047",
+              "text": "Project managers can access site progress checklists, site coordination meetings, stock level of materials, and payment records in one place.",
+              "q_title": "Centralised Project Information",
+              "subsection": "Example",
+              "sources": [
+                "built-environment__built-environment-digital-platform"
+              ]
+            }
+          ],
           "vendor_citations": [
             "jira",
             "ms_project",
             "odoo_project",
             "wikipedia_pm_software"
           ],
-          "solcat_citations": [],
+          "solcat_citations": [
+            "built-environment__built-environment-digital-platform"
+          ],
           "feature_id": "document_collaboration.knowledge_repository",
-          "feature_name": "Knowledge Repository"
+          "feature_name": "Knowledge Repository & Artifacts"
         },
         {
-          "text": "Consolidate project information including site progress checklists, coordination meeting notes, material inventory, and payment records in a single accessible location.",
+          "text": "Link discussions, comments, and action items directly to specific design elements, components, or sections within shared documents and models.",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01331",
+              "text": "The design team, contractors, and client representatives, share and update BIM models, link discussions to specific design elements, assign action items directly from shared project timelines, and schedule site visits based on shared calendars.",
+              "q_title": "Advanced Collaboration Functionality",
+              "subsection": "Example",
+              "sources": [
+                "built-environment__built-environment-digital-platform"
+              ]
+            },
+            {
+              "id": "req-00109",
+              "text": "An architect overlays their design with the structural engineer's model to ensure aesthetic elements align with load-bearing components.",
+              "q_title": "BIM Model Federation",
+              "subsection": "Example",
+              "sources": [
+                "built-environment__built-environment-digital-platform"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "built-environment__built-environment-digital-platform"
+          ],
+          "feature_id": "document_collaboration.comments_discussions",
+          "feature_name": "Comments & Discussions"
+        },
+        {
+          "text": "Consolidate access to project checklists, meeting notes, material inventory, payment records, and other project artifacts in a single unified view.",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -2275,17 +2409,17 @@
             "built-environment__built-environment-digital-platform"
           ],
           "feature_id": "document_collaboration.knowledge_repository",
-          "feature_name": "Knowledge Repository"
+          "feature_name": "Knowledge Repository & Artifacts"
         },
         {
-          "text": "Link discussions, comments, and action items directly to specific design elements, components, or sections within shared documents and models.",
+          "text": "Support model overlay and comparison functionality to align multiple design disciplines (e.g., architectural and structural models).",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {
-              "id": "req-01331",
-              "text": "The design team, contractors, and client representatives, share and update BIM models, link discussions to specific design elements, assign action items directly from shared project timelines, and schedule site visits based on shared calendars.",
-              "q_title": "Advanced Collaboration Functionality",
+              "id": "req-00109",
+              "text": "An architect overlays their design with the structural engineer's model to ensure aesthetic elements align with load-bearing components.",
+              "q_title": "BIM Model Federation",
               "subsection": "Example",
               "sources": [
                 "built-environment__built-environment-digital-platform"
@@ -2297,41 +2431,19 @@
             "built-environment__built-environment-digital-platform"
           ],
           "feature_id": "document_collaboration.collaborative_editing",
-          "feature_name": "Collaborative Editing & Markup"
-        },
-        {
-          "text": "Support creation and management of customizable inspection forms with predefined checklists, and route completed submissions to designated reviewers.",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-01356",
-              "text": "The user can create customised Site Safety Inspection forms with predefined checklists, allowing safety officers to conduct and record inspections. The workflow automatically routes completed inspections to project managers for review.",
-              "q_title": "Digital Forms and Workflow Creation",
-              "subsection": "Example",
-              "sources": [
-                "built-environment__built-environment-digital-platform"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "built-environment__built-environment-digital-platform"
-          ],
-          "feature_id": "document_collaboration.inspection_forms",
-          "feature_name": "Inspection Forms & Submissions"
+          "feature_name": "Collaborative Editing & Synchronization"
         }
       ],
       "stats": {
         "proxy_in": 7,
-        "imda_in": 7,
+        "imda_in": 6,
         "merged_out": 11
       },
       "features": [
         {
           "id": "document_collaboration.file_storage_access",
           "name": "File Storage & Access Control",
-          "description": "Centralized storage and management of file attachments with version control and access permissions.",
+          "description": "Centralized storage and management of project documents with version control and access permissions.",
           "req_idxs": [
             0,
             1,
@@ -2340,18 +2452,26 @@
         },
         {
           "id": "document_collaboration.collaborative_editing",
-          "name": "Collaborative Editing & Markup",
-          "description": "Real-time multi-user document editing, comments, mentions, and element-level discussions.",
+          "name": "Collaborative Editing & Synchronization",
+          "description": "Real-time co-authoring of documents and models with concurrent user access and multi-discipline comparison.",
           "req_idxs": [
             2,
+            10
+          ]
+        },
+        {
+          "id": "document_collaboration.comments_discussions",
+          "name": "Comments & Discussions",
+          "description": "Threaded comments, mentions, and contextual discussions linked to tasks, projects, and document elements.",
+          "req_idxs": [
             3,
-            9
+            8
           ]
         },
         {
           "id": "document_collaboration.activity_notifications",
-          "name": "Activity & Notifications",
-          "description": "Activity feeds and email alerts for document changes, comments, and task updates.",
+          "name": "Activity Tracking & Notifications",
+          "description": "Real-time activity feed and email alerts for document changes, uploads, mentions, and project updates.",
           "req_idxs": [
             4,
             5
@@ -2359,19 +2479,11 @@
         },
         {
           "id": "document_collaboration.knowledge_repository",
-          "name": "Knowledge Repository",
-          "description": "Project wiki, documentation library, and consolidated project information storage.",
+          "name": "Knowledge Repository & Artifacts",
+          "description": "Project wiki, documentation library, and unified view of checklists, notes, inventory, and project records.",
           "req_idxs": [
             7,
-            8
-          ]
-        },
-        {
-          "id": "document_collaboration.inspection_forms",
-          "name": "Inspection Forms & Submissions",
-          "description": "Customizable inspection checklists with submission routing and reviewer workflows.",
-          "req_idxs": [
-            10
+            9
           ]
         }
       ]
@@ -2386,7 +2498,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "ms_project",
         "oracle_primavera",
@@ -2395,7 +2507,7 @@
       ],
       "requirements": [
         {
-          "text": "Interactive Gantt chart with drag-and-drop task bar adjustment for date changes",
+          "text": "Interactive Gantt chart with drag-and-drop task bar date adjustment",
           "source": "proxy",
           "proxy_refs": [
             "Interactive Gantt chart with drag-and-drop date adjustment"
@@ -2412,7 +2524,7 @@
           "feature_name": "Gantt Visualization"
         },
         {
-          "text": "Support multiple dependency link types (finish-to-start, start-to-start, finish-to-finish, start-to-finish)",
+          "text": "Support multiple dependency types (finish-to-start, start-to-start, start-to-finish, finish-to-finish)",
           "source": "proxy",
           "proxy_refs": [
             "Dependency arrows (finish-to-start, start-to-start, etc.)"
@@ -2429,7 +2541,7 @@
           "feature_name": "Dependencies & Critical Path"
         },
         {
-          "text": "Automatic critical path identification and visual highlighting",
+          "text": "Highlight critical path and calculate task slack",
           "source": "proxy",
           "proxy_refs": [
             "Critical path highlighting and slack calculation"
@@ -2446,24 +2558,7 @@
           "feature_name": "Dependencies & Critical Path"
         },
         {
-          "text": "Slack and float calculation for all tasks",
-          "source": "proxy",
-          "proxy_refs": [
-            "Critical path highlighting and slack calculation"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "erpnext_projects",
-            "ms_project",
-            "odoo_project",
-            "oracle_primavera"
-          ],
-          "solcat_citations": [],
-          "feature_id": "gantt_critical_path.dependencies_critical_path",
-          "feature_name": "Dependencies & Critical Path"
-        },
-        {
-          "text": "Baseline schedule overlay with variance visualization against current schedule",
+          "text": "Display baseline schedule overlay for schedule variance tracking",
           "source": "proxy",
           "proxy_refs": [
             "Baseline schedule overlay for variance tracking"
@@ -2476,11 +2571,11 @@
             "oracle_primavera"
           ],
           "solcat_citations": [],
-          "feature_id": "gantt_critical_path.baseline_variance",
-          "feature_name": "Baseline & Variance"
+          "feature_id": "gantt_critical_path.schedule_tracking",
+          "feature_name": "Schedule Tracking"
         },
         {
-          "text": "Configurable zoom levels (day, week, month, quarter) for timeline granularity",
+          "text": "Configurable zoom levels (day, week, month, quarter)",
           "source": "proxy",
           "proxy_refs": [
             "Zoom levels (day, week, month, quarter)"
@@ -2497,19 +2592,31 @@
           "feature_name": "Gantt Visualization"
         },
         {
-          "text": "Milestone representation as diamond symbols on the timeline",
-          "source": "proxy",
+          "text": "Display milestone markers on the timeline",
+          "source": "both",
           "proxy_refs": [
             "Milestone diamonds on the timeline"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00744",
+              "text": "Implementation timeline with key milestones",
+              "q_title": "Cross-border E-commerce Strategy Development",
+              "subsection": "",
+              "sources": [
+                "essential-business__cross-border-e-commerce-packages"
+              ]
+            }
+          ],
           "vendor_citations": [
             "erpnext_projects",
             "ms_project",
             "odoo_project",
             "oracle_primavera"
           ],
-          "solcat_citations": [],
+          "solcat_citations": [
+            "essential-business__cross-border-e-commerce-packages"
+          ],
           "feature_id": "gantt_critical_path.gantt_visualization",
           "feature_name": "Gantt Visualization"
         },
@@ -2529,34 +2636,12 @@
           "solcat_citations": [],
           "feature_id": "gantt_critical_path.gantt_export",
           "feature_name": "Gantt Export"
-        },
-        {
-          "text": "Display key project milestones on implementation timeline",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-00744",
-              "text": "Implementation timeline with key milestones",
-              "q_title": "Cross-border E-commerce Strategy Development",
-              "subsection": "",
-              "sources": [
-                "essential-business__cross-border-e-commerce-packages"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "essential-business__cross-border-e-commerce-packages"
-          ],
-          "feature_id": "gantt_critical_path.gantt_visualization",
-          "feature_name": "Gantt Visualization"
         }
       ],
       "stats": {
         "proxy_in": 7,
         "imda_in": 1,
-        "merged_out": 9
+        "merged_out": 7
       },
       "features": [
         {
@@ -2565,27 +2650,25 @@
           "description": "Interactive Gantt chart display with task bars, milestones, and configurable zoom levels.",
           "req_idxs": [
             0,
-            5,
-            6,
-            8
+            4,
+            5
           ]
         },
         {
           "id": "gantt_critical_path.dependencies_critical_path",
           "name": "Dependencies & Critical Path",
-          "description": "Task dependency linking, critical path identification, and slack/float calculations.",
+          "description": "Task dependency management with multiple types and critical path highlighting with slack calculation.",
           "req_idxs": [
             1,
-            2,
-            3
+            2
           ]
         },
         {
-          "id": "gantt_critical_path.baseline_variance",
-          "name": "Baseline & Variance",
-          "description": "Baseline schedule overlay and variance visualization against current schedule.",
+          "id": "gantt_critical_path.schedule_tracking",
+          "name": "Schedule Tracking",
+          "description": "Baseline schedule overlay and variance analysis for schedule performance monitoring.",
           "req_idxs": [
-            4
+            3
           ]
         },
         {
@@ -2593,7 +2676,7 @@
           "name": "Gantt Export",
           "description": "Export Gantt chart to PDF or image formats for reporting and sharing.",
           "req_idxs": [
-            7
+            6
           ]
         }
       ]
@@ -2632,7 +2715,7 @@
           "feature_name": "Board Configuration"
         },
         {
-          "text": "Drag-and-drop card movement between board columns",
+          "text": "Drag-and-drop card movement between workflow stages",
           "source": "proxy",
           "proxy_refs": [
             "Drag-and-drop card movement between stages"
@@ -2708,8 +2791,8 @@
             "wikipedia_pm_software"
           ],
           "solcat_citations": [],
-          "feature_id": "kanban_agile.sprint_metrics",
-          "feature_name": "Sprint Metrics"
+          "feature_id": "kanban_agile.estimation_tracking",
+          "feature_name": "Estimation & Tracking"
         },
         {
           "text": "Story points and effort estimation fields on task cards",
@@ -2724,8 +2807,8 @@
             "wikipedia_pm_software"
           ],
           "solcat_citations": [],
-          "feature_id": "kanban_agile.board_config",
-          "feature_name": "Board Configuration"
+          "feature_id": "kanban_agile.estimation_tracking",
+          "feature_name": "Estimation & Tracking"
         }
       ],
       "stats": {
@@ -2737,17 +2820,16 @@
         {
           "id": "kanban_agile.board_config",
           "name": "Board Configuration",
-          "description": "Customizable board structure with columns, swimlanes, and card fields.",
+          "description": "Customizable columns, swimlanes, and card field setup per project.",
           "req_idxs": [
             0,
-            3,
-            6
+            3
           ]
         },
         {
           "id": "kanban_agile.card_management",
           "name": "Card Management",
-          "description": "Card movement, WIP limits, and visual workflow controls.",
+          "description": "Drag-and-drop movement, WIP limits, and visual workflow controls.",
           "req_idxs": [
             1,
             2
@@ -2756,17 +2838,18 @@
         {
           "id": "kanban_agile.sprint_planning",
           "name": "Sprint Planning",
-          "description": "Sprint lifecycle management with backlog and active sprint views.",
+          "description": "Backlog management, sprint creation, and active sprint board views.",
           "req_idxs": [
             4
           ]
         },
         {
-          "id": "kanban_agile.sprint_metrics",
-          "name": "Sprint Metrics",
-          "description": "Performance tracking and reporting for sprint execution.",
+          "id": "kanban_agile.estimation_tracking",
+          "name": "Estimation & Tracking",
+          "description": "Story points, effort fields, burndown charts, and velocity metrics.",
           "req_idxs": [
-            5
+            5,
+            6
           ]
         }
       ]
@@ -2805,7 +2888,7 @@
           "feature_name": "Risk Assessment"
         },
         {
-          "text": "Assign a risk owner and define mitigation plan for each registered risk",
+          "text": "Assign a risk owner and document mitigation plan for each risk",
           "source": "both",
           "proxy_refs": [
             "Risk owner assignment and mitigation plan"
@@ -2817,8 +2900,8 @@
             "wikipedia_pm_software"
           ],
           "solcat_citations": [],
-          "feature_id": "risk_issues.risk_mitigation",
-          "feature_name": "Risk Mitigation"
+          "feature_id": "risk_issues.risk_assessment",
+          "feature_name": "Risk Assessment"
         },
         {
           "text": "Maintain an issue log with severity level, assigned owner, and target resolution date",
@@ -2921,7 +3004,7 @@
           "feature_name": "Impact Traceability"
         },
         {
-          "text": "Display risk heat map visualization showing probability and impact distribution across registered risks",
+          "text": "Provide heat map visualization of risks by probability and impact",
           "source": "both",
           "proxy_refs": [
             "Risk heat map visualisation"
@@ -2937,12 +3020,9 @@
           "feature_name": "Risk Assessment"
         },
         {
-          "text": "Monitor resolution progress and provide visibility on issue closure status to stakeholders",
-          "source": "both",
-          "proxy_refs": [
-            "Issue log with severity, assignee, and resolution date",
-            "Risk and issue status tracking (open, mitigated, closed)"
-          ],
+          "text": "Monitor resolution progress and allow closure of issues once response is provided and verified",
+          "source": "imda",
+          "proxy_refs": [],
           "imda_refs": [
             {
               "id": "req-00025",
@@ -2954,11 +3034,7 @@
               ]
             }
           ],
-          "vendor_citations": [
-            "ms_project",
-            "oracle_primavera",
-            "wikipedia_pm_software"
-          ],
+          "vendor_citations": [],
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
@@ -2975,24 +3051,17 @@
         {
           "id": "risk_issues.risk_assessment",
           "name": "Risk Assessment",
-          "description": "Capture and score risks by probability, impact, and calculated risk metrics.",
+          "description": "Capture, score, and evaluate project risks with probability, impact, and mitigation planning.",
           "req_idxs": [
             0,
+            1,
             6
-          ]
-        },
-        {
-          "id": "risk_issues.risk_mitigation",
-          "name": "Risk Mitigation",
-          "description": "Assign risk owners and define mitigation plans for identified risks.",
-          "req_idxs": [
-            1
           ]
         },
         {
           "id": "risk_issues.issue_management",
           "name": "Issue Management",
-          "description": "Log and track issues with severity, ownership, and target resolution dates.",
+          "description": "Log, assign, and track issues through severity levels and target resolution dates.",
           "req_idxs": [
             2,
             7
@@ -3001,7 +3070,7 @@
         {
           "id": "risk_issues.lifecycle_tracking",
           "name": "Lifecycle & Escalation",
-          "description": "Manage risk and issue states through defined workflows and escalate high-severity items.",
+          "description": "Monitor risk and issue states through defined workflows with escalation alerts for high-severity items.",
           "req_idxs": [
             3,
             4
@@ -3010,7 +3079,7 @@
         {
           "id": "risk_issues.impact_traceability",
           "name": "Impact Traceability",
-          "description": "Link risks and issues to project tasks, milestones, and deliverables for impact visibility.",
+          "description": "Link risks and issues to project tasks, milestones, and deliverables for dependency tracking.",
           "req_idxs": [
             5
           ]
@@ -3023,6 +3092,7 @@
       "description": "Formal process for scope changes — request, assess impact on budget and schedule, approve or reject, and update the project plan accordingly.",
       "priority_proxy": "standard",
       "applicability": [
+        "sme",
         "mid_market",
         "enterprise"
       ],
@@ -3050,7 +3120,7 @@
           "feature_name": "Change Request Capture"
         },
         {
-          "text": "Assess and document impact of proposed changes on project budget, schedule, and resource allocation",
+          "text": "Assess and quantify impact of proposed changes on project budget, schedule, and resource allocation",
           "source": "proxy",
           "proxy_refs": [
             "Impact assessment on budget, schedule, and resources"
@@ -3094,11 +3164,11 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "change_orders.plan_execution",
-          "feature_name": "Plan Execution"
+          "feature_id": "change_orders.plan_update_execution",
+          "feature_name": "Plan Update & Execution"
         },
         {
-          "text": "Maintain a complete audit trail of all change orders with status history and decision records",
+          "text": "Maintain a complete audit trail of all change orders with status history and decision rationale",
           "source": "proxy",
           "proxy_refs": [
             "Change order log with audit trail"
@@ -3110,8 +3180,8 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "change_orders.audit_trail",
-          "feature_name": "Audit Trail"
+          "feature_id": "change_orders.approval_workflow",
+          "feature_name": "Approval Workflow"
         },
         {
           "text": "Link approved change orders to corresponding revised invoices, claims, or billing adjustments",
@@ -3139,7 +3209,7 @@
         {
           "id": "change_orders.change_request_capture",
           "name": "Change Request Capture",
-          "description": "Collect and document change requests with description, justification, and initiator details.",
+          "description": "Form and intake process for submitting change requests with description, justification, and initiator details.",
           "req_idxs": [
             0
           ]
@@ -3147,7 +3217,7 @@
         {
           "id": "change_orders.impact_assessment",
           "name": "Impact Assessment",
-          "description": "Evaluate and document effects of proposed changes on budget, schedule, and resources.",
+          "description": "Analysis and quantification of proposed changes on budget, schedule, and resource allocation.",
           "req_idxs": [
             1
           ]
@@ -3155,25 +3225,18 @@
         {
           "id": "change_orders.approval_workflow",
           "name": "Approval Workflow",
-          "description": "Route change orders through multi-level authorization based on defined rules.",
+          "description": "Multi-level authorization and approval process based on defined rules and decision rationale.",
           "req_idxs": [
-            2
+            2,
+            4
           ]
         },
         {
-          "id": "change_orders.plan_execution",
-          "name": "Plan Execution",
-          "description": "Automatically update project plan, budget, and schedule upon approval.",
+          "id": "change_orders.plan_update_execution",
+          "name": "Plan Update & Execution",
+          "description": "Automatic update of project plan, budget, and schedule upon change order approval.",
           "req_idxs": [
             3
-          ]
-        },
-        {
-          "id": "change_orders.audit_trail",
-          "name": "Audit Trail",
-          "description": "Maintain complete history of all change orders with status and decision records.",
-          "req_idxs": [
-            4
           ]
         },
         {
@@ -3195,7 +3258,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "enterprise_only",
+      "sme_tier": "advanced",
       "cited_sources": [
         "oracle_primavera",
         "ms_project",
@@ -3203,8 +3266,8 @@
       ],
       "requirements": [
         {
-          "text": "Organize projects into a hierarchical programme structure to group related projects under common governance",
-          "source": "proxy",
+          "text": "Organize projects into a hierarchical programme structure to group related projects under common governance and reporting.",
+          "source": "both",
           "proxy_refs": [
             "Programme hierarchy grouping related projects"
           ],
@@ -3219,7 +3282,7 @@
           "feature_name": "Programme Structure"
         },
         {
-          "text": "Allocate resources across multiple projects with conflict detection and resolution when the same resource is assigned to overlapping work",
+          "text": "Allocate resources across multiple projects with conflict detection and resolution when the same resource is assigned to overlapping tasks.",
           "source": "both",
           "proxy_refs": [
             "Cross-project resource allocation and conflict resolution"
@@ -3247,9 +3310,11 @@
           "feature_name": "Resource Management"
         },
         {
-          "text": "Reallocate resources between projects when work completes ahead of schedule or priorities shift",
-          "source": "imda",
-          "proxy_refs": [],
+          "text": "Reallocate resources dynamically between projects when work completes ahead of schedule or priorities shift.",
+          "source": "both",
+          "proxy_refs": [
+            "Cross-project resource allocation and conflict resolution"
+          ],
           "imda_refs": [
             {
               "id": "req-01337",
@@ -3261,7 +3326,11 @@
               ]
             }
           ],
-          "vendor_citations": [],
+          "vendor_citations": [
+            "ms_project",
+            "oracle_primavera",
+            "sap_ps"
+          ],
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
@@ -3269,7 +3338,7 @@
           "feature_name": "Resource Management"
         },
         {
-          "text": "Display portfolio-level dashboard showing health indicators and status for each project",
+          "text": "Display a portfolio dashboard showing health indicators and status for each project in the programme.",
           "source": "proxy",
           "proxy_refs": [
             "Portfolio dashboard with health indicators per project"
@@ -3285,7 +3354,7 @@
           "feature_name": "Portfolio Visibility"
         },
         {
-          "text": "Track milestones and dependencies across projects to identify critical path and cross-project risks",
+          "text": "Track milestones and dependencies across projects to identify critical path and inter-project constraints.",
           "source": "proxy",
           "proxy_refs": [
             "Programme-level milestone and dependency tracking"
@@ -3301,7 +3370,7 @@
           "feature_name": "Portfolio Visibility"
         },
         {
-          "text": "Consolidate budget vs actual performance across all projects in the portfolio for overall financial visibility",
+          "text": "Consolidate budget vs actual performance across all projects in the portfolio for programme-level financial visibility.",
           "source": "both",
           "proxy_refs": [
             "Consolidated budget vs actual across the portfolio"
@@ -3325,11 +3394,11 @@
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "multi_project.portfolio_visibility",
-          "feature_name": "Portfolio Visibility"
+          "feature_id": "multi_project.financial_management",
+          "feature_name": "Financial Management"
         },
         {
-          "text": "Support budget reallocation across projects based on portfolio performance and changing priorities",
+          "text": "Support budget reallocation decisions by comparing actual spend and remaining budget across projects.",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -3347,11 +3416,11 @@
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "multi_project.budget_allocation",
-          "feature_name": "Budget Allocation"
+          "feature_id": "multi_project.financial_management",
+          "feature_name": "Financial Management"
         },
         {
-          "text": "Rank and prioritize projects using configurable scoring matrices to guide resource allocation decisions",
+          "text": "Rank and prioritize projects using a scoring matrix to guide resource allocation and investment decisions.",
           "source": "proxy",
           "proxy_refs": [
             "Project prioritisation and scoring matrix"
@@ -3367,7 +3436,7 @@
           "feature_name": "Prioritization & Planning"
         },
         {
-          "text": "Model what-if scenarios for resource reallocation to evaluate impact before committing changes",
+          "text": "Model what-if scenarios for resource reallocation to evaluate impact before committing changes.",
           "source": "proxy",
           "proxy_refs": [
             "What-if scenario modelling for resource reallocation"
@@ -3392,7 +3461,7 @@
         {
           "id": "multi_project.programme_structure",
           "name": "Programme Structure",
-          "description": "Organize projects into hierarchical programmes with common governance.",
+          "description": "Organize projects into hierarchical programmes with common governance and reporting.",
           "req_idxs": [
             0
           ]
@@ -3400,7 +3469,7 @@
         {
           "id": "multi_project.resource_management",
           "name": "Resource Management",
-          "description": "Allocate and reallocate resources across projects with conflict detection.",
+          "description": "Allocate and reallocate resources across projects with conflict detection and dynamic balancing.",
           "req_idxs": [
             1,
             2
@@ -3409,25 +3478,25 @@
         {
           "id": "multi_project.portfolio_visibility",
           "name": "Portfolio Visibility",
-          "description": "Provide dashboards and consolidated reporting on portfolio health and performance.",
+          "description": "Display consolidated dashboards and track cross-project milestones, dependencies, and critical paths.",
           "req_idxs": [
             3,
-            4,
-            5
+            4
           ]
         },
         {
-          "id": "multi_project.budget_allocation",
-          "name": "Budget Allocation",
-          "description": "Manage and reallocate budgets across projects based on performance and priorities.",
+          "id": "multi_project.financial_management",
+          "name": "Financial Management",
+          "description": "Consolidate budget vs actual performance and support reallocation decisions across the portfolio.",
           "req_idxs": [
+            5,
             6
           ]
         },
         {
           "id": "multi_project.prioritization_planning",
           "name": "Prioritization & Planning",
-          "description": "Rank projects and model scenarios to guide resource and budget decisions.",
+          "description": "Rank projects using scoring matrices and model what-if scenarios for resource and budget decisions.",
           "req_idxs": [
             7,
             8
@@ -3444,7 +3513,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "advanced",
       "cited_sources": [
         "netsuite_srp",
         "ms_project",
@@ -3452,7 +3521,7 @@
       ],
       "requirements": [
         {
-          "text": "Maintain centralised resource profiles containing skills, certifications, and experience history",
+          "text": "Maintain centralised resource profiles including skills, certifications, experience, and qualifications",
           "source": "proxy",
           "proxy_refs": [
             "Resource profile with skills, certifications, and experience"
@@ -3481,10 +3550,10 @@
           ],
           "solcat_citations": [],
           "feature_id": "resource_pool_skills.skill_matching",
-          "feature_name": "Skill Matching & Search"
+          "feature_name": "Skill-Based Matching"
         },
         {
-          "text": "Track certification expiry dates and generate renewal alerts",
+          "text": "Track certification and qualification expiry dates with automated renewal alerts",
           "source": "proxy",
           "proxy_refs": [
             "Certification expiry tracking and renewal alerts"
@@ -3513,10 +3582,10 @@
           ],
           "solcat_citations": [],
           "feature_id": "resource_pool_skills.capacity_planning",
-          "feature_name": "Capacity Planning & Reporting"
+          "feature_name": "Capacity Planning"
         },
         {
-          "text": "Generate bench reports identifying unallocated resources available for assignment",
+          "text": "Generate bench reports identifying unallocated and available resources",
           "source": "proxy",
           "proxy_refs": [
             "Bench report showing unallocated resources"
@@ -3528,8 +3597,8 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "resource_pool_skills.capacity_planning",
-          "feature_name": "Capacity Planning & Reporting"
+          "feature_id": "resource_pool_skills.bench_reporting",
+          "feature_name": "Bench Reporting"
         },
         {
           "text": "Maintain cost rates and billing rates per resource or role",
@@ -3544,29 +3613,28 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "resource_pool_skills.resource_profiles",
-          "feature_name": "Resource Profiles"
+          "feature_id": "resource_pool_skills.rate_management",
+          "feature_name": "Rate Management"
         }
       ],
       "stats": {
         "proxy_in": 6,
-        "imda_in": 0,
+        "imda_in": 1,
         "merged_out": 6
       },
       "features": [
         {
           "id": "resource_pool_skills.resource_profiles",
           "name": "Resource Profiles",
-          "description": "Centralised directory of people with skills, certifications, experience, and rates.",
+          "description": "Centralised directory of people with skills, certifications, experience, and qualifications.",
           "req_idxs": [
-            0,
-            5
+            0
           ]
         },
         {
           "id": "resource_pool_skills.skill_matching",
-          "name": "Skill Matching & Search",
-          "description": "Skill-based search and matching to identify suitable resources for project staffing.",
+          "name": "Skill-Based Matching",
+          "description": "Search and match resources by skills to identify suitable candidates for project staffing.",
           "req_idxs": [
             1
           ]
@@ -3574,18 +3642,33 @@
         {
           "id": "resource_pool_skills.certification_management",
           "name": "Certification Management",
-          "description": "Track certification expiry dates and generate renewal alerts.",
+          "description": "Track certification and qualification expiry dates with automated renewal alerts.",
           "req_idxs": [
             2
           ]
         },
         {
           "id": "resource_pool_skills.capacity_planning",
-          "name": "Capacity Planning & Reporting",
-          "description": "Forecast resource demand versus supply by skill and identify bench availability.",
+          "name": "Capacity Planning",
+          "description": "Forecast resource demand versus supply by skill to identify gaps and surpluses.",
           "req_idxs": [
-            3,
+            3
+          ]
+        },
+        {
+          "id": "resource_pool_skills.bench_reporting",
+          "name": "Bench Reporting",
+          "description": "Generate reports identifying unallocated and available resources.",
+          "req_idxs": [
             4
+          ]
+        },
+        {
+          "id": "resource_pool_skills.rate_management",
+          "name": "Rate Management",
+          "description": "Maintain cost rates and billing rates per resource or role.",
+          "req_idxs": [
+            5
           ]
         }
       ]
@@ -3598,7 +3681,7 @@
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": "enterprise_only",
+      "sme_tier": "advanced",
       "cited_sources": [
         "oracle_primavera",
         "ms_project",
@@ -3606,7 +3689,7 @@
       ],
       "requirements": [
         {
-          "text": "Calculate planned value (PV) from the approved project baseline schedule and budget",
+          "text": "Calculate planned value (PV) from project baseline schedule and budget allocation",
           "source": "proxy",
           "proxy_refs": [
             "Planned value (PV / BCWS) calculation from baseline"
@@ -3618,11 +3701,11 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "earned_value.evm_metrics",
+          "feature_id": "earned_value.evm_calculation",
           "feature_name": "EVM Metrics Calculation"
         },
         {
-          "text": "Calculate earned value (EV) based on actual work completion percentage or milestone achievement",
+          "text": "Calculate earned value (EV) from task completion percentage and baseline budget",
           "source": "proxy",
           "proxy_refs": [
             "Earned value (EV / BCWP) from percentage-complete"
@@ -3634,11 +3717,11 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "earned_value.evm_metrics",
+          "feature_id": "earned_value.evm_calculation",
           "feature_name": "EVM Metrics Calculation"
         },
         {
-          "text": "Capture actual cost (AC) from timesheets, expense reports, and procurement transactions",
+          "text": "Calculate actual cost (AC) from timesheet labor costs and recorded project expenses",
           "source": "proxy",
           "proxy_refs": [
             "Actual cost (AC / ACWP) from timesheet and expense data"
@@ -3650,7 +3733,7 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "earned_value.evm_metrics",
+          "feature_id": "earned_value.evm_calculation",
           "feature_name": "EVM Metrics Calculation"
         },
         {
@@ -3666,7 +3749,7 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "earned_value.evm_metrics",
+          "feature_id": "earned_value.evm_calculation",
           "feature_name": "EVM Metrics Calculation"
         },
         {
@@ -3682,7 +3765,7 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "earned_value.evm_metrics",
+          "feature_id": "earned_value.evm_calculation",
           "feature_name": "EVM Metrics Calculation"
         },
         {
@@ -3698,7 +3781,7 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "earned_value.evm_metrics",
+          "feature_id": "earned_value.evm_calculation",
           "feature_name": "EVM Metrics Calculation"
         },
         {
@@ -3718,7 +3801,7 @@
           "feature_name": "EVM Reporting & Analytics"
         },
         {
-          "text": "Support progress claims submission with verified work completion data and earned value reconciliation",
+          "text": "Support progress claims submission with earned value and work verification data",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -3736,11 +3819,11 @@
           "solcat_citations": [
             "built-environment__digital-contract-management-digital-payment"
           ],
-          "feature_id": "earned_value.progress_claims",
-          "feature_name": "Progress Claims & Settlement"
+          "feature_id": "earned_value.evm_claims",
+          "feature_name": "Progress Claims & Verification"
         },
         {
-          "text": "Manage work verification workflows to validate progress claims before payment settlement",
+          "text": "Manage work verification and sign-off processes linked to earned value milestones",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -3758,11 +3841,11 @@
           "solcat_citations": [
             "built-environment__digital-contract-management-digital-payment"
           ],
-          "feature_id": "earned_value.progress_claims",
-          "feature_name": "Progress Claims & Settlement"
+          "feature_id": "earned_value.evm_claims",
+          "feature_name": "Progress Claims & Verification"
         },
         {
-          "text": "Process payment settlement based on verified earned value and approved progress claims",
+          "text": "Support payment settlement processes based on verified earned value and progress claims",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -3780,8 +3863,8 @@
           "solcat_citations": [
             "built-environment__digital-contract-management-digital-payment"
           ],
-          "feature_id": "earned_value.progress_claims",
-          "feature_name": "Progress Claims & Settlement"
+          "feature_id": "earned_value.evm_settlement",
+          "feature_name": "Payment Settlement"
         }
       ],
       "stats": {
@@ -3791,7 +3874,7 @@
       },
       "features": [
         {
-          "id": "earned_value.evm_metrics",
+          "id": "earned_value.evm_calculation",
           "name": "EVM Metrics Calculation",
           "description": "Calculate core EVM metrics including PV, EV, AC, variances, and performance indices.",
           "req_idxs": [
@@ -3806,18 +3889,25 @@
         {
           "id": "earned_value.evm_reporting",
           "name": "EVM Reporting & Analytics",
-          "description": "Generate EVM dashboards, trend charts, and performance visualizations.",
+          "description": "Generate EVM trend charts, dashboards, and performance visualizations.",
           "req_idxs": [
             6
           ]
         },
         {
-          "id": "earned_value.progress_claims",
-          "name": "Progress Claims & Settlement",
-          "description": "Manage progress claim submission, verification workflows, and payment settlement based on earned value.",
+          "id": "earned_value.evm_claims",
+          "name": "Progress Claims & Verification",
+          "description": "Manage work verification, sign-off processes, and progress claims submission linked to earned value.",
           "req_idxs": [
             7,
-            8,
+            8
+          ]
+        },
+        {
+          "id": "earned_value.evm_settlement",
+          "name": "Payment Settlement",
+          "description": "Process payments based on verified earned value and approved progress claims.",
+          "req_idxs": [
             9
           ]
         }
@@ -4040,7 +4130,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "advanced",
       "cited_sources": [
         "netsuite_srp",
         "sap_ps"
@@ -4092,7 +4182,7 @@
           "feature_name": "Recognition Methods"
         },
         {
-          "text": "Track and manage deferred revenue with scheduled release to recognized revenue",
+          "text": "Track and manage deferred revenue with automated release to recognized revenue",
           "source": "proxy",
           "proxy_refs": [
             "Deferred revenue tracking and release"
@@ -4122,7 +4212,7 @@
           "feature_name": "Contract Value Allocation"
         },
         {
-          "text": "Generate ASC 606 / IFRS 15 compliance reports for revenue recognition",
+          "text": "Generate ASC 606 / IFRS 15 compliance reports and disclosures",
           "source": "proxy",
           "proxy_refs": [
             "ASC 606 / IFRS 15 compliance reporting"
@@ -4148,8 +4238,8 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "revenue_recognition.compliance_reporting",
-          "feature_name": "Compliance Reporting"
+          "feature_id": "revenue_recognition.revenue_reconciliation",
+          "feature_name": "Revenue Reconciliation"
         }
       ],
       "stats": {
@@ -4161,7 +4251,7 @@
         {
           "id": "revenue_recognition.schedule_definition",
           "name": "Recognition Schedule Definition",
-          "description": "Define revenue recognition schedules per project or contract with multiple recognition methods.",
+          "description": "Define revenue recognition schedules and methods per project or contract.",
           "req_idxs": [
             0
           ]
@@ -4178,7 +4268,7 @@
         {
           "id": "revenue_recognition.deferred_revenue",
           "name": "Deferred Revenue Management",
-          "description": "Track and manage deferred revenue with scheduled release to recognized revenue.",
+          "description": "Track and manage deferred revenue with automated release to recognized revenue.",
           "req_idxs": [
             3
           ]
@@ -4194,9 +4284,16 @@
         {
           "id": "revenue_recognition.compliance_reporting",
           "name": "Compliance Reporting",
-          "description": "Generate ASC 606 / IFRS 15 compliance reports and reconcile forecasted, recognized, and billed revenue.",
+          "description": "Generate ASC 606 / IFRS 15 compliance reports and disclosures.",
           "req_idxs": [
-            5,
+            5
+          ]
+        },
+        {
+          "id": "revenue_recognition.revenue_reconciliation",
+          "name": "Revenue Reconciliation",
+          "description": "Reconcile forecasted, recognized, and billed revenue by project or contract.",
+          "req_idxs": [
             6
           ]
         }
@@ -4275,8 +4372,8 @@
             "odoo_project"
           ],
           "solcat_citations": [],
-          "feature_id": "customer_portal.change_requests",
-          "feature_name": "Change Request Management"
+          "feature_id": "customer_portal.approvals_signoff",
+          "feature_name": "Approvals & Digital Sign-Off"
         },
         {
           "text": "Timesheet and expense review for time-and-materials projects",
@@ -4290,8 +4387,8 @@
             "odoo_project"
           ],
           "solcat_citations": [],
-          "feature_id": "customer_portal.billing_review",
-          "feature_name": "Billing & Cost Review"
+          "feature_id": "customer_portal.financial_review",
+          "feature_name": "Financial Review & Transparency"
         },
         {
           "text": "Invoice and payment history view with transaction details",
@@ -4305,8 +4402,8 @@
             "odoo_project"
           ],
           "solcat_citations": [],
-          "feature_id": "customer_portal.billing_review",
-          "feature_name": "Billing & Cost Review"
+          "feature_id": "customer_portal.financial_review",
+          "feature_name": "Financial Review & Transparency"
         },
         {
           "text": "Secure file sharing between project team and customer",
@@ -4349,23 +4446,16 @@
         {
           "id": "customer_portal.approvals_signoff",
           "name": "Approvals & Digital Sign-Off",
-          "description": "Deliverable approval workflows with digital signature and sign-off capability.",
+          "description": "Deliverable approval workflows with digital sign-off and change request submission.",
           "req_idxs": [
-            2
-          ]
-        },
-        {
-          "id": "customer_portal.change_requests",
-          "name": "Change Request Management",
-          "description": "Customer-initiated change request submission, tracking, and status visibility.",
-          "req_idxs": [
+            2,
             3
           ]
         },
         {
-          "id": "customer_portal.billing_review",
-          "name": "Billing & Cost Review",
-          "description": "Timesheet, expense, invoice, and payment history review for transparency and validation.",
+          "id": "customer_portal.financial_review",
+          "name": "Financial Review & Transparency",
+          "description": "View and review timesheets, expenses, invoices, and payment history.",
           "req_idxs": [
             4,
             5
@@ -4374,7 +4464,7 @@
         {
           "id": "customer_portal.file_collaboration",
           "name": "File Sharing & Collaboration",
-          "description": "Secure file exchange and document sharing between project team and customer.",
+          "description": "Secure file exchange between project team and customer.",
           "req_idxs": [
             6
           ]
@@ -4431,7 +4521,7 @@
           "feature_name": "Template Creation & Management"
         },
         {
-          "text": "Auto-calculate and schedule task dates relative to the new project start date when applying a template",
+          "text": "Auto-calculate and schedule task dates relative to project start date when applying a template",
           "source": "proxy",
           "proxy_refs": [
             "Auto-schedule task dates based on project start date"
@@ -4459,11 +4549,11 @@
             "odoo_project"
           ],
           "solcat_citations": [],
-          "feature_id": "templates_repeating.template_creation",
-          "feature_name": "Template Creation & Management"
+          "feature_id": "templates_repeating.template_library",
+          "feature_name": "Template Library & Discovery"
         },
         {
-          "text": "Automatically create recurring projects on a defined schedule based on a template",
+          "text": "Automatically create recurring projects on a defined schedule using a template",
           "source": "proxy",
           "proxy_refs": [
             "Recurring project auto-creation on schedule"
@@ -4475,8 +4565,8 @@
             "odoo_project"
           ],
           "solcat_citations": [],
-          "feature_id": "templates_repeating.template_automation",
-          "feature_name": "Template Automation & Synchronization"
+          "feature_id": "templates_repeating.recurring_projects",
+          "feature_name": "Recurring Project Automation"
         },
         {
           "text": "Propagate template updates to active projects that were created from that template",
@@ -4491,8 +4581,8 @@
             "odoo_project"
           ],
           "solcat_citations": [],
-          "feature_id": "templates_repeating.template_automation",
-          "feature_name": "Template Automation & Synchronization"
+          "feature_id": "templates_repeating.template_updates",
+          "feature_name": "Template Update Propagation"
         }
       ],
       "stats": {
@@ -4504,27 +4594,41 @@
         {
           "id": "templates_repeating.template_creation",
           "name": "Template Creation & Management",
-          "description": "Save projects as reusable templates with full structure capture and library organization.",
+          "description": "Save projects as reusable templates with full structure including tasks, phases, dependencies, and checklists.",
           "req_idxs": [
             0,
-            1,
+            1
+          ]
+        },
+        {
+          "id": "templates_repeating.template_library",
+          "name": "Template Library & Discovery",
+          "description": "Maintain a searchable, categorized template library with filtering and organization capabilities.",
+          "req_idxs": [
             3
           ]
         },
         {
           "id": "templates_repeating.template_application",
           "name": "Template Application & Scheduling",
-          "description": "Apply templates to new projects with automatic date calculation and task scheduling.",
+          "description": "Apply templates to new projects with automatic date calculation and task scheduling relative to project start.",
           "req_idxs": [
             2
           ]
         },
         {
-          "id": "templates_repeating.template_automation",
-          "name": "Template Automation & Synchronization",
-          "description": "Automatically generate recurring projects and propagate template changes to dependent projects.",
+          "id": "templates_repeating.recurring_projects",
+          "name": "Recurring Project Automation",
+          "description": "Automatically generate recurring projects on a defined schedule using a template.",
           "req_idxs": [
-            4,
+            4
+          ]
+        },
+        {
+          "id": "templates_repeating.template_updates",
+          "name": "Template Update Propagation",
+          "description": "Propagate template changes to active projects created from that template.",
+          "req_idxs": [
             5
           ]
         }
@@ -4539,7 +4643,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "enterprise_only",
+      "sme_tier": "advanced",
       "cited_sources": [
         "sap_ps",
         "oracle_primavera",
@@ -4623,8 +4727,8 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "contractor_management.cost_payment",
-          "feature_name": "Cost Tracking & Payment"
+          "feature_id": "contractor_management.cost_payment_tracking",
+          "feature_name": "Cost & Payment Tracking"
         },
         {
           "text": "Monitor insurance and certification compliance status for contractors",
@@ -4655,8 +4759,8 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "contractor_management.cost_payment",
-          "feature_name": "Cost Tracking & Payment"
+          "feature_id": "contractor_management.cost_payment_tracking",
+          "feature_name": "Cost & Payment Tracking"
         },
         {
           "text": "Send automated reminders for contract renewal dates",
@@ -4690,7 +4794,7 @@
         {
           "id": "contractor_management.contractor_onboarding",
           "name": "Contractor Onboarding & Compliance",
-          "description": "Register contractors, maintain compliance documentation, and monitor certifications and insurance.",
+          "description": "Register contractors, maintain rates and contract terms, and track insurance and certification compliance.",
           "req_idxs": [
             0,
             5,
@@ -4700,7 +4804,7 @@
         {
           "id": "contractor_management.subcontract_procurement",
           "name": "Subcontract Procurement",
-          "description": "Create and manage purchase orders for subcontracted work linked to project phases.",
+          "description": "Create and manage sub-contract purchase orders linked to project phases.",
           "req_idxs": [
             1
           ]
@@ -4708,15 +4812,15 @@
         {
           "id": "contractor_management.time_deliverables",
           "name": "Time & Deliverable Management",
-          "description": "Capture contractor timesheets and execute acceptance workflows for deliverables.",
+          "description": "Capture contractor timesheets, approve hours, and execute deliverable acceptance workflows.",
           "req_idxs": [
             2,
             3
           ]
         },
         {
-          "id": "contractor_management.cost_payment",
-          "name": "Cost Tracking & Payment",
+          "id": "contractor_management.cost_payment_tracking",
+          "name": "Cost & Payment Tracking",
           "description": "Track contractor costs against budget, manage payment milestones, and handle retention amounts.",
           "req_idxs": [
             4,
@@ -4734,7 +4838,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "advanced",
       "cited_sources": [
         "netsuite_srp",
         "sap_ps",
@@ -4774,7 +4878,7 @@
           "feature_name": "Profitability Reporting"
         },
         {
-          "text": "Track and analyze resource utilisation trends over time",
+          "text": "Track and analyze resource utilization trends over time",
           "source": "proxy",
           "proxy_refs": [
             "Utilisation trend analysis over time"
@@ -4786,8 +4890,8 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "analytics_profitability.utilisation_performance",
-          "feature_name": "Utilisation & Performance Metrics"
+          "feature_id": "analytics_profitability.utilization_performance",
+          "feature_name": "Utilization & Performance Metrics"
         },
         {
           "text": "Report delivery performance metrics including on-time and on-budget completion rates",
@@ -4802,8 +4906,8 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "analytics_profitability.utilisation_performance",
-          "feature_name": "Utilisation & Performance Metrics"
+          "feature_id": "analytics_profitability.utilization_performance",
+          "feature_name": "Utilization & Performance Metrics"
         },
         {
           "text": "Generate backlog and pipeline reports to support resource planning and forecasting",
@@ -4870,9 +4974,9 @@
           ]
         },
         {
-          "id": "analytics_profitability.utilisation_performance",
-          "name": "Utilisation & Performance Metrics",
-          "description": "Track resource utilisation trends and delivery performance including on-time and on-budget completion rates.",
+          "id": "analytics_profitability.utilization_performance",
+          "name": "Utilization & Performance Metrics",
+          "description": "Track resource utilization trends and delivery performance including on-time and on-budget completion rates.",
           "req_idxs": [
             2,
             3
@@ -5013,7 +5117,7 @@
           "feature_name": "Notifications & Escalations"
         },
         {
-          "text": "Provide a no-code workflow builder to design and modify approval and task routing logic",
+          "text": "Provide a no-code workflow builder to design and modify approval and task routing processes",
           "source": "proxy",
           "proxy_refs": [
             "Custom workflow builder without coding"
@@ -5030,7 +5134,7 @@
           "feature_name": "Workflow Builder"
         },
         {
-          "text": "Support creation of customized forms with predefined checklists and automatic routing to designated reviewers upon completion",
+          "text": "Support creation of customizable forms with predefined checklists and automatic routing to designated reviewers",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -5048,8 +5152,8 @@
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "workflow_automation.form_routing",
-          "feature_name": "Form Routing & Checklists"
+          "feature_id": "workflow_automation.workflow_builder",
+          "feature_name": "Workflow Builder"
         },
         {
           "text": "Automatically detect and flag recurring or duplicate activities within a project schedule",
@@ -5129,7 +5233,7 @@
         {
           "id": "workflow_automation.notifications_escalations",
           "name": "Notifications & Escalations",
-          "description": "Trigger alerts and escalate approvals when thresholds or time limits are exceeded.",
+          "description": "Trigger alerts and escalate approvals when thresholds or deadlines are exceeded.",
           "req_idxs": [
             3,
             4
@@ -5138,23 +5242,16 @@
         {
           "id": "workflow_automation.workflow_builder",
           "name": "Workflow Builder",
-          "description": "No-code interface to design and modify approval and routing logic.",
+          "description": "No-code interface to design, configure, and modify approval and routing processes.",
           "req_idxs": [
-            5
-          ]
-        },
-        {
-          "id": "workflow_automation.form_routing",
-          "name": "Form Routing & Checklists",
-          "description": "Create customized forms with checklists and automatic routing to reviewers.",
-          "req_idxs": [
+            5,
             6
           ]
         },
         {
           "id": "workflow_automation.conflict_detection",
           "name": "Conflict Detection & Resolution",
-          "description": "Detect duplicate activities and resource conflicts, suggest rescheduling alternatives.",
+          "description": "Identify duplicate activities and resource conflicts, with rescheduling suggestions.",
           "req_idxs": [
             7,
             8
@@ -5180,7 +5277,7 @@
       ],
       "requirements": [
         {
-          "text": "Support finish-to-start, start-to-start, and finish-to-finish dependency link types between tasks",
+          "text": "Support finish-to-start, start-to-start, and finish-to-finish task dependency types",
           "source": "proxy",
           "proxy_refs": [
             "Finish-to-start, start-to-start, finish-to-finish dependencies"
@@ -5192,11 +5289,11 @@
             "oracle_primavera"
           ],
           "solcat_citations": [],
-          "feature_id": "dependencies_scheduling.dep_types_offsets",
-          "feature_name": "Dependency Definition"
+          "feature_id": "dependencies_scheduling.dep_types_lags",
+          "feature_name": "Dependency Types & Lags"
         },
         {
-          "text": "Allow specification of lag and lead time offsets on task dependencies",
+          "text": "Allow specification of lag and lead time between dependent tasks",
           "source": "proxy",
           "proxy_refs": [
             "Lag and lead time between dependent tasks"
@@ -5208,11 +5305,11 @@
             "oracle_primavera"
           ],
           "solcat_citations": [],
-          "feature_id": "dependencies_scheduling.dep_types_offsets",
-          "feature_name": "Dependency Definition"
+          "feature_id": "dependencies_scheduling.dep_types_lags",
+          "feature_name": "Dependency Types & Lags"
         },
         {
-          "text": "Auto-calculate task dates by forward-scheduling from project start date based on dependency chain and task duration",
+          "text": "Auto-calculate task dates by forward scheduling from project start date",
           "source": "proxy",
           "proxy_refs": [
             "Auto-schedule forward from project start date"
@@ -5244,7 +5341,7 @@
           "feature_name": "Conflict Detection & Alerts"
         },
         {
-          "text": "Cascade date recalculation when a predecessor task is rescheduled",
+          "text": "Cascade date recalculations when a predecessor task is rescheduled",
           "source": "proxy",
           "proxy_refs": [
             "Cascade date changes when predecessor moves"
@@ -5260,7 +5357,7 @@
           "feature_name": "Auto-Scheduling & Recalculation"
         },
         {
-          "text": "Alert project team when external supply or material delivery delays could impact dependent downstream tasks",
+          "text": "Alert project team when external dependencies (e.g., material deliveries) could delay downstream tasks",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -5282,7 +5379,7 @@
           "feature_name": "Conflict Detection & Alerts"
         },
         {
-          "text": "Support resequencing and rescheduling of tasks to accommodate urgent work or unplanned changes while maintaining dependency integrity",
+          "text": "Support resequencing and rescheduling of tasks to accommodate urgent changes or unplanned issues",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -5301,10 +5398,10 @@
             "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
           ],
           "feature_id": "dependencies_scheduling.schedule_optimization",
-          "feature_name": "Schedule Resequencing"
+          "feature_name": "Schedule Optimization & Resequencing"
         },
         {
-          "text": "Detect resource over-allocation conflicts (e.g., same resource or equipment assigned to overlapping tasks) and propose alternative scheduling",
+          "text": "Detect resource over-allocation conflicts and propose alternative task schedules to resolve them",
           "source": "both",
           "proxy_refs": [
             "Resource levelling to resolve over-allocation"
@@ -5339,9 +5436,9 @@
       },
       "features": [
         {
-          "id": "dependencies_scheduling.dep_types_offsets",
-          "name": "Dependency Definition",
-          "description": "Define task dependency link types and temporal offsets.",
+          "id": "dependencies_scheduling.dep_types_lags",
+          "name": "Dependency Types & Lags",
+          "description": "Define task relationships with multiple dependency types and lag/lead time specifications.",
           "req_idxs": [
             0,
             1
@@ -5350,7 +5447,7 @@
         {
           "id": "dependencies_scheduling.auto_scheduling",
           "name": "Auto-Scheduling & Recalculation",
-          "description": "Forward-schedule task dates and cascade updates through dependency chains.",
+          "description": "Automatically calculate task dates and cascade updates when predecessors change.",
           "req_idxs": [
             2,
             4
@@ -5359,7 +5456,7 @@
         {
           "id": "dependencies_scheduling.conflict_detection",
           "name": "Conflict Detection & Alerts",
-          "description": "Identify circular dependencies, supply delays, and resource over-allocation.",
+          "description": "Identify circular dependencies, external delays, and resource over-allocation issues.",
           "req_idxs": [
             3,
             5,
@@ -5368,8 +5465,8 @@
         },
         {
           "id": "dependencies_scheduling.schedule_optimization",
-          "name": "Schedule Resequencing",
-          "description": "Reorder and reschedule tasks to accommodate changes while preserving dependencies.",
+          "name": "Schedule Optimization & Resequencing",
+          "description": "Resequence and reschedule tasks to resolve conflicts and accommodate urgent changes.",
           "req_idxs": [
             6
           ]
@@ -5410,7 +5507,7 @@
           "feature_name": "Rate Definition"
         },
         {
-          "text": "Allow employee-specific rate overrides to deviate from role-based defaults",
+          "text": "Support employee-specific rate overrides that supersede role-based defaults",
           "source": "proxy",
           "proxy_refs": [
             "Employee-specific rate overrides"
@@ -5426,7 +5523,7 @@
           "feature_name": "Rate Definition"
         },
         {
-          "text": "Support client-specific and project-specific rate agreements that override standard rates",
+          "text": "Define client-specific or project-specific rate agreements that override standard rates",
           "source": "proxy",
           "proxy_refs": [
             "Client-specific or project-specific rate agreements"
@@ -5442,7 +5539,7 @@
           "feature_name": "Rate Definition"
         },
         {
-          "text": "Apply effective dating to rate changes to manage historical and future rate versions",
+          "text": "Support effective dating for rate changes to manage historical and future rate versions",
           "source": "proxy",
           "proxy_refs": [
             "Effective dating for rate changes"
@@ -5471,10 +5568,10 @@
           ],
           "solcat_citations": [],
           "feature_id": "rate_cards.rate_currency",
-          "feature_name": "Multi-Currency & Blended Rates"
+          "feature_name": "Multi-Currency Rates"
         },
         {
-          "text": "Calculate blended rates for use in proposals and estimates",
+          "text": "Calculate blended rates for proposals based on team composition and rate mix",
           "source": "proxy",
           "proxy_refs": [
             "Blended rate calculation for proposals"
@@ -5486,8 +5583,8 @@
             "sap_ps"
           ],
           "solcat_citations": [],
-          "feature_id": "rate_cards.rate_currency",
-          "feature_name": "Multi-Currency & Blended Rates"
+          "feature_id": "rate_cards.rate_calculation",
+          "feature_name": "Rate Calculation & Blending"
         }
       ],
       "stats": {
@@ -5499,7 +5596,7 @@
         {
           "id": "rate_cards.rate_definition",
           "name": "Rate Definition",
-          "description": "Define and maintain billing and cost rates by role, employee, client, and project.",
+          "description": "Define and maintain billing and cost rates by role, employee, and client/project with override hierarchy.",
           "req_idxs": [
             0,
             1,
@@ -5509,17 +5606,24 @@
         {
           "id": "rate_cards.rate_versioning",
           "name": "Rate Versioning & Effective Dating",
-          "description": "Manage historical and future rate versions with effective date control.",
+          "description": "Manage historical and future rate versions with effective date controls.",
           "req_idxs": [
             3
           ]
         },
         {
           "id": "rate_cards.rate_currency",
-          "name": "Multi-Currency & Blended Rates",
-          "description": "Support multi-currency rates and calculate blended rates for proposals.",
+          "name": "Multi-Currency Rates",
+          "description": "Support rate definitions and calculations across multiple currencies for international projects.",
           "req_idxs": [
-            4,
+            4
+          ]
+        },
+        {
+          "id": "rate_cards.rate_calculation",
+          "name": "Rate Calculation & Blending",
+          "description": "Calculate blended rates for proposals based on team composition and rate mix.",
+          "req_idxs": [
             5
           ]
         }
@@ -5661,7 +5765,7 @@
           "feature_name": "Task Alerts"
         },
         {
-          "text": "Prompt and remind users of scheduling updates",
+          "text": "Prompt and remind users of scheduling updates and calendar changes",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -5707,7 +5811,7 @@
           "feature_name": "Milestone & Approval Alerts"
         },
         {
-          "text": "Notify stakeholders when pending issues are resolved",
+          "text": "Notify stakeholders when pending or unresolved issues are resolved",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -5749,7 +5853,7 @@
         {
           "id": "notifications_reminders.milestone_approval_alerts",
           "name": "Milestone & Approval Alerts",
-          "description": "Notifications for approaching milestones, pending approvals, and resolved issues.",
+          "description": "Notifications for approaching milestones, pending approvals, and issue resolution.",
           "req_idxs": [
             3,
             8,
@@ -5759,7 +5863,7 @@
         {
           "id": "notifications_reminders.delivery_channels",
           "name": "Delivery Channels",
-          "description": "Multi-channel notification delivery via email, push, and digest summaries.",
+          "description": "Multi-channel notification delivery via email, push, digest, and calendar prompts.",
           "req_idxs": [
             4,
             5,
@@ -5843,8 +5947,8 @@
           "feature_name": "Responsive Design"
         },
         {
-          "text": "Users can log time and update task status from mobile devices.",
-          "source": "both",
+          "text": "Users can log time entries and update task status from mobile devices.",
+          "source": "proxy",
           "proxy_refs": [
             "Log time and update tasks from a mobile device"
           ],
@@ -5872,7 +5976,7 @@
           "feature_name": "Mobile Task Management"
         },
         {
-          "text": "Push notifications alert users to task assignments and deadline changes.",
+          "text": "System sends push notifications for task assignments and deadline alerts.",
           "source": "proxy",
           "proxy_refs": [
             "Push notifications for task assignments and deadlines"
@@ -5889,7 +5993,7 @@
           "feature_name": "Push Notifications"
         },
         {
-          "text": "Offline mode allows users to continue working on mobile devices; changes sync automatically when connectivity is restored.",
+          "text": "Mobile application supports offline mode with automatic synchronization when connectivity is restored.",
           "source": "proxy",
           "proxy_refs": [
             "Offline mode with sync when reconnected"
@@ -5903,13 +6007,22 @@
           ],
           "solcat_citations": [],
           "feature_id": "mobile_access.offline_sync",
-          "feature_name": "Offline Sync"
+          "feature_name": "Offline Mode & Synchronization"
         },
         {
           "text": "Project managers can view project timeline and task progress dashboards on both desktop and mobile devices.",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
+            {
+              "id": "req-00023",
+              "text": "A site engineer updates defect statuses on-site using a mobile app, while the project manager reviews the overall project timeline and task progress on a desktop dashboard.",
+              "q_title": "Multi-device Access",
+              "subsection": "Example",
+              "sources": [
+                "built-environment__built-environment-digital-platform"
+              ]
+            },
             {
               "id": "req-01346",
               "text": "The project manager reviews project status on his desktop in office and on his mobile device while on site.",
@@ -5937,7 +6050,7 @@
         {
           "id": "mobile_access.cross_device_access",
           "name": "Cross-Device Access",
-          "description": "Web-based and cloud-hosted application accessible on phones, tablets, and desktops without local installation.",
+          "description": "Web-based and cloud-hosted application accessible across phones, tablets, and desktops without local installation.",
           "req_idxs": [
             0
           ]
@@ -5953,7 +6066,7 @@
         {
           "id": "mobile_access.mobile_task_management",
           "name": "Mobile Task Management",
-          "description": "Users can log time and update task status from mobile devices.",
+          "description": "Users can log time entries and update task status from mobile devices.",
           "req_idxs": [
             2
           ]
@@ -5961,15 +6074,15 @@
         {
           "id": "mobile_access.notifications",
           "name": "Push Notifications",
-          "description": "Push notifications alert users to task assignments and deadline changes.",
+          "description": "System sends push notifications for task assignments and deadline alerts.",
           "req_idxs": [
             3
           ]
         },
         {
           "id": "mobile_access.offline_sync",
-          "name": "Offline Sync",
-          "description": "Offline mode allows users to continue working on mobile devices; changes sync automatically when connectivity is restored.",
+          "name": "Offline Mode & Synchronization",
+          "description": "Mobile application supports offline mode with automatic synchronization when connectivity is restored.",
           "req_idxs": [
             4
           ]
@@ -6079,10 +6192,10 @@
           ],
           "solcat_citations": [],
           "feature_id": "data_governance.audit_logging",
-          "feature_name": "Audit Logging & Trails"
+          "feature_name": "Audit Logging & Access Tracking"
         },
         {
-          "text": "Meet PSG Cyber Essentials Mark baseline security requirements",
+          "text": "Comply with PSG Cyber Essentials Mark baseline security controls",
           "source": "proxy",
           "proxy_refs": [
             "Compliant with PSG Cyber Essentials Mark baseline"
@@ -6114,7 +6227,7 @@
           "feature_name": "Security Compliance & Resilience"
         },
         {
-          "text": "Control access to shared documents based on user role and project context, with audit trail of who accessed what and when",
+          "text": "Track and log access to shared documents, including who accessed the document, when, and from which location or device",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -6133,7 +6246,7 @@
             "built-environment__built-environment-digital-platform"
           ],
           "feature_id": "data_governance.audit_logging",
-          "feature_name": "Audit Logging & Trails"
+          "feature_name": "Audit Logging & Access Tracking"
         }
       ],
       "stats": {
@@ -6145,7 +6258,7 @@
         {
           "id": "data_governance.consent_mgmt",
           "name": "Consent Management",
-          "description": "Capture, maintain, and audit consent for personal data collection with timestamp and scope tracking.",
+          "description": "Capture, maintain, and audit consent records for personal data collection with full traceability.",
           "req_idxs": [
             0
           ]
@@ -6153,7 +6266,7 @@
         {
           "id": "data_governance.data_retention",
           "name": "Data Retention & Deletion",
-          "description": "Define and enforce automated data retention policies with scheduled deletion after defined periods.",
+          "description": "Define and enforce automated data retention policies with scheduled deletion of expired records.",
           "req_idxs": [
             1
           ]
@@ -6161,7 +6274,7 @@
         {
           "id": "data_governance.encryption",
           "name": "Encryption",
-          "description": "Protect data at rest and in transit using industry-standard encryption and secure transport protocols.",
+          "description": "Protect data confidentiality through encryption at rest and in transit using industry standards.",
           "req_idxs": [
             2,
             3
@@ -6169,8 +6282,8 @@
         },
         {
           "id": "data_governance.audit_logging",
-          "name": "Audit Logging & Trails",
-          "description": "Record comprehensive audit logs of user actions, data access, and document interactions with full traceability.",
+          "name": "Audit Logging & Access Tracking",
+          "description": "Record comprehensive audit trails of user actions, data access, and document sharing with full context.",
           "req_idxs": [
             4,
             7
@@ -6179,7 +6292,7 @@
         {
           "id": "data_governance.security_compliance",
           "name": "Security Compliance & Resilience",
-          "description": "Meet PSG Cyber Essentials Mark requirements and implement backup and disaster recovery procedures.",
+          "description": "Meet baseline security controls and ensure business continuity through backup and disaster recovery.",
           "req_idxs": [
             5,
             6
@@ -6206,36 +6319,24 @@
       ],
       "requirements": [
         {
-          "text": "Create individual user accounts with unique login credentials for each team member",
-          "source": "both",
+          "text": "Individual user accounts with unique login credentials",
+          "source": "proxy",
           "proxy_refs": [
             "Individual user accounts with unique login credentials"
           ],
-          "imda_refs": [
-            {
-              "id": "req-01212",
-              "text": "Set up admin and end user accounts for all project members",
-              "q_title": "User Account and Scheduling Management",
-              "subsection": "Required Functions",
-              "sources": [
-                "built-environment__built-environment-digital-platform"
-              ]
-            }
-          ],
+          "imda_refs": [],
           "vendor_citations": [
             "jira",
             "ms_project",
             "netsuite_srp",
             "odoo_project"
           ],
-          "solcat_citations": [
-            "built-environment__built-environment-digital-platform"
-          ],
+          "solcat_citations": [],
           "feature_id": "user_access_roles.user_account_mgmt",
           "feature_name": "User Account Management"
         },
         {
-          "text": "Implement role-based access control with configurable roles (e.g., admin, project manager, team member, client)",
+          "text": "Role-based access control with configurable permission levels (e.g., admin, project manager, team member, client)",
           "source": "both",
           "proxy_refs": [
             "Role-based permissions (admin, PM, team member, client)"
@@ -6260,11 +6361,11 @@
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "user_access_roles.role_permissions",
-          "feature_name": "Role & Permission Configuration"
+          "feature_id": "user_access_roles.access_control",
+          "feature_name": "Access Control & Permissions"
         },
         {
-          "text": "Enforce project-level access control to restrict visibility and permissions based on user role and project assignment",
+          "text": "Project-level access control to restrict visibility and permissions by project",
           "source": "both",
           "proxy_refs": [
             "Project-level access control (who sees which projects)"
@@ -6289,33 +6390,11 @@
           "solcat_citations": [
             "built-environment__digital-contract-management-digital-payment"
           ],
-          "feature_id": "user_access_roles.role_permissions",
-          "feature_name": "Role & Permission Configuration"
+          "feature_id": "user_access_roles.access_control",
+          "feature_name": "Access Control & Permissions"
         },
         {
-          "text": "Configure access controls for sensitive project information across different project stakeholders",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-00326",
-              "text": "Configuration of access controls for sensitive project information across different project stakeholders",
-              "q_title": "Access Control Configuration",
-              "subsection": "Access Control Configuration",
-              "sources": [
-                "built-environment__digital-contract-management-digital-payment"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "built-environment__digital-contract-management-digital-payment"
-          ],
-          "feature_id": "user_access_roles.role_permissions",
-          "feature_name": "Role & Permission Configuration"
-        },
-        {
-          "text": "Support deactivation of user accounts when team members leave the organization",
+          "text": "User deactivation capability for offboarded employees",
           "source": "proxy",
           "proxy_refs": [
             "Deactivate users when they leave"
@@ -6332,7 +6411,7 @@
           "feature_name": "User Account Management"
         },
         {
-          "text": "Support single sign-on integration with external identity providers (Google, Microsoft, or similar)",
+          "text": "Single sign-on integration with common identity providers (Google, Microsoft)",
           "source": "proxy",
           "proxy_refs": [
             "Single sign-on support (Google, Microsoft)"
@@ -6345,11 +6424,11 @@
             "odoo_project"
           ],
           "solcat_citations": [],
-          "feature_id": "user_access_roles.auth_security",
+          "feature_id": "user_access_roles.authentication",
           "feature_name": "Authentication & Security"
         },
         {
-          "text": "Enforce two-factor authentication for all user accounts",
+          "text": "Two-factor authentication for all user accounts",
           "source": "proxy",
           "proxy_refs": [
             "Two-factor authentication for all users"
@@ -6362,11 +6441,11 @@
             "odoo_project"
           ],
           "solcat_citations": [],
-          "feature_id": "user_access_roles.auth_security",
+          "feature_id": "user_access_roles.authentication",
           "feature_name": "Authentication & Security"
         },
         {
-          "text": "Maintain audit logs of user logins and system actions for compliance and security monitoring",
+          "text": "Audit logging of user logins and system actions",
           "source": "proxy",
           "proxy_refs": [
             "Audit log of user logins and actions"
@@ -6379,11 +6458,11 @@
             "odoo_project"
           ],
           "solcat_citations": [],
-          "feature_id": "user_access_roles.audit_compliance",
-          "feature_name": "Audit & Compliance Logging"
+          "feature_id": "user_access_roles.audit_logging",
+          "feature_name": "Audit Logging"
         },
         {
-          "text": "Allow configuration of business units or team profiles to organize users by department or functional area",
+          "text": "Business unit or team profile configuration to organize users by organizational structure",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -6401,51 +6480,50 @@
           "solcat_citations": [
             "built-environment__built-environment-digital-platform"
           ],
-          "feature_id": "user_access_roles.role_permissions",
-          "feature_name": "Role & Permission Configuration"
+          "feature_id": "user_access_roles.user_account_mgmt",
+          "feature_name": "User Account Management"
         }
       ],
       "stats": {
         "proxy_in": 7,
         "imda_in": 5,
-        "merged_out": 9
+        "merged_out": 8
       },
       "features": [
         {
           "id": "user_access_roles.user_account_mgmt",
           "name": "User Account Management",
-          "description": "Create, deactivate, and manage individual user accounts with unique credentials.",
+          "description": "Creation, configuration, and lifecycle management of individual user accounts.",
           "req_idxs": [
             0,
-            4
+            3,
+            7
           ]
         },
         {
-          "id": "user_access_roles.role_permissions",
-          "name": "Role & Permission Configuration",
-          "description": "Define and configure roles with granular permissions across projects and sensitive data.",
+          "id": "user_access_roles.access_control",
+          "name": "Access Control & Permissions",
+          "description": "Role-based permissions and project-level visibility restrictions.",
           "req_idxs": [
             1,
-            2,
-            3,
-            8
+            2
           ]
         },
         {
-          "id": "user_access_roles.auth_security",
+          "id": "user_access_roles.authentication",
           "name": "Authentication & Security",
-          "description": "Enforce single sign-on, two-factor authentication, and secure access protocols.",
+          "description": "Login methods, identity integration, and multi-factor authentication.",
           "req_idxs": [
-            5,
-            6
+            4,
+            5
           ]
         },
         {
-          "id": "user_access_roles.audit_compliance",
-          "name": "Audit & Compliance Logging",
-          "description": "Track and maintain audit logs of user logins and system actions for compliance.",
+          "id": "user_access_roles.audit_logging",
+          "name": "Audit Logging",
+          "description": "Recording and tracking of user logins and system actions for compliance.",
           "req_idxs": [
-            7
+            6
           ]
         }
       ]
@@ -6482,8 +6560,8 @@
             "odoo_project"
           ],
           "solcat_citations": [],
-          "feature_id": "integration_import_export.file_import_export",
-          "feature_name": "File Import & Export"
+          "feature_id": "integration_import_export.data_import",
+          "feature_name": "Data Import"
         },
         {
           "text": "Export project data to CSV, Excel, or PDF formats on demand",
@@ -6499,11 +6577,11 @@
             "odoo_project"
           ],
           "solcat_citations": [],
-          "feature_id": "integration_import_export.file_import_export",
-          "feature_name": "File Import & Export"
+          "feature_id": "integration_import_export.data_export",
+          "feature_name": "Data Export"
         },
         {
-          "text": "Integrate with accounting software to synchronize financial and project data",
+          "text": "Integrate with accounting software for financial data synchronization",
           "source": "proxy",
           "proxy_refs": [
             "Integration with accounting software (Xero, QuickBooks)"
@@ -6520,7 +6598,7 @@
           "feature_name": "System Integration"
         },
         {
-          "text": "Provide REST API for custom integrations with third-party systems",
+          "text": "Provide REST API for custom third-party integrations",
           "source": "proxy",
           "proxy_refs": [
             "API access for custom integrations"
@@ -6533,8 +6611,8 @@
             "odoo_project"
           ],
           "solcat_citations": [],
-          "feature_id": "integration_import_export.system_integration",
-          "feature_name": "System Integration"
+          "feature_id": "integration_import_export.api_webhooks",
+          "feature_name": "API & Webhooks"
         },
         {
           "text": "Support webhook-based event notifications for real-time system-to-system communication",
@@ -6550,11 +6628,11 @@
             "odoo_project"
           ],
           "solcat_citations": [],
-          "feature_id": "integration_import_export.system_integration",
-          "feature_name": "System Integration"
+          "feature_id": "integration_import_export.api_webhooks",
+          "feature_name": "API & Webhooks"
         },
         {
-          "text": "Integrate with calendar systems to synchronize scheduling and availability",
+          "text": "Integrate with calendar systems for schedule synchronization",
           "source": "proxy",
           "proxy_refs": [
             "Connect with calendar (Google, Outlook)"
@@ -6584,11 +6662,11 @@
             "odoo_project"
           ],
           "solcat_citations": [],
-          "feature_id": "integration_import_export.file_import_export",
-          "feature_name": "File Import & Export"
+          "feature_id": "integration_import_export.backup_reporting",
+          "feature_name": "Backup & Reporting"
         },
         {
-          "text": "Consolidate data from all modules into a unified dashboard view",
+          "text": "Pull data from all system modules to populate dashboards and reporting views",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -6606,11 +6684,33 @@
           "solcat_citations": [
             "legal__practice-management-system-pms"
           ],
-          "feature_id": "integration_import_export.data_consolidation",
-          "feature_name": "Data Consolidation & Reporting"
+          "feature_id": "integration_import_export.backup_reporting",
+          "feature_name": "Backup & Reporting"
         },
         {
-          "text": "Synchronize cost management activities with external project management systems, including resource allocation and task scheduling",
+          "text": "Integrate time tracking data to calculate and report billable hours",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00552",
+              "text": "Does your solution integrate time tracking functionality for billable hours within the collaboration workspace",
+              "q_title": "Time Tracking Integration",
+              "subsection": "Time Tracking Integration",
+              "sources": [
+                "legal__matters-management-and-collaboration-tool"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__matters-management-and-collaboration-tool"
+          ],
+          "feature_id": "integration_import_export.system_integration",
+          "feature_name": "System Integration"
+        },
+        {
+          "text": "Synchronize cost management data with project management systems for resource allocation and task scheduling",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -6634,37 +6734,52 @@
       ],
       "stats": {
         "proxy_in": 7,
-        "imda_in": 3,
-        "merged_out": 9
+        "imda_in": 4,
+        "merged_out": 10
       },
       "features": [
         {
-          "id": "integration_import_export.file_import_export",
-          "name": "File Import & Export",
-          "description": "Import and export project data in standard file formats.",
+          "id": "integration_import_export.data_import",
+          "name": "Data Import",
+          "description": "Load project and task data from external files into the system.",
           "req_idxs": [
-            0,
-            1,
-            6
+            0
+          ]
+        },
+        {
+          "id": "integration_import_export.data_export",
+          "name": "Data Export",
+          "description": "Extract and download project data in multiple formats on demand.",
+          "req_idxs": [
+            1
           ]
         },
         {
           "id": "integration_import_export.system_integration",
           "name": "System Integration",
-          "description": "Connect with external systems via APIs, webhooks, and direct integrations.",
+          "description": "Connect with accounting, calendar, and time tracking systems for synchronized data flow.",
           "req_idxs": [
             2,
-            3,
-            4,
             5,
-            8
+            8,
+            9
           ]
         },
         {
-          "id": "integration_import_export.data_consolidation",
-          "name": "Data Consolidation & Reporting",
-          "description": "Unify data across modules for dashboard views and reporting.",
+          "id": "integration_import_export.api_webhooks",
+          "name": "API & Webhooks",
+          "description": "Provide REST API and event-driven webhooks for real-time third-party integrations.",
           "req_idxs": [
+            3,
+            4
+          ]
+        },
+        {
+          "id": "integration_import_export.backup_reporting",
+          "name": "Backup & Reporting",
+          "description": "Automate backups and aggregate system data for dashboards and reporting.",
+          "req_idxs": [
+            6,
             7
           ]
         }

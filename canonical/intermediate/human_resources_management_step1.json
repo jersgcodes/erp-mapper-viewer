@@ -4,10 +4,10 @@
     "input_reqs": 118,
     "unique_section_pairs": 63,
     "placed_via_section_lookup": 96,
-    "placed_via_fallback": 9,
-    "unmapped": 13,
-    "total_placements": 121,
-    "unique_reqs_placed": 105
+    "placed_via_fallback": 11,
+    "unmapped": 12,
+    "total_placements": 123,
+    "unique_reqs_placed": 106
   },
   "placements": {
     "hr.employee_master": [
@@ -349,6 +349,20 @@
         "capabilities": [
           "hr.employee_master"
         ]
+      },
+      {
+        "id": "req-01380",
+        "text": "Tracking of vaccination status of employees and their test results for the purpose of Personnel management",
+        "q_title": "Employee Health Status Tracking",
+        "subsection": "Employee Health Status Tracking",
+        "sources": [
+          "essential-business__human-resource-management-system-hrms"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "hr.employee_master",
+          "hr.document_management"
+        ]
       }
     ],
     "hr.leave_management": [
@@ -617,6 +631,7 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
+          "hr.employee_master",
           "hr.document_management"
         ]
       }
@@ -1121,7 +1136,21 @@
     "hr.compensation_benefits": [],
     "hr.benefits_administration": [],
     "hr.succession_talent": [],
-    "hr.engagement_surveys": [],
+    "hr.engagement_surveys": [
+      {
+        "id": "req-01059",
+        "text": "Provide a posting board to announce appreciations",
+        "q_title": "Employee Rewards and Recognition",
+        "subsection": "Core Functionality Requirements",
+        "sources": [
+          "essential-business__employee-rewards-and-recognition"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "hr.engagement_surveys"
+        ]
+      }
+    ],
     "hr.expense_claims": [],
     "hr.workforce_planning": [
       {
@@ -1813,17 +1842,6 @@
       "subsection": "Examples",
       "sources": [
         "essential-business__carbon-management-solution"
-      ],
-      "placed_via": "fallback_llm",
-      "capabilities": []
-    },
-    {
-      "id": "req-01059",
-      "text": "Provide a posting board to announce appreciations",
-      "q_title": "Employee Rewards and Recognition",
-      "subsection": "Core Functionality Requirements",
-      "sources": [
-        "essential-business__employee-rewards-and-recognition"
       ],
       "placed_via": "fallback_llm",
       "capabilities": []

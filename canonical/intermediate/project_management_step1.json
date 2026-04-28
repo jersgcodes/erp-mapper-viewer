@@ -21,8 +21,8 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.project_master",
-          "proj.document_collaboration"
+          "proj.document_collaboration",
+          "proj.project_master"
         ]
       },
       {
@@ -122,20 +122,6 @@
         "capabilities": [
           "proj.reporting_dashboards",
           "proj.task_management"
-        ]
-      },
-      {
-        "id": "req-00991",
-        "text": "Planning and coordination of change in work order sequences, postponing or incorporating urgent tasks due to unplanned issues",
-        "q_title": "Work Order Scheduling",
-        "subsection": "Work Order Scheduling",
-        "sources": [
-          "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.task_management",
-          "proj.dependencies_scheduling"
         ]
       },
       {
@@ -248,7 +234,8 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.time_tracking"
+          "proj.time_tracking",
+          "proj.integration_import_export"
         ]
       },
       {
@@ -325,6 +312,20 @@
         ]
       },
       {
+        "id": "req-00991",
+        "text": "Planning and coordination of change in work order sequences, postponing or incorporating urgent tasks due to unplanned issues",
+        "q_title": "Work Order Scheduling",
+        "subsection": "Work Order Scheduling",
+        "sources": [
+          "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "proj.resource_allocation",
+          "proj.dependencies_scheduling"
+        ]
+      },
+      {
         "id": "req-01212",
         "text": "Set up admin and end user accounts for all project members",
         "q_title": "User Account and Scheduling Management",
@@ -350,21 +351,6 @@
         "capabilities": [
           "proj.user_access_roles",
           "proj.resource_allocation"
-        ]
-      },
-      {
-        "id": "req-01275",
-        "text": "special assignments and projects)",
-        "q_title": "Staff Management Insights",
-        "subsection": "",
-        "sources": [
-          "early-childhood__data-mining-and-analytics-centre-operations",
-          "early-childhood__data-mining-and-analytics-centre-operations-and-child-development"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.resource_allocation",
-          "proj.analytics_profitability"
         ]
       },
       {
@@ -536,8 +522,8 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.project_master",
-          "proj.document_collaboration"
+          "proj.document_collaboration",
+          "proj.project_master"
         ]
       },
       {
@@ -550,20 +536,6 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.document_collaboration"
-        ]
-      },
-      {
-        "id": "req-01356",
-        "text": "The user can create customised Site Safety Inspection forms with predefined checklists, allowing safety officers to conduct and record inspections. The workflow automatically routes completed inspections to project managers for review.",
-        "q_title": "Digital Forms and Workflow Creation",
-        "subsection": "Example",
-        "sources": [
-          "built-environment__built-environment-digital-platform"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.workflow_automation",
           "proj.document_collaboration"
         ]
       },
@@ -671,7 +643,23 @@
         ]
       }
     ],
-    "proj.resource_pool_skills": [],
+    "proj.resource_pool_skills": [
+      {
+        "id": "req-01275",
+        "text": "special assignments and projects)",
+        "q_title": "Staff Management Insights",
+        "subsection": "",
+        "sources": [
+          "early-childhood__data-mining-and-analytics-centre-operations",
+          "early-childhood__data-mining-and-analytics-centre-operations-and-child-development"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "proj.resource_pool_skills",
+          "proj.analytics_profitability"
+        ]
+      }
+    ],
     "proj.earned_value": [
       {
         "id": "req-00546",
@@ -748,7 +736,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.resource_allocation",
+          "proj.resource_pool_skills",
           "proj.analytics_profitability"
         ]
       }
@@ -777,8 +765,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.workflow_automation",
-          "proj.document_collaboration"
+          "proj.workflow_automation"
         ]
       },
       {
@@ -834,7 +821,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.task_management",
+          "proj.resource_allocation",
           "proj.dependencies_scheduling"
         ]
       },
@@ -1024,6 +1011,20 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
+          "proj.integration_import_export"
+        ]
+      },
+      {
+        "id": "req-00552",
+        "text": "Does your solution integrate time tracking functionality for billable hours within the collaboration workspace",
+        "q_title": "Time Tracking Integration",
+        "subsection": "Time Tracking Integration",
+        "sources": [
+          "legal__matters-management-and-collaboration-tool"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "proj.time_tracking",
           "proj.integration_import_export"
         ]
       },

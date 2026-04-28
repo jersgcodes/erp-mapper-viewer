@@ -3,7 +3,7 @@
   "module_name": "Financial Management",
   "stats": {
     "haiku_calls": 30,
-    "total_merged_reqs": 319
+    "total_merged_reqs": 321
   },
   "capabilities": [
     {
@@ -66,7 +66,7 @@
           ]
         },
         {
-          "text": "Double-entry journal posting with automatic debit/credit balancing",
+          "text": "Double-entry journal posting with balanced debits and credits",
           "source": "both",
           "proxy_refs": [
             "Double-entry journal posting with balanced debits and credits"
@@ -104,7 +104,7 @@
           ]
         },
         {
-          "text": "Manual journal entry creation with supporting narration and document attachments",
+          "text": "Manual journal entries with supporting narration and attachments",
           "source": "proxy",
           "proxy_refs": [
             "Manual journal entries with supporting narration and attachments"
@@ -158,7 +158,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Opening balance setup and migration for go-live",
+          "text": "Opening balance setup for go-live migration",
           "source": "proxy",
           "proxy_refs": [
             "Opening balance setup for go-live migration"
@@ -176,7 +176,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Period open/close controls with posting lock enforcement",
+          "text": "Period open and close controls with posting lock",
           "source": "proxy",
           "proxy_refs": [
             "Period open / close controls with posting lock"
@@ -194,7 +194,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Year-end rollover with automatic retained earnings transfer",
+          "text": "Year-end rollover with retained earnings transfer",
           "source": "proxy",
           "proxy_refs": [
             "Year-end rollover with retained earnings transfer"
@@ -212,7 +212,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Drill-down capability from trial balance to source transactions",
+          "text": "Drill-down from trial balance to source transaction",
           "source": "proxy",
           "proxy_refs": [
             "Drill-down from trial balance to source transaction"
@@ -230,7 +230,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Sub-ledger to general ledger reconciliation (accounts receivable, accounts payable, cash, fixed assets)",
+          "text": "Sub-ledger to general ledger reconciliation (accounts receivable, accounts payable, cash, assets)",
           "source": "both",
           "proxy_refs": [
             "Sub-ledger to GL reconciliation (AR, AP, cash, assets)"
@@ -306,47 +306,7 @@
           ]
         },
         {
-          "text": "Bank reconciliation with statement matching and variance investigation",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-00103",
-              "text": "Allow reconciliations (e.g. to bank statements)",
-              "q_title": "Accounting Management",
-              "subsection": "Functional Requirements",
-              "sources": [
-                "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-                "essential-business__accounting-management-+-sales-management-system",
-                "tourism-travel-agent__travel-management-system-e-commerce",
-                "tourism-travel-agent__travel-management-system-operations",
-                "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-              ]
-            },
-            {
-              "id": "req-01379",
-              "text": "Tracking of different payment modes (cash, check, e-payment : NETS, VISA, FAST etc.) and bank reconciliation",
-              "q_title": "Finance Management",
-              "subsection": "",
-              "sources": [
-                "early-childhood__pre-school-management-system",
-                "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "early-childhood__pre-school-management-system",
-            "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
-            "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-            "essential-business__accounting-management-+-sales-management-system",
-            "tourism-travel-agent__travel-management-system-e-commerce",
-            "tourism-travel-agent__travel-management-system-operations",
-            "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-          ]
-        },
-        {
-          "text": "Tracking of multiple payment modes (cash, cheque, electronic payment methods)",
+          "text": "Bank reconciliation with support for multiple payment modes (cash, check, e-payment)",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -419,7 +379,7 @@
       "stats": {
         "proxy_in": 10,
         "imda_in": 13,
-        "merged_out": 14
+        "merged_out": 13
       }
     },
     {
@@ -450,14 +410,12 @@
           ],
           "imda_refs": [
             {
-              "id": "req-01224",
-              "text": "Set up and edit customer payment",
-              "q_title": "Sales and Delivery Management",
-              "subsection": "Functional Requirements",
+              "id": "req-01220",
+              "text": "Set up and edit credit control (e.g. terms of payment, modes of payment, etc.)",
+              "q_title": "B2B Agent Management Features [Non-Mandatory]",
+              "subsection": "Core Functions",
               "sources": [
-                "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-                "essential-business__accounting-management-+-sales-management-system",
-                "essential-business__inventory-management-and-sales-management-system"
+                "tourism-travel-agent__travel-management-system-e-commerce"
               ]
             },
             {
@@ -494,11 +452,12 @@
             "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
             "essential-business__accounting-management-+-sales-management-system",
             "essential-business__inventory-management-and-sales-management-system",
+            "tourism-travel-agent__travel-management-system-e-commerce",
             "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
           ]
         },
         {
-          "text": "Create and edit sales invoices with line items, applied taxes, and discounts",
+          "text": "Create and edit sales invoices with line items, tax calculations, and discounts",
           "source": "both",
           "proxy_refs": [
             "Create sales invoices with line items, tax, and discounts"
@@ -562,11 +521,34 @@
         },
         {
           "text": "Auto-generate invoices from source documents such as sales orders or delivery notes",
-          "source": "proxy",
+          "source": "both",
           "proxy_refs": [
             "Auto-generate invoices from sales orders or delivery notes"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00544",
+              "text": "Does your solution generate or process invoices",
+              "q_title": "Invoice Generation or Processing",
+              "subsection": "Invoice Generation or Processing",
+              "sources": [
+                "built-environment__digital-contract-management-digital-payment",
+                "logistics__freight-management",
+                "logistics__networked-trade-platform-value-added-services",
+                "logistics__warehouse-management",
+                "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+              ]
+            },
+            {
+              "id": "req-00230",
+              "text": "Can the solution generate invoices, shipping labels, picking lists, and other fulfilment-related documents",
+              "q_title": "Fulfilment Document Generation",
+              "subsection": "Fulfilment Document Generation",
+              "sources": [
+                "essential-business__multichannel-e-commerce-software-mes"
+              ]
+            }
+          ],
           "vendor_citations": [
             "erpnext",
             "netsuite",
@@ -575,10 +557,17 @@
             "quickbooks",
             "xero"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "built-environment__digital-contract-management-digital-payment",
+            "essential-business__multichannel-e-commerce-software-mes",
+            "logistics__freight-management",
+            "logistics__networked-trade-platform-value-added-services",
+            "logistics__warehouse-management",
+            "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+          ]
         },
         {
-          "text": "Generate and distribute invoices via email with PDF attachment",
+          "text": "Send invoices electronically via email with PDF attachment or other digital formats",
           "source": "both",
           "proxy_refs": [
             "Send invoices by email with PDF attachment"
@@ -609,29 +598,7 @@
           ]
         },
         {
-          "text": "Generate quotations and send online, by email, or SMS",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-00042",
-              "text": "Ability to generate online, email or SMS quotations, confirmation and invoices for orders",
-              "q_title": "Order Document Generation",
-              "subsection": "Order Document Generation",
-              "sources": [
-                "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
-                "wholesale__sales-management"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
-            "wholesale__sales-management"
-          ]
-        },
-        {
-          "text": "Create recurring invoices for subscription and retainer billing",
+          "text": "Configure and generate recurring invoices for subscriptions, retainers, and periodic billing",
           "source": "proxy",
           "proxy_refs": [
             "Recurring invoices for subscriptions and retainers"
@@ -648,41 +615,15 @@
           "solcat_citations": []
         },
         {
-          "text": "Process credit notes and refunds",
-          "source": "proxy",
+          "text": "Process credit notes and refunds against customer invoices",
+          "source": "both",
           "proxy_refs": [
             "Credit notes and refund processing"
           ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "erpnext",
-            "netsuite",
-            "odoo_accounting",
-            "odoo_invoicing",
-            "quickbooks",
-            "xero"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Record and track customer payments against invoices",
-          "source": "both",
-          "proxy_refs": [
-            "Apply customer payments against one or many invoices"
-          ],
           "imda_refs": [
             {
-              "id": "req-00675",
-              "text": "For recording of receipts and payments",
-              "q_title": "Sales Management",
-              "subsection": "Sales Management",
-              "sources": [
-                "personal-care-services__salon-management-system"
-              ]
-            },
-            {
-              "id": "req-01373",
-              "text": "Track payment",
+              "id": "req-00690",
+              "text": "Generate and edit booking documents (e.g. vouchers, invoices)",
               "q_title": "Booking Management Features",
               "subsection": "Core Functions",
               "sources": [
@@ -700,9 +641,51 @@
             "xero"
           ],
           "solcat_citations": [
-            "personal-care-services__salon-management-system",
             "tourism-travel-agent__travel-management-system-e-commerce",
             "tourism-travel-agent__travel-management-system-operations"
+          ]
+        },
+        {
+          "text": "Apply customer payments against single or multiple invoices",
+          "source": "both",
+          "proxy_refs": [
+            "Apply customer payments against one or many invoices"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00675",
+              "text": "For recording of receipts and payments",
+              "q_title": "Sales Management",
+              "subsection": "Sales Management",
+              "sources": [
+                "personal-care-services__salon-management-system"
+              ]
+            },
+            {
+              "id": "req-01224",
+              "text": "Set up and edit customer payment",
+              "q_title": "Sales and Delivery Management",
+              "subsection": "Functional Requirements",
+              "sources": [
+                "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+                "essential-business__accounting-management-+-sales-management-system",
+                "essential-business__inventory-management-and-sales-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo_accounting",
+            "odoo_invoicing",
+            "quickbooks",
+            "xero"
+          ],
+          "solcat_citations": [
+            "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+            "essential-business__accounting-management-+-sales-management-system",
+            "essential-business__inventory-management-and-sales-management-system",
+            "personal-care-services__salon-management-system"
           ]
         },
         {
@@ -724,11 +707,21 @@
         },
         {
           "text": "Generate customer statements and receivables ageing analysis",
-          "source": "proxy",
+          "source": "both",
           "proxy_refs": [
             "Customer statements and ageing analysis"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00675",
+              "text": "For recording of receipts and payments",
+              "q_title": "Sales Management",
+              "subsection": "Sales Management",
+              "sources": [
+                "personal-care-services__salon-management-system"
+              ]
+            }
+          ],
           "vendor_citations": [
             "erpnext",
             "netsuite",
@@ -737,10 +730,12 @@
             "quickbooks",
             "xero"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "personal-care-services__salon-management-system"
+          ]
         },
         {
-          "text": "Manage write-offs and bad-debt provisions with appropriate workflow controls",
+          "text": "Manage write-off and bad-debt provision workflows",
           "source": "proxy",
           "proxy_refs": [
             "Write-off and bad-debt provision workflow"
@@ -757,7 +752,52 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate activity-based and consumption-based invoices for warehouse and storage services",
+          "text": "Configure payment modes and methods accepted from customers",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01220",
+              "text": "Set up and edit credit control (e.g. terms of payment, modes of payment, etc.)",
+              "q_title": "B2B Agent Management Features [Non-Mandatory]",
+              "subsection": "Core Functions",
+              "sources": [
+                "tourism-travel-agent__travel-management-system-e-commerce"
+              ]
+            },
+            {
+              "id": "req-01236",
+              "text": "Set up and edit modes of payment",
+              "q_title": "Customer Groups Management",
+              "subsection": "Functional Requirements",
+              "sources": [
+                "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+                "essential-business__accounting-management-+-sales-management-system",
+                "essential-business__inventory-management-and-sales-management-system",
+                "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+              ]
+            },
+            {
+              "id": "req-01252",
+              "text": "Set up and edit terms & modes of payment",
+              "q_title": "Customer Groups Management",
+              "subsection": "",
+              "sources": [
+                "essential-business__inventory-management-and-sales-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+            "essential-business__accounting-management-+-sales-management-system",
+            "essential-business__inventory-management-and-sales-management-system",
+            "tourism-travel-agent__travel-management-system-e-commerce",
+            "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+          ]
+        },
+        {
+          "text": "Generate activity-based and consumption-based invoices for warehouse and logistics services",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -775,32 +815,12 @@
           "solcat_citations": [
             "logistics__warehouse-management"
           ]
-        },
-        {
-          "text": "Integrate with accounting management software to post invoices and payments to the general ledger",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-00770",
-              "text": "integration with accounting management software to leverage on its capability to generate invoices",
-              "q_title": "Invoice and Quotation Management",
-              "subsection": "Invoice/Quotation Options",
-              "sources": [
-                "logistics__freight-management"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "logistics__freight-management"
-          ]
         }
       ],
       "stats": {
         "proxy_in": 10,
-        "imda_in": 14,
-        "merged_out": 13
+        "imda_in": 17,
+        "merged_out": 12
       }
     },
     {
@@ -858,11 +878,46 @@
           "solcat_citations": []
         },
         {
-          "text": "Match supplier invoices against purchase orders and goods receipts using three-way matching logic",
-          "source": "both",
+          "text": "Automatically extract and populate invoice data from supplier documents into the accounting system",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00809",
+              "text": "Invoice processing: Integrate with company's accounting software to automatically extract relevant data from utility bills and fuel invoices.",
+              "q_title": "Data Collection",
+              "subsection": "Examples",
+              "sources": [
+                "essential-business__carbon-management-solution"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__carbon-management-solution"
+          ]
+        },
+        {
+          "text": "Perform three-way matching of vendor invoices against purchase orders and goods receipts",
+          "source": "proxy",
           "proxy_refs": [
             "Three-way matching against PO and goods receipt"
           ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo_accounting",
+            "odoo_invoicing",
+            "quickbooks",
+            "xero"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Match supplier invoices to corresponding purchase bookings or orders",
+          "source": "imda",
+          "proxy_refs": [],
           "imda_refs": [
             {
               "id": "req-00903",
@@ -875,21 +930,14 @@
               ]
             }
           ],
-          "vendor_citations": [
-            "erpnext",
-            "netsuite",
-            "odoo_accounting",
-            "odoo_invoicing",
-            "quickbooks",
-            "xero"
-          ],
+          "vendor_citations": [],
           "solcat_citations": [
             "tourism-travel-agent__travel-management-system-e-commerce",
             "tourism-travel-agent__travel-management-system-operations"
           ]
         },
         {
-          "text": "Route bills through multi-level approval workflows with configurable approval thresholds",
+          "text": "Route bills through multi-level approval workflows with configurable monetary thresholds",
           "source": "proxy",
           "proxy_refs": [
             "Multi-level bill approval workflow with thresholds"
@@ -906,7 +954,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Schedule and execute payment runs based on due dates and payment priorities",
+          "text": "Schedule and execute payment runs based on invoice due dates and payment priority",
           "source": "proxy",
           "proxy_refs": [
             "Schedule payment runs by due date and priority"
@@ -923,7 +971,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate batch payment files in standard formats including SEPA, GIRO, and ACH",
+          "text": "Generate batch payment files in standard formats (SEPA, GIRO, ACH)",
           "source": "proxy",
           "proxy_refs": [
             "Batch payment file generation (SEPA, GIRO, ACH)"
@@ -957,44 +1005,10 @@
           "solcat_citations": []
         },
         {
-          "text": "Calculate and apply early-payment discounts",
+          "text": "Calculate and apply early-payment discounts to eligible invoices",
           "source": "proxy",
           "proxy_refs": [
             "Early-payment discount handling"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "erpnext",
-            "netsuite",
-            "odoo_accounting",
-            "odoo_invoicing",
-            "quickbooks",
-            "xero"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Generate vendor ageing analysis and payment forecasts",
-          "source": "proxy",
-          "proxy_refs": [
-            "Vendor ageing analysis and payment forecast"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "erpnext",
-            "netsuite",
-            "odoo_accounting",
-            "odoo_invoicing",
-            "quickbooks",
-            "xero"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Track withholding tax and 1099 reporting obligations where applicable",
-          "source": "proxy",
-          "proxy_refs": [
-            "1099 / withholding-tax tracking where applicable"
           ],
           "imda_refs": [],
           "vendor_citations": [
@@ -1064,12 +1078,63 @@
           "solcat_citations": [
             "built-environment__digital-contract-management-digital-payment"
           ]
+        },
+        {
+          "text": "Generate vendor ageing analysis reports showing outstanding payables by age bucket",
+          "source": "proxy",
+          "proxy_refs": [
+            "Vendor ageing analysis and payment forecast"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo_accounting",
+            "odoo_invoicing",
+            "quickbooks",
+            "xero"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Forecast payment obligations and cash flow requirements",
+          "source": "proxy",
+          "proxy_refs": [
+            "Vendor ageing analysis and payment forecast"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo_accounting",
+            "odoo_invoicing",
+            "quickbooks",
+            "xero"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Track and manage withholding tax and 1099 reporting obligations where applicable",
+          "source": "proxy",
+          "proxy_refs": [
+            "1099 / withholding-tax tracking where applicable"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext",
+            "netsuite",
+            "odoo_accounting",
+            "odoo_invoicing",
+            "quickbooks",
+            "xero"
+          ],
+          "solcat_citations": []
         }
       ],
       "stats": {
         "proxy_in": 10,
-        "imda_in": 3,
-        "merged_out": 12
+        "imda_in": 4,
+        "merged_out": 15
       }
     },
     {
@@ -1092,7 +1157,7 @@
       ],
       "requirements": [
         {
-          "text": "Support multiple bank accounts across different currencies",
+          "text": "Support multiple bank accounts denominated in any currency",
           "source": "proxy",
           "proxy_refs": [
             "Multiple bank accounts in any currency"
@@ -1108,22 +1173,12 @@
           "solcat_citations": []
         },
         {
-          "text": "Automated bank feeds from major financial institutions",
-          "source": "both",
+          "text": "Receive automated bank feeds from major financial institutions",
+          "source": "proxy",
           "proxy_refs": [
             "Automated bank feeds from major banks"
           ],
-          "imda_refs": [
-            {
-              "id": "req-00553",
-              "text": "Does your solution integrate with financial institutions or banks' systems to facilitate direct bank payment and payment status update",
-              "q_title": "Bank Payment Integration",
-              "subsection": "Bank Payment Integration",
-              "sources": [
-                "built-environment__digital-contract-management-digital-payment"
-              ]
-            }
-          ],
+          "imda_refs": [],
           "vendor_citations": [
             "netsuite",
             "odoo_accounting",
@@ -1131,12 +1186,10 @@
             "sage_intacct",
             "xero"
           ],
-          "solcat_citations": [
-            "built-environment__digital-contract-management-digital-payment"
-          ]
+          "solcat_citations": []
         },
         {
-          "text": "Import bank statements in standard formats (OFX, QIF, CSV, CAMT.053, MT940)",
+          "text": "Import bank statements in standard formats: OFX, QIF, CSV, CAMT.053, MT940",
           "source": "proxy",
           "proxy_refs": [
             "Statement import in OFX, QIF, CSV, CAMT.053, MT940"
@@ -1152,21 +1205,32 @@
           "solcat_citations": []
         },
         {
-          "text": "Automated reconciliation with configurable matching rules to identify and match transactions",
+          "text": "Integrate with bank systems to facilitate direct payment initiation and receive payment status updates",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00553",
+              "text": "Does your solution integrate with financial institutions or banks' systems to facilitate direct bank payment and payment status update",
+              "q_title": "Bank Payment Integration",
+              "subsection": "Bank Payment Integration",
+              "sources": [
+                "built-environment__digital-contract-management-digital-payment"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "built-environment__digital-contract-management-digital-payment"
+          ]
+        },
+        {
+          "text": "Automatically match and reconcile bank transactions against internal ledger records using configurable matching rules",
           "source": "both",
           "proxy_refs": [
             "Smart reconciliation with auto-matching rules"
           ],
           "imda_refs": [
-            {
-              "id": "req-00114",
-              "text": "An automated reconciliation feature to handle matching of purchase order, goods receipt and invoice, and dispute management to handle payment discrepancies",
-              "q_title": "Automated Payment Reconciliation",
-              "subsection": "Automated Payment Reconciliation",
-              "sources": [
-                "built-environment__digital-contract-management-digital-payment"
-              ]
-            },
             {
               "id": "req-01350",
               "text": "The solution compares bank statements with internal records, highlighting mismatches for quick resolution, thus streamlining the reconciliation process.",
@@ -1185,12 +1249,11 @@
             "xero"
           ],
           "solcat_citations": [
-            "built-environment__digital-contract-management-digital-payment",
             "essential-business__ai-accounting-automation"
           ]
         },
         {
-          "text": "Manual reconciliation with drag-and-match interface for unmatched items",
+          "text": "Support manual reconciliation with drag-and-match interface for unmatched items",
           "source": "proxy",
           "proxy_refs": [
             "Manual reconciliation with drag-and-match"
@@ -1206,11 +1269,9 @@
           "solcat_citations": []
         },
         {
-          "text": "Compare bank statements with internal ledger records and highlight mismatches",
-          "source": "both",
-          "proxy_refs": [
-            "Bank balance vs book balance variance reporting"
-          ],
+          "text": "Compare bank statements with internal records and highlight mismatches for resolution",
+          "source": "imda",
+          "proxy_refs": [],
           "imda_refs": [
             {
               "id": "req-01350",
@@ -1222,55 +1283,13 @@
               ]
             }
           ],
-          "vendor_citations": [
-            "netsuite",
-            "odoo_accounting",
-            "quickbooks",
-            "sage_intacct",
-            "xero"
-          ],
+          "vendor_citations": [],
           "solcat_citations": [
             "essential-business__ai-accounting-automation"
           ]
         },
         {
-          "text": "Reconcile and classify all transaction types including sales, payments, and expenses",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-00237",
-              "text": "Can the solution reconcile, consolidate, and classify all transactions including the sales, payments, and expenses (e.g. platform fees, marketing costs, logistics costs, etc.)",
-              "q_title": "Financial Reconciliation",
-              "subsection": "Financial Reconciliation",
-              "sources": [
-                "essential-business__multichannel-e-commerce-software-mes"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "essential-business__multichannel-e-commerce-software-mes"
-          ]
-        },
-        {
-          "text": "Track and manage petty cash and cash register balances",
-          "source": "proxy",
-          "proxy_refs": [
-            "Petty cash and cash register tracking"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "netsuite",
-            "odoo_accounting",
-            "quickbooks",
-            "sage_intacct",
-            "xero"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Record receipts and payments in the general ledger",
+          "text": "Record and track receipts and payments",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1290,23 +1309,7 @@
           ]
         },
         {
-          "text": "Execute bank transfers between internal accounts",
-          "source": "proxy",
-          "proxy_refs": [
-            "Bank transfer between internal accounts"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "netsuite",
-            "odoo_accounting",
-            "quickbooks",
-            "sage_intacct",
-            "xero"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Track payment status and payment history",
+          "text": "Track payment status and history",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1328,7 +1331,39 @@
           ]
         },
         {
-          "text": "Manage unreconciled items with ageing analysis and clearing workflows",
+          "text": "Manage petty cash and cash register tracking",
+          "source": "proxy",
+          "proxy_refs": [
+            "Petty cash and cash register tracking"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo_accounting",
+            "quickbooks",
+            "sage_intacct",
+            "xero"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Execute bank transfers between internal accounts",
+          "source": "proxy",
+          "proxy_refs": [
+            "Bank transfer between internal accounts"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo_accounting",
+            "quickbooks",
+            "sage_intacct",
+            "xero"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Report on unreconciled items with ageing analysis and clearing workflow",
           "source": "proxy",
           "proxy_refs": [
             "Unreconciled-item ageing and clearing workflow"
@@ -1344,7 +1379,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support multi-signatory approval workflows for payments",
+          "text": "Enforce multi-signatory approval for payments",
           "source": "proxy",
           "proxy_refs": [
             "Multi-signatory payment approval"
@@ -1360,7 +1395,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Report on bank balance versus book balance variances",
+          "text": "Report variance between bank balance and book balance",
           "source": "proxy",
           "proxy_refs": [
             "Bank balance vs book balance variance reporting"
@@ -1374,6 +1409,26 @@
             "xero"
           ],
           "solcat_citations": []
+        },
+        {
+          "text": "Reconcile and consolidate transactions across sales, payments, and expenses (platform fees, marketing, logistics, etc.)",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00237",
+              "text": "Can the solution reconcile, consolidate, and classify all transactions including the sales, payments, and expenses (e.g. platform fees, marketing costs, logistics costs, etc.)",
+              "q_title": "Financial Reconciliation",
+              "subsection": "Financial Reconciliation",
+              "sources": [
+                "essential-business__multichannel-e-commerce-software-mes"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__multichannel-e-commerce-software-mes"
+          ]
         },
         {
           "text": "Handle payment discrepancies and dispute management",
@@ -1399,7 +1454,7 @@
       "stats": {
         "proxy_in": 10,
         "imda_in": 6,
-        "merged_out": 15
+        "merged_out": 16
       }
     },
     {
@@ -1488,7 +1543,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Handle partial exemption and apportionment rules for mixed-supply transactions",
+          "text": "Handle partial exemption and apportionment rules for mixed-use transactions",
           "source": "proxy",
           "proxy_refs": [
             "Partial exemption and apportionment rules"
@@ -1505,10 +1560,10 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate tax audit report with full calculation transparency and line-item detail",
+          "text": "Support tax-inclusive and tax-exclusive line item pricing",
           "source": "proxy",
           "proxy_refs": [
-            "Tax audit report with full calculation transparency"
+            "Tax-inclusive vs tax-exclusive line handling"
           ],
           "imda_refs": [],
           "vendor_citations": [
@@ -1522,7 +1577,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate periodic tax return in local format (e.g. GST F5 for Singapore, VAT elsewhere)",
+          "text": "Generate periodic tax returns (e.g. GST F5 for Singapore, VAT elsewhere) in required format",
           "source": "proxy",
           "proxy_refs": [
             "Periodic GST / VAT return generation (e.g. Singapore GST F5)"
@@ -1539,7 +1594,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Submit tax returns to revenue authority via local API (e.g. IRAS Seamless Filing for Singapore)",
+          "text": "Submit tax returns to revenue authority via API integration (e.g. IRAS Seamless Filing for Singapore)",
           "source": "proxy",
           "proxy_refs": [
             "IRAS Seamless Filing API submission for Singapore"
@@ -1573,7 +1628,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support country-specific tax localisation packages and regulatory requirements",
+          "text": "Provide country-specific tax localisation packages for regulatory compliance",
           "source": "proxy",
           "proxy_refs": [
             "Country-specific fiscal localisation packages"
@@ -1590,10 +1645,10 @@
           "solcat_citations": []
         },
         {
-          "text": "Handle tax-inclusive and tax-exclusive pricing on line items and documents",
+          "text": "Generate tax audit report with full calculation transparency and supporting detail",
           "source": "proxy",
           "proxy_refs": [
-            "Tax-inclusive vs tax-exclusive line handling"
+            "Tax audit report with full calculation transparency"
           ],
           "imda_refs": [],
           "vendor_citations": [
@@ -1824,7 +1879,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support consolidated financial reporting across multiple entities and per-entity views",
+          "text": "Support consolidated financial statements and per-entity financial views",
           "source": "both",
           "proxy_refs": [
             "Consolidated and per-entity views"
@@ -1854,21 +1909,11 @@
         },
         {
           "text": "Export financial statements to PDF, Excel, and CSV formats",
-          "source": "both",
+          "source": "proxy",
           "proxy_refs": [
             "Export to PDF, Excel, CSV"
           ],
-          "imda_refs": [
-            {
-              "id": "req-01118",
-              "text": "Reports and Payment",
-              "q_title": "NTPS VAS Categories",
-              "subsection": "NTP VAS Categories",
-              "sources": [
-                "logistics__networked-trade-platform-value-added-services"
-              ]
-            }
-          ],
+          "imda_refs": [],
           "vendor_citations": [
             "netsuite",
             "odoo_accounting",
@@ -1877,12 +1922,10 @@
             "wikipedia_financial_accounting",
             "xero"
           ],
-          "solcat_citations": [
-            "logistics__networked-trade-platform-value-added-services"
-          ]
+          "solcat_citations": []
         },
         {
-          "text": "Provide custom report builder with formula rows for user-defined financial reports",
+          "text": "Provide custom report builder with formula rows for tailored financial reporting",
           "source": "proxy",
           "proxy_refs": [
             "Custom report builder with formula rows"
@@ -1946,7 +1989,7 @@
           ]
         },
         {
-          "text": "Calculate and display key financial metrics including operating profit, cash ratios, current ratio, gross margin, return on capital, gearing ratio, and interest coverage",
+          "text": "Calculate and display key financial ratios and metrics including operating profit, cash ratio, current ratio, gross margin, return on capital, return on sales, gearing ratio, and interest coverage",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1970,24 +2013,35 @@
           ]
         },
         {
-          "text": "Generate invoice and receipt reports",
+          "text": "Track profit and loss by product, service, or business line",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {
-              "id": "req-00370",
-              "text": "Create statement of accounts",
-              "q_title": "Dashboards and Reports (Accounting)",
-              "subsection": "Functional Requirements",
+              "id": "req-01374",
+              "text": "Track Profit and Loss of packages",
+              "q_title": "Tour Packaging Management Features [Non-Mandatory]",
+              "subsection": "Core Functions",
               "sources": [
-                "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-                "essential-business__accounting-management-+-sales-management-system",
-                "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+                "tourism-travel-agent__travel-management-system-e-commerce",
+                "tourism-travel-agent__travel-management-system-operations"
               ]
-            },
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "tourism-travel-agent__travel-management-system-e-commerce",
+            "tourism-travel-agent__travel-management-system-operations"
+          ]
+        },
+        {
+          "text": "Support multiple payment modes including cash, check, and electronic payment methods with tracking and reconciliation",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
             {
-              "id": "req-00972",
-              "text": "Paying processing with invoice and receipt generation",
+              "id": "req-01379",
+              "text": "Tracking of different payment modes (cash, check, e-payment : NETS, VISA, FAST etc.) and bank reconciliation",
               "q_title": "Finance Management",
               "subsection": "",
               "sources": [
@@ -1999,17 +2053,14 @@
           "vendor_citations": [],
           "solcat_citations": [
             "early-childhood__pre-school-management-system",
-            "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
-            "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-            "essential-business__accounting-management-+-sales-management-system",
-            "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+            "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
           ]
         }
       ],
       "stats": {
         "proxy_in": 10,
         "imda_in": 15,
-        "merged_out": 13
+        "merged_out": 14
       }
     },
     {
@@ -2097,7 +2148,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Process asset disposals and automatically calculate and record gains or losses on disposal.",
+          "text": "Process asset disposals and automatically calculate gain or loss on disposal.",
           "source": "proxy",
           "proxy_refs": [
             "Asset disposal with gain / loss calculation"
@@ -2113,7 +2164,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Transfer assets between cost centres or locations with automatic GL posting.",
+          "text": "Transfer assets between cost centres or locations with audit trail.",
           "source": "proxy",
           "proxy_refs": [
             "Asset transfer between cost centres or locations"
@@ -2129,7 +2180,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Record asset revaluations and impairments with corresponding GL entries.",
+          "text": "Record asset revaluations and impairments with supporting documentation.",
           "source": "proxy",
           "proxy_refs": [
             "Asset revaluation and impairment"
@@ -2161,7 +2212,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support asset identification through tagging and barcode assignment for physical verification.",
+          "text": "Support asset identification via tagging and barcode for physical verification and reconciliation.",
           "source": "proxy",
           "proxy_refs": [
             "Asset tagging, barcode, and physical verification"
@@ -2177,7 +2228,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track and manage residual value for each asset.",
+          "text": "Track and manage residual value assumptions for each asset.",
           "source": "proxy",
           "proxy_refs": [
             "Useful life and residual value tracking"
@@ -2307,7 +2358,17 @@
           "proxy_refs": [
             "Actual vs budget variance reporting"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00203",
+              "text": "Budget breakdown",
+              "q_title": "Cross-border E-commerce Strategy Development",
+              "subsection": "",
+              "sources": [
+                "essential-business__cross-border-e-commerce-packages"
+              ]
+            }
+          ],
           "vendor_citations": [
             "erpnext",
             "netsuite",
@@ -2316,7 +2377,9 @@
             "sage_intacct",
             "xero"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "essential-business__cross-border-e-commerce-packages"
+          ]
         },
         {
           "text": "Support rolling forecasts with period-by-period updates throughout the fiscal year",
@@ -2336,7 +2399,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Enable driver-based planning using business drivers (headcount × rate, volume × price) to build budgets from operational assumptions",
+          "text": "Enable driver-based planning using operational metrics (headcount × rate, volume × price, etc.)",
           "source": "proxy",
           "proxy_refs": [
             "Driver-based planning (headcount × rate, volume × price)"
@@ -2353,7 +2416,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Provide what-if scenario modelling to test budget impacts of alternative assumptions",
+          "text": "Provide what-if scenario modelling to test budget assumptions and impacts",
           "source": "proxy",
           "proxy_refs": [
             "What-if scenario modelling"
@@ -2370,7 +2433,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track purchase order commitments against budget to prevent overspend",
+          "text": "Track purchase order commitments and encumbrances against budget allocations",
           "source": "proxy",
           "proxy_refs": [
             "Commitment accounting against budget on PO"
@@ -2477,7 +2540,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Calculate and post realised foreign exchange gains and losses to the general ledger upon payment application",
+          "text": "Calculate and post realised foreign exchange gains and losses when payments are applied to open receivables and payables",
           "source": "proxy",
           "proxy_refs": [
             "Realised FX gain / loss on payment application"
@@ -2509,7 +2572,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Calculate and post unrealised foreign exchange gains and losses at period end with automatic reversal in the following period",
+          "text": "Calculate and post unrealised foreign exchange gains and losses for open items at period end with automatic reversal in the following period",
           "source": "proxy",
           "proxy_refs": [
             "Unrealised FX gain / loss posting with reversal"
@@ -2766,7 +2829,7 @@
       ],
       "requirements": [
         {
-          "text": "Support purchase requisition creation with multi-level approval workflow based on amount thresholds and cost center authorization rules",
+          "text": "Create purchase requisitions with multi-level approval workflow based on amount thresholds and organizational hierarchy",
           "source": "proxy",
           "proxy_refs": [
             "Purchase requisition with approval workflow"
@@ -2781,7 +2844,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Validate purchase order creation against available budget and prevent orders that would exceed encumbered or unencumbered budget limits",
+          "text": "Create purchase orders with real-time budget availability check and validation before commitment",
           "source": "proxy",
           "proxy_refs": [
             "Purchase order creation with budget check"
@@ -2796,7 +2859,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Record budget encumbrance (commitment) at purchase order creation and release, reducing available budget until goods receipt or invoice",
+          "text": "Encumber budget at purchase order creation to reserve funds against approved commitments",
           "source": "proxy",
           "proxy_refs": [
             "Encumbrance / commitment accounting against budget"
@@ -2811,7 +2874,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Match goods receipt to purchase order line items, validating quantity and linking receipt to PO for downstream invoice matching",
+          "text": "Match goods receipts to purchase order lines and validate receipt quantities and dates",
           "source": "proxy",
           "proxy_refs": [
             "Goods receipt matching to PO line"
@@ -2826,24 +2889,10 @@
           "solcat_citations": []
         },
         {
-          "text": "Perform three-way matching of purchase order, goods receipt, and vendor invoice to identify discrepancies before payment",
+          "text": "Perform three-way matching of purchase order, goods receipt, and vendor invoice with configurable tolerance rules for price and quantity variances",
           "source": "proxy",
           "proxy_refs": [
-            "Vendor bill match against PO and receipt (3-way)"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "erpnext",
-            "ms_dynamics_365_finance",
-            "netsuite",
-            "odoo_accounting"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Configure tolerance thresholds for price and quantity variances in invoice matching, with options to auto-approve or flag exceptions",
-          "source": "proxy",
-          "proxy_refs": [
+            "Vendor bill match against PO and receipt (3-way)",
             "Price and quantity tolerance configuration"
           ],
           "imda_refs": [],
@@ -2856,7 +2905,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support blanket purchase orders and contract-based release orders with scheduled or on-demand releases against negotiated terms",
+          "text": "Support blanket purchase orders with release-against-contract functionality for recurring or framework agreements",
           "source": "proxy",
           "proxy_refs": [
             "Blanket PO and release-against-contract"
@@ -2871,7 +2920,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Accrue liability for goods received but not yet invoiced at period end, reversing accrual upon invoice receipt",
+          "text": "Accrue unbilled received goods at period end to recognize expense and liability in the correct accounting period",
           "source": "proxy",
           "proxy_refs": [
             "Accrual of unbilled received goods at period end"
@@ -2886,7 +2935,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Capture and allocate landed costs (freight, duties, insurance) to purchase order lines and distribute to inventory or expense accounts",
+          "text": "Capture and allocate landed costs (freight, duties, handling) to purchase order lines and inventory",
           "source": "proxy",
           "proxy_refs": [
             "Landed cost capture and allocation"
@@ -2903,8 +2952,8 @@
       ],
       "stats": {
         "proxy_in": 9,
-        "imda_in": 0,
-        "merged_out": 9
+        "imda_in": 1,
+        "merged_out": 8
       }
     },
     {
@@ -2968,7 +3017,7 @@
           ]
         },
         {
-          "text": "Track project expenses with receipt attachment and audit trail",
+          "text": "Track project expenses with receipt attachment and documentation",
           "source": "proxy",
           "proxy_refs": [
             "Project expense tracking with receipt upload"
@@ -2998,7 +3047,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Recognize revenue using percentage-of-completion method based on project progress",
+          "text": "Support percentage-of-completion revenue recognition method",
           "source": "proxy",
           "proxy_refs": [
             "Percentage-of-completion revenue recognition"
@@ -3013,7 +3062,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Define and maintain cost centre and department hierarchies for cost allocation",
+          "text": "Organize costs and revenues across cost centre and department hierarchies",
           "source": "proxy",
           "proxy_refs": [
             "Cost centre and department hierarchy"
@@ -3029,21 +3078,35 @@
         },
         {
           "text": "Generate project profitability reports showing revenue, costs, and margin by project",
-          "source": "proxy",
+          "source": "both",
           "proxy_refs": [
             "Project profitability reporting (revenue minus cost)"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01374",
+              "text": "Track Profit and Loss of packages",
+              "q_title": "Tour Packaging Management Features [Non-Mandatory]",
+              "subsection": "Core Functions",
+              "sources": [
+                "tourism-travel-agent__travel-management-system-e-commerce",
+                "tourism-travel-agent__travel-management-system-operations"
+              ]
+            }
+          ],
           "vendor_citations": [
             "ms_dynamics_365_finance",
             "netsuite",
             "odoo_accounting",
             "sage_intacct"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "tourism-travel-agent__travel-management-system-e-commerce",
+            "tourism-travel-agent__travel-management-system-operations"
+          ]
         },
         {
-          "text": "Report on resource utilization rates and capacity planning across projects",
+          "text": "Report resource utilization metrics by project and resource",
           "source": "proxy",
           "proxy_refs": [
             "Resource utilisation reporting"
@@ -3058,7 +3121,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support milestone-based billing with retention amount tracking and release schedules",
+          "text": "Support milestone-based billing with retention amount tracking",
           "source": "proxy",
           "proxy_refs": [
             "Milestone billing and retention amounts"
@@ -3073,7 +3136,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Apply allocation rules across multiple cost dimensions (project, cost centre, department)",
+          "text": "Apply allocation rules to distribute costs across multiple projects and dimensions",
           "source": "proxy",
           "proxy_refs": [
             "Allocation rules across dimensions"
@@ -3108,7 +3171,7 @@
           ]
         },
         {
-          "text": "Provide unified access to project progress tracking, material stock levels, and payment records",
+          "text": "Provide unified access to project progress tracking, site coordination records, material inventory levels, and payment history",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -3130,7 +3193,7 @@
       ],
       "stats": {
         "proxy_in": 10,
-        "imda_in": 3,
+        "imda_in": 4,
         "merged_out": 12
       }
     },
@@ -3167,7 +3230,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Automatically identify, tag, and balance inter-company transactions across entities",
+          "text": "Automatically identify, tag, and balance inter-company transactions across legal entities",
           "source": "proxy",
           "proxy_refs": [
             "Inter-company transaction tagging and auto-balance"
@@ -3182,24 +3245,10 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate and post inter-company elimination entries to remove intra-group trading from consolidated results",
+          "text": "Generate and post inter-company elimination entries to remove inter-company sales, receivables, payables, and profits from consolidated results",
           "source": "proxy",
           "proxy_refs": [
-            "Inter-company elimination entries"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "netsuite",
-            "odoo_accounting",
-            "sage_intacct",
-            "sap_s4hana_finance"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Eliminate unrealized inter-company profit from inventory and fixed assets in consolidation",
-          "source": "proxy",
-          "proxy_refs": [
+            "Inter-company elimination entries",
             "Elimination of unrealised inter-company profit"
           ],
           "imda_refs": [],
@@ -3242,7 +3291,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Produce consolidated trial balance and consolidated financial statements (income statement, balance sheet, cash flow)",
+          "text": "Produce consolidated trial balance and consolidated financial statements (income statement, balance sheet, cash flow) at group level",
           "source": "proxy",
           "proxy_refs": [
             "Consolidated trial balance and statements"
@@ -3257,7 +3306,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Maintain parallel local-GAAP and group-GAAP accounting books for each entity",
+          "text": "Maintain parallel local-GAAP and group-GAAP accounting records and reporting books",
           "source": "proxy",
           "proxy_refs": [
             "Parallel local-GAAP and group-GAAP books"
@@ -3276,6 +3325,21 @@
           "source": "proxy",
           "proxy_refs": [
             "Goodwill and acquisition accounting"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo_accounting",
+            "sage_intacct",
+            "sap_s4hana_finance"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Eliminate unrealized inter-company profits from inventory and fixed assets in consolidated statements",
+          "source": "proxy",
+          "proxy_refs": [
+            "Elimination of unrealised inter-company profit"
           ],
           "imda_refs": [],
           "vendor_citations": [
@@ -3324,7 +3388,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Build and maintain a standalone selling price (SSP) library with methods for determining SSP (observable market price, adjusted market assessment, expected cost plus margin) for all distinct performance obligations",
+          "text": "Establish and manage a standalone selling price (SSP) library with methods for determining SSP (observable market price, adjusted market assessment, expected cost plus margin) for each distinct performance obligation",
           "source": "proxy",
           "proxy_refs": [
             "Standalone selling price (SSP) library"
@@ -3352,7 +3416,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Define and apply recognition schedules for each performance obligation, distinguishing between point-in-time recognition (upon delivery/transfer of control) and over-time recognition (based on progress toward satisfaction)",
+          "text": "Define and apply recognition schedules that determine whether revenue is recognized at a point in time or over time based on contract terms and performance obligation characteristics",
           "source": "proxy",
           "proxy_refs": [
             "Recognition schedule (point in time vs over time)"
@@ -3366,7 +3430,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track deferred revenue and contract liabilities, automatically recognizing revenue as performance obligations are satisfied",
+          "text": "Track deferred revenue and contract liabilities, including opening balances, period activity, and period-end balances for financial reporting",
           "source": "proxy",
           "proxy_refs": [
             "Deferred revenue and contract-liability tracking"
@@ -3380,7 +3444,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Handle contract modifications (scope changes, price adjustments) and determine whether they create new contracts or amendments to existing contracts",
+          "text": "Process contract modifications (scope changes, price adjustments) and determine whether they create separate performance obligations or modify existing ones",
           "source": "proxy",
           "proxy_refs": [
             "Contract modification handling"
@@ -3394,7 +3458,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Estimate and constrain variable consideration (discounts, rebates, penalties, contingent fees) using the most likely amount or expected value method, with periodic reassessment",
+          "text": "Estimate and constrain variable consideration (discounts, rebates, penalties, contingent fees) using the most likely amount or expected value method, with reassessment at each reporting period",
           "source": "proxy",
           "proxy_refs": [
             "Variable consideration and constraint estimation"
@@ -3408,7 +3472,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate ASC 606 / IFRS 15 disclosure reports including contract assets, contract liabilities, performance obligations, and revenue recognition policies",
+          "text": "Generate ASC 606 / IFRS 15 disclosure reports including revenue by performance obligation type, timing of recognition, contract asset/liability movements, and transaction price allocation methodology",
           "source": "proxy",
           "proxy_refs": [
             "Disclosure reporting for ASC 606 / IFRS 15"
@@ -3422,7 +3486,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Provide revenue waterfall and backlog reporting to track recognized revenue, deferred amounts, and future revenue potential by contract, customer, or business segment",
+          "text": "Produce revenue waterfall and backlog reporting showing recognized revenue, deferred amounts, and future revenue commitments by period and contract segment",
           "source": "proxy",
           "proxy_refs": [
             "Revenue waterfall and backlog reporting"
@@ -3486,7 +3550,7 @@
           ]
         },
         {
-          "text": "Automatically place credit hold on orders when customer credit limit is exceeded",
+          "text": "Apply automatic credit hold on orders when customer exposure exceeds assigned credit limit",
           "source": "proxy",
           "proxy_refs": [
             "Credit hold on orders when limit exceeded"
@@ -3500,7 +3564,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Assign credit scores and risk categories to customers for credit assessment",
+          "text": "Assign and track customer credit scores and risk categories to inform credit decisions",
           "source": "proxy",
           "proxy_refs": [
             "Credit scoring and risk category"
@@ -3514,7 +3578,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Configure and execute automated dunning sequences via email, SMS, and letter across multiple collection stages",
+          "text": "Configure and execute automated dunning sequences with multiple communication channels (email, SMS, letter) based on payment aging",
           "source": "proxy",
           "proxy_refs": [
             "Automated dunning sequences (email, SMS, letter)"
@@ -3528,7 +3592,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track and manage payment promises with automated follow-up reminders and status updates",
+          "text": "Record and track customer payment promises with automated follow-up reminders and status updates",
           "source": "proxy",
           "proxy_refs": [
             "Payment-promise tracking and follow-up"
@@ -3542,7 +3606,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Capture customer disputes and manage resolution workflow with audit trail",
+          "text": "Capture, document, and manage invoice disputes with resolution workflow and audit trail",
           "source": "proxy",
           "proxy_refs": [
             "Dispute capture and resolution workflow"
@@ -3556,7 +3620,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Report on days sales outstanding (DSO) and aging of receivables",
+          "text": "Generate days-sales-outstanding (DSO) reporting and aging analysis by customer and time period",
           "source": "proxy",
           "proxy_refs": [
             "DSO (days sales outstanding) reporting"
@@ -3584,7 +3648,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Handover accounts to collection agencies with escrow management and recovery tracking",
+          "text": "Transfer delinquent accounts to collection agencies with escrow management and recovery tracking",
           "source": "proxy",
           "proxy_refs": [
             "Collection agency handover and escrow"
@@ -3598,7 +3662,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Define and maintain payment terms and payment modes per customer or customer segment",
+          "text": "Define and maintain credit control terms including payment terms and accepted payment modes by customer or customer segment",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -3731,7 +3795,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Evidence export bundle for external auditors including transaction details, approvals, and control logs",
+          "text": "Evidence export bundle for external auditors including transaction details, approvals, and control execution logs",
           "source": "proxy",
           "proxy_refs": [
             "Evidence export bundle for auditors"
@@ -3746,7 +3810,7 @@
           "solcat_citations": []
         },
         {
-          "text": "SOX and internal control framework (ICFR) control testing support with documented evidence linkage",
+          "text": "SOX and internal control framework (ICFR) control testing support with documented evidence of control execution",
           "source": "proxy",
           "proxy_refs": [
             "SOX / ICFR control testing support"
@@ -3876,7 +3940,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support bank reconciliation sign-off as part of the close process",
+          "text": "Support bank reconciliation with sign-off capability at period close",
           "source": "proxy",
           "proxy_refs": [
             "Bank reconciliation sign-off"
@@ -3891,7 +3955,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Execute fixed-asset depreciation calculations and posting at period-end",
+          "text": "Execute fixed-asset depreciation calculations and journal posting at period end",
           "source": "proxy",
           "proxy_refs": [
             "Fixed-asset depreciation run"
@@ -4031,7 +4095,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Model cashflow scenarios including stress, base, and upside cases",
+          "text": "Model multiple cashflow scenarios including stress, base, and upside cases",
           "source": "proxy",
           "proxy_refs": [
             "Scenario modelling (stress, base, upside)"
@@ -4087,7 +4151,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Provide liquidity dashboard with minimum-cash threshold alerts",
+          "text": "Display liquidity dashboard with minimum cash balance alerts and warnings",
           "source": "proxy",
           "proxy_refs": [
             "Liquidity dashboard with minimum-cash alerts"
@@ -4099,34 +4163,12 @@
             "sap_s4hana_finance"
           ],
           "solcat_citations": []
-        },
-        {
-          "text": "Calculate sales tax impact on cashflow forecasts",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-00213",
-              "text": "Calculate sales tax and cashflow",
-              "q_title": "Account Management Features [Non-Mandatory]",
-              "subsection": "Core Functions",
-              "sources": [
-                "tourism-travel-agent__travel-management-system-e-commerce",
-                "tourism-travel-agent__travel-management-system-operations"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "tourism-travel-agent__travel-management-system-e-commerce",
-            "tourism-travel-agent__travel-management-system-operations"
-          ]
         }
       ],
       "stats": {
         "proxy_in": 9,
         "imda_in": 1,
-        "merged_out": 10
+        "merged_out": 9
       }
     },
     {
@@ -4328,7 +4370,7 @@
           ]
         },
         {
-          "text": "Support e-payment of salaries to staff bank accounts",
+          "text": "Support electronic salary payment to employees",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -4358,7 +4400,7 @@
           ]
         },
         {
-          "text": "Facilitate annual tax filing (IRAS) data export",
+          "text": "Facilitate annual tax filing data preparation (IRAS)",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -4388,7 +4430,7 @@
           ]
         },
         {
-          "text": "Process and post expense, benefit, and medical claims to GL",
+          "text": "Process and post expense, benefit, and medical claims",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -4509,7 +4551,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Auto-create vendor bill from received PEPPOL invoice data",
+          "text": "Auto-create vendor bill in accounts payable from received PEPPOL invoice",
           "source": "proxy",
           "proxy_refs": [
             "Auto-create vendor bill from received PEPPOL invoice"
@@ -4564,7 +4606,7 @@
       ],
       "requirements": [
         {
-          "text": "Accept credit card payments (Visa, MasterCard, and other major schemes) through integrated payment gateways",
+          "text": "Accept credit card payments (Visa, MasterCard, and other major card schemes) through integrated payment gateways",
           "source": "both",
           "proxy_refs": [
             "Credit card processing (Stripe, Adyen, Worldpay)"
@@ -4621,12 +4663,21 @@
           ]
         },
         {
-          "text": "Accept local payment scheme payments (PayNow, FAST, GIRO, NETs, GrabPay)",
+          "text": "Support local payment schemes including PayNow, FAST, and GIRO",
           "source": "both",
           "proxy_refs": [
             "Local scheme support (PayNow, FAST, GIRO in Singapore)"
           ],
           "imda_refs": [
+            {
+              "id": "req-00875",
+              "text": "Make secured e-payment* (credit card, PayNow, or equivalent) directly via the app or website",
+              "q_title": "Digital Ordering and Payment",
+              "subsection": "Customer Capabilities",
+              "sources": [
+                "food-services__connected-business-suite"
+              ]
+            },
             {
               "id": "req-01302",
               "text": "Support for local payment methods (PayNow, GrabPay, etc.)",
@@ -4644,11 +4695,12 @@
             "xero"
           ],
           "solcat_citations": [
-            "essential-business__e-commerce-online-shop-b2c"
+            "essential-business__e-commerce-online-shop-b2c",
+            "food-services__connected-business-suite"
           ]
         },
         {
-          "text": "Accept digital wallet and PayPal payments",
+          "text": "Integrate with PayPal and digital wallet payment methods",
           "source": "both",
           "proxy_refs": [
             "PayPal and digital wallet integration"
@@ -4684,7 +4736,7 @@
           ]
         },
         {
-          "text": "Generate QR-code payment links on invoices for customer payment initiation",
+          "text": "Generate QR codes on invoices to enable customer payment initiation",
           "source": "proxy",
           "proxy_refs": [
             "QR-code payment generation on invoice"
@@ -4719,32 +4771,58 @@
           "proxy_refs": [
             "Automatic payment-to-invoice matching"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01373",
+              "text": "Track payment",
+              "q_title": "Booking Management Features",
+              "subsection": "Core Functions",
+              "sources": [
+                "tourism-travel-agent__travel-management-system-e-commerce",
+                "tourism-travel-agent__travel-management-system-operations"
+              ]
+            }
+          ],
           "vendor_citations": [
             "odoo_accounting",
             "odoo_invoicing",
             "quickbooks",
             "xero"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "tourism-travel-agent__travel-management-system-e-commerce",
+            "tourism-travel-agent__travel-management-system-operations"
+          ]
         },
         {
-          "text": "Reconcile payment gateway settlements into bank accounts, including fee allocation",
+          "text": "Reconcile payment gateway settlements into bank accounts, including fee allocation and split accounting",
           "source": "proxy",
           "proxy_refs": [
             "Gateway settlement reconciliation with fee split"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00784",
+              "text": "Integration with payment systems for seamless transactions",
+              "q_title": "Loyalty Program Management",
+              "subsection": "Loyalty Program Requirements",
+              "sources": [
+                "essential-business__e-loyalty-and-marketing-automation"
+              ]
+            }
+          ],
           "vendor_citations": [
             "odoo_accounting",
             "odoo_invoicing",
             "quickbooks",
             "xero"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "essential-business__e-loyalty-and-marketing-automation"
+          ]
         },
         {
-          "text": "Process full and partial refunds through payment gateways",
+          "text": "Process full and partial refunds through the payment gateway",
           "source": "both",
           "proxy_refs": [
             "Refund processing through gateway"
@@ -4771,7 +4849,7 @@
           ]
         },
         {
-          "text": "Enforce PCI-DSS compliance with no local storage of card data",
+          "text": "Enforce PCI-DSS compliance by not storing card data locally",
           "source": "proxy",
           "proxy_refs": [
             "PCI-DSS compliance (no card data stored locally)"
@@ -4806,53 +4884,27 @@
           ]
         },
         {
-          "text": "Configure and maintain customer payment methods and payment terms",
+          "text": "Provide secure checkout process with encrypted payment data transmission",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {
-              "id": "req-01224",
-              "text": "Set up and edit customer payment",
-              "q_title": "Sales and Delivery Management",
-              "subsection": "Functional Requirements",
+              "id": "req-01192",
+              "text": "Secure checkout process with multiple payment options",
+              "q_title": "E-commerce Online Shop",
+              "subsection": "Core E-commerce Requirements",
               "sources": [
-                "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-                "essential-business__accounting-management-+-sales-management-system",
-                "essential-business__inventory-management-and-sales-management-system"
-              ]
-            },
-            {
-              "id": "req-01236",
-              "text": "Set up and edit modes of payment",
-              "q_title": "Customer Groups Management",
-              "subsection": "Functional Requirements",
-              "sources": [
-                "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-                "essential-business__accounting-management-+-sales-management-system",
-                "essential-business__inventory-management-and-sales-management-system",
-                "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-              ]
-            },
-            {
-              "id": "req-01252",
-              "text": "Set up and edit terms & modes of payment",
-              "q_title": "Customer Groups Management",
-              "subsection": "",
-              "sources": [
-                "essential-business__inventory-management-and-sales-management-system"
+                "essential-business__e-commerce-online-shop-b2c"
               ]
             }
           ],
           "vendor_citations": [],
           "solcat_citations": [
-            "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-            "essential-business__accounting-management-+-sales-management-system",
-            "essential-business__inventory-management-and-sales-management-system",
-            "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+            "essential-business__e-commerce-online-shop-b2c"
           ]
         },
         {
-          "text": "Route invoices to Finance department for payment processing approval",
+          "text": "Route invoices to Finance department for payment approval and processing",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -4874,7 +4926,7 @@
       ],
       "stats": {
         "proxy_in": 9,
-        "imda_in": 17,
+        "imda_in": 15,
         "merged_out": 12
       }
     },
@@ -4888,7 +4940,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "advanced",
+      "sme_tier": "preferred",
       "cited_sources": [
         "netsuite",
         "sap_s4hana_finance",
@@ -4897,7 +4949,7 @@
       ],
       "requirements": [
         {
-          "text": "Support mapping of general ledger accounts to the applicable ACRA XBRL taxonomy version, with ability to configure both simplified and full taxonomy variants.",
+          "text": "Support mapping of general ledger accounts to the applicable ACRA XBRL taxonomy (both simplified and full versions) with configurable account-to-concept mappings.",
           "source": "proxy",
           "proxy_refs": [
             "ACRA XBRL taxonomy mapping (simplified / full)"
@@ -4942,7 +4994,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate XBRL instance files in the format and structure required by ACRA for statutory filing.",
+          "text": "Generate XBRL instance documents in the format and schema version mandated by ACRA for statutory filing.",
           "source": "proxy",
           "proxy_refs": [
             "XBRL file generation in approved format"
@@ -4972,7 +5024,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support comparative financial figures from prior reporting periods within the XBRL instance.",
+          "text": "Support comparative financial figures from prior periods within the XBRL instance to enable year-on-year analysis.",
           "source": "proxy",
           "proxy_refs": [
             "Prior-year comparative figures"
@@ -4987,7 +5039,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Provide workflow for audit firm review, approval, and digital sign-off of XBRL filings before submission to ACRA.",
+          "text": "Provide a workflow for audit firm review, approval, and digital sign-off of XBRL filings before submission to ACRA.",
           "source": "proxy",
           "proxy_refs": [
             "Audit-firm review and sign-off workflow"
@@ -5002,7 +5054,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Maintain filing history and support resubmission of corrected or amended XBRL filings with audit trail.",
+          "text": "Maintain a filing history log and support resubmission of corrected or amended XBRL filings with version tracking.",
           "source": "proxy",
           "proxy_refs": [
             "Filing history and resubmission support"
@@ -5082,7 +5134,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Calculate and post monthly right-of-use asset amortisation and lease liability interest expense",
+          "text": "Calculate and post monthly amortisation of right-of-use assets and interest expense on lease liabilities",
           "source": "proxy",
           "proxy_refs": [
             "Monthly amortisation and interest posting"
@@ -5096,7 +5148,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Process lease modifications and remeasure right-of-use assets and lease liabilities upon changes to lease terms or payments",
+          "text": "Handle lease modifications and remeasure right-of-use assets and liabilities upon changes to lease terms or payments",
           "source": "proxy",
           "proxy_refs": [
             "Lease modification and remeasurement"
@@ -5110,7 +5162,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Apply short-term lease and low-value asset exemptions, excluding qualifying leases from capitalisation",
+          "text": "Apply short-term lease exemption (≤12 months) and low-value asset exemption to exclude qualifying leases from capitalisation",
           "source": "proxy",
           "proxy_refs": [
             "Short-term and low-value lease exemption"
@@ -5124,7 +5176,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate lease disclosure reports for financial statement notes, including lease liability maturity schedules and right-of-use asset detail",
+          "text": "Generate lease disclosure report for financial statement notes including lease obligations, payment schedules, and maturity analysis",
           "source": "proxy",
           "proxy_refs": [
             "Lease disclosure report for notes"
@@ -5138,7 +5190,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Handle variable lease payments and remeasure lease liabilities when variable components change",
+          "text": "Process variable lease payments and adjust lease liability when payment amounts change",
           "source": "proxy",
           "proxy_refs": [
             "Variable-lease-payment handling"
@@ -5152,7 +5204,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support parallel IFRS 16 and local-GAAP lease accounting treatments for dual reporting",
+          "text": "Support parallel accounting treatment for IFRS 16 and local GAAP requirements where applicable",
           "source": "proxy",
           "proxy_refs": [
             "Parallel IFRS 16 vs local-GAAP treatment"
@@ -5202,7 +5254,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track fixed deposits and money-market placements with placement date, tenor, interest rate, and settlement details.",
+          "text": "Track fixed deposits and money-market placements with placement date, tenor, rate, and settlement details.",
           "source": "proxy",
           "proxy_refs": [
             "Fixed deposit and money-market placement tracking"
@@ -5216,7 +5268,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Manage foreign exchange forward and swap contracts, including strike rates, settlement dates, and notional amounts.",
+          "text": "Manage FX forward and swap contracts, including strike rates, settlement dates, and notional amounts.",
           "source": "proxy",
           "proxy_refs": [
             "FX forward and swap contract management"
@@ -5244,7 +5296,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Designate hedging relationships and perform hedge effectiveness testing to support hedge accounting treatment.",
+          "text": "Designate hedges and perform hedge effectiveness testing to support hedge accounting treatment.",
           "source": "proxy",
           "proxy_refs": [
             "Hedge designation and effectiveness testing"
@@ -5258,7 +5310,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Accrue interest on investments and process maturity events, including principal repayment and interest settlement.",
+          "text": "Accrue interest on investments and process maturity events, including principal repayment and reinvestment workflows.",
           "source": "proxy",
           "proxy_refs": [
             "Interest accrual and maturity processing"
@@ -5300,7 +5352,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate treasury policy compliance reports to demonstrate adherence to investment mandates, counterparty limits, and derivative usage policies.",
+          "text": "Generate treasury policy compliance reports to validate adherence to investment mandates, counterparty limits, and instrument restrictions.",
           "source": "proxy",
           "proxy_refs": [
             "Treasury policy compliance reporting"
@@ -5674,6 +5726,7 @@
       "description": "Machine learning applied to finance workflows — invoice OCR, fraud and anomaly detection, cashflow prediction, automated reconciliation, and natural-language query of financial data.",
       "priority_proxy": "advanced",
       "applicability": [
+        "sme",
         "mid_market",
         "enterprise"
       ],
@@ -5713,9 +5766,11 @@
           ]
         },
         {
-          "text": "Automatically populate extracted invoice and receipt data into the accounting system with validation checks before final entry.",
-          "source": "imda",
-          "proxy_refs": [],
+          "text": "Automatically populate extracted invoice and receipt data into the accounting system with validation checks to ensure accuracy before final entry.",
+          "source": "both",
+          "proxy_refs": [
+            "OCR and ML extraction from vendor bills and receipts"
+          ],
           "imda_refs": [
             {
               "id": "req-00651",
@@ -5727,13 +5782,18 @@
               ]
             }
           ],
-          "vendor_citations": [],
+          "vendor_citations": [
+            "netsuite",
+            "odoo_accounting",
+            "sage_intacct",
+            "sap_s4hana_finance"
+          ],
           "solcat_citations": [
             "essential-business__ai-accounting-automation"
           ]
         },
         {
-          "text": "Achieve and maintain over 95% accuracy in invoice and receipt data extraction, validated against manually verified reference data.",
+          "text": "Achieve and maintain invoice and receipt processing accuracy of 95% or higher, validated through cross-reference with manually verified data.",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -5753,7 +5813,7 @@
           ]
         },
         {
-          "text": "Automatically categorise financial documents (invoices, receipts) based on content, with support for user-defined custom categories.",
+          "text": "Categorise financial documents (invoices, receipts) based on content, supporting user-defined categories and adapting categorisation logic over time.",
           "source": "both",
           "proxy_refs": [
             "Auto-categorisation of bank transactions"
@@ -5780,7 +5840,7 @@
           ]
         },
         {
-          "text": "Learn from user corrections to miscategorised transactions and apply similar logic to future entries automatically.",
+          "text": "Learn from user corrections to miscategorised transactions and automatically apply similar corrections to future entries.",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -5800,10 +5860,11 @@
           ]
         },
         {
-          "text": "Detect anomalies and irregularities in journal entries, expenses, and payroll data.",
+          "text": "Detect anomalies and irregularities in journal entries, expenses, and payroll data, flagging suspicious patterns for review.",
           "source": "both",
           "proxy_refs": [
-            "Anomaly detection on journal entries and expenses"
+            "Anomaly detection on journal entries and expenses",
+            "OCR and ML extraction from vendor bills and receipts"
           ],
           "imda_refs": [
             {
@@ -5827,7 +5888,7 @@
           ]
         },
         {
-          "text": "Flag suspicious patterns and potential fraud in payment runs and transactions.",
+          "text": "Flag high-risk transactions in payment runs for fraud detection and prevention.",
           "source": "proxy",
           "proxy_refs": [
             "Fraud flagging on payment runs"
@@ -5842,7 +5903,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Automatically reconcile bank statements by matching transactions and suggesting corrections.",
+          "text": "Automatically reconcile bank statements by matching transactions and suggesting corrections for discrepancies.",
           "source": "proxy",
           "proxy_refs": [
             "Smart bank-statement reconciliation suggestions"
@@ -5872,7 +5933,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Score collection risk and predict payment likelihood for outstanding receivables.",
+          "text": "Score collection risk for outstanding receivables using predictive models.",
           "source": "proxy",
           "proxy_refs": [
             "Predictive collection risk scoring"
@@ -5887,7 +5948,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Enable natural-language queries against financial reports and data to retrieve insights without manual report generation.",
+          "text": "Enable natural-language queries against financial reports and data to support ad-hoc analysis and reporting.",
           "source": "proxy",
           "proxy_refs": [
             "Natural-language query of financial reports"
@@ -5902,7 +5963,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate draft management commentary and financial narratives using generative AI.",
+          "text": "Generate draft management commentary and narrative summaries of financial results using generative AI.",
           "source": "proxy",
           "proxy_refs": [
             "Generative AI for management commentary drafting"
@@ -6033,7 +6094,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Offline capability with automatic data synchronization when connectivity is restored",
+          "text": "Offline capability with automatic synchronization when connectivity is restored",
           "source": "proxy",
           "proxy_refs": [
             "Offline mode with sync when reconnected"
@@ -6088,7 +6149,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Implement data retention policies with automatic expiry and archival of financial data based on defined retention schedules",
+          "text": "Implement data retention policies with automatic expiry-based archival and purge mechanisms",
           "source": "proxy",
           "proxy_refs": [
             "Data retention policy with expiry-based archival"
@@ -6103,7 +6164,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support deletion and anonymization of customer and employee personal data upon request",
+          "text": "Support automated fulfillment of customer and employee data deletion requests",
           "source": "proxy",
           "proxy_refs": [
             "Handle customer and employee data deletion requests"
@@ -6148,7 +6209,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Log and audit all record-level access to financial data with user identity, timestamp, and action details",
+          "text": "Log all record-level data access with user identity, timestamp, and action details",
           "source": "proxy",
           "proxy_refs": [
             "Record-level access logging"
@@ -6163,7 +6224,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Securely destroy backups of closed accounting periods in accordance with retention policies",
+          "text": "Securely destroy closed-period backups according to retention policy",
           "source": "proxy",
           "proxy_refs": [
             "Secure destruction of closed-period backups"
@@ -6178,7 +6239,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Comply with PSG Cyber Essentials Mark baseline security controls",
+          "text": "Meet PSG Cyber Essentials Mark baseline security requirements",
           "source": "proxy",
           "proxy_refs": [
             "Compliant with PSG Cyber Essentials Mark baseline"
@@ -6193,7 +6254,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Undergo regular vulnerability assessment and penetration testing with documented remediation of findings",
+          "text": "Undergo regular vulnerability assessment and penetration testing with documented remediation",
           "source": "proxy",
           "proxy_refs": [
             "Regular VA / PT audit with remediation"
@@ -6208,7 +6269,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Enforce data residency controls to restrict financial data storage to Singapore or approved regional locations",
+          "text": "Enforce data residency controls to restrict storage and processing to Singapore or approved regional locations",
           "source": "proxy",
           "proxy_refs": [
             "Data residency control (Singapore / regional)"
@@ -6263,7 +6324,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Implement role-based access control with predefined roles (AR clerk, AP clerk, GL clerk, controller, CFO, auditor, admin, view-only)",
+          "text": "Implement role-based access control with predefined roles (AR clerk, AP clerk, GL clerk, controller, CFO, admin, view-only auditor)",
           "source": "proxy",
           "proxy_refs": [
             "Role-based permissions (AR, AP, GL, controller, admin, view-only)"
@@ -6293,7 +6354,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Detect and prevent segregation-of-duties conflicts within the role matrix",
+          "text": "Detect and prevent segregation-of-duties conflicts in role assignments",
           "source": "proxy",
           "proxy_refs": [
             "Segregation-of-duties conflict detection"
@@ -6353,7 +6414,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Maintain audit log of user logins and posting activity for compliance and investigation",
+          "text": "Maintain audit log of user logins and all posting activity with timestamp and user identification",
           "source": "proxy",
           "proxy_refs": [
             "Audit log of user logins and posting activity"
@@ -6368,7 +6429,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support approval delegation to alternate users during staff leave",
+          "text": "Support approval delegation to alternate users during staff leave or absence",
           "source": "proxy",
           "proxy_refs": [
             "Approval delegation during leave"
@@ -6529,7 +6590,7 @@
           ]
         },
         {
-          "text": "Integrate with CRM, inventory management, and POS systems to synchronize sales, customer, and inventory data",
+          "text": "Integrate with CRM, inventory management, and POS systems to synchronize sales orders, customer data, and inventory movements",
           "source": "both",
           "proxy_refs": [
             "Integration with payroll, CRM, inventory, POS systems"
@@ -6564,36 +6625,6 @@
           "solcat_citations": [
             "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
             "essential-business__accounting-management-+-sales-management-system"
-          ]
-        },
-        {
-          "text": "Link inventory management data to financial reports and accounting records to enable integrated visibility across operations",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-00144",
-              "text": "Are the Accounting Management function, Inventory Management function and Sales Management function tightly integrated? E.g. Inventory and Accounting vendor groups are the same, Forecasting (Inventory) data should be linked to Financial reports (Accounting), Inventory Management (Inventory) should be linked to Sales/Delivery order (Sales)",
-              "q_title": "Accounting, Inventory, and Sales Integration",
-              "subsection": "Accounting, Inventory, and Sales Integration",
-              "sources": [
-                "essential-business__accounting-management-+-inventory-management-+-sales-management-system"
-              ]
-            },
-            {
-              "id": "req-00146",
-              "text": "Are the modules above tightly integrated such that information can be pulled from all modules to the dashboard",
-              "q_title": "Module Integration",
-              "subsection": "Module Integration",
-              "sources": [
-                "legal__practice-management-system-pms"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-            "legal__practice-management-system-pms"
           ]
         },
         {
@@ -6661,7 +6692,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Automatically extract and synchronize financial data from invoices and expense documents to reduce manual data entry",
+          "text": "Automatically synchronize financial data with existing accounting systems to reduce manual data entry",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -6673,21 +6704,11 @@
               "sources": [
                 "essential-business__ai-accounting-automation"
               ]
-            },
-            {
-              "id": "req-00809",
-              "text": "Invoice processing: Integrate with company's accounting software to automatically extract relevant data from utility bills and fuel invoices.",
-              "q_title": "Data Collection",
-              "subsection": "Examples",
-              "sources": [
-                "essential-business__carbon-management-solution"
-              ]
             }
           ],
           "vendor_citations": [],
           "solcat_citations": [
-            "essential-business__ai-accounting-automation",
-            "essential-business__carbon-management-solution"
+            "essential-business__ai-accounting-automation"
           ]
         },
         {
@@ -6711,10 +6732,39 @@
           ]
         },
         {
-          "text": "Maintain tight integration between sales orders, customer master data, and accounts receivable to ensure consistent customer and revenue tracking",
+          "text": "Extract and automatically process invoice data from utility bills and fuel invoices into the accounting system",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
+            {
+              "id": "req-00809",
+              "text": "Invoice processing: Integrate with company's accounting software to automatically extract relevant data from utility bills and fuel invoices.",
+              "q_title": "Data Collection",
+              "subsection": "Examples",
+              "sources": [
+                "essential-business__carbon-management-solution"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__carbon-management-solution"
+          ]
+        },
+        {
+          "text": "Ensure tight integration between accounting, inventory, and sales modules so that inventory movements and sales orders automatically update financial records",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00146",
+              "text": "Are the modules above tightly integrated such that information can be pulled from all modules to the dashboard",
+              "q_title": "Module Integration",
+              "subsection": "Module Integration",
+              "sources": [
+                "legal__practice-management-system-pms"
+              ]
+            },
             {
               "id": "req-01165",
               "text": "Sales/delivery orders (Sales) should be linked to customer groups (Accounting) and Sales management (Sales) should be linked to Accounts module (Accounting) )",
@@ -6727,14 +6777,35 @@
           ],
           "vendor_citations": [],
           "solcat_citations": [
-            "essential-business__accounting-management-+-sales-management-system"
+            "essential-business__accounting-management-+-sales-management-system",
+            "legal__practice-management-system-pms"
+          ]
+        },
+        {
+          "text": "Provide a unified dashboard that pulls consolidated data from accounting, inventory, sales, and payroll modules",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00146",
+              "text": "Are the modules above tightly integrated such that information can be pulled from all modules to the dashboard",
+              "q_title": "Module Integration",
+              "subsection": "Module Integration",
+              "sources": [
+                "legal__practice-management-system-pms"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__practice-management-system-pms"
           ]
         }
       ],
       "stats": {
         "proxy_in": 10,
         "imda_in": 16,
-        "merged_out": 15
+        "merged_out": 16
       }
     }
   ]

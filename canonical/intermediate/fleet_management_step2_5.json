@@ -3,7 +3,7 @@
   "module_name": "Fleet Management",
   "stats": {
     "haiku_calls": 25,
-    "total_merged_reqs": 180,
+    "total_merged_reqs": 178,
     "feature_haiku_calls": 25
   },
   "capabilities": [
@@ -59,21 +59,11 @@
         },
         {
           "text": "Track registration expiry date and renewal status",
-          "source": "both",
+          "source": "proxy",
           "proxy_refs": [
             "Registration number and expiry date tracking"
           ],
-          "imda_refs": [
-            {
-              "id": "req-00957",
-              "text": "Organisation to automate the entire process of registering vehicles, capturing vehicle details (e.g. licence plate number, driver details, contact number) and managing carpark control for access to the organisation's premise",
-              "q_title": "Vehicle Registration",
-              "subsection": "Vehicle Registration",
-              "sources": [
-                "security__automated-visitor-management"
-              ]
-            }
-          ],
+          "imda_refs": [],
           "vendor_citations": [
             "chevin_fleetwave",
             "fleetio",
@@ -81,14 +71,12 @@
             "sap_vehicle",
             "wikipedia_fleet"
           ],
-          "solcat_citations": [
-            "security__automated-visitor-management"
-          ],
+          "solcat_citations": [],
           "feature_id": "vehicle_register.compliance_tracking",
-          "feature_name": "Compliance & Insurance Tracking"
+          "feature_name": "Compliance & Renewals"
         },
         {
-          "text": "Record insurance policy details including policy number, provider, and renewal date",
+          "text": "Record insurance policy details including provider, policy number, and renewal date",
           "source": "proxy",
           "proxy_refs": [
             "Insurance policy number, provider, and renewal date"
@@ -103,7 +91,7 @@
           ],
           "solcat_citations": [],
           "feature_id": "vehicle_register.compliance_tracking",
-          "feature_name": "Compliance & Insurance Tracking"
+          "feature_name": "Compliance & Renewals"
         },
         {
           "text": "Manage vehicle status lifecycle including ordered, active, in repair, and disposed states",
@@ -121,7 +109,7 @@
           ],
           "solcat_citations": [],
           "feature_id": "vehicle_register.lifecycle_management",
-          "feature_name": "Lifecycle & Status Management"
+          "feature_name": "Lifecycle & Classification"
         },
         {
           "text": "Support custom vehicle categories and tags for fleet segmentation and classification",
@@ -138,11 +126,11 @@
             "wikipedia_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "vehicle_register.classification",
-          "feature_name": "Classification & Segmentation"
+          "feature_id": "vehicle_register.lifecycle_management",
+          "feature_name": "Lifecycle & Classification"
         },
         {
-          "text": "Store engine specifications including horsepower, fuel type, and CO2 emissions rating",
+          "text": "Capture and store engine specifications including horsepower, fuel type, and emissions rating",
           "source": "proxy",
           "proxy_refs": [
             "Engine specs: horsepower, fuel type, CO2 rating"
@@ -160,7 +148,7 @@
           "feature_name": "Vehicle Master Record"
         },
         {
-          "text": "Maintain document repository for service records, warranties, and compliance documentation",
+          "text": "Provide document repository for service records, warranties, and compliance documentation",
           "source": "proxy",
           "proxy_refs": [
             "Document repository for service records and warranties"
@@ -178,7 +166,7 @@
           "feature_name": "Documentation & Records"
         },
         {
-          "text": "Capture and store vehicle photos and condition logs with historical tracking",
+          "text": "Maintain photo gallery and condition logs for each vehicle",
           "source": "proxy",
           "proxy_refs": [
             "Photo and condition log per vehicle"
@@ -196,7 +184,7 @@
           "feature_name": "Documentation & Records"
         },
         {
-          "text": "Capture and maintain driver details and contact information linked to vehicles",
+          "text": "Automate vehicle registration process and capture driver details and contact information",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -214,11 +202,35 @@
           "solcat_citations": [
             "security__automated-visitor-management"
           ],
-          "feature_id": "vehicle_register.classification",
-          "feature_name": "Classification & Segmentation"
+          "feature_id": "vehicle_register.registration_onboarding",
+          "feature_name": "Registration & Onboarding"
         },
         {
-          "text": "Support automated vehicle registration workflow and data capture process",
+          "text": "Integrate real-time telematics and GPS tracking to provide fleet location and operating condition visibility",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01322",
+              "text": "Telematics and GPS tracking technology which provides the company a complete overview of its fleet's real-time location and operating condition",
+              "q_title": "Fleet Management and Tracking",
+              "subsection": "Fleet Management and Tracking",
+              "sources": [
+                "essential-business__fleet-management-system",
+                "logistics__transport-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-management-system",
+            "logistics__transport-management"
+          ],
+          "feature_id": "vehicle_register.tracking_access",
+          "feature_name": "Tracking & Access Control"
+        },
+        {
+          "text": "Support carpark access control integration for vehicle entry to organizational premises",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -236,14 +248,14 @@
           "solcat_citations": [
             "security__automated-visitor-management"
           ],
-          "feature_id": "vehicle_register.data_capture",
-          "feature_name": "Automated Data Capture"
+          "feature_id": "vehicle_register.tracking_access",
+          "feature_name": "Tracking & Access Control"
         }
       ],
       "stats": {
         "proxy_in": 8,
-        "imda_in": 1,
-        "merged_out": 10
+        "imda_in": 2,
+        "merged_out": 11
       },
       "features": [
         {
@@ -257,8 +269,8 @@
         },
         {
           "id": "vehicle_register.compliance_tracking",
-          "name": "Compliance & Insurance Tracking",
-          "description": "Monitor registration and insurance expiry dates, renewal status, and policy details.",
+          "name": "Compliance & Renewals",
+          "description": "Registration and insurance policy tracking with expiry dates and renewal status management.",
           "req_idxs": [
             1,
             2
@@ -266,36 +278,37 @@
         },
         {
           "id": "vehicle_register.lifecycle_management",
-          "name": "Lifecycle & Status Management",
-          "description": "Track vehicle status transitions from ordered through active, repair, and disposal states.",
+          "name": "Lifecycle & Classification",
+          "description": "Vehicle status lifecycle, custom categories, tags, and fleet segmentation.",
           "req_idxs": [
-            3
-          ]
-        },
-        {
-          "id": "vehicle_register.classification",
-          "name": "Classification & Segmentation",
-          "description": "Apply custom categories, tags, and driver assignments for fleet organization and reporting.",
-          "req_idxs": [
-            4,
-            8
+            3,
+            4
           ]
         },
         {
           "id": "vehicle_register.documentation",
           "name": "Documentation & Records",
-          "description": "Store and manage service records, warranties, compliance documents, photos, and condition logs with history.",
+          "description": "Document repository, service records, warranties, photo gallery, and condition logs.",
           "req_idxs": [
             6,
             7
           ]
         },
         {
-          "id": "vehicle_register.data_capture",
-          "name": "Automated Data Capture",
-          "description": "Support automated workflows for vehicle registration and master data entry.",
+          "id": "vehicle_register.registration_onboarding",
+          "name": "Registration & Onboarding",
+          "description": "Automated vehicle registration process with driver details and contact information capture.",
           "req_idxs": [
-            9
+            8
+          ]
+        },
+        {
+          "id": "vehicle_register.tracking_access",
+          "name": "Tracking & Access Control",
+          "description": "Real-time telematics, GPS tracking, and carpark access control integration.",
+          "req_idxs": [
+            9,
+            10
           ]
         }
       ]
@@ -526,7 +539,7 @@
           "feature_name": "Fuel Consumption Analysis"
         },
         {
-          "text": "Calculate and report cost per kilometre for each vehicle",
+          "text": "Calculate and report cost per kilometre by vehicle",
           "source": "proxy",
           "proxy_refs": [
             "Cost per kilometre per vehicle"
@@ -544,7 +557,7 @@
           "feature_name": "Fuel Consumption Analysis"
         },
         {
-          "text": "Integrate with fuel card systems to automatically import transaction data",
+          "text": "Integrate with fuel card systems to automatically import transactions",
           "source": "proxy",
           "proxy_refs": [
             "Fuel card integration and transaction import"
@@ -558,11 +571,11 @@
             "wikipedia_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "fuel_management.fuel_data_integration",
-          "feature_name": "Fuel Data Integration & Monitoring"
+          "feature_id": "fuel_management.fuel_purchase_recording",
+          "feature_name": "Fuel Purchase Recording"
         },
         {
-          "text": "Track fuel type by transaction (petrol, diesel, electric charge)",
+          "text": "Track fuel type for each purchase (petrol, diesel, electric charge)",
           "source": "proxy",
           "proxy_refs": [
             "Fuel type tracking (petrol, diesel, EV charge)"
@@ -594,8 +607,8 @@
             "wikipedia_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "fuel_management.fuel_data_integration",
-          "feature_name": "Fuel Data Integration & Monitoring"
+          "feature_id": "fuel_management.fuel_anomaly_detection",
+          "feature_name": "Fuel Anomaly Detection"
         }
       ],
       "stats": {
@@ -607,27 +620,27 @@
         {
           "id": "fuel_management.fuel_purchase_recording",
           "name": "Fuel Purchase Recording",
-          "description": "Capture and store fuel purchase transactions with volume, cost, and vehicle odometer data.",
+          "description": "Capture and store fuel purchase transactions with all relevant details.",
           "req_idxs": [
             0,
+            3,
             4
           ]
         },
         {
           "id": "fuel_management.fuel_consumption_analysis",
           "name": "Fuel Consumption Analysis",
-          "description": "Calculate and report fuel efficiency metrics and cost per kilometre for vehicles.",
+          "description": "Calculate and monitor fuel efficiency metrics and consumption rates.",
           "req_idxs": [
             1,
             2
           ]
         },
         {
-          "id": "fuel_management.fuel_data_integration",
-          "name": "Fuel Data Integration & Monitoring",
-          "description": "Integrate fuel card systems and detect anomalous consumption patterns.",
+          "id": "fuel_management.fuel_anomaly_detection",
+          "name": "Fuel Anomaly Detection",
+          "description": "Identify and alert on unusual fuel consumption patterns and irregularities.",
           "req_idxs": [
-            3,
             5
           ]
         }
@@ -669,7 +682,7 @@
           "feature_name": "Interval Definition"
         },
         {
-          "text": "Automatically generate service reminders and alerts when vehicles approach scheduled maintenance intervals",
+          "text": "Automatically generate service reminders and alerts when a vehicle approaches or reaches a scheduled service interval",
           "source": "proxy",
           "proxy_refs": [
             "Auto-generated service reminders and alerts"
@@ -686,7 +699,7 @@
           "feature_name": "Reminder & Alerts"
         },
         {
-          "text": "Maintain a complete service history log recording date, service type, vendor, and cost for each vehicle",
+          "text": "Maintain a complete service history log recording date, service type, vendor, and cost for each maintenance event",
           "source": "proxy",
           "proxy_refs": [
             "Service history log with date, type, vendor, and cost"
@@ -700,10 +713,10 @@
           ],
           "solcat_citations": [],
           "feature_id": "maintenance_scheduling.service_history",
-          "feature_name": "Service History & Records"
+          "feature_name": "Service History"
         },
         {
-          "text": "Support multi-point inspection checklists to standardize preventive maintenance procedures",
+          "text": "Support multi-point inspection checklists to standardize and document preventive maintenance activities",
           "source": "proxy",
           "proxy_refs": [
             "Multi-point inspection checklists"
@@ -716,11 +729,11 @@
             "sap_vehicle"
           ],
           "solcat_citations": [],
-          "feature_id": "maintenance_scheduling.service_history",
-          "feature_name": "Service History & Records"
+          "feature_id": "maintenance_scheduling.inspection_checklists",
+          "feature_name": "Inspection Checklists"
         },
         {
-          "text": "Display upcoming maintenance schedule in calendar view for visibility and planning",
+          "text": "Display an upcoming maintenance calendar view showing scheduled services across the fleet",
           "source": "proxy",
           "proxy_refs": [
             "Upcoming maintenance calendar view"
@@ -733,11 +746,11 @@
             "sap_vehicle"
           ],
           "solcat_citations": [],
-          "feature_id": "maintenance_scheduling.schedule_visibility",
-          "feature_name": "Schedule Visibility"
+          "feature_id": "maintenance_scheduling.maintenance_calendar",
+          "feature_name": "Maintenance Calendar"
         },
         {
-          "text": "Escalate notifications for overdue services to prevent vehicles from operating without required maintenance",
+          "text": "Generate escalation notifications for overdue maintenance to ensure no vehicle misses a scheduled service",
           "source": "proxy",
           "proxy_refs": [
             "Overdue service escalation notifications"
@@ -771,7 +784,7 @@
         {
           "id": "maintenance_scheduling.reminder_alerts",
           "name": "Reminder & Alerts",
-          "description": "Generate service reminders and escalate notifications for approaching or overdue maintenance.",
+          "description": "Generate service reminders and escalation notifications for upcoming and overdue maintenance.",
           "req_idxs": [
             1,
             5
@@ -779,17 +792,24 @@
         },
         {
           "id": "maintenance_scheduling.service_history",
-          "name": "Service History & Records",
-          "description": "Maintain complete service history logs and multi-point inspection checklists.",
+          "name": "Service History",
+          "description": "Maintain complete maintenance logs recording date, service type, vendor, and cost for each event.",
           "req_idxs": [
-            2,
+            2
+          ]
+        },
+        {
+          "id": "maintenance_scheduling.inspection_checklists",
+          "name": "Inspection Checklists",
+          "description": "Support multi-point inspection checklists to standardize and document preventive maintenance activities.",
+          "req_idxs": [
             3
           ]
         },
         {
-          "id": "maintenance_scheduling.schedule_visibility",
-          "name": "Schedule Visibility",
-          "description": "Display upcoming maintenance schedule in calendar view for planning and coordination.",
+          "id": "maintenance_scheduling.maintenance_calendar",
+          "name": "Maintenance Calendar",
+          "description": "Display upcoming maintenance calendar view showing scheduled services across the fleet.",
           "req_idxs": [
             4
           ]
@@ -846,7 +866,7 @@
           "feature_name": "Work Order Assignment"
         },
         {
-          "text": "Track work order lifecycle status including open, in progress, and complete states",
+          "text": "Track work order status through defined lifecycle states (open, in progress, complete)",
           "source": "proxy",
           "proxy_refs": [
             "Track work order status (open, in progress, complete)"
@@ -894,7 +914,7 @@
           "feature_name": "Cost & Resource Tracking"
         },
         {
-          "text": "Link work orders to warranty claims when applicable",
+          "text": "Link work orders to warranty claims for claim tracking and cost recovery",
           "source": "proxy",
           "proxy_refs": [
             "Link to warranty claim if applicable"
@@ -919,7 +939,7 @@
         {
           "id": "maintenance_work_orders.wo_creation",
           "name": "Work Order Creation",
-          "description": "Create and document maintenance work orders with vehicle details, issue descriptions, and priority classification.",
+          "description": "Create and document work orders with vehicle details, issue descriptions, and priority classification.",
           "req_idxs": [
             0
           ]
@@ -935,7 +955,7 @@
         {
           "id": "maintenance_work_orders.wo_tracking",
           "name": "Work Order Tracking",
-          "description": "Monitor work order lifecycle status from open through completion.",
+          "description": "Monitor work order progress through defined lifecycle states from open to completion.",
           "req_idxs": [
             2
           ]
@@ -943,7 +963,7 @@
         {
           "id": "maintenance_work_orders.wo_costs",
           "name": "Cost & Resource Tracking",
-          "description": "Record parts consumption, labour hours, and calculate total repair costs by vehicle.",
+          "description": "Record parts consumed, labour hours, and calculate total repair costs by vehicle.",
           "req_idxs": [
             3,
             4
@@ -952,7 +972,7 @@
         {
           "id": "maintenance_work_orders.wo_warranty",
           "name": "Warranty Integration",
-          "description": "Link work orders to warranty claims for claim management and tracking.",
+          "description": "Link work orders to warranty claims for tracking and cost recovery.",
           "req_idxs": [
             5
           ]
@@ -1119,8 +1139,8 @@
             "essential-business__fleet-management-system",
             "logistics__transport-management"
           ],
-          "feature_id": "trip_mileage.gps_tracking",
-          "feature_name": "GPS & Telematics Integration"
+          "feature_id": "trip_mileage.location_tracking",
+          "feature_name": "Location & Status Tracking"
         },
         {
           "text": "Monitor delivery vehicle status and provide visibility to customer service operations",
@@ -1141,8 +1161,8 @@
           "solcat_citations": [
             "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
           ],
-          "feature_id": "trip_mileage.gps_tracking",
-          "feature_name": "GPS & Telematics Integration"
+          "feature_id": "trip_mileage.location_tracking",
+          "feature_name": "Location & Status Tracking"
         }
       ],
       "stats": {
@@ -1193,9 +1213,9 @@
           ]
         },
         {
-          "id": "trip_mileage.gps_tracking",
-          "name": "GPS & Telematics Integration",
-          "description": "Track real-time vehicle location and status via GPS or telematics, with visibility to customer service.",
+          "id": "trip_mileage.location_tracking",
+          "name": "Location & Status Tracking",
+          "description": "Monitor real-time vehicle location, status, and delivery visibility via GPS or telematics.",
           "req_idxs": [
             6,
             7
@@ -1239,7 +1259,7 @@
           "feature_name": "Total Cost of Ownership Calculation"
         },
         {
-          "text": "Provide cost breakdown by category (fuel, repairs, insurance, tax, registration, depreciation) for individual vehicles and fleet segments.",
+          "text": "Provide cost breakdown by category (fuel, repairs, insurance, tax, registration, depreciation) for individual vehicles and fleet aggregates.",
           "source": "proxy",
           "proxy_refs": [
             "Cost breakdown by category (fuel, repairs, insurance, tax)"
@@ -1256,7 +1276,7 @@
           "feature_name": "Cost Analysis & Reporting"
         },
         {
-          "text": "Calculate cost per kilometre for individual vehicles and fleet-wide aggregates.",
+          "text": "Calculate cost per kilometre for individual vehicles and fleet-wide averages.",
           "source": "proxy",
           "proxy_refs": [
             "Cost per kilometre per vehicle and fleet-wide"
@@ -1269,11 +1289,11 @@
             "sap_vehicle"
           ],
           "solcat_citations": [],
-          "feature_id": "cost_management.cost_analysis",
-          "feature_name": "Cost Analysis & Reporting"
+          "feature_id": "cost_management.tco_calculation",
+          "feature_name": "Total Cost of Ownership Calculation"
         },
         {
-          "text": "Compare budgeted costs against actual spend by vehicle, fleet segment, or cost category.",
+          "text": "Compare budgeted costs against actual spend at vehicle and fleet segment level.",
           "source": "proxy",
           "proxy_refs": [
             "Budget vs actual spend per vehicle or fleet segment"
@@ -1287,7 +1307,7 @@
           ],
           "solcat_citations": [],
           "feature_id": "cost_management.budget_variance",
-          "feature_name": "Budget Variance & Monitoring"
+          "feature_name": "Budget Variance Management"
         },
         {
           "text": "Analyze cost trends over time to identify spending patterns and anomalies.",
@@ -1303,11 +1323,11 @@
             "sap_vehicle"
           ],
           "solcat_citations": [],
-          "feature_id": "cost_management.cost_trends",
-          "feature_name": "Cost Trend Analysis"
+          "feature_id": "cost_management.cost_analysis",
+          "feature_name": "Cost Analysis & Reporting"
         },
         {
-          "text": "Export cost reports and analysis data to the accounting system for financial consolidation.",
+          "text": "Export cost reports to accounting system for financial reconciliation and consolidation.",
           "source": "proxy",
           "proxy_refs": [
             "Export cost reports to accounting system"
@@ -1320,8 +1340,8 @@
             "sap_vehicle"
           ],
           "solcat_citations": [],
-          "feature_id": "cost_management.financial_integration",
-          "feature_name": "Financial System Integration"
+          "feature_id": "cost_management.cost_integration",
+          "feature_name": "Cost Integration & Export"
         }
       ],
       "stats": {
@@ -1333,40 +1353,33 @@
         {
           "id": "cost_management.tco_calculation",
           "name": "Total Cost of Ownership Calculation",
-          "description": "Calculate and aggregate total cost of ownership per vehicle across all cost categories.",
+          "description": "Calculate and aggregate all cost components per vehicle and fleet.",
           "req_idxs": [
-            0
+            0,
+            2
           ]
         },
         {
           "id": "cost_management.cost_analysis",
           "name": "Cost Analysis & Reporting",
-          "description": "Provide cost breakdowns by category and vehicle, and calculate cost per kilometre metrics.",
+          "description": "Break down costs by category and analyze trends and anomalies.",
           "req_idxs": [
             1,
-            2
+            4
           ]
         },
         {
           "id": "cost_management.budget_variance",
-          "name": "Budget Variance & Monitoring",
-          "description": "Compare budgeted costs against actual spend and identify variances by vehicle or category.",
+          "name": "Budget Variance Management",
+          "description": "Compare actual costs against budgets at vehicle and segment levels.",
           "req_idxs": [
             3
           ]
         },
         {
-          "id": "cost_management.cost_trends",
-          "name": "Cost Trend Analysis",
-          "description": "Analyze spending patterns and anomalies over time to support cost optimization.",
-          "req_idxs": [
-            4
-          ]
-        },
-        {
-          "id": "cost_management.financial_integration",
-          "name": "Financial System Integration",
-          "description": "Export cost reports and analysis data to accounting systems for consolidation.",
+          "id": "cost_management.cost_integration",
+          "name": "Cost Integration & Export",
+          "description": "Export cost data to accounting systems for financial reconciliation.",
           "req_idxs": [
             5
           ]
@@ -1392,51 +1405,28 @@
       ],
       "requirements": [
         {
-          "text": "Fleet overview dashboard displaying vehicle status (active, in repair, disposed) and real-time location",
-          "source": "both",
+          "text": "Fleet overview dashboard displaying vehicle status (active, in repair, disposed) with real-time or near-real-time updates",
+          "source": "proxy",
           "proxy_refs": [
             "Fleet overview dashboard (active, in repair, disposed)"
           ],
-          "imda_refs": [
-            {
-              "id": "req-00032",
-              "text": "Ability to allow supervision of multiple sites and teams (including location tracking) remotely through a centralised command centre",
-              "q_title": "Centralised Command Centre",
-              "subsection": "Centralised Command Centre",
-              "sources": [
-                "security__mobile-enabled-patrol-and-incident-management"
-              ]
-            },
-            {
-              "id": "req-01322",
-              "text": "Telematics and GPS tracking technology which provides the company a complete overview of its fleet's real-time location and operating condition",
-              "q_title": "Fleet Management and Tracking",
-              "subsection": "Fleet Management and Tracking",
-              "sources": [
-                "essential-business__fleet-management-system",
-                "logistics__transport-management"
-              ]
-            }
-          ],
+          "imda_refs": [],
           "vendor_citations": [
             "chevin_fleetwave",
             "fleetio",
             "odoo_fleet",
             "samsara"
           ],
-          "solcat_citations": [
-            "essential-business__fleet-management-system",
-            "logistics__transport-management",
-            "security__mobile-enabled-patrol-and-incident-management"
-          ],
-          "feature_id": "reporting_dashboards.dashboards",
-          "feature_name": "Fleet Dashboards"
+          "solcat_citations": [],
+          "feature_id": "reporting_dashboards.fleet_status_dashboards",
+          "feature_name": "Fleet Status Dashboards"
         },
         {
-          "text": "Cost summary reporting by vehicle, category, and period",
+          "text": "Cost summary reports aggregated by vehicle, cost category, and time period with drill-down capability to individual vehicle details",
           "source": "proxy",
           "proxy_refs": [
-            "Cost summary by vehicle, category, and period"
+            "Cost summary by vehicle, category, and period",
+            "Drill-down from summary to vehicle detail"
           ],
           "imda_refs": [],
           "vendor_citations": [
@@ -1450,7 +1440,7 @@
           "feature_name": "Cost Reporting"
         },
         {
-          "text": "Maintenance compliance report tracking scheduled vs overdue maintenance tasks",
+          "text": "Maintenance compliance report showing scheduled vs. completed maintenance tasks, with identification of overdue items",
           "source": "both",
           "proxy_refs": [
             "Maintenance compliance report (on time vs overdue)"
@@ -1481,7 +1471,7 @@
           "feature_name": "Maintenance Compliance"
         },
         {
-          "text": "Vehicle utilisation and idle-time reporting",
+          "text": "Vehicle utilisation and idle-time analysis report",
           "source": "proxy",
           "proxy_refs": [
             "Vehicle utilisation and idle-time report"
@@ -1494,11 +1484,11 @@
             "samsara"
           ],
           "solcat_citations": [],
-          "feature_id": "reporting_dashboards.operational_metrics",
-          "feature_name": "Operational Metrics"
+          "feature_id": "reporting_dashboards.vehicle_operations_analysis",
+          "feature_name": "Vehicle Operations Analysis"
         },
         {
-          "text": "Mileage and fuel consumption reporting",
+          "text": "Mileage and fuel consumption reporting and analysis",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1518,11 +1508,11 @@
             "essential-business__fleet-management-system",
             "logistics__transport-management"
           ],
-          "feature_id": "reporting_dashboards.operational_metrics",
-          "feature_name": "Operational Metrics"
+          "feature_id": "reporting_dashboards.vehicle_operations_analysis",
+          "feature_name": "Vehicle Operations Analysis"
         },
         {
-          "text": "Driver behaviour monitoring including speeding and dangerous driving alerts",
+          "text": "Driver behaviour monitoring and reporting (e.g. speeding, harsh acceleration, unsafe driving patterns)",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1540,62 +1530,11 @@
           "solcat_citations": [
             "logistics__transport-management"
           ],
-          "feature_id": "reporting_dashboards.driver_performance",
-          "feature_name": "Driver Performance"
+          "feature_id": "reporting_dashboards.driver_performance_monitoring",
+          "feature_name": "Driver Performance Monitoring"
         },
         {
-          "text": "Pivot table functionality and export to spreadsheet format",
-          "source": "proxy",
-          "proxy_refs": [
-            "Pivot table and export to spreadsheet"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "chevin_fleetwave",
-            "fleetio",
-            "odoo_fleet",
-            "samsara"
-          ],
-          "solcat_citations": [],
-          "feature_id": "reporting_dashboards.report_tools",
-          "feature_name": "Report Tools & Distribution"
-        },
-        {
-          "text": "Drill-down capability from summary-level reports to individual vehicle detail",
-          "source": "proxy",
-          "proxy_refs": [
-            "Drill-down from summary to vehicle detail"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "chevin_fleetwave",
-            "fleetio",
-            "odoo_fleet",
-            "samsara"
-          ],
-          "solcat_citations": [],
-          "feature_id": "reporting_dashboards.report_tools",
-          "feature_name": "Report Tools & Distribution"
-        },
-        {
-          "text": "Scheduled automated email distribution of reports to stakeholders",
-          "source": "proxy",
-          "proxy_refs": [
-            "Scheduled email reports to stakeholders"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "chevin_fleetwave",
-            "fleetio",
-            "odoo_fleet",
-            "samsara"
-          ],
-          "solcat_citations": [],
-          "feature_id": "reporting_dashboards.report_tools",
-          "feature_name": "Report Tools & Distribution"
-        },
-        {
-          "text": "Centralised command centre view enabling remote supervision of multiple sites and teams",
+          "text": "Multi-site and multi-team supervision dashboard with location tracking and centralised visibility",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1613,29 +1552,63 @@
           "solcat_citations": [
             "security__mobile-enabled-patrol-and-incident-management"
           ],
-          "feature_id": "reporting_dashboards.dashboards",
-          "feature_name": "Fleet Dashboards"
+          "feature_id": "reporting_dashboards.fleet_status_dashboards",
+          "feature_name": "Fleet Status Dashboards"
+        },
+        {
+          "text": "Pivot table functionality and export to spreadsheet format for ad-hoc analysis",
+          "source": "proxy",
+          "proxy_refs": [
+            "Pivot table and export to spreadsheet"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "reporting_dashboards.report_distribution_tools",
+          "feature_name": "Report Distribution & Tools"
+        },
+        {
+          "text": "Scheduled automated email delivery of reports to designated stakeholders",
+          "source": "proxy",
+          "proxy_refs": [
+            "Scheduled email reports to stakeholders"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "odoo_fleet",
+            "samsara"
+          ],
+          "solcat_citations": [],
+          "feature_id": "reporting_dashboards.report_distribution_tools",
+          "feature_name": "Report Distribution & Tools"
         }
       ],
       "stats": {
         "proxy_in": 7,
-        "imda_in": 5,
-        "merged_out": 10
+        "imda_in": 4,
+        "merged_out": 9
       },
       "features": [
         {
-          "id": "reporting_dashboards.dashboards",
-          "name": "Fleet Dashboards",
-          "description": "Real-time visual dashboards for fleet overview, vehicle status, and command centre supervision.",
+          "id": "reporting_dashboards.fleet_status_dashboards",
+          "name": "Fleet Status Dashboards",
+          "description": "Real-time dashboards for vehicle status, location tracking, and fleet overview across multiple sites and teams.",
           "req_idxs": [
             0,
-            9
+            6
           ]
         },
         {
           "id": "reporting_dashboards.cost_reporting",
           "name": "Cost Reporting",
-          "description": "Financial summaries and cost analysis by vehicle, category, and time period.",
+          "description": "Cost summary reports aggregated by vehicle, category, and time period with drill-down analysis.",
           "req_idxs": [
             1
           ]
@@ -1643,34 +1616,33 @@
         {
           "id": "reporting_dashboards.maintenance_compliance",
           "name": "Maintenance Compliance",
-          "description": "Tracking and reporting of scheduled versus overdue maintenance tasks.",
+          "description": "Reports tracking scheduled vs. completed maintenance tasks and identifying overdue items.",
           "req_idxs": [
             2
           ]
         },
         {
-          "id": "reporting_dashboards.operational_metrics",
-          "name": "Operational Metrics",
-          "description": "Vehicle utilisation, idle time, mileage, and fuel consumption reporting.",
+          "id": "reporting_dashboards.vehicle_operations_analysis",
+          "name": "Vehicle Operations Analysis",
+          "description": "Reports on vehicle utilisation, idle time, mileage, and fuel consumption with trend analysis.",
           "req_idxs": [
             3,
             4
           ]
         },
         {
-          "id": "reporting_dashboards.driver_performance",
-          "name": "Driver Performance",
-          "description": "Monitoring and alerts for driver behaviour including speeding and dangerous driving.",
+          "id": "reporting_dashboards.driver_performance_monitoring",
+          "name": "Driver Performance Monitoring",
+          "description": "Monitoring and reporting on driver behaviour including speeding, harsh acceleration, and unsafe patterns.",
           "req_idxs": [
             5
           ]
         },
         {
-          "id": "reporting_dashboards.report_tools",
-          "name": "Report Tools & Distribution",
-          "description": "Pivot tables, drill-down analysis, export functionality, and automated email distribution.",
+          "id": "reporting_dashboards.report_distribution_tools",
+          "name": "Report Distribution & Tools",
+          "description": "Ad-hoc analysis tools, export functionality, and automated scheduled report delivery to stakeholders.",
           "req_idxs": [
-            6,
             7,
             8
           ]
@@ -1695,12 +1667,21 @@
       ],
       "requirements": [
         {
-          "text": "Display real-time GPS location of individual vehicles on a map interface",
+          "text": "Display real-time GPS location of each vehicle on a map interface",
           "source": "both",
           "proxy_refs": [
             "Real-time GPS location on a map per vehicle"
           ],
           "imda_refs": [
+            {
+              "id": "req-00032",
+              "text": "Ability to allow supervision of multiple sites and teams (including location tracking) remotely through a centralised command centre",
+              "q_title": "Centralised Command Centre",
+              "subsection": "Centralised Command Centre",
+              "sources": [
+                "security__mobile-enabled-patrol-and-incident-management"
+              ]
+            },
             {
               "id": "req-01322",
               "text": "Telematics and GPS tracking technology which provides the company a complete overview of its fleet's real-time location and operating condition",
@@ -1719,13 +1700,14 @@
           ],
           "solcat_citations": [
             "essential-business__fleet-management-system",
-            "logistics__transport-management"
+            "logistics__transport-management",
+            "security__mobile-enabled-patrol-and-incident-management"
           ],
           "feature_id": "gps_telematics.realtime_tracking",
           "feature_name": "Real-Time Vehicle Tracking"
         },
         {
-          "text": "Provide historical breadcrumb trail with route replay capability for auditing and analysis",
+          "text": "Record and replay historical vehicle routes and breadcrumb trails",
           "source": "proxy",
           "proxy_refs": [
             "Historical breadcrumb trail and route replay"
@@ -1741,7 +1723,7 @@
           "feature_name": "Route History & Playback"
         },
         {
-          "text": "Support creation and management of geofences with automated entry and exit alerts",
+          "text": "Create geofences and generate alerts on entry and exit events",
           "source": "proxy",
           "proxy_refs": [
             "Geofence creation with entry and exit alerts"
@@ -1769,8 +1751,8 @@
             "wikipedia_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "gps_telematics.driver_behavior",
-          "feature_name": "Driver Behavior & Compliance"
+          "feature_id": "gps_telematics.geofencing_alerts",
+          "feature_name": "Geofencing & Boundary Alerts"
         },
         {
           "text": "Integrate with OBD-II systems to capture and display engine fault codes and vehicle diagnostics",
@@ -1778,18 +1760,32 @@
           "proxy_refs": [
             "OBD-II integration for engine fault codes"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01322",
+              "text": "Telematics and GPS tracking technology which provides the company a complete overview of its fleet's real-time location and operating condition",
+              "q_title": "Fleet Management and Tracking",
+              "subsection": "Fleet Management and Tracking",
+              "sources": [
+                "essential-business__fleet-management-system",
+                "logistics__transport-management"
+              ]
+            }
+          ],
           "vendor_citations": [
             "samsara",
             "verizon_connect",
             "wikipedia_fleet"
           ],
-          "solcat_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-management-system",
+            "logistics__transport-management"
+          ],
           "feature_id": "gps_telematics.diagnostics_integration",
           "feature_name": "Vehicle Diagnostics & OBD Integration"
         },
         {
-          "text": "Retain and display last-known position for vehicles that are temporarily offline",
+          "text": "Retain and display last-known position for vehicles with lost GPS signal or offline status",
           "source": "proxy",
           "proxy_refs": [
             "Last-known position for offline vehicles"
@@ -1801,11 +1797,11 @@
             "wikipedia_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "gps_telematics.realtime_tracking",
-          "feature_name": "Real-Time Vehicle Tracking"
+          "feature_id": "gps_telematics.route_history",
+          "feature_name": "Route History & Playback"
         },
         {
-          "text": "Enable centralized monitoring and supervision of multiple fleet sites and teams from a command centre",
+          "text": "Enable remote supervision and monitoring of multiple vehicle fleets and teams from a centralized command centre",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1845,8 +1841,8 @@
           "solcat_citations": [
             "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
           ],
-          "feature_id": "gps_telematics.route_history",
-          "feature_name": "Route History & Playback"
+          "feature_id": "gps_telematics.delivery_tracking",
+          "feature_name": "Delivery Tracking & Visibility"
         },
         {
           "text": "Provide fleet journey analytics to support cost control, utilization optimization, and productivity improvement",
@@ -1877,118 +1873,65 @@
             "essential-business__fleet-management-system",
             "logistics__transport-management"
           ],
-          "feature_id": "gps_telematics.analytics_insights",
-          "feature_name": "Fleet Analytics & Insights"
-        },
-        {
-          "text": "Capture and store in-cabin video from vehicle-mounted cameras with timestamp and date indexing",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-00756",
-              "text": "Indoor Analogue Camera to capture the activity in vehicle cabin",
-              "q_title": "Vehicle Cabin Monitoring",
-              "subsection": "Vehicle Cabin Monitoring",
-              "sources": [
-                "essential-business__fleet-safety-management-system"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "essential-business__fleet-safety-management-system"
-          ],
-          "feature_id": "gps_telematics.video_lpr",
-          "feature_name": "Video & License Plate Capture"
-        },
-        {
-          "text": "Analyze and store captured license plate data with associated timestamp and entry/exit records",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-00854",
-              "text": "Licence Plate Recognition Module – Analyse video for licence plates captured and stored according to the date and time of entry",
-              "q_title": "Real-Time Video Functions",
-              "subsection": "Additional Functions (Choose at least one)",
-              "sources": [
-                "security__surveillance-and-analytics"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "security__surveillance-and-analytics"
-          ],
-          "feature_id": "gps_telematics.video_lpr",
-          "feature_name": "Video & License Plate Capture"
+          "feature_id": "gps_telematics.fleet_analytics",
+          "feature_name": "Fleet Analytics & Optimization"
         }
       ],
       "stats": {
         "proxy_in": 6,
         "imda_in": 7,
-        "merged_out": 11
+        "merged_out": 9
       },
       "features": [
         {
           "id": "gps_telematics.realtime_tracking",
           "name": "Real-Time Vehicle Tracking",
-          "description": "Live GPS location display, map visualization, and offline position retention for fleet vehicles.",
+          "description": "Live GPS location display and monitoring of vehicle positions on map interface.",
           "req_idxs": [
             0,
-            5,
             6
           ]
         },
         {
           "id": "gps_telematics.route_history",
           "name": "Route History & Playback",
-          "description": "Historical breadcrumb trails, route replay, and audit trail analysis for vehicle movements.",
+          "description": "Recording, storage, and replay of historical vehicle routes and breadcrumb trails.",
           "req_idxs": [
             1,
-            7
+            5
           ]
         },
         {
           "id": "gps_telematics.geofencing_alerts",
           "name": "Geofencing & Boundary Alerts",
-          "description": "Geofence creation, management, and automated entry/exit notifications.",
+          "description": "Geofence creation and automated alerts for entry/exit events and boundary violations.",
           "req_idxs": [
-            2
-          ]
-        },
-        {
-          "id": "gps_telematics.driver_behavior",
-          "name": "Driver Behavior & Compliance",
-          "description": "Speed and idle-time violation alerts with performance monitoring.",
-          "req_idxs": [
+            2,
             3
           ]
         },
         {
           "id": "gps_telematics.diagnostics_integration",
           "name": "Vehicle Diagnostics & OBD Integration",
-          "description": "OBD-II data capture, engine fault codes, and vehicle health monitoring.",
+          "description": "OBD-II system integration to capture engine fault codes and vehicle diagnostic data.",
           "req_idxs": [
             4
           ]
         },
         {
-          "id": "gps_telematics.analytics_insights",
-          "name": "Fleet Analytics & Insights",
-          "description": "Journey analytics, cost control, utilization optimization, and productivity reporting.",
+          "id": "gps_telematics.delivery_tracking",
+          "name": "Delivery Tracking & Visibility",
+          "description": "Delivery vehicle location tracking and status visibility for customer service.",
           "req_idxs": [
-            8
+            7
           ]
         },
         {
-          "id": "gps_telematics.video_lpr",
-          "name": "Video & License Plate Capture",
-          "description": "In-cabin video recording and license plate recognition with timestamp indexing.",
+          "id": "gps_telematics.fleet_analytics",
+          "name": "Fleet Analytics & Optimization",
+          "description": "Journey analytics and reporting for cost control, utilization, and productivity improvement.",
           "req_idxs": [
-            9,
-            10
+            8
           ]
         }
       ]
@@ -1999,6 +1942,7 @@
       "description": "Plan multi-stop delivery or service routes, optimise for distance, time, or fuel cost, and adapt routes in real time based on traffic.",
       "priority_proxy": "standard",
       "applicability": [
+        "sme",
         "mid_market",
         "enterprise"
       ],
@@ -2024,8 +1968,8 @@
             "wikipedia_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "route_planning.route_execution",
-          "feature_name": "Route Execution & Guidance"
+          "feature_id": "route_planning.route_generation",
+          "feature_name": "Route Generation & Planning"
         },
         {
           "text": "Automatically generate and optimise routes based on configurable criteria such as destination, delivery time window, order size, and vehicle type",
@@ -2054,7 +1998,7 @@
             "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
           ],
           "feature_id": "route_planning.route_generation",
-          "feature_name": "Route Generation & Optimisation"
+          "feature_name": "Route Generation & Planning"
         },
         {
           "text": "Optimise routes by distance, time, or cost metrics",
@@ -2070,11 +2014,11 @@
             "wikipedia_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "route_planning.route_generation",
-          "feature_name": "Route Generation & Optimisation"
+          "feature_id": "route_planning.route_optimization",
+          "feature_name": "Route Optimisation"
         },
         {
-          "text": "Integrate real-time traffic and road condition data to dynamically adjust routes during execution",
+          "text": "Adjust routes in real time based on live traffic conditions and road events",
           "source": "proxy",
           "proxy_refs": [
             "Real-time traffic and road-condition adjustments"
@@ -2087,8 +2031,8 @@
             "wikipedia_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "route_planning.route_execution",
-          "feature_name": "Route Execution & Guidance"
+          "feature_id": "route_planning.dynamic_routing",
+          "feature_name": "Dynamic Routing & Execution"
         },
         {
           "text": "Enforce delivery time-window constraints during route planning and optimisation",
@@ -2105,10 +2049,10 @@
           ],
           "solcat_citations": [],
           "feature_id": "route_planning.route_generation",
-          "feature_name": "Route Generation & Optimisation"
+          "feature_name": "Route Generation & Planning"
         },
         {
-          "text": "Compare planned routes against actual executed routes to identify deviations and performance gaps",
+          "text": "Compare planned routes against actual executed routes for performance analysis",
           "source": "proxy",
           "proxy_refs": [
             "Planned vs actual route comparison"
@@ -2122,10 +2066,10 @@
           ],
           "solcat_citations": [],
           "feature_id": "route_planning.route_analytics",
-          "feature_name": "Route Analytics & Performance"
+          "feature_name": "Route Performance Analytics"
         },
         {
-          "text": "Provide turn-by-turn navigation guidance to drivers integrated with the route plan",
+          "text": "Integrate turn-by-turn navigation for drivers",
           "source": "proxy",
           "proxy_refs": [
             "Driver turn-by-turn navigation integration"
@@ -2138,14 +2082,25 @@
             "wikipedia_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "route_planning.route_execution",
-          "feature_name": "Route Execution & Guidance"
+          "feature_id": "route_planning.dynamic_routing",
+          "feature_name": "Dynamic Routing & Execution"
         },
         {
-          "text": "Collect and analyse route execution data to continuously improve route optimisation algorithms",
-          "source": "imda",
-          "proxy_refs": [],
+          "text": "Optimise route planning based on collected operational data to improve fleet utilisation and productivity",
+          "source": "both",
+          "proxy_refs": [
+            "Route optimisation by distance, time, or cost"
+          ],
           "imda_refs": [
+            {
+              "id": "req-00313",
+              "text": "Companies to tailor the fleet journey, manage cost control, improve fleet utilisation, and improve productivity",
+              "q_title": "Customised Fleet Journey Management",
+              "subsection": "Customised Fleet Journey Management",
+              "sources": [
+                "logistics__transport-management"
+              ]
+            },
             {
               "id": "req-00483",
               "text": "Does your solution automate route planning and optimisation based on data collected",
@@ -2157,18 +2112,25 @@
               ]
             }
           ],
-          "vendor_citations": [],
+          "vendor_citations": [
+            "oracle_otm",
+            "samsara",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
           "solcat_citations": [
             "essential-business__fleet-management-system",
             "logistics__transport-management"
           ],
-          "feature_id": "route_planning.route_analytics",
-          "feature_name": "Route Analytics & Performance"
+          "feature_id": "route_planning.route_optimization",
+          "feature_name": "Route Optimisation"
         },
         {
-          "text": "Measure and report on fleet utilisation and productivity improvements resulting from route optimisation",
-          "source": "imda",
-          "proxy_refs": [],
+          "text": "Support cost control through route and fleet journey optimisation",
+          "source": "both",
+          "proxy_refs": [
+            "Route optimisation by distance, time, or cost"
+          ],
           "imda_refs": [
             {
               "id": "req-00313",
@@ -2189,13 +2151,18 @@
               ]
             }
           ],
-          "vendor_citations": [],
+          "vendor_citations": [
+            "oracle_otm",
+            "samsara",
+            "sap_vehicle",
+            "wikipedia_fleet"
+          ],
           "solcat_citations": [
             "essential-business__fleet-management-system",
             "logistics__transport-management"
           ],
-          "feature_id": "route_planning.route_analytics",
-          "feature_name": "Route Analytics & Performance"
+          "feature_id": "route_planning.route_optimization",
+          "feature_name": "Route Optimisation"
         }
       ],
       "stats": {
@@ -2206,32 +2173,39 @@
       "features": [
         {
           "id": "route_planning.route_generation",
-          "name": "Route Generation & Optimisation",
-          "description": "Automatically generate and optimise multi-stop routes based on configurable criteria and metrics.",
+          "name": "Route Generation & Planning",
+          "description": "Create and manually adjust multi-stop routes with configurable criteria and time-window constraints.",
           "req_idxs": [
+            0,
             1,
-            2,
             4
           ]
         },
         {
-          "id": "route_planning.route_execution",
-          "name": "Route Execution & Guidance",
-          "description": "Manage route execution with real-time adjustments, navigation, and driver support.",
+          "id": "route_planning.route_optimization",
+          "name": "Route Optimisation",
+          "description": "Optimise routes by distance, time, or cost metrics and improve planning based on operational data.",
           "req_idxs": [
-            0,
+            2,
+            7,
+            8
+          ]
+        },
+        {
+          "id": "route_planning.dynamic_routing",
+          "name": "Dynamic Routing & Execution",
+          "description": "Adapt routes in real time based on traffic conditions and provide turn-by-turn navigation for drivers.",
+          "req_idxs": [
             3,
             6
           ]
         },
         {
           "id": "route_planning.route_analytics",
-          "name": "Route Analytics & Performance",
-          "description": "Analyse route execution data, compare planned vs actual routes, and measure fleet productivity improvements.",
+          "name": "Route Performance Analytics",
+          "description": "Compare planned versus actual routes and analyse performance metrics.",
           "req_idxs": [
-            5,
-            7,
-            8
+            5
           ]
         }
       ]
@@ -2254,7 +2228,7 @@
       ],
       "requirements": [
         {
-          "text": "Calculate driver safety score based on detected driving events and behaviours",
+          "text": "Calculate and maintain driver safety score based on detected driving events and behaviours",
           "source": "both",
           "proxy_refs": [
             "Driver safety score based on driving events"
@@ -2278,11 +2252,11 @@
           "solcat_citations": [
             "essential-business__fleet-safety-management-system"
           ],
-          "feature_id": "driver_safety.scoring_reporting",
-          "feature_name": "Safety Scoring & Reporting"
+          "feature_id": "driver_safety.safety_scoring_coaching",
+          "feature_name": "Safety Scoring & Coaching"
         },
         {
-          "text": "Detect harsh braking, acceleration, and cornering events",
+          "text": "Detect harsh braking, harsh acceleration, and harsh cornering events",
           "source": "both",
           "proxy_refs": [
             "Harsh braking, acceleration, and cornering detection"
@@ -2306,11 +2280,11 @@
           "solcat_citations": [
             "essential-business__fleet-safety-management-system"
           ],
-          "feature_id": "driver_safety.event_detection",
+          "feature_id": "driver_safety.driving_event_detection",
           "feature_name": "Driving Event Detection"
         },
         {
-          "text": "Monitor speeding relative to posted speed limits and generate alerts",
+          "text": "Monitor vehicle speed and alert when exceeding posted speed limits",
           "source": "both",
           "proxy_refs": [
             "Speeding alerts relative to posted limits"
@@ -2334,7 +2308,7 @@
           "solcat_citations": [
             "essential-business__fleet-safety-management-system"
           ],
-          "feature_id": "driver_safety.event_detection",
+          "feature_id": "driver_safety.driving_event_detection",
           "feature_name": "Driving Event Detection"
         },
         {
@@ -2362,12 +2336,12 @@
           "solcat_citations": [
             "essential-business__fleet-safety-management-system"
           ],
-          "feature_id": "driver_safety.distraction_monitoring",
-          "feature_name": "Distraction Monitoring"
+          "feature_id": "driver_safety.driver_condition_monitoring",
+          "feature_name": "Driver Condition Monitoring"
         },
         {
-          "text": "Detect driver fatigue through eye closure and drowsiness indicators",
-          "source": "imda",
+          "text": "Detect driver fatigue events such as eye closure and alert driver",
+          "source": "both",
           "proxy_refs": [
             "Distracted driving detection (phone use, fatigue)"
           ],
@@ -2390,8 +2364,8 @@
           "solcat_citations": [
             "essential-business__fleet-safety-management-system"
           ],
-          "feature_id": "driver_safety.event_detection",
-          "feature_name": "Driving Event Detection"
+          "feature_id": "driver_safety.driver_condition_monitoring",
+          "feature_name": "Driver Condition Monitoring"
         },
         {
           "text": "Send real-time coaching and safety alerts to driver during trip",
@@ -2406,11 +2380,27 @@
             "wikipedia_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "driver_safety.distraction_monitoring",
-          "feature_name": "Distraction Monitoring"
+          "feature_id": "driver_safety.safety_scoring_coaching",
+          "feature_name": "Safety Scoring & Coaching"
         },
         {
-          "text": "Generate forward collision warning alerts for potential vehicle-to-vehicle collisions",
+          "text": "Generate safety leaderboards and trend reports on driver behaviour",
+          "source": "proxy",
+          "proxy_refs": [
+            "Safety leaderboard and trend reports"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "samsara",
+            "verizon_connect",
+            "wikipedia_fleet"
+          ],
+          "solcat_citations": [],
+          "feature_id": "driver_safety.safety_scoring_coaching",
+          "feature_name": "Safety Scoring & Coaching"
+        },
+        {
+          "text": "Detect forward collision risk and alert driver with collision warning",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -2429,10 +2419,10 @@
             "essential-business__fleet-safety-management-system"
           ],
           "feature_id": "driver_safety.collision_avoidance",
-          "feature_name": "Collision Avoidance Alerts"
+          "feature_name": "Collision Avoidance"
         },
         {
-          "text": "Generate lane departure warning alerts when vehicle drifts from lane",
+          "text": "Detect lane departure and alert driver",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -2451,10 +2441,10 @@
             "essential-business__fleet-safety-management-system"
           ],
           "feature_id": "driver_safety.collision_avoidance",
-          "feature_name": "Collision Avoidance Alerts"
+          "feature_name": "Collision Avoidance"
         },
         {
-          "text": "Generate pedestrian and cyclist collision warning alerts",
+          "text": "Detect pedestrian or cyclist collision risk and alert driver",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -2473,10 +2463,10 @@
             "essential-business__fleet-safety-management-system"
           ],
           "feature_id": "driver_safety.collision_avoidance",
-          "feature_name": "Collision Avoidance Alerts"
+          "feature_name": "Collision Avoidance"
         },
         {
-          "text": "Detect blind spot hazards and alert driver of pedestrians, cyclists, motorcyclists, or workers in blind spot",
+          "text": "Detect objects in vehicle blind spots and alert driver of pedestrians, cyclists, motorcyclists, or workers",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -2495,10 +2485,10 @@
             "essential-business__fleet-safety-management-system"
           ],
           "feature_id": "driver_safety.collision_avoidance",
-          "feature_name": "Collision Avoidance Alerts"
+          "feature_name": "Collision Avoidance"
         },
         {
-          "text": "Detect tailgating and unsafe following distance",
+          "text": "Detect tailgating behaviour and alert driver",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -2516,24 +2506,8 @@
           "solcat_citations": [
             "essential-business__fleet-safety-management-system"
           ],
-          "feature_id": "driver_safety.event_detection",
+          "feature_id": "driver_safety.driving_event_detection",
           "feature_name": "Driving Event Detection"
-        },
-        {
-          "text": "Generate safety leaderboards and trend reports for driver performance comparison and analysis",
-          "source": "proxy",
-          "proxy_refs": [
-            "Safety leaderboard and trend reports"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "samsara",
-            "verizon_connect",
-            "wikipedia_fleet"
-          ],
-          "solcat_citations": [],
-          "feature_id": "driver_safety.scoring_reporting",
-          "feature_name": "Safety Scoring & Reporting"
         }
       ],
       "stats": {
@@ -2543,43 +2517,43 @@
       },
       "features": [
         {
-          "id": "driver_safety.event_detection",
+          "id": "driver_safety.driving_event_detection",
           "name": "Driving Event Detection",
-          "description": "Detect and classify unsafe driving events including harsh maneuvers, speeding, fatigue, and following distance violations.",
+          "description": "Detect and classify unsafe driving events including harsh maneuvers, speeding, and tailgating.",
           "req_idxs": [
             1,
             2,
-            4,
-            10
+            11
+          ]
+        },
+        {
+          "id": "driver_safety.driver_condition_monitoring",
+          "name": "Driver Condition Monitoring",
+          "description": "Monitor driver physical state including distraction and fatigue with real-time alerts.",
+          "req_idxs": [
+            3,
+            4
           ]
         },
         {
           "id": "driver_safety.collision_avoidance",
-          "name": "Collision Avoidance Alerts",
-          "description": "Generate real-time warnings for forward collisions, lane departures, blind spot hazards, and pedestrian/cyclist risks.",
+          "name": "Collision Avoidance",
+          "description": "Detect collision risks from vehicles, pedestrians, cyclists, and blind spot hazards with warning alerts.",
           "req_idxs": [
-            6,
             7,
             8,
-            9
+            9,
+            10
           ]
         },
         {
-          "id": "driver_safety.distraction_monitoring",
-          "name": "Distraction Monitoring",
-          "description": "Detect distracted driving behaviors such as phone use and send immediate alerts to the driver.",
-          "req_idxs": [
-            3,
-            5
-          ]
-        },
-        {
-          "id": "driver_safety.scoring_reporting",
-          "name": "Safety Scoring & Reporting",
-          "description": "Calculate driver safety scores and generate leaderboards and trend reports for performance analysis and comparison.",
+          "id": "driver_safety.safety_scoring_coaching",
+          "name": "Safety Scoring & Coaching",
+          "description": "Calculate driver safety scores, deliver real-time coaching, and generate performance reports and leaderboards.",
           "req_idxs": [
             0,
-            11
+            5,
+            6
           ]
         }
       ]
@@ -2594,7 +2568,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "chevin_fleetwave",
         "fleetio",
@@ -2650,7 +2624,7 @@
           "feature_name": "Driver Compliance Tracking"
         },
         {
-          "text": "Log and monitor driver hours and rest-period compliance against regulatory requirements.",
+          "text": "Log and monitor driver hours and rest-period compliance to meet regulatory requirements.",
           "source": "proxy",
           "proxy_refs": [
             "Driver hours and rest-period compliance logging"
@@ -2682,7 +2656,7 @@
           "feature_name": "Compliance Documentation"
         },
         {
-          "text": "Provide a compliance status dashboard displaying the validity state (valid, expiring soon, expired) of all tracked regulatory obligations.",
+          "text": "Provide a compliance status dashboard displaying the validity state (valid, expiring soon, expired) of all regulatory obligations across the fleet.",
           "source": "proxy",
           "proxy_refs": [
             "Compliance status dashboard (valid, expiring, expired)"
@@ -2716,7 +2690,7 @@
         {
           "id": "compliance_regulatory.driver_compliance",
           "name": "Driver Compliance Tracking",
-          "description": "Track driver licences, permits, and hours-of-service compliance with advance notifications.",
+          "description": "Track driver licences, permits, hours worked, and rest periods to ensure regulatory adherence.",
           "req_idxs": [
             2,
             3
@@ -2733,7 +2707,7 @@
         {
           "id": "compliance_regulatory.compliance_visibility",
           "name": "Compliance Status Dashboard",
-          "description": "Provide real-time visibility into the validity state of all regulatory obligations across the fleet.",
+          "description": "Provide real-time visibility into the validity state of all fleet regulatory obligations.",
           "req_idxs": [
             5
           ]
@@ -2749,7 +2723,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "advanced",
       "cited_sources": [
         "chevin_fleetwave",
         "fleetio",
@@ -2789,23 +2763,7 @@
           "feature_name": "Tyre Condition Monitoring"
         },
         {
-          "text": "Monitor tyre wear patterns and degradation",
-          "source": "proxy",
-          "proxy_refs": [
-            "Tread depth recording and wear tracking"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "chevin_fleetwave",
-            "fleetio",
-            "sap_vehicle"
-          ],
-          "solcat_citations": [],
-          "feature_id": "tyre_management.tyre_monitoring",
-          "feature_name": "Tyre Condition Monitoring"
-        },
-        {
-          "text": "Schedule tyre rotations based on distance travelled or calendar intervals",
+          "text": "Generate tyre rotation schedules based on distance travelled or calendar intervals",
           "source": "proxy",
           "proxy_refs": [
             "Rotation schedule based on km or calendar"
@@ -2821,7 +2779,7 @@
           "feature_name": "Tyre Maintenance Scheduling"
         },
         {
-          "text": "Record tyre replacement history per vehicle including date and reason",
+          "text": "Maintain complete tyre replacement history per vehicle",
           "source": "proxy",
           "proxy_refs": [
             "Tyre replacement history per vehicle"
@@ -2833,8 +2791,24 @@
             "sap_vehicle"
           ],
           "solcat_citations": [],
-          "feature_id": "tyre_management.tyre_replacement",
-          "feature_name": "Tyre Replacement & Alerts"
+          "feature_id": "tyre_management.tyre_analytics",
+          "feature_name": "Tyre History & Cost Analysis"
+        },
+        {
+          "text": "Calculate and report tyre cost per unit and cost per kilometre",
+          "source": "proxy",
+          "proxy_refs": [
+            "Cost per tyre and cost per km for tyres"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "chevin_fleetwave",
+            "fleetio",
+            "sap_vehicle"
+          ],
+          "solcat_citations": [],
+          "feature_id": "tyre_management.tyre_analytics",
+          "feature_name": "Tyre History & Cost Analysis"
         },
         {
           "text": "Generate alerts when tyre tread depth falls below minimum safety threshold",
@@ -2849,30 +2823,14 @@
             "sap_vehicle"
           ],
           "solcat_citations": [],
-          "feature_id": "tyre_management.tyre_replacement",
-          "feature_name": "Tyre Replacement & Alerts"
-        },
-        {
-          "text": "Calculate cost per tyre and cost per kilometre for tyre operations",
-          "source": "proxy",
-          "proxy_refs": [
-            "Cost per tyre and cost per km for tyres"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "chevin_fleetwave",
-            "fleetio",
-            "sap_vehicle"
-          ],
-          "solcat_citations": [],
-          "feature_id": "tyre_management.tyre_costing",
-          "feature_name": "Tyre Cost Analysis"
+          "feature_id": "tyre_management.tyre_monitoring",
+          "feature_name": "Tyre Condition Monitoring"
         }
       ],
       "stats": {
         "proxy_in": 6,
         "imda_in": 0,
-        "merged_out": 7
+        "merged_out": 6
       },
       "features": [
         {
@@ -2886,10 +2844,10 @@
         {
           "id": "tyre_management.tyre_monitoring",
           "name": "Tyre Condition Monitoring",
-          "description": "Record tread depth measurements, track wear patterns, and monitor tyre degradation over time.",
+          "description": "Record tread depth measurements and generate safety alerts when thresholds are breached.",
           "req_idxs": [
             1,
-            2
+            5
           ]
         },
         {
@@ -2897,24 +2855,16 @@
           "name": "Tyre Maintenance Scheduling",
           "description": "Schedule and manage tyre rotations based on distance or calendar intervals.",
           "req_idxs": [
-            3
+            2
           ]
         },
         {
-          "id": "tyre_management.tyre_replacement",
-          "name": "Tyre Replacement & Alerts",
-          "description": "Record replacement history and generate safety alerts when tread depth falls below minimum thresholds.",
+          "id": "tyre_management.tyre_analytics",
+          "name": "Tyre History & Cost Analysis",
+          "description": "Track replacement history and calculate tyre costs per unit and per kilometre.",
           "req_idxs": [
-            4,
-            5
-          ]
-        },
-        {
-          "id": "tyre_management.tyre_costing",
-          "name": "Tyre Cost Analysis",
-          "description": "Calculate and analyse cost per tyre and cost per kilometre for tyre operations.",
-          "req_idxs": [
-            6
+            3,
+            4
           ]
         }
       ]
@@ -2937,7 +2887,7 @@
       ],
       "requirements": [
         {
-          "text": "Record incident with date, time, location, and detailed description of what occurred",
+          "text": "Record incident with date, time, location, and description",
           "source": "proxy",
           "proxy_refs": [
             "Incident record with date, location, and description"
@@ -2949,8 +2899,8 @@
             "verizon_connect"
           ],
           "solcat_citations": [],
-          "feature_id": "accident_incident.incident_documentation",
-          "feature_name": "Incident Documentation"
+          "feature_id": "accident_incident.incident_recording",
+          "feature_name": "Incident Recording"
         },
         {
           "text": "Link driver and vehicle to each incident record",
@@ -2965,11 +2915,11 @@
             "verizon_connect"
           ],
           "solcat_citations": [],
-          "feature_id": "accident_incident.incident_documentation",
-          "feature_name": "Incident Documentation"
+          "feature_id": "accident_incident.incident_recording",
+          "feature_name": "Incident Recording"
         },
         {
-          "text": "Capture and store photos and supporting documents as evidence for each incident",
+          "text": "Upload and attach photos and supporting documents as evidence",
           "source": "proxy",
           "proxy_refs": [
             "Photo and document upload for evidence"
@@ -2981,11 +2931,11 @@
             "verizon_connect"
           ],
           "solcat_citations": [],
-          "feature_id": "accident_incident.incident_documentation",
-          "feature_name": "Incident Documentation"
+          "feature_id": "accident_incident.incident_recording",
+          "feature_name": "Incident Recording"
         },
         {
-          "text": "Document damage assessment and generate repair cost estimates",
+          "text": "Assess damage and generate repair cost estimates",
           "source": "proxy",
           "proxy_refs": [
             "Damage assessment and repair cost estimate"
@@ -2997,11 +2947,11 @@
             "verizon_connect"
           ],
           "solcat_citations": [],
-          "feature_id": "accident_incident.incident_documentation",
-          "feature_name": "Incident Documentation"
+          "feature_id": "accident_incident.damage_assessment",
+          "feature_name": "Damage Assessment"
         },
         {
-          "text": "Associate incident records with corresponding insurance claim records",
+          "text": "Link incident records to insurance claim records",
           "source": "proxy",
           "proxy_refs": [
             "Link to insurance claim record"
@@ -3013,11 +2963,11 @@
             "verizon_connect"
           ],
           "solcat_citations": [],
-          "feature_id": "accident_incident.incident_claims_integration",
-          "feature_name": "Claims & Insurance Integration"
+          "feature_id": "accident_incident.claims_integration",
+          "feature_name": "Claims Integration"
         },
         {
-          "text": "Generate incident frequency reports by driver and by vehicle for safety analysis and driver coaching",
+          "text": "Generate incident frequency reports by driver and vehicle",
           "source": "proxy",
           "proxy_refs": [
             "Incident frequency report per driver and vehicle"
@@ -3029,11 +2979,11 @@
             "verizon_connect"
           ],
           "solcat_citations": [],
-          "feature_id": "accident_incident.incident_analysis_reporting",
-          "feature_name": "Analysis & Reporting"
+          "feature_id": "accident_incident.incident_analytics",
+          "feature_name": "Incident Analytics"
         },
         {
-          "text": "Integrate forward collision warning, lane departure warning, and pedestrian/cyclist collision alerts from Advanced Driver Assistance System",
+          "text": "Integrate forward collision warning and lane departure warning alerts from vehicle telematics",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -3051,8 +3001,30 @@
           "solcat_citations": [
             "essential-business__fleet-safety-management-system"
           ],
-          "feature_id": "accident_incident.adas_alerts",
-          "feature_name": "ADAS Alert Integration"
+          "feature_id": "accident_incident.telematics_alerts",
+          "feature_name": "Telematics Alerts"
+        },
+        {
+          "text": "Integrate pedestrian and cyclist collision warning alerts from vehicle telematics",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00073",
+              "text": "Advanced Driver Assistance System (ADAS) to alert the driver of potential collisions (e.g. forward collision warning, lane departure warning, and pedestrian or cyclist collision warning, etc)",
+              "q_title": "Fleet Safety Management",
+              "subsection": "Safety Features",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "accident_incident.telematics_alerts",
+          "feature_name": "Telematics Alerts"
         },
         {
           "text": "Integrate blind spot detection alerts for pedestrians, cyclists, motorcyclists, and workers",
@@ -3073,11 +3045,11 @@
           "solcat_citations": [
             "essential-business__fleet-safety-management-system"
           ],
-          "feature_id": "accident_incident.safety_monitoring_alerts",
-          "feature_name": "Safety Monitoring Alerts"
+          "feature_id": "accident_incident.telematics_alerts",
+          "feature_name": "Telematics Alerts"
         },
         {
-          "text": "Integrate driver fatigue and distraction detection alerts from Driver Status Monitoring System",
+          "text": "Integrate driver fatigue detection alerts from vehicle monitoring systems",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -3095,58 +3067,82 @@
           "solcat_citations": [
             "essential-business__fleet-safety-management-system"
           ],
-          "feature_id": "accident_incident.safety_monitoring_alerts",
-          "feature_name": "Safety Monitoring Alerts"
+          "feature_id": "accident_incident.telematics_alerts",
+          "feature_name": "Telematics Alerts"
+        },
+        {
+          "text": "Integrate driver distraction detection alerts from vehicle monitoring systems",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00604",
+              "text": "Driver Status Monitoring System (DSMS) to detect and alert the driver of fatigue events (e.g. closing of eyes) and distractions (e.g. making phone calls)",
+              "q_title": "Fleet Safety Management",
+              "subsection": "Safety Features",
+              "sources": [
+                "essential-business__fleet-safety-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__fleet-safety-management-system"
+          ],
+          "feature_id": "accident_incident.telematics_alerts",
+          "feature_name": "Telematics Alerts"
         }
       ],
       "stats": {
         "proxy_in": 6,
         "imda_in": 3,
-        "merged_out": 9
+        "merged_out": 11
       },
       "features": [
         {
-          "id": "accident_incident.incident_documentation",
-          "name": "Incident Documentation",
-          "description": "Record and capture incident details, evidence, and damage assessment.",
+          "id": "accident_incident.incident_recording",
+          "name": "Incident Recording",
+          "description": "Capture and document accident and incident details with date, time, location, and description.",
           "req_idxs": [
             0,
             1,
-            2,
+            2
+          ]
+        },
+        {
+          "id": "accident_incident.damage_assessment",
+          "name": "Damage Assessment",
+          "description": "Evaluate incident damage and generate repair cost estimates.",
+          "req_idxs": [
             3
           ]
         },
         {
-          "id": "accident_incident.incident_claims_integration",
-          "name": "Claims & Insurance Integration",
-          "description": "Link incidents to insurance claims and manage claim associations.",
+          "id": "accident_incident.claims_integration",
+          "name": "Claims Integration",
+          "description": "Link incident records to insurance claim records for seamless claims processing.",
           "req_idxs": [
             4
           ]
         },
         {
-          "id": "accident_incident.incident_analysis_reporting",
-          "name": "Analysis & Reporting",
-          "description": "Generate frequency reports and safety analytics by driver and vehicle.",
+          "id": "accident_incident.incident_analytics",
+          "name": "Incident Analytics",
+          "description": "Generate frequency reports and safety analysis by driver and vehicle.",
           "req_idxs": [
             5
           ]
         },
         {
-          "id": "accident_incident.adas_alerts",
-          "name": "ADAS Alert Integration",
-          "description": "Capture forward collision, lane departure, and pedestrian/cyclist collision warnings.",
+          "id": "accident_incident.telematics_alerts",
+          "name": "Telematics Alerts",
+          "description": "Integrate vehicle and driver monitoring alerts including collision warnings, fatigue, and distraction detection.",
           "req_idxs": [
-            6
-          ]
-        },
-        {
-          "id": "accident_incident.safety_monitoring_alerts",
-          "name": "Safety Monitoring Alerts",
-          "description": "Integrate blind spot detection and driver fatigue/distraction monitoring.",
-          "req_idxs": [
+            6,
             7,
-            8
+            8,
+            9,
+            10
           ]
         }
       ]
@@ -3179,8 +3175,8 @@
             "odoo_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "booking_reservation.booking_management",
-          "feature_name": "Booking Management"
+          "feature_id": "booking_reservation.availability_booking",
+          "feature_name": "Availability & Booking"
         },
         {
           "text": "Enable staff to self-service book vehicles with optional approval workflow",
@@ -3194,8 +3190,8 @@
             "odoo_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "booking_reservation.booking_management",
-          "feature_name": "Booking Management"
+          "feature_id": "booking_reservation.availability_booking",
+          "feature_name": "Availability & Booking"
         },
         {
           "text": "Detect and prevent overlapping bookings for the same vehicle",
@@ -3209,11 +3205,11 @@
             "odoo_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "booking_reservation.booking_management",
-          "feature_name": "Booking Management"
+          "feature_id": "booking_reservation.availability_booking",
+          "feature_name": "Availability & Booking"
         },
         {
-          "text": "Provide key handover checklist and return verification process",
+          "text": "Provide key handover and return checklist workflow",
           "source": "proxy",
           "proxy_refs": [
             "Key handover and return checklist"
@@ -3239,8 +3235,8 @@
             "odoo_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "booking_reservation.booking_reporting",
-          "feature_name": "Booking Reporting"
+          "feature_id": "booking_reservation.recurring_reporting",
+          "feature_name": "Recurring Bookings & Reporting"
         },
         {
           "text": "Support recurring bookings for regular or repeating routes",
@@ -3254,8 +3250,8 @@
             "odoo_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "booking_reservation.booking_management",
-          "feature_name": "Booking Management"
+          "feature_id": "booking_reservation.recurring_reporting",
+          "feature_name": "Recurring Bookings & Reporting"
         }
       ],
       "stats": {
@@ -3265,30 +3261,30 @@
       },
       "features": [
         {
-          "id": "booking_reservation.booking_management",
-          "name": "Booking Management",
-          "description": "Self-service vehicle booking with availability calendar and conflict prevention.",
+          "id": "booking_reservation.availability_booking",
+          "name": "Availability & Booking",
+          "description": "Calendar-based vehicle availability display and self-service booking with conflict prevention.",
           "req_idxs": [
             0,
             1,
-            2,
-            5
+            2
           ]
         },
         {
           "id": "booking_reservation.handover_returns",
           "name": "Handover & Returns",
-          "description": "Key handover checklists and vehicle return verification processes.",
+          "description": "Key handover and vehicle return checklist workflows.",
           "req_idxs": [
             3
           ]
         },
         {
-          "id": "booking_reservation.booking_reporting",
-          "name": "Booking Reporting",
-          "description": "Usage analytics and reporting by vehicle and department.",
+          "id": "booking_reservation.recurring_reporting",
+          "name": "Recurring Bookings & Reporting",
+          "description": "Support for recurring bookings and usage analytics by vehicle and department.",
           "req_idxs": [
-            4
+            4,
+            5
           ]
         }
       ]
@@ -3325,7 +3321,7 @@
           "feature_name": "Policy Management"
         },
         {
-          "text": "Generate alerts for upcoming policy renewal dates to ensure timely renewal and continuous coverage.",
+          "text": "Generate alerts for upcoming policy renewal dates to ensure continuous coverage.",
           "source": "proxy",
           "proxy_refs": [
             "Policy renewal date alerts"
@@ -3340,7 +3336,7 @@
           "feature_name": "Policy Management"
         },
         {
-          "text": "Create and link claim records to specific incidents and vehicles, establishing a complete audit trail.",
+          "text": "Create and link claim records to specific incidents and vehicles, capturing claim number and date filed.",
           "source": "proxy",
           "proxy_refs": [
             "Claim record linked to incident and vehicle"
@@ -3351,8 +3347,8 @@
             "fleetio"
           ],
           "solcat_citations": [],
-          "feature_id": "insurance_claims.claim_processing",
-          "feature_name": "Claim Processing"
+          "feature_id": "insurance_claims.claims_processing",
+          "feature_name": "Claims Processing"
         },
         {
           "text": "Track claim status through defined workflow states: filed, under review, and settled.",
@@ -3366,11 +3362,11 @@
             "fleetio"
           ],
           "solcat_citations": [],
-          "feature_id": "insurance_claims.claim_processing",
-          "feature_name": "Claim Processing"
+          "feature_id": "insurance_claims.claims_processing",
+          "feature_name": "Claims Processing"
         },
         {
-          "text": "Record excess (deductible) amounts and approved payout amounts for each claim.",
+          "text": "Record excess (deductible) and payout amounts for each claim.",
           "source": "proxy",
           "proxy_refs": [
             "Excess and payout amount logging"
@@ -3381,11 +3377,11 @@
             "fleetio"
           ],
           "solcat_citations": [],
-          "feature_id": "insurance_claims.claim_financials",
-          "feature_name": "Claim Financials"
+          "feature_id": "insurance_claims.claims_processing",
+          "feature_name": "Claims Processing"
         },
         {
-          "text": "Maintain premium payment history and analyze premium trends per vehicle to identify cost patterns and anomalies.",
+          "text": "Maintain premium history per vehicle and analyze premium trends over time.",
           "source": "proxy",
           "proxy_refs": [
             "Premium history and trend per vehicle"
@@ -3396,8 +3392,8 @@
             "fleetio"
           ],
           "solcat_citations": [],
-          "feature_id": "insurance_claims.claim_financials",
-          "feature_name": "Claim Financials"
+          "feature_id": "insurance_claims.premium_analysis",
+          "feature_name": "Premium Analysis"
         }
       ],
       "stats": {
@@ -3409,27 +3405,27 @@
         {
           "id": "insurance_claims.policy_management",
           "name": "Policy Management",
-          "description": "Maintain insurance policy records and monitor renewal schedules.",
+          "description": "Maintain insurance policy records and monitor renewal dates.",
           "req_idxs": [
             0,
             1
           ]
         },
         {
-          "id": "insurance_claims.claim_processing",
-          "name": "Claim Processing",
+          "id": "insurance_claims.claims_processing",
+          "name": "Claims Processing",
           "description": "Create, link, and track claims through workflow states from filing to settlement.",
           "req_idxs": [
             2,
-            3
+            3,
+            4
           ]
         },
         {
-          "id": "insurance_claims.claim_financials",
-          "name": "Claim Financials",
-          "description": "Record deductibles, payouts, and premium payment history with trend analysis.",
+          "id": "insurance_claims.premium_analysis",
+          "name": "Premium Analysis",
+          "description": "Record and analyze premium history and trends per vehicle.",
           "req_idxs": [
-            4,
             5
           ]
         }
@@ -3441,6 +3437,7 @@
       "description": "Manage vehicle acquisition (purchase, lease, rental), replacement planning based on age or TCO, and disposal via auction, trade-in, or write-off.",
       "priority_proxy": "standard",
       "applicability": [
+        "sme",
         "mid_market",
         "enterprise"
       ],
@@ -3606,7 +3603,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "advanced",
       "cited_sources": [
         "fleetio",
         "chevin_fleetwave"
@@ -3746,7 +3743,7 @@
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": "enterprise_only",
+      "sme_tier": "advanced",
       "cited_sources": [
         "odoo_fleet",
         "chevin_fleetwave",
@@ -3785,11 +3782,11 @@
             "wikipedia_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "emissions_tracking.sustainability_reporting",
-          "feature_name": "Sustainability & ESG Reporting"
+          "feature_id": "emissions_tracking.emissions_reporting",
+          "feature_name": "Emissions Reporting"
         },
         {
-          "text": "Track fleet composition breakdown between electric vehicles and internal combustion engine vehicles",
+          "text": "Track and report fleet composition split between electric vehicles and internal combustion engine vehicles",
           "source": "proxy",
           "proxy_refs": [
             "EV vs ICE fleet composition tracking"
@@ -3802,8 +3799,8 @@
             "wikipedia_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "emissions_tracking.fleet_composition",
-          "feature_name": "Fleet Composition Monitoring"
+          "feature_id": "emissions_tracking.ev_transition_monitoring",
+          "feature_name": "EV Transition Monitoring"
         },
         {
           "text": "Log and monitor EV charging station usage and associated costs",
@@ -3819,8 +3816,8 @@
             "wikipedia_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "emissions_tracking.fleet_composition",
-          "feature_name": "Fleet Composition Monitoring"
+          "feature_id": "emissions_tracking.ev_transition_monitoring",
+          "feature_name": "EV Transition Monitoring"
         },
         {
           "text": "Track carbon offset initiatives and emissions reduction targets against actual performance",
@@ -3836,8 +3833,8 @@
             "wikipedia_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "emissions_tracking.sustainability_reporting",
-          "feature_name": "Sustainability & ESG Reporting"
+          "feature_id": "emissions_tracking.sustainability_targets",
+          "feature_name": "Sustainability Targets & Offsets"
         },
         {
           "text": "Generate ESG and sustainability reports for compliance and stakeholder communication",
@@ -3853,8 +3850,8 @@
             "wikipedia_fleet"
           ],
           "solcat_citations": [],
-          "feature_id": "emissions_tracking.sustainability_reporting",
-          "feature_name": "Sustainability & ESG Reporting"
+          "feature_id": "emissions_tracking.esg_compliance",
+          "feature_name": "ESG Compliance Reporting"
         }
       ],
       "stats": {
@@ -3872,21 +3869,35 @@
           ]
         },
         {
-          "id": "emissions_tracking.fleet_composition",
-          "name": "Fleet Composition Monitoring",
-          "description": "Track EV and ICE vehicle breakdown and charging station usage.",
+          "id": "emissions_tracking.emissions_reporting",
+          "name": "Emissions Reporting",
+          "description": "Generate detailed emissions reports segmented by fuel type and vehicle class.",
+          "req_idxs": [
+            1
+          ]
+        },
+        {
+          "id": "emissions_tracking.ev_transition_monitoring",
+          "name": "EV Transition Monitoring",
+          "description": "Track fleet composition and EV adoption progress against ICE vehicles.",
           "req_idxs": [
             2,
             3
           ]
         },
         {
-          "id": "emissions_tracking.sustainability_reporting",
-          "name": "Sustainability & ESG Reporting",
-          "description": "Generate emissions reports, track reduction targets, and produce compliance documentation.",
+          "id": "emissions_tracking.sustainability_targets",
+          "name": "Sustainability Targets & Offsets",
+          "description": "Monitor carbon offset initiatives and track emissions reduction targets versus actual performance.",
           "req_idxs": [
-            1,
-            4,
+            4
+          ]
+        },
+        {
+          "id": "emissions_tracking.esg_compliance",
+          "name": "ESG Compliance Reporting",
+          "description": "Generate ESG and sustainability reports for regulatory compliance and stakeholder communication.",
+          "req_idxs": [
             5
           ]
         }
@@ -3898,16 +3909,18 @@
       "description": "Manage a shared vehicle pool with self-service booking, keyless access, usage-based billing, and automated return workflows.",
       "priority_proxy": "advanced",
       "applicability": [
+        "sme",
+        "mid_market",
         "enterprise"
       ],
-      "sme_tier": "enterprise_only",
+      "sme_tier": "preferred",
       "cited_sources": [
         "chevin_fleetwave",
         "sap_vehicle"
       ],
       "requirements": [
         {
-          "text": "Enable self-service pool vehicle booking through mobile application with real-time availability display",
+          "text": "Enable self-service pool vehicle booking through a mobile or web application with real-time availability visibility",
           "source": "proxy",
           "proxy_refs": [
             "Self-service pool vehicle booking via app"
@@ -3922,7 +3935,7 @@
           "feature_name": "Booking & Access"
         },
         {
-          "text": "Integrate keyless access mechanisms (smart locks, electronic key boxes) for automated vehicle unlock upon booking confirmation",
+          "text": "Integrate keyless access mechanisms such as smart locks or electronic key boxes to enable vehicle access without physical key exchange",
           "source": "proxy",
           "proxy_refs": [
             "Keyless access integration (smart lock, key box)"
@@ -3937,7 +3950,7 @@
           "feature_name": "Booking & Access"
         },
         {
-          "text": "Calculate and allocate vehicle usage costs to departments based on actual usage metrics (distance, duration, fuel consumption)",
+          "text": "Allocate vehicle usage costs to departments or cost centers based on actual usage metrics",
           "source": "proxy",
           "proxy_refs": [
             "Usage-based cost allocation to departments"
@@ -3949,10 +3962,10 @@
           ],
           "solcat_citations": [],
           "feature_id": "pool_car_sharing.usage_billing",
-          "feature_name": "Usage & Billing"
+          "feature_name": "Usage Billing"
         },
         {
-          "text": "Automate pre-trip vehicle inspection workflows with checklist capture and photo documentation",
+          "text": "Automate pre-trip and post-trip vehicle inspection workflows with digital checklists and condition documentation",
           "source": "proxy",
           "proxy_refs": [
             "Automated pre-trip and post-trip inspection"
@@ -3963,26 +3976,11 @@
             "sap_vehicle"
           ],
           "solcat_citations": [],
-          "feature_id": "pool_car_sharing.inspections_condition",
-          "feature_name": "Inspections & Condition"
+          "feature_id": "pool_car_sharing.inspection_reporting",
+          "feature_name": "Inspection & Reporting"
         },
         {
-          "text": "Automate post-trip vehicle inspection workflows with checklist capture and photo documentation",
-          "source": "proxy",
-          "proxy_refs": [
-            "Automated pre-trip and post-trip inspection"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "chevin_fleetwave",
-            "sap_vehicle"
-          ],
-          "solcat_citations": [],
-          "feature_id": "pool_car_sharing.inspections_condition",
-          "feature_name": "Inspections & Condition"
-        },
-        {
-          "text": "Capture vehicle condition reports including cleanliness status and damage documentation from users",
+          "text": "Capture vehicle cleanliness and damage reports during pre-trip and post-trip inspections with photo evidence",
           "source": "proxy",
           "proxy_refs": [
             "Vehicle cleanliness and damage reporting"
@@ -3993,11 +3991,11 @@
             "sap_vehicle"
           ],
           "solcat_citations": [],
-          "feature_id": "pool_car_sharing.inspections_condition",
-          "feature_name": "Inspections & Condition"
+          "feature_id": "pool_car_sharing.inspection_reporting",
+          "feature_name": "Inspection & Reporting"
         },
         {
-          "text": "Generate pool vehicle utilization analytics to support capacity planning and right-sizing decisions",
+          "text": "Generate pool utilization analytics to support vehicle fleet right-sizing and optimization decisions",
           "source": "proxy",
           "proxy_refs": [
             "Pool utilisation analytics and right-sizing"
@@ -4008,49 +4006,48 @@
             "sap_vehicle"
           ],
           "solcat_citations": [],
-          "feature_id": "pool_car_sharing.analytics_reporting",
-          "feature_name": "Analytics & Reporting"
+          "feature_id": "pool_car_sharing.analytics_optimization",
+          "feature_name": "Analytics & Optimization"
         }
       ],
       "stats": {
         "proxy_in": 6,
         "imda_in": 0,
-        "merged_out": 7
+        "merged_out": 6
       },
       "features": [
         {
           "id": "pool_car_sharing.booking_access",
           "name": "Booking & Access",
-          "description": "Self-service booking and keyless vehicle access management.",
+          "description": "Self-service vehicle booking with real-time availability and keyless access control.",
           "req_idxs": [
             0,
             1
           ]
         },
         {
-          "id": "pool_car_sharing.inspections_condition",
-          "name": "Inspections & Condition",
-          "description": "Pre-trip and post-trip vehicle inspections with damage and cleanliness reporting.",
-          "req_idxs": [
-            3,
-            4,
-            5
-          ]
-        },
-        {
           "id": "pool_car_sharing.usage_billing",
-          "name": "Usage & Billing",
-          "description": "Track vehicle usage metrics and allocate costs to departments.",
+          "name": "Usage Billing",
+          "description": "Track and allocate vehicle usage costs to departments based on actual consumption.",
           "req_idxs": [
             2
           ]
         },
         {
-          "id": "pool_car_sharing.analytics_reporting",
-          "name": "Analytics & Reporting",
-          "description": "Generate utilization insights for capacity planning and fleet optimization.",
+          "id": "pool_car_sharing.inspection_reporting",
+          "name": "Inspection & Reporting",
+          "description": "Automated pre- and post-trip inspections with digital checklists, damage documentation, and photo evidence.",
           "req_idxs": [
-            6
+            3,
+            4
+          ]
+        },
+        {
+          "id": "pool_car_sharing.analytics_optimization",
+          "name": "Analytics & Optimization",
+          "description": "Generate utilization insights to support fleet right-sizing and optimization decisions.",
+          "req_idxs": [
+            5
           ]
         }
       ]
@@ -4063,7 +4060,7 @@
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": "enterprise_only",
+      "sme_tier": "advanced",
       "cited_sources": [
         "samsara",
         "oracle_otm",
@@ -4143,8 +4140,8 @@
             "essential-business__fleet-management-system",
             "logistics__transport-management"
           ],
-          "feature_id": "analytics_ai.operational_analytics",
-          "feature_name": "Operational Analytics"
+          "feature_id": "analytics_ai.operational_anomalies",
+          "feature_name": "Operational Anomalies"
         },
         {
           "text": "Fleet demand forecasting by season, project, or operational period",
@@ -4187,8 +4184,8 @@
           "solcat_citations": [
             "logistics__transport-management"
           ],
-          "feature_id": "analytics_ai.driver_risk_analysis",
-          "feature_name": "Driver Risk Analysis"
+          "feature_id": "analytics_ai.driver_risk_analytics",
+          "feature_name": "Driver Risk Analytics"
         },
         {
           "text": "AI-generated recommendations for maintenance scheduling and cost optimization",
@@ -4216,7 +4213,7 @@
         {
           "id": "analytics_ai.predictive_maintenance",
           "name": "Predictive Maintenance",
-          "description": "ML-based forecasting of vehicle maintenance needs using usage patterns and historical data.",
+          "description": "ML-based forecasting of vehicle maintenance needs and failure prevention.",
           "req_idxs": [
             0,
             5
@@ -4225,15 +4222,15 @@
         {
           "id": "analytics_ai.asset_optimization",
           "name": "Asset Optimization",
-          "description": "Models for optimal vehicle replacement timing and lifecycle cost analysis.",
+          "description": "Data-driven models for vehicle replacement timing and lifecycle cost analysis.",
           "req_idxs": [
             1
           ]
         },
         {
-          "id": "analytics_ai.operational_analytics",
-          "name": "Operational Analytics",
-          "description": "Anomaly detection and performance monitoring for fuel consumption and efficiency.",
+          "id": "analytics_ai.operational_anomalies",
+          "name": "Operational Anomalies",
+          "description": "Detection of unusual patterns in fuel consumption and fleet efficiency metrics.",
           "req_idxs": [
             2
           ]
@@ -4241,15 +4238,15 @@
         {
           "id": "analytics_ai.demand_forecasting",
           "name": "Demand Forecasting",
-          "description": "Predictive modeling of fleet demand by season, project, and operational period.",
+          "description": "Predictive modeling of fleet capacity needs across seasons and operational periods.",
           "req_idxs": [
             3
           ]
         },
         {
-          "id": "analytics_ai.driver_risk_analysis",
-          "name": "Driver Risk Analysis",
-          "description": "Behavior prediction and safety monitoring including dangerous driving and speeding detection.",
+          "id": "analytics_ai.driver_risk_analytics",
+          "name": "Driver Risk Analytics",
+          "description": "AI-powered assessment of driver behavior, safety risks, and compliance violations.",
           "req_idxs": [
             4
           ]
@@ -4357,8 +4354,8 @@
           "solcat_citations": [
             "logistics__transport-management"
           ],
-          "feature_id": "mobile_access.mobile_tracking_comms",
-          "feature_name": "Mobile Tracking & Communications"
+          "feature_id": "mobile_access.real_time_tracking",
+          "feature_name": "Real-Time Tracking & Communication"
         }
       ],
       "stats": {
@@ -4400,9 +4397,9 @@
           ]
         },
         {
-          "id": "mobile_access.mobile_tracking_comms",
-          "name": "Mobile Tracking & Communications",
-          "description": "Mobile application for real-time vehicle status tracking and direct communication between drivers and fleet coordinators.",
+          "id": "mobile_access.real_time_tracking",
+          "name": "Real-Time Tracking & Communication",
+          "description": "Mobile application for vehicle status tracking and direct communication between drivers, dispatchers, and fleet coordinators.",
           "req_idxs": [
             4
           ]
@@ -4501,7 +4498,7 @@
           "feature_name": "Audit Logging"
         },
         {
-          "text": "Comply with PSG Cyber Essentials Mark baseline security controls",
+          "text": "Implement security controls aligned with PSG Cyber Essentials Mark baseline requirements",
           "source": "proxy",
           "proxy_refs": [
             "Compliant with PSG Cyber Essentials Mark baseline"
@@ -4542,7 +4539,7 @@
         {
           "id": "data_governance.encryption_security",
           "name": "Encryption & Security Controls",
-          "description": "Encrypt data at rest and in transit, and implement PSG Cyber Essentials baseline security controls.",
+          "description": "Encrypt data at rest and in transit; implement PSG Cyber Essentials baseline security controls.",
           "req_idxs": [
             3,
             5
@@ -4551,7 +4548,7 @@
         {
           "id": "data_governance.audit_logging",
           "name": "Audit Logging",
-          "description": "Maintain comprehensive audit logs of all access to and modifications of personal data.",
+          "description": "Maintain comprehensive audit trails of all access to and modifications of personal data.",
           "req_idxs": [
             4
           ]
@@ -4852,7 +4849,7 @@
           "feature_name": "Data Export"
         },
         {
-          "text": "Ensure tight integration across all modules to enable unified data visibility and dashboard reporting",
+          "text": "Ensure tight integration across all modules to enable unified data visibility and reporting on dashboards",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -4870,8 +4867,8 @@
           "solcat_citations": [
             "legal__practice-management-system-pms"
           ],
-          "feature_id": "integration_import_export.unified_visibility",
-          "feature_name": "Unified Data Visibility"
+          "feature_id": "integration_import_export.data_visibility",
+          "feature_name": "Data Visibility & Reporting"
         }
       ],
       "stats": {
@@ -4883,7 +4880,7 @@
         {
           "id": "integration_import_export.data_import",
           "name": "Data Import",
-          "description": "Ingest fleet master data and telematics from external sources.",
+          "description": "Ingest vehicle, driver, and telematics data from external sources.",
           "req_idxs": [
             0,
             4
@@ -4892,7 +4889,7 @@
         {
           "id": "integration_import_export.data_export",
           "name": "Data Export",
-          "description": "Export fleet data in multiple formats with scheduled automation.",
+          "description": "Export fleet data to standard file formats and enable scheduled backups.",
           "req_idxs": [
             1,
             6
@@ -4901,7 +4898,7 @@
         {
           "id": "integration_import_export.system_integration",
           "name": "System Integration",
-          "description": "Connect with accounting, HR, and third-party systems via APIs.",
+          "description": "Connect with accounting, HR, and third-party systems via APIs and native connectors.",
           "req_idxs": [
             2,
             3,
@@ -4909,9 +4906,9 @@
           ]
         },
         {
-          "id": "integration_import_export.unified_visibility",
-          "name": "Unified Data Visibility",
-          "description": "Enable cross-module data synchronization and integrated reporting.",
+          "id": "integration_import_export.data_visibility",
+          "name": "Data Visibility & Reporting",
+          "description": "Enable unified data visibility and cross-module reporting on dashboards.",
           "req_idxs": [
             7
           ]

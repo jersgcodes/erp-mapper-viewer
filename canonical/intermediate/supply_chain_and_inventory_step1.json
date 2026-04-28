@@ -3,11 +3,11 @@
   "stats": {
     "input_reqs": 183,
     "unique_section_pairs": 112,
-    "placed_via_section_lookup": 140,
-    "placed_via_fallback": 39,
-    "unmapped": 9,
-    "total_placements": 212,
-    "unique_reqs_placed": 174
+    "placed_via_section_lookup": 137,
+    "placed_via_fallback": 41,
+    "unmapped": 11,
+    "total_placements": 214,
+    "unique_reqs_placed": 172
   },
   "placements": {
     "sc.item_master": [
@@ -168,7 +168,8 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sc.item_master"
+          "sc.item_master",
+          "sc.stock_levels"
         ]
       },
       {
@@ -370,46 +371,6 @@
         ]
       },
       {
-        "id": "req-00804",
-        "text": "Inventory management and stock tracking",
-        "q_title": "E-commerce Online Shop",
-        "subsection": "Core E-commerce Requirements",
-        "sources": [
-          "essential-business__e-commerce-online-shop-b2c"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sc.stock_levels",
-          "sc.item_master"
-        ]
-      },
-      {
-        "id": "req-01041",
-        "text": "Processing of sold products",
-        "q_title": "Organisation-level Scope 3 Emissions Calculation",
-        "subsection": "",
-        "sources": [
-          "essential-business__carbon-management-solution"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sc.item_master"
-        ]
-      },
-      {
-        "id": "req-01045",
-        "text": "Product/service level",
-        "q_title": "Organisation-level Scope 1 and 2 and/ or Product/ service-Level Carbon Emissions Calculation",
-        "subsection": "Submission Requirements",
-        "sources": [
-          "essential-business__carbon-management-solution"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sc.item_master"
-        ]
-      },
-      {
         "id": "req-01169",
         "text": "Sales or E-Commerce platform (Sales data such as SKUs, available stock, prices, campaign, promotion, etc)",
         "q_title": "AI Chatbot Knowledge Ingestion",
@@ -599,15 +560,16 @@
         ]
       },
       {
-        "id": "req-00802",
-        "text": "Inventory levels are updated in real-time after job completion.",
-        "q_title": "Integration with Inventory Management System",
-        "subsection": "Example",
+        "id": "req-00677",
+        "text": "For the creation and maintenance of a database of SKUs, with differentiated pricing and Units of Measure (UOM) allowed for different level/tiering of customers",
+        "q_title": "Inventory and Pricing Configuration",
+        "subsection": "Inventory and Pricing Configuration",
         "sources": [
-          "essential-business__field-service-management"
+          "essential-business__automated-order-management"
         ],
         "placed_via": "section_lookup",
         "capabilities": [
+          "sc.item_master",
           "sc.stock_levels"
         ]
       },
@@ -662,7 +624,8 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sc.stock_levels"
+          "sc.stock_levels",
+          "sc.delivery_dispatch"
         ]
       },
       {
@@ -703,7 +666,8 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sc.stock_levels"
+          "sc.stock_levels",
+          "sc.delivery_dispatch"
         ]
       },
       {
@@ -915,7 +879,7 @@
         "placed_via": "fallback_llm",
         "capabilities": [
           "sc.stock_levels",
-          "sc.item_master"
+          "sc.delivery_dispatch"
         ]
       },
       {
@@ -928,8 +892,7 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "sc.stock_levels",
-          "sc.purchase_orders"
+          "sc.stock_levels"
         ]
       },
       {
@@ -944,6 +907,20 @@
         "capabilities": [
           "sc.item_master",
           "sc.stock_levels"
+        ]
+      },
+      {
+        "id": "req-01231",
+        "text": "Set up and edit inventory access",
+        "q_title": "B2B Agent Management Features [Non-Mandatory]",
+        "subsection": "Core Functions",
+        "sources": [
+          "tourism-travel-agent__travel-management-system-e-commerce"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "sc.stock_levels",
+          "sc.user_access_roles"
         ]
       }
     ],
@@ -1262,20 +1239,6 @@
         ]
       },
       {
-        "id": "req-01047",
-        "text": "Project managers can access site progress checklists, site coordination meetings, stock level of materials, and payment records in one place.",
-        "q_title": "Centralised Project Information",
-        "subsection": "Example",
-        "sources": [
-          "built-environment__built-environment-digital-platform"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sc.stock_levels",
-          "sc.purchase_orders"
-        ]
-      },
-      {
         "id": "req-01083",
         "text": "Purchase Management",
         "q_title": "Module Capabilities",
@@ -1295,6 +1258,20 @@
         "subsection": "Examples",
         "sources": [
           "essential-business__carbon-management-solution"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "sc.purchase_orders"
+        ]
+      },
+      {
+        "id": "req-01188",
+        "text": "Search and view existing bookings",
+        "q_title": "Booking Management Features",
+        "subsection": "Core Functions",
+        "sources": [
+          "tourism-travel-agent__travel-management-system-e-commerce",
+          "tourism-travel-agent__travel-management-system-operations"
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
@@ -1500,6 +1477,19 @@
         ]
       },
       {
+        "id": "req-01274",
+        "text": "Sourcing Customer",
+        "q_title": "NTPS VAS Categories",
+        "subsection": "NTP VAS Categories",
+        "sources": [
+          "logistics__networked-trade-platform-value-added-services"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "sc.vendor_master"
+        ]
+      },
+      {
         "id": "req-01293",
         "text": "Supplier Management",
         "q_title": "Mandatory Module Compliance",
@@ -1651,19 +1641,6 @@
         "placed_via": "section_lookup",
         "capabilities": [
           "sc.multi_warehouse",
-          "sc.delivery_dispatch"
-        ]
-      },
-      {
-        "id": "req-00258",
-        "text": "Can your solution fulfill EITHER sea freight OR air freight operation",
-        "q_title": "Freight Operations Support",
-        "subsection": "Freight Operations Support",
-        "sources": [
-          "logistics__freight-management"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
           "sc.delivery_dispatch"
         ]
       },
@@ -1879,6 +1856,20 @@
         ]
       },
       {
+        "id": "req-01055",
+        "text": "Provide a database where all suppliers can access to view order details in real time",
+        "q_title": "Operations",
+        "subsection": "Functional Requirements",
+        "sources": [
+          "tourism-travel-agent__travel-management-system-operations"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "sc.stock_levels",
+          "sc.delivery_dispatch"
+        ]
+      },
+      {
         "id": "req-01093",
         "text": "Real-time alerts or updates on the location and temperature of the tracked cargo at parcel level on Web desktop and Mobile App",
         "q_title": "Real-time Tracking",
@@ -1928,6 +1919,20 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
+          "sc.delivery_dispatch"
+        ]
+      },
+      {
+        "id": "req-01208",
+        "text": "Send real-time alerts to suppliers on changes in order details (e.g. flight delay, update vehicle number)",
+        "q_title": "Operations",
+        "subsection": "Functional Requirements",
+        "sources": [
+          "tourism-travel-agent__travel-management-system-operations"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "sc.stock_levels",
           "sc.delivery_dispatch"
         ]
       },
@@ -2033,6 +2038,20 @@
         ]
       },
       {
+        "id": "req-00804",
+        "text": "Inventory management and stock tracking",
+        "q_title": "E-commerce Online Shop",
+        "subsection": "Core E-commerce Requirements",
+        "sources": [
+          "essential-business__e-commerce-online-shop-b2c"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "sc.stock_levels",
+          "sc.delivery_dispatch"
+        ]
+      },
+      {
         "id": "req-00870",
         "text": "Logistics and fulfilment approach",
         "q_title": "Cross-border E-commerce Strategy Development",
@@ -2060,20 +2079,6 @@
         ]
       },
       {
-        "id": "req-01188",
-        "text": "Search and view existing bookings",
-        "q_title": "Booking Management Features",
-        "subsection": "Core Functions",
-        "sources": [
-          "tourism-travel-agent__travel-management-system-e-commerce",
-          "tourism-travel-agent__travel-management-system-operations"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sc.delivery_dispatch"
-        ]
-      },
-      {
         "id": "req-01381",
         "text": "Tracking Shipment",
         "q_title": "NTPS VAS Categories",
@@ -2087,7 +2092,22 @@
         ]
       }
     ],
-    "sc.inventory_valuation": [],
+    "sc.inventory_valuation": [
+      {
+        "id": "req-01242",
+        "text": "Set up and edit pricing rules and mark-ups",
+        "q_title": "Price Management Features",
+        "subsection": "Core Functions",
+        "sources": [
+          "tourism-travel-agent__travel-management-system-e-commerce",
+          "tourism-travel-agent__travel-management-system-operations"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "sc.inventory_valuation"
+        ]
+      }
+    ],
     "sc.multi_warehouse": [
       {
         "id": "req-00227",
@@ -2138,19 +2158,6 @@
         "subsection": "Warehouse Management Integration",
         "sources": [
           "wholesale__inventory-management"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "sc.multi_warehouse"
-        ]
-      },
-      {
-        "id": "req-01429",
-        "text": "Warehouse billing and issuing of invoices based on activity, storage consumption, charge rates, and/or the customer's contract terms",
-        "q_title": "Warehouse Billing System",
-        "subsection": "Warehouse Billing System",
-        "sources": [
-          "logistics__warehouse-management"
         ],
         "placed_via": "section_lookup",
         "capabilities": [
@@ -2291,6 +2298,20 @@
         "capabilities": [
           "sc.landed_cost"
         ]
+      },
+      {
+        "id": "req-01187",
+        "text": "Sea import operation",
+        "q_title": "Sea Freight Management",
+        "subsection": "Sea Freight Functions",
+        "sources": [
+          "logistics__freight-management"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "sc.trade_compliance",
+          "sc.landed_cost"
+        ]
       }
     ],
     "sc.consignment": [],
@@ -2380,6 +2401,19 @@
         ]
       },
       {
+        "id": "req-00258",
+        "text": "Can your solution fulfill EITHER sea freight OR air freight operation",
+        "q_title": "Freight Operations Support",
+        "subsection": "Freight Operations Support",
+        "sources": [
+          "logistics__freight-management"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "sc.trade_compliance"
+        ]
+      },
+      {
         "id": "req-00422",
         "text": "Declaring Customs",
         "q_title": "NTPS VAS Categories",
@@ -2415,7 +2449,8 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "sc.trade_compliance"
+          "sc.trade_compliance",
+          "sc.landed_cost"
         ]
       }
     ],
@@ -2604,19 +2639,6 @@
         "subsection": "Dashboard and Analytics Requirements",
         "sources": [
           "essential-business__e-commerce-online-shop-b2c"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "sc.supply_chain_analytics"
-        ]
-      },
-      {
-        "id": "req-01020",
-        "text": "predict where and when hotspots are likely to develop and how much coolant is needed for multimodal transport",
-        "q_title": "Sensor Analytics",
-        "subsection": "Analytics Examples",
-        "sources": [
-          "logistics__active-cold-chain-management"
         ],
         "placed_via": "section_lookup",
         "capabilities": [
@@ -2817,6 +2839,7 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
+          "sc.stock_levels",
           "sc.user_access_roles"
         ]
       }
@@ -2940,6 +2963,19 @@
         ]
       },
       {
+        "id": "req-00802",
+        "text": "Inventory levels are updated in real-time after job completion.",
+        "q_title": "Integration with Inventory Management System",
+        "subsection": "Example",
+        "sources": [
+          "essential-business__field-service-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "sc.integration_import_export"
+        ]
+      },
+      {
         "id": "req-00814",
         "text": "Is the solution capable of seamless integration with existing systems (e.g. POS, Inventory Management, CRM) to ensure smooth operation and data synchronisation",
         "q_title": "Integration with Existing Systems",
@@ -3028,35 +3064,45 @@
       "capabilities": []
     },
     {
+      "id": "req-01020",
+      "text": "predict where and when hotspots are likely to develop and how much coolant is needed for multimodal transport",
+      "q_title": "Sensor Analytics",
+      "subsection": "Analytics Examples",
+      "sources": [
+        "logistics__active-cold-chain-management"
+      ],
+      "placed_via": "fallback_llm",
+      "capabilities": []
+    },
+    {
+      "id": "req-01041",
+      "text": "Processing of sold products",
+      "q_title": "Organisation-level Scope 3 Emissions Calculation",
+      "subsection": "",
+      "sources": [
+        "essential-business__carbon-management-solution"
+      ],
+      "placed_via": "fallback_llm",
+      "capabilities": []
+    },
+    {
+      "id": "req-01045",
+      "text": "Product/service level",
+      "q_title": "Organisation-level Scope 1 and 2 and/ or Product/ service-Level Carbon Emissions Calculation",
+      "subsection": "Submission Requirements",
+      "sources": [
+        "essential-business__carbon-management-solution"
+      ],
+      "placed_via": "fallback_llm",
+      "capabilities": []
+    },
+    {
       "id": "req-01105",
       "text": "Receive e-receipts",
       "q_title": "Digital Ordering and Payment",
       "subsection": "Customer Capabilities",
       "sources": [
         "food-services__connected-business-suite"
-      ],
-      "placed_via": "fallback_llm",
-      "capabilities": []
-    },
-    {
-      "id": "req-01242",
-      "text": "Set up and edit pricing rules and mark-ups",
-      "q_title": "Price Management Features",
-      "subsection": "Core Functions",
-      "sources": [
-        "tourism-travel-agent__travel-management-system-e-commerce",
-        "tourism-travel-agent__travel-management-system-operations"
-      ],
-      "placed_via": "fallback_llm",
-      "capabilities": []
-    },
-    {
-      "id": "req-01274",
-      "text": "Sourcing Customer",
-      "q_title": "NTPS VAS Categories",
-      "subsection": "NTP VAS Categories",
-      "sources": [
-        "logistics__networked-trade-platform-value-added-services"
       ],
       "placed_via": "fallback_llm",
       "capabilities": []
@@ -3090,6 +3136,17 @@
       "subsection": "",
       "sources": [
         "essential-business__carbon-management-solution"
+      ],
+      "placed_via": "fallback_llm",
+      "capabilities": []
+    },
+    {
+      "id": "req-01429",
+      "text": "Warehouse billing and issuing of invoices based on activity, storage consumption, charge rates, and/or the customer's contract terms",
+      "q_title": "Warehouse Billing System",
+      "subsection": "Warehouse Billing System",
+      "sources": [
+        "logistics__warehouse-management"
       ],
       "placed_via": "fallback_llm",
       "capabilities": []
