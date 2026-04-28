@@ -1535,7 +1535,7 @@ const state = {
   domainSubtab: "process",
   methodOpen: false,
   tierFilter: "all", // all | required | preferred
-  overviewMode: "compact_required", // compact_required | compact_preferred | compact_all | detailed | uc_required | uc_preferred | uc_all
+  overviewMode: "checklist", // FINAL: checklist | detailed — BUILD: uc_required | uc_preferred | uc_all | flows_all | flows_inter | flows_intra
   sectorFilter: "__generic__", // null = All, "__generic__" = Generic only (default), or PSG sector name
   ucTierFilter: "standard", // baseline | standard | advanced | enterprise | all (cumulative: baseline ⊂ standard ⊂ advanced)
   hideDimmed: false, // if true: hide dimmed UCs + dimmed specs entirely instead of showing grayed
@@ -1545,10 +1545,10 @@ const state = {
 
 // Default modes per super-view, used when toggling FINAL ↔ BUILD.
 const VIEW_MODE_DEFAULTS = {
-  final: { overviewMode: "compact_required", topView: "overview" },
+  final: { overviewMode: "checklist", topView: "overview" },
   build: { overviewMode: "uc_required", topView: "overview" },
 };
-const FINAL_OVERVIEW_MODES = new Set(["compact_required", "compact_preferred", "compact_all", "detailed"]);
+const FINAL_OVERVIEW_MODES = new Set(["checklist", "detailed"]);
 const FINAL_TOP_VIEWS = new Set(["overview", "compliance"]);
 const BUILD_TOP_VIEWS = new Set(["overview", "review", "domain"]);
 
@@ -2066,7 +2066,13 @@ function renderOverview() {
   const body = document.getElementById("mainBody");
 
   const methodHtml = renderMethodologyBlock();
-  const mode = state.overviewMode;  // compact_all | compact_required | compact_preferred | detailed
+  let mode = state.overviewMode;  // FINAL: checklist | detailed — BUILD: uc_* | flows_*
+  // Snap to a sensible default if state holds an obsolete value.
+  if (state.viewMode === "final" && !FINAL_OVERVIEW_MODES.has(mode)) {
+    mode = state.overviewMode = VIEW_MODE_DEFAULTS.final.overviewMode;
+  } else if (state.viewMode === "build" && FINAL_OVERVIEW_MODES.has(mode)) {
+    mode = state.overviewMode = VIEW_MODE_DEFAULTS.build.overviewMode;
+  }
 
   // Pre-compute UC tier counts across this module (respects current sector filter).
   // New schema: cumulative booleans (in_baseline ⊂ in_standard ⊂ in_advanced; enterprise_only separate).
@@ -2147,38 +2153,15 @@ function renderOverview() {
       `);
     }
     contentHtml = parts.join("");
-  } else {
-    // Compact modes
-    const showRequired = mode === "compact_all" || mode === "compact_required";
-    const showPreferred = mode === "compact_all" || mode === "compact_preferred";
-    // Filter-reactive counts
-    const sectorMatch = (c) => !state.sectorFilter || capMatchesSector(c, state.sectorFilter);
-    const reqAll = (DATA.capabilities || []).filter(c => (c.unified||[]).length > 0 && c.sme_tier === "required");
-    const prefAll = (DATA.capabilities || []).filter(c => (c.unified||[]).length > 0 && c.sme_tier === "preferred");
-    const reqFiltered = reqAll.filter(sectorMatch);
-    const prefFiltered = prefAll.filter(sectorMatch);
-    const reqLabel = state.sectorFilter ? `${reqFiltered.length}/${reqAll.length}` : `${reqAll.length}`;
-    const prefLabel = state.sectorFilter ? `${prefFiltered.length}/${prefAll.length}` : `${prefAll.length}`;
-    const parts = [];
-    if (showRequired) {
-      parts.push(`
-        <div class="compact-section">
-          <div class="compact-section-title required">Required (${reqLabel})</div>
-          <div class="compact-section-sub">Module minimums that every vendor must cover across industries.</div>
-          ${renderCompactList("required")}
-        </div>
-      `);
-    }
-    if (showPreferred) {
-      parts.push(`
-        <div class="compact-section">
-          <div class="compact-section-title preferred">Preferred (${prefLabel})</div>
-          <div class="compact-section-sub">SME-important capabilities that depend on your business model or industry.</div>
-          ${renderCompactList("preferred")}
-        </div>
-      `);
-    }
-    contentHtml = parts.join("");
+  } else if (mode === "checklist") {
+    // FINAL view default — IMDA-format checklist (cap rows grouped by
+    // sub-module, AI Features tail). Tier filter lives on the toolbar.
+    contentHtml = `
+      <div class="compact-section">
+        ${renderChecklistToolbar()}
+        ${renderFinalChecklist()}
+      </div>
+    `;
   }
 
   // D3 — Compliance banner is part of the FINAL deliverable framing; hide in BUILD.
@@ -2236,11 +2219,9 @@ function renderOverview() {
     <div class="overview-toolbar">
       <div class="overview-mode-rows">
         <div class="overview-mode-tabs" data-group="final">
-          <span class="overview-mode-tabs-label">Compact</span>
-          <div class="overview-mode-tab ${mode === 'compact_required' ? 'active' : ''}" data-mode="compact_required">Required</div>
-          <div class="overview-mode-tab ${mode === 'compact_preferred' ? 'active' : ''}" data-mode="compact_preferred">Preferred</div>
-          <div class="overview-mode-tab ${mode === 'compact_all' ? 'active' : ''}" data-mode="compact_all">All</div>
-          <div class="overview-mode-tab ${mode === 'detailed' ? 'active' : ''}" data-mode="detailed">Detailed</div>
+          <span class="overview-mode-tabs-label">View</span>
+          <div class="overview-mode-tab ${mode === 'checklist' ? 'active' : ''}" data-mode="checklist">Final checklist</div>
+          <div class="overview-mode-tab ${mode === 'detailed' ? 'active' : ''}" data-mode="detailed">Detailed cards</div>
         </div>
         <div class="overview-mode-tabs" data-group="build">
           <span class="overview-mode-tabs-label">Use Cases</span>
@@ -2249,13 +2230,13 @@ function renderOverview() {
           <div class="overview-mode-tab ${mode === 'uc_all' ? 'active' : ''}" data-mode="uc_all">All</div>
         </div>
         <div class="overview-mode-tabs" data-group="build">
-          <span class="overview-mode-tabs-label">Flows <span style="font-size:9px;color:#6366f1;font-weight:700;letter-spacing:0.05em">NEW</span></span>
+          <span class="overview-mode-tabs-label">Flows</span>
           <div class="overview-mode-tab ${mode === 'flows_all' ? 'active' : ''}" data-mode="flows_all">All</div>
           <div class="overview-mode-tab ${mode === 'flows_inter' ? 'active' : ''}" data-mode="flows_inter">Inter-module</div>
           <div class="overview-mode-tab ${mode === 'flows_intra' ? 'active' : ''}" data-mode="flows_intra">Intra-module</div>
         </div>
       </div>
-      ${mode !== 'detailed' ? `
+      ${(mode !== 'detailed' && mode !== 'checklist') ? `
         <button class="overview-expand-btn" id="expandCollapseBtn">Expand all</button>
       ` : ""}
     </div>
@@ -2481,12 +2462,18 @@ function computeOneLiner() {
   const sectorMatch = (c) => !state.sectorFilter || capMatchesSector(c, state.sectorFilter);
   const capsAfterSector = nonEmpty.filter(sectorMatch);
 
-  // Apply cap-tier filter (if in uc_* mode, that's the outer tier)
+  // Apply cap-tier filter (if in uc_* mode, that's the outer tier;
+  // FINAL view uses state.checklistTier set on the toolbar instead).
   const mode = state.overviewMode || "";
   let capTier = "all";
-  if (mode === "compact_required" || mode === "uc_required") capTier = "required";
-  else if (mode === "compact_preferred" || mode === "uc_preferred") capTier = "preferred";
-  const tierMatch = (c) => capTier === "all" || c.sme_tier === capTier;
+  if (mode === "uc_required") capTier = "required";
+  else if (mode === "uc_preferred") capTier = "preferred";
+  else if (state.viewMode === "final") capTier = state.checklistTier || "all";
+  const tierMatch = (c) => {
+    if (capTier === "all") return true;
+    if (capTier === "req_pref") return c.sme_tier === "required" || c.sme_tier === "preferred";
+    return c.sme_tier === capTier;
+  };
   const capsAfterTier = capsAfterSector.filter(tierMatch);
 
   // L1: distinct families in filtered caps
@@ -2715,10 +2702,28 @@ function renderFlowsChecklist(flowsScope) {
     return (a.partial?.id || "").localeCompare(b.partial?.id || "");
   });
 
+  // BUILD sidebar's "Jump to family" expects ov-fam-<safe> anchors. Flows
+  // is a flat list (sorted by workflow name, not family), so emit a thin
+  // anchor div BEFORE the first question whose first cap belongs to that
+  // family. Keeps the family-jump usable in Flows mode without changing
+  // the rendering structure.
+  const seenFams = new Set();
+  const renderedQuestions = partialList.map((p) => {
+    const firstCap = (p.steps && p.steps[0] && p.steps[0].cap) || null;
+    const fam = firstCap?.family || "";
+    let anchor = "";
+    if (fam && !seenFams.has(fam)) {
+      seenFams.add(fam);
+      const safe = fam.replace(/[^a-z0-9]/gi, "_");
+      anchor = `<div id="ov-fam-${safe}" style="height:0;overflow:hidden"></div>`;
+    }
+    return anchor + renderPartialL3Question(p);
+  }).join("");
+
   return `<div class="compact-section">
     <div class="compact-section-title required">Flow-based vendor checks (${partialList.length} question${partialList.length===1?"":"s"}, ${partialList.reduce((n,p)=>n+p.steps.length,0)} check${partialList.reduce((n,p)=>n+p.steps.length,0)===1?"":"s"})</div>
     <div class="compact-section-sub">Each question comes from a partial-L3 (this module's role in a workflow). The checks show what the vendor needs to demonstrate.</div>
-    ${partialList.map(renderPartialL3Question).join("")}
+    ${renderedQuestions}
   </div>`;
 }
 
@@ -3038,30 +3043,24 @@ function renderUseCaseChecklist(tier) {
 }
 
 // =============================================================================
-// CHECKLIST VIEW STATE — two orthogonal axes (2026-04-25)
-//   - state.checklistView: "final" (default) | "build"
+// CHECKLIST TOOLBAR (2026-04-28 cleanup)
+// FINAL/BUILD selection is owned exclusively by `state.viewMode`
+// (super-toggle in the sidebar). The duplicate `state.checklistView` axis
+// + its View pills were removed — single source of truth.
+//
 //   - state.checklistTier: "required" (default) | "req_pref" | "preferred" |
 //                          "advanced" | "all"
-//                          (req_pref added 2026-04-28: Required + Preferred,
-//                           the IMDA Type 1 "buyer self-assessment" surface)
 // =============================================================================
 
-if (typeof state.checklistView === "undefined") state.checklistView = "final";
 if (typeof state.checklistTier === "undefined") state.checklistTier = "required";
 
 function renderChecklistToolbar() {
-  const view = state.checklistView || "final";
   const tier = state.checklistTier || "required";
   const tierBtn = (val, label) => `
     <span class="cl-tier-pill ${tier === val ? 'active' : ''}" data-cl-tier="${val}">${label}</span>
   `;
   return `
     <div class="cl-toolbar" style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;padding:10px 14px;margin:8px 0 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px">
-      <div style="display:flex;gap:4px;align-items:center">
-        <span style="font-size:10px;color:#64748b;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-right:6px">View</span>
-        <span class="cl-view-pill ${view === 'final' ? 'active' : ''}" data-cl-view="final" title="Final IMDA-format checklist (cap rows + AI Features)">Final checklist</span>
-        <span class="cl-view-pill ${view === 'build' ? 'active' : ''}" data-cl-view="build" title="Build view: includes L2 sub-module qualifiers + supporting context">Build view</span>
-      </div>
       <div style="display:flex;gap:4px;align-items:center">
         <span style="font-size:10px;color:#64748b;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-right:6px">Tier</span>
         ${tierBtn("required", "Required")}
@@ -3072,29 +3071,21 @@ function renderChecklistToolbar() {
       </div>
     </div>
     <style>
-      .cl-view-pill, .cl-tier-pill {
+      .cl-tier-pill {
         font-size: 12px; padding: 4px 12px; border-radius: 14px;
         background: #fff; border: 1px solid #cbd5e1; color: #1e293b;
         cursor: pointer; user-select: none; font-weight: 500;
       }
-      .cl-view-pill:hover, .cl-tier-pill:hover { background: #f1f5f9; }
-      .cl-view-pill.active, .cl-tier-pill.active {
+      .cl-tier-pill:hover { background: #f1f5f9; }
+      .cl-tier-pill.active {
         background: #0284c7; color: #fff; border-color: #0284c7; font-weight: 600;
       }
     </style>
   `;
 }
 
-// Click handlers for the toolbar pills
+// Click handler for tier pills
 document.addEventListener("click", (e) => {
-  const v = e.target.closest("[data-cl-view]");
-  if (v) {
-    state.checklistView = v.getAttribute("data-cl-view");
-    if (typeof renderActiveView === "function") renderActiveView();
-    else if (typeof renderOverview === "function") renderOverview();
-    if (typeof renderSidebar === "function") renderSidebar();
-    return;
-  }
   const t = e.target.closest("[data-cl-tier]");
   if (t) {
     state.checklistTier = t.getAttribute("data-cl-tier");
@@ -3369,293 +3360,6 @@ function renderFinalChecklist() {
   return headerHtml + moduleRowsBlock + digitalSectionHtml + aiFeaturesHtml;
 }
 
-// =============================================================================
-// BUILD VIEW (existing renderCompactList — L1 family + L2 sub-module + L3 caps)
-// Renamed conceptually; same rendering as before.
-// =============================================================================
-
-function renderCompactList(tier) {
-  // Dispatcher (2026-04-25):
-  //   _controls.js calls this twice per Overview render — once with "required",
-  //   once with "preferred". We hijack both calls to honour state.checklistView
-  //   (final / build) and state.checklistTier (required / preferred / all).
-  //
-  //   Strategy:
-  //     - On the FIRST call (tier === "required"), prepend the toolbar.
-  //     - In FINAL view: render the full Final checklist on the first call,
-  //       return "" on the second. Inject CSS to hide the section-title that
-  //       would normally appear above the empty second call.
-  //     - In BUILD view: apply state.checklistTier filter. Return the
-  //       existing build-view rendering if the cycle's tier matches the
-  //       filter; "" otherwise. Inject CSS to hide non-matching section
-  //       titles.
-
-  const view = state.checklistView || "final";
-  const filterTier = state.checklistTier || "required";
-
-  // Build hide-CSS for section titles that don't match current state.
-  // _controls.js renders <div class="compact-section-title required/preferred">
-  // BEFORE this function is called; we inject CSS to hide whichever sections
-  // are not relevant for the current view+tier combination.
-  let hideCss = "";
-  if (view === "final") {
-    // Final view replaces both Required and Preferred sections with one
-    // unified Final-checklist block. Hide both stock section titles + subs.
-    hideCss = `
-      <style>
-        .compact-section-title.required, .compact-section-title.preferred,
-        .compact-section-title.required + .compact-section-sub,
-        .compact-section-title.preferred + .compact-section-sub { display: none; }
-      </style>
-    `;
-  } else {
-    // Build view honours filter.
-    if (filterTier === "required") {
-      hideCss = `<style>.compact-section-title.preferred, .compact-section-title.preferred + .compact-section-sub { display: none; }</style>`;
-    } else if (filterTier === "preferred") {
-      hideCss = `<style>.compact-section-title.required, .compact-section-title.required + .compact-section-sub { display: none; }</style>`;
-    }
-    // "all": no hiding, both section titles render.
-  }
-
-  const isFirstCall = (tier === "required");
-  const toolbar = isFirstCall ? renderChecklistToolbar() : "";
-  const cssBlock = isFirstCall ? hideCss : "";
-
-  if (view === "final") {
-    // Final checklist is one block; only emit it on the first call.
-    if (isFirstCall) {
-      return cssBlock + toolbar + renderFinalChecklist();
-    }
-    return "";
-  }
-
-  // BUILD view: filter by tier.
-  if (filterTier !== "all" && filterTier !== tier) {
-    return cssBlock + toolbar;  // empty list for the non-matching tier
-  }
-
-  // Existing build-view body follows.
-  // (The original implementation continues unchanged below.)
-
-  const __build_body = (() => {
-  // Compact layout with capability-level accordions.
-  //
-  // - Family name is a visual label (not collapsible)
-  // - Each capability is a collapsible card
-  // - Default state: all capabilities collapsed, showing only the
-  //   summary question. One scroll shows every question at a glance.
-  // - Click a capability header to reveal its bullets + free-text prompt
-  // - "Expand all / Collapse all" button in the toolbar toggles every
-  //   card at once
-  const byFamily = capsForTier(tier);
-  const order = DATA.family_order.length > 0 ? DATA.family_order : Object.keys(byFamily);
-
-  const html = order.map((fam) => {
-    const caps = byFamily[fam] || [];
-    if (caps.length === 0) return "";
-
-    const qsHtml = caps.map((c) => {
-      const vq = c.vendor_questions;
-      // Group requirements by feature
-      const byFeat = {};
-      (c.unified || []).forEach((r) => {
-        const fid = r.feature_id || "_ungrouped";
-        const fname = r.feature_name || "Other";
-        if (!byFeat[fid]) byFeat[fid] = { name: fname, reqs: [] };
-        byFeat[fid].reqs.push(r);
-      });
-      const featOrder = Object.keys(byFeat).sort();
-
-      // Sector filter: dim non-matching caps instead of hiding
-      const capDimmed = state.sectorFilter && !capMatchesSector(c, state.sectorFilter);
-
-      const bodyHtml = featOrder.map((fid) => {
-        const feat = byFeat[fid];
-        const reqsHtml = feat.reqs.map((r) => {
-          // Sector badge — show PSG sector count
-          const sc = r.sector_coverage;
-          let sectorBadge = "";
-          const psgCount = sc ? (sc.psg_sector_count || (sc.psg_sectors && sc.psg_sectors.length) || 0) : 0;
-          if (sc && (sc.is_generic || psgCount > 0)) {
-            const cls = sc.is_generic ? "psg-sector-generic" : "psg-sector-specific";
-            const label = sc.is_generic ? "generic" : `${psgCount} sector${psgCount > 1 ? "s" : ""}`;
-            sectorBadge = `<span class="${cls}" title="${escapeHtml((sc.psg_sectors||sc.verticals||[]).join(', '))}">${label}</span>`;
-          } else if (r.source === "proxy") {
-            sectorBadge = `<span class="psg-sector-proxy">proxy</span>`;
-          }
-
-          // Sector filter: dim non-matching reqs
-          const dimmed = state.sectorFilter ? !reqMatchesSector(r, state.sectorFilter) : false;
-
-          // Source provenance (collapsed by default)
-          const refs = r.imda_refs || [];
-          const vendors = r.vendor_citations || [];
-          let provenanceHtml = "";
-          if (refs.length > 0 || vendors.length > 0) {
-            const refItems = refs.slice(0, 3).map((ref) =>
-              `<div class="psg-prov-item"><span class="psg-prov-label">IMDA:</span> ${escapeHtml(ref.q_title || '')} <span class="psg-prov-sc">${(ref.sources||[]).slice(0,2).map(s => escapeHtml(s.split('__').pop())).join(', ')}</span></div>`
-            ).join("");
-            const vendorItems = vendors.length > 0
-              ? `<div class="psg-prov-item"><span class="psg-prov-label">Vendors:</span> ${vendors.map(v => `<span class="psg-prov-vendor">${escapeHtml(v)}</span>`).join(' ')}</div>`
-              : "";
-            provenanceHtml = `<span class="psg-prov-toggle">sources</span><div class="psg-provenance">${refItems}${vendorItems}</div>`;
-          }
-
-          return `
-            <li class="psg-bullet ${dimmed ? 'psg-dimmed' : ''}">
-              <span class="psg-bullet-box">☐</span>
-              <span class="psg-bullet-text">${escapeHtml(r.text)}</span>
-              ${sectorBadge}
-              <span class="psg-source-badge psg-src-${r.source}">${escapeHtml(r.source_label)}</span>
-              ${provenanceHtml}
-            </li>
-          `;
-        }).join("");
-
-        if (fid === "_ungrouped") return `<ul class="psg-bullets">${reqsHtml}</ul>`;
-        return `
-          <div class="psg-feature-group">
-            <div class="psg-feature-header">${escapeHtml(feat.name)} <span class="psg-feature-count">${feat.reqs.length}</span></div>
-            <ul class="psg-bullets">${reqsHtml}</ul>
-          </div>
-        `;
-      }).join("");
-
-      // Closing-benefit clause appended at render time, per Rule 7 of
-      // docs/imda_checklist_formats.md. Resolved during build by
-      // build_canonical_viewer.py:_resolve_closing_benefits and stored
-      // in DATA.cap_closing_benefits[cap_id]. If absent, the question
-      // already carries an inline benefit (or no source was found).
-      const cb = (DATA.cap_closing_benefits || {})[c.id];
-      const benefitSuffix = (cb && cb.clause)
-        ? ` <span class="closing-benefit" title="Source: ${escapeHtml(cb.source || '')}" style="color:#0c4a6e;font-style:italic">— ${escapeHtml(cb.clause)}</span>`
-        : "";
-
-      return `
-        <div class="compact-q ${tier} collapsed ${capDimmed ? 'psg-dimmed' : ''}">
-          <div class="compact-q-head">
-            <div class="compact-q-head-main">
-              <div class="compact-q-cap">${escapeHtml(c.name)}</div>
-              <div class="compact-q-text">${escapeHtml(vq.question)}${benefitSuffix}</div>
-            </div>
-            <div class="compact-q-caret">▸</div>
-          </div>
-          <div class="compact-q-body">
-            ${bodyHtml}
-            ${vq.free_text_prompt ? `
-              <div class="psg-prompt">
-                <span class="psg-prompt-label">If yes, describe:</span>
-                ${escapeHtml(vq.free_text_prompt)}
-              </div>
-            ` : ""}
-          </div>
-        </div>
-      `;
-    }).join("");
-
-    const matchingCaps = state.sectorFilter
-      ? caps.filter(c => capMatchesSector(c, state.sectorFilter))
-      : caps;
-    const ovFamId = "ov-fam-" + fam.replace(/[^a-z0-9]/gi, "_");
-    const famDimmed = matchingCaps.length === 0;
-    const famCountLabel = state.sectorFilter
-      ? `${matchingCaps.length}/${caps.length} match`
-      : `${caps.length} cap${caps.length !== 1 ? 's' : ''}`;
-
-    // Sub-module vendor-qualification annotations (2026-04-24)
-    // - Solutions badge: count of PSG-approved solutions in this family
-    // - Baseline flag: mark Platform & Data as cross-module baseline, not specialty
-    const famSols = (DATA.family_solutions || {})[fam];
-    const solCount = famSols?.stats?.solutions || 0;
-    const vendorCount = famSols?.stats?.vendors || 0;
-    const isBaseline = fam === DATA.baseline_family_name;
-
-    const baselineChip = isBaseline
-      ? `<span title="Cross-module baseline — every ERP ships this. NOT a sub-module specialty." style="margin-left:8px;font-size:9.5px;padding:2px 7px;background:#f3f4f6;color:#374151;border:1px solid #d1d5db;border-radius:3px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase">baseline</span>`
-      : "";
-    const solutionsChip = solCount > 0
-      ? `<span title="${solCount} PSG-approved solution${solCount===1?"":"s"} from ${vendorCount} vendor${vendorCount===1?"":"s"} covering this sub-module" style="margin-left:8px;font-size:10px;padding:2px 8px;background:#dcfce7;color:#166534;border:1px solid #86efac;border-radius:3px;font-weight:600">${solCount} PSG solution${solCount===1?"":"s"}</span>`
-      : "";
-
-    // Sub-module-level L2 qualifiers — from step12 (Option B, 2026-04-24)
-    // Each family may contain 1..N sub-modules; render one L2 block per sub-module.
-    // Skipped entirely for baseline (Platform & Data).
-    // BUG FIX 2026-04-25: filter by tier so Preferred-tier sub-modules don't
-    // leak into the Required/Mandatory view. `tier` is the outer view param.
-    const subMods = ((DATA.sub_module_questions || {})[fam]) || {};
-    const subModIdsAll = Object.keys(subMods);
-    const subModIds = subModIdsAll.filter(smid => {
-      const smTier = (subMods[smid]?.tier || "required").toLowerCase();
-      return smTier === tier;
-    });
-    const familyQHtml = subModIds.length === 0 ? "" : subModIds.map((smid) => {
-      const smq = subMods[smid];
-      if (!smq || !smq.question) return "";
-      const showName = subModIdsAll.length > 1;  // only show sub-module name when family has multiple sub-modules overall
-      return `
-        <div class="family-vq" style="margin:6px 12px 10px;padding:10px 14px;background:#f0f9ff;border-left:3px solid #0284c7;border-radius:4px">
-          <div style="display:flex;align-items:center;gap:8px;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:#0369a1;font-weight:700;margin-bottom:4px;flex-wrap:wrap">
-            <span>L2 sub-module qualifier</span>
-            ${showName ? `<span style="text-transform:none;letter-spacing:0;color:#0c4a6e;font-weight:600;font-size:11px">${escapeHtml(smq.canonical_name || smid)}</span>` : ""}
-            <span style="padding:1px 6px;background:#0284c7;color:#fff;border-radius:3px;font-size:9px">${escapeHtml(smq.tier || 'required')}</span>
-          </div>
-          <div style="font-size:14px;font-weight:600;color:#0c4a6e;line-height:1.45">${escapeHtml(smq.question)}</div>
-          ${smq.rationale ? `<div style="font-size:11px;color:#64748b;margin-top:4px;font-style:italic">Why: ${escapeHtml(smq.rationale)}</div>` : ""}
-        </div>
-      `;
-    }).join("");
-
-    return `
-      <div class="compact-family ${famDimmed ? 'psg-dimmed' : ''} ${isBaseline ? 'compact-family-baseline' : ''}" id="${ovFamId}">
-        <div class="compact-family-header collapsible-family" data-fam-target="${ovFamId}-body">
-          <span class="l-marker">L1</span>
-          <span class="fam-caret">▾</span>
-          ${escapeHtml(fam)}
-          <span class="fam-count">(${famCountLabel})</span>
-          ${baselineChip}
-          ${solutionsChip}
-        </div>
-        ${familyQHtml}
-        <div id="${ovFamId}-body" class="family-body">${qsHtml}</div>
-      </div>
-    `;
-  }).join("");
-
-  // AI Features block — IMDA-standard row at the module tail.
-  // Visible regardless of view mode (tier), because IMDA treats AI as
-  // "mandatory to provide a response" irrespective of the tier selection.
-  // See docs/imda_checklist_formats.md.
-  const aif = DATA.ai_features;
-  const aifFromYaml = aif && aif.source === "config/ai_features.yaml";
-  const aifFallbackBanner = (aif && aif.source === "auto_extracted_fallback")
-    ? `<span style="padding:1px 6px;background:#fee2e2;color:#991b1b;border:1px solid #fca5a5;border-radius:3px;font-size:9px;font-weight:700;letter-spacing:0.03em" title="No config/ai_features.yaml entry for this module — examples auto-extracted (may have format issues). Hand-curate the YAML to fix.">FALLBACK</span>`
-    : "";
-  const aiFeaturesHtml = (aif && aif.question) ? `
-    <div class="ai-features-row" style="margin-top:18px;padding:14px 18px;background:#fef3c7;border:1px solid #fcd34d;border-radius:6px;border-left:4px solid #d97706">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap">
-        <span style="font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:#92400e;font-weight:700">AI Features</span>
-        <span style="padding:2px 8px;background:#d97706;color:#fff;border-radius:3px;font-size:9px;font-weight:700;letter-spacing:0.03em;text-transform:uppercase">${escapeHtml(aif.tier_label || 'Mandatory to provide a response')}</span>
-        ${aifFallbackBanner}
-        ${(!aifFromYaml && aif.source_cap_name) ? `<span style="font-size:10px;color:#78716c">from ${escapeHtml(aif.source_cap_name)}</span>` : ""}
-      </div>
-      <div style="font-size:14px;font-weight:600;color:#78350f;line-height:1.45;margin-bottom:10px">${escapeHtml(aif.question)}</div>
-      <ol style="margin:0;padding-left:22px;color:#78350f;font-size:13px;line-height:1.5">
-        ${(aif.examples || []).map(ex => `
-          <li style="margin-bottom:4px">
-            <strong>${escapeHtml(ex.title || '')}</strong>${ex.description ? ` — ${escapeHtml(ex.description)}` : ''}
-          </li>
-        `).join("")}
-      </ol>
-    </div>
-  ` : "";
-
-  const body = html || `<div class="empty">No ${tier} capabilities for this module.</div>`;
-  return body + aiFeaturesHtml;
-  })();
-
-  return cssBlock + toolbar + __build_body;
-}
 
 // =============================================================================
 // REVIEW view
