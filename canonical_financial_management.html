@@ -3168,10 +3168,15 @@ function renderFinalChecklist() {
   // Render a single cap row with a given numeric prefix (e.g. "100.01", "100.D1")
   const renderCapRow = (c, fam, idStr) => {
     const vq = c.vendor_questions || {};
-    const cb = (DATA.cap_closing_benefits || {})[c.id];
-    const benefitInline = (cb && cb.clause)
-      ? ` <span class="fc-benefit" title="Source: ${escapeHtml(cb.source || '')}" style="color:#475569;font-style:italic">— ${escapeHtml(cb.clause)}</span>`
-      : "";
+    // 2026-04-29: appended closing-benefit clause REMOVED.
+    // The benefit must live INSIDE the question (per R7). The previous
+    // escalation-chain fallback (sub-module key_outcomes appended in
+    // italic after "—") produced semantically mismatched suffixes that
+    // broke the IMDA Type 1 format (e.g. "...protect pricing integrity?
+    // — Complete audit trail of all order and invoice modifications").
+    // R7-failing caps are now a step-6 generation issue, not a
+    // render-time patch.
+    const benefitInline = "";
     const ts = tierStyle(c.sme_tier);
     const sectorPill = renderSectorPill(c);
     // Implicit-essential pill — flagged on caps where IMDA Q text rarely
