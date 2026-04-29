@@ -1423,6 +1423,29 @@
     border-bottom-color: #2563eb;
     font-weight: 600;
   }
+  /* Two-row nav (2026-04-29): row 1 = analysis tools, row 2 = modules. */
+  .top-bar.two-row .top-bar-row1 {
+    border-bottom: 1px solid #f1f3f6;
+  }
+  .top-bar.two-row .top-bar-row2 {
+    background: #fafbfc;
+  }
+  .top-bar.two-row .top-bar-row2 .top-bar-link {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .top-bar-row-label {
+    font-size: 10px;
+    color: #6b7380;
+    padding: 9px 14px 9px 0;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    align-self: center;
+    border-right: 1px solid #e8ebef;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
   .top-bar-dropdown { position: relative; display: inline-flex; }
   .top-bar-dropdown summary {
     list-style: none;
@@ -1479,11 +1502,17 @@
   .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
   .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
 </style>
-<nav class="top-bar">
-  <div class="top-bar-inner">
+<nav class="top-bar two-row">
+  <div class="top-bar-inner top-bar-row1">
     <span class="top-bar-brand">PSG ERP Spec</span>
     <a class="top-bar-link" href="index.html">Overview</a>
     <a class="top-bar-link" href="stakeholders.html">Stakeholders</a>
+    <a class="top-bar-link" href="vendor_coverage.html">Vendor Coverage</a>
+    <a class="top-bar-link" href="integrations.html">Integrations</a>
+    <details class="top-bar-dropdown"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 + L1 intra-module + L2 inter-module proposals awaiting review</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_project_management.html">Flows (this module)<span class="sub">Partial-L3 UCs from workflows touching this module</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="methodology.html">Methodology (legacy)<span class="sub">Replaced by Stakeholders view</span></a><a class="" href="gap_analysis.html">Gaps (legacy)<span class="sub">Replaced by Stakeholders → Sol-cat fulfilment matrix</span></a><a class="" href="use_cases.html">Use Cases (legacy)<span class="sub">UC concept retired; flows are the replacement</span></a></div></details>
+  </div>
+  <div class="top-bar-inner top-bar-row2">
+    <span class="top-bar-row-label">Modules</span>
     <a class="top-bar-link" href="canonical_financial_management.html">Financial</a>
     <a class="top-bar-link" href="canonical_human_resources_management.html">HR</a>
     <a class="top-bar-link" href="canonical_sales_and_crm.html">Sales & CRM</a>
@@ -1494,8 +1523,6 @@
     <a class="top-bar-link" href="canonical_field_service_management.html">Field Service</a>
     <a class="top-bar-link" href="canonical_fleet_management.html">Fleet</a>
     <a class="top-bar-link" href="canonical_others.html">Other</a>
-    <a class="top-bar-link" href="integrations.html">Integrations</a>
-    <details class="top-bar-dropdown"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 + L1 intra-module + L2 inter-module proposals awaiting review</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_project_management.html">Flows (this module)<span class="sub">Partial-L3 UCs from workflows touching this module</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="methodology.html">Methodology (legacy)<span class="sub">Replaced by Stakeholders view</span></a><a class="" href="gap_analysis.html">Gaps (legacy)<span class="sub">Replaced by Stakeholders → Sol-cat fulfilment matrix</span></a><a class="" href="use_cases.html">Use Cases (legacy)<span class="sub">UC concept retired; flows are the replacement</span></a></div></details>
   </div>
 </nav>
 <div class="layout">

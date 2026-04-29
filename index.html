@@ -433,6 +433,29 @@
     border-bottom-color: #2563eb;
     font-weight: 600;
   }
+  /* Two-row nav (2026-04-29): row 1 = analysis tools, row 2 = modules. */
+  .top-bar.two-row .top-bar-row1 {
+    border-bottom: 1px solid #f1f3f6;
+  }
+  .top-bar.two-row .top-bar-row2 {
+    background: #fafbfc;
+  }
+  .top-bar.two-row .top-bar-row2 .top-bar-link {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .top-bar-row-label {
+    font-size: 10px;
+    color: #6b7380;
+    padding: 9px 14px 9px 0;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    align-self: center;
+    border-right: 1px solid #e8ebef;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
   .top-bar-dropdown { position: relative; display: inline-flex; }
   .top-bar-dropdown summary {
     list-style: none;
@@ -489,23 +512,27 @@
   .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
   .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
 </style>
-<nav class="top-bar">
-  <div class="top-bar-inner">
+<nav class="top-bar two-row">
+  <div class="top-bar-inner top-bar-row1">
     <span class="top-bar-brand">PSG ERP Spec</span>
     <a class="top-bar-link active" href="index.html">Overview</a>
     <a class="top-bar-link" href="stakeholders.html">Stakeholders</a>
-    <a class="top-bar-link" href="canonical_sales_and_crm.html">Sales & CRM</a>
+    <a class="top-bar-link" href="vendor_coverage.html">Vendor Coverage</a>
+    <a class="top-bar-link" href="integrations.html">Integrations</a>
+    <details class="top-bar-dropdown"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 + L1 intra-module + L2 inter-module proposals awaiting review</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="methodology.html">Methodology (legacy)<span class="sub">Replaced by Stakeholders view</span></a><a class="" href="gap_analysis.html">Gaps (legacy)<span class="sub">Replaced by Stakeholders → Sol-cat fulfilment matrix</span></a><a class="" href="use_cases.html">Use Cases (legacy)<span class="sub">UC concept retired; flows are the replacement</span></a></div></details>
+  </div>
+  <div class="top-bar-inner top-bar-row2">
+    <span class="top-bar-row-label">Modules</span>
     <a class="top-bar-link" href="canonical_financial_management.html">Financial</a>
     <a class="top-bar-link" href="canonical_human_resources_management.html">HR</a>
+    <a class="top-bar-link" href="canonical_sales_and_crm.html">Sales & CRM</a>
     <a class="top-bar-link" href="canonical_supply_chain_and_inventory.html">Supply Chain</a>
-    <a class="top-bar-link" href="canonical_manufacturing_management.html">Manufacturing</a>
     <a class="top-bar-link" href="canonical_project_management.html">Project Mgmt</a>
     <a class="top-bar-link" href="canonical_asset_management.html">Asset Mgmt</a>
+    <a class="top-bar-link" href="canonical_manufacturing_management.html">Manufacturing</a>
     <a class="top-bar-link" href="canonical_field_service_management.html">Field Service</a>
     <a class="top-bar-link" href="canonical_fleet_management.html">Fleet</a>
     <a class="top-bar-link" href="canonical_others.html">Other</a>
-    <a class="top-bar-link" href="integrations.html">Integrations</a>
-    <details class="top-bar-dropdown"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 + L1 intra-module + L2 inter-module proposals awaiting review</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="methodology.html">Methodology (legacy)<span class="sub">Replaced by Stakeholders view</span></a><a class="" href="gap_analysis.html">Gaps (legacy)<span class="sub">Replaced by Stakeholders → Sol-cat fulfilment matrix</span></a><a class="" href="use_cases.html">Use Cases (legacy)<span class="sub">UC concept retired; flows are the replacement</span></a></div></details>
   </div>
 </nav>
 
@@ -519,9 +546,9 @@
   </p>
   <div class="totals">
     <div><strong>10 / 10</strong><span>modules canonical-ready</span></div>
-    <div><strong>293</strong><span>capabilities</span></div>
-    <div><strong>2721</strong><span>detailed requirements</span></div>
-    <div><strong>217</strong><span>vendor questionnaire items</span></div>
+    <div><strong>303</strong><span>capabilities</span></div>
+    <div><strong>2765</strong><span>detailed requirements</span></div>
+    <div><strong>226</strong><span>vendor questionnaire items</span></div>
   </div>
 </header>
 
@@ -539,11 +566,11 @@
           </div>
           <div class="kv-grid">
             <div><strong>30</strong><span>capabilities</span></div>
-            <div><strong>240</strong><span>requirements</span></div>
-            <div><strong>128</strong><span>features</span></div>
-            <div><strong>187</strong><span>SME-minimum items</span></div>
+            <div><strong>238</strong><span>requirements</span></div>
+            <div><strong>131</strong><span>features</span></div>
+            <div><strong>136</strong><span>SME-minimum items</span></div>
             <div><strong>13 / 8</strong><span>vendor Qs (req / pref)</span></div>
-            <div><strong>6 / 31</strong><span>pillars / statements</span></div>
+            <div><strong>6 / 30</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
             <div class="families-label">Families (6):</div>
@@ -565,17 +592,17 @@
           <div class="kv-grid">
             <div><strong>30</strong><span>capabilities</span></div>
             <div><strong>214</strong><span>requirements</span></div>
-            <div><strong>130</strong><span>features</span></div>
-            <div><strong>170</strong><span>SME-minimum items</span></div>
-            <div><strong>15 / 10</strong><span>vendor Qs (req / pref)</span></div>
-            <div><strong>6 / 31</strong><span>pillars / statements</span></div>
+            <div><strong>128</strong><span>features</span></div>
+            <div><strong>146</strong><span>SME-minimum items</span></div>
+            <div><strong>14 / 11</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 34</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
             <div class="families-label">Families (6):</div>
             <ul class="families"><li class="family">Platform & Data</li><li class="family">Work Order Core</li><li class="family">Scheduling & Dispatch</li><li class="family">Equipment & Inventory</li><li class="family">Service Contracts</li><li class="family">Analytics & Intelligence</li></ul>
           </div>
           <div class="card-footer">
-            <span class="badge">6 family narratives</span>
+            <span class="badge">11 family narratives</span>
             <span class="badge">4 diagrams</span>
             <span class="open">Open viewer →</span>
           </div>
@@ -589,11 +616,11 @@
           </div>
           <div class="kv-grid">
             <div><strong>30</strong><span>capabilities</span></div>
-            <div><strong>319</strong><span>requirements</span></div>
-            <div><strong>153</strong><span>features</span></div>
-            <div><strong>210</strong><span>SME-minimum items</span></div>
-            <div><strong>14 / 10</strong><span>vendor Qs (req / pref)</span></div>
-            <div><strong>6 / 38</strong><span>pillars / statements</span></div>
+            <div><strong>321</strong><span>requirements</span></div>
+            <div><strong>155</strong><span>features</span></div>
+            <div><strong>216</strong><span>SME-minimum items</span></div>
+            <div><strong>14 / 11</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 30</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
             <div class="families-label">Families (6):</div>
@@ -613,12 +640,12 @@
             <span class="slug">fleet_management</span>
           </div>
           <div class="kv-grid">
-            <div><strong>25</strong><span>capabilities</span></div>
-            <div><strong>154</strong><span>requirements</span></div>
-            <div><strong>98</strong><span>features</span></div>
-            <div><strong>122</strong><span>SME-minimum items</span></div>
-            <div><strong>13 / 5</strong><span>vendor Qs (req / pref)</span></div>
-            <div><strong>6 / 29</strong><span>pillars / statements</span></div>
+            <div><strong>26</strong><span>capabilities</span></div>
+            <div><strong>183</strong><span>requirements</span></div>
+            <div><strong>109</strong><span>features</span></div>
+            <div><strong>138</strong><span>SME-minimum items</span></div>
+            <div><strong>13 / 9</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 34</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
             <div class="families-label">Families (6):</div>
@@ -639,11 +666,11 @@
           </div>
           <div class="kv-grid">
             <div><strong>31</strong><span>capabilities</span></div>
-            <div><strong>323</strong><span>requirements</span></div>
-            <div><strong>160</strong><span>features</span></div>
-            <div><strong>251</strong><span>SME-minimum items</span></div>
-            <div><strong>15 / 11</strong><span>vendor Qs (req / pref)</span></div>
-            <div><strong>6 / 41</strong><span>pillars / statements</span></div>
+            <div><strong>326</strong><span>requirements</span></div>
+            <div><strong>159</strong><span>features</span></div>
+            <div><strong>248</strong><span>SME-minimum items</span></div>
+            <div><strong>20 / 7</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 45</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
             <div class="families-label">Families (6):</div>
@@ -663,12 +690,12 @@
             <span class="slug">manufacturing_management</span>
           </div>
           <div class="kv-grid">
-            <div><strong>31</strong><span>capabilities</span></div>
-            <div><strong>266</strong><span>requirements</span></div>
-            <div><strong>144</strong><span>features</span></div>
-            <div><strong>207</strong><span>SME-minimum items</span></div>
-            <div><strong>14 / 8</strong><span>vendor Qs (req / pref)</span></div>
-            <div><strong>6 / 35</strong><span>pillars / statements</span></div>
+            <div><strong>32</strong><span>capabilities</span></div>
+            <div><strong>268</strong><span>requirements</span></div>
+            <div><strong>152</strong><span>features</span></div>
+            <div><strong>196</strong><span>SME-minimum items</span></div>
+            <div><strong>14 / 13</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 33</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
             <div class="families-label">Families (6):</div>
@@ -689,18 +716,18 @@
           </div>
           <div class="kv-grid">
             <div><strong>24</strong><span>capabilities</span></div>
-            <div><strong>295</strong><span>requirements</span></div>
-            <div><strong>124</strong><span>features</span></div>
-            <div><strong>182</strong><span>SME-minimum items</span></div>
-            <div><strong>8 / 12</strong><span>vendor Qs (req / pref)</span></div>
-            <div><strong>6 / 34</strong><span>pillars / statements</span></div>
+            <div><strong>293</strong><span>requirements</span></div>
+            <div><strong>130</strong><span>features</span></div>
+            <div><strong>0</strong><span>SME-minimum items</span></div>
+            <div><strong>0 / 0</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>0 / 0</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
             <div class="families-label">Families (5):</div>
             <ul class="families"><li class="family">Platform & Data</li><li class="family">Productivity & Collaboration</li><li class="family">Workflow & Automation</li><li class="family">Intelligence & Analytics</li><li class="family">Customisation & Integration</li></ul>
           </div>
           <div class="card-footer">
-            <span class="badge">5 family narratives</span>
+            <span class="badge">0 family narratives</span>
             <span class="badge">4 diagrams</span>
             <span class="open">Open viewer →</span>
           </div>
@@ -714,11 +741,11 @@
           </div>
           <div class="kv-grid">
             <div><strong>29</strong><span>capabilities</span></div>
-            <div><strong>243</strong><span>requirements</span></div>
-            <div><strong>130</strong><span>features</span></div>
-            <div><strong>175</strong><span>SME-minimum items</span></div>
-            <div><strong>13 / 9</strong><span>vendor Qs (req / pref)</span></div>
-            <div><strong>6 / 33</strong><span>pillars / statements</span></div>
+            <div><strong>245</strong><span>requirements</span></div>
+            <div><strong>134</strong><span>features</span></div>
+            <div><strong>179</strong><span>SME-minimum items</span></div>
+            <div><strong>13 / 10</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 39</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
             <div class="families-label">Families (6):</div>
@@ -738,19 +765,19 @@
             <span class="slug">sales_and_crm</span>
           </div>
           <div class="kv-grid">
-            <div><strong>32</strong><span>capabilities</span></div>
-            <div><strong>373</strong><span>requirements</span></div>
-            <div><strong>169</strong><span>features</span></div>
-            <div><strong>234</strong><span>SME-minimum items</span></div>
-            <div><strong>11 / 7</strong><span>vendor Qs (req / pref)</span></div>
-            <div><strong>6 / 33</strong><span>pillars / statements</span></div>
+            <div><strong>40</strong><span>capabilities</span></div>
+            <div><strong>383</strong><span>requirements</span></div>
+            <div><strong>175</strong><span>features</span></div>
+            <div><strong>251</strong><span>SME-minimum items</span></div>
+            <div><strong>11 / 19</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 36</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
             <div class="families-label">Families (7):</div>
             <ul class="families"><li class="family">Platform & Data</li><li class="family">Sales Transactions</li><li class="family">CRM & Relationship</li><li class="family">Marketing</li><li class="family">Commerce</li><li class="family">Customer Service</li><li class="family">Analytics</li></ul>
           </div>
           <div class="card-footer">
-            <span class="badge">0 family narratives</span>
+            <span class="badge">7 family narratives</span>
             <span class="badge">4 diagrams</span>
             <span class="open">Open viewer →</span>
           </div>
@@ -765,17 +792,17 @@
           <div class="kv-grid">
             <div><strong>31</strong><span>capabilities</span></div>
             <div><strong>294</strong><span>requirements</span></div>
-            <div><strong>151</strong><span>features</span></div>
-            <div><strong>191</strong><span>SME-minimum items</span></div>
-            <div><strong>14 / 7</strong><span>vendor Qs (req / pref)</span></div>
-            <div><strong>6 / 37</strong><span>pillars / statements</span></div>
+            <div><strong>149</strong><span>features</span></div>
+            <div><strong>219</strong><span>SME-minimum items</span></div>
+            <div><strong>13 / 13</strong><span>vendor Qs (req / pref)</span></div>
+            <div><strong>6 / 30</strong><span>pillars / statements</span></div>
           </div>
           <div class="families-row">
             <div class="families-label">Families (6):</div>
             <ul class="families"><li class="family">Platform & Data</li><li class="family">Inventory Core</li><li class="family">Procurement</li><li class="family">Warehouse & Logistics</li><li class="family">Planning & Compliance</li><li class="family">Analytics & Intelligence</li></ul>
           </div>
           <div class="card-footer">
-            <span class="badge">6 family narratives</span>
+            <span class="badge">7 family narratives</span>
             <span class="badge">4 diagrams</span>
             <span class="open">Open viewer →</span>
           </div>
@@ -792,13 +819,13 @@
       <tr><th scope="col">Metric</th><th>Asset Management</th><th>Field Service Management</th><th>Financial Management</th><th>Fleet Management</th><th>Human Resources Management</th><th>Manufacturing Management</th><th>Others (Cross-Cutting)</th><th>Project Management</th><th>Sales & Customer Relationship Management</th><th>Supply Chain & Inventory</th></tr>
     </thead>
     <tbody>
-      <tr><th scope="row">Capabilities</th><td>30</td><td>30</td><td>30</td><td>25</td><td>31</td><td>31</td><td>24</td><td>29</td><td>32</td><td>31</td></tr>
-<tr><th scope="row">Requirements (all)</th><td>240</td><td>214</td><td>319</td><td>154</td><td>323</td><td>266</td><td>295</td><td>243</td><td>373</td><td>294</td></tr>
-<tr><th scope="row">Features</th><td>128</td><td>130</td><td>153</td><td>98</td><td>160</td><td>144</td><td>124</td><td>130</td><td>169</td><td>151</td></tr>
-<tr><th scope="row">SME-minimum items</th><td>187</td><td>170</td><td>210</td><td>122</td><td>251</td><td>207</td><td>182</td><td>175</td><td>234</td><td>191</td></tr>
-<tr><th scope="row">Vendor Qs — Required</th><td>13</td><td>15</td><td>14</td><td>13</td><td>15</td><td>14</td><td>8</td><td>13</td><td>11</td><td>14</td></tr>
-<tr><th scope="row">Vendor Qs — Preferred</th><td>8</td><td>10</td><td>10</td><td>5</td><td>11</td><td>8</td><td>12</td><td>9</td><td>7</td><td>7</td></tr>
-<tr><th scope="row">Family narratives</th><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>5</td><td>6</td><td>0</td><td>6</td></tr>
+      <tr><th scope="row">Capabilities</th><td>30</td><td>30</td><td>30</td><td>26</td><td>31</td><td>32</td><td>24</td><td>29</td><td>40</td><td>31</td></tr>
+<tr><th scope="row">Requirements (all)</th><td>238</td><td>214</td><td>321</td><td>183</td><td>326</td><td>268</td><td>293</td><td>245</td><td>383</td><td>294</td></tr>
+<tr><th scope="row">Features</th><td>131</td><td>128</td><td>155</td><td>109</td><td>159</td><td>152</td><td>130</td><td>134</td><td>175</td><td>149</td></tr>
+<tr><th scope="row">SME-minimum items</th><td>136</td><td>146</td><td>216</td><td>138</td><td>248</td><td>196</td><td>0</td><td>179</td><td>251</td><td>219</td></tr>
+<tr><th scope="row">Vendor Qs — Required</th><td>13</td><td>14</td><td>14</td><td>13</td><td>20</td><td>14</td><td>0</td><td>13</td><td>11</td><td>13</td></tr>
+<tr><th scope="row">Vendor Qs — Preferred</th><td>8</td><td>11</td><td>11</td><td>9</td><td>7</td><td>13</td><td>0</td><td>10</td><td>19</td><td>13</td></tr>
+<tr><th scope="row">Family narratives</th><td>6</td><td>11</td><td>6</td><td>6</td><td>6</td><td>6</td><td>0</td><td>6</td><td>7</td><td>7</td></tr>
 <tr><th scope="row">Reference diagrams</th><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
 <tr><th scope="row">Families</th><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>5</td><td>6</td><td>7</td><td>6</td></tr>
     </tbody>
@@ -896,14 +923,14 @@
 <text x="92.0" y="158.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Contact, Account &amp; Customer Master</text>
 <rect x="80.0" y="180" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.customer_service</title></rect>
 <text x="92.0" y="200.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Customer Service &amp; Case Management</text>
-<rect x="80.0" y="222" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.contract_management</title></rect>
-<text x="92.0" y="242.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Sales Contract &amp; Agreement Management</text>
+<rect x="80.0" y="222" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.contract_management_basic</title></rect>
+<text x="92.0" y="242.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Contract Tracking &amp; E-Signature (Basic)</text>
 <rect x="80.0" y="264" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.integration_import_export</title></rect>
 <text x="92.0" y="284.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Data Import, Export &amp; Integration</text>
 <rect x="80.0" y="306" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.data_governance</title></rect>
 <text x="92.0" y="326.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Data Security, Privacy &amp; Consent</text>
-<rect x="80.0" y="348" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.commissions</title></rect>
-<text x="92.0" y="368.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Sales Commission &amp; Incentive Compensa…</text>
+<rect x="80.0" y="348" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.commissions_basic</title></rect>
+<text x="92.0" y="368.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Sales Commission (Basic)</text>
 <rect x="80.0" y="390" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.activities</title></rect>
 <text x="92.0" y="410.0" font-size="12" font-family="-apple-system, sans-serif" fill="#1a1f2b">Customer Interaction Log</text>
 <rect x="80.0" y="432" width="260" height="32" rx="5" ry="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"><title>sales.ecommerce_b2c</title></rect>
