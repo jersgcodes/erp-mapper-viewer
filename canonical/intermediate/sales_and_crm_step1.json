@@ -3,11 +3,11 @@
   "stats": {
     "input_reqs": 291,
     "unique_section_pairs": 144,
-    "placed_via_section_lookup": 249,
-    "placed_via_fallback": 59,
-    "unmapped": 3,
-    "total_placements": 316,
-    "unique_reqs_placed": 288
+    "placed_via_section_lookup": 258,
+    "placed_via_fallback": 33,
+    "unmapped": 5,
+    "total_placements": 299,
+    "unique_reqs_placed": 286
   },
   "placements": {
     "sales.contacts_accounts": [
@@ -359,6 +359,19 @@
         "capabilities": [
           "sales.contacts_accounts"
         ]
+      },
+      {
+        "id": "req-00647",
+        "text": "Escalation process and contact details (where customer is aware of the contact number, designation, name of the management personnel for issues escalation)",
+        "q_title": "Digital Marketing Strategy Development",
+        "subsection": "",
+        "sources": [
+          "essential-business__digital-marketing-packages"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "sales.contacts_accounts"
+        ]
       }
     ],
     "sales.leads": [
@@ -558,20 +571,6 @@
         ]
       },
       {
-        "id": "req-00646",
-        "text": "Enquiry Management",
-        "q_title": "Mandatory Module Compliance",
-        "subsection": "Module Requirements",
-        "sources": [
-          "tourism-travel-agent__travel-management-system-e-commerce"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.leads",
-          "sales.customer_service"
-        ]
-      },
-      {
         "id": "req-01428",
         "text": "Waitlist management of enrolment interests from different channels e.g. internal transfers, walk-ins, social media lead, web portal leads, etc",
         "q_title": "Vacancy and Waitlist Management",
@@ -584,21 +583,6 @@
         "placed_via": "fallback_llm",
         "capabilities": [
           "sales.leads"
-        ]
-      },
-      {
-        "id": "req-01431",
-        "text": "Web enquiry form (allow parents to enquire about programme and indicate interest)",
-        "q_title": "School Operations Management",
-        "subsection": "Functional Requirements",
-        "sources": [
-          "early-childhood__pre-school-management-system",
-          "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.leads",
-          "sales.marketing_automation"
         ]
       }
     ],
@@ -613,8 +597,7 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "sales.opportunities_pipeline",
-          "sales.activities"
+          "sales.opportunities_pipeline"
         ]
       }
     ],
@@ -685,6 +668,19 @@
         ]
       },
       {
+        "id": "req-00669",
+        "text": "For customer feedback and history tracking for better customer service",
+        "q_title": "Customer Feedback and History Tracking",
+        "subsection": "Customer Feedback and History Tracking",
+        "sources": [
+          "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "sales.activities"
+        ]
+      },
+      {
         "id": "req-01397",
         "text": "Upload and store customer's documents (e.g. passport, visa, flight ticket)",
         "q_title": "Booking Management Features",
@@ -695,20 +691,6 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.activities"
-        ]
-      },
-      {
-        "id": "req-01168",
-        "text": "Sales Management",
-        "q_title": "Module Capabilities",
-        "subsection": "Module Requirements",
-        "sources": [
-          "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.opportunities_pipeline",
           "sales.activities"
         ]
       }
@@ -953,8 +935,7 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "sales.quotes_orders",
-          "sales.reporting_analytics"
+          "sales.quotes_orders"
         ]
       },
       {
@@ -975,75 +956,6 @@
         "text": "Does your solution offer and/or acknowledge receipt of cashless payment by consumers e.g. via wireless/mobile payment terminals or integrated digital payment gateway? Please name the various payment modes and integration payment partners.",
         "q_title": "Digital Payment Integration",
         "subsection": "Digital Payment Integration",
-        "sources": [
-          "personal-care-services__salon-management-system"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.quotes_orders"
-        ]
-      },
-      {
-        "id": "req-00922",
-        "text": "Multiple shipping options for customers",
-        "q_title": "Shipping and Logistics Integration",
-        "subsection": "Shipping and Logistics Features",
-        "sources": [
-          "essential-business__e-commerce-online-shop-b2c"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.quotes_orders"
-        ]
-      },
-      {
-        "id": "req-01092",
-        "text": "Quotation Management",
-        "q_title": "Mandatory Module Compliance",
-        "subsection": "Module Requirements",
-        "sources": [
-          "tourism-travel-agent__travel-management-system-e-commerce"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.quotes_orders",
-          "sales.cpq"
-        ]
-      },
-      {
-        "id": "req-01103",
-        "text": "Real-time update of inventory via integration with existing Sales Management and Purchasing System, i.e. inventory updated when orders are fulfilled or inventory is stocked up",
-        "q_title": "Real-time Tracking Integration",
-        "subsection": "Real-time Tracking Integration",
-        "sources": [
-          "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
-          "wholesale__inventory-management"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.quotes_orders"
-        ]
-      },
-      {
-        "id": "req-01324",
-        "text": "Template of the customer quotation or contract where each client's acknowledgement of this briefing will be secured",
-        "q_title": "Risk Mitigation Briefing",
-        "subsection": "Submission Requirements",
-        "sources": [
-          "essential-business__chatbots-for-customer-engagement",
-          "essential-business__marketing-and-sales-content-generation"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.quotes_orders",
-          "sales.contract_management"
-        ]
-      },
-      {
-        "id": "req-01440",
-        "text": "Workflow approval for customer package adjustments",
-        "q_title": "Package Management Features",
-        "subsection": "Package Management Features",
         "sources": [
           "personal-care-services__salon-management-system"
         ],
@@ -1199,56 +1111,9 @@
         "capabilities": [
           "sales.pricing_discounts"
         ]
-      },
-      {
-        "id": "req-01227",
-        "text": "Set up and edit discounts and promotions for different customer groups (e.g. seasonality discount, complimentary for children 12 years and below, expiry date, etc.)",
-        "q_title": "Tour Packaging Management Features [Non-Mandatory]",
-        "subsection": "Core Functions",
-        "sources": [
-          "tourism-travel-agent__travel-management-system-e-commerce",
-          "tourism-travel-agent__travel-management-system-operations"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.pricing_discounts"
-        ]
-      },
-      {
-        "id": "req-01229",
-        "text": "Set up and edit discounts and promotions for different tour packages",
-        "q_title": "Tour Packaging Management Features [Non-Mandatory]",
-        "subsection": "Core Functions",
-        "sources": [
-          "tourism-travel-agent__travel-management-system-e-commerce",
-          "tourism-travel-agent__travel-management-system-operations"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.pricing_discounts"
-        ]
       }
     ],
     "sales.forecasting": [
-      {
-        "id": "req-00033",
-        "text": "Ability to analyse and predict potential conversion of pipelines",
-        "q_title": "AI Powered Inventory Management - Elaboration",
-        "subsection": "Feature Examples",
-        "sources": [
-          "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-          "essential-business__accounting-management-+-sales-management-system",
-          "essential-business__inventory-management-and-sales-management-system",
-          "logistics__networked-trade-platform-value-added-services",
-          "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
-          "wholesale__sales-management"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.ai_insights",
-          "sales.forecasting"
-        ]
-      },
       {
         "id": "req-00036",
         "text": "Ability to automate routine sales tasks (e.g. update forecasts and determine call lists)",
@@ -1303,6 +1168,19 @@
           "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
           "essential-business__accounting-management-+-sales-management-system",
           "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "sales.reporting_analytics"
+        ]
+      },
+      {
+        "id": "req-00221",
+        "text": "Can the In-Store Analytics solution provide insights into customer segments, allowing for targeted strategies based on the preferences and behaviours of different customer groups",
+        "q_title": "Customer Segmentation Analysis",
+        "subsection": "Customer Segmentation Analysis",
+        "sources": [
+          "retail__in-store-analytics"
         ],
         "placed_via": "section_lookup",
         "capabilities": [
@@ -1713,20 +1591,6 @@
         ]
       },
       {
-        "id": "req-00455",
-        "text": "Does the solution allow real-time or near real-time management of sales, orders, and inventory through a single interface",
-        "q_title": "Real-time Tracking",
-        "subsection": "Real-time Tracking",
-        "sources": [
-          "essential-business__multichannel-e-commerce-software-mes"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.quotes_orders",
-          "sales.reporting_analytics"
-        ]
-      },
-      {
         "id": "req-00898",
         "text": "Market Insights",
         "q_title": "NTPS VAS Categories",
@@ -1751,23 +1615,9 @@
         "capabilities": [
           "sales.reporting_analytics"
         ]
-      },
-      {
-        "id": "req-01406",
-        "text": "Use reinforcement learning based on automated performance tracking and analytics of the published marketing or sales content",
-        "q_title": "Self-learning and Training Capabilities",
-        "subsection": "Training Examples",
-        "sources": [
-          "essential-business__marketing-and-sales-content-generation"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.ai_insights",
-          "sales.reporting_analytics"
-        ]
       }
     ],
-    "sales.marketing_automation": [
+    "sales.marketing_automation_basic": [
       {
         "id": "req-00002",
         "text": "A/B testing capabilities for campaign optimization",
@@ -1778,7 +1628,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -1791,7 +1641,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -1805,7 +1655,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -1818,7 +1668,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -1831,7 +1681,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -1844,7 +1694,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -1858,7 +1708,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -1871,7 +1721,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -1885,7 +1735,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -1898,7 +1748,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -1912,7 +1762,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -1925,7 +1775,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -1938,7 +1788,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -1951,7 +1801,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -1964,7 +1814,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -1978,7 +1828,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -1991,7 +1841,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -2004,7 +1854,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -2018,7 +1868,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -2031,7 +1881,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -2044,7 +1894,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -2057,7 +1907,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -2071,7 +1921,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -2085,7 +1935,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -2099,7 +1949,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -2113,7 +1963,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -2127,7 +1977,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -2140,7 +1990,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -2153,7 +2003,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -2167,7 +2017,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -2180,8 +2030,7 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "sales.marketing_automation",
-          "sales.customer_service"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -2194,7 +2043,7 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       },
       {
@@ -2208,25 +2057,12 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "sales.leads",
-          "sales.marketing_automation"
+          "sales.marketing_automation_basic"
         ]
       }
     ],
+    "sales.marketing_automation_advanced": [],
     "sales.customer_service": [
-      {
-        "id": "req-00006",
-        "text": "A client-facing portal to collect client information to fill in templates",
-        "q_title": "Client-Facing Portal",
-        "subsection": "Client-Facing Portal",
-        "sources": [
-          "legal__document-assembly-software"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "sales.customer_service"
-        ]
-      },
       {
         "id": "req-00132",
         "text": "Any other integrations to optimise and enhance customer engagement c. Structured files, such as FAQ with Question-and-Answer pairing, Product and Services offerings, etc d. Unstructured files, such as PDF or Word Document",
@@ -2267,69 +2103,12 @@
         ]
       },
       {
-        "id": "req-00340",
-        "text": "Conversations with customers in more than ONE language, other than English (e.g. Simplified/Traditional Mandarin, Bahasa Melayu, Tamil, etc.)",
-        "q_title": "Multi-Language Support",
-        "subsection": "Multi-Language Support",
-        "sources": [
-          "essential-business__chatbots-for-customer-engagement"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.telephony_comms",
-          "sales.customer_service"
-        ]
-      },
-      {
-        "id": "req-00388",
-        "text": "customer chats, enquiry management). Document proof of digital assets creation (e.g. campaigns collateral, product listings, e-store banners).",
-        "q_title": "Onboarding and Set-up Services",
-        "subsection": "",
-        "sources": [
-          "essential-business__cross-border-e-commerce-packages"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.marketing_automation",
-          "sales.customer_service"
-        ]
-      },
-      {
         "id": "req-00646",
         "text": "Enquiry Management",
         "q_title": "Mandatory Module Compliance",
         "subsection": "Module Requirements",
         "sources": [
           "tourism-travel-agent__travel-management-system-e-commerce"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.leads",
-          "sales.customer_service"
-        ]
-      },
-      {
-        "id": "req-00647",
-        "text": "Escalation process and contact details (where customer is aware of the contact number, designation, name of the management personnel for issues escalation)",
-        "q_title": "Digital Marketing Strategy Development",
-        "subsection": "",
-        "sources": [
-          "essential-business__digital-marketing-packages"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.customer_service"
-        ]
-      },
-      {
-        "id": "req-01404",
-        "text": "Use of Chatbot to assist with parent's queries",
-        "q_title": "AI Powered Education Management - Elaboration",
-        "subsection": "Example Features",
-        "sources": [
-          "early-childhood__pre-school-management-system",
-          "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
-          "early-childhood__vacancy-and-waitlist-management"
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
@@ -2759,39 +2538,22 @@
           "sales.ecommerce_b2c",
           "sales.ecommerce_b2b"
         ]
-      },
-      {
-        "id": "req-01234",
-        "text": "Set up and edit item descriptions (e.g. text, images, website link, address, opening hours, etc.)",
-        "q_title": "Inventory Management Features",
-        "subsection": "Core Functions",
-        "sources": [
-          "tourism-travel-agent__travel-management-system-e-commerce",
-          "tourism-travel-agent__travel-management-system-operations"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.ecommerce_b2c",
-          "sales.ecommerce_b2b"
-        ]
-      },
-      {
-        "id": "req-01237",
-        "text": "Set up and edit package descriptions",
-        "q_title": "Tour Packaging Management Features [Non-Mandatory]",
-        "subsection": "Core Functions",
-        "sources": [
-          "tourism-travel-agent__travel-management-system-e-commerce",
-          "tourism-travel-agent__travel-management-system-operations"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.ecommerce_b2c",
-          "sales.ecommerce_b2b"
-        ]
       }
     ],
     "sales.ecommerce_b2b": [
+      {
+        "id": "req-00006",
+        "text": "A client-facing portal to collect client information to fill in templates",
+        "q_title": "Client-Facing Portal",
+        "subsection": "Client-Facing Portal",
+        "sources": [
+          "legal__document-assembly-software"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "sales.ecommerce_b2b"
+        ]
+      },
       {
         "id": "req-00609",
         "text": "E-commerce",
@@ -2820,20 +2582,76 @@
           "sales.ecommerce_b2c",
           "sales.ecommerce_b2b"
         ]
+      }
+    ],
+    "sales.cpq_basic": [
+      {
+        "id": "req-00161",
+        "text": "Audit log for customer package adjustments",
+        "q_title": "Package Management Features",
+        "subsection": "Package Management Features",
+        "sources": [
+          "personal-care-services__salon-management-system"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "sales.cpq_basic"
+        ]
       },
       {
-        "id": "req-01234",
-        "text": "Set up and edit item descriptions (e.g. text, images, website link, address, opening hours, etc.)",
-        "q_title": "Inventory Management Features",
+        "id": "req-00367",
+        "text": "Create multi-day tour packages from itemised products through a 'drag-and-drop' format",
+        "q_title": "Tour Packaging Management Features [Non-Mandatory]",
         "subsection": "Core Functions",
         "sources": [
           "tourism-travel-agent__travel-management-system-e-commerce",
           "tourism-travel-agent__travel-management-system-operations"
         ],
-        "placed_via": "fallback_llm",
+        "placed_via": "section_lookup",
         "capabilities": [
-          "sales.ecommerce_b2c",
-          "sales.ecommerce_b2b"
+          "sales.cpq_basic"
+        ]
+      },
+      {
+        "id": "req-00371",
+        "text": "Create tour packages from different item groups through a 'drag-and-drop' format",
+        "q_title": "Tour Packaging Management Features [Non-Mandatory]",
+        "subsection": "Core Functions",
+        "sources": [
+          "tourism-travel-agent__travel-management-system-e-commerce",
+          "tourism-travel-agent__travel-management-system-operations"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "sales.cpq_basic"
+        ]
+      },
+      {
+        "id": "req-01227",
+        "text": "Set up and edit discounts and promotions for different customer groups (e.g. seasonality discount, complimentary for children 12 years and below, expiry date, etc.)",
+        "q_title": "Tour Packaging Management Features [Non-Mandatory]",
+        "subsection": "Core Functions",
+        "sources": [
+          "tourism-travel-agent__travel-management-system-e-commerce",
+          "tourism-travel-agent__travel-management-system-operations"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "sales.cpq_basic"
+        ]
+      },
+      {
+        "id": "req-01229",
+        "text": "Set up and edit discounts and promotions for different tour packages",
+        "q_title": "Tour Packaging Management Features [Non-Mandatory]",
+        "subsection": "Core Functions",
+        "sources": [
+          "tourism-travel-agent__travel-management-system-e-commerce",
+          "tourism-travel-agent__travel-management-system-operations"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "sales.cpq_basic"
         ]
       },
       {
@@ -2845,14 +2663,24 @@
           "tourism-travel-agent__travel-management-system-e-commerce",
           "tourism-travel-agent__travel-management-system-operations"
         ],
-        "placed_via": "fallback_llm",
+        "placed_via": "section_lookup",
         "capabilities": [
-          "sales.ecommerce_b2c",
-          "sales.ecommerce_b2b"
+          "sales.cpq_basic"
         ]
-      }
-    ],
-    "sales.cpq": [
+      },
+      {
+        "id": "req-01440",
+        "text": "Workflow approval for customer package adjustments",
+        "q_title": "Package Management Features",
+        "subsection": "Package Management Features",
+        "sources": [
+          "personal-care-services__salon-management-system"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "sales.cpq_basic"
+        ]
+      },
       {
         "id": "req-01092",
         "text": "Quotation Management",
@@ -2863,12 +2691,13 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "sales.quotes_orders",
-          "sales.cpq"
+          "sales.cpq_basic"
         ]
       }
     ],
-    "sales.commissions": [],
+    "sales.cpq_advanced": [],
+    "sales.commissions_basic": [],
+    "sales.commissions_advanced": [],
     "sales.partner_channel": [
       {
         "id": "req-01214",
@@ -2940,37 +2769,9 @@
         ]
       }
     ],
-    "sales.social_crm": [
-      {
-        "id": "req-00656",
-        "text": "Facebook, Instagram, Tik Tok), chat applications (e.g. WhatsApp, Telegram), or Marketplaces (e.g. Lazada, Shopee, Amazon).",
-        "q_title": "Multiple Touchpoints for Customer Engagement and Sales Transactions",
-        "subsection": "",
-        "sources": [
-          "retail__omnichannel-retail-management-ocrm"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.social_crm",
-          "sales.marketplace_channels",
-          "sales.telephony_comms"
-        ]
-      }
-    ],
+    "sales.social_crm_basic": [],
+    "sales.social_crm_advanced": [],
     "sales.cdp_customer_360": [
-      {
-        "id": "req-00221",
-        "text": "Can the In-Store Analytics solution provide insights into customer segments, allowing for targeted strategies based on the preferences and behaviours of different customer groups",
-        "q_title": "Customer Segmentation Analysis",
-        "subsection": "Customer Segmentation Analysis",
-        "sources": [
-          "retail__in-store-analytics"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "sales.cdp_customer_360"
-        ]
-      },
       {
         "id": "req-00239",
         "text": "Can the solution uncover and analyse customer traffic patterns within the store, aiding in the efficient layout design and product interaction or placement",
@@ -2998,20 +2799,6 @@
           "logistics__networked-trade-platform-value-added-services",
           "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
           "wholesale__sales-management"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.ai_insights",
-          "sales.customer_journey"
-        ]
-      },
-      {
-        "id": "req-01407",
-        "text": "Use reinforcement learning or feedback loops based on positive and negative customer interactions",
-        "q_title": "Post-deployment Self-learning and Training Capabilities",
-        "subsection": "Self-learning Examples",
-        "sources": [
-          "essential-business__chatbots-for-customer-engagement"
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
@@ -3057,7 +2844,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -3110,7 +2897,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -3124,7 +2911,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -3138,7 +2925,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -3191,7 +2978,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -3218,7 +3005,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -3232,7 +3019,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -3325,7 +3112,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "sales.marketing_automation",
+          "sales.marketing_automation_basic",
           "sales.loyalty_rewards"
         ]
       },
@@ -3345,7 +3132,7 @@
       }
     ],
     "sales.subscription_recurring": [],
-    "sales.contract_management": [
+    "sales.contract_management_basic": [
       {
         "id": "req-01324",
         "text": "Template of the customer quotation or contract where each client's acknowledgement of this briefing will be secured",
@@ -3357,11 +3144,11 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "sales.quotes_orders",
-          "sales.contract_management"
+          "sales.contract_management_basic"
         ]
       }
     ],
+    "sales.contract_management_advanced": [],
     "sales.sales_enablement": [],
     "sales.ai_insights": [
       {
@@ -3692,6 +3479,21 @@
         ]
       },
       {
+        "id": "req-01404",
+        "text": "Use of Chatbot to assist with parent's queries",
+        "q_title": "AI Powered Education Management - Elaboration",
+        "subsection": "Example Features",
+        "sources": [
+          "early-childhood__pre-school-management-system",
+          "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+          "early-childhood__vacancy-and-waitlist-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "sales.ai_insights"
+        ]
+      },
+      {
         "id": "req-00033",
         "text": "Ability to analyse and predict potential conversion of pipelines",
         "q_title": "AI Powered Inventory Management - Elaboration",
@@ -3706,8 +3508,7 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "sales.ai_insights",
-          "sales.forecasting"
+          "sales.ai_insights"
         ]
       },
       {
@@ -3755,8 +3556,7 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "sales.ai_insights",
-          "sales.reporting_analytics"
+          "sales.ai_insights"
         ]
       },
       {
@@ -3769,26 +3569,11 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "sales.ai_insights",
-          "sales.customer_journey"
+          "sales.ai_insights"
         ]
       }
     ],
-    "sales.voc_survey": [
-      {
-        "id": "req-00669",
-        "text": "For customer feedback and history tracking for better customer service",
-        "q_title": "Customer Feedback and History Tracking",
-        "subsection": "Customer Feedback and History Tracking",
-        "sources": [
-          "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "sales.voc_survey"
-        ]
-      }
-    ],
+    "sales.voc_survey": [],
     "sales.marketplace_channels": [
       {
         "id": "req-00226",
@@ -3802,21 +3587,6 @@
         "capabilities": [
           "sales.marketplace_channels",
           "sales.multi_channel_sync"
-        ]
-      },
-      {
-        "id": "req-00656",
-        "text": "Facebook, Instagram, Tik Tok), chat applications (e.g. WhatsApp, Telegram), or Marketplaces (e.g. Lazada, Shopee, Amazon).",
-        "q_title": "Multiple Touchpoints for Customer Engagement and Sales Transactions",
-        "subsection": "",
-        "sources": [
-          "retail__omnichannel-retail-management-ocrm"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.social_crm",
-          "sales.marketplace_channels",
-          "sales.telephony_comms"
         ]
       }
     ],
@@ -3956,6 +3726,19 @@
         ]
       },
       {
+        "id": "req-00656",
+        "text": "Facebook, Instagram, Tik Tok), chat applications (e.g. WhatsApp, Telegram), or Marketplaces (e.g. Lazada, Shopee, Amazon).",
+        "q_title": "Multiple Touchpoints for Customer Engagement and Sales Transactions",
+        "subsection": "",
+        "sources": [
+          "retail__omnichannel-retail-management-ocrm"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "sales.omnichannel_basic"
+        ]
+      },
+      {
         "id": "req-00749",
         "text": "In-store and online experience synchronization",
         "q_title": "Omnichannel Customer Experience",
@@ -4062,35 +3845,6 @@
         "capabilities": [
           "sales.telephony_comms"
         ]
-      },
-      {
-        "id": "req-00340",
-        "text": "Conversations with customers in more than ONE language, other than English (e.g. Simplified/Traditional Mandarin, Bahasa Melayu, Tamil, etc.)",
-        "q_title": "Multi-Language Support",
-        "subsection": "Multi-Language Support",
-        "sources": [
-          "essential-business__chatbots-for-customer-engagement"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.telephony_comms",
-          "sales.customer_service"
-        ]
-      },
-      {
-        "id": "req-00656",
-        "text": "Facebook, Instagram, Tik Tok), chat applications (e.g. WhatsApp, Telegram), or Marketplaces (e.g. Lazada, Shopee, Amazon).",
-        "q_title": "Multiple Touchpoints for Customer Engagement and Sales Transactions",
-        "subsection": "",
-        "sources": [
-          "retail__omnichannel-retail-management-ocrm"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "sales.social_crm",
-          "sales.marketplace_channels",
-          "sales.telephony_comms"
-        ]
       }
     ],
     "sales.data_governance": [
@@ -4103,19 +3857,6 @@
           "estate-agency__document-management-and-transaction-records-submission-for-estate-agents"
         ],
         "placed_via": "section_lookup",
-        "capabilities": [
-          "sales.data_governance"
-        ]
-      },
-      {
-        "id": "req-00161",
-        "text": "Audit log for customer package adjustments",
-        "q_title": "Package Management Features",
-        "subsection": "Package Management Features",
-        "sources": [
-          "personal-care-services__salon-management-system"
-        ],
-        "placed_via": "fallback_llm",
         "capabilities": [
           "sales.data_governance"
         ]
@@ -4335,25 +4076,35 @@
   },
   "unmapped": [
     {
-      "id": "req-00367",
-      "text": "Create multi-day tour packages from itemised products through a 'drag-and-drop' format",
-      "q_title": "Tour Packaging Management Features [Non-Mandatory]",
-      "subsection": "Core Functions",
+      "id": "req-00340",
+      "text": "Conversations with customers in more than ONE language, other than English (e.g. Simplified/Traditional Mandarin, Bahasa Melayu, Tamil, etc.)",
+      "q_title": "Multi-Language Support",
+      "subsection": "Multi-Language Support",
       "sources": [
-        "tourism-travel-agent__travel-management-system-e-commerce",
-        "tourism-travel-agent__travel-management-system-operations"
+        "essential-business__chatbots-for-customer-engagement"
       ],
       "placed_via": "fallback_llm",
       "capabilities": []
     },
     {
-      "id": "req-00371",
-      "text": "Create tour packages from different item groups through a 'drag-and-drop' format",
-      "q_title": "Tour Packaging Management Features [Non-Mandatory]",
-      "subsection": "Core Functions",
+      "id": "req-00922",
+      "text": "Multiple shipping options for customers",
+      "q_title": "Shipping and Logistics Integration",
+      "subsection": "Shipping and Logistics Features",
       "sources": [
-        "tourism-travel-agent__travel-management-system-e-commerce",
-        "tourism-travel-agent__travel-management-system-operations"
+        "essential-business__e-commerce-online-shop-b2c"
+      ],
+      "placed_via": "fallback_llm",
+      "capabilities": []
+    },
+    {
+      "id": "req-01103",
+      "text": "Real-time update of inventory via integration with existing Sales Management and Purchasing System, i.e. inventory updated when orders are fulfilled or inventory is stocked up",
+      "q_title": "Real-time Tracking Integration",
+      "subsection": "Real-time Tracking Integration",
+      "sources": [
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__inventory-management"
       ],
       "placed_via": "fallback_llm",
       "capabilities": []
@@ -4365,6 +4116,18 @@
       "subsection": "",
       "sources": [
         "essential-business__digital-marketing-packages"
+      ],
+      "placed_via": "fallback_llm",
+      "capabilities": []
+    },
+    {
+      "id": "req-01234",
+      "text": "Set up and edit item descriptions (e.g. text, images, website link, address, opening hours, etc.)",
+      "q_title": "Inventory Management Features",
+      "subsection": "Core Functions",
+      "sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
       ],
       "placed_via": "fallback_llm",
       "capabilities": []

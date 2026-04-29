@@ -3,10 +3,10 @@
   "stats": {
     "input_reqs": 20,
     "unique_section_pairs": 16,
-    "placed_via_section_lookup": 20,
-    "placed_via_fallback": 0,
+    "placed_via_section_lookup": 18,
+    "placed_via_fallback": 2,
     "unmapped": 0,
-    "total_placements": 32,
+    "total_placements": 33,
     "unique_reqs_placed": 20
   },
   "placements": {
@@ -21,22 +21,6 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "fleet.vehicle_register"
-        ]
-      },
-      {
-        "id": "req-01322",
-        "text": "Telematics and GPS tracking technology which provides the company a complete overview of its fleet's real-time location and operating condition",
-        "q_title": "Fleet Management and Tracking",
-        "subsection": "Fleet Management and Tracking",
-        "sources": [
-          "essential-business__fleet-management-system",
-          "logistics__transport-management"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "fleet.gps_telematics",
-          "fleet.trip_mileage",
           "fleet.vehicle_register"
         ]
       }
@@ -73,7 +57,7 @@
         "capabilities": [
           "fleet.gps_telematics",
           "fleet.trip_mileage",
-          "fleet.vehicle_register"
+          "fleet.reporting_dashboards"
         ]
       }
     ],
@@ -103,37 +87,24 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "fleet.analytics_ai",
+          "fleet.analytics_basic",
+          "fleet.analytics_ml",
           "fleet.reporting_dashboards"
         ]
       },
       {
-        "id": "req-00909",
-        "text": "Mileage and fuel consumption",
-        "q_title": "Data Analytics and Insights for Vehicles",
-        "subsection": "Functional Requirements",
+        "id": "req-01322",
+        "text": "Telematics and GPS tracking technology which provides the company a complete overview of its fleet's real-time location and operating condition",
+        "q_title": "Fleet Management and Tracking",
+        "subsection": "Fleet Management and Tracking",
         "sources": [
           "essential-business__fleet-management-system",
           "logistics__transport-management"
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "fleet.analytics_ai",
-          "fleet.reporting_dashboards"
-        ]
-      },
-      {
-        "id": "req-01411",
-        "text": "Vehicle maintenance and servicing tasks",
-        "q_title": "Data Analytics and Insights for Vehicles",
-        "subsection": "Functional Requirements",
-        "sources": [
-          "essential-business__fleet-management-system",
-          "logistics__transport-management"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "fleet.analytics_ai",
+          "fleet.gps_telematics",
+          "fleet.trip_mileage",
           "fleet.reporting_dashboards"
         ]
       }
@@ -182,32 +153,6 @@
         ]
       },
       {
-        "id": "req-00756",
-        "text": "Indoor Analogue Camera to capture the activity in vehicle cabin",
-        "q_title": "Vehicle Cabin Monitoring",
-        "subsection": "Vehicle Cabin Monitoring",
-        "sources": [
-          "essential-business__fleet-safety-management-system"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "fleet.gps_telematics"
-        ]
-      },
-      {
-        "id": "req-00854",
-        "text": "Licence Plate Recognition Module – Analyse video for licence plates captured and stored according to the date and time of entry",
-        "q_title": "Real-Time Video Functions",
-        "subsection": "Additional Functions (Choose at least one)",
-        "sources": [
-          "security__surveillance-and-analytics"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "fleet.gps_telematics"
-        ]
-      },
-      {
         "id": "req-01315",
         "text": "Tailor the fleet journey and manage cost control",
         "q_title": "Customised Fleet Journey Management",
@@ -234,7 +179,33 @@
         "capabilities": [
           "fleet.gps_telematics",
           "fleet.trip_mileage",
-          "fleet.vehicle_register"
+          "fleet.reporting_dashboards"
+        ]
+      },
+      {
+        "id": "req-00756",
+        "text": "Indoor Analogue Camera to capture the activity in vehicle cabin",
+        "q_title": "Vehicle Cabin Monitoring",
+        "subsection": "Vehicle Cabin Monitoring",
+        "sources": [
+          "essential-business__fleet-safety-management-system"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fleet.gps_telematics"
+        ]
+      },
+      {
+        "id": "req-00854",
+        "text": "Licence Plate Recognition Module – Analyse video for licence plates captured and stored according to the date and time of entry",
+        "q_title": "Real-Time Video Functions",
+        "subsection": "Additional Functions (Choose at least one)",
+        "sources": [
+          "security__surveillance-and-analytics"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fleet.gps_telematics"
         ]
       }
     ],
@@ -404,7 +375,7 @@
     "fleet.vendor_workshop": [],
     "fleet.emissions_tracking": [],
     "fleet.pool_car_sharing": [],
-    "fleet.analytics_ai": [
+    "fleet.analytics_basic": [
       {
         "id": "req-00605",
         "text": "Drivers' behaviour (e.g. dangerous driving, speeding)",
@@ -415,7 +386,8 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "fleet.analytics_ai",
+          "fleet.analytics_basic",
+          "fleet.analytics_ml",
           "fleet.reporting_dashboards"
         ]
       },
@@ -430,8 +402,8 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "fleet.analytics_ai",
-          "fleet.reporting_dashboards"
+          "fleet.analytics_basic",
+          "fleet.analytics_ml"
         ]
       },
       {
@@ -445,8 +417,55 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "fleet.analytics_ai",
+          "fleet.analytics_basic",
+          "fleet.analytics_ml"
+        ]
+      }
+    ],
+    "fleet.analytics_ml": [
+      {
+        "id": "req-00605",
+        "text": "Drivers' behaviour (e.g. dangerous driving, speeding)",
+        "q_title": "Data Analytics and Insights for Vehicles",
+        "subsection": "Analytics Areas",
+        "sources": [
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.analytics_basic",
+          "fleet.analytics_ml",
           "fleet.reporting_dashboards"
+        ]
+      },
+      {
+        "id": "req-00909",
+        "text": "Mileage and fuel consumption",
+        "q_title": "Data Analytics and Insights for Vehicles",
+        "subsection": "Functional Requirements",
+        "sources": [
+          "essential-business__fleet-management-system",
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.analytics_basic",
+          "fleet.analytics_ml"
+        ]
+      },
+      {
+        "id": "req-01411",
+        "text": "Vehicle maintenance and servicing tasks",
+        "q_title": "Data Analytics and Insights for Vehicles",
+        "subsection": "Functional Requirements",
+        "sources": [
+          "essential-business__fleet-management-system",
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fleet.analytics_basic",
+          "fleet.analytics_ml"
         ]
       }
     ],
