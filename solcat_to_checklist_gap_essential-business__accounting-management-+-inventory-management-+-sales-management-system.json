@@ -2,13 +2,13 @@
   "sol_cat_id": "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
   "vendor_count": 33,
   "imda_qs_total": 31,
-  "imda_qs_mapped": 16,
-  "imda_qs_orphan": 15,
-  "caps_in_scope_total": 47,
+  "imda_qs_mapped": 20,
+  "imda_qs_orphan": 11,
+  "caps_in_scope_total": 88,
   "step1_classification_counts": {
-    "imda_traced": 17,
-    "cross_imda_traced": 13,
-    "proxy_only": 17
+    "imda_traced": 22,
+    "cross_imda_traced": 34,
+    "proxy_only": 32
   },
   "step1_caps": [
     {
@@ -285,13 +285,36 @@
       "tier": "required",
       "module": "financial_management",
       "sub_module": "Revenue Cycle (AR)",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q17"
+      ],
+      "backing_q_titles": [
+        "InvoiceNow-Ready Solution Provider Accreditation"
+      ],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system",
+        "logistics__freight-management",
+        "logistics__networked-trade-platform-value-added-services",
+        "logistics__warehouse-management",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system",
+        "logistics__freight-management",
+        "logistics__networked-trade-platform-value-added-services",
+        "logistics__warehouse-management",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "imda_sources_count": 9,
       "vendor_citations": [
         "odoo_accounting",
         "odoo_invoicing",
@@ -336,6 +359,333 @@
         "xero"
       ],
       "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.accounts_payable",
+      "name": "Accounts Payable & Vendor Bills",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__carbon-management-solution",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__carbon-management-solution",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "odoo_accounting",
+        "odoo_invoicing",
+        "quickbooks",
+        "xero"
+      ],
+      "vendor_citations_count": 6
+    },
+    {
+      "cap_id": "fin.expense_management",
+      "name": "Expense Management & Staff Claims",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "sage_intacct"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "fin.purchase_finance",
+      "name": "Purchase Orders & Procurement (Finance Side)",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "odoo_accounting"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.project_accounting",
+      "name": "Project Accounting & Cost Centres",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "built-environment__quantity-surveying-and-valuation",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "built-environment__quantity-surveying-and-valuation",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.payroll_posting",
+      "name": "Payroll Integration & GL Posting",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin",
+        "personal-care-services__salon-management-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin",
+        "personal-care-services__salon-management-system"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "xero"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.bank_cash_management",
+      "name": "Bank & Cash Management",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Bank, Tax & FX (Core Treasury)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__ai-accounting-automation",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__ai-accounting-automation",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 6,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sage_intacct",
+        "xero"
+      ],
+      "vendor_citations_count": 5
+    },
+    {
+      "cap_id": "fin.tax_management",
+      "name": "Tax Management & GST Compliance",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Bank, Tax & FX (Core Treasury)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sap_s4hana_finance",
+        "xero"
+      ],
+      "vendor_citations_count": 6
+    },
+    {
+      "cap_id": "fin.multi_currency",
+      "name": "Multi-Currency & Foreign Exchange",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Bank, Tax & FX (Core Treasury)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sap_s4hana_finance",
+        "xero"
+      ],
+      "vendor_citations_count": 5
+    },
+    {
+      "cap_id": "fin.intercompany_consolidation",
+      "name": "Inter-Company Accounting & Group Consolidation",
+      "tier": "advanced",
+      "module": "financial_management",
+      "sub_module": "Group Consolidation & Cashflow",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.cashflow_treasury",
+      "name": "Cashflow Forecasting & Treasury",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Group Consolidation & Cashflow",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "fin.xbrl_reporting",
+      "name": "XBRL & Statutory Filing",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance",
+        "xero"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.lease_accounting",
+      "name": "Lease Accounting (IFRS 16)",
+      "tier": "advanced",
+      "module": "financial_management",
+      "sub_module": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "fin.treasury_investments",
+      "name": "Investment & Treasury Management",
+      "tier": "advanced",
+      "module": "financial_management",
+      "sub_module": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 3
     },
     {
       "cap_id": "fin.budgeting_forecasting",
@@ -438,6 +788,978 @@
         "odoo_accounting",
         "sage_intacct",
         "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "sales.contacts_accounts",
+      "name": "Contact, Account & Customer Master",
+      "tier": "required",
+      "module": "sales_and_crm",
+      "sub_module": "CRM & Relationship",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q3"
+      ],
+      "backing_q_titles": [
+        "Customer Groups Management",
+        "Customer Groups Management"
+      ],
+      "cross_imda_sources": [
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__digital-marketing-packages",
+        "essential-business__inventory-management-and-sales-management-system",
+        "food-services__connected-business-suite",
+        "personal-care-services__salon-management-system",
+        "retail__integrated-pos-with-mobile-features",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__digital-marketing-packages",
+        "essential-business__inventory-management-and-sales-management-system",
+        "food-services__connected-business-suite",
+        "personal-care-services__salon-management-system",
+        "retail__integrated-pos-with-mobile-features",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 12,
+      "vendor_citations": [
+        "hubspot",
+        "netsuite",
+        "odoo_crm",
+        "salesforce_sales_cloud",
+        "zoho_crm"
+      ],
+      "vendor_citations_count": 5
+    },
+    {
+      "cap_id": "sales.leads",
+      "name": "Lead Management",
+      "tier": "required",
+      "module": "sales_and_crm",
+      "sub_module": "CRM & Relationship",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__vacancy-and-waitlist-management",
+        "essential-business__customer-relationship-management-crm",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__vacancy-and-waitlist-management",
+        "essential-business__customer-relationship-management-crm",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "hubspot",
+        "netsuite",
+        "odoo_crm",
+        "salesforce_sales_cloud",
+        "zoho_crm"
+      ],
+      "vendor_citations_count": 5
+    },
+    {
+      "cap_id": "sales.opportunities_pipeline",
+      "name": "Opportunity & Pipeline Management",
+      "tier": "required",
+      "module": "sales_and_crm",
+      "sub_module": "CRM & Relationship",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "hubspot",
+        "netsuite",
+        "odoo_crm",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "sales.activities",
+      "name": "Customer Interaction Log",
+      "tier": "required",
+      "module": "sales_and_crm",
+      "sub_module": "CRM & Relationship",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "hubspot",
+        "netsuite",
+        "odoo_crm",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "sales.partner_channel",
+      "name": "Partner Relationship Management (PRM)",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "CRM & Relationship",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ms_dynamics_365_ce",
+        "netsuite",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "sales.territory",
+      "name": "Territory Management & Account Assignment",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "CRM & Relationship",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ms_dynamics_365_ce",
+        "odoo_crm",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "sales.sales_enablement",
+      "name": "Sales Enablement & Content Management",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "CRM & Relationship",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "hubspot",
+        "ms_dynamics_365_ce",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "sales.quotes_orders",
+      "name": "Orders & Invoicing",
+      "tier": "required",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Transactions",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q18"
+      ],
+      "backing_q_titles": [
+        "Sales and Delivery Management"
+      ],
+      "cross_imda_sources": [
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__automated-order-management",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__inventory-management-and-sales-management-system",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "logistics__freight-management",
+        "personal-care-services__salon-management-system",
+        "retail__omnichannel-retail-management-ocrm",
+        "retail__self-checkout-solution",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__automated-order-management",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__inventory-management-and-sales-management-system",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "logistics__freight-management",
+        "personal-care-services__salon-management-system",
+        "retail__omnichannel-retail-management-ocrm",
+        "retail__self-checkout-solution",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "imda_sources_count": 14,
+      "vendor_citations": [
+        "hubspot",
+        "netsuite",
+        "odoo_sales",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "sales.pricing_discounts",
+      "name": "Pricing, Discounts & Promotions",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Transactions",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__automated-order-management",
+        "food-services__connected-business-suite",
+        "retail__integrated-pos-with-mobile-features",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__automated-order-management",
+        "food-services__connected-business-suite",
+        "retail__integrated-pos-with-mobile-features",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_sales",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "sales.forecasting",
+      "name": "Sales Forecasting & Quota Management",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Transactions",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q22"
+      ],
+      "backing_q_titles": [
+        "AI Powered Inventory Management - Elaboration"
+      ],
+      "cross_imda_sources": [
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "ms_dynamics_365_ce",
+        "netsuite",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "sales.cpq_basic",
+      "name": "Quoting & Bundle Pricing (Basic)",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Transactions",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "hubspot",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "sales.cpq_advanced",
+      "name": "CPQ Rules Engine & Configuration (Advanced)",
+      "tier": "advanced",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Transactions",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [],
+      "vendor_citations_count": 0
+    },
+    {
+      "cap_id": "sales.commissions_basic",
+      "name": "Sales Commission (Basic)",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Transactions",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "hubspot",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "sales.commissions_advanced",
+      "name": "Sales Commission Engine (Advanced)",
+      "tier": "advanced",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Transactions",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [],
+      "vendor_citations_count": 0
+    },
+    {
+      "cap_id": "sales.contract_management_basic",
+      "name": "Contract Tracking & E-Signature (Basic)",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Transactions",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__marketing-and-sales-content-generation"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__marketing-and-sales-content-generation"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "hubspot"
+      ],
+      "vendor_citations_count": 1
+    },
+    {
+      "cap_id": "sales.contract_management_advanced",
+      "name": "Contract Lifecycle Management (Advanced)",
+      "tier": "advanced",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Transactions",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [],
+      "vendor_citations_count": 0
+    },
+    {
+      "cap_id": "sales.marketing_automation_basic",
+      "name": "Email Campaigns & Drip Automation (Basic)",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Marketing & Demand Generation",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "personal-care-services__salon-management-system",
+        "retail__omnichannel-retail-management-ocrm",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "personal-care-services__salon-management-system",
+        "retail__omnichannel-retail-management-ocrm",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 8,
+      "vendor_citations": [
+        "hubspot"
+      ],
+      "vendor_citations_count": 1
+    },
+    {
+      "cap_id": "sales.marketing_automation_advanced",
+      "name": "Multi-Channel Attribution & Ad Orchestration (Advanced)",
+      "tier": "advanced",
+      "module": "sales_and_crm",
+      "sub_module": "Marketing & Demand Generation",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [],
+      "vendor_citations_count": 0
+    },
+    {
+      "cap_id": "sales.marketing_seo_cms",
+      "name": "Marketing Website, CMS & SEO Tools",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Marketing & Demand Generation",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__e-commerce-online-shop-b2c"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__e-commerce-online-shop-b2c"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "hubspot",
+        "odoo_crm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "sales.social_crm_basic",
+      "name": "Social Engagement & Inbox (Basic)",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Marketing & Demand Generation",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [],
+      "vendor_citations_count": 0
+    },
+    {
+      "cap_id": "sales.social_crm_advanced",
+      "name": "Social Listening & Competitive Intelligence (Advanced)",
+      "tier": "advanced",
+      "module": "sales_and_crm",
+      "sub_module": "Marketing & Demand Generation",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [],
+      "vendor_citations_count": 0
+    },
+    {
+      "cap_id": "sales.customer_journey",
+      "name": "Customer Journey Orchestration & Lifecycle Automation",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Marketing & Demand Generation",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q22"
+      ],
+      "backing_q_titles": [
+        "AI Powered Inventory Management - Elaboration",
+        "AI Powered Inventory Management - Elaboration"
+      ],
+      "cross_imda_sources": [
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system",
+        "logistics__networked-trade-platform-value-added-services",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system",
+        "logistics__networked-trade-platform-value-added-services",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "imda_sources_count": 6,
+      "vendor_citations": [
+        "hubspot",
+        "ms_dynamics_365_ce",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "sales.voc_survey",
+      "name": "Voice of Customer, Surveys & NPS",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Marketing & Demand Generation",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "hubspot",
+        "ms_dynamics_365_ce",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "sales.ecommerce_b2c",
+      "name": "E-Commerce Storefront (B2C)",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "E-Commerce Storefront",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__e-commerce-online-shop-b2c",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__e-commerce-online-shop-b2c",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "ms_dynamics_365_ce",
+        "netsuite",
+        "odoo_sales"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "sales.ecommerce_b2b",
+      "name": "E-Commerce Storefront (B2B)",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "E-Commerce Storefront",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "legal__document-assembly-software",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "legal__document-assembly-software",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "ms_dynamics_365_ce",
+        "netsuite",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "sales.marketplace_channels",
+      "name": "Marketplace Channel Connectors",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Multi-Channel Selling",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__multichannel-e-commerce-software-mes"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__multichannel-e-commerce-software-mes"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "netsuite"
+      ],
+      "vendor_citations_count": 1
+    },
+    {
+      "cap_id": "sales.multi_channel_sync",
+      "name": "Multi-Channel Inventory & Identity Sync",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Multi-Channel Selling",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "ms_dynamics_365_ce",
+        "netsuite",
+        "odoo_sales"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "sales.omnichannel_basic",
+      "name": "Omnichannel Retail (Basic — Physical+Digital)",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Omnichannel Retail (Physical + Digital)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__e-loyalty-and-marketing-automation",
+        "retail__integrated-pos-with-mobile-features",
+        "retail__omnichannel-retail-management-ocrm"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__e-loyalty-and-marketing-automation",
+        "retail__integrated-pos-with-mobile-features",
+        "retail__omnichannel-retail-management-ocrm"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_sales"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "sales.omnichannel_advanced",
+      "name": "Omnichannel Retail (Advanced — Physical Store Unification)",
+      "tier": "advanced",
+      "module": "sales_and_crm",
+      "sub_module": "Omnichannel Retail (Physical + Digital)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ms_dynamics_365_ce",
+        "netsuite",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "sales.loyalty_rewards",
+      "name": "Loyalty, Rewards & Customer Retention",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Loyalty & Rewards",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__e-loyalty-and-marketing-automation",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__e-loyalty-and-marketing-automation",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_sales",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "sales.customer_service",
+      "name": "Customer Service & Case Management",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Customer Service & Case Management",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__chatbots-for-customer-engagement",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__chatbots-for-customer-engagement",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "hubspot",
+        "ms_dynamics_365_ce",
+        "netsuite",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "sales.telephony_comms",
+      "name": "Telephony, VoIP & Communication Integration",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Customer Service & Case Management",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__automated-order-management",
+        "essential-business__chatbots-for-customer-engagement"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__automated-order-management",
+        "essential-business__chatbots-for-customer-engagement"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "hubspot",
+        "netsuite",
+        "odoo_crm",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "sales.reporting_analytics",
+      "name": "Sales Reporting, Analytics & Dashboards",
+      "tier": "required",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Analytics & Customer 360",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q19"
+      ],
+      "backing_q_titles": [
+        "Dashboards and Reports (Sales)",
+        "Dashboards and Reports (Sales)",
+        "Dashboards and Reports (Sales)"
+      ],
+      "cross_imda_sources": [
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__automated-order-management",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__inventory-management-and-sales-management-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "personal-care-services__salon-management-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__automated-order-management",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__inventory-management-and-sales-management-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "personal-care-services__salon-management-system"
+      ],
+      "imda_sources_count": 9,
+      "vendor_citations": [
+        "hubspot",
+        "netsuite",
+        "odoo_crm",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "sales.cdp_customer_360",
+      "name": "Customer Data Platform (CDP) & Unified Customer 360",
+      "tier": "advanced",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Analytics & Customer 360",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "retail__in-store-analytics"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "retail__in-store-analytics"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ms_dynamics_365_ce",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "sales.ai_insights",
+      "name": "AI, Predictive Scoring & Next-Best-Action",
+      "tier": "advanced",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Analytics & Customer 360",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q22"
+      ],
+      "backing_q_titles": [
+        "AI Powered Inventory Management - Elaboration",
+        "AI Powered Inventory Management - Elaboration",
+        "AI Powered Inventory Management - Elaboration"
+      ],
+      "cross_imda_sources": [
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__inventory-management-and-sales-management-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "logistics__networked-trade-platform-value-added-services",
+        "retail__in-store-analytics",
+        "retail__integrated-pos-with-mobile-features",
+        "retail__omnichannel-retail-management-ocrm",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__inventory-management-and-sales-management-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "logistics__networked-trade-platform-value-added-services",
+        "retail__in-store-analytics",
+        "retail__integrated-pos-with-mobile-features",
+        "retail__omnichannel-retail-management-ocrm",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "imda_sources_count": 14,
+      "vendor_citations": [
+        "hubspot",
+        "ms_dynamics_365_ce",
+        "odoo_crm",
+        "salesforce_sales_cloud"
       ],
       "vendor_citations_count": 4
     },
@@ -556,7 +1878,7 @@
     {
       "cap_id": "sc.stock_counting",
       "name": "Stock Counting & Cycle Counts",
-      "tier": "required",
+      "tier": "preferred",
       "module": "supply_chain_and_inventory",
       "sub_module": "Inventory Core",
       "classification": "proxy_only",
@@ -664,156 +1986,9 @@
       "vendor_citations_count": 4
     },
     {
-      "cap_id": "sc.purchase_orders",
-      "name": "Purchase Orders & Procurement",
-      "tier": "required",
-      "module": "supply_chain_and_inventory",
-      "sub_module": "Procurement",
-      "classification": "imda_traced",
-      "backing_q_nums": [
-        "Q10"
-      ],
-      "backing_q_titles": [
-        "Payment Management"
-      ],
-      "cross_imda_sources": [
-        "built-environment__digital-contract-management-digital-payment",
-        "essential-business__carbon-management-solution",
-        "essential-business__e-commerce-online-shop-b2c",
-        "essential-business__inventory-management-and-sales-management-system",
-        "tourism-travel-agent__travel-management-system-e-commerce",
-        "tourism-travel-agent__travel-management-system-operations",
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "built-environment__digital-contract-management-digital-payment",
-        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-        "essential-business__carbon-management-solution",
-        "essential-business__e-commerce-online-shop-b2c",
-        "essential-business__inventory-management-and-sales-management-system",
-        "tourism-travel-agent__travel-management-system-e-commerce",
-        "tourism-travel-agent__travel-management-system-operations",
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-      ],
-      "imda_sources_count": 8,
-      "vendor_citations": [
-        "dynamics_365_scm",
-        "erpnext_stock",
-        "odoo_purchase",
-        "oracle_scm",
-        "sap_mm"
-      ],
-      "vendor_citations_count": 5
-    },
-    {
-      "cap_id": "sc.vendor_master",
-      "name": "Vendor & Supplier Master",
-      "tier": "required",
-      "module": "supply_chain_and_inventory",
-      "sub_module": "Procurement",
-      "classification": "imda_traced",
-      "backing_q_nums": [
-        "Q4",
-        "Q8"
-      ],
-      "backing_q_titles": [
-        "Supplier Group Management (Inventory)",
-        "Supplier Groups Management (Accounting)",
-        "Supplier Group Management (Inventory)",
-        "Supplier Groups Management (Accounting)",
-        "Supplier Group Management (Inventory)"
-      ],
-      "cross_imda_sources": [
-        "essential-business__accounting-management-+-sales-management-system",
-        "essential-business__inventory-management-and-sales-management-system",
-        "tourism-travel-agent__travel-management-system-e-commerce",
-        "tourism-travel-agent__travel-management-system-operations",
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-        "essential-business__accounting-management-+-sales-management-system",
-        "essential-business__inventory-management-and-sales-management-system",
-        "tourism-travel-agent__travel-management-system-e-commerce",
-        "tourism-travel-agent__travel-management-system-operations",
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-      ],
-      "imda_sources_count": 6,
-      "vendor_citations": [
-        "dynamics_365_scm",
-        "odoo_purchase",
-        "oracle_scm",
-        "sap_mm"
-      ],
-      "vendor_citations_count": 4
-    },
-    {
-      "cap_id": "sc.consignment",
-      "name": "Consignment Inventory",
-      "tier": "advanced",
-      "module": "supply_chain_and_inventory",
-      "sub_module": "Procurement",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "dynamics_365_scm",
-        "oracle_scm",
-        "sap_mm"
-      ],
-      "vendor_citations_count": 3
-    },
-    {
-      "cap_id": "sc.vmi",
-      "name": "Vendor Managed Inventory (VMI)",
-      "tier": "advanced",
-      "module": "supply_chain_and_inventory",
-      "sub_module": "Procurement",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "dynamics_365_scm",
-        "oracle_scm",
-        "sap_mm"
-      ],
-      "vendor_citations_count": 3
-    },
-    {
-      "cap_id": "sc.procurement_analytics",
-      "name": "Procurement Analytics & Spend Analysis",
-      "tier": "advanced",
-      "module": "supply_chain_and_inventory",
-      "sub_module": "Procurement",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "dynamics_365_scm",
-        "odoo_purchase",
-        "oracle_scm",
-        "sap_mm"
-      ],
-      "vendor_citations_count": 4
-    },
-    {
       "cap_id": "sc.goods_receipt",
       "name": "Goods Receipt & Putaway",
-      "tier": "required",
+      "tier": "preferred",
       "module": "supply_chain_and_inventory",
       "sub_module": "Warehouse & Logistics (WMS)",
       "classification": "cross_imda_traced",
@@ -838,7 +2013,7 @@
     {
       "cap_id": "sc.stock_movements",
       "name": "Stock Movements & Transfers",
-      "tier": "required",
+      "tier": "preferred",
       "module": "supply_chain_and_inventory",
       "sub_module": "Warehouse & Logistics (WMS)",
       "classification": "proxy_only",
@@ -1050,6 +2225,294 @@
       "vendor_citations_count": 3
     },
     {
+      "cap_id": "sc.purchase_orders",
+      "name": "Purchase Orders & Procurement",
+      "tier": "required",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Procurement",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q10"
+      ],
+      "backing_q_titles": [
+        "Payment Management"
+      ],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__carbon-management-solution",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__inventory-management-and-sales-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__carbon-management-solution",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__inventory-management-and-sales-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 8,
+      "vendor_citations": [
+        "dynamics_365_scm",
+        "erpnext_stock",
+        "odoo_purchase",
+        "oracle_scm",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 5
+    },
+    {
+      "cap_id": "sc.vendor_master",
+      "name": "Vendor & Supplier Master",
+      "tier": "required",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Procurement",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q4",
+        "Q8"
+      ],
+      "backing_q_titles": [
+        "Supplier Group Management (Inventory)",
+        "Supplier Groups Management (Accounting)",
+        "Supplier Group Management (Inventory)",
+        "Supplier Groups Management (Accounting)",
+        "Supplier Group Management (Inventory)"
+      ],
+      "cross_imda_sources": [
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 6,
+      "vendor_citations": [
+        "dynamics_365_scm",
+        "odoo_purchase",
+        "oracle_scm",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "sc.consignment",
+      "name": "Consignment Inventory",
+      "tier": "advanced",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Procurement",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "dynamics_365_scm",
+        "oracle_scm",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "sc.vmi",
+      "name": "Vendor Managed Inventory (VMI)",
+      "tier": "advanced",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Procurement",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "dynamics_365_scm",
+        "oracle_scm",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "sc.procurement_analytics",
+      "name": "Procurement Analytics & Spend Analysis",
+      "tier": "advanced",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Procurement",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "dynamics_365_scm",
+        "odoo_purchase",
+        "oracle_scm",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "sc.reorder_rules",
+      "name": "Reorder Rules & Replenishment",
+      "tier": "required",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Supply Planning & Replenishment",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q14"
+      ],
+      "backing_q_titles": [
+        "Inventory Level Alerts"
+      ],
+      "cross_imda_sources": [
+        "essential-business__inventory-management-and-sales-management-system",
+        "personal-care-services__salon-management-system",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__inventory-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system",
+        "personal-care-services__salon-management-system",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__inventory-management"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "dynamics_365_scm",
+        "fishbowl",
+        "odoo_inventory",
+        "odoo_purchase",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 5
+    },
+    {
+      "cap_id": "sc.demand_forecasting",
+      "name": "Demand Forecasting & Planning",
+      "tier": "preferred",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Supply Planning & Replenishment",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q12"
+      ],
+      "backing_q_titles": [
+        "Inventory Forecasting",
+        "Inventory Forecasting"
+      ],
+      "cross_imda_sources": [
+        "essential-business__inventory-management-and-sales-management-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "dynamics_365_scm",
+        "oracle_scm",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "sc.landed_cost",
+      "name": "Landed Cost Calculation",
+      "tier": "preferred",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Supply Planning & Replenishment",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "logistics__freight-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "logistics__freight-management"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "cin7",
+        "dynamics_365_scm",
+        "odoo_inventory",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "sc.quality_control",
+      "name": "Quality Inspection & Control",
+      "tier": "preferred",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Quality & Trade Compliance",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "dynamics_365_scm",
+        "erpnext_stock",
+        "odoo_inventory",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "sc.trade_compliance",
+      "name": "Import/Export & Trade Compliance",
+      "tier": "preferred",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Quality & Trade Compliance",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "logistics__freight-management",
+        "logistics__networked-trade-platform-value-added-services",
+        "wholesale__custom-clearance"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "logistics__freight-management",
+        "logistics__networked-trade-platform-value-added-services",
+        "wholesale__custom-clearance"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "dynamics_365_scm",
+        "oracle_scm",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
       "cap_id": "sc.supply_chain_analytics",
       "name": "Supply Chain Analytics & Dashboards",
       "tier": "preferred",
@@ -1140,366 +2603,6 @@
         "sap_mm"
       ],
       "vendor_citations_count": 3
-    },
-    {
-      "cap_id": "sales.quotes_orders",
-      "name": "Orders & Invoicing",
-      "tier": "required",
-      "module": "sales_and_crm",
-      "sub_module": "Sales Transactions",
-      "classification": "imda_traced",
-      "backing_q_nums": [
-        "Q18"
-      ],
-      "backing_q_titles": [
-        "Sales and Delivery Management"
-      ],
-      "cross_imda_sources": [
-        "essential-business__accounting-management-+-sales-management-system",
-        "essential-business__automated-order-management",
-        "essential-business__e-commerce-online-shop-b2c",
-        "essential-business__inventory-management-and-sales-management-system",
-        "essential-business__multichannel-e-commerce-software-mes",
-        "logistics__freight-management",
-        "personal-care-services__salon-management-system",
-        "retail__omnichannel-retail-management-ocrm",
-        "retail__self-checkout-solution",
-        "tourism-travel-agent__travel-management-system-e-commerce",
-        "tourism-travel-agent__travel-management-system-operations",
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
-        "wholesale__sales-management"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-        "essential-business__accounting-management-+-sales-management-system",
-        "essential-business__automated-order-management",
-        "essential-business__e-commerce-online-shop-b2c",
-        "essential-business__inventory-management-and-sales-management-system",
-        "essential-business__multichannel-e-commerce-software-mes",
-        "logistics__freight-management",
-        "personal-care-services__salon-management-system",
-        "retail__omnichannel-retail-management-ocrm",
-        "retail__self-checkout-solution",
-        "tourism-travel-agent__travel-management-system-e-commerce",
-        "tourism-travel-agent__travel-management-system-operations",
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
-        "wholesale__sales-management"
-      ],
-      "imda_sources_count": 14,
-      "vendor_citations": [
-        "hubspot",
-        "netsuite",
-        "odoo_sales",
-        "salesforce_sales_cloud"
-      ],
-      "vendor_citations_count": 4
-    },
-    {
-      "cap_id": "sales.pricing_discounts",
-      "name": "Pricing, Discounts & Promotions",
-      "tier": "required",
-      "module": "sales_and_crm",
-      "sub_module": "Sales Transactions",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "essential-business__automated-order-management",
-        "food-services__connected-business-suite",
-        "retail__integrated-pos-with-mobile-features",
-        "tourism-travel-agent__travel-management-system-e-commerce",
-        "tourism-travel-agent__travel-management-system-operations"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__automated-order-management",
-        "food-services__connected-business-suite",
-        "retail__integrated-pos-with-mobile-features",
-        "tourism-travel-agent__travel-management-system-e-commerce",
-        "tourism-travel-agent__travel-management-system-operations"
-      ],
-      "imda_sources_count": 5,
-      "vendor_citations": [
-        "netsuite",
-        "odoo_sales",
-        "salesforce_sales_cloud"
-      ],
-      "vendor_citations_count": 3
-    },
-    {
-      "cap_id": "sales.forecasting",
-      "name": "Sales Forecasting & Quota Management",
-      "tier": "preferred",
-      "module": "sales_and_crm",
-      "sub_module": "Sales Transactions",
-      "classification": "imda_traced",
-      "backing_q_nums": [
-        "Q22"
-      ],
-      "backing_q_titles": [
-        "AI Powered Inventory Management - Elaboration"
-      ],
-      "cross_imda_sources": [
-        "essential-business__accounting-management-+-sales-management-system",
-        "essential-business__inventory-management-and-sales-management-system"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-        "essential-business__accounting-management-+-sales-management-system",
-        "essential-business__inventory-management-and-sales-management-system"
-      ],
-      "imda_sources_count": 3,
-      "vendor_citations": [
-        "ms_dynamics_365_ce",
-        "netsuite",
-        "salesforce_sales_cloud"
-      ],
-      "vendor_citations_count": 3
-    },
-    {
-      "cap_id": "sales.cpq_basic",
-      "name": "Quoting & Bundle Pricing (Basic)",
-      "tier": "preferred",
-      "module": "sales_and_crm",
-      "sub_module": "Sales Transactions",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "personal-care-services__salon-management-system",
-        "tourism-travel-agent__travel-management-system-e-commerce",
-        "tourism-travel-agent__travel-management-system-operations"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "personal-care-services__salon-management-system",
-        "tourism-travel-agent__travel-management-system-e-commerce",
-        "tourism-travel-agent__travel-management-system-operations"
-      ],
-      "imda_sources_count": 3,
-      "vendor_citations": [
-        "hubspot",
-        "salesforce_sales_cloud"
-      ],
-      "vendor_citations_count": 2
-    },
-    {
-      "cap_id": "sales.cpq_advanced",
-      "name": "CPQ Rules Engine & Configuration (Advanced)",
-      "tier": "advanced",
-      "module": "sales_and_crm",
-      "sub_module": "Sales Transactions",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [],
-      "vendor_citations_count": 0
-    },
-    {
-      "cap_id": "sales.commissions_basic",
-      "name": "Sales Commission (Basic)",
-      "tier": "preferred",
-      "module": "sales_and_crm",
-      "sub_module": "Sales Transactions",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "hubspot",
-        "salesforce_sales_cloud"
-      ],
-      "vendor_citations_count": 2
-    },
-    {
-      "cap_id": "sales.commissions_advanced",
-      "name": "Sales Commission Engine (Advanced)",
-      "tier": "advanced",
-      "module": "sales_and_crm",
-      "sub_module": "Sales Transactions",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [],
-      "vendor_citations_count": 0
-    },
-    {
-      "cap_id": "sales.contract_management_basic",
-      "name": "Contract Tracking & E-Signature (Basic)",
-      "tier": "preferred",
-      "module": "sales_and_crm",
-      "sub_module": "Sales Transactions",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "essential-business__chatbots-for-customer-engagement",
-        "essential-business__marketing-and-sales-content-generation"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__chatbots-for-customer-engagement",
-        "essential-business__marketing-and-sales-content-generation"
-      ],
-      "imda_sources_count": 2,
-      "vendor_citations": [
-        "hubspot"
-      ],
-      "vendor_citations_count": 1
-    },
-    {
-      "cap_id": "sales.contract_management_advanced",
-      "name": "Contract Lifecycle Management (Advanced)",
-      "tier": "advanced",
-      "module": "sales_and_crm",
-      "sub_module": "Sales Transactions",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [],
-      "vendor_citations_count": 0
-    },
-    {
-      "cap_id": "sales.reporting_analytics",
-      "name": "Sales Reporting, Analytics & Dashboards",
-      "tier": "required",
-      "module": "sales_and_crm",
-      "sub_module": "Sales Analytics & Customer 360",
-      "classification": "imda_traced",
-      "backing_q_nums": [
-        "Q19"
-      ],
-      "backing_q_titles": [
-        "Dashboards and Reports (Sales)",
-        "Dashboards and Reports (Sales)",
-        "Dashboards and Reports (Sales)"
-      ],
-      "cross_imda_sources": [
-        "essential-business__accounting-management-+-sales-management-system",
-        "essential-business__automated-order-management",
-        "essential-business__customer-relationship-management-crm",
-        "essential-business__e-commerce-online-shop-b2c",
-        "essential-business__e-loyalty-and-marketing-automation",
-        "essential-business__inventory-management-and-sales-management-system",
-        "essential-business__marketing-and-sales-content-generation",
-        "personal-care-services__salon-management-system"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-        "essential-business__accounting-management-+-sales-management-system",
-        "essential-business__automated-order-management",
-        "essential-business__customer-relationship-management-crm",
-        "essential-business__e-commerce-online-shop-b2c",
-        "essential-business__e-loyalty-and-marketing-automation",
-        "essential-business__inventory-management-and-sales-management-system",
-        "essential-business__marketing-and-sales-content-generation",
-        "personal-care-services__salon-management-system"
-      ],
-      "imda_sources_count": 9,
-      "vendor_citations": [
-        "hubspot",
-        "netsuite",
-        "odoo_crm",
-        "salesforce_sales_cloud"
-      ],
-      "vendor_citations_count": 4
-    },
-    {
-      "cap_id": "sales.cdp_customer_360",
-      "name": "Customer Data Platform (CDP) & Unified Customer 360",
-      "tier": "advanced",
-      "module": "sales_and_crm",
-      "sub_module": "Sales Analytics & Customer 360",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "retail__in-store-analytics"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "retail__in-store-analytics"
-      ],
-      "imda_sources_count": 1,
-      "vendor_citations": [
-        "ms_dynamics_365_ce",
-        "salesforce_sales_cloud"
-      ],
-      "vendor_citations_count": 2
-    },
-    {
-      "cap_id": "sales.ai_insights",
-      "name": "AI, Predictive Scoring & Next-Best-Action",
-      "tier": "advanced",
-      "module": "sales_and_crm",
-      "sub_module": "Sales Analytics & Customer 360",
-      "classification": "imda_traced",
-      "backing_q_nums": [
-        "Q22"
-      ],
-      "backing_q_titles": [
-        "AI Powered Inventory Management - Elaboration",
-        "AI Powered Inventory Management - Elaboration",
-        "AI Powered Inventory Management - Elaboration"
-      ],
-      "cross_imda_sources": [
-        "essential-business__accounting-management-+-sales-management-system",
-        "essential-business__chatbots-for-customer-engagement",
-        "essential-business__customer-relationship-management-crm",
-        "essential-business__e-commerce-online-shop-b2c",
-        "essential-business__e-loyalty-and-marketing-automation",
-        "essential-business__inventory-management-and-sales-management-system",
-        "essential-business__marketing-and-sales-content-generation",
-        "logistics__networked-trade-platform-value-added-services",
-        "retail__in-store-analytics",
-        "retail__integrated-pos-with-mobile-features",
-        "retail__omnichannel-retail-management-ocrm",
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
-        "wholesale__sales-management"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
-        "essential-business__accounting-management-+-sales-management-system",
-        "essential-business__chatbots-for-customer-engagement",
-        "essential-business__customer-relationship-management-crm",
-        "essential-business__e-commerce-online-shop-b2c",
-        "essential-business__e-loyalty-and-marketing-automation",
-        "essential-business__inventory-management-and-sales-management-system",
-        "essential-business__marketing-and-sales-content-generation",
-        "logistics__networked-trade-platform-value-added-services",
-        "retail__in-store-analytics",
-        "retail__integrated-pos-with-mobile-features",
-        "retail__omnichannel-retail-management-ocrm",
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
-        "wholesale__sales-management"
-      ],
-      "imda_sources_count": 14,
-      "vendor_citations": [
-        "hubspot",
-        "ms_dynamics_365_ce",
-        "odoo_crm",
-        "salesforce_sales_cloud"
-      ],
-      "vendor_citations_count": 4
     }
   ],
   "imda_q_status": [
@@ -1573,7 +2676,7 @@
       "q_num": "Q12",
       "q_title": "Inventory Forecasting",
       "priority": "mandatory",
-      "mapped": false
+      "mapped": true
     },
     {
       "q_num": "Q13",
@@ -1585,7 +2688,7 @@
       "q_num": "Q14",
       "q_title": "Inventory Level Alerts",
       "priority": "mandatory",
-      "mapped": false
+      "mapped": true
     },
     {
       "q_num": "Q15",
@@ -1603,7 +2706,7 @@
       "q_num": "Q17",
       "q_title": "InvoiceNow-Ready Solution Provider Accreditation",
       "priority": "mandatory",
-      "mapped": false
+      "mapped": true
     },
     {
       "q_num": "Q18",
@@ -1621,7 +2724,7 @@
       "q_num": "Q20",
       "q_title": "Accounting, Inventory, and Sales Integration",
       "priority": "mandatory",
-      "mapped": false
+      "mapped": true
     },
     {
       "q_num": "Q21",
@@ -1721,22 +2824,68 @@
       "expansion_verdict": "potential_overreach"
     },
     {
-      "cap_id": "sc.consignment",
-      "name": "Consignment Inventory",
-      "tier": "advanced",
-      "module": "supply_chain_and_inventory",
-      "sub_module": "Procurement",
-      "classification": "proxy_only",
+      "cap_id": "fin.accounts_payable",
+      "name": "Accounts Payable & Vendor Bills",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
       "backing_q_nums": [],
       "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__carbon-management-solution",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__carbon-management-solution",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 4,
       "vendor_citations": [
-        "dynamics_365_scm",
-        "oracle_scm",
-        "sap_mm"
+        "erpnext",
+        "netsuite",
+        "odoo_accounting",
+        "odoo_invoicing",
+        "quickbooks",
+        "xero"
+      ],
+      "vendor_citations_count": 6,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.expense_management",
+      "name": "Expense Management & Staff Claims",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "sage_intacct"
       ],
       "vendor_citations_count": 3,
       "vendor_coverage": {
@@ -1750,11 +2899,11 @@
       "expansion_verdict": "potential_overreach"
     },
     {
-      "cap_id": "sc.vmi",
-      "name": "Vendor Managed Inventory (VMI)",
-      "tier": "advanced",
-      "module": "supply_chain_and_inventory",
-      "sub_module": "Procurement",
+      "cap_id": "fin.purchase_finance",
+      "name": "Purchase Orders & Procurement (Finance Side)",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
       "classification": "proxy_only",
       "backing_q_nums": [],
       "backing_q_titles": [],
@@ -1763,27 +2912,189 @@
       "imda_sources": [],
       "imda_sources_count": 0,
       "vendor_citations": [
-        "dynamics_365_scm",
-        "oracle_scm",
-        "sap_mm"
+        "erpnext",
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "odoo_accounting"
       ],
-      "vendor_citations_count": 3,
+      "vendor_citations_count": 4,
       "vendor_coverage": {
         "yes": 0,
         "partial": 0,
-        "no": 1,
-        "unknown": 32,
+        "no": 0,
+        "unknown": 33,
         "total": 33,
         "coverage_pct": 0
       },
       "expansion_verdict": "potential_overreach"
     },
     {
-      "cap_id": "sc.dropship_crossdock",
-      "name": "Dropship & Cross-Dock",
+      "cap_id": "fin.project_accounting",
+      "name": "Project Accounting & Cost Centres",
       "tier": "preferred",
-      "module": "supply_chain_and_inventory",
-      "sub_module": "Warehouse & Logistics (WMS)",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "built-environment__quantity-surveying-and-valuation",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "built-environment__quantity-surveying-and-valuation",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.payroll_posting",
+      "name": "Payroll Integration & GL Posting",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin",
+        "personal-care-services__salon-management-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin",
+        "personal-care-services__salon-management-system"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "xero"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.bank_cash_management",
+      "name": "Bank & Cash Management",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Bank, Tax & FX (Core Treasury)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__ai-accounting-automation",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__ai-accounting-automation",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 6,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sage_intacct",
+        "xero"
+      ],
+      "vendor_citations_count": 5,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.tax_management",
+      "name": "Tax Management & GST Compliance",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Bank, Tax & FX (Core Treasury)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sap_s4hana_finance",
+        "xero"
+      ],
+      "vendor_citations_count": 6,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.multi_currency",
+      "name": "Multi-Currency & Foreign Exchange",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Bank, Tax & FX (Core Treasury)",
       "classification": "proxy_only",
       "backing_q_nums": [],
       "backing_q_titles": [],
@@ -1792,9 +3103,70 @@
       "imda_sources": [],
       "imda_sources_count": 0,
       "vendor_citations": [
-        "cin7",
-        "dynamics_365_scm",
-        "odoo_inventory"
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sap_s4hana_finance",
+        "xero"
+      ],
+      "vendor_citations_count": 5,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.intercompany_consolidation",
+      "name": "Inter-Company Accounting & Group Consolidation",
+      "tier": "advanced",
+      "module": "financial_management",
+      "sub_module": "Group Consolidation & Cashflow",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.cashflow_treasury",
+      "name": "Cashflow Forecasting & Treasury",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Group Consolidation & Cashflow",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
       ],
       "vendor_citations_count": 3,
       "vendor_coverage": {
@@ -1808,11 +3180,11 @@
       "expansion_verdict": "potential_overreach"
     },
     {
-      "cap_id": "sc.dangerous_goods",
-      "name": "Dangerous Goods & Compliance",
+      "cap_id": "fin.xbrl_reporting",
+      "name": "XBRL & Statutory Filing",
       "tier": "preferred",
-      "module": "supply_chain_and_inventory",
-      "sub_module": "Warehouse & Logistics (WMS)",
+      "module": "financial_management",
+      "sub_module": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
       "classification": "proxy_only",
       "backing_q_nums": [],
       "backing_q_titles": [],
@@ -1821,16 +3193,279 @@
       "imda_sources": [],
       "imda_sources_count": 0,
       "vendor_citations": [
-        "dynamics_365_scm",
-        "oracle_scm",
-        "sap_mm"
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance",
+        "xero"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.lease_accounting",
+      "name": "Lease Accounting (IFRS 16)",
+      "tier": "advanced",
+      "module": "financial_management",
+      "sub_module": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
       ],
       "vendor_citations_count": 3,
       "vendor_coverage": {
         "yes": 0,
         "partial": 0,
-        "no": 1,
-        "unknown": 32,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.treasury_investments",
+      "name": "Investment & Treasury Management",
+      "tier": "advanced",
+      "module": "financial_management",
+      "sub_module": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.leads",
+      "name": "Lead Management",
+      "tier": "required",
+      "module": "sales_and_crm",
+      "sub_module": "CRM & Relationship",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__vacancy-and-waitlist-management",
+        "essential-business__customer-relationship-management-crm",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__vacancy-and-waitlist-management",
+        "essential-business__customer-relationship-management-crm",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "hubspot",
+        "netsuite",
+        "odoo_crm",
+        "salesforce_sales_cloud",
+        "zoho_crm"
+      ],
+      "vendor_citations_count": 5,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.opportunities_pipeline",
+      "name": "Opportunity & Pipeline Management",
+      "tier": "required",
+      "module": "sales_and_crm",
+      "sub_module": "CRM & Relationship",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "hubspot",
+        "netsuite",
+        "odoo_crm",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.activities",
+      "name": "Customer Interaction Log",
+      "tier": "required",
+      "module": "sales_and_crm",
+      "sub_module": "CRM & Relationship",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "hubspot",
+        "netsuite",
+        "odoo_crm",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.partner_channel",
+      "name": "Partner Relationship Management (PRM)",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "CRM & Relationship",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ms_dynamics_365_ce",
+        "netsuite",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.territory",
+      "name": "Territory Management & Account Assignment",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "CRM & Relationship",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ms_dynamics_365_ce",
+        "odoo_crm",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.sales_enablement",
+      "name": "Sales Enablement & Content Management",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "CRM & Relationship",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "hubspot",
+        "ms_dynamics_365_ce",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
         "total": 33,
         "coverage_pct": 0
       },
@@ -1940,6 +3575,513 @@
       "expansion_verdict": "potential_overreach"
     },
     {
+      "cap_id": "sales.marketing_automation_basic",
+      "name": "Email Campaigns & Drip Automation (Basic)",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Marketing & Demand Generation",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "personal-care-services__salon-management-system",
+        "retail__omnichannel-retail-management-ocrm",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "personal-care-services__salon-management-system",
+        "retail__omnichannel-retail-management-ocrm",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 8,
+      "vendor_citations": [
+        "hubspot"
+      ],
+      "vendor_citations_count": 1,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.marketing_automation_advanced",
+      "name": "Multi-Channel Attribution & Ad Orchestration (Advanced)",
+      "tier": "advanced",
+      "module": "sales_and_crm",
+      "sub_module": "Marketing & Demand Generation",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [],
+      "vendor_citations_count": 0,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.marketing_seo_cms",
+      "name": "Marketing Website, CMS & SEO Tools",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Marketing & Demand Generation",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__e-commerce-online-shop-b2c"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__e-commerce-online-shop-b2c"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "hubspot",
+        "odoo_crm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.social_crm_basic",
+      "name": "Social Engagement & Inbox (Basic)",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Marketing & Demand Generation",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [],
+      "vendor_citations_count": 0,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.social_crm_advanced",
+      "name": "Social Listening & Competitive Intelligence (Advanced)",
+      "tier": "advanced",
+      "module": "sales_and_crm",
+      "sub_module": "Marketing & Demand Generation",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [],
+      "vendor_citations_count": 0,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.voc_survey",
+      "name": "Voice of Customer, Surveys & NPS",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Marketing & Demand Generation",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "hubspot",
+        "ms_dynamics_365_ce",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.ecommerce_b2c",
+      "name": "E-Commerce Storefront (B2C)",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "E-Commerce Storefront",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__e-commerce-online-shop-b2c",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__e-commerce-online-shop-b2c",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "ms_dynamics_365_ce",
+        "netsuite",
+        "odoo_sales"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.ecommerce_b2b",
+      "name": "E-Commerce Storefront (B2B)",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "E-Commerce Storefront",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "legal__document-assembly-software",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "legal__document-assembly-software",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "ms_dynamics_365_ce",
+        "netsuite",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.marketplace_channels",
+      "name": "Marketplace Channel Connectors",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Multi-Channel Selling",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__multichannel-e-commerce-software-mes"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__multichannel-e-commerce-software-mes"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "netsuite"
+      ],
+      "vendor_citations_count": 1,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.multi_channel_sync",
+      "name": "Multi-Channel Inventory & Identity Sync",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Multi-Channel Selling",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "ms_dynamics_365_ce",
+        "netsuite",
+        "odoo_sales"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.omnichannel_basic",
+      "name": "Omnichannel Retail (Basic — Physical+Digital)",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Omnichannel Retail (Physical + Digital)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__e-loyalty-and-marketing-automation",
+        "retail__integrated-pos-with-mobile-features",
+        "retail__omnichannel-retail-management-ocrm"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__e-loyalty-and-marketing-automation",
+        "retail__integrated-pos-with-mobile-features",
+        "retail__omnichannel-retail-management-ocrm"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_sales"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.omnichannel_advanced",
+      "name": "Omnichannel Retail (Advanced — Physical Store Unification)",
+      "tier": "advanced",
+      "module": "sales_and_crm",
+      "sub_module": "Omnichannel Retail (Physical + Digital)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ms_dynamics_365_ce",
+        "netsuite",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.loyalty_rewards",
+      "name": "Loyalty, Rewards & Customer Retention",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Loyalty & Rewards",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__e-loyalty-and-marketing-automation",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__e-loyalty-and-marketing-automation",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_sales",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.customer_service",
+      "name": "Customer Service & Case Management",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Customer Service & Case Management",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__chatbots-for-customer-engagement",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__chatbots-for-customer-engagement",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "hubspot",
+        "ms_dynamics_365_ce",
+        "netsuite",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.telephony_comms",
+      "name": "Telephony, VoIP & Communication Integration",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Customer Service & Case Management",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__automated-order-management",
+        "essential-business__chatbots-for-customer-engagement"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__automated-order-management",
+        "essential-business__chatbots-for-customer-engagement"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "hubspot",
+        "netsuite",
+        "odoo_crm",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
       "cap_id": "sales.cdp_customer_360",
       "name": "Customer Data Platform (CDP) & Unified Customer 360",
       "tier": "advanced",
@@ -1961,6 +4103,223 @@
         "salesforce_sales_cloud"
       ],
       "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sc.dropship_crossdock",
+      "name": "Dropship & Cross-Dock",
+      "tier": "preferred",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Warehouse & Logistics (WMS)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "cin7",
+        "dynamics_365_scm",
+        "odoo_inventory"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sc.dangerous_goods",
+      "name": "Dangerous Goods & Compliance",
+      "tier": "preferred",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Warehouse & Logistics (WMS)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "dynamics_365_scm",
+        "oracle_scm",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 1,
+        "unknown": 32,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sc.consignment",
+      "name": "Consignment Inventory",
+      "tier": "advanced",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Procurement",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "dynamics_365_scm",
+        "oracle_scm",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sc.vmi",
+      "name": "Vendor Managed Inventory (VMI)",
+      "tier": "advanced",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Procurement",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "dynamics_365_scm",
+        "oracle_scm",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 1,
+        "unknown": 32,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sc.landed_cost",
+      "name": "Landed Cost Calculation",
+      "tier": "preferred",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Supply Planning & Replenishment",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "logistics__freight-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "logistics__freight-management"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "cin7",
+        "dynamics_365_scm",
+        "odoo_inventory",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sc.quality_control",
+      "name": "Quality Inspection & Control",
+      "tier": "preferred",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Quality & Trade Compliance",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "dynamics_365_scm",
+        "erpnext_stock",
+        "odoo_inventory",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 33,
+        "total": 33,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sc.trade_compliance",
+      "name": "Import/Export & Trade Compliance",
+      "tier": "preferred",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Quality & Trade Compliance",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "logistics__freight-management",
+        "logistics__networked-trade-platform-value-added-services",
+        "wholesale__custom-clearance"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "logistics__freight-management",
+        "logistics__networked-trade-platform-value-added-services",
+        "wholesale__custom-clearance"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "dynamics_365_scm",
+        "oracle_scm",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 3,
       "vendor_coverage": {
         "yes": 0,
         "partial": 0,
@@ -2179,38 +4538,9 @@
       "expansion_verdict": "potential_overreach"
     },
     {
-      "cap_id": "sc.warehouse_automation",
-      "name": "Warehouse Automation & WMS Integration",
-      "tier": "advanced",
-      "module": "supply_chain_and_inventory",
-      "sub_module": "Warehouse & Logistics (WMS)",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "dynamics_365_scm",
-        "oracle_scm",
-        "sap_mm"
-      ],
-      "vendor_citations_count": 3,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 2,
-        "no": 1,
-        "unknown": 30,
-        "total": 33,
-        "coverage_pct": 3
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
       "cap_id": "sales.pricing_discounts",
       "name": "Pricing, Discounts & Promotions",
-      "tier": "required",
+      "tier": "preferred",
       "module": "sales_and_crm",
       "sub_module": "Sales Transactions",
       "classification": "cross_imda_traced",
@@ -2249,11 +4579,11 @@
       "expansion_verdict": "potential_overreach"
     },
     {
-      "cap_id": "sc.procurement_analytics",
-      "name": "Procurement Analytics & Spend Analysis",
+      "cap_id": "sc.warehouse_automation",
+      "name": "Warehouse Automation & WMS Integration",
       "tier": "advanced",
       "module": "supply_chain_and_inventory",
-      "sub_module": "Procurement",
+      "sub_module": "Warehouse & Logistics (WMS)",
       "classification": "proxy_only",
       "backing_q_nums": [],
       "backing_q_titles": [],
@@ -2263,18 +4593,17 @@
       "imda_sources_count": 0,
       "vendor_citations": [
         "dynamics_365_scm",
-        "odoo_purchase",
         "oracle_scm",
         "sap_mm"
       ],
-      "vendor_citations_count": 4,
+      "vendor_citations_count": 3,
       "vendor_coverage": {
         "yes": 0,
-        "partial": 3,
-        "no": 0,
+        "partial": 2,
+        "no": 1,
         "unknown": 30,
         "total": 33,
-        "coverage_pct": 5
+        "coverage_pct": 3
       },
       "expansion_verdict": "potential_overreach"
     },
@@ -2306,6 +4635,36 @@
         "partial": 1,
         "no": 0,
         "unknown": 31,
+        "total": 33,
+        "coverage_pct": 5
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sc.procurement_analytics",
+      "name": "Procurement Analytics & Spend Analysis",
+      "tier": "advanced",
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Procurement",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "dynamics_365_scm",
+        "odoo_purchase",
+        "oracle_scm",
+        "sap_mm"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 3,
+        "no": 0,
+        "unknown": 30,
         "total": 33,
         "coverage_pct": 5
       },
@@ -2527,7 +4886,7 @@
     {
       "cap_id": "sc.stock_counting",
       "name": "Stock Counting & Cycle Counts",
-      "tier": "required",
+      "tier": "preferred",
       "module": "supply_chain_and_inventory",
       "sub_module": "Inventory Core",
       "classification": "proxy_only",
@@ -2558,7 +4917,7 @@
     {
       "cap_id": "sc.goods_receipt",
       "name": "Goods Receipt & Putaway",
-      "tier": "required",
+      "tier": "preferred",
       "module": "supply_chain_and_inventory",
       "sub_module": "Warehouse & Logistics (WMS)",
       "classification": "cross_imda_traced",
@@ -2592,7 +4951,7 @@
     {
       "cap_id": "sc.stock_movements",
       "name": "Stock Movements & Transfers",
-      "tier": "required",
+      "tier": "preferred",
       "module": "supply_chain_and_inventory",
       "sub_module": "Warehouse & Logistics (WMS)",
       "classification": "proxy_only",
@@ -2618,70 +4977,40 @@
         "coverage_pct": 41
       },
       "expansion_verdict": "questionable"
-    },
-    {
-      "cap_id": "fin.einvoicing_peppol",
-      "name": "E-Invoicing & PEPPOL / InvoiceNow",
-      "tier": "required",
-      "module": "financial_management",
-      "sub_module": "Revenue Cycle (AR)",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "odoo_accounting",
-        "odoo_invoicing",
-        "quickbooks",
-        "xero"
-      ],
-      "vendor_citations_count": 4,
-      "vendor_coverage": {
-        "yes": 20,
-        "partial": 1,
-        "no": 0,
-        "unknown": 12,
-        "total": 33,
-        "coverage_pct": 62
-      },
-      "expansion_verdict": "justified_real_world"
     }
   ],
   "expansion_summary": {
     "proxy_only": {
-      "justified_real_world": 1,
+      "justified_real_world": 0,
       "questionable": 2,
-      "potential_overreach": 14
+      "potential_overreach": 30
     },
     "cross_imda_traced": {
       "justified_real_world": 0,
       "questionable": 1,
-      "potential_overreach": 12
+      "potential_overreach": 33
     }
   },
   "by_module": {
     "financial_management": {
-      "imda_traced": 5,
-      "cross_imda_traced": 4,
-      "proxy_only": 4,
-      "expansion_overreach": 7,
-      "expansion_justified": 1
-    },
-    "supply_chain_and_inventory": {
-      "imda_traced": 8,
-      "cross_imda_traced": 5,
-      "proxy_only": 9,
-      "expansion_overreach": 11,
+      "imda_traced": 6,
+      "cross_imda_traced": 10,
+      "proxy_only": 10,
+      "expansion_overreach": 20,
       "expansion_justified": 0
     },
     "sales_and_crm": {
-      "imda_traced": 4,
-      "cross_imda_traced": 4,
-      "proxy_only": 4,
-      "expansion_overreach": 8,
+      "imda_traced": 6,
+      "cross_imda_traced": 17,
+      "proxy_only": 12,
+      "expansion_overreach": 29,
+      "expansion_justified": 0
+    },
+    "supply_chain_and_inventory": {
+      "imda_traced": 10,
+      "cross_imda_traced": 7,
+      "proxy_only": 10,
+      "expansion_overreach": 14,
       "expansion_justified": 0
     }
   },
@@ -2702,10 +5031,31 @@
       "sub_module": "Revenue Cycle (AR)",
       "r_total": 2,
       "r_backed": [
-        "fin.accounts_receivable"
-      ],
-      "r_unbacked": [
+        "fin.accounts_receivable",
         "fin.einvoicing_peppol"
+      ],
+      "r_unbacked": [],
+      "status": "pass"
+    },
+    {
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "r_total": 2,
+      "r_backed": [],
+      "r_unbacked": [
+        "fin.accounts_payable",
+        "fin.expense_management"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "financial_management",
+      "sub_module": "Bank, Tax & FX (Core Treasury)",
+      "r_total": 2,
+      "r_backed": [],
+      "r_unbacked": [
+        "fin.bank_cash_management",
+        "fin.tax_management"
       ],
       "status": "fail"
     },
@@ -2721,17 +5071,59 @@
       "status": "pass"
     },
     {
+      "module": "sales_and_crm",
+      "sub_module": "CRM & Relationship",
+      "r_total": 4,
+      "r_backed": [
+        "sales.contacts_accounts"
+      ],
+      "r_unbacked": [
+        "sales.leads",
+        "sales.opportunities_pipeline",
+        "sales.activities"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "sales_and_crm",
+      "sub_module": "Sales Transactions",
+      "r_total": 1,
+      "r_backed": [
+        "sales.quotes_orders"
+      ],
+      "r_unbacked": [],
+      "status": "pass"
+    },
+    {
+      "module": "sales_and_crm",
+      "sub_module": "Sales Analytics & Customer 360",
+      "r_total": 1,
+      "r_backed": [
+        "sales.reporting_analytics"
+      ],
+      "r_unbacked": [],
+      "status": "pass"
+    },
+    {
       "module": "supply_chain_and_inventory",
       "sub_module": "Inventory Core",
-      "r_total": 3,
+      "r_total": 2,
       "r_backed": [
         "sc.item_master",
         "sc.stock_levels"
       ],
-      "r_unbacked": [
-        "sc.stock_counting"
+      "r_unbacked": [],
+      "status": "pass"
+    },
+    {
+      "module": "supply_chain_and_inventory",
+      "sub_module": "Warehouse & Logistics (WMS)",
+      "r_total": 1,
+      "r_backed": [
+        "sc.delivery_dispatch"
       ],
-      "status": "fail"
+      "r_unbacked": [],
+      "status": "pass"
     },
     {
       "module": "supply_chain_and_inventory",
@@ -2746,35 +5138,10 @@
     },
     {
       "module": "supply_chain_and_inventory",
-      "sub_module": "Warehouse & Logistics (WMS)",
-      "r_total": 3,
-      "r_backed": [
-        "sc.delivery_dispatch"
-      ],
-      "r_unbacked": [
-        "sc.goods_receipt",
-        "sc.stock_movements"
-      ],
-      "status": "fail"
-    },
-    {
-      "module": "sales_and_crm",
-      "sub_module": "Sales Transactions",
-      "r_total": 2,
-      "r_backed": [
-        "sales.quotes_orders"
-      ],
-      "r_unbacked": [
-        "sales.pricing_discounts"
-      ],
-      "status": "fail"
-    },
-    {
-      "module": "sales_and_crm",
-      "sub_module": "Sales Analytics & Customer 360",
+      "sub_module": "Supply Planning & Replenishment",
       "r_total": 1,
       "r_backed": [
-        "sales.reporting_analytics"
+        "sc.reorder_rules"
       ],
       "r_unbacked": [],
       "status": "pass"
@@ -2782,27 +5149,32 @@
   ],
   "module_pass": {
     "financial_management": {
-      "r_sub_mod_count": 3,
-      "r_sub_mod_passing": 2,
+      "r_sub_mod_count": 5,
+      "r_sub_mod_passing": 3,
       "passing_sub_mods": [
         "Core Ledger & Close",
+        "Revenue Cycle (AR)",
         "Planning & Analytics (Finance)"
       ],
       "status": "pass"
     },
-    "supply_chain_and_inventory": {
+    "sales_and_crm": {
       "r_sub_mod_count": 3,
-      "r_sub_mod_passing": 1,
+      "r_sub_mod_passing": 2,
       "passing_sub_mods": [
-        "Procurement"
+        "Sales Transactions",
+        "Sales Analytics & Customer 360"
       ],
       "status": "pass"
     },
-    "sales_and_crm": {
-      "r_sub_mod_count": 2,
-      "r_sub_mod_passing": 1,
+    "supply_chain_and_inventory": {
+      "r_sub_mod_count": 4,
+      "r_sub_mod_passing": 4,
       "passing_sub_mods": [
-        "Sales Analytics & Customer 360"
+        "Inventory Core",
+        "Warehouse & Logistics (WMS)",
+        "Procurement",
+        "Supply Planning & Replenishment"
       ],
       "status": "pass"
     }
@@ -2810,8 +5182,8 @@
   "sol_cat_passes_canonical": true,
   "smallest_demotion_plan": {
     "financial_management": [],
-    "supply_chain_and_inventory": [],
-    "sales_and_crm": []
+    "sales_and_crm": [],
+    "supply_chain_and_inventory": []
   },
   "plan_total_demotions": 0,
   "q_inverse_view": [
@@ -2821,7 +5193,8 @@
       "priority": "mandatory",
       "caps_backed": [],
       "modules": [],
-      "is_orphan": true
+      "is_orphan": true,
+      "is_baseline_q": true
     },
     {
       "q_num": "Q2",
@@ -2831,13 +5204,15 @@
         {
           "cap_id": "fin.general_ledger",
           "name": "General Ledger & Chart of Accounts",
-          "module": "financial_management"
+          "module": "financial_management",
+          "out_of_scope": false
         }
       ],
       "modules": [
         "financial_management"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q3",
@@ -2845,15 +5220,24 @@
       "priority": "mandatory",
       "caps_backed": [
         {
+          "cap_id": "sales.contacts_accounts",
+          "name": "Contact, Account & Customer Master",
+          "module": "sales_and_crm",
+          "out_of_scope": false
+        },
+        {
           "cap_id": "fin.accounts_receivable",
           "name": "Accounts Receivable & Customer Invoicing",
-          "module": "financial_management"
+          "module": "financial_management",
+          "out_of_scope": false
         }
       ],
       "modules": [
-        "financial_management"
+        "financial_management",
+        "sales_and_crm"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q4",
@@ -2863,13 +5247,15 @@
         {
           "cap_id": "sc.vendor_master",
           "name": "Vendor & Supplier Master",
-          "module": "supply_chain_and_inventory"
+          "module": "supply_chain_and_inventory",
+          "out_of_scope": false
         }
       ],
       "modules": [
         "supply_chain_and_inventory"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q5",
@@ -2879,18 +5265,21 @@
         {
           "cap_id": "fin.financial_reporting",
           "name": "Financial Reporting & Statements",
-          "module": "financial_management"
+          "module": "financial_management",
+          "out_of_scope": false
         },
         {
           "cap_id": "fin.analytics_dashboards",
           "name": "Financial Analytics & Dashboards",
-          "module": "financial_management"
+          "module": "financial_management",
+          "out_of_scope": false
         }
       ],
       "modules": [
         "financial_management"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q6",
@@ -2900,13 +5289,15 @@
         {
           "cap_id": "fin.budgeting_forecasting",
           "name": "Budgeting & Forecasting",
-          "module": "financial_management"
+          "module": "financial_management",
+          "out_of_scope": false
         }
       ],
       "modules": [
         "financial_management"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q7",
@@ -2916,18 +5307,21 @@
         {
           "cap_id": "sc.item_master",
           "name": "Inventory Master & Item Management",
-          "module": "supply_chain_and_inventory"
+          "module": "supply_chain_and_inventory",
+          "out_of_scope": false
         },
         {
           "cap_id": "sc.stock_levels",
           "name": "Stock Levels & Warehouse Management",
-          "module": "supply_chain_and_inventory"
+          "module": "supply_chain_and_inventory",
+          "out_of_scope": false
         }
       ],
       "modules": [
         "supply_chain_and_inventory"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q8",
@@ -2937,13 +5331,15 @@
         {
           "cap_id": "sc.vendor_master",
           "name": "Vendor & Supplier Master",
-          "module": "supply_chain_and_inventory"
+          "module": "supply_chain_and_inventory",
+          "out_of_scope": false
         }
       ],
       "modules": [
         "supply_chain_and_inventory"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q9",
@@ -2953,13 +5349,15 @@
         {
           "cap_id": "sc.delivery_dispatch",
           "name": "Delivery & Dispatch",
-          "module": "supply_chain_and_inventory"
+          "module": "supply_chain_and_inventory",
+          "out_of_scope": false
         }
       ],
       "modules": [
         "supply_chain_and_inventory"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q10",
@@ -2969,13 +5367,15 @@
         {
           "cap_id": "sc.purchase_orders",
           "name": "Purchase Orders & Procurement",
-          "module": "supply_chain_and_inventory"
+          "module": "supply_chain_and_inventory",
+          "out_of_scope": false
         }
       ],
       "modules": [
         "supply_chain_and_inventory"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q11",
@@ -2985,21 +5385,33 @@
         {
           "cap_id": "sc.supply_chain_analytics",
           "name": "Supply Chain Analytics & Dashboards",
-          "module": "supply_chain_and_inventory"
+          "module": "supply_chain_and_inventory",
+          "out_of_scope": false
         }
       ],
       "modules": [
         "supply_chain_and_inventory"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q12",
       "q_title": "Inventory Forecasting",
       "priority": "mandatory",
-      "caps_backed": [],
-      "modules": [],
-      "is_orphan": true
+      "caps_backed": [
+        {
+          "cap_id": "sc.demand_forecasting",
+          "name": "Demand Forecasting & Planning",
+          "module": "supply_chain_and_inventory",
+          "out_of_scope": false
+        }
+      ],
+      "modules": [
+        "supply_chain_and_inventory"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q13",
@@ -3009,21 +5421,33 @@
         {
           "cap_id": "fin.accounts_receivable",
           "name": "Accounts Receivable & Customer Invoicing",
-          "module": "financial_management"
+          "module": "financial_management",
+          "out_of_scope": false
         }
       ],
       "modules": [
         "financial_management"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q14",
       "q_title": "Inventory Level Alerts",
       "priority": "mandatory",
-      "caps_backed": [],
-      "modules": [],
-      "is_orphan": true
+      "caps_backed": [
+        {
+          "cap_id": "sc.reorder_rules",
+          "name": "Reorder Rules & Replenishment",
+          "module": "supply_chain_and_inventory",
+          "out_of_scope": false
+        }
+      ],
+      "modules": [
+        "supply_chain_and_inventory"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q15",
@@ -3033,13 +5457,15 @@
         {
           "cap_id": "sc.item_master",
           "name": "Inventory Master & Item Management",
-          "module": "supply_chain_and_inventory"
+          "module": "supply_chain_and_inventory",
+          "out_of_scope": false
         }
       ],
       "modules": [
         "supply_chain_and_inventory"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q16",
@@ -3049,21 +5475,40 @@
         {
           "cap_id": "sc.barcode_scanning",
           "name": "Barcode & Scanning",
-          "module": "supply_chain_and_inventory"
+          "module": "supply_chain_and_inventory",
+          "out_of_scope": false
+        },
+        {
+          "cap_id": "asset.mobile_field",
+          "name": "Mobile Field Work",
+          "module": "asset_management",
+          "out_of_scope": true
         }
       ],
       "modules": [
+        "asset_management",
         "supply_chain_and_inventory"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q17",
       "q_title": "InvoiceNow-Ready Solution Provider Accreditation",
       "priority": "mandatory",
-      "caps_backed": [],
-      "modules": [],
-      "is_orphan": true
+      "caps_backed": [
+        {
+          "cap_id": "fin.einvoicing_peppol",
+          "name": "E-Invoicing & PEPPOL / InvoiceNow",
+          "module": "financial_management",
+          "out_of_scope": false
+        }
+      ],
+      "modules": [
+        "financial_management"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": true
     },
     {
       "q_num": "Q18",
@@ -3073,19 +5518,22 @@
         {
           "cap_id": "sales.quotes_orders",
           "name": "Orders & Invoicing",
-          "module": "sales_and_crm"
+          "module": "sales_and_crm",
+          "out_of_scope": false
         },
         {
           "cap_id": "fin.accounts_receivable",
           "name": "Accounts Receivable & Customer Invoicing",
-          "module": "financial_management"
+          "module": "financial_management",
+          "out_of_scope": false
         }
       ],
       "modules": [
         "financial_management",
         "sales_and_crm"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q19",
@@ -3095,21 +5543,47 @@
         {
           "cap_id": "sales.reporting_analytics",
           "name": "Sales Reporting, Analytics & Dashboards",
-          "module": "sales_and_crm"
+          "module": "sales_and_crm",
+          "out_of_scope": false
         }
       ],
       "modules": [
         "sales_and_crm"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q20",
       "q_title": "Accounting, Inventory, and Sales Integration",
       "priority": "mandatory",
-      "caps_backed": [],
-      "modules": [],
-      "is_orphan": true
+      "caps_backed": [
+        {
+          "cap_id": "sales.integration_import_export",
+          "name": "Data Import, Export & Integration",
+          "module": "sales_and_crm",
+          "out_of_scope": true
+        },
+        {
+          "cap_id": "fin.integration_import_export",
+          "name": "Data Import, Export & Integration",
+          "module": "financial_management",
+          "out_of_scope": true
+        },
+        {
+          "cap_id": "sc.integration_import_export",
+          "name": "Data Import, Export & Integration",
+          "module": "supply_chain_and_inventory",
+          "out_of_scope": true
+        }
+      ],
+      "modules": [
+        "financial_management",
+        "sales_and_crm",
+        "supply_chain_and_inventory"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q21",
@@ -3117,7 +5591,8 @@
       "priority": "preferred",
       "caps_backed": [],
       "modules": [],
-      "is_orphan": true
+      "is_orphan": true,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q22",
@@ -3127,24 +5602,34 @@
         {
           "cap_id": "sales.forecasting",
           "name": "Sales Forecasting & Quota Management",
-          "module": "sales_and_crm"
+          "module": "sales_and_crm",
+          "out_of_scope": false
+        },
+        {
+          "cap_id": "sales.customer_journey",
+          "name": "Customer Journey Orchestration & Lifecycle Automation",
+          "module": "sales_and_crm",
+          "out_of_scope": false
         },
         {
           "cap_id": "sales.ai_insights",
           "name": "AI, Predictive Scoring & Next-Best-Action",
-          "module": "sales_and_crm"
+          "module": "sales_and_crm",
+          "out_of_scope": false
         },
         {
           "cap_id": "sc.ai_ml_supply_chain",
           "name": "AI & Machine Learning for Supply Chain",
-          "module": "supply_chain_and_inventory"
+          "module": "supply_chain_and_inventory",
+          "out_of_scope": false
         }
       ],
       "modules": [
         "sales_and_crm",
         "supply_chain_and_inventory"
       ],
-      "is_orphan": false
+      "is_orphan": false,
+      "is_baseline_q": false
     },
     {
       "q_num": "Q23",
@@ -3152,7 +5637,8 @@
       "priority": "mandatory",
       "caps_backed": [],
       "modules": [],
-      "is_orphan": true
+      "is_orphan": true,
+      "is_baseline_q": true
     },
     {
       "q_num": "Q24",
@@ -3160,7 +5646,8 @@
       "priority": "preferred",
       "caps_backed": [],
       "modules": [],
-      "is_orphan": true
+      "is_orphan": true,
+      "is_baseline_q": true
     },
     {
       "q_num": "Q25",
@@ -3168,7 +5655,8 @@
       "priority": "mandatory",
       "caps_backed": [],
       "modules": [],
-      "is_orphan": true
+      "is_orphan": true,
+      "is_baseline_q": true
     },
     {
       "q_num": "Q26",
@@ -3176,7 +5664,8 @@
       "priority": "mandatory",
       "caps_backed": [],
       "modules": [],
-      "is_orphan": true
+      "is_orphan": true,
+      "is_baseline_q": true
     },
     {
       "q_num": "Q27",
@@ -3184,7 +5673,8 @@
       "priority": "preferred",
       "caps_backed": [],
       "modules": [],
-      "is_orphan": true
+      "is_orphan": true,
+      "is_baseline_q": true
     },
     {
       "q_num": "Q28",
@@ -3192,7 +5682,8 @@
       "priority": "preferred",
       "caps_backed": [],
       "modules": [],
-      "is_orphan": true
+      "is_orphan": true,
+      "is_baseline_q": true
     },
     {
       "q_num": "Q29",
@@ -3200,7 +5691,8 @@
       "priority": "mandatory",
       "caps_backed": [],
       "modules": [],
-      "is_orphan": true
+      "is_orphan": true,
+      "is_baseline_q": true
     },
     {
       "q_num": "Q30",
@@ -3208,7 +5700,8 @@
       "priority": "preferred",
       "caps_backed": [],
       "modules": [],
-      "is_orphan": true
+      "is_orphan": true,
+      "is_baseline_q": true
     },
     {
       "q_num": "Q31",
@@ -3216,7 +5709,8 @@
       "priority": "mandatory",
       "caps_backed": [],
       "modules": [],
-      "is_orphan": true
+      "is_orphan": true,
+      "is_baseline_q": true
     }
   ]
 }
