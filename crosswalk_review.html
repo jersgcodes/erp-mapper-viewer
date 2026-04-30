@@ -150,6 +150,29 @@
     border-bottom-color: #2563eb;
     font-weight: 600;
   }
+  /* Two-row nav (2026-04-29): row 1 = analysis tools, row 2 = modules. */
+  .top-bar.two-row .top-bar-row1 {
+    border-bottom: 1px solid #f1f3f6;
+  }
+  .top-bar.two-row .top-bar-row2 {
+    background: #fafbfc;
+  }
+  .top-bar.two-row .top-bar-row2 .top-bar-link {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .top-bar-row-label {
+    font-size: 10px;
+    color: #6b7380;
+    padding: 9px 14px 9px 0;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    align-self: center;
+    border-right: 1px solid #e8ebef;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
   .top-bar-dropdown { position: relative; display: inline-flex; }
   .top-bar-dropdown summary {
     list-style: none;
@@ -206,22 +229,27 @@
   .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
   .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
 </style>
-<nav class="top-bar">
-  <div class="top-bar-inner">
+<nav class="top-bar two-row">
+  <div class="top-bar-inner top-bar-row1">
     <span class="top-bar-brand">PSG ERP Spec</span>
     <a class="top-bar-link active" href="index.html">Overview</a>
-    <a class="top-bar-link" href="canonical_sales_and_crm.html">Sales & CRM</a>
+    <a class="top-bar-link" href="stakeholders.html">Stakeholders</a>
+    <a class="top-bar-link" href="vendor_coverage.html">Coverage</a>
+    <a class="top-bar-link" href="integrations.html">Integrations</a>
+    <details class="top-bar-dropdown"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 + L1 intra-module + L2 inter-module proposals awaiting review</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="methodology.html">Methodology (legacy)<span class="sub">Replaced by Stakeholders view</span></a><a class="" href="gap_analysis.html">Gaps (legacy)<span class="sub">Replaced by Stakeholders → Sol-cat fulfilment matrix</span></a><a class="" href="use_cases.html">Use Cases (legacy)<span class="sub">UC concept retired; flows are the replacement</span></a></div></details>
+  </div>
+  <div class="top-bar-inner top-bar-row2">
+    <span class="top-bar-row-label">Modules</span>
     <a class="top-bar-link" href="canonical_financial_management.html">Financial</a>
     <a class="top-bar-link" href="canonical_human_resources_management.html">HR</a>
+    <a class="top-bar-link" href="canonical_sales_and_crm.html">Sales & CRM</a>
     <a class="top-bar-link" href="canonical_supply_chain_and_inventory.html">Supply Chain</a>
-    <a class="top-bar-link" href="canonical_manufacturing_management.html">Manufacturing</a>
     <a class="top-bar-link" href="canonical_project_management.html">Project Mgmt</a>
     <a class="top-bar-link" href="canonical_asset_management.html">Asset Mgmt</a>
+    <a class="top-bar-link" href="canonical_manufacturing_management.html">Manufacturing</a>
     <a class="top-bar-link" href="canonical_field_service_management.html">Field Service</a>
     <a class="top-bar-link" href="canonical_fleet_management.html">Fleet</a>
     <a class="top-bar-link" href="canonical_others.html">Other</a>
-    <a class="top-bar-link" href="integrations.html">Integrations</a>
-    <details class="top-bar-dropdown"><summary>More</summary><div class="top-bar-dropdown-menu"><a class="" href="use_cases.html">Use Case Explorer<span class="sub">Cross-module UC checklist + comparisons</span></a><a class="" href="gap_analysis.html">Gaps<span class="sub">IMDA vs market vs AI gap registry</span></a><a class="" href="methodology.html">Methodology<span class="sub">How outputs were derived (stakeholder view)</span></a><a class="" href="pipeline.html">Dev — Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 (SG-grounded) + L1 intra-module + L2 inter-module proposals awaiting review</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting human review</span></a></div></details>
   </div>
 </nav>
 <main>
@@ -1913,7 +1941,7 @@
     </div>
     <div id="sol-list">
       
-    <div class="row" data-key="advanced-manufacturing__computer-aided-design-and-computer-aided-manufacturing-cad-cam" data-vertical="Advanced Manufacturing" data-modules="manufacturing_management">
+    <div class="row" data-key="advanced-manufacturing__computer-aided-design-and-computer-aided-manufacturing-cad-cam" data-vertical="Advanced Manufacturing" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Computer-aided Design &amp; Computer-aided Manufacturing (CAD/CAM)
@@ -1927,14 +1955,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>advanced-manufacturing__computer-aided-design-and-computer-aided-manufacturing-cad-cam</code></div>
-        <div class="row-modules"><span class="pill pill-mod">manufacturing_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">manufacturing_management</span> › Product Engineering</li></ul>
-        <div class="row-reason">CAD/CAM for product design and manufacturing process engineering</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">CAD/CAM for product design and manufacturing process engineering. Q-A2-4 2026-04-28: added Platform &amp; Data (CAD/CAM systems must integrate with PLM, ERP, MES via STEP/IGES/JT data exchange). Skipped audit suggestion of +Production Execution — CAD/CAM is engineering, not floor execution.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection" data-vertical="Advanced Manufacturing" data-modules="manufacturing_management">
+    <div class="row" data-key="advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection" data-vertical="Advanced Manufacturing" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Equipment Monitoring and Manufacturing Data Collection
@@ -1948,14 +1976,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection</code></div>
-        <div class="row-modules"><span class="pill pill-mod">manufacturing_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">manufacturing_management</span> › Maintenance & Analytics</li></ul>
-        <div class="row-reason">Equipment monitoring and data collection for OEE and manufacturing analytics</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">OEE / equipment-condition monitoring is core EAM territory (IBM Maximo, SAP PM, Infor EAM). 10j 2026-04-27: added asset_management. Q-A2-4 2026-04-28: added Mfg Production Execution (sensor-fed shopfloor data drives execution decisions) + Asset Analytics &amp; Intelligence (condition-monitoring dashboards).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="advanced-manufacturing__machining-dynamics-for-milling-turning" data-vertical="Advanced Manufacturing" data-modules="manufacturing_management">
+    <div class="row" data-key="advanced-manufacturing__machining-dynamics-for-milling-turning" data-vertical="Advanced Manufacturing" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Machining Dynamics for Milling/Turning
@@ -1969,14 +1997,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>advanced-manufacturing__machining-dynamics-for-milling-turning</code></div>
-        <div class="row-modules"><span class="pill pill-mod">manufacturing_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">manufacturing_management</span> › Product Engineering</li></ul>
-        <div class="row-reason">Machining dynamics and work center operations for manufacturing</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Machining dynamics for milling/turning operations. Q-A2-4 2026-04-28: expanded — covers cycle-time planning + cost (Planning &amp; Costing), shop-floor cutting execution (Production Execution), and tolerance/quality outcomes (Quality &amp; Compliance) in addition to the Product Engineering basis.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="advanced-manufacturing__manufacturing-quality-management" data-vertical="Advanced Manufacturing" data-modules="manufacturing_management">
+    <div class="row" data-key="advanced-manufacturing__manufacturing-quality-management" data-vertical="Advanced Manufacturing" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Manufacturing Quality Management
@@ -1990,14 +2018,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>advanced-manufacturing__manufacturing-quality-management</code></div>
-        <div class="row-modules"><span class="pill pill-mod">manufacturing_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">manufacturing_management</span> › Quality & Compliance</li></ul>
-        <div class="row-reason">Quality management system for manufacturing compliance</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Quality management system for manufacturing compliance. Q-A2-4 2026-04-28: added Production Execution (in-line quality checks happen during execution) + Maintenance &amp; Analytics (quality dashboards + SPC).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="advanced-manufacturing__product-and-manufacturing-process-configuration" data-vertical="Advanced Manufacturing" data-modules="manufacturing_management">
+    <div class="row" data-key="advanced-manufacturing__product-and-manufacturing-process-configuration" data-vertical="Advanced Manufacturing" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Product and Manufacturing Process Configuration
@@ -2011,14 +2039,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>advanced-manufacturing__product-and-manufacturing-process-configuration</code></div>
-        <div class="row-modules"><span class="pill pill-mod">manufacturing_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">manufacturing_management</span> › Product Engineering</li></ul>
-        <div class="row-reason">BOM and routing configuration for product engineering</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">BOM and routing configuration for product engineering. Q-A2-4 2026-04-28: added Production Execution (process configs are consumed by execution) + Platform &amp; Data (PLM/CAD/ERP integration).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="advanced-manufacturing__real-time-production-scheduling-and-job-tracking" data-vertical="Advanced Manufacturing" data-modules="manufacturing_management">
+    <div class="row" data-key="advanced-manufacturing__real-time-production-scheduling-and-job-tracking" data-vertical="Advanced Manufacturing" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Real-time Production Scheduling and Job Tracking
@@ -2032,14 +2060,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>advanced-manufacturing__real-time-production-scheduling-and-job-tracking</code></div>
-        <div class="row-modules"><span class="pill pill-mod">manufacturing_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">manufacturing_management</span> › Production Execution</li></ul>
-        <div class="row-reason">Production scheduling and job tracking for shop floor execution</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Production scheduling and job tracking for shop floor execution. Q-A2-4 2026-04-28: added Maintenance &amp; Analytics (real-time OEE dashboards) + Platform &amp; Data (MES/SCADA integration is the platform).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="built-environment__3d-modeling-immersive-visualisation-and-analysis" data-vertical="Built Environment" data-modules="others">
+    <div class="row" data-key="built-environment__3d-modeling-immersive-visualisation-and-analysis" data-vertical="Built Environment" data-modules="">
       <div class="row-head">
         <div class="row-name">
           3D Modeling, Immersive Visualisation &amp; Analysis
@@ -2053,14 +2081,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>built-environment__3d-modeling-immersive-visualisation-and-analysis</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Intelligence & Analytics</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">3D modeling and visualization for project analysis and decision support</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="built-environment__built-environment-digital-platform" data-vertical="Built Environment" data-modules="others">
+    <div class="row" data-key="built-environment__built-environment-digital-platform" data-vertical="Built Environment" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Built Environment Digital Platform
@@ -2074,14 +2102,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>built-environment__built-environment-digital-platform</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Customisation & Integration</li></ul>
-        <div class="row-reason">Integrated digital platform with API and integration capabilities</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">BIM/AECO platforms manage project portfolios + integration. 10j 2026-04-27: added Project Core. Q-A2-2 2026-04-28: marked as vertical SaaS. Q-A2-4 2026-04-28: expanded PM module to all 5 PM families — platform covers task assignment + scheduling (Project Core), resource allocation (Time &amp; Resources), budgeting (Financial Control), site progress monitoring (Delivery &amp; Tracking), and dashboards (Analytics &amp; Reporting).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="built-environment__coordinated-regulatory-approvals-and-rule-based-model-checker" data-vertical="Built Environment" data-modules="others">
+    <div class="row" data-key="built-environment__coordinated-regulatory-approvals-and-rule-based-model-checker" data-vertical="Built Environment" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Coordinated Regulatory Approvals and Rule-Based Model Checker
@@ -2095,14 +2123,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>built-environment__coordinated-regulatory-approvals-and-rule-based-model-checker</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Intelligence & Analytics</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Compliance and audit framework for regulatory approvals</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="built-environment__data-and-ai-driven-decision-support-system" data-vertical="Built Environment" data-modules="others">
+    <div class="row" data-key="built-environment__data-and-ai-driven-decision-support-system" data-vertical="Built Environment" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Data and AI-driven Decision Support System
@@ -2116,14 +2144,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>built-environment__data-and-ai-driven-decision-support-system</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Intelligence & Analytics</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">AI and business intelligence for decision support analytics</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="built-environment__digital-contract-management-digital-payment" data-vertical="Built Environment" data-modules="others">
+    <div class="row" data-key="built-environment__digital-contract-management-digital-payment" data-vertical="Built Environment" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Digital Contract Management - Digital Payment
@@ -2137,14 +2165,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>built-environment__digital-contract-management-digital-payment</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
-        <div class="row-reason">Digital contract management and payment processing for project workflows</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Contract management = workflow + doc-mgmt. Digital payment for construction = invoicing/progress claims (Revenue Cycle) + AP/payment processing (Expense Cycle). Q-A2 corrected from Treasury &amp; Compliance. Q-A2-3 2026-04-28: added SC&amp;I Procurement — construction digital-contract flows touch supplier/subcontractor procurement workflow.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="built-environment__quantity-surveying-and-valuation" data-vertical="Built Environment" data-modules="project_management">
+    <div class="row" data-key="built-environment__quantity-surveying-and-valuation" data-vertical="Built Environment" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Quantity Surveying and Valuation
@@ -2158,14 +2186,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>built-environment__quantity-surveying-and-valuation</code></div>
-        <div class="row-modules"><span class="pill pill-mod">project_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">project_management</span> › Financial Control</li></ul>
-        <div class="row-reason">Cost tracking and valuation for project financial control</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">BIM-based take-off automation for cost estimation and quantity surveying. Q-A2-4 2026-04-28: added Project Core (estimation lives at project setup) + Analytics &amp; Reporting (cost/schedule integration dashboards).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="built-environment__smart-inspection-and-management" data-vertical="Built Environment" data-modules="asset_management">
+    <div class="row" data-key="built-environment__smart-inspection-and-management" data-vertical="Built Environment" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Smart Inspection and Management - Worksite Inspection
@@ -2179,14 +2207,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>built-environment__smart-inspection-and-management</code></div>
-        <div class="row-modules"><span class="pill pill-mod">asset_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">asset_management</span> › Reliability & Compliance</li></ul>
-        <div class="row-reason">Inspection and compliance management for asset reliability</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Worksite inspection IS work-order flow (CMMS territory) — adds Maintenance Operations. Drops reliability_engineering (RE = RCA + FMEA + condition-based monitoring, NOT field inspection); keeps compliance_hse_cyber. 10j 2026-04-27. Q-A2-4 2026-04-28: added Asset Register &amp; Lifecycle (inspection records build the asset register), Asset Analytics &amp; Intelligence (defect dashboards), and added FSM module (Work Order Core + Analytics &amp; Intelligence — inspection IS field service work orders).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw" data-vertical="Built Environment" data-modules="asset_management">
+    <div class="row" data-key="built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw" data-vertical="Built Environment" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Smart Inspection and Management - e-Permit-to-work (e-PTW)
@@ -2200,14 +2228,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw</code></div>
-        <div class="row-modules"><span class="pill pill-mod">asset_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">asset_management</span> › Reliability & Compliance</li></ul>
-        <div class="row-reason">Permit-to-work and safety compliance for asset management</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">e-PTW is work-order safety + permit issuance — Maintenance Operations + HSE compliance. 10j 2026-04-27: drops reliability_engineering. Q-A2-4 2026-04-28: added FSM module (Work Order Core + Scheduling &amp; Dispatch — permit-to-work IS work-order flow with dispatcher routing).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="cybersecurity__backup" data-vertical="Cybersecurity" data-modules="others">
+    <div class="row" data-key="cybersecurity__backup" data-vertical="Cybersecurity" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Backup
@@ -2221,14 +2249,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>cybersecurity__backup</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Platform & Data</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Backup and disaster recovery for data security and governance</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="cybersecurity__integrated-anti-malware-firewall-and-backup" data-vertical="Cybersecurity" data-modules="others">
+    <div class="row" data-key="cybersecurity__integrated-anti-malware-firewall-and-backup" data-vertical="Cybersecurity" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Integrated Anti-malware, Firewall and Backup
@@ -2242,14 +2270,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>cybersecurity__integrated-anti-malware-firewall-and-backup</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Platform & Data</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Integrated security solution combining malware, firewall, and backup protection</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="cybersecurity__secure-protect-firewall" data-vertical="Cybersecurity" data-modules="others">
+    <div class="row" data-key="cybersecurity__secure-protect-firewall" data-vertical="Cybersecurity" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Secure/Protect - Firewall
@@ -2263,14 +2291,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>cybersecurity__secure-protect-firewall</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Platform & Data</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Firewall protection for data security and network access control</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="cybersecurity__secure-protect-virus-malware-protection" data-vertical="Cybersecurity" data-modules="others">
+    <div class="row" data-key="cybersecurity__secure-protect-virus-malware-protection" data-vertical="Cybersecurity" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Secure/Protect - Virus/Malware Protection
@@ -2284,14 +2312,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>cybersecurity__secure-protect-virus-malware-protection</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Platform & Data</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Data security and malware protection for platform security</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="early-childhood__data-mining-and-analytics-centre-operations-and-child-development" data-vertical="Early Childhood" data-modules="others">
+    <div class="row" data-key="early-childhood__data-mining-and-analytics-centre-operations-and-child-development" data-vertical="Early Childhood" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Data Mining &amp; Analytics (Centre Operations and Child Development)
@@ -2305,14 +2333,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>early-childhood__data-mining-and-analytics-centre-operations-and-child-development</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Intelligence & Analytics</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Comprehensive analytics for centre operations and child development</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="early-childhood__data-mining-and-analytics-centre-operations" data-vertical="Early Childhood" data-modules="others">
+    <div class="row" data-key="early-childhood__data-mining-and-analytics-centre-operations" data-vertical="Early Childhood" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Data Mining &amp; Analytics (Centre Operations)
@@ -2326,14 +2354,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>early-childhood__data-mining-and-analytics-centre-operations</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Intelligence & Analytics</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Analytics and dashboards for centre operations</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="early-childhood__data-mining-and-analytics-child-development" data-vertical="Early Childhood" data-modules="others">
+    <div class="row" data-key="early-childhood__data-mining-and-analytics-child-development" data-vertical="Early Childhood" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Data Mining &amp; Analytics (Child Development)
@@ -2347,14 +2375,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>early-childhood__data-mining-and-analytics-child-development</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Intelligence & Analytics</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Analytics for child development tracking and reporting</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="early-childhood__learning-platform-for-cpd-and-mentoring" data-vertical="Early Childhood" data-modules="human_resources_management">
+    <div class="row" data-key="early-childhood__learning-platform-for-cpd-and-mentoring" data-vertical="Early Childhood" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Learning Platform for CPD and Mentoring
@@ -2368,14 +2396,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>early-childhood__learning-platform-for-cpd-and-mentoring</code></div>
-        <div class="row-modules"><span class="pill pill-mod">human_resources_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">human_resources_management</span> › Talent & Growth</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Learning and development platform for continuous professional development</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="early-childhood__pre-school-management-system" data-vertical="Early Childhood" data-modules="others">
+    <div class="row" data-key="early-childhood__pre-school-management-system" data-vertical="Early Childhood" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Pre-School Management System
@@ -2389,14 +2417,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>early-childhood__pre-school-management-system</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
-        <div class="row-reason">Pre-school management system for operations and administrative workflows</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Pre-school management is a vertical mini-ERP — parent CRM (enquiry pipeline + waitlist) + tuition AR billing + ops workflows + staff records and attendance (Core HR + Time &amp; Attendance). Q-A2-2 2026-04-28: added HR families — pre-schools manage staff personnel records and shift attendance as a core workflow, not a peripheral concern.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="early-childhood__pre-school-management-system-+-e-forms-for-pre-school" data-vertical="Early Childhood" data-modules="others">
+    <div class="row" data-key="early-childhood__pre-school-management-system-+-e-forms-for-pre-school" data-vertical="Early Childhood" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Pre-School Management System + e-Forms for Pre-school
@@ -2410,14 +2438,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>early-childhood__pre-school-management-system-+-e-forms-for-pre-school</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
-        <div class="row-reason">Integrated pre-school management with e-forms for operations</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Same as bare PMS — vertical mini-ERP touching parent CRM + tuition AR + ops workflows + e-forms + staff records &amp; attendance. Q-A2-2 2026-04-28: added HR families to mirror Pre-School Management System.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="early-childhood__talent-attraction-platform" data-vertical="Early Childhood" data-modules="human_resources_management">
+    <div class="row" data-key="early-childhood__talent-attraction-platform" data-vertical="Early Childhood" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Talent Attraction Platform
@@ -2431,14 +2459,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>early-childhood__talent-attraction-platform</code></div>
-        <div class="row-modules"><span class="pill pill-mod">human_resources_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">human_resources_management</span> › Talent & Growth</li></ul>
-        <div class="row-reason">Recruitment and talent attraction for HR management</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Recruitment and talent attraction — primary domain Talent &amp; Growth (job postings, sourcing, ATS), but also requires Core HR (candidate → employee record handoff on hire) and Lifecycle &amp; Analytics (onboarding + hiring funnel reporting). Q-A2-2 2026-04-28: added Core HR + Lifecycle &amp; Analytics — talent platform is hire-to-onboard, not just sourcing.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="early-childhood__vacancy-and-waitlist-management" data-vertical="Early Childhood" data-modules="others">
+    <div class="row" data-key="early-childhood__vacancy-and-waitlist-management" data-vertical="Early Childhood" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Vacancy and Waitlist Management
@@ -2452,14 +2480,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>early-childhood__vacancy-and-waitlist-management</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
-        <div class="row-reason">Vacancy and waitlist management for operations workflow</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Vacancy and waitlist management for operations workflow. Q-A2-2 2026-04-28: added Sales Analytics — vacancy systems show capacity dashboards and waitlist conversion KPIs.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="early-childhood__video-analytics-for-safety-and-security" data-vertical="Early Childhood" data-modules="others">
+    <div class="row" data-key="early-childhood__video-analytics-for-safety-and-security" data-vertical="Early Childhood" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Video Analytics for Safety &amp; Security
@@ -2473,14 +2501,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>early-childhood__video-analytics-for-safety-and-security</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Intelligence & Analytics</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Video analytics for safety and security monitoring</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="early-childhood__e-forms-for-pre-school" data-vertical="Early Childhood" data-modules="others">
+    <div class="row" data-key="early-childhood__e-forms-for-pre-school" data-vertical="Early Childhood" data-modules="">
       <div class="row-head">
         <div class="row-name">
           e-Forms for Pre-school
@@ -2494,14 +2522,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>early-childhood__e-forms-for-pre-school</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">E-forms for document management and workflow automation</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__ai-accounting-automation" data-vertical="Essential Business" data-modules="financial_management">
+    <div class="row" data-key="essential-business__ai-accounting-automation" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           AI Accounting Automation
@@ -2515,14 +2543,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__ai-accounting-automation</code></div>
-        <div class="row-modules"><span class="pill pill-mod">financial_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">financial_management</span> › Planning & Analytics</li></ul>
-        <div class="row-reason">AI automation for accounting processes and financial analytics</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">AI accounting automation is fundamentally automated bookkeeping (journal entries, reconciliation, period close) — Core Ledger &amp; Close — plus AP/expense automation (invoice scanning, payment matching) — Expense Cycle. Q-A2 2026-04-28: dropped Planning &amp; Analytics (AI accounting is execution, not planning) and added Expense Cycle (most AI-accounting tools lead with AP automation).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__accounting-management-+-inventory-management-+-sales-management-system" data-vertical="Essential Business" data-modules="financial_management,supply_chain_and_inventory,sales_and_crm">
+    <div class="row" data-key="essential-business__accounting-management-+-inventory-management-+-sales-management-system" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Accounting Management + Inventory Management + Sales Management System
@@ -2536,14 +2564,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__accounting-management-+-inventory-management-+-sales-management-system</code></div>
-        <div class="row-modules"><span class="pill pill-mod">financial_management</span><span class="pill pill-mod">supply_chain_and_inventory</span><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">financial_management</span> › Revenue Cycle</li><li><span class="fam-mod">supply_chain_and_inventory</span> › Inventory Core</li><li><span class="fam-mod">sales_and_crm</span> › Sales Transactions</li></ul>
-        <div class="row-reason">Integrated ERP covering accounting, inventory, and sales</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Integrated ERP covering accounting, inventory, and sales. Q-A2 added Core Ledger &amp; Close + Planning &amp; Analytics. Q-A2-2 added Sales Analytics. Q-A2-3 2026-04-28: expanded SC&amp;I beyond Inventory Core to add Procurement (supplier/payment), Warehouse &amp; Logistics (delivery), and Analytics &amp; Intelligence (forecasting).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__accounting-management-+-sales-management-system" data-vertical="Essential Business" data-modules="financial_management,sales_and_crm">
+    <div class="row" data-key="essential-business__accounting-management-+-sales-management-system" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Accounting Management + Sales Management System
@@ -2557,14 +2585,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__accounting-management-+-sales-management-system</code></div>
-        <div class="row-modules"><span class="pill pill-mod">financial_management</span><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">financial_management</span> › Revenue Cycle</li><li><span class="fam-mod">sales_and_crm</span> › Sales Transactions</li></ul>
-        <div class="row-reason">Integrates financial accounting with sales order and invoicing</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Integrates financial accounting with sales order and invoicing. Q-A2 added Core Ledger &amp; Close + Planning &amp; Analytics. Q-A2-2 added Sales Analytics. Q-A2-3 2026-04-28: added SC&amp;I Warehouse &amp; Logistics — sales fulfilment commonly carries delivery/warehouse touchpoints even when no separate inventory module is installed.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__applicant-tracking-and-sourcing-system" data-vertical="Essential Business" data-modules="human_resources_management">
+    <div class="row" data-key="essential-business__applicant-tracking-and-sourcing-system" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Applicant Tracking &amp; Sourcing System
@@ -2578,14 +2606,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__applicant-tracking-and-sourcing-system</code></div>
-        <div class="row-modules"><span class="pill pill-mod">human_resources_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">human_resources_management</span> › Talent & Growth</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">ATS handles recruitment and applicant tracking</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__automated-order-management" data-vertical="Essential Business" data-modules="sales_and_crm">
+    <div class="row" data-key="essential-business__automated-order-management" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Automated Order Management
@@ -2599,14 +2627,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__automated-order-management</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › Sales Transactions</li></ul>
-        <div class="row-reason">Automated order management for order processing and fulfillment</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Automated order management for order processing and fulfillment. Q-A2-2 added CRM &amp; Relationship + Analytics. Q-A2-3 2026-04-28: added SC&amp;I Inventory Core — order management requires inventory/pricing visibility to decide fulfilment.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__carbon-management-solution" data-vertical="Essential Business" data-modules="others">
+    <div class="row" data-key="essential-business__carbon-management-solution" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Carbon Management Solution
@@ -2620,14 +2648,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__carbon-management-solution</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Intelligence & Analytics</li></ul>
-        <div class="row-reason">Carbon management provides compliance and sustainability analytics</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Sustainability/ESG reporting is increasingly part of statutory + analytics finance (IFRS S1/S2, EU CSRD). Q-A2-3 2026-04-28: added SC&amp;I Analytics &amp; Intelligence — Scope 3 supply-chain emissions tracking is a first-class part of carbon mgmt platforms.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__chatbots-for-customer-engagement" data-vertical="Essential Business" data-modules="sales_and_crm">
+    <div class="row" data-key="essential-business__chatbots-for-customer-engagement" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Chatbots for Customer Engagement
@@ -2641,14 +2669,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__chatbots-for-customer-engagement</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › Customer Service</li></ul>
-        <div class="row-reason">Chatbots provide customer service and engagement automation</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Chatbots provide customer service and engagement automation. Q-A2-2 2026-04-28: added CRM &amp; Relationship (chat history feeds customer profiles) + Analytics (interaction metrics, intent reports).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__cross-border-e-commerce-packages" data-vertical="Essential Business" data-modules="sales_and_crm">
+    <div class="row" data-key="essential-business__cross-border-e-commerce-packages" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Cross Border E-Commerce Packages
@@ -2662,14 +2690,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__cross-border-e-commerce-packages</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › Commerce</li></ul>
-        <div class="row-reason">Cross-border e-commerce for international B2C operations</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Cross-Border E-Commerce IMDA Q text covers Establish Overseas Marketplace Presence + Channel Management (Commerce), Price Optimisation (Sales Tx), Marketing Campaign Mgmt + Marketing Content Generation + Translation (Marketing), Growth Recommendations (Analytics). 10j-2 2026-04-27.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__customer-relationship-management-crm" data-vertical="Essential Business" data-modules="sales_and_crm">
+    <div class="row" data-key="essential-business__customer-relationship-management-crm" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Customer Relationship Management (CRM)
@@ -2683,14 +2711,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__customer-relationship-management-crm</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › CRM & Relationship</li></ul>
-        <div class="row-reason">Core CRM functionality for lead, opportunity, and customer interaction management</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Core CRM functionality for lead, opportunity, and customer interaction management. Q-A2-2 2026-04-28: expanded from CRM &amp; Relationship only — full CRM systems span sales pipeline (Sales Transactions), marketing campaigns (Marketing), KPI dashboards (Analytics), and integration plumbing (Platform &amp; Data).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__digital-marketing-packages" data-vertical="Essential Business" data-modules="sales_and_crm">
+    <div class="row" data-key="essential-business__digital-marketing-packages" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Digital Marketing Packages
@@ -2704,14 +2732,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__digital-marketing-packages</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › Marketing</li></ul>
-        <div class="row-reason">Digital marketing packages support marketing automation and campaign management</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Digital marketing packages support marketing automation and campaign management. Q-A2-2 2026-04-28: added CRM &amp; Relationship (campaigns target contact lists) + Analytics (campaign performance dashboards).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__document-management-and-mobile-access-system" data-vertical="Essential Business" data-modules="others">
+    <div class="row" data-key="essential-business__document-management-and-mobile-access-system" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Document Management and Mobile Access System
@@ -2725,14 +2753,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__document-management-and-mobile-access-system</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Document management system with mobile access for workflow automation</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__e-commerce-online-shop-b2c" data-vertical="Essential Business" data-modules="sales_and_crm">
+    <div class="row" data-key="essential-business__e-commerce-online-shop-b2c" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           E-Commerce - Online Shop (B2C)
@@ -2746,14 +2774,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__e-commerce-online-shop-b2c</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › Commerce</li></ul>
-        <div class="row-reason">B2C e-commerce storefront for online retail</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">B2C E-Commerce IMDA Q text covers Order and Inventory Management (Sales Tx + SC&amp;I Inventory), Payment Gateway Integration (Financial Revenue Cycle), Marketing &amp; SEO (Marketing), Multi-channel Integration (Commerce), Shipping and Logistics (SC&amp;I Warehouse). Q-A2 2026-04-28: corrected from Treasury &amp; Compliance (8 advanced caps) to Revenue Cycle — B2C ecom needs payment_gateways + einvoicing, not multi-currency/consolidation/XBRL.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__e-loyalty-and-marketing-automation" data-vertical="Essential Business" data-modules="sales_and_crm">
+    <div class="row" data-key="essential-business__e-loyalty-and-marketing-automation" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           E-loyalty &amp; Marketing Automation
@@ -2767,14 +2795,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__e-loyalty-and-marketing-automation</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › Marketing</li></ul>
-        <div class="row-reason">Marketing automation and customer lifecycle automation for loyalty programs</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Marketing automation and customer lifecycle automation for loyalty programs. Q-A2-2 2026-04-28: added CRM &amp; Relationship (loyalty schemes manage customer profiles), Analytics (campaign metrics), Platform &amp; Data (integration with POS/ecom).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__employee-rewards-and-recognition" data-vertical="Essential Business" data-modules="human_resources_management">
+    <div class="row" data-key="essential-business__employee-rewards-and-recognition" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Employee Rewards and Recognition
@@ -2788,14 +2816,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__employee-rewards-and-recognition</code></div>
-        <div class="row-modules"><span class="pill pill-mod">human_resources_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">human_resources_management</span> › Talent & Growth</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Employee rewards and recognition supports talent engagement and performance management</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__field-service-management" data-vertical="Essential Business" data-modules="field_service_management">
+    <div class="row" data-key="essential-business__field-service-management" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Field Service Management
@@ -2809,14 +2837,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__field-service-management</code></div>
-        <div class="row-modules"><span class="pill pill-mod">field_service_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">field_service_management</span> › Work Order Core</li><li><span class="fam-mod">field_service_management</span> › Scheduling & Dispatch</li></ul>
-        <div class="row-reason">Field service management covers work orders, scheduling, and dispatch</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">FSM is built on top of an installed-base asset register (every major FSM suite — Salesforce FSL, ServiceMax, IFS, SAP FSM, MS D365 FSM — does this). Techs also carry van-stock parts that integrate with inventory. 10j 2026-04-27: added asset_management. Q-A2-4 2026-04-28: massively expanded FSM module (was just Work Order + Scheduling) to all 6 FSM families — equipment+van inventory, service contracts/SLAs, analytics dashboards, integration. Also added Asset Register &amp; Lifecycle to asset_management — install base mgmt is core to FSM.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__fleet-management-system" data-vertical="Essential Business" data-modules="fleet_management">
+    <div class="row" data-key="essential-business__fleet-management-system" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Fleet Management System
@@ -2830,14 +2858,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__fleet-management-system</code></div>
-        <div class="row-modules"><span class="pill pill-mod">fleet_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">fleet_management</span> › Vehicle Registry</li><li><span class="fam-mod">fleet_management</span> › Operations & Logistics</li></ul>
-        <div class="row-reason">Fleet management system covers vehicle registry and operations tracking</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Vehicles ARE assets. SAP EAM-Vehicle treats fleet as a sub-module of EAM; similar in IBM Maximo, Infor EAM. 10j 2026-04-27: added asset_management. Q-A2-4 2026-04-28: added Fleet Cost &amp; Compliance — fuel/maintenance cost tracking + regulatory compliance is core to fleet management.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__fleet-safety-management-system" data-vertical="Essential Business" data-modules="fleet_management">
+    <div class="row" data-key="essential-business__fleet-safety-management-system" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Fleet Safety Management System
@@ -2851,14 +2879,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__fleet-safety-management-system</code></div>
-        <div class="row-modules"><span class="pill pill-mod">fleet_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">fleet_management</span> › Driver & Safety</li></ul>
-        <div class="row-reason">Fleet safety management focuses on driver safety and behavior scoring</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Fleet safety management focuses on driver safety and behavior scoring. Q-A2-4 2026-04-28: added Operations &amp; Logistics (incident + route safety touches operations) + Platform &amp; Data (telematics device integration is the platform).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__gen-ai-digital-training-system" data-vertical="Essential Business" data-modules="human_resources_management">
+    <div class="row" data-key="essential-business__gen-ai-digital-training-system" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Gen-AI Digital Training System
@@ -2872,14 +2900,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__gen-ai-digital-training-system</code></div>
-        <div class="row-modules"><span class="pill pill-mod">human_resources_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">human_resources_management</span> › Talent & Growth</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">AI-powered training system for learning and development</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__human-resource-e-scheduling-system" data-vertical="Essential Business" data-modules="human_resources_management">
+    <div class="row" data-key="essential-business__human-resource-e-scheduling-system" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Human Resource E-scheduling System
@@ -2893,14 +2921,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__human-resource-e-scheduling-system</code></div>
-        <div class="row-modules"><span class="pill pill-mod">human_resources_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">human_resources_management</span> › Time & Attendance</li></ul>
-        <div class="row-reason">E-scheduling system manages employee time-off and attendance scheduling</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">E-scheduling system manages employee time-off, shift rosters, and attendance — needs Core HR (employee master + org chart), Time &amp; Attendance (the primary domain), and Lifecycle &amp; Analytics (utilisation reporting). Q-A2-2 2026-04-28: added Core HR + Lifecycle &amp; Analytics — scheduling cannot operate without employee master records.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin" data-vertical="Essential Business" data-modules="human_resources_management">
+    <div class="row" data-key="essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Human Resource Shared Services (HRSS) + HR Administrative Support &amp; Payroll Processing via HRMS
@@ -2914,14 +2942,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin</code></div>
-        <div class="row-modules"><span class="pill pill-mod">human_resources_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">human_resources_management</span> › Payroll & Statutory</li><li><span class="fam-mod">human_resources_management</span> › Core HR</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">HRSS combines HR administrative support with payroll processing and CPF compliance</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__human-resource-management-system-hrms" data-vertical="Essential Business" data-modules="human_resources_management">
+    <div class="row" data-key="essential-business__human-resource-management-system-hrms" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Human Resources Management System (HRMS)
@@ -2935,14 +2963,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__human-resource-management-system-hrms</code></div>
-        <div class="row-modules"><span class="pill pill-mod">human_resources_management</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">human_resources_management</span> › Core HR</li></ul>
-        <div class="row-reason">HRMS covers employee master records, organization structure, and HR document management</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">HRMS is the comprehensive HR system — covers employee master records, organisation structure, document management (Core HR); leave/attendance/scheduling (Time &amp; Attendance); payroll runs + CPF/IRAS submission (Payroll &amp; Statutory); onboarding + appraisals + analytics (Lifecycle &amp; Analytics). Q-A2-2 2026-04-28: previously mapped only to Core HR — under-mapped the comprehensive HRMS scope.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__inventory-management-and-sales-management-system" data-vertical="Essential Business" data-modules="supply_chain_and_inventory,sales_and_crm">
+    <div class="row" data-key="essential-business__inventory-management-and-sales-management-system" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Inventory Management and Sales Management System
@@ -2956,14 +2984,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__inventory-management-and-sales-management-system</code></div>
-        <div class="row-modules"><span class="pill pill-mod">supply_chain_and_inventory</span><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">supply_chain_and_inventory</span> › Inventory Core</li><li><span class="fam-mod">sales_and_crm</span> › Sales Transactions</li></ul>
-        <div class="row-reason">Combines inventory management with sales order processing</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Combines inventory management with sales order processing. Q-A2-2 2026-04-28: added Sales Analytics. Q-A2-3 2026-04-28: expanded SC&amp;I from Inventory Core only to all 5 SC&amp;I families — sol cat handles supplier payments (Procurement), delivery + warehouse ops (Warehouse &amp; Logistics), forecasting + dashboards (Analytics &amp; Intelligence), and basic compliance (Planning &amp; Compliance).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__marketing-and-sales-content-generation" data-vertical="Essential Business" data-modules="sales_and_crm">
+    <div class="row" data-key="essential-business__marketing-and-sales-content-generation" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Marketing and Sales Content Generation
@@ -2977,14 +3005,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__marketing-and-sales-content-generation</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › Marketing</li></ul>
-        <div class="row-reason">Content generation supports marketing automation and campaign management</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Content generation supports marketing automation and campaign management (Q4 marketing asset generation, Q5 social media + CMS integration, Q6 short/long-form copywriting, Q9 multi-language). Q8 content performance analytics → Analytics. 2026-04-28 evening: dropped Sales Transactions — IMDA Q text is purely GenAI content, no orders/CPQ/commissions/contracts. Tier audit splits flagged 7 caps (orders, pricing, forecasting, cpq, commissions, contract, loyalty) as out-of-scope; root cause was the Sales Transactions family inclusion.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="essential-business__multichannel-e-commerce-software-mes" data-vertical="Essential Business" data-modules="sales_and_crm">
+    <div class="row" data-key="essential-business__multichannel-e-commerce-software-mes" data-vertical="Essential Business" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Multichannel E-commerce Software (MES)
@@ -2998,14 +3026,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>essential-business__multichannel-e-commerce-software-mes</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › Commerce</li></ul>
-        <div class="row-reason">Multichannel e-commerce software for omnichannel retail operations</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">MES IMDA Q text covers multi-channel integration (Commerce), product listing + fulfilment doc generation (Sales Transactions), inventory mgmt and synchronisation (SC&amp;I), marketing campaign mgmt (Marketing), analytics (Analytics), logistics integration (SC&amp;I Warehouse &amp; Logistics), financial reconciliation (Financial Revenue Cycle). 10j-2 2026-04-27.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="estate-agency__document-management-and-transaction-records-submission-for-estate-agents" data-vertical="Estate Agency" data-modules="others">
+    <div class="row" data-key="estate-agency__document-management-and-transaction-records-submission-for-estate-agents" data-vertical="Estate Agency" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Document Management &amp; Transaction Records Submission for Estate Agents
@@ -3019,14 +3047,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>estate-agency__document-management-and-transaction-records-submission-for-estate-agents</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Document management system for transaction records and submissions</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="food-services__connected-business-suite" data-vertical="Food Services" data-modules="sales_and_crm,supply_chain_and_inventory">
+    <div class="row" data-key="food-services__connected-business-suite" data-vertical="Food Services" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Connected Business Suite
@@ -3040,14 +3068,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>food-services__connected-business-suite</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span><span class="pill pill-mod">supply_chain_and_inventory</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › Commerce</li><li><span class="fam-mod">supply_chain_and_inventory</span> › Inventory Core</li></ul>
-        <div class="row-reason">Integrated business suite for food service operations, sales, and inventory</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Integrated business suite for food service operations, sales, and inventory. Q-A2-2 2026-04-28: marked as vertical SaaS — single-app vertical mini-ERP for F&amp;B operators. Q-A2-2 added CRM &amp; Relationship + Sales Analytics — F&amp;B suites manage customer profiles + sales reporting.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="legal__document-assembly-software" data-vertical="Legal" data-modules="others">
+    <div class="row" data-key="legal__document-assembly-software" data-vertical="Legal" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Document Assembly Software
@@ -3061,14 +3089,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>legal__document-assembly-software</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Document automation and assembly for legal document generation</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="legal__document-management-system-dms" data-vertical="Legal" data-modules="others">
+    <div class="row" data-key="legal__document-management-system-dms" data-vertical="Legal" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Document Management System (DMS)
@@ -3082,14 +3110,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>legal__document-management-system-dms</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Document management system for legal document handling</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="legal__document-review-software" data-vertical="Legal" data-modules="others">
+    <div class="row" data-key="legal__document-review-software" data-vertical="Legal" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Document Review Software
@@ -3103,14 +3131,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>legal__document-review-software</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Document review and analysis automation</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="legal__evidence-management-platform" data-vertical="Legal" data-modules="others">
+    <div class="row" data-key="legal__evidence-management-platform" data-vertical="Legal" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Evidence Management Platform
@@ -3124,14 +3152,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>legal__evidence-management-platform</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Evidence management and document handling for legal cases</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="legal__legal-chatbot" data-vertical="Legal" data-modules="others">
+    <div class="row" data-key="legal__legal-chatbot" data-vertical="Legal" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Legal Chatbot
@@ -3145,14 +3173,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>legal__legal-chatbot</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Intelligence & Analytics</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">AI assistant and chatbot for legal support</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="legal__matters-management-and-collaboration-tool" data-vertical="Legal" data-modules="others">
+    <div class="row" data-key="legal__matters-management-and-collaboration-tool" data-vertical="Legal" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Matters Management and Collaboration Tool
@@ -3166,14 +3194,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>legal__matters-management-and-collaboration-tool</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Productivity & Collaboration</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Collaboration and communication tools for legal matters management</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="legal__online-legal-research-system" data-vertical="Legal" data-modules="others">
+    <div class="row" data-key="legal__online-legal-research-system" data-vertical="Legal" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Online Legal Research System
@@ -3187,14 +3215,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>legal__online-legal-research-system</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Productivity & Collaboration</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Knowledge base and research tools for legal professionals</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="legal__practice-management-system-pms" data-vertical="Legal" data-modules="others">
+    <div class="row" data-key="legal__practice-management-system-pms" data-vertical="Legal" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Practice Management System (PMS)
@@ -3208,14 +3236,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>legal__practice-management-system-pms</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
-        <div class="row-reason">Practice management system for legal firm operations and workflows</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">PMS systems (Clio, MyCase, PracticePanther, LEAP) handle matter management as projects (Project Core), time tracking + resource allocation (Time &amp; Resources), trust accounting + WIP + project P&amp;L (Financial Control), KPI dashboards (Analytics &amp; Reporting). Plus client CRM (Sales CRM &amp; Relationship), trust + AR billing (Financial Revenue Cycle), GL plumbing (Core Ledger &amp; Close), and integration plumbing (Customisation &amp; Integration). Q-A2-2 2026-04-28: massively under-mapped before; replaced Workflow &amp; Automation with Customisation &amp; Integration and added all the project / sales / financial families that legal practice mgmt actually handles.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="legal__risk-assessment-solution-kyc-aml" data-vertical="Legal" data-modules="others">
+    <div class="row" data-key="legal__risk-assessment-solution-kyc-aml" data-vertical="Legal" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Risk Assessment Solution (KYC/AML)
@@ -3229,14 +3257,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>legal__risk-assessment-solution-kyc-aml</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Intelligence & Analytics</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Compliance and audit framework for KYC/AML risk assessment</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="legal__speech-transcription-for-legal-matters" data-vertical="Legal" data-modules="others">
+    <div class="row" data-key="legal__speech-transcription-for-legal-matters" data-vertical="Legal" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Speech Transcription for Legal Matters
@@ -3250,14 +3278,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>legal__speech-transcription-for-legal-matters</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Speech transcription and document automation for legal proceedings</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="legal__translation-software" data-vertical="Legal" data-modules="others">
+    <div class="row" data-key="legal__translation-software" data-vertical="Legal" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Translation Software
@@ -3271,14 +3299,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>legal__translation-software</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Customisation & Integration</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Translation and integration tools for multilingual legal documents</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="legal__ediscovery-tool" data-vertical="Legal" data-modules="others">
+    <div class="row" data-key="legal__ediscovery-tool" data-vertical="Legal" data-modules="">
       <div class="row-head">
         <div class="row-name">
           eDiscovery Tool
@@ -3292,14 +3320,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>legal__ediscovery-tool</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">eDiscovery and document management for legal proceedings</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="logistics__active-cold-chain-management" data-vertical="Logistics" data-modules="supply_chain_and_inventory">
+    <div class="row" data-key="logistics__active-cold-chain-management" data-vertical="Logistics" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Active Cold Chain Management
@@ -3313,14 +3341,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>logistics__active-cold-chain-management</code></div>
-        <div class="row-modules"><span class="pill pill-mod">supply_chain_and_inventory</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">supply_chain_and_inventory</span> › Warehouse & Logistics</li></ul>
-        <div class="row-reason">Cold chain management for temperature-controlled logistics</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Cold chain management for temperature-controlled logistics. Q-A2-3 2026-04-28: added Analytics &amp; Intelligence (sensor/telemetry dashboards) + Platform &amp; Data (IoT sensor integration is the platform).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="logistics__freight-management" data-vertical="Logistics" data-modules="supply_chain_and_inventory">
+    <div class="row" data-key="logistics__freight-management" data-vertical="Logistics" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Freight Management
@@ -3334,14 +3362,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>logistics__freight-management</code></div>
-        <div class="row-modules"><span class="pill pill-mod">supply_chain_and_inventory</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">supply_chain_and_inventory</span> › Warehouse & Logistics</li></ul>
-        <div class="row-reason">Freight management and shipping operations</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Freight management and shipping operations. Q-A2-3 2026-04-28: added Procurement — freight forwarders source carrier capacity, manage vendor contracts, and process freight invoices.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="logistics__inventory-management" data-vertical="Logistics" data-modules="supply_chain_and_inventory">
+    <div class="row" data-key="logistics__inventory-management" data-vertical="Logistics" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Inventory Management
@@ -3355,14 +3383,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>logistics__inventory-management</code></div>
-        <div class="row-modules"><span class="pill pill-mod">supply_chain_and_inventory</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">supply_chain_and_inventory</span> › Inventory Core</li></ul>
-        <div class="row-reason">Inventory management for stock levels and warehouse operations</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Inventory management for stock levels and warehouse operations. Q-A2-3 2026-04-28: expanded — IMDA Q text covers product setup (Inventory Core), real-time WMS integration (Warehouse &amp; Logistics), RFID tracking and dashboards (Analytics &amp; Intelligence), and integration plumbing (Platform &amp; Data).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="logistics__networked-trade-platform-value-added-services" data-vertical="Logistics" data-modules="supply_chain_and_inventory">
+    <div class="row" data-key="logistics__networked-trade-platform-value-added-services" data-vertical="Logistics" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Networked Trade Platform Value Added Services
@@ -3376,14 +3404,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>logistics__networked-trade-platform-value-added-services</code></div>
-        <div class="row-modules"><span class="pill pill-mod">supply_chain_and_inventory</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">supply_chain_and_inventory</span> › Platform & Data</li></ul>
-        <div class="row-reason">Networked platform for logistics and trade services</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">NTP is Singapore's national trade-data platform — connects to Customs, port authorities, freight forwarders. Q-A2-3 2026-04-28: dropped Planning &amp; Compliance (trade-compliance is a thin slice not a full sub-mod fit) and added Inventory Core (shipment arrangement integrates to inventory), Analytics &amp; Intelligence (demand prediction), Platform &amp; Data (the platform IS data integration with multiple agencies).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="logistics__transport-management" data-vertical="Logistics" data-modules="supply_chain_and_inventory">
+    <div class="row" data-key="logistics__transport-management" data-vertical="Logistics" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Transport Management
@@ -3397,14 +3425,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>logistics__transport-management</code></div>
-        <div class="row-modules"><span class="pill pill-mod">supply_chain_and_inventory</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">supply_chain_and_inventory</span> › Warehouse & Logistics</li></ul>
-        <div class="row-reason">Transport and delivery management for logistics operations</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Transport and delivery management for logistics operations. Q-A2-4 2026-04-28: added fleet_management module — Transport IS fleet operations (fleet tracking Q2, route optimization Q10, job scheduling/dispatch Q4-Q6, vehicle analytics including fuel/mileage Q11, driver/dispatcher coordination). Maps to all 4 Fleet families.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="logistics__warehouse-management" data-vertical="Logistics" data-modules="supply_chain_and_inventory">
+    <div class="row" data-key="logistics__warehouse-management" data-vertical="Logistics" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Warehouse Management
@@ -3418,14 +3446,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>logistics__warehouse-management</code></div>
-        <div class="row-modules"><span class="pill pill-mod">supply_chain_and_inventory</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">supply_chain_and_inventory</span> › Warehouse & Logistics</li></ul>
-        <div class="row-reason">Warehouse management for goods receipt, putaway, and dispatch</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Warehouse management for goods receipt, putaway, and dispatch. Q-A2-3 2026-04-28: added Inventory Core (asset/lot/serial tracking) + Analytics &amp; Intelligence (warehouse KPIs/dashboards).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="personal-care-services__salon-management-system" data-vertical="Personal Care Services" data-modules="others">
+    <div class="row" data-key="personal-care-services__salon-management-system" data-vertical="Personal Care Services" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Salon Management System
@@ -3439,14 +3467,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>personal-care-services__salon-management-system</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
-        <div class="row-reason">Salon management system for service operations and scheduling</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Salon management is a vertical mini-ERP — booking + customer profiles + loyalty (Sales CRM &amp; Relationship), point-of-sale + service catalogue (Commerce), promotional campaigns (Marketing), service KPIs (Analytics), retail product inventory (SC&amp;I Inventory Core), staff records and scheduling (HR Core HR). Q-A2-2 2026-04-28: previously mapped only to others/Workflow &amp; Automation — massively under-mapped. Replaced Workflow &amp; Automation with Customisation &amp; Integration and expanded across 4 modules per IMDA Q-text scope.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="retail__electronic-shelf-label-esl" data-vertical="Retail" data-modules="supply_chain_and_inventory">
+    <div class="row" data-key="retail__electronic-shelf-label-esl" data-vertical="Retail" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Electronic Shelf Label (ESL)
@@ -3460,14 +3488,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>retail__electronic-shelf-label-esl</code></div>
-        <div class="row-modules"><span class="pill pill-mod">supply_chain_and_inventory</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">supply_chain_and_inventory</span> › Inventory Core</li></ul>
-        <div class="row-reason">Electronic shelf labels for inventory and pricing management</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Electronic shelf labels for inventory and pricing management. Q-A2-2 2026-04-28: added Commerce (price-by-channel mgmt) + Analytics (price-change effectiveness reporting). Primary flipped to sales_and_crm 2026-04-28 evening — IMDA Q text leads with pricing/omnichannel signals; SC&amp;I touch is shelf-stock visibility only.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="retail__in-store-analytics" data-vertical="Retail" data-modules="sales_and_crm">
+    <div class="row" data-key="retail__in-store-analytics" data-vertical="Retail" data-modules="">
       <div class="row-head">
         <div class="row-name">
           In-Store Analytics
@@ -3481,14 +3509,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>retail__in-store-analytics</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › Analytics</li></ul>
-        <div class="row-reason">In-store analytics and dashboards for retail insights</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">In-store analytics and dashboards for retail insights. Q-A2-2 2026-04-28: added Platform &amp; Data — in-store analytics requires sensor + POS data feed integration.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="retail__integrated-pos-with-mobile-features" data-vertical="Retail" data-modules="sales_and_crm">
+    <div class="row" data-key="retail__integrated-pos-with-mobile-features" data-vertical="Retail" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Integrated POS (with Mobile Features)
@@ -3502,14 +3530,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>retail__integrated-pos-with-mobile-features</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › Commerce</li></ul>
-        <div class="row-reason">POS system with mobile features for retail transactions</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Integrated POS IMDA Q text covers Sales Analytics, Enhanced POS Features (commission, discount, gift card, CRM integration), Return Management, Digital Payment Acknowledgement, Omni-Channel Retail, Customer Data Collection. Q-A2 corrected Financial mapping. Q-A2-3 2026-04-28: swapped SC&amp;I Warehouse &amp; Logistics → Inventory Core. 2026-04-28 evening: added back Warehouse &amp; Logistics for Q4 Return Management (sc.returns_reverse_logistics) + added Marketing for Q3 Gift Card Management + Q15 Customer Loyalty Management (sales.loyalty_rewards).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="retail__omnichannel-retail-management-ocrm" data-vertical="Retail" data-modules="sales_and_crm">
+    <div class="row" data-key="retail__omnichannel-retail-management-ocrm" data-vertical="Retail" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Omnichannel Retail Management (OCRM)
@@ -3523,14 +3551,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>retail__omnichannel-retail-management-ocrm</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › Commerce</li></ul>
-        <div class="row-reason">Omnichannel retail management for integrated commerce</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">OCRM IMDA Q text explicitly covers physical sales transactions (Q2), multi-touchpoint sales (Q3), inventory across channels (Q5), customer loyalty/relationship mgmt (Q6), supplier relationship (Q8), product recommendations (Q10), and marketing segmentation (Q11). Multi-family mapping reflects the actual scope (10j-2 2026-04-27).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="retail__self-checkout-solution" data-vertical="Retail" data-modules="sales_and_crm">
+    <div class="row" data-key="retail__self-checkout-solution" data-vertical="Retail" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Self Checkout Solution
@@ -3544,14 +3572,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>retail__self-checkout-solution</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › Commerce</li></ul>
-        <div class="row-reason">Self-checkout system for retail point-of-sale operations</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Self Checkout IMDA Q text covers Product Recognition + Efficient Payment Processing + Receipt Options (basic transaction handling, narrow), POS integration (Commerce family via the omnichannel sub-module only — kiosk needs POS sync, not multi-channel selling), Data Analytics for Customer Insights (Analytics). Narrower than POS — single-channel kiosk hardware, no CRM/loyalty layer. Q-A2-2 2026-04-28: dropped Sales Transactions. 2026-04-28 evening: surgical excluded_sub_modules drops ecommerce_storefront (b2c/b2b) + multichannel (kiosk doesn't sell on marketplaces) + loyalty_rewards. Keeps `omnichannel` sub-module (omnichannel_basic POS+BOPIS only).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="security__automated-visitor-management" data-vertical="Security" data-modules="others">
+    <div class="row" data-key="security__automated-visitor-management" data-vertical="Security" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Automated Visitor Management
@@ -3565,14 +3593,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>security__automated-visitor-management</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Visitor management system for access control and security</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="security__mobile-enabled-patrol-and-incident-management" data-vertical="Security" data-modules="others">
+    <div class="row" data-key="security__mobile-enabled-patrol-and-incident-management" data-vertical="Security" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Mobile-Enabled Patrol and Incident Management
@@ -3586,14 +3614,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>security__mobile-enabled-patrol-and-incident-management</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
-        <div class="row-reason">Mobile patrol and incident management for security operations</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Security guards = field workforce. Patrol routes + incident reports = work-order flow with dispatch-style scheduling. 10j 2026-04-27: added FSM mappings. Q-A2-4 2026-04-28: added Analytics &amp; Intelligence — patrol KPIs + incident dashboards are first-class for security ops.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="security__surveillance-and-analytics" data-vertical="Security" data-modules="others">
+    <div class="row" data-key="security__surveillance-and-analytics" data-vertical="Security" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Onsite Surveillance and Analytics
@@ -3607,14 +3635,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>security__surveillance-and-analytics</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Intelligence & Analytics</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Surveillance and video analytics for security monitoring</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="security__security-collaboration-platform" data-vertical="Security" data-modules="others">
+    <div class="row" data-key="security__security-collaboration-platform" data-vertical="Security" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Security Collaboration Platform
@@ -3628,14 +3656,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>security__security-collaboration-platform</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Productivity & Collaboration</li></ul>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
         <div class="row-reason">Collaboration platform for security team coordination</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="tourism-travel-agent__travel-management-system-e-commerce" data-vertical="Tourism (Travel Agent)" data-modules="sales_and_crm">
+    <div class="row" data-key="tourism-travel-agent__travel-management-system-e-commerce" data-vertical="Tourism (Travel Agent)" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Travel Management System (E-Commerce)
@@ -3649,14 +3677,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>tourism-travel-agent__travel-management-system-e-commerce</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › Commerce</li></ul>
-        <div class="row-reason">Travel e-commerce system for booking and sales</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Travel E-Commerce IMDA Q text covers E-commerce (Commerce), Booking Management with quotes/orders/vouchers/invoices (Sales Transactions), Enquiry Management (CRM &amp; Relationship), Supplier accounts + commission AR (Financial Revenue Cycle). 10j-2 2026-04-27 — added Sales Transactions and CRM &amp; Relationship to existing 10j mapping. Q-A2-2 2026-04-28: marked as vertical SaaS (twin to TMS Operations) + added Sales Analytics.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="tourism-travel-agent__travel-management-system-operations" data-vertical="Tourism (Travel Agent)" data-modules="others">
+    <div class="row" data-key="tourism-travel-agent__travel-management-system-operations" data-vertical="Tourism (Travel Agent)" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Travel Management System (Operations)
@@ -3670,14 +3698,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>tourism-travel-agent__travel-management-system-operations</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
-        <div class="row-reason">Travel operations management system for itinerary and logistics</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Travel operations is a vertical mini-ERP for travel agencies — booking/order management (Sales Transactions), customer + supplier accounts (CRM &amp; Relationship), quotation + package creation (Commerce), inventory of travel products like hotels/tickets (SC&amp;I Inventory Core), supplier mgmt + procurement (SC&amp;I Procurement), agent commission AR (Financial Revenue Cycle), KPI dashboards (Sales Analytics), and integration plumbing (Customisation &amp; Integration). Q-A2-2 2026-04-28: replaced Workflow &amp; Automation with Customisation &amp; Integration and added Sales Tx + Commerce + Analytics + SC&amp;I Inventory + Procurement.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="tourism-travel-agent__travel-evisa" data-vertical="Tourism (Travel Agent)" data-modules="others">
+    <div class="row" data-key="tourism-travel-agent__travel-evisa" data-vertical="Tourism (Travel Agent)" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Travel e-Visa
@@ -3691,14 +3719,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>tourism-travel-agent__travel-evisa</code></div>
-        <div class="row-modules"><span class="pill pill-mod">others</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">others</span> › Workflow & Automation</li></ul>
-        <div class="row-reason">e-Visa processing and document management for travel</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">e-Visa processing and document management for travel. Q-A2-2 2026-04-28: added Sales Platform &amp; Data — e-Visa needs integration with booking/CRM systems.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="wholesale__custom-clearance" data-vertical="Wholesale" data-modules="supply_chain_and_inventory">
+    <div class="row" data-key="wholesale__custom-clearance" data-vertical="Wholesale" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Custom Clearance
@@ -3712,14 +3740,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>wholesale__custom-clearance</code></div>
-        <div class="row-modules"><span class="pill pill-mod">supply_chain_and_inventory</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">supply_chain_and_inventory</span> › Planning & Compliance</li></ul>
-        <div class="row-reason">Customs clearance and compliance for import/export logistics</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Customs clearance — HS code classification, FTA advisory, tariff info. Q-A2-3 2026-04-28: replaced Planning &amp; Compliance (was paired with excluded_sub_modules: supply_planning, awkward) with Procurement (the cross-border trade-compliance touches procurement workflow), Analytics &amp; Intelligence (tariff dashboards), and Platform &amp; Data (Customs API integration).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="wholesale__enterprise-resource-planning-erp-software-for-wholesale" data-vertical="Wholesale" data-modules="financial_management,supply_chain_and_inventory,sales_and_crm">
+    <div class="row" data-key="wholesale__enterprise-resource-planning-erp-software-for-wholesale" data-vertical="Wholesale" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Enterprise Resource Planning (ERP) Software for Wholesale
@@ -3733,14 +3761,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>wholesale__enterprise-resource-planning-erp-software-for-wholesale</code></div>
-        <div class="row-modules"><span class="pill pill-mod">financial_management</span><span class="pill pill-mod">supply_chain_and_inventory</span><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">financial_management</span> › Revenue Cycle</li><li><span class="fam-mod">supply_chain_and_inventory</span> › Inventory Core</li><li><span class="fam-mod">sales_and_crm</span> › Sales Transactions</li></ul>
-        <div class="row-reason">Comprehensive ERP for wholesale covering finance, inventory, and sales</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Comprehensive ERP for wholesale covering finance, inventory, and sales. Q-A2 added Core Ledger &amp; Close. Q-A2-2 added Sales CRM &amp; Relationship + Commerce. Q-A2-3 2026-04-28: added SC&amp;I Procurement — wholesale ERPs handle supplier purchasing alongside customer sales as a first-class workflow.</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="wholesale__inventory-management" data-vertical="Wholesale" data-modules="supply_chain_and_inventory">
+    <div class="row" data-key="wholesale__inventory-management" data-vertical="Wholesale" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Inventory Management
@@ -3754,14 +3782,14 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>wholesale__inventory-management</code></div>
-        <div class="row-modules"><span class="pill pill-mod">supply_chain_and_inventory</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">supply_chain_and_inventory</span> › Inventory Core</li></ul>
-        <div class="row-reason">Inventory management for wholesale stock control</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Inventory management for wholesale stock control. Q-A2-3 2026-04-28: added Procurement (purchasing integration), Analytics &amp; Intelligence (stock dashboards + alerts), Platform &amp; Data (real-time integration with sales/POS systems).</div>
       </div>
     </div>
     
 
-    <div class="row" data-key="wholesale__sales-management" data-vertical="Wholesale" data-modules="sales_and_crm">
+    <div class="row" data-key="wholesale__sales-management" data-vertical="Wholesale" data-modules="">
       <div class="row-head">
         <div class="row-name">
           Sales Management
@@ -3775,9 +3803,9 @@
       </div>
       <div class="row-body">
         <div class="slug-row"><code>wholesale__sales-management</code></div>
-        <div class="row-modules"><span class="pill pill-mod">sales_and_crm</span></div>
-        <ul class="fam-list"><li><span class="fam-mod">sales_and_crm</span> › Sales Transactions</li></ul>
-        <div class="row-reason">Sales management for wholesale order processing</div>
+        <div class="row-modules"><span class="muted">no modules</span></div>
+        
+        <div class="row-reason">Sales management for wholesale order processing. Q-A2-2 added Commerce + Analytics. Q-A2-3 2026-04-28: added SC&amp;I Inventory Core — multi-channel order capture needs inventory visibility (Q2-Q3 of IMDA Q text references inventory).</div>
       </div>
     </div>
     
@@ -3786,7 +3814,7 @@
 </main>
 
 <script>
-const STATS = {"psg_total": 73, "psg_excluded": 20, "psg_unmapped": 0, "psg_mapped": 53, "psg_solutions_total": 414, "psg_by_module": {"sales_and_crm": 18, "others": 12, "financial_management": 9, "supply_chain_and_inventory": 8, "human_resources_management": 6, "manufacturing_management": 4, "project_management": 4, "fleet_management": 3, "asset_management": 2, "field_service_management": 1}, "sol_total": 89, "sol_by_module": {"others": 39, "sales_and_crm": 20, "supply_chain_and_inventory": 13, "human_resources_management": 8, "manufacturing_management": 6, "financial_management": 4, "asset_management": 2, "fleet_management": 2, "project_management": 1, "field_service_management": 1}, "sol_verticals": {"Essential Business": 24, "Legal": 12, "Early Childhood": 10, "Built Environment": 8, "Advanced Manufacturing": 6, "Logistics": 6, "Retail": 5, "Cybersecurity": 4, "Security": 4, "Wholesale": 4, "Tourism (Travel Agent)": 3, "Estate Agency": 1, "Food Services": 1, "Personal Care Services": 1}};
+const STATS = {"psg_total": 73, "psg_excluded": 20, "psg_unmapped": 0, "psg_mapped": 53, "psg_solutions_total": 414, "psg_by_module": {"sales_and_crm": 18, "others": 12, "financial_management": 9, "supply_chain_and_inventory": 8, "human_resources_management": 6, "manufacturing_management": 4, "project_management": 4, "fleet_management": 3, "asset_management": 2, "field_service_management": 1}, "sol_total": 89, "sol_by_module": {}, "sol_verticals": {"Essential Business": 24, "Legal": 12, "Early Childhood": 10, "Built Environment": 8, "Advanced Manufacturing": 6, "Logistics": 6, "Retail": 5, "Cybersecurity": 4, "Security": 4, "Wholesale": 4, "Tourism (Travel Agent)": 3, "Estate Agency": 1, "Food Services": 1, "Personal Care Services": 1}};
 const STORAGE_KEY = "erp_crosswalk_review_v1";
 
 function loadState() {

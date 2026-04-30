@@ -83,6 +83,11 @@
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition: color 0.15s, border-color 0.15s, background 0.15s;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
   }
   .top-bar-link:hover {
     color: #2563eb;
@@ -93,22 +98,106 @@
     border-bottom-color: #2563eb;
     font-weight: 600;
   }
+  /* Two-row nav (2026-04-29): row 1 = analysis tools, row 2 = modules. */
+  .top-bar.two-row .top-bar-row1 {
+    border-bottom: 1px solid #f1f3f6;
+  }
+  .top-bar.two-row .top-bar-row2 {
+    background: #fafbfc;
+  }
+  .top-bar.two-row .top-bar-row2 .top-bar-link {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .top-bar-row-label {
+    font-size: 10px;
+    color: #6b7380;
+    padding: 9px 14px 9px 0;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    align-self: center;
+    border-right: 1px solid #e8ebef;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-dropdown { position: relative; display: inline-flex; }
+  .top-bar-dropdown summary {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 14px 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    user-select: none;
+  }
+  .top-bar-dropdown summary::-webkit-details-marker { display: none; }
+  .top-bar-dropdown summary::after {
+    content: "";
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #6b7380;
+    margin-left: 7px;
+    transition: transform 0.12s;
+  }
+  .top-bar-dropdown[open] summary::after { transform: rotate(180deg); }
+  .top-bar-dropdown summary:hover { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown[open] summary { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown.active summary {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  .top-bar-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: -1px;
+    background: #ffffff;
+    border: 1px solid #e2e5ea;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    padding: 6px;
+    min-width: 220px;
+    z-index: 110;
+  }
+  .top-bar-dropdown-menu a {
+    display: block;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-radius: 4px;
+    line-height: 1.35;
+  }
+  .top-bar-dropdown-menu a:hover { background: #f1f5f9; color: #2563eb; }
+  .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
+  .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
 </style>
-<nav class="top-bar">
-  <div class="top-bar-inner">
+<nav class="top-bar two-row">
+  <div class="top-bar-inner top-bar-row1">
     <span class="top-bar-brand">PSG ERP Spec</span>
     <a class="top-bar-link active" href="index.html">Overview</a>
-    <a class="top-bar-link" href="canonical_sales_and_crm.html">Sales & CRM</a>
+    <a class="top-bar-link" href="stakeholders.html">Stakeholders</a>
+    <a class="top-bar-link" href="vendor_coverage.html">Coverage</a>
+    <a class="top-bar-link" href="integrations.html">Integrations</a>
+    <details class="top-bar-dropdown"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 + L1 intra-module + L2 inter-module proposals awaiting review</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="methodology.html">Methodology (legacy)<span class="sub">Replaced by Stakeholders view</span></a><a class="" href="gap_analysis.html">Gaps (legacy)<span class="sub">Replaced by Stakeholders → Sol-cat fulfilment matrix</span></a><a class="" href="use_cases.html">Use Cases (legacy)<span class="sub">UC concept retired; flows are the replacement</span></a></div></details>
+  </div>
+  <div class="top-bar-inner top-bar-row2">
+    <span class="top-bar-row-label">Modules</span>
     <a class="top-bar-link" href="canonical_financial_management.html">Financial</a>
     <a class="top-bar-link" href="canonical_human_resources_management.html">HR</a>
+    <a class="top-bar-link" href="canonical_sales_and_crm.html">Sales & CRM</a>
     <a class="top-bar-link" href="canonical_supply_chain_and_inventory.html">Supply Chain</a>
-    <a class="top-bar-link" href="canonical_manufacturing_management.html">Manufacturing</a>
     <a class="top-bar-link" href="canonical_project_management.html">Project Mgmt</a>
     <a class="top-bar-link" href="canonical_asset_management.html">Asset Mgmt</a>
+    <a class="top-bar-link" href="canonical_manufacturing_management.html">Manufacturing</a>
     <a class="top-bar-link" href="canonical_field_service_management.html">Field Service</a>
     <a class="top-bar-link" href="canonical_fleet_management.html">Fleet</a>
     <a class="top-bar-link" href="canonical_others.html">Other</a>
-    <a class="top-bar-link" href="integrations.html">Integrations</a>
   </div>
 </nav>
 
