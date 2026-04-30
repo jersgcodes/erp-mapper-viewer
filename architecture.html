@@ -292,124 +292,55 @@
   class PSG,PROXY,PSGDIR,CAPS,IMDA_CL,VENDOR,BUYER active
   class VEND_FIT partial
   class PAIN,NEWSOL,SYN_CL,PAIN_MAP,PROG,GOV,EDU future</pre></div>
-<h2 id='technical-architecture' style='margin:32px 0 10px;font-size:22px;color:#0f172a'>Technical Architecture</h2><div style='background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:18px;margin:10px 0;overflow:auto'><pre class='mermaid' style='margin:0'>graph TB
-  subgraph "RAW [active]"
-    R1["data/raw/*.html<br/>scraper output"]
-    R2["data/parsed/*.json<br/>89 IMDA Qs"]
-    R3["data/external/psg-solutions.json<br/>414 vendors"]
+<h2 id='technical-architecture' style='margin:32px 0 10px;font-size:22px;color:#0f172a'>Technical Architecture</h2><div style='background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:18px;margin:10px 0;overflow:auto'><pre class='mermaid' style='margin:0'>graph LR
+  subgraph RAW
+    R["data/raw + parsed<br/>+ psg-solutions"]
   end
 
-  subgraph "AUTHORED — source of truth [active]"
-    A1["data/proxy/*.yaml<br/>10 modules × caps + tier"]
-    A2["config/sub_modules.yaml<br/>cap → sub-module"]
-    A3["data/solcat_crosswalk.yaml<br/>display_name + flags<br/>(scope = primary_modules)"]
-    A4["data/manual_imda_ref_overrides.yaml<br/>51 hand-curated mappings"]
-    A5["data/vendor_question_rewrites.yaml<br/>284 generalised + SG-restored"]
-    A6["data/workflows.yaml<br/>hand-curated cap flows"]
+  subgraph AUTHORED
+    A["proxy/*.yaml · sub_modules<br/>solcat_crosswalk · workflows<br/>+ manual_imda_ref_overrides<br/>+ vendor_question_rewrites"]
+    AF["FUTURE: synthesised_solcats<br/>pain_points · cap_input_variants"]
   end
 
-  subgraph "AUTHORED [future]"
-    F1["data/synthesised_solcats/*.yaml<br/>FUTURE 1"]
-    F2["data/pain_points.yaml<br/>FUTURE 2"]
-    F3["config/cap_input_variants.yaml<br/>FUTURE 4"]
+  subgraph PIPELINE
+    P["canonicalise per-module<br/>step1→2→2.5→3→4→5→6→6c→6d<br/>→3b→7→7b→7c→8 + format-audit"]
+    PW["workspace-level<br/>derive_solcat_modules<br/>build_join · step13 L2 sync"]
+    PF["FUTURE: synthesise_solcat<br/>match_pain_to_cap · derive_progression"]
   end
 
-  subgraph "PIPELINE — canonicalise [active]"
-    P1["step1 group → step2 merge<br/>step2.5 features"]
-    P2["step3 rank → step4 sme_min<br/>step5 module rollup"]
-    P3["step6 vendor_qs<br/>step6c apply_rewrites<br/>step6d apply_overrides"]
-    P4["step3b revalidate<br/>step7/7b/7c sector"]
-    P5["step8 verification<br/>format-audit gate"]
-    P6["step13 L2 questions sync<br/>workspace-level"]
+  subgraph DERIVED
+    D["canonical/*.json ×10 (THE schema)<br/>sub_module_vendor_questions L2 ×124<br/>sol_cat_to_checklist_gap_*.json ×71"]
   end
 
-  subgraph "PIPELINE [future]"
-    PF1["pipeline/synthesise_solcat.py<br/>FUTURE 1"]
-    PF2["pipeline/match_pain_to_cap.py<br/>FUTURE 2"]
-    PF3["pipeline/score_solution_against_solcat.py<br/>FUTURE 3"]
-    PF4["pipeline/derive_cap_progression.py<br/>FUTURE 4"]
+  subgraph AUDITS
+    AU["L2 consistency · unbacked_required<br/>imda_q_coverage · checklist_format"]
   end
 
-  subgraph "DERIVED [active]"
-    D1["output/canonical/*.json ×10<br/>THE schema"]
-    D2["data/sub_module_vendor_questions.yaml<br/>124 L2 questions, derived"]
-    D3["data/_derived/solcat_module_scope.yaml"]
-    D4["data/sol_cat_sub_module_join.yaml"]
-    D5["output/solcat_to_checklist_gap_*.json (×71)"]
-    D6["output/compliance_baseline.json"]
+  subgraph VIEWERS
+    V["10 canonical · stakeholders<br/>vendor_coverage · index · architecture<br/>+ pipeline · integrations · flows ×8"]
+    VF["FUTURE: synthesised_solcats<br/>pain_demand_map · cap_progression"]
   end
 
-  subgraph "AUDITS — gates [active]"
-    AU1["audit_l2_question_consistency.py<br/>P0=0 today"]
-    AU2["audit_unbacked_required_caps.py"]
-    AU3["audit_imda_q_cap_coverage.py"]
-    AU4["audit_checklist_format.py"]
+  subgraph PAUSED
+    PA["flow_gen step3+step4 · uc_gen<br/>flow_review · use_cases<br/>methodology · gap_analysis"]
   end
 
-  subgraph "VIEWERS [active]"
-    V1["canonical_*.html ×10"]
-    V2["stakeholders.html"]
-    V3["vendor_coverage.html"]
-    V4["index.html"]
-    V5["architecture.html"]
-  end
-
-  subgraph "VIEWERS [future]"
-    VF1["synthesised_solcats.html — FUTURE 1"]
-    VF2["pain_demand_map.html — FUTURE 2"]
-    VF3["cap_progression.html — FUTURE 5"]
-  end
-
-  subgraph "PAUSED — archive candidates"
-    PA1["pipeline/flow_gen/step3 step4<br/>proposed-flow generation"]
-    PA2["output/flow_review.html<br/>data/proposed_flows_*.yaml"]
-    PA3["pipeline/uc_gen/* + step9-11<br/>UC concept retired"]
-    PA4["output/use_cases.html<br/>methodology.html · gap_analysis.html"]
-  end
-
-  R1 --> R2
-  A1 --> P1
-  R2 --> P1
-  P1 --> P2 --> P3 --> P4 --> P5
-  A4 --> P3
-  A5 --> P3
-  P5 --> D1
-  D1 --> P6
-  A2 --> P6
-  P6 --> D2
-
-  A3 --> D3
-  D3 --> D4
-  D1 --> D5
-
-  D1 --> AU1
-  D1 --> AU2
-  D1 --> AU3
-  D1 --> AU4
-
-  D1 --> V1
-  D1 --> V2
-  D1 --> V3
-  D5 --> V3
-
-  F1 -.-> PF1
-  F2 -.-> PF2
-  F3 -.-> PF4
-  PF1 -.-> D1
-  PF2 -.-> D1
-  PF3 -.-> D5
-  PF4 -.-> D2
-
-  D1 -.-> VF1
-  D1 -.-> VF2
-  D1 -.-> VF3
+  R --> P
+  A --> P
+  P --> D
+  D --> PW
+  PW --> D
+  D --> AU
+  D --> V
+  AF -.-> PF -.-> D
+  D -.-> VF
 
   classDef active fill:#dcfce7,stroke:#16a34a,color:#14532d
   classDef future fill:#e0e7ff,stroke:#6366f1,color:#312e81
   classDef paused fill:#f1f5f9,stroke:#94a3b8,color:#475569,stroke-dasharray: 5 5
-  class R1,R2,R3,A1,A2,A3,A4,A5,A6,P1,P2,P3,P4,P5,P6,D1,D2,D3,D4,D5,D6,AU1,AU2,AU3,AU4,V1,V2,V3,V4,V5 active
-  class F1,F2,F3,PF1,PF2,PF3,PF4,VF1,VF2,VF3 future
-  class PA1,PA2,PA3,PA4 paused</pre></div>
+  class R,A,P,PW,D,AU,V active
+  class AF,PF,VF future
+  class PA paused</pre></div>
 <h2 style='margin:32px 0 10px;font-size:22px;color:#0f172a'>Business Architecture</h2>
 <h2 style='margin:32px 0 10px;font-size:22px;color:#0f172a'>Key Files</h2><table style='border-collapse:collapse;margin:14px 0;font-size:13px'>
 <tr><th style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>File</th><th style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>Purpose</th></tr>
