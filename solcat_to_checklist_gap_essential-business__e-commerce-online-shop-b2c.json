@@ -4,11 +4,11 @@
   "imda_qs_total": 18,
   "imda_qs_mapped": 8,
   "imda_qs_orphan": 10,
-  "caps_in_scope_total": 88,
+  "caps_in_scope_total": 89,
   "step1_classification_counts": {
     "imda_traced": 18,
     "cross_imda_traced": 40,
-    "proxy_only": 30
+    "proxy_only": 31
   },
   "step1_caps": [
     {
@@ -217,7 +217,7 @@
     {
       "cap_id": "fin.revenue_recognition",
       "name": "Revenue Recognition (ASC 606 / IFRS 15)",
-      "tier": "",
+      "tier": "preferred",
       "module": "financial_management",
       "sub_module": "Revenue Cycle (AR)",
       "classification": "proxy_only",
@@ -767,7 +767,7 @@
     {
       "cap_id": "fin.ai_finance",
       "name": "AI / ML for Finance",
-      "tier": "",
+      "tier": "advanced",
       "module": "financial_management",
       "sub_module": "Planning & Analytics (Finance)",
       "classification": "cross_imda_traced",
@@ -1249,6 +1249,26 @@
       "imda_sources_count": 0,
       "vendor_citations": [],
       "vendor_citations_count": 0
+    },
+    {
+      "cap_id": "sales.subscription_recurring",
+      "name": "Subscription & Recurring Revenue Management",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Transactions",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_sales",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3
     },
     {
       "cap_id": "sales.marketing_automation_basic",
@@ -2966,7 +2986,7 @@
     {
       "cap_id": "fin.revenue_recognition",
       "name": "Revenue Recognition (ASC 606 / IFRS 15)",
-      "tier": "",
+      "tier": "preferred",
       "module": "financial_management",
       "sub_module": "Revenue Cycle (AR)",
       "classification": "proxy_only",
@@ -3573,7 +3593,7 @@
     {
       "cap_id": "fin.ai_finance",
       "name": "AI / ML for Finance",
-      "tier": "",
+      "tier": "advanced",
       "module": "financial_management",
       "sub_module": "Planning & Analytics (Finance)",
       "classification": "cross_imda_traced",
@@ -4064,6 +4084,35 @@
       "imda_sources_count": 0,
       "vendor_citations": [],
       "vendor_citations_count": 0,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "sales.subscription_recurring",
+      "name": "Subscription & Recurring Revenue Management",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Transactions",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_sales",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3,
       "vendor_coverage": {
         "yes": 0,
         "partial": 0,
@@ -5182,7 +5231,7 @@
     "proxy_only": {
       "justified_real_world": 0,
       "questionable": 0,
-      "potential_overreach": 30
+      "potential_overreach": 31
     }
   },
   "by_module": {
@@ -5196,8 +5245,8 @@
     "sales_and_crm": {
       "imda_traced": 7,
       "cross_imda_traced": 17,
-      "proxy_only": 11,
-      "expansion_overreach": 28,
+      "proxy_only": 12,
+      "expansion_overreach": 29,
       "expansion_justified": 0
     },
     "supply_chain_and_inventory": {

@@ -4,11 +4,11 @@
   "imda_qs_total": 16,
   "imda_qs_mapped": 6,
   "imda_qs_orphan": 10,
-  "caps_in_scope_total": 35,
+  "caps_in_scope_total": 36,
   "step1_classification_counts": {
     "imda_traced": 7,
     "cross_imda_traced": 17,
-    "proxy_only": 11
+    "proxy_only": 12
   },
   "step1_caps": [
     {
@@ -481,6 +481,26 @@
       "imda_sources_count": 0,
       "vendor_citations": [],
       "vendor_citations_count": 0
+    },
+    {
+      "cap_id": "sales.subscription_recurring",
+      "name": "Subscription & Recurring Revenue Management",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Transactions",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_sales",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3
     },
     {
       "cap_id": "sales.marketing_automation_basic",
@@ -1539,6 +1559,35 @@
       "expansion_verdict": "potential_overreach"
     },
     {
+      "cap_id": "sales.subscription_recurring",
+      "name": "Subscription & Recurring Revenue Management",
+      "tier": "preferred",
+      "module": "sales_and_crm",
+      "sub_module": "Sales Transactions",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_sales",
+        "salesforce_sales_cloud"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
       "cap_id": "sales.marketing_automation_advanced",
       "name": "Multi-Channel Attribution & Ad Orchestration (Advanced)",
       "tier": "advanced",
@@ -2085,15 +2134,15 @@
     "proxy_only": {
       "justified_real_world": 0,
       "questionable": 0,
-      "potential_overreach": 11
+      "potential_overreach": 12
     }
   },
   "by_module": {
     "sales_and_crm": {
       "imda_traced": 7,
       "cross_imda_traced": 17,
-      "proxy_only": 11,
-      "expansion_overreach": 28,
+      "proxy_only": 12,
+      "expansion_overreach": 29,
       "expansion_justified": 0
     }
   },
