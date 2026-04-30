@@ -523,7 +523,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain multi-level BOM hierarchies with component quantities, alternate parts, phantom sub-assemblies, and cost rollup, so you can manage product structure and manufacturing costs end-to-end?",
+        "question": "Does your solution maintain multi-level BOM hierarchies with component relationships, alternate and substitute variants, phantom sub-assemblies, and automatic cost roll-up to finished goods, so you can plan production accurately and manage engineering changes?",
         "free_text_prompt": "Describe how your solution handles BOM levels, component substitution rules, phantom assembly treatment, and standard cost calculation from components to finished goods.",
         "covers": [
           {
@@ -1105,7 +1105,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain routings with ordered operations, work centre capacity and cost data, resource assignments, and setup and run times, to enable accurate production planning and costing?",
+        "question": "Does your solution manage ordered manufacturing operation sequences with work centre capacity and cost data, assign resources with skill requirements, record setup and run times, support alternate paths, and maintain routing versions with effectivity dates, so you can plan production accurately and adapt to process changes?",
         "free_text_prompt": "Describe how your solution structures routings, how work centers store capacity and cost information, and how operations record time elements and resource requirements.",
         "covers": [
           {
@@ -1721,7 +1721,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution create work orders from multiple sources, dispatch them with routing and resource instructions, automatically reserve bill-of-materials components, track status through execution and closure, and record labour, scrap, and variances so you can monitor production progress and cost performance?",
+        "question": "Does your solution create and manage work orders against bills of materials and routings, automatically reserve components, track status through execution, and record labour time and scrap per operation, so production can be scheduled and monitored end-to-end?",
         "free_text_prompt": "Describe how your solution creates work orders, reserves materials, tracks execution status, and captures actual labour and material variances against planned values.",
         "covers": [
           {
@@ -2339,7 +2339,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution consolidate demand from sales orders and forecasts, explode multi-level BOMs against inventory, apply lot-sizing and safety-stock policies, and generate planned purchase and production orders, so you avoid stock-outs and excess inventory?",
+        "question": "Does your solution consolidate demand from sales orders and forecasts, explode multi-level BOMs against inventory and on-order quantities, apply lot-sizing and safety-stock policies, and generate planned orders with lead-time offsetting and exception alerts, so you can meet customer demand without stock-outs or excess inventory?",
         "free_text_prompt": "Describe how your solution consolidates demand sources, handles multi-level BOMs, applies lot-sizing rules and safety-stock policies, and generates planned orders with lead-time offsetting.",
         "covers": [
           {
@@ -2845,7 +2845,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution assign work orders to work centres across a time horizon, respecting capacity constraints and operation sequence, with visual load display and conflict detection, so you can identify bottlenecks and optimise throughput?",
+        "question": "Does your solution schedule work orders to work centres respecting finite capacity and operation sequence, with visual load display, automatic bottleneck identification, and conflict detection, so planners can balance demand against available capacity?",
         "free_text_prompt": "Describe how your solution handles infinite and finite capacity modes, accounts for holidays and maintenance downtime, supports forward and backward scheduling, and enables interactive rescheduling with real-time constraint violation alerts.",
         "covers": [
           {
@@ -3588,7 +3588,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution capture operation events, material consumption, quality results, and downtime with reason codes at the work centre, so operators have real-time visibility and production data flows automatically to the ERP?",
+        "question": "Does your solution capture operator actions at the work centre, including start/stop events with timestamps, material scans, quality measurements, and downtime reasons, with real-time alerts for disruptions and specification breaches, so you have complete shop-floor visibility and traceability?",
         "free_text_prompt": "Describe the operator interface (tablet, HMI, or mobile), how barcode/serial scanning is supported, and how downtime and quality alerts are recorded and communicated.",
         "covers": [
           {
@@ -4309,7 +4309,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution capture quality measurements, define inspection plans, record non-conformances with root-cause classification, apply quarantine status, and generate certificates of analysis and conformance, with a complete audit trail by lot or serial number?",
+        "question": "Does your solution manage quality inspections across incoming, in-process, and final stages, record non-conformances with corrective-action workflows, maintain audit trails linked to lot or serial number, and generate certificates of conformance, so you can demonstrate compliance and prevent defective goods reaching customers?",
         "free_text_prompt": "Describe how your solution handles inspection data entry (manual or automated), non-conformance workflows, quarantine holds, and certificate generation, and confirm audit trail coverage by lot and serial number.",
         "covers": [
           {
@@ -4835,7 +4835,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution track raw materials, work-in-progress, and finished goods by lot and serial number, manage bin locations across production facilities, and automatically consume materials when work orders complete, so you maintain full traceability and inventory accuracy throughout manufacturing?",
+        "question": "Does your solution track raw materials, work-in-progress, and finished goods separately, maintain lot and serial traceability through production, manage bin locations across facilities, automatically consume materials on work order completion, and support quality holds and quarantine areas, so you have full visibility and control of inventory throughout your manufacturing process?",
         "free_text_prompt": "Describe how your solution tracks inventory across production stages, manages lot/serial traceability, handles bin location assignment, and processes automatic material consumption on work order completion.",
         "covers": [
           {
@@ -5320,7 +5320,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution calculate standard and actual product costs from material, labour, and overhead, report variances by work order, and support multiple valuation methods for cost visibility to planners and accountants?",
+        "question": "Does your solution calculate standard and actual product costs from material, labour, and overhead, decompose variances by type, and revalue inventory when costs change, so planners and accountants have accurate cost visibility and variance reporting?",
         "free_text_prompt": "Describe how your solution accumulates actual costs into work-in-progress and finished goods, which variance categories it decomposes (price, usage, efficiency, rate, yield), and which cost valuation methods it supports.",
         "covers": [
           {
@@ -5825,7 +5825,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage engineering change requests through formal approval workflows, analyse impact across BOMs and routings, maintain audit trails, and enforce effectivity rules?",
+        "question": "Does your solution manage engineering change requests through formal approval workflows, assess impact on product structure and routings, maintain audit trails, and support multiple effectivity methods, so you can implement product changes safely and compliantly?",
         "free_text_prompt": "Describe how your solution captures change proposals, routes them through authorization gates, displays affected documents and work orders, and applies date or serial-based cutover controls.",
         "covers": [
           {
@@ -7469,7 +7469,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage production using recipes and formulas, track batch genealogy and yield variance, and capture ingredient potency throughout the manufacturing lifecycle, so you can ensure traceability and quality compliance?",
+        "question": "Does your solution manage production using recipes and formulas with batch-level tracking, yield measurement, by-product and co-product capture, genealogy traceability, and potency and shelf-life attributes, so you can manufacture and trace variable-yield batches with full compliance visibility?",
         "free_text_prompt": "Describe how your solution handles recipe-based production, batch tracking with genealogy, yield variance analysis, and potency/assay recording for batch manufacturing.",
         "covers": [
           {
@@ -7939,7 +7939,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage multiple manufacturing modes—discrete, repetitive, make-to-stock, make-to-order, engineer-to-order, and configure-to-order—within a single product catalogue, with mode-specific scheduling and costing, so you can fulfil different customer orders from one system without manual workarounds?",
+        "question": "Does your solution manage multiple manufacturing modes—discrete, repetitive, make-to-stock, make-to-order, engineer-to-order, and configure-to-order—with automatic bill of materials generation and mode-specific cost calculation, so you can fulfil diverse customer orders without switching systems?",
         "free_text_prompt": "Describe how your solution assigns manufacturing modes to individual products, handles product configuration rules for variants, and calculates costs differently based on the mode assigned to each item.",
         "covers": [
           {
@@ -8446,7 +8446,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution generate statistical forecasts, support S&OP cycles with demand and supply review, consume actual sales orders to update planning signals, and adjust for promotions and seasonal patterns, so you can feed accurate demand into MRP?",
+        "question": "Does your solution generate statistical forecasts using multiple methods, aggregate demand across dimensions, track forecast consumption against actual sales, and measure accuracy with standard metrics, so you can align supply planning with realistic demand signals?",
         "free_text_prompt": "Describe the forecasting methods available (e.g. moving average, exponential smoothing), the levels at which forecasts can be generated (item, family, region), and how actual sales orders are used to recalibrate the forecast.",
         "covers": [
           {
@@ -8857,7 +8857,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution perform capacity checks against critical resources before MRP explosion, maintain resource profiles, support S&OP scenario modelling, and generate the master production schedule, so you can validate feasibility before detailed planning?",
+        "question": "Does your solution model rough-cut capacity constraints against critical resources, maintain resource load profiles, and generate the master production schedule from your S&OP plan, so bottlenecks are visible before detailed MRP planning begins?",
         "free_text_prompt": "Describe how your solution identifies critical work centres, defines resource load profiles, models S&OP scenarios against capacity, and links the approved plan to MPS generation.",
         "covers": [
           {
@@ -9411,7 +9411,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution connect to production equipment via industrial protocols, capture machine status and output automatically, detect downtime events with reason codes, and ingest sensor data for performance monitoring?",
+        "question": "Can your solution connect to production equipment using standard industrial protocols, capture machine status and cycle data automatically, store time-series telemetry for performance analysis, and generate real-time alerts on equipment anomalies, so you eliminate manual data entry and gain visibility into production performance?",
         "free_text_prompt": "Describe which industrial protocols your solution supports, how it captures data from equipment, and what types of sensor parameters and machine events it can log.",
         "covers": [
           {
@@ -10254,7 +10254,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution calculate OEE and manufacturing KPIs including availability, performance, quality, throughput, yield, and downtime analysis, with real-time dashboards and performance alerts, so plant managers can identify bottlenecks and optimise equipment utilisation?",
+        "question": "Does your solution calculate Overall Equipment Effectiveness from availability, performance, and quality metrics, display dashboards accessible to shopfloor and mobile users, drill down across organisational hierarchy, analyse downtime with trend identification, and alert when KPI thresholds are breached, so plant managers identify bottlenecks and optimise production?",
         "free_text_prompt": "Describe how your solution calculates OEE, which KPIs are included in standard dashboards, and how downtime and yield data are captured and displayed.",
         "covers": [
           {
@@ -10745,7 +10745,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution track materials and components through production to shipment, capture serial numbers, trace finished goods backward to input materials, and generate recall lists by lot and customer, so you can fulfil traceability obligations and execute recalls without manual reconstruction?",
+        "question": "Does your solution track material lots bidirectionally through production and supply chain, maintain serial numbers per unit, generate recall lists by lot and customer, display genealogy across assembly levels, and monitor expiry dates, so you execute rapid recalls and prove product safety to regulators?",
         "free_text_prompt": "Describe how your solution captures and links serial numbers across production steps, displays genealogy relationships, and supports backward tracing from finished goods to raw materials.",
         "covers": [
           {
@@ -11223,7 +11223,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage repair orders with warranty classification, disassembly support, and cost tracking separate from standard production, so you can recover costs and maintain audit trails for returned goods?",
+        "question": "Does your solution manage repair orders with warranty classification, disassembly specifications, RMA linkage, and separate cost tracking, so returned goods are processed without restarting production?",
         "free_text_prompt": "Describe how your solution distinguishes repair orders from work orders, handles warranty versus billable classification, and tracks repair costs separately.",
         "covers": [
           {
@@ -11701,7 +11701,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution flag hazardous materials, enforce PPE and lockout requirements, verify worker qualifications, and capture safety incidents with corrective actions, so compliance and incident management are auditable?",
+        "question": "Does your solution manage hazardous materials on bills of materials, attach safety documentation to components, define PPE and lockout/tagout requirements per operation, track worker certifications, and capture safety incidents with corrective actions, so compliance risks and worker safety gaps are identified before harm occurs?",
         "free_text_prompt": "Describe how your solution links safety data sheets to materials, enforces pre-operation verification, and generates incident records for regulatory reporting.",
         "covers": [
           {
@@ -12145,7 +12145,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution capture operator time against work orders, distinguish direct and indirect labour, transfer hours to payroll, and calculate labour efficiency to help you manage shop floor productivity and wage costs?",
+        "question": "Does your solution capture operator time against work orders, distinguish labour categories, export to payroll, and compare actual hours against standard time per operation, so labour efficiency and job costs are tracked accurately?",
         "free_text_prompt": "Describe how your solution records clock-in/clock-out time, handles multiple workers on a single task, links operator skills to operations, and integrates with payroll processing.",
         "covers": [
           {
@@ -12565,7 +12565,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution track utility consumption and emissions by production activity, allocate energy costs to products, and monitor water and waste streams for sustainability reporting?",
+        "question": "Does your solution track utility consumption by production line, calculate emissions per unit, allocate energy costs to work orders, and monitor resource streams, so sustainability reporting obligations are met with auditable data?",
         "free_text_prompt": "Describe how your solution captures meter readings, calculates Scope 1 and Scope 2 emissions, and links utility costs to work orders and finished goods.",
         "covers": [
           {
@@ -13181,7 +13181,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution link work centres to asset records, automatically reserve capacity for preventive maintenance, generate maintenance requests on equipment faults, and display production and maintenance schedules in a unified calendar?",
+        "question": "Does your solution link production work centres to asset maintenance records, automatically reserve capacity for planned maintenance, create work requests from equipment faults, and display unified production and maintenance schedules, so production planners optimise scheduling around equipment reliability?",
         "free_text_prompt": "Describe how your solution bridges the manufacturing and maintenance modules, including how preventive maintenance downtime is scheduled and how equipment breakdowns trigger maintenance requests.",
         "covers": [
           {
@@ -13570,7 +13570,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Does your solution track design, plan, and actual build states for each unit, model production facility layout and equipment, and simulate production schedules to forecast throughput and resource needs?",
+        "question": "Can your solution maintain a continuous digital record linking design, manufacturing specifications, and as-built data per unit, simulate production schedules to forecast cycle times, and provide operator training simulation, so end-to-end traceability and workflow optimisation are achieved without disrupting live production?",
         "free_text_prompt": "Describe how your solution links design intent through production planning to as-built records, and provide an example of a simulation scenario you support (e.g. schedule optimisation, bottleneck analysis, or resource forecasting).",
         "covers": [
           {
@@ -14013,7 +14013,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Does your solution maintain master data consistency across plants, optimise production allocation by capacity, standardise bills-of-materials and routings, manage inter-plant transfers and inventory in transit, record intercompany transactions, and calculate available-to-promise across all sites for accurate commitment visibility?",
+        "question": "Can your solution coordinate production across multiple sites, standardise bills of material and routings, optimise material flow between plants, and calculate available-to-promise across your network, so you fulfil orders from your entire manufacturing footprint?",
         "free_text_prompt": "Describe how your solution coordinates production planning, master data synchronisation, and inventory visibility across multiple manufacturing plants within a single enterprise.",
         "covers": [
           {
@@ -14473,7 +14473,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Does your solution detect anomalies in production data, forecast quality and yield outcomes, optimise scheduling recommendations, and automate defect classification to help you intervene before scrap occurs?",
+        "question": "Does your solution detect equipment anomalies and forecast defect rates from production data, analyse historical runs for yield optimisation, and generate AI-driven scheduling recommendations, so manufacturers can intervene early and optimise output?",
         "free_text_prompt": "Describe which production data sources your ML models consume (sensor, equipment, batch, operator, environmental), and name the specific anomaly detection, forecasting, scheduling, and vision-based quality capabilities you offer.",
         "covers": [
           {
@@ -14840,7 +14840,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution deliver web-based access across phones, tablets, and desktops, with responsive design, production visibility, event notifications, and barcode capture, so shop floor teams can monitor operations from any device?",
+        "question": "Does your solution deliver production data and shop floor status across phones, tablets, and desktops through responsive web interfaces, with real-time notifications and barcode capture, so supervisors monitor operations from any location?",
         "free_text_prompt": "Describe how your solution adapts to different screen sizes, which production data is accessible on mobile, what event types trigger notifications, and how barcode/QR code capture works on mobile devices.",
         "covers": [
           {
@@ -15244,7 +15244,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain audit trails of consent, enforce data retention and deletion policies, encrypt data at rest and in transit, and log all access to records with user identity, to demonstrate PDPA compliance and meet Cyber Essentials Mark requirements?",
+        "question": "Does your solution maintain audit trails of all access and modifications to employee and supplier data, enforce retention and deletion policies, encrypt data at rest and in transit, and meet regulatory requirements for data protection and compliance?",
         "free_text_prompt": "Describe how your solution documents consent audit trails, executes automated data deletion, implements encryption standards, and captures access logs with user identification for regulatory verification.",
         "covers": [
           {
@@ -15703,7 +15703,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution manage individual user accounts with role-based permissions, audit trails of user actions, and account deactivation, so you can control who accesses what and maintain compliance records?",
+        "question": "Does your solution manage individual user accounts with role-based permissions, deactivate leavers, maintain audit logs of logins and actions, and support multi-factor authentication, so each staff member has secure, traceable access aligned with their role?",
         "free_text_prompt": "Describe how your solution creates and manages user accounts, assigns roles, logs user activity, and handles account removal when staff leave.",
         "covers": [
           {
@@ -16675,7 +16675,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution import production data from spreadsheets, export operational data to common formats, connect to accounting and HR systems, and support API integrations with third-party tools, so you can consolidate data across your business without manual re-entry?",
+        "question": "Does your solution import data from standard file formats, export operational data, support scheduled automated backups, and integrate with third-party systems via API, so you consolidate existing data and share information without manual re-entry?",
         "free_text_prompt": "Describe the file formats supported for import and export, which accounting and HR platforms you integrate with natively, and whether you offer REST API or other integration methods for custom connections.",
         "covers": [
           {

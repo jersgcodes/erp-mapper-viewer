@@ -4,691 +4,816 @@
   "imda_qs_total": 19,
   "imda_qs_mapped": 8,
   "imda_qs_orphan": 11,
-  "caps_in_scope_total": 27,
+  "caps_in_scope_total": 18,
   "step1_classification_counts": {
-    "imda_traced": 0,
-    "cross_imda_traced": 15,
-    "proxy_only": 12
+    "imda_traced": 2,
+    "cross_imda_traced": 16,
+    "proxy_only": 0
   },
   "step1_caps": [
     {
-      "cap_id": "hr.employee_master",
-      "name": "Employee Master Record & HRIS Core",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Core HR",
+      "cap_id": "other.email_communication",
+      "name": "Email & Communication Integration",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
       "classification": "cross_imda_traced",
       "backing_q_nums": [],
       "backing_q_titles": [],
       "cross_imda_sources": [
-        "early-childhood__talent-attraction-platform",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__ediscovery-tool",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__ediscovery-tool",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 8,
+      "vendor_citations": [
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.calendar_scheduling",
+      "name": "Calendar & Scheduling",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
         "essential-business__human-resource-e-scheduling-system",
-        "essential-business__human-resource-management-system-hrms",
+        "legal__legal-chatbot",
+        "legal__matters-management-and-collaboration-tool",
         "personal-care-services__salon-management-system"
       ],
       "has_cross_imda": true,
       "imda_sources": [
-        "early-childhood__talent-attraction-platform",
         "essential-business__human-resource-e-scheduling-system",
-        "essential-business__human-resource-management-system-hrms",
+        "legal__legal-chatbot",
+        "legal__matters-management-and-collaboration-tool",
         "personal-care-services__salon-management-system"
       ],
       "imda_sources_count": 4,
       "vendor_citations": [
-        "bamboohr",
-        "erpnext_hr",
-        "netsuite_suitepeople",
-        "odoo_employees",
-        "sap_successfactors",
-        "workday_hcm"
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
       ],
-      "vendor_citations_count": 6
+      "vendor_citations_count": 3
     },
     {
-      "cap_id": "hr.onboarding_offboarding",
-      "name": "Onboarding & Offboarding Workflows",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Core HR",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "early-childhood__talent-attraction-platform"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "early-childhood__talent-attraction-platform"
-      ],
-      "imda_sources_count": 1,
-      "vendor_citations": [
-        "bamboohr",
-        "netsuite_suitepeople",
-        "odoo_employees",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 5
-    },
-    {
-      "cap_id": "hr.self_service_portal",
-      "name": "Employee Self-Service Portal",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Core HR",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "bamboohr",
-        "erpnext_hr",
-        "odoo_employees",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4
-    },
-    {
-      "cap_id": "hr.org_chart",
-      "name": "Organisation Chart & Reporting Hierarchy",
+      "cap_id": "other.knowledge_base",
+      "name": "Knowledge Base & Wiki",
       "tier": "preferred",
-      "module": "human_resources_management",
-      "sub_module": "Core HR",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
       "classification": "cross_imda_traced",
       "backing_q_nums": [],
       "backing_q_titles": [],
       "cross_imda_sources": [
-        "essential-business__human-resource-e-scheduling-system"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__human-resource-e-scheduling-system"
-      ],
-      "imda_sources_count": 1,
-      "vendor_citations": [
-        "bamboohr",
-        "odoo_employees",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4
-    },
-    {
-      "cap_id": "hr.document_management",
-      "name": "HR Document Management",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Core HR",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "essential-business__human-resource-management-system-hrms"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__human-resource-management-system-hrms"
-      ],
-      "imda_sources_count": 1,
-      "vendor_citations": [
-        "bamboohr",
-        "erpnext_hr",
-        "odoo_employees",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4
-    },
-    {
-      "cap_id": "hr.leave_management",
-      "name": "Leave & Time-Off Management",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Time & Attendance",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "personal-care-services__salon-management-system"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "personal-care-services__salon-management-system"
-      ],
-      "imda_sources_count": 1,
-      "vendor_citations": [
-        "bamboohr",
-        "erpnext_hr",
-        "netsuite_suitepeople",
-        "odoo_employees",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 5
-    },
-    {
-      "cap_id": "hr.time_attendance",
-      "name": "Time & Attendance",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Time & Attendance",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "built-environment__built-environment-digital-platform",
-        "built-environment__smart-inspection-and-management",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
         "early-childhood__pre-school-management-system",
         "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
-        "essential-business__human-resource-management-system-hrms",
-        "personal-care-services__salon-management-system",
-        "security__mobile-enabled-patrol-and-incident-management",
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
       ],
       "has_cross_imda": true,
       "imda_sources": [
-        "built-environment__built-environment-digital-platform",
-        "built-environment__smart-inspection-and-management",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
         "early-childhood__pre-school-management-system",
         "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
-        "essential-business__human-resource-management-system-hrms",
-        "personal-care-services__salon-management-system",
-        "security__mobile-enabled-patrol-and-incident-management",
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
       ],
       "imda_sources_count": 8,
       "vendor_citations": [
-        "bamboohr",
-        "erpnext_hr",
-        "odoo_employees",
-        "oracle_hcm_cloud",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 5
-    },
-    {
-      "cap_id": "hr.shift_scheduling",
-      "name": "Shift Scheduling & Roster Management",
-      "tier": "preferred",
-      "module": "human_resources_management",
-      "sub_module": "Time & Attendance",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "essential-business__human-resource-e-scheduling-system",
-        "personal-care-services__salon-management-system"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__human-resource-e-scheduling-system",
-        "personal-care-services__salon-management-system"
-      ],
-      "imda_sources_count": 2,
-      "vendor_citations": [
-        "odoo_employees",
-        "oracle_hcm_cloud",
-        "workday_hcm"
+        "ms_365",
+        "notion",
+        "odoo_platform"
       ],
       "vendor_citations_count": 3
     },
     {
-      "cap_id": "hr.timeoff_accrual_engine",
-      "name": "Time-Off Balance & Accrual Engine",
+      "cap_id": "other.social_collaboration",
+      "name": "Social Collaboration & Internal Messaging",
       "tier": "preferred",
-      "module": "human_resources_management",
-      "sub_module": "Time & Attendance",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "erpnext_hr",
-        "odoo_employees",
-        "oracle_hcm_cloud",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4
-    },
-    {
-      "cap_id": "hr.payroll_processing",
-      "name": "Payroll Processing & CPF Compliance",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Payroll & Statutory (SG)",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "essential-business__field-service-management",
-        "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__field-service-management",
-        "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin"
-      ],
-      "imda_sources_count": 2,
-      "vendor_citations": [
-        "adp_workforce_now",
-        "erpnext_hr",
-        "gusto",
-        "mom_iras_cpf",
-        "odoo_payroll",
-        "sap_successfactors"
-      ],
-      "vendor_citations_count": 6
-    },
-    {
-      "cap_id": "hr.payslips",
-      "name": "Payslip Generation & Distribution",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Payroll & Statutory (SG)",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "adp_workforce_now",
-        "erpnext_hr",
-        "gusto",
-        "mom_iras_cpf",
-        "odoo_payroll"
-      ],
-      "vendor_citations_count": 5
-    },
-    {
-      "cap_id": "hr.expense_claims",
-      "name": "Employee Expense & Claims",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Payroll & Statutory (SG)",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "bamboohr",
-        "erpnext_hr",
-        "netsuite_suitepeople",
-        "odoo_employees"
-      ],
-      "vendor_citations_count": 4
-    },
-    {
-      "cap_id": "hr.work_permit_foreign_worker",
-      "name": "Work Permit & Foreign Worker Management",
-      "tier": "preferred",
-      "module": "human_resources_management",
-      "sub_module": "Payroll & Statutory (SG)",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "adp_workforce_now",
-        "deel",
-        "mom_iras_cpf"
-      ],
-      "vendor_citations_count": 3
-    },
-    {
-      "cap_id": "hr.statutory_reporting",
-      "name": "Statutory HR Reporting (CPF, IRAS, MOM)",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Payroll & Statutory (SG)",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "essential-business__human-resource-management-system-hrms",
-        "personal-care-services__salon-management-system"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__human-resource-management-system-hrms",
-        "personal-care-services__salon-management-system"
-      ],
-      "imda_sources_count": 2,
-      "vendor_citations": [
-        "adp_workforce_now",
-        "erpnext_hr",
-        "mom_iras_cpf"
-      ],
-      "vendor_citations_count": 3
-    },
-    {
-      "cap_id": "hr.overtime_variable_pay",
-      "name": "Overtime & Variable Pay Calculation",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Payroll & Statutory (SG)",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "erpnext_hr",
-        "mom_iras_cpf",
-        "odoo_payroll",
-        "oracle_hcm_cloud"
-      ],
-      "vendor_citations_count": 4
-    },
-    {
-      "cap_id": "hr.recruitment_ats",
-      "name": "Recruitment & Applicant Tracking (ATS)",
-      "tier": "preferred",
-      "module": "human_resources_management",
-      "sub_module": "Talent Acquisition & Compensation",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "early-childhood__pre-school-management-system",
-        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
-        "early-childhood__talent-attraction-platform",
-        "early-childhood__vacancy-and-waitlist-management",
-        "essential-business__applicant-tracking-and-sourcing-system"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "early-childhood__pre-school-management-system",
-        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
-        "early-childhood__talent-attraction-platform",
-        "early-childhood__vacancy-and-waitlist-management",
-        "essential-business__applicant-tracking-and-sourcing-system"
-      ],
-      "imda_sources_count": 5,
-      "vendor_citations": [
-        "bamboohr",
-        "netsuite_suitepeople",
-        "odoo_recruitment",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 5
-    },
-    {
-      "cap_id": "hr.compensation_benefits",
-      "name": "Compensation & Benefits Management",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Talent Acquisition & Compensation",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "netsuite_suitepeople",
-        "oracle_hcm_cloud",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4
-    },
-    {
-      "cap_id": "hr.benefits_administration",
-      "name": "Benefits Administration",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Talent Acquisition & Compensation",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "adp_workforce_now",
-        "bamboohr",
-        "gusto",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4
-    },
-    {
-      "cap_id": "hr.performance_management",
-      "name": "Performance Management & Appraisals",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Performance & Learning",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "bamboohr",
-        "erpnext_hr",
-        "oracle_hcm_cloud",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 5
-    },
-    {
-      "cap_id": "hr.learning_development",
-      "name": "Learning, Development & Training Records",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Performance & Learning",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
       "classification": "cross_imda_traced",
       "backing_q_nums": [],
       "backing_q_titles": [],
       "cross_imda_sources": [
         "early-childhood__learning-platform-for-cpd-and-mentoring",
-        "essential-business__human-resource-e-scheduling-system"
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__chatbots-for-customer-engagement",
+        "legal__document-assembly-software",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system"
       ],
       "has_cross_imda": true,
       "imda_sources": [
         "early-childhood__learning-platform-for-cpd-and-mentoring",
-        "essential-business__human-resource-e-scheduling-system"
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__chatbots-for-customer-engagement",
+        "legal__document-assembly-software",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system"
       ],
-      "imda_sources_count": 2,
+      "imda_sources_count": 10,
       "vendor_citations": [
-        "erpnext_hr",
-        "oracle_hcm_cloud",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4
-    },
-    {
-      "cap_id": "hr.succession_talent",
-      "name": "Succession Planning & Talent Management",
-      "tier": "preferred",
-      "module": "human_resources_management",
-      "sub_module": "Performance & Learning",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "oracle_hcm_cloud",
-        "sap_successfactors",
-        "workday_hcm"
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
       ],
       "vendor_citations_count": 3
     },
     {
-      "cap_id": "hr.engagement_surveys",
-      "name": "Employee Engagement & Surveys",
+      "cap_id": "other.workflow_automation",
+      "name": "Workflow Automation & Approval Engine",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Workflow & Approval Engine",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__talent-attraction-platform",
+        "legal__document-assembly-software",
+        "legal__document-review-software"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__talent-attraction-platform",
+        "legal__document-assembly-software",
+        "legal__document-review-software"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform",
+        "zapier"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "other.notification_alerts",
+      "name": "Notification & Alert Management",
       "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Performance & Learning",
+      "module": "others",
+      "sub_module": "Workflow & Approval Engine",
       "classification": "cross_imda_traced",
       "backing_q_nums": [],
       "backing_q_titles": [],
       "cross_imda_sources": [
-        "essential-business__employee-rewards-and-recognition"
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__talent-attraction-platform",
+        "early-childhood__vacancy-and-waitlist-management",
+        "early-childhood__video-analytics-for-safety-and-security",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__security-collaboration-platform",
+        "security__surveillance-and-analytics",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
       ],
       "has_cross_imda": true,
       "imda_sources": [
-        "essential-business__employee-rewards-and-recognition"
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__talent-attraction-platform",
+        "early-childhood__vacancy-and-waitlist-management",
+        "early-childhood__video-analytics-for-safety-and-security",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__security-collaboration-platform",
+        "security__surveillance-and-analytics",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
       ],
-      "imda_sources_count": 1,
+      "imda_sources_count": 14,
       "vendor_citations": [
-        "bamboohr",
-        "sap_successfactors",
-        "workday_hcm"
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
       ],
       "vendor_citations_count": 3
     },
     {
-      "cap_id": "hr.workforce_planning",
-      "name": "Workforce Planning & Headcount Forecasting",
-      "tier": "advanced",
-      "module": "human_resources_management",
-      "sub_module": "HR Lifecycle & Analytics",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-      ],
-      "imda_sources_count": 1,
-      "vendor_citations": [
-        "netsuite_suitepeople",
-        "oracle_hcm_cloud",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4
-    },
-    {
-      "cap_id": "hr.disciplinary_grievance",
-      "name": "Disciplinary & Grievance Management",
-      "tier": "advanced",
-      "module": "human_resources_management",
-      "sub_module": "HR Lifecycle & Analytics",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "bamboohr",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 3
-    },
-    {
-      "cap_id": "hr.exit_alumni",
-      "name": "Exit Interviews & Alumni Management",
-      "tier": "advanced",
-      "module": "human_resources_management",
-      "sub_module": "HR Lifecycle & Analytics",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "bamboohr",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 3
-    },
-    {
-      "cap_id": "hr.analytics_dashboards",
-      "name": "HR Analytics & Dashboards",
+      "cap_id": "other.document_management",
+      "name": "Document Management System",
       "tier": "preferred",
-      "module": "human_resources_management",
-      "sub_module": "HR Lifecycle & Analytics",
+      "module": "others",
+      "sub_module": "Document Management & Forms",
       "classification": "cross_imda_traced",
       "backing_q_nums": [],
       "backing_q_titles": [],
       "cross_imda_sources": [
-        "early-childhood__data-mining-and-analytics-centre-operations",
-        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
-        "essential-business__applicant-tracking-and-sourcing-system",
-        "essential-business__human-resource-e-scheduling-system",
-        "personal-care-services__salon-management-system"
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
       ],
       "has_cross_imda": true,
       "imda_sources": [
-        "early-childhood__data-mining-and-analytics-centre-operations",
-        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
-        "essential-business__applicant-tracking-and-sourcing-system",
-        "essential-business__human-resource-e-scheduling-system",
-        "personal-care-services__salon-management-system"
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
       ],
-      "imda_sources_count": 5,
+      "imda_sources_count": 13,
       "vendor_citations": [
-        "bamboohr",
-        "oracle_hcm_cloud",
-        "sap_successfactors",
-        "workday_hcm"
+        "erpnext_core",
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
       ],
       "vendor_citations_count": 4
     },
     {
-      "cap_id": "hr.ai_ml_insights",
-      "name": "AI / ML in HR",
-      "tier": "advanced",
-      "module": "human_resources_management",
-      "sub_module": "HR Lifecycle & Analytics",
+      "cap_id": "other.custom_forms_surveys",
+      "name": "Custom Forms & Survey Builder",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Document Management & Forms",
       "classification": "cross_imda_traced",
       "backing_q_nums": [],
       "backing_q_titles": [],
       "cross_imda_sources": [
         "early-childhood__data-mining-and-analytics-centre-operations",
         "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
-        "essential-business__applicant-tracking-and-sourcing-system",
-        "essential-business__human-resource-e-scheduling-system",
-        "essential-business__human-resource-management-system-hrms"
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__legal-chatbot",
+        "retail__integrated-pos-with-mobile-features",
+        "security__automated-visitor-management",
+        "tourism-travel-agent__travel-evisa"
       ],
       "has_cross_imda": true,
       "imda_sources": [
         "early-childhood__data-mining-and-analytics-centre-operations",
         "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
-        "essential-business__applicant-tracking-and-sourcing-system",
-        "essential-business__human-resource-e-scheduling-system",
-        "essential-business__human-resource-management-system-hrms"
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__legal-chatbot",
+        "retail__integrated-pos-with-mobile-features",
+        "security__automated-visitor-management",
+        "tourism-travel-agent__travel-evisa"
       ],
-      "imda_sources_count": 5,
+      "imda_sources_count": 13,
       "vendor_citations": [
-        "oracle_hcm_cloud",
-        "sap_successfactors",
-        "workday_hcm"
+        "erpnext_core",
+        "google_workspace",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.bi_dashboards",
+      "name": "Business Intelligence & Dashboards",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "BI, AI & Compliance (Cross-cutting)",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q8"
+      ],
+      "backing_q_titles": [
+        "Dashboards and Reports"
+      ],
+      "cross_imda_sources": [
+        "advanced-manufacturing__computer-aided-design-and-computer-aided-manufacturing-cad-cam",
+        "advanced-manufacturing__product-and-manufacturing-process-configuration",
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
+        "built-environment__data-and-ai-driven-decision-support-system",
+        "built-environment__smart-inspection-and-management",
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "cybersecurity__backup",
+        "cybersecurity__integrated-anti-malware-firewall-and-backup",
+        "cybersecurity__secure-protect-firewall",
+        "cybersecurity__secure-protect-virus-malware-protection",
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__talent-attraction-platform",
+        "early-childhood__video-analytics-for-safety-and-security",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__carbon-management-solution",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__digital-marketing-packages",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__employee-rewards-and-recognition",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "food-services__connected-business-suite",
+        "legal__risk-assessment-solution-kyc-aml",
+        "logistics__active-cold-chain-management",
+        "logistics__freight-management",
+        "logistics__networked-trade-platform-value-added-services",
+        "logistics__transport-management",
+        "logistics__warehouse-management",
+        "personal-care-services__salon-management-system",
+        "retail__electronic-shelf-label-esl",
+        "retail__in-store-analytics",
+        "retail__integrated-pos-with-mobile-features",
+        "retail__omnichannel-retail-management-ocrm",
+        "retail__self-checkout-solution",
+        "security__security-collaboration-platform",
+        "wholesale__inventory-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__computer-aided-design-and-computer-aided-manufacturing-cad-cam",
+        "advanced-manufacturing__product-and-manufacturing-process-configuration",
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
+        "built-environment__data-and-ai-driven-decision-support-system",
+        "built-environment__smart-inspection-and-management",
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "cybersecurity__backup",
+        "cybersecurity__integrated-anti-malware-firewall-and-backup",
+        "cybersecurity__secure-protect-firewall",
+        "cybersecurity__secure-protect-virus-malware-protection",
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__talent-attraction-platform",
+        "early-childhood__video-analytics-for-safety-and-security",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__carbon-management-solution",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__digital-marketing-packages",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__employee-rewards-and-recognition",
+        "essential-business__gen-ai-digital-training-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "food-services__connected-business-suite",
+        "legal__risk-assessment-solution-kyc-aml",
+        "logistics__active-cold-chain-management",
+        "logistics__freight-management",
+        "logistics__networked-trade-platform-value-added-services",
+        "logistics__transport-management",
+        "logistics__warehouse-management",
+        "personal-care-services__salon-management-system",
+        "retail__electronic-shelf-label-esl",
+        "retail__in-store-analytics",
+        "retail__integrated-pos-with-mobile-features",
+        "retail__omnichannel-retail-management-ocrm",
+        "retail__self-checkout-solution",
+        "security__security-collaboration-platform",
+        "wholesale__inventory-management"
+      ],
+      "imda_sources_count": 40,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.ai_assistant",
+      "name": "AI Assistant & Copilot",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "BI, AI & Compliance (Cross-cutting)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__document-management-and-mobile-access-system",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__speech-transcription-for-legal-matters",
+        "retail__in-store-analytics",
+        "retail__omnichannel-retail-management-ocrm",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__document-management-and-mobile-access-system",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__speech-transcription-for-legal-matters",
+        "retail__in-store-analytics",
+        "retail__omnichannel-retail-management-ocrm",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "imda_sources_count": 16,
+      "vendor_citations": [
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.compliance_audit",
+      "name": "Compliance & Audit Framework",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "BI, AI & Compliance (Cross-cutting)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms",
+        "legal__risk-assessment-solution-kyc-aml",
+        "legal__translation-software",
+        "security__security-collaboration-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms",
+        "legal__risk-assessment-solution-kyc-aml",
+        "legal__translation-software",
+        "security__security-collaboration-platform"
+      ],
+      "imda_sources_count": 14,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.multi_company_branch",
+      "name": "Multi-Company & Multi-Branch",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Multi-Org & Master Data Management",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__vacancy-and-waitlist-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__vacancy-and-waitlist-management"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.master_data_management",
+      "name": "Master Data Management",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Multi-Org & Master Data Management",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "cybersecurity__integrated-anti-malware-firewall-and-backup"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "cybersecurity__integrated-anti-malware-firewall-and-backup"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.low_code",
+      "name": "Low-Code / No-Code Customisation",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Low-Code & Integration Platform",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__online-legal-research-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__online-legal-research-system"
+      ],
+      "imda_sources_count": 10,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.api_integration",
+      "name": "API & Integration Platform",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Low-Code & Integration Platform",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__3d-modeling-immersive-visualisation-and-analysis",
+        "built-environment__built-environment-digital-platform",
+        "built-environment__data-and-ai-driven-decision-support-system",
+        "built-environment__digital-contract-management-digital-payment",
+        "built-environment__smart-inspection-and-management",
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "essential-business__applicant-tracking-and-sourcing-system",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__employee-rewards-and-recognition",
+        "essential-business__human-resource-e-scheduling-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "food-services__connected-business-suite",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__automated-visitor-management",
+        "security__security-collaboration-platform",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__3d-modeling-immersive-visualisation-and-analysis",
+        "built-environment__built-environment-digital-platform",
+        "built-environment__data-and-ai-driven-decision-support-system",
+        "built-environment__digital-contract-management-digital-payment",
+        "built-environment__smart-inspection-and-management",
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "essential-business__applicant-tracking-and-sourcing-system",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__employee-rewards-and-recognition",
+        "essential-business__human-resource-e-scheduling-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "food-services__connected-business-suite",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__automated-visitor-management",
+        "security__security-collaboration-platform",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 25,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform",
+        "zapier"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "other.digital_signature",
+      "name": "Digital Signature & e-Signing",
+      "tier": "",
+      "module": "others",
+      "sub_module": "Utility Tools (e-Sign, Label, Training)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "docusign",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.print_label",
+      "name": "Print & Label Management",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Utility Tools (e-Sign, Label, Training)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__risk-assessment-solution-kyc-aml",
+        "logistics__active-cold-chain-management",
+        "logistics__freight-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__risk-assessment-solution-kyc-aml",
+        "logistics__active-cold-chain-management",
+        "logistics__freight-management"
+      ],
+      "imda_sources_count": 6,
+      "vendor_citations": [
+        "erpnext_core",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "other.training_help",
+      "name": "Training & Help System",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Utility Tools (e-Sign, Label, Training)",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q4",
+        "Q7"
+      ],
+      "backing_q_titles": [
+        "Learner Module",
+        "GenAI Content Transformation"
+      ],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__marketing-and-sales-content-generation",
+        "food-services__connected-business-suite"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__gen-ai-digital-training-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "food-services__connected-business-suite"
+      ],
+      "imda_sources_count": 7,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
       ],
       "vendor_citations_count": 3
     }
@@ -811,37 +936,81 @@
   ],
   "expansion_caps": [
     {
-      "cap_id": "hr.employee_master",
-      "name": "Employee Master Record & HRIS Core",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Core HR",
+      "cap_id": "other.email_communication",
+      "name": "Email & Communication Integration",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
       "classification": "cross_imda_traced",
       "backing_q_nums": [],
       "backing_q_titles": [],
       "cross_imda_sources": [
-        "early-childhood__talent-attraction-platform",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__ediscovery-tool",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__ediscovery-tool",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 8,
+      "vendor_citations": [
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.calendar_scheduling",
+      "name": "Calendar & Scheduling",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
         "essential-business__human-resource-e-scheduling-system",
-        "essential-business__human-resource-management-system-hrms",
+        "legal__legal-chatbot",
+        "legal__matters-management-and-collaboration-tool",
         "personal-care-services__salon-management-system"
       ],
       "has_cross_imda": true,
       "imda_sources": [
-        "early-childhood__talent-attraction-platform",
         "essential-business__human-resource-e-scheduling-system",
-        "essential-business__human-resource-management-system-hrms",
+        "legal__legal-chatbot",
+        "legal__matters-management-and-collaboration-tool",
         "personal-care-services__salon-management-system"
       ],
       "imda_sources_count": 4,
       "vendor_citations": [
-        "bamboohr",
-        "erpnext_hr",
-        "netsuite_suitepeople",
-        "odoo_employees",
-        "sap_successfactors",
-        "workday_hcm"
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
       ],
-      "vendor_citations_count": 6,
+      "vendor_citations_count": 3,
       "vendor_coverage": {
         "yes": 0,
         "partial": 0,
@@ -853,245 +1022,40 @@
       "expansion_verdict": "potential_overreach"
     },
     {
-      "cap_id": "hr.onboarding_offboarding",
-      "name": "Onboarding & Offboarding Workflows",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Core HR",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "early-childhood__talent-attraction-platform"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "early-childhood__talent-attraction-platform"
-      ],
-      "imda_sources_count": 1,
-      "vendor_citations": [
-        "bamboohr",
-        "netsuite_suitepeople",
-        "odoo_employees",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 5,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.self_service_portal",
-      "name": "Employee Self-Service Portal",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Core HR",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "bamboohr",
-        "erpnext_hr",
-        "odoo_employees",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.org_chart",
-      "name": "Organisation Chart & Reporting Hierarchy",
+      "cap_id": "other.knowledge_base",
+      "name": "Knowledge Base & Wiki",
       "tier": "preferred",
-      "module": "human_resources_management",
-      "sub_module": "Core HR",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
       "classification": "cross_imda_traced",
       "backing_q_nums": [],
       "backing_q_titles": [],
       "cross_imda_sources": [
-        "essential-business__human-resource-e-scheduling-system"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__human-resource-e-scheduling-system"
-      ],
-      "imda_sources_count": 1,
-      "vendor_citations": [
-        "bamboohr",
-        "odoo_employees",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.document_management",
-      "name": "HR Document Management",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Core HR",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "essential-business__human-resource-management-system-hrms"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__human-resource-management-system-hrms"
-      ],
-      "imda_sources_count": 1,
-      "vendor_citations": [
-        "bamboohr",
-        "erpnext_hr",
-        "odoo_employees",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.leave_management",
-      "name": "Leave & Time-Off Management",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Time & Attendance",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "personal-care-services__salon-management-system"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "personal-care-services__salon-management-system"
-      ],
-      "imda_sources_count": 1,
-      "vendor_citations": [
-        "bamboohr",
-        "erpnext_hr",
-        "netsuite_suitepeople",
-        "odoo_employees",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 5,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.time_attendance",
-      "name": "Time & Attendance",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Time & Attendance",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "built-environment__built-environment-digital-platform",
-        "built-environment__smart-inspection-and-management",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
         "early-childhood__pre-school-management-system",
         "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
-        "essential-business__human-resource-management-system-hrms",
-        "personal-care-services__salon-management-system",
-        "security__mobile-enabled-patrol-and-incident-management",
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
       ],
       "has_cross_imda": true,
       "imda_sources": [
-        "built-environment__built-environment-digital-platform",
-        "built-environment__smart-inspection-and-management",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
         "early-childhood__pre-school-management-system",
         "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
-        "essential-business__human-resource-management-system-hrms",
-        "personal-care-services__salon-management-system",
-        "security__mobile-enabled-patrol-and-incident-management",
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
       ],
       "imda_sources_count": 8,
       "vendor_citations": [
-        "bamboohr",
-        "erpnext_hr",
-        "odoo_employees",
-        "oracle_hcm_cloud",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 5,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.shift_scheduling",
-      "name": "Shift Scheduling & Roster Management",
-      "tier": "preferred",
-      "module": "human_resources_management",
-      "sub_module": "Time & Attendance",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "essential-business__human-resource-e-scheduling-system",
-        "personal-care-services__salon-management-system"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__human-resource-e-scheduling-system",
-        "personal-care-services__salon-management-system"
-      ],
-      "imda_sources_count": 2,
-      "vendor_citations": [
-        "odoo_employees",
-        "oracle_hcm_cloud",
-        "workday_hcm"
+        "ms_365",
+        "notion",
+        "odoo_platform"
       ],
       "vendor_citations_count": 3,
       "vendor_coverage": {
@@ -1105,415 +1069,44 @@
       "expansion_verdict": "potential_overreach"
     },
     {
-      "cap_id": "hr.timeoff_accrual_engine",
-      "name": "Time-Off Balance & Accrual Engine",
+      "cap_id": "other.social_collaboration",
+      "name": "Social Collaboration & Internal Messaging",
       "tier": "preferred",
-      "module": "human_resources_management",
-      "sub_module": "Time & Attendance",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "erpnext_hr",
-        "odoo_employees",
-        "oracle_hcm_cloud",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.payroll_processing",
-      "name": "Payroll Processing & CPF Compliance",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Payroll & Statutory (SG)",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "essential-business__field-service-management",
-        "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__field-service-management",
-        "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin"
-      ],
-      "imda_sources_count": 2,
-      "vendor_citations": [
-        "adp_workforce_now",
-        "erpnext_hr",
-        "gusto",
-        "mom_iras_cpf",
-        "odoo_payroll",
-        "sap_successfactors"
-      ],
-      "vendor_citations_count": 6,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.payslips",
-      "name": "Payslip Generation & Distribution",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Payroll & Statutory (SG)",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "adp_workforce_now",
-        "erpnext_hr",
-        "gusto",
-        "mom_iras_cpf",
-        "odoo_payroll"
-      ],
-      "vendor_citations_count": 5,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.expense_claims",
-      "name": "Employee Expense & Claims",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Payroll & Statutory (SG)",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "bamboohr",
-        "erpnext_hr",
-        "netsuite_suitepeople",
-        "odoo_employees"
-      ],
-      "vendor_citations_count": 4,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.work_permit_foreign_worker",
-      "name": "Work Permit & Foreign Worker Management",
-      "tier": "preferred",
-      "module": "human_resources_management",
-      "sub_module": "Payroll & Statutory (SG)",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "adp_workforce_now",
-        "deel",
-        "mom_iras_cpf"
-      ],
-      "vendor_citations_count": 3,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.statutory_reporting",
-      "name": "Statutory HR Reporting (CPF, IRAS, MOM)",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Payroll & Statutory (SG)",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "essential-business__human-resource-management-system-hrms",
-        "personal-care-services__salon-management-system"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "essential-business__human-resource-management-system-hrms",
-        "personal-care-services__salon-management-system"
-      ],
-      "imda_sources_count": 2,
-      "vendor_citations": [
-        "adp_workforce_now",
-        "erpnext_hr",
-        "mom_iras_cpf"
-      ],
-      "vendor_citations_count": 3,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.overtime_variable_pay",
-      "name": "Overtime & Variable Pay Calculation",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Payroll & Statutory (SG)",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "erpnext_hr",
-        "mom_iras_cpf",
-        "odoo_payroll",
-        "oracle_hcm_cloud"
-      ],
-      "vendor_citations_count": 4,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.recruitment_ats",
-      "name": "Recruitment & Applicant Tracking (ATS)",
-      "tier": "preferred",
-      "module": "human_resources_management",
-      "sub_module": "Talent Acquisition & Compensation",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "early-childhood__pre-school-management-system",
-        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
-        "early-childhood__talent-attraction-platform",
-        "early-childhood__vacancy-and-waitlist-management",
-        "essential-business__applicant-tracking-and-sourcing-system"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "early-childhood__pre-school-management-system",
-        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
-        "early-childhood__talent-attraction-platform",
-        "early-childhood__vacancy-and-waitlist-management",
-        "essential-business__applicant-tracking-and-sourcing-system"
-      ],
-      "imda_sources_count": 5,
-      "vendor_citations": [
-        "bamboohr",
-        "netsuite_suitepeople",
-        "odoo_recruitment",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 5,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.compensation_benefits",
-      "name": "Compensation & Benefits Management",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Talent Acquisition & Compensation",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "netsuite_suitepeople",
-        "oracle_hcm_cloud",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.benefits_administration",
-      "name": "Benefits Administration",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Talent Acquisition & Compensation",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "adp_workforce_now",
-        "bamboohr",
-        "gusto",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.performance_management",
-      "name": "Performance Management & Appraisals",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Performance & Learning",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "bamboohr",
-        "erpnext_hr",
-        "oracle_hcm_cloud",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 5,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.learning_development",
-      "name": "Learning, Development & Training Records",
-      "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Performance & Learning",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
       "classification": "cross_imda_traced",
       "backing_q_nums": [],
       "backing_q_titles": [],
       "cross_imda_sources": [
         "early-childhood__learning-platform-for-cpd-and-mentoring",
-        "essential-business__human-resource-e-scheduling-system"
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__chatbots-for-customer-engagement",
+        "legal__document-assembly-software",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system"
       ],
       "has_cross_imda": true,
       "imda_sources": [
         "early-childhood__learning-platform-for-cpd-and-mentoring",
-        "essential-business__human-resource-e-scheduling-system"
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__chatbots-for-customer-engagement",
+        "legal__document-assembly-software",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system"
       ],
-      "imda_sources_count": 2,
+      "imda_sources_count": 10,
       "vendor_citations": [
-        "erpnext_hr",
-        "oracle_hcm_cloud",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.succession_talent",
-      "name": "Succession Planning & Talent Management",
-      "tier": "preferred",
-      "module": "human_resources_management",
-      "sub_module": "Performance & Learning",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "oracle_hcm_cloud",
-        "sap_successfactors",
-        "workday_hcm"
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
       ],
       "vendor_citations_count": 3,
       "vendor_coverage": {
@@ -1527,26 +1120,92 @@
       "expansion_verdict": "potential_overreach"
     },
     {
-      "cap_id": "hr.engagement_surveys",
-      "name": "Employee Engagement & Surveys",
+      "cap_id": "other.workflow_automation",
+      "name": "Workflow Automation & Approval Engine",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Workflow & Approval Engine",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__talent-attraction-platform",
+        "legal__document-assembly-software",
+        "legal__document-review-software"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__talent-attraction-platform",
+        "legal__document-assembly-software",
+        "legal__document-review-software"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform",
+        "zapier"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.notification_alerts",
+      "name": "Notification & Alert Management",
       "tier": "required",
-      "module": "human_resources_management",
-      "sub_module": "Performance & Learning",
+      "module": "others",
+      "sub_module": "Workflow & Approval Engine",
       "classification": "cross_imda_traced",
       "backing_q_nums": [],
       "backing_q_titles": [],
       "cross_imda_sources": [
-        "essential-business__employee-rewards-and-recognition"
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__talent-attraction-platform",
+        "early-childhood__vacancy-and-waitlist-management",
+        "early-childhood__video-analytics-for-safety-and-security",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__security-collaboration-platform",
+        "security__surveillance-and-analytics",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
       ],
       "has_cross_imda": true,
       "imda_sources": [
-        "essential-business__employee-rewards-and-recognition"
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__talent-attraction-platform",
+        "early-childhood__vacancy-and-waitlist-management",
+        "early-childhood__video-analytics-for-safety-and-security",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__security-collaboration-platform",
+        "security__surveillance-and-analytics",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
       ],
-      "imda_sources_count": 1,
+      "imda_sources_count": 14,
       "vendor_citations": [
-        "bamboohr",
-        "sap_successfactors",
-        "workday_hcm"
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
       ],
       "vendor_citations_count": 3,
       "vendor_coverage": {
@@ -1560,127 +1219,51 @@
       "expansion_verdict": "potential_overreach"
     },
     {
-      "cap_id": "hr.workforce_planning",
-      "name": "Workforce Planning & Headcount Forecasting",
-      "tier": "advanced",
-      "module": "human_resources_management",
-      "sub_module": "HR Lifecycle & Analytics",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-      ],
-      "imda_sources_count": 1,
-      "vendor_citations": [
-        "netsuite_suitepeople",
-        "oracle_hcm_cloud",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 4,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.disciplinary_grievance",
-      "name": "Disciplinary & Grievance Management",
-      "tier": "advanced",
-      "module": "human_resources_management",
-      "sub_module": "HR Lifecycle & Analytics",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "bamboohr",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 3,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.exit_alumni",
-      "name": "Exit Interviews & Alumni Management",
-      "tier": "advanced",
-      "module": "human_resources_management",
-      "sub_module": "HR Lifecycle & Analytics",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "bamboohr",
-        "sap_successfactors",
-        "workday_hcm"
-      ],
-      "vendor_citations_count": 3,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "hr.analytics_dashboards",
-      "name": "HR Analytics & Dashboards",
+      "cap_id": "other.document_management",
+      "name": "Document Management System",
       "tier": "preferred",
-      "module": "human_resources_management",
-      "sub_module": "HR Lifecycle & Analytics",
+      "module": "others",
+      "sub_module": "Document Management & Forms",
       "classification": "cross_imda_traced",
       "backing_q_nums": [],
       "backing_q_titles": [],
       "cross_imda_sources": [
-        "early-childhood__data-mining-and-analytics-centre-operations",
-        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
-        "essential-business__applicant-tracking-and-sourcing-system",
-        "essential-business__human-resource-e-scheduling-system",
-        "personal-care-services__salon-management-system"
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
       ],
       "has_cross_imda": true,
       "imda_sources": [
-        "early-childhood__data-mining-and-analytics-centre-operations",
-        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
-        "essential-business__applicant-tracking-and-sourcing-system",
-        "essential-business__human-resource-e-scheduling-system",
-        "personal-care-services__salon-management-system"
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
       ],
-      "imda_sources_count": 5,
+      "imda_sources_count": 13,
       "vendor_citations": [
-        "bamboohr",
-        "oracle_hcm_cloud",
-        "sap_successfactors",
-        "workday_hcm"
+        "erpnext_core",
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
       ],
       "vendor_citations_count": 4,
       "vendor_coverage": {
@@ -1694,36 +1277,458 @@
       "expansion_verdict": "potential_overreach"
     },
     {
-      "cap_id": "hr.ai_ml_insights",
-      "name": "AI / ML in HR",
-      "tier": "advanced",
-      "module": "human_resources_management",
-      "sub_module": "HR Lifecycle & Analytics",
+      "cap_id": "other.custom_forms_surveys",
+      "name": "Custom Forms & Survey Builder",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Document Management & Forms",
       "classification": "cross_imda_traced",
       "backing_q_nums": [],
       "backing_q_titles": [],
       "cross_imda_sources": [
         "early-childhood__data-mining-and-analytics-centre-operations",
         "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
-        "essential-business__applicant-tracking-and-sourcing-system",
-        "essential-business__human-resource-e-scheduling-system",
-        "essential-business__human-resource-management-system-hrms"
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__legal-chatbot",
+        "retail__integrated-pos-with-mobile-features",
+        "security__automated-visitor-management",
+        "tourism-travel-agent__travel-evisa"
       ],
       "has_cross_imda": true,
       "imda_sources": [
         "early-childhood__data-mining-and-analytics-centre-operations",
         "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
-        "essential-business__applicant-tracking-and-sourcing-system",
-        "essential-business__human-resource-e-scheduling-system",
-        "essential-business__human-resource-management-system-hrms"
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__legal-chatbot",
+        "retail__integrated-pos-with-mobile-features",
+        "security__automated-visitor-management",
+        "tourism-travel-agent__travel-evisa"
       ],
-      "imda_sources_count": 5,
+      "imda_sources_count": 13,
       "vendor_citations": [
-        "oracle_hcm_cloud",
-        "sap_successfactors",
-        "workday_hcm"
+        "erpnext_core",
+        "google_workspace",
+        "odoo_platform"
       ],
       "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.ai_assistant",
+      "name": "AI Assistant & Copilot",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "BI, AI & Compliance (Cross-cutting)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__document-management-and-mobile-access-system",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__speech-transcription-for-legal-matters",
+        "retail__in-store-analytics",
+        "retail__omnichannel-retail-management-ocrm",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__document-management-and-mobile-access-system",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__speech-transcription-for-legal-matters",
+        "retail__in-store-analytics",
+        "retail__omnichannel-retail-management-ocrm",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "imda_sources_count": 16,
+      "vendor_citations": [
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.compliance_audit",
+      "name": "Compliance & Audit Framework",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "BI, AI & Compliance (Cross-cutting)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms",
+        "legal__risk-assessment-solution-kyc-aml",
+        "legal__translation-software",
+        "security__security-collaboration-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms",
+        "legal__risk-assessment-solution-kyc-aml",
+        "legal__translation-software",
+        "security__security-collaboration-platform"
+      ],
+      "imda_sources_count": 14,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.multi_company_branch",
+      "name": "Multi-Company & Multi-Branch",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Multi-Org & Master Data Management",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__vacancy-and-waitlist-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__vacancy-and-waitlist-management"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.master_data_management",
+      "name": "Master Data Management",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Multi-Org & Master Data Management",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "cybersecurity__integrated-anti-malware-firewall-and-backup"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "cybersecurity__integrated-anti-malware-firewall-and-backup"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.low_code",
+      "name": "Low-Code / No-Code Customisation",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Low-Code & Integration Platform",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__online-legal-research-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__online-legal-research-system"
+      ],
+      "imda_sources_count": 10,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.api_integration",
+      "name": "API & Integration Platform",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Low-Code & Integration Platform",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__3d-modeling-immersive-visualisation-and-analysis",
+        "built-environment__built-environment-digital-platform",
+        "built-environment__data-and-ai-driven-decision-support-system",
+        "built-environment__digital-contract-management-digital-payment",
+        "built-environment__smart-inspection-and-management",
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "essential-business__applicant-tracking-and-sourcing-system",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__employee-rewards-and-recognition",
+        "essential-business__human-resource-e-scheduling-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "food-services__connected-business-suite",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__automated-visitor-management",
+        "security__security-collaboration-platform",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__3d-modeling-immersive-visualisation-and-analysis",
+        "built-environment__built-environment-digital-platform",
+        "built-environment__data-and-ai-driven-decision-support-system",
+        "built-environment__digital-contract-management-digital-payment",
+        "built-environment__smart-inspection-and-management",
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "essential-business__applicant-tracking-and-sourcing-system",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__employee-rewards-and-recognition",
+        "essential-business__human-resource-e-scheduling-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "food-services__connected-business-suite",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__automated-visitor-management",
+        "security__security-collaboration-platform",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 25,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform",
+        "zapier"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.digital_signature",
+      "name": "Digital Signature & e-Signing",
+      "tier": "",
+      "module": "others",
+      "sub_module": "Utility Tools (e-Sign, Label, Training)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "docusign",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.print_label",
+      "name": "Print & Label Management",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Utility Tools (e-Sign, Label, Training)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__risk-assessment-solution-kyc-aml",
+        "logistics__active-cold-chain-management",
+        "logistics__freight-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__risk-assessment-solution-kyc-aml",
+        "logistics__active-cold-chain-management",
+        "logistics__freight-management"
+      ],
+      "imda_sources_count": 6,
+      "vendor_citations": [
+        "erpnext_core",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 2,
       "vendor_coverage": {
         "yes": 0,
         "partial": 0,
@@ -1739,89 +1744,33 @@
     "cross_imda_traced": {
       "justified_real_world": 0,
       "questionable": 0,
-      "potential_overreach": 15
-    },
-    "proxy_only": {
-      "justified_real_world": 0,
-      "questionable": 0,
-      "potential_overreach": 12
+      "potential_overreach": 16
     }
   },
   "by_module": {
-    "human_resources_management": {
-      "imda_traced": 0,
-      "cross_imda_traced": 15,
-      "proxy_only": 12,
-      "expansion_overreach": 27,
+    "others": {
+      "imda_traced": 2,
+      "cross_imda_traced": 16,
+      "proxy_only": 0,
+      "expansion_overreach": 16,
       "expansion_justified": 0
     }
   },
   "sub_module_pass": [
     {
-      "module": "human_resources_management",
-      "sub_module": "Core HR",
-      "r_total": 4,
+      "module": "others",
+      "sub_module": "Workflow & Approval Engine",
+      "r_total": 1,
       "r_backed": [],
       "r_unbacked": [
-        "hr.employee_master",
-        "hr.onboarding_offboarding",
-        "hr.self_service_portal",
-        "hr.document_management"
-      ],
-      "status": "fail"
-    },
-    {
-      "module": "human_resources_management",
-      "sub_module": "Time & Attendance",
-      "r_total": 2,
-      "r_backed": [],
-      "r_unbacked": [
-        "hr.leave_management",
-        "hr.time_attendance"
-      ],
-      "status": "fail"
-    },
-    {
-      "module": "human_resources_management",
-      "sub_module": "Payroll & Statutory (SG)",
-      "r_total": 5,
-      "r_backed": [],
-      "r_unbacked": [
-        "hr.payroll_processing",
-        "hr.payslips",
-        "hr.expense_claims",
-        "hr.statutory_reporting",
-        "hr.overtime_variable_pay"
-      ],
-      "status": "fail"
-    },
-    {
-      "module": "human_resources_management",
-      "sub_module": "Talent Acquisition & Compensation",
-      "r_total": 2,
-      "r_backed": [],
-      "r_unbacked": [
-        "hr.compensation_benefits",
-        "hr.benefits_administration"
-      ],
-      "status": "fail"
-    },
-    {
-      "module": "human_resources_management",
-      "sub_module": "Performance & Learning",
-      "r_total": 3,
-      "r_backed": [],
-      "r_unbacked": [
-        "hr.performance_management",
-        "hr.learning_development",
-        "hr.engagement_surveys"
+        "other.notification_alerts"
       ],
       "status": "fail"
     }
   ],
   "module_pass": {
-    "human_resources_management": {
-      "r_sub_mod_count": 5,
+    "others": {
+      "r_sub_mod_count": 1,
       "r_sub_mod_passing": 0,
       "passing_sub_mods": [],
       "status": "fail"
@@ -1829,12 +1778,11 @@
   },
   "sol_cat_passes_canonical": false,
   "smallest_demotion_plan": {
-    "human_resources_management": [
-      "hr.leave_management",
-      "hr.time_attendance"
+    "others": [
+      "other.notification_alerts"
     ]
   },
-  "plan_total_demotions": 2,
+  "plan_total_demotions": 1,
   "q_inverse_view": [
     {
       "q_num": "Q1",
@@ -1881,7 +1829,7 @@
           "cap_id": "other.training_help",
           "name": "Training & Help System",
           "module": "others",
-          "out_of_scope": true
+          "out_of_scope": false
         }
       ],
       "modules": [
@@ -1926,7 +1874,7 @@
           "cap_id": "other.training_help",
           "name": "Training & Help System",
           "module": "others",
-          "out_of_scope": true
+          "out_of_scope": false
         }
       ],
       "modules": [
@@ -1944,7 +1892,7 @@
           "cap_id": "other.bi_dashboards",
           "name": "Business Intelligence & Dashboards",
           "module": "others",
-          "out_of_scope": true
+          "out_of_scope": false
         }
       ],
       "modules": [

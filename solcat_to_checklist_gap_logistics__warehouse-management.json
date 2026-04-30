@@ -4,13 +4,1340 @@
   "imda_qs_total": 19,
   "imda_qs_mapped": 5,
   "imda_qs_orphan": 14,
-  "caps_in_scope_total": 27,
+  "caps_in_scope_total": 97,
   "step1_classification_counts": {
-    "imda_traced": 4,
-    "cross_imda_traced": 13,
-    "proxy_only": 10
+    "imda_traced": 8,
+    "cross_imda_traced": 54,
+    "proxy_only": 35
   },
   "step1_caps": [
+    {
+      "cap_id": "fin.general_ledger",
+      "name": "General Ledger & Chart of Accounts",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Core Ledger & Close",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 7,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sap_s4hana_finance",
+        "xero"
+      ],
+      "vendor_citations_count": 6
+    },
+    {
+      "cap_id": "fin.financial_reporting",
+      "name": "Financial Reporting & Statements",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Core Ledger & Close",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 8,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sage_intacct",
+        "xero"
+      ],
+      "vendor_citations_count": 5
+    },
+    {
+      "cap_id": "fin.fixed_assets",
+      "name": "Fixed Assets & Depreciation",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Core Ledger & Close",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct"
+      ],
+      "vendor_citations_count": 5
+    },
+    {
+      "cap_id": "fin.audit_controls",
+      "name": "Audit Trail & Financial Controls",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Core Ledger & Close",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.period_close",
+      "name": "Period Close & Accrual Management",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Core Ledger & Close",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.accounts_receivable",
+      "name": "Accounts Receivable & Customer Invoicing",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Revenue Cycle (AR)",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q4",
+        "Q5"
+      ],
+      "backing_q_titles": [
+        "Invoice Generation or Processing",
+        "Warehouse Billing System"
+      ],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "logistics__freight-management",
+        "logistics__networked-trade-platform-value-added-services",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "logistics__freight-management",
+        "logistics__networked-trade-platform-value-added-services",
+        "logistics__warehouse-management",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "imda_sources_count": 13,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "odoo_accounting",
+        "odoo_invoicing",
+        "quickbooks",
+        "xero"
+      ],
+      "vendor_citations_count": 6
+    },
+    {
+      "cap_id": "fin.revenue_recognition",
+      "name": "Revenue Recognition (ASC 606 / IFRS 15)",
+      "tier": "",
+      "module": "financial_management",
+      "sub_module": "Revenue Cycle (AR)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "fin.credit_collections",
+      "name": "Credit Management & Collections",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Revenue Cycle (AR)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "fin.einvoicing_peppol",
+      "name": "E-Invoicing & PEPPOL / InvoiceNow",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Revenue Cycle (AR)",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q6"
+      ],
+      "backing_q_titles": [
+        "InvoiceNow-Ready Solution Provider Accreditation"
+      ],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system",
+        "logistics__freight-management",
+        "logistics__networked-trade-platform-value-added-services",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system",
+        "logistics__freight-management",
+        "logistics__networked-trade-platform-value-added-services",
+        "logistics__warehouse-management",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "imda_sources_count": 9,
+      "vendor_citations": [
+        "odoo_accounting",
+        "odoo_invoicing",
+        "quickbooks",
+        "xero"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.payment_gateways",
+      "name": "Payment Gateway & Direct Debit Integration",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Revenue Cycle (AR)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "food-services__connected-business-suite",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "food-services__connected-business-suite",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "imda_sources_count": 7,
+      "vendor_citations": [
+        "odoo_accounting",
+        "odoo_invoicing",
+        "quickbooks",
+        "xero"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.accounts_payable",
+      "name": "Accounts Payable & Vendor Bills",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__carbon-management-solution",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__carbon-management-solution",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "odoo_accounting",
+        "odoo_invoicing",
+        "quickbooks",
+        "xero"
+      ],
+      "vendor_citations_count": 6
+    },
+    {
+      "cap_id": "fin.expense_management",
+      "name": "Expense Management & Staff Claims",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "sage_intacct"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "fin.purchase_finance",
+      "name": "Purchase Orders & Procurement (Finance Side)",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "odoo_accounting"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.project_accounting",
+      "name": "Project Accounting & Cost Centres",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "built-environment__quantity-surveying-and-valuation",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "built-environment__quantity-surveying-and-valuation",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.payroll_posting",
+      "name": "Payroll Integration & GL Posting",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin",
+        "personal-care-services__salon-management-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin",
+        "personal-care-services__salon-management-system"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "xero"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.bank_cash_management",
+      "name": "Bank & Cash Management",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Bank, Tax & FX (Core Treasury)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__ai-accounting-automation",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__ai-accounting-automation",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 6,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sage_intacct",
+        "xero"
+      ],
+      "vendor_citations_count": 5
+    },
+    {
+      "cap_id": "fin.tax_management",
+      "name": "Tax Management & GST Compliance",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Bank, Tax & FX (Core Treasury)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sap_s4hana_finance",
+        "xero"
+      ],
+      "vendor_citations_count": 6
+    },
+    {
+      "cap_id": "fin.multi_currency",
+      "name": "Multi-Currency & Foreign Exchange",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Bank, Tax & FX (Core Treasury)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sap_s4hana_finance",
+        "xero"
+      ],
+      "vendor_citations_count": 5
+    },
+    {
+      "cap_id": "fin.intercompany_consolidation",
+      "name": "Inter-Company Accounting & Group Consolidation",
+      "tier": "advanced",
+      "module": "financial_management",
+      "sub_module": "Group Consolidation & Cashflow",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.cashflow_treasury",
+      "name": "Cashflow Forecasting & Treasury",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Group Consolidation & Cashflow",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "fin.xbrl_reporting",
+      "name": "XBRL & Statutory Filing",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance",
+        "xero"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.lease_accounting",
+      "name": "Lease Accounting (IFRS 16)",
+      "tier": "advanced",
+      "module": "financial_management",
+      "sub_module": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "fin.treasury_investments",
+      "name": "Investment & Treasury Management",
+      "tier": "advanced",
+      "module": "financial_management",
+      "sub_module": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "fin.budgeting_forecasting",
+      "name": "Budgeting & Forecasting",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Planning & Analytics (Finance)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__cross-border-e-commerce-packages"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__cross-border-e-commerce-packages"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sage_intacct",
+        "xero"
+      ],
+      "vendor_citations_count": 6
+    },
+    {
+      "cap_id": "fin.analytics_dashboards",
+      "name": "Financial Analytics & Dashboards",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Planning & Analytics (Finance)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__customer-relationship-management-crm",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__customer-relationship-management-crm",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fin.ai_finance",
+      "name": "AI / ML for Finance",
+      "tier": "",
+      "module": "financial_management",
+      "sub_module": "Planning & Analytics (Finance)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__ai-accounting-automation",
+        "essential-business__human-resource-management-system-hrms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__ai-accounting-automation",
+        "essential-business__human-resource-management-system-hrms"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "asset.register",
+      "name": "Asset Register & Hierarchy",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Asset Register & Lifecycle",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "cybersecurity__integrated-anti-malware-firewall-and-backup",
+        "essential-business__field-service-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "cybersecurity__integrated-anti-malware-firewall-and-backup",
+        "essential-business__field-service-management"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "erpnext",
+        "ibm_maximo",
+        "netsuite",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "asset.lifecycle",
+      "name": "Asset Lifecycle Management",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Asset Register & Lifecycle",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__field-service-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__field-service-management"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "asset.depreciation",
+      "name": "Depreciation & Valuation",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Asset Register & Lifecycle",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "asset.leasing",
+      "name": "Asset Leasing & Lease Accounting",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Asset Register & Lifecycle",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.pm_planning",
+      "name": "Preventive Maintenance Planning",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Maintenance Operations (CMMS/EAM)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "erpnext",
+        "ibm_maximo",
+        "odoo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "asset.work_orders",
+      "name": "Work Order Management",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Maintenance Operations (CMMS/EAM)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "advanced-manufacturing__manufacturing-quality-management",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__field-service-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "advanced-manufacturing__manufacturing-quality-management",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__field-service-management"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "erpnext",
+        "ibm_maximo",
+        "odoo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "asset.maintenance_requests",
+      "name": "Maintenance Requests & Service Desk",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Maintenance Operations (CMMS/EAM)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "security__security-collaboration-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "security__security-collaboration-platform"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ibm_maximo",
+        "odoo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "asset.spare_parts",
+      "name": "Spare Parts & Maintenance Inventory",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Maintenance Operations (CMMS/EAM)",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q3"
+      ],
+      "backing_q_titles": [
+        "Inventory Management Integration"
+      ],
+      "cross_imda_sources": [
+        "wholesale__inventory-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "logistics__warehouse-management",
+        "wholesale__inventory-management"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.mobile_field",
+      "name": "Mobile Field Work",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Maintenance Operations (CMMS/EAM)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__inventory-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__inventory-management"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "ibm_maximo",
+        "odoo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "asset.shutdown_turnaround",
+      "name": "Shutdown, Turnaround & Outage Management",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Maintenance Operations (CMMS/EAM)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.mobile_disconnected",
+      "name": "Disconnected / Offline Field Operations",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Maintenance Operations (CMMS/EAM)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.compliance",
+      "name": "Inspection, Safety & Regulatory Compliance",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Compliance, HSE & OT Cybersecurity",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.cybersecurity_ot",
+      "name": "OT / ICS Cybersecurity & Asset Vulnerability",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Compliance, HSE & OT Cybersecurity",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.condition_monitoring",
+      "name": "Condition Monitoring & Predictive Maintenance",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Reliability Engineering",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "essential-business__field-service-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "essential-business__field-service-management"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.rcm_fmea",
+      "name": "Reliability-Centred Maintenance & FMEA",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Reliability Engineering",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.reliability_engineering",
+      "name": "Reliability Engineering & Bad-Actor Analysis",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Reliability Engineering",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.analytics_kpi",
+      "name": "Maintenance Analytics & KPIs",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Asset Analytics & Digital Twin",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ibm_maximo",
+        "odoo"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.linear_assets",
+      "name": "Linear Assets",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Asset Analytics & Digital Twin",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.geospatial_gis",
+      "name": "Geospatial Asset Visualisation & GIS Integration",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Asset Analytics & Digital Twin",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.spares_optimization",
+      "name": "Spare Parts Optimisation",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Asset Analytics & Digital Twin",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.ar_vr_digital_twin",
+      "name": "AR / Digital Twin Work Instruction",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Asset Analytics & Digital Twin",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.contracts_warranty",
+      "name": "Warranty & Service Contracts",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Capital & Commercial Asset Management",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "asset.capital_projects",
+      "name": "Capital Projects & New Asset Commissioning",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Capital & Commercial Asset Management",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "asset.investment_planning",
+      "name": "Asset Investment Planning & Replacement Strategy",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Capital & Commercial Asset Management",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.sla_commercial",
+      "name": "Asset SLA & Commercial Uptime Management",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Capital & Commercial Asset Management",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "asset.energy_carbon",
+      "name": "Energy & Carbon Tracking per Asset",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Capital & Commercial Asset Management",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__carbon-management-solution"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__carbon-management-solution"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2
+    },
     {
       "cap_id": "sc.item_master",
       "name": "Inventory Master & Item Management",
@@ -812,6 +2139,805 @@
         "sap_mm"
       ],
       "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.email_communication",
+      "name": "Email & Communication Integration",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__ediscovery-tool",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__ediscovery-tool",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 8,
+      "vendor_citations": [
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.calendar_scheduling",
+      "name": "Calendar & Scheduling",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__legal-chatbot",
+        "legal__matters-management-and-collaboration-tool",
+        "personal-care-services__salon-management-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__legal-chatbot",
+        "legal__matters-management-and-collaboration-tool",
+        "personal-care-services__salon-management-system"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.knowledge_base",
+      "name": "Knowledge Base & Wiki",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
+      ],
+      "imda_sources_count": 8,
+      "vendor_citations": [
+        "ms_365",
+        "notion",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.social_collaboration",
+      "name": "Social Collaboration & Internal Messaging",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__chatbots-for-customer-engagement",
+        "legal__document-assembly-software",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__chatbots-for-customer-engagement",
+        "legal__document-assembly-software",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system"
+      ],
+      "imda_sources_count": 10,
+      "vendor_citations": [
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.workflow_automation",
+      "name": "Workflow Automation & Approval Engine",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Workflow & Approval Engine",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__talent-attraction-platform",
+        "legal__document-assembly-software",
+        "legal__document-review-software"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__talent-attraction-platform",
+        "legal__document-assembly-software",
+        "legal__document-review-software"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform",
+        "zapier"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "other.notification_alerts",
+      "name": "Notification & Alert Management",
+      "tier": "required",
+      "module": "others",
+      "sub_module": "Workflow & Approval Engine",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__talent-attraction-platform",
+        "early-childhood__vacancy-and-waitlist-management",
+        "early-childhood__video-analytics-for-safety-and-security",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__security-collaboration-platform",
+        "security__surveillance-and-analytics",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__talent-attraction-platform",
+        "early-childhood__vacancy-and-waitlist-management",
+        "early-childhood__video-analytics-for-safety-and-security",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__security-collaboration-platform",
+        "security__surveillance-and-analytics",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 14,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.document_management",
+      "name": "Document Management System",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Document Management & Forms",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
+      ],
+      "imda_sources_count": 13,
+      "vendor_citations": [
+        "erpnext_core",
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "other.custom_forms_surveys",
+      "name": "Custom Forms & Survey Builder",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Document Management & Forms",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__legal-chatbot",
+        "retail__integrated-pos-with-mobile-features",
+        "security__automated-visitor-management",
+        "tourism-travel-agent__travel-evisa"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__legal-chatbot",
+        "retail__integrated-pos-with-mobile-features",
+        "security__automated-visitor-management",
+        "tourism-travel-agent__travel-evisa"
+      ],
+      "imda_sources_count": 13,
+      "vendor_citations": [
+        "erpnext_core",
+        "google_workspace",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.bi_dashboards",
+      "name": "Business Intelligence & Dashboards",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "BI, AI & Compliance (Cross-cutting)",
+      "classification": "imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [
+        "Business Dashboards and Analytics"
+      ],
+      "cross_imda_sources": [
+        "advanced-manufacturing__computer-aided-design-and-computer-aided-manufacturing-cad-cam",
+        "advanced-manufacturing__product-and-manufacturing-process-configuration",
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
+        "built-environment__data-and-ai-driven-decision-support-system",
+        "built-environment__smart-inspection-and-management",
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "cybersecurity__backup",
+        "cybersecurity__integrated-anti-malware-firewall-and-backup",
+        "cybersecurity__secure-protect-firewall",
+        "cybersecurity__secure-protect-virus-malware-protection",
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__talent-attraction-platform",
+        "early-childhood__video-analytics-for-safety-and-security",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__carbon-management-solution",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__digital-marketing-packages",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__employee-rewards-and-recognition",
+        "essential-business__gen-ai-digital-training-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "food-services__connected-business-suite",
+        "legal__risk-assessment-solution-kyc-aml",
+        "logistics__active-cold-chain-management",
+        "logistics__freight-management",
+        "logistics__networked-trade-platform-value-added-services",
+        "logistics__transport-management",
+        "personal-care-services__salon-management-system",
+        "retail__electronic-shelf-label-esl",
+        "retail__in-store-analytics",
+        "retail__integrated-pos-with-mobile-features",
+        "retail__omnichannel-retail-management-ocrm",
+        "retail__self-checkout-solution",
+        "security__security-collaboration-platform",
+        "wholesale__inventory-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__computer-aided-design-and-computer-aided-manufacturing-cad-cam",
+        "advanced-manufacturing__product-and-manufacturing-process-configuration",
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
+        "built-environment__data-and-ai-driven-decision-support-system",
+        "built-environment__smart-inspection-and-management",
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "cybersecurity__backup",
+        "cybersecurity__integrated-anti-malware-firewall-and-backup",
+        "cybersecurity__secure-protect-firewall",
+        "cybersecurity__secure-protect-virus-malware-protection",
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__talent-attraction-platform",
+        "early-childhood__video-analytics-for-safety-and-security",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__carbon-management-solution",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__digital-marketing-packages",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__employee-rewards-and-recognition",
+        "essential-business__gen-ai-digital-training-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "food-services__connected-business-suite",
+        "legal__risk-assessment-solution-kyc-aml",
+        "logistics__active-cold-chain-management",
+        "logistics__freight-management",
+        "logistics__networked-trade-platform-value-added-services",
+        "logistics__transport-management",
+        "logistics__warehouse-management",
+        "personal-care-services__salon-management-system",
+        "retail__electronic-shelf-label-esl",
+        "retail__in-store-analytics",
+        "retail__integrated-pos-with-mobile-features",
+        "retail__omnichannel-retail-management-ocrm",
+        "retail__self-checkout-solution",
+        "security__security-collaboration-platform",
+        "wholesale__inventory-management"
+      ],
+      "imda_sources_count": 40,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.ai_assistant",
+      "name": "AI Assistant & Copilot",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "BI, AI & Compliance (Cross-cutting)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__document-management-and-mobile-access-system",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__speech-transcription-for-legal-matters",
+        "retail__in-store-analytics",
+        "retail__omnichannel-retail-management-ocrm",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__document-management-and-mobile-access-system",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__speech-transcription-for-legal-matters",
+        "retail__in-store-analytics",
+        "retail__omnichannel-retail-management-ocrm",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "imda_sources_count": 16,
+      "vendor_citations": [
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.compliance_audit",
+      "name": "Compliance & Audit Framework",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "BI, AI & Compliance (Cross-cutting)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms",
+        "legal__risk-assessment-solution-kyc-aml",
+        "legal__translation-software",
+        "security__security-collaboration-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms",
+        "legal__risk-assessment-solution-kyc-aml",
+        "legal__translation-software",
+        "security__security-collaboration-platform"
+      ],
+      "imda_sources_count": 14,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.multi_company_branch",
+      "name": "Multi-Company & Multi-Branch",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Multi-Org & Master Data Management",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__vacancy-and-waitlist-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__vacancy-and-waitlist-management"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.master_data_management",
+      "name": "Master Data Management",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Multi-Org & Master Data Management",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "cybersecurity__integrated-anti-malware-firewall-and-backup"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "cybersecurity__integrated-anti-malware-firewall-and-backup"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.low_code",
+      "name": "Low-Code / No-Code Customisation",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Low-Code & Integration Platform",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__online-legal-research-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__online-legal-research-system"
+      ],
+      "imda_sources_count": 10,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.api_integration",
+      "name": "API & Integration Platform",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Low-Code & Integration Platform",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__3d-modeling-immersive-visualisation-and-analysis",
+        "built-environment__built-environment-digital-platform",
+        "built-environment__data-and-ai-driven-decision-support-system",
+        "built-environment__digital-contract-management-digital-payment",
+        "built-environment__smart-inspection-and-management",
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "essential-business__applicant-tracking-and-sourcing-system",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__employee-rewards-and-recognition",
+        "essential-business__human-resource-e-scheduling-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "food-services__connected-business-suite",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__automated-visitor-management",
+        "security__security-collaboration-platform",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__3d-modeling-immersive-visualisation-and-analysis",
+        "built-environment__built-environment-digital-platform",
+        "built-environment__data-and-ai-driven-decision-support-system",
+        "built-environment__digital-contract-management-digital-payment",
+        "built-environment__smart-inspection-and-management",
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "essential-business__applicant-tracking-and-sourcing-system",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__employee-rewards-and-recognition",
+        "essential-business__human-resource-e-scheduling-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "food-services__connected-business-suite",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__automated-visitor-management",
+        "security__security-collaboration-platform",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 25,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform",
+        "zapier"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "other.digital_signature",
+      "name": "Digital Signature & e-Signing",
+      "tier": "",
+      "module": "others",
+      "sub_module": "Utility Tools (e-Sign, Label, Training)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "docusign",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "other.print_label",
+      "name": "Print & Label Management",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Utility Tools (e-Sign, Label, Training)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__risk-assessment-solution-kyc-aml",
+        "logistics__active-cold-chain-management",
+        "logistics__freight-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__risk-assessment-solution-kyc-aml",
+        "logistics__active-cold-chain-management",
+        "logistics__freight-management"
+      ],
+      "imda_sources_count": 6,
+      "vendor_citations": [
+        "erpnext_core",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "other.training_help",
+      "name": "Training & Help System",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Utility Tools (e-Sign, Label, Training)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__gen-ai-digital-training-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "food-services__connected-business-suite"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__gen-ai-digital-training-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "food-services__connected-business-suite"
+      ],
+      "imda_sources_count": 7,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3
     }
   ],
   "imda_q_status": [
@@ -931,6 +3057,1646 @@
     }
   ],
   "expansion_caps": [
+    {
+      "cap_id": "fin.general_ledger",
+      "name": "General Ledger & Chart of Accounts",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Core Ledger & Close",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 7,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sap_s4hana_finance",
+        "xero"
+      ],
+      "vendor_citations_count": 6,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.financial_reporting",
+      "name": "Financial Reporting & Statements",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Core Ledger & Close",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 8,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sage_intacct",
+        "xero"
+      ],
+      "vendor_citations_count": 5,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.fixed_assets",
+      "name": "Fixed Assets & Depreciation",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Core Ledger & Close",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct"
+      ],
+      "vendor_citations_count": 5,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.audit_controls",
+      "name": "Audit Trail & Financial Controls",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Core Ledger & Close",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.period_close",
+      "name": "Period Close & Accrual Management",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Core Ledger & Close",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.revenue_recognition",
+      "name": "Revenue Recognition (ASC 606 / IFRS 15)",
+      "tier": "",
+      "module": "financial_management",
+      "sub_module": "Revenue Cycle (AR)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.credit_collections",
+      "name": "Credit Management & Collections",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Revenue Cycle (AR)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.payment_gateways",
+      "name": "Payment Gateway & Direct Debit Integration",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Revenue Cycle (AR)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "food-services__connected-business-suite",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "food-services__connected-business-suite",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__sales-management"
+      ],
+      "imda_sources_count": 7,
+      "vendor_citations": [
+        "odoo_accounting",
+        "odoo_invoicing",
+        "quickbooks",
+        "xero"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.accounts_payable",
+      "name": "Accounts Payable & Vendor Bills",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__carbon-management-solution",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__carbon-management-solution",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "odoo_accounting",
+        "odoo_invoicing",
+        "quickbooks",
+        "xero"
+      ],
+      "vendor_citations_count": 6,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.expense_management",
+      "name": "Expense Management & Staff Claims",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "sage_intacct"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.purchase_finance",
+      "name": "Purchase Orders & Procurement (Finance Side)",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "odoo_accounting"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.project_accounting",
+      "name": "Project Accounting & Cost Centres",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "built-environment__quantity-surveying-and-valuation",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "built-environment__quantity-surveying-and-valuation",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.payroll_posting",
+      "name": "Payroll Integration & GL Posting",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin",
+        "personal-care-services__salon-management-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin",
+        "personal-care-services__salon-management-system"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "xero"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.bank_cash_management",
+      "name": "Bank & Cash Management",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Bank, Tax & FX (Core Treasury)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__ai-accounting-automation",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__ai-accounting-automation",
+        "essential-business__multichannel-e-commerce-software-mes",
+        "personal-care-services__salon-management-system",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 6,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sage_intacct",
+        "xero"
+      ],
+      "vendor_citations_count": 5,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.tax_management",
+      "name": "Tax Management & GST Compliance",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Bank, Tax & FX (Core Treasury)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "ms_dynamics_365_finance",
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sap_s4hana_finance",
+        "xero"
+      ],
+      "vendor_citations_count": 6,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.multi_currency",
+      "name": "Multi-Currency & Foreign Exchange",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Bank, Tax & FX (Core Treasury)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sap_s4hana_finance",
+        "xero"
+      ],
+      "vendor_citations_count": 5,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.intercompany_consolidation",
+      "name": "Inter-Company Accounting & Group Consolidation",
+      "tier": "advanced",
+      "module": "financial_management",
+      "sub_module": "Group Consolidation & Cashflow",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.cashflow_treasury",
+      "name": "Cashflow Forecasting & Treasury",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Group Consolidation & Cashflow",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.xbrl_reporting",
+      "name": "XBRL & Statutory Filing",
+      "tier": "preferred",
+      "module": "financial_management",
+      "sub_module": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance",
+        "xero"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.lease_accounting",
+      "name": "Lease Accounting (IFRS 16)",
+      "tier": "advanced",
+      "module": "financial_management",
+      "sub_module": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.treasury_investments",
+      "name": "Investment & Treasury Management",
+      "tier": "advanced",
+      "module": "financial_management",
+      "sub_module": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.budgeting_forecasting",
+      "name": "Budgeting & Forecasting",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Planning & Analytics (Finance)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__cross-border-e-commerce-packages"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__cross-border-e-commerce-packages"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "odoo_accounting",
+        "quickbooks",
+        "sage_intacct",
+        "xero"
+      ],
+      "vendor_citations_count": 6,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.analytics_dashboards",
+      "name": "Financial Analytics & Dashboards",
+      "tier": "required",
+      "module": "financial_management",
+      "sub_module": "Planning & Analytics (Finance)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__customer-relationship-management-crm",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__customer-relationship-management-crm",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fin.ai_finance",
+      "name": "AI / ML for Finance",
+      "tier": "",
+      "module": "financial_management",
+      "sub_module": "Planning & Analytics (Finance)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__ai-accounting-automation",
+        "essential-business__human-resource-management-system-hrms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__ai-accounting-automation",
+        "essential-business__human-resource-management-system-hrms"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "netsuite",
+        "odoo_accounting",
+        "sage_intacct",
+        "sap_s4hana_finance"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.register",
+      "name": "Asset Register & Hierarchy",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Asset Register & Lifecycle",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "cybersecurity__integrated-anti-malware-firewall-and-backup",
+        "essential-business__field-service-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "cybersecurity__integrated-anti-malware-firewall-and-backup",
+        "essential-business__field-service-management"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "erpnext",
+        "ibm_maximo",
+        "netsuite",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.lifecycle",
+      "name": "Asset Lifecycle Management",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Asset Register & Lifecycle",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__field-service-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__field-service-management"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.depreciation",
+      "name": "Depreciation & Valuation",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Asset Register & Lifecycle",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.leasing",
+      "name": "Asset Leasing & Lease Accounting",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Asset Register & Lifecycle",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.pm_planning",
+      "name": "Preventive Maintenance Planning",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Maintenance Operations (CMMS/EAM)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "erpnext",
+        "ibm_maximo",
+        "odoo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.work_orders",
+      "name": "Work Order Management",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Maintenance Operations (CMMS/EAM)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "advanced-manufacturing__manufacturing-quality-management",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__field-service-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "advanced-manufacturing__manufacturing-quality-management",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__field-service-management"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "erpnext",
+        "ibm_maximo",
+        "odoo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.maintenance_requests",
+      "name": "Maintenance Requests & Service Desk",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Maintenance Operations (CMMS/EAM)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "security__security-collaboration-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "security__security-collaboration-platform"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ibm_maximo",
+        "odoo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.mobile_field",
+      "name": "Mobile Field Work",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Maintenance Operations (CMMS/EAM)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__inventory-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__inventory-management"
+      ],
+      "imda_sources_count": 5,
+      "vendor_citations": [
+        "ibm_maximo",
+        "odoo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.shutdown_turnaround",
+      "name": "Shutdown, Turnaround & Outage Management",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Maintenance Operations (CMMS/EAM)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.mobile_disconnected",
+      "name": "Disconnected / Offline Field Operations",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Maintenance Operations (CMMS/EAM)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.compliance",
+      "name": "Inspection, Safety & Regulatory Compliance",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Compliance, HSE & OT Cybersecurity",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.cybersecurity_ot",
+      "name": "OT / ICS Cybersecurity & Asset Vulnerability",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Compliance, HSE & OT Cybersecurity",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.condition_monitoring",
+      "name": "Condition Monitoring & Predictive Maintenance",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Reliability Engineering",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "essential-business__field-service-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "essential-business__field-service-management"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.rcm_fmea",
+      "name": "Reliability-Centred Maintenance & FMEA",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Reliability Engineering",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.reliability_engineering",
+      "name": "Reliability Engineering & Bad-Actor Analysis",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Reliability Engineering",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.analytics_kpi",
+      "name": "Maintenance Analytics & KPIs",
+      "tier": "required",
+      "module": "asset_management",
+      "sub_module": "Asset Analytics & Digital Twin",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ibm_maximo",
+        "odoo"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.linear_assets",
+      "name": "Linear Assets",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Asset Analytics & Digital Twin",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.geospatial_gis",
+      "name": "Geospatial Asset Visualisation & GIS Integration",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Asset Analytics & Digital Twin",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.spares_optimization",
+      "name": "Spare Parts Optimisation",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Asset Analytics & Digital Twin",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.ar_vr_digital_twin",
+      "name": "AR / Digital Twin Work Instruction",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Asset Analytics & Digital Twin",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.contracts_warranty",
+      "name": "Warranty & Service Contracts",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Capital & Commercial Asset Management",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.capital_projects",
+      "name": "Capital Projects & New Asset Commissioning",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Capital & Commercial Asset Management",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.investment_planning",
+      "name": "Asset Investment Planning & Replacement Strategy",
+      "tier": "",
+      "module": "asset_management",
+      "sub_module": "Capital & Commercial Asset Management",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.sla_commercial",
+      "name": "Asset SLA & Commercial Uptime Management",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Capital & Commercial Asset Management",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "asset.energy_carbon",
+      "name": "Energy & Carbon Tracking per Asset",
+      "tier": "preferred",
+      "module": "asset_management",
+      "sub_module": "Capital & Commercial Asset Management",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__carbon-management-solution"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__carbon-management-solution"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ibm_maximo",
+        "sap_s4hana_pm"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
     {
       "cap_id": "sc.stock_counting",
       "name": "Stock Counting & Cycle Counts",
@@ -1750,30 +5516,1001 @@
         "coverage_pct": 0
       },
       "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.email_communication",
+      "name": "Email & Communication Integration",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__ediscovery-tool",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__ediscovery-tool",
+        "legal__matters-management-and-collaboration-tool",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 8,
+      "vendor_citations": [
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.calendar_scheduling",
+      "name": "Calendar & Scheduling",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__legal-chatbot",
+        "legal__matters-management-and-collaboration-tool",
+        "personal-care-services__salon-management-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__legal-chatbot",
+        "legal__matters-management-and-collaboration-tool",
+        "personal-care-services__salon-management-system"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.knowledge_base",
+      "name": "Knowledge Base & Wiki",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
+      ],
+      "imda_sources_count": 8,
+      "vendor_citations": [
+        "ms_365",
+        "notion",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.social_collaboration",
+      "name": "Social Collaboration & Internal Messaging",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Productivity & Collaboration",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__chatbots-for-customer-engagement",
+        "legal__document-assembly-software",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__chatbots-for-customer-engagement",
+        "legal__document-assembly-software",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system"
+      ],
+      "imda_sources_count": 10,
+      "vendor_citations": [
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.workflow_automation",
+      "name": "Workflow Automation & Approval Engine",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Workflow & Approval Engine",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__talent-attraction-platform",
+        "legal__document-assembly-software",
+        "legal__document-review-software"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__talent-attraction-platform",
+        "legal__document-assembly-software",
+        "legal__document-review-software"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform",
+        "zapier"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.notification_alerts",
+      "name": "Notification & Alert Management",
+      "tier": "required",
+      "module": "others",
+      "sub_module": "Workflow & Approval Engine",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__talent-attraction-platform",
+        "early-childhood__vacancy-and-waitlist-management",
+        "early-childhood__video-analytics-for-safety-and-security",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__security-collaboration-platform",
+        "security__surveillance-and-analytics",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__talent-attraction-platform",
+        "early-childhood__vacancy-and-waitlist-management",
+        "early-childhood__video-analytics-for-safety-and-security",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__security-collaboration-platform",
+        "security__surveillance-and-analytics",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 14,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.document_management",
+      "name": "Document Management System",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Document Management & Forms",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__online-legal-research-system",
+        "legal__translation-software"
+      ],
+      "imda_sources_count": 13,
+      "vendor_citations": [
+        "erpnext_core",
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.custom_forms_surveys",
+      "name": "Custom Forms & Survey Builder",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Document Management & Forms",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__legal-chatbot",
+        "retail__integrated-pos-with-mobile-features",
+        "security__automated-visitor-management",
+        "tourism-travel-agent__travel-evisa"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__e-forms-for-pre-school",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__legal-chatbot",
+        "retail__integrated-pos-with-mobile-features",
+        "security__automated-visitor-management",
+        "tourism-travel-agent__travel-evisa"
+      ],
+      "imda_sources_count": 13,
+      "vendor_citations": [
+        "erpnext_core",
+        "google_workspace",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.ai_assistant",
+      "name": "AI Assistant & Copilot",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "BI, AI & Compliance (Cross-cutting)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__document-management-and-mobile-access-system",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__speech-transcription-for-legal-matters",
+        "retail__in-store-analytics",
+        "retail__omnichannel-retail-management-ocrm",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__document-management-and-mobile-access-system",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__marketing-and-sales-content-generation",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__legal-chatbot",
+        "legal__online-legal-research-system",
+        "legal__speech-transcription-for-legal-matters",
+        "retail__in-store-analytics",
+        "retail__omnichannel-retail-management-ocrm",
+        "tourism-travel-agent__travel-management-system-e-commerce"
+      ],
+      "imda_sources_count": 16,
+      "vendor_citations": [
+        "google_workspace",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.compliance_audit",
+      "name": "Compliance & Audit Framework",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "BI, AI & Compliance (Cross-cutting)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms",
+        "legal__risk-assessment-solution-kyc-aml",
+        "legal__translation-software",
+        "security__security-collaboration-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__document-management-and-mobile-access-system",
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms",
+        "legal__document-review-software",
+        "legal__ediscovery-tool",
+        "legal__evidence-management-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms",
+        "legal__risk-assessment-solution-kyc-aml",
+        "legal__translation-software",
+        "security__security-collaboration-platform"
+      ],
+      "imda_sources_count": 14,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.multi_company_branch",
+      "name": "Multi-Company & Multi-Branch",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Multi-Org & Master Data Management",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__vacancy-and-waitlist-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "early-childhood__vacancy-and-waitlist-management"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.master_data_management",
+      "name": "Master Data Management",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Multi-Org & Master Data Management",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "cybersecurity__integrated-anti-malware-firewall-and-backup"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "cybersecurity__integrated-anti-malware-firewall-and-backup"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.low_code",
+      "name": "Low-Code / No-Code Customisation",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Low-Code & Integration Platform",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__online-legal-research-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+        "essential-business__carbon-management-solution",
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__online-legal-research-system"
+      ],
+      "imda_sources_count": 10,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.api_integration",
+      "name": "API & Integration Platform",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Low-Code & Integration Platform",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__3d-modeling-immersive-visualisation-and-analysis",
+        "built-environment__built-environment-digital-platform",
+        "built-environment__data-and-ai-driven-decision-support-system",
+        "built-environment__digital-contract-management-digital-payment",
+        "built-environment__smart-inspection-and-management",
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "essential-business__applicant-tracking-and-sourcing-system",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__employee-rewards-and-recognition",
+        "essential-business__human-resource-e-scheduling-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "food-services__connected-business-suite",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__automated-visitor-management",
+        "security__security-collaboration-platform",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__3d-modeling-immersive-visualisation-and-analysis",
+        "built-environment__built-environment-digital-platform",
+        "built-environment__data-and-ai-driven-decision-support-system",
+        "built-environment__digital-contract-management-digital-payment",
+        "built-environment__smart-inspection-and-management",
+        "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw",
+        "early-childhood__data-mining-and-analytics-centre-operations",
+        "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
+        "early-childhood__data-mining-and-analytics-child-development",
+        "essential-business__applicant-tracking-and-sourcing-system",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
+        "essential-business__employee-rewards-and-recognition",
+        "essential-business__human-resource-e-scheduling-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "food-services__connected-business-suite",
+        "legal__document-review-software",
+        "retail__self-checkout-solution",
+        "security__automated-visitor-management",
+        "security__security-collaboration-platform",
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "imda_sources_count": 25,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform",
+        "zapier"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.digital_signature",
+      "name": "Digital Signature & e-Signing",
+      "tier": "",
+      "module": "others",
+      "sub_module": "Utility Tools (e-Sign, Label, Training)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+        "legal__document-assembly-software",
+        "legal__document-management-system-dms"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "docusign",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.print_label",
+      "name": "Print & Label Management",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Utility Tools (e-Sign, Label, Training)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__risk-assessment-solution-kyc-aml",
+        "logistics__active-cold-chain-management",
+        "logistics__freight-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__carbon-management-solution",
+        "legal__document-assembly-software",
+        "legal__ediscovery-tool",
+        "legal__risk-assessment-solution-kyc-aml",
+        "logistics__active-cold-chain-management",
+        "logistics__freight-management"
+      ],
+      "imda_sources_count": 6,
+      "vendor_citations": [
+        "erpnext_core",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "other.training_help",
+      "name": "Training & Help System",
+      "tier": "preferred",
+      "module": "others",
+      "sub_module": "Utility Tools (e-Sign, Label, Training)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__gen-ai-digital-training-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "food-services__connected-business-suite"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment",
+        "early-childhood__learning-platform-for-cpd-and-mentoring",
+        "essential-business__carbon-management-solution",
+        "essential-business__chatbots-for-customer-engagement",
+        "essential-business__gen-ai-digital-training-system",
+        "essential-business__marketing-and-sales-content-generation",
+        "food-services__connected-business-suite"
+      ],
+      "imda_sources_count": 7,
+      "vendor_citations": [
+        "erpnext_core",
+        "ms_365",
+        "odoo_platform"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
     }
   ],
   "expansion_summary": {
-    "proxy_only": {
-      "justified_real_world": 0,
-      "questionable": 0,
-      "potential_overreach": 10
-    },
     "cross_imda_traced": {
       "justified_real_world": 0,
       "questionable": 0,
-      "potential_overreach": 13
+      "potential_overreach": 54
+    },
+    "proxy_only": {
+      "justified_real_world": 0,
+      "questionable": 0,
+      "potential_overreach": 35
     }
   },
   "by_module": {
+    "financial_management": {
+      "imda_traced": 2,
+      "cross_imda_traced": 14,
+      "proxy_only": 10,
+      "expansion_overreach": 24,
+      "expansion_justified": 0
+    },
+    "asset_management": {
+      "imda_traced": 1,
+      "cross_imda_traced": 10,
+      "proxy_only": 15,
+      "expansion_overreach": 25,
+      "expansion_justified": 0
+    },
     "supply_chain_and_inventory": {
       "imda_traced": 4,
       "cross_imda_traced": 13,
       "proxy_only": 10,
       "expansion_overreach": 23,
       "expansion_justified": 0
+    },
+    "others": {
+      "imda_traced": 1,
+      "cross_imda_traced": 17,
+      "proxy_only": 0,
+      "expansion_overreach": 17,
+      "expansion_justified": 0
     }
   },
   "sub_module_pass": [
+    {
+      "module": "financial_management",
+      "sub_module": "Core Ledger & Close",
+      "r_total": 2,
+      "r_backed": [],
+      "r_unbacked": [
+        "fin.general_ledger",
+        "fin.financial_reporting"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "financial_management",
+      "sub_module": "Revenue Cycle (AR)",
+      "r_total": 2,
+      "r_backed": [
+        "fin.accounts_receivable",
+        "fin.einvoicing_peppol"
+      ],
+      "r_unbacked": [],
+      "status": "pass"
+    },
+    {
+      "module": "financial_management",
+      "sub_module": "Expense Cycle (AP)",
+      "r_total": 2,
+      "r_backed": [],
+      "r_unbacked": [
+        "fin.accounts_payable",
+        "fin.expense_management"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "financial_management",
+      "sub_module": "Bank, Tax & FX (Core Treasury)",
+      "r_total": 2,
+      "r_backed": [],
+      "r_unbacked": [
+        "fin.bank_cash_management",
+        "fin.tax_management"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "financial_management",
+      "sub_module": "Planning & Analytics (Finance)",
+      "r_total": 2,
+      "r_backed": [],
+      "r_unbacked": [
+        "fin.budgeting_forecasting",
+        "fin.analytics_dashboards"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "asset_management",
+      "sub_module": "Asset Register & Lifecycle",
+      "r_total": 3,
+      "r_backed": [],
+      "r_unbacked": [
+        "asset.register",
+        "asset.lifecycle",
+        "asset.depreciation"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "asset_management",
+      "sub_module": "Maintenance Operations (CMMS/EAM)",
+      "r_total": 4,
+      "r_backed": [
+        "asset.spare_parts"
+      ],
+      "r_unbacked": [
+        "asset.pm_planning",
+        "asset.work_orders",
+        "asset.maintenance_requests"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "asset_management",
+      "sub_module": "Compliance, HSE & OT Cybersecurity",
+      "r_total": 1,
+      "r_backed": [],
+      "r_unbacked": [
+        "asset.compliance"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "asset_management",
+      "sub_module": "Asset Analytics & Digital Twin",
+      "r_total": 1,
+      "r_backed": [],
+      "r_unbacked": [
+        "asset.analytics_kpi"
+      ],
+      "status": "fail"
+    },
     {
       "module": "supply_chain_and_inventory",
       "sub_module": "Inventory Core",
@@ -1815,9 +6552,33 @@
         "sc.reorder_rules"
       ],
       "status": "fail"
+    },
+    {
+      "module": "others",
+      "sub_module": "Workflow & Approval Engine",
+      "r_total": 1,
+      "r_backed": [],
+      "r_unbacked": [
+        "other.notification_alerts"
+      ],
+      "status": "fail"
     }
   ],
   "module_pass": {
+    "financial_management": {
+      "r_sub_mod_count": 5,
+      "r_sub_mod_passing": 1,
+      "passing_sub_mods": [
+        "Revenue Cycle (AR)"
+      ],
+      "status": "pass"
+    },
+    "asset_management": {
+      "r_sub_mod_count": 4,
+      "r_sub_mod_passing": 0,
+      "passing_sub_mods": [],
+      "status": "fail"
+    },
     "supply_chain_and_inventory": {
       "r_sub_mod_count": 4,
       "r_sub_mod_passing": 2,
@@ -1826,13 +6587,26 @@
         "Warehouse & Logistics (WMS)"
       ],
       "status": "pass"
+    },
+    "others": {
+      "r_sub_mod_count": 1,
+      "r_sub_mod_passing": 0,
+      "passing_sub_mods": [],
+      "status": "fail"
     }
   },
-  "sol_cat_passes_canonical": true,
+  "sol_cat_passes_canonical": false,
   "smallest_demotion_plan": {
-    "supply_chain_and_inventory": []
+    "financial_management": [],
+    "asset_management": [
+      "asset.compliance"
+    ],
+    "supply_chain_and_inventory": [],
+    "others": [
+      "other.notification_alerts"
+    ]
   },
-  "plan_total_demotions": 0,
+  "plan_total_demotions": 2,
   "q_inverse_view": [
     {
       "q_num": "Q1",
@@ -1888,7 +6662,7 @@
           "cap_id": "asset.spare_parts",
           "name": "Spare Parts & Maintenance Inventory",
           "module": "asset_management",
-          "out_of_scope": true
+          "out_of_scope": false
         },
         {
           "cap_id": "asset.integration_import_export",
@@ -1913,7 +6687,7 @@
           "cap_id": "fin.accounts_receivable",
           "name": "Accounts Receivable & Customer Invoicing",
           "module": "financial_management",
-          "out_of_scope": true
+          "out_of_scope": false
         }
       ],
       "modules": [
@@ -1931,7 +6705,7 @@
           "cap_id": "fin.accounts_receivable",
           "name": "Accounts Receivable & Customer Invoicing",
           "module": "financial_management",
-          "out_of_scope": true
+          "out_of_scope": false
         }
       ],
       "modules": [
@@ -1949,7 +6723,7 @@
           "cap_id": "fin.einvoicing_peppol",
           "name": "E-Invoicing & PEPPOL / InvoiceNow",
           "module": "financial_management",
-          "out_of_scope": true
+          "out_of_scope": false
         }
       ],
       "modules": [

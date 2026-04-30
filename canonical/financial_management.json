@@ -873,7 +873,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain a structured chart of accounts with journal posting, period controls, and audit trails so you have a single source of truth for all financial transactions?",
+        "question": "Does your solution maintain a double-entry general ledger with configurable chart of accounts, period and year-end close controls, and drill-down traceability from reports to source transactions, so you have a complete audit trail and single source of truth for financial reporting?",
         "free_text_prompt": "Describe how your solution handles chart of accounts configuration, journal entry posting with balanced debits and credits, period and year-end close controls, and drill-down capability to source transactions.",
         "covers": [
           {
@@ -1904,7 +1904,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution manage customer invoicing, payment application, credit notes, and receivables ageing, with full audit trails for compliance and decision-making?",
+        "question": "Does your solution manage customer invoicing, payment application, credit adjustments, and receivables ageing, with full audit trails for compliance and decision-making?",
         "free_text_prompt": "Describe how your solution handles invoice creation from sales orders, payment allocation across multiple invoices, credit notes, and the ageing analysis reports available to users.",
         "covers": [
           {
@@ -2890,7 +2890,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain vendor data, match bills to purchase orders, route approvals by threshold, and process payments with withholding tax tracking?",
+        "question": "Does your solution capture vendor bills, match them against purchase orders and goods receipts, route them through approval workflows with configurable thresholds, schedule payments, and generate vendor ageing reports, so you maintain control over payables and cash flow?",
         "free_text_prompt": "Describe how your solution handles vendor master data storage, bill capture methods, three-way matching logic, approval routing, and withholding tax calculation and reporting.",
         "covers": [
           {
@@ -3872,7 +3872,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution import bank statements, match transactions to ledger records, manage multiple accounts and currencies, and track petty cash to enable daily bank reconciliation?",
+        "question": "Does your solution match bank transactions to ledger records using configurable rules, import statements in standard formats, reconcile multi-currency accounts, and track petty cash separately, so finance teams complete daily bank reconciliation without manual intervention?",
         "free_text_prompt": "Describe the statement formats supported, matching methods (automated and manual), account management capabilities, and petty cash tracking features.",
         "covers": [
           {
@@ -4573,7 +4573,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution configure tax codes, calculate tax on transactions, track input and output tax separately, and generate periodic tax returns in Singapore GST format for submission to IRAS?",
+        "question": "Does your solution calculate and track tax on transactions, segregate input and output tax, and generate periodic tax returns in authority-required format, so your business stays compliant without manual calculation or filing risk?",
         "free_text_prompt": "Describe how your solution handles tax code configuration, tax calculation at transaction level, input/output tax tracking, and GST F5 return generation and submission.",
         "covers": [
           {
@@ -5580,7 +5580,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution generate profit and loss, balance sheet, trial balance, and cash flow statements with comparative analysis and general ledger drill-down?",
+        "question": "Does your solution generate standard financial statements with drill-down to underlying transactions, comparative period analysis, and multi-format export, so you can produce compliant reports and analyse performance without manual consolidation?",
         "free_text_prompt": "Describe which financial statements your solution generates, what comparison and drill-down capabilities are included, and which export formats are supported.",
         "covers": [
           {
@@ -6232,7 +6232,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution maintain a fixed-asset register, calculate depreciation using multiple methods, automatically post entries to the general ledger, and process acquisitions, disposals, transfers, and revaluations, so you have a complete audit trail and accurate asset values for financial reporting?",
+        "question": "Does your solution maintain a fixed-asset register with categorisation and custodian tracking, calculate periodic depreciation using multiple methods, process additions and disposals with automatic gain/loss posting, and maintain audit trails, so you have complete asset accountability and accurate financial reporting?",
         "free_text_prompt": "Describe which depreciation methods you support, how you handle asset transfers and disposals, and how depreciation entries flow to the GL.",
         "covers": [
           {
@@ -6883,7 +6883,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution create budgets by account and department, display actual versus budget variance, support multiple versions, and enforce approval workflows?",
+        "question": "Does your solution maintain operating budgets across multiple dimensions, display actual versus budget variance on financial reports, support multiple budget versions, and enforce approval workflows with audit trails, so you can control spending and track performance against plan?",
         "free_text_prompt": "Describe how your solution handles budget creation, variance reporting, version control, approval locks, and forecast updates within a fiscal year.",
         "covers": [
           {
@@ -7493,7 +7493,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution record transactions in any currency, automatically convert to functional currency, revalue open receivables and payables at period end, and post realised and unrealised foreign exchange gains and losses to the general ledger, so multi-currency operations are reconciled without manual adjustment?",
+        "question": "Does your solution record transactions in any currency with automatic conversion to functional currency, revalue open payables and receivables at period end, calculate and post foreign exchange gains and losses, and maintain historical exchange rates for closed periods, so multi-currency operations stay compliant and accurate without manual intervention?",
         "free_text_prompt": "Describe how your solution handles currency conversion, exchange rate sourcing, and the posting of FX gains and losses to the general ledger.",
         "covers": [
           {
@@ -8182,7 +8182,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution capture multi-line expense reports, route claims through approvals, assign cost centres and project codes, and post to the general ledger with tax treatment?",
+        "question": "Does your solution capture multi-line expense reports, route claims through configurable approval workflows, assign cost allocations to each line, and post approved expenses to the general ledger with tax treatment, so employees are reimbursed accurately and expenses are recorded in the right accounts?",
         "free_text_prompt": "Describe how your solution handles expense capture (corporate card, receipts, mileage), approval routing, cost allocation, and GL posting, including any integration with payroll or payment methods.",
         "covers": [
           {
@@ -9511,7 +9511,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution track project revenue, costs, and profitability across billable time, expenses, materials, and work-in-progress, with support for percentage-of-completion revenue recognition and cost centre hierarchies, so you can monitor project margins and resource utilisation?",
+        "question": "Does your solution track project revenue, costs, and work-in-progress across multiple cost types, apply revenue recognition methods, and report profitability by project and cost centre, so you can monitor project margin and resource utilisation?",
         "free_text_prompt": "Describe how your solution captures billable versus non-billable time, handles work-in-progress calculation, supports percentage-of-completion revenue recognition, and organises costs across cost centres and departments.",
         "covers": [
           {
@@ -10142,7 +10142,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Does your solution manage multi-entity structures with ownership percentages, eliminate inter-company transactions, translate foreign subsidiaries, and produce consolidated financial statements?",
+        "question": "Does your solution manage multi-entity group structures with ownership tracking, automatically eliminate inter-company transactions and unrealised gains, translate foreign operations to group currency, and account for minority interests, to produce consolidated financial statements?",
         "free_text_prompt": "Describe how your solution handles entity hierarchies, inter-company elimination rules, currency translation methods, and consolidated reporting outputs.",
         "covers": [
           {
@@ -11272,7 +11272,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution set customer credit limits, monitor exposure against outstanding balances, execute dunning sequences, manage disputes and write-offs, so you can reduce days-sales-outstanding and collection risk?",
+        "question": "Does your solution manage customer credit limits and exposure, execute automated collection sequences by invoice age, track payment commitments with follow-up reminders, and process disputes with approval workflows, so you reduce days-sales-outstanding and bad-debt risk?",
         "free_text_prompt": "Describe how your solution handles credit limit enforcement, dunning automation (channels and aging triggers), dispute workflows, and write-off approvals.",
         "covers": [
           {
@@ -11848,7 +11848,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution maintain an immutable audit trail of transactions, enforce approval workflows and segregation of duties, lock periods with change logging, and export audit evidence for external auditors?",
+        "question": "Does your solution maintain an immutable audit trail of transactions and changes, enforce configurable approval workflows, prevent incompatible role assignments, lock closed periods with change logging, and generate audit evidence exports for external auditors, so you demonstrate financial controls compliance?",
         "free_text_prompt": "Describe how your solution records transaction details (who, when, what), enforces approval rules by amount or type, prevents incompatible role assignments, locks accounting periods, and exports audit bundles.",
         "covers": [
           {
@@ -12494,7 +12494,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage period-close tasks, accruals and prepayments, sub-ledger reconciliation, and staged close enforcement, so your finance team completes month-end and year-end close without manual spreadsheet tracking?",
+        "question": "Does your solution manage period-close tasks with assignment and completion tracking, reconcile sub-ledgers to general ledger, progress through close stages with audit trail, and automatically calculate period-end adjustments such as depreciation and revaluation, so your team completes close on schedule with full visibility?",
         "free_text_prompt": "Describe how your solution tracks close tasks, handles accrual templates, reconciles sub-ledgers to the general ledger, and enforces soft and hard close stages with audit history.",
         "covers": [
           {
@@ -13103,7 +13103,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution forecast cash inflows and outflows, consolidate balances across accounts and entities, model scenarios for contingency planning, and alert on liquidity thresholds to help you manage short-term funding needs?",
+        "question": "Can your solution generate rolling cashflow forecasts across multiple horizons, consolidate balances from multiple bank accounts and entities, model scenario variations, and track surplus cash placement, with a liquidity dashboard showing minimum balance alerts?",
         "free_text_prompt": "Describe the forecast periods supported, the data sources used (receivables, payables, payroll), the scenario types available, and how alerts are configured.",
         "covers": [
           {
@@ -13946,7 +13946,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution import payroll journals into the general ledger, map payroll elements to accounts, post employer CPF and tax withholding, and reconcile payroll clearing accounts, so your finance team can verify payroll posting accuracy without manual intervention?",
+        "question": "Does your solution import payroll journal entries from your HR system, map salary and statutory contributions to general ledger accounts, post employer obligations and tax withholding, and allocate postings by organisational dimension, so payroll accounting is recorded accurately without manual re-entry?",
         "free_text_prompt": "Describe how your solution handles the import of payroll data from HR systems, the mapping rules for payroll elements to GL accounts, and the reconciliation process for payroll clearing accounts.",
         "covers": [
           {
@@ -14451,7 +14451,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution generate and validate invoices in PEPPOL format, submit and receive them via certified access points, track transmission status, and auto-create vendor bills from received invoices, so your team avoids manual re-keying and stays compliant with InvoiceNow requirements?",
+        "question": "Does your solution generate and validate invoices in PEPPOL BIS Billing 3.0 format, submit and receive them via a certified access point, track transmission status, and auto-create vendor bills from received invoices, so you meet e-invoicing mandates without manual re-keying?",
         "free_text_prompt": "Describe how your solution generates PEPPOL BIS Billing 3.0 invoices, which certified access point(s) it connects to, how transmission and acceptance status is tracked, and whether received invoices automatically populate the accounts payable module.",
         "covers": [
           {
@@ -15343,7 +15343,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution accept credit card and local payment schemes, process refunds and direct debits, and reconcile settlements to your bank account for complete payment visibility?",
+        "question": "Does your solution accept multiple payment methods including cards, digital transfers, and direct debits, automatically reconcile settlements to your bank account and invoices, and generate payment confirmations, so customers can pay online and your cash position stays accurate?",
         "free_text_prompt": "Describe which payment methods you support (credit card, PayNow, FAST, GIRO, direct debit), your PCI-DSS compliance approach, and how settlement reconciliation works.",
         "covers": [
           {
@@ -15890,7 +15890,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution map general ledger accounts to ACRA XBRL taxonomy, validate filings against regulatory rules, and support audit approval workflows for statutory submission?",
+        "question": "Does your solution map general ledger accounts to statutory taxonomy concepts, automatically tag financial statement items, validate against regulatory rules, and include supporting schedules as tagged content with approval workflows, so you can file statutory accounts without manual re-tagging?",
         "free_text_prompt": "Describe how your solution handles ACRA taxonomy mapping, validation against BizFinx rules, and the audit sign-off process for XBRL instance documents.",
         "covers": [
           {
@@ -16463,7 +16463,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Does your solution maintain a lease register, capitalise right-of-use assets and liabilities, calculate amortisation and interest expense, and generate disclosure reports for IFRS 16 compliance?",
+        "question": "Does your solution maintain a lease register, capitalise right-of-use assets and liabilities at commencement, calculate periodic amortisation and interest, remeasure on modifications, and generate disclosure reports with payment schedules, so you can meet lease accounting standards without manual journal entries?",
         "free_text_prompt": "Describe how your solution handles lease classification, discount rate application, remeasurement of lease obligations, and exemption rules (short-term and low-value assets).",
         "covers": [
           {
@@ -17027,7 +17027,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Does your solution maintain an investment register, calculate mark-to-market valuations, classify instruments under IFRS 9, accrue interest, and monitor counterparty exposure for hedge accounting compliance?",
+        "question": "Does your solution maintain an investment register with instrument classification and counterparty detail, calculate mark-to-market valuations at reporting dates, track derivative contracts with settlement terms, and automate interest accrual and maturity events, so you can meet investment accounting standards and monitor credit exposure?",
         "free_text_prompt": "Describe how your solution handles IFRS 9 classification, mark-to-market posting to the general ledger, and counterparty credit limit enforcement across investment positions.",
         "covers": [
           {
@@ -18013,7 +18013,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution deliver role-based financial dashboards with KPIs, drill-down to transactions, variance analysis, and scheduled reporting, so finance teams can monitor performance and make decisions without manual consolidation?",
+        "question": "Does your solution deliver role-based financial dashboards with key performance indicators, drill-down to transaction detail, variance analysis, ad-hoc query capability, and scheduled reporting, so finance teams can monitor performance and make decisions without leaving the system?",
         "free_text_prompt": "Describe the pre-built dashboard roles included, the core KPIs available, and how users access scheduled reports and exports.",
         "covers": [
           {
@@ -19289,7 +19289,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution enable users to access financial functions, approve transactions, and view dashboards across phones, tablets, and desktops, so staff can manage finances from any device?",
+        "question": "Does your solution deliver full financial workflows across phones, tablets, and desktops, including approval processes, payment authorisation, receipt capture, and dashboard visibility, so users can manage cash and sign-offs from any device?",
         "free_text_prompt": "Describe which financial functions are accessible on mobile devices, whether native apps or web browser are supported, and confirm that approval workflows operate on phones and tablets.",
         "covers": [
           {
@@ -19951,7 +19951,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution encrypt financial data at rest and in transit, maintain audit trails of all data access and PDPA consent records, enforce data retention and deletion policies, and meet PSG Cyber Essentials Mark requirements?",
+        "question": "Does your solution encrypt financial data at rest and in transit, maintain audit trails of data access and consent records, enforce data retention and secure deletion policies, and support data subject requests, to ensure compliance with privacy regulations and security standards?",
         "free_text_prompt": "Describe your encryption standards, audit logging scope, data retention and deletion mechanisms, data residency controls, and current Cyber Essentials Mark certification or assessment status.",
         "covers": [
           {
@@ -20570,7 +20570,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution manage individual user accounts with role-based permissions, segregation-of-duties controls, and audit logging of user activity, so you can enforce access control and maintain compliance?",
+        "question": "Does your solution manage user accounts with role-based access control, detect segregation-of-duties conflicts, maintain audit logs of user activity, and support multi-factor authentication, so finance staff operate within defined permissions and compliance is verifiable?",
         "free_text_prompt": "Describe how roles are defined, how segregation-of-duties conflicts are detected, and what user activity is logged with timestamps.",
         "covers": [
           {
@@ -21595,7 +21595,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution import master data and opening balances, export financial reports, integrate with payroll and bank feeds, support IRAS and PEPPOL compliance, and provide APIs for custom connectivity?",
+        "question": "Does your solution import master data and opening balances from standard files, export financial reports in multiple formats, integrate with payroll and bank feeds, support regulatory compliance standards, and provide API access for third-party connectivity, so you can operate with a single source of truth across all business systems?",
         "free_text_prompt": "Describe which file formats you support for import and export, which external systems and tax APIs you integrate with, and how auditors can access read-only data.",
         "covers": [
           {

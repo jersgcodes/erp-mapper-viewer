@@ -4,11 +4,11 @@
   "imda_qs_total": 27,
   "imda_qs_mapped": 17,
   "imda_qs_orphan": 10,
-  "caps_in_scope_total": 71,
+  "caps_in_scope_total": 96,
   "step1_classification_counts": {
-    "imda_traced": 10,
-    "cross_imda_traced": 41,
-    "proxy_only": 20
+    "imda_traced": 12,
+    "cross_imda_traced": 56,
+    "proxy_only": 28
   },
   "step1_caps": [
     {
@@ -1563,6 +1563,615 @@
         "dynamics_365_scm",
         "oracle_scm",
         "sap_mm"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "proj.project_master",
+      "name": "Project Master & Hierarchy",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Core",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__digital-marketing-packages"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__digital-marketing-packages"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "erpnext_projects",
+        "ms_project",
+        "netsuite_srp",
+        "odoo_project",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 5
+    },
+    {
+      "cap_id": "proj.task_management",
+      "name": "Task Management & Assignment",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Core",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms",
+        "personal-care-services__salon-management-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms",
+        "personal-care-services__salon-management-system"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "erpnext_projects",
+        "jira",
+        "ms_project",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "proj.document_collaboration",
+      "name": "Document Management & Collaboration",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Core",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "jira",
+        "ms_project",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "proj.kanban_agile",
+      "name": "Kanban / Agile Board",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Core",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "jira",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "proj.templates_repeating",
+      "name": "Template & Repeating Projects",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Core",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "jira",
+        "ms_project",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "proj.notifications_reminders",
+      "name": "Notifications & Deadline Reminders",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Core",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__matters-management-and-collaboration-tool"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__matters-management-and-collaboration-tool"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "jira",
+        "ms_project",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "proj.time_tracking",
+      "name": "Time Tracking & Timesheets",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Time & Resources",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "erpnext_projects",
+        "jira",
+        "netsuite_srp",
+        "odoo_timesheets"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "proj.resource_allocation",
+      "name": "Resource Allocation & Scheduling",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Time & Resources",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
+        "built-environment__built-environment-digital-platform",
+        "logistics__transport-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
+        "built-environment__built-environment-digital-platform",
+        "logistics__transport-management"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "ms_project",
+        "netsuite_srp",
+        "oracle_primavera",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "proj.resource_pool_skills",
+      "name": "Resource Pool & Skills Matrix",
+      "tier": "advanced",
+      "module": "project_management",
+      "sub_module": "Project Time & Resources",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ms_project",
+        "netsuite_srp",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "proj.expense_tracking",
+      "name": "Expense Tracking",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Time & Resources",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext_projects",
+        "netsuite_srp",
+        "odoo_timesheets"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "proj.contractor_management",
+      "name": "Contractor & Subcontractor Management",
+      "tier": "advanced",
+      "module": "project_management",
+      "sub_module": "Project Time & Resources",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__field-service-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__field-service-management"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "netsuite_srp",
+        "oracle_primavera",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "proj.budget_cost",
+      "name": "Project Budget & Cost Tracking",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Financial Control",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext_projects",
+        "ms_project",
+        "netsuite_srp",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "proj.billing_invoicing",
+      "name": "Project Billing & Invoicing",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Financial Control",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q5"
+      ],
+      "backing_q_titles": [
+        "BE Payment Management",
+        "BE Payment Management"
+      ],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext_projects",
+        "netsuite_srp",
+        "odoo_project",
+        "odoo_timesheets"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "proj.change_orders",
+      "name": "Change Order Management",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Financial Control",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite_srp",
+        "oracle_primavera",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "proj.revenue_recognition",
+      "name": "Revenue Recognition",
+      "tier": "advanced",
+      "module": "project_management",
+      "sub_module": "Project Financial Control",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite_srp",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "proj.rate_cards",
+      "name": "Rate Cards & Cost Models",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Financial Control",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite_srp",
+        "odoo_timesheets",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "proj.gantt_critical_path",
+      "name": "Gantt Chart & Critical Path",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Delivery (Gantt, EVM, Multi-Project)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__cross-border-e-commerce-packages"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__cross-border-e-commerce-packages"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext_projects",
+        "ms_project",
+        "odoo_project",
+        "oracle_primavera"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "proj.risk_issues",
+      "name": "Risk Register & Issue Tracking",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Delivery (Gantt, EVM, Multi-Project)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ms_project",
+        "oracle_primavera"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "proj.multi_project",
+      "name": "Multi-Project & Programme Management",
+      "tier": "advanced",
+      "module": "project_management",
+      "sub_module": "Project Delivery (Gantt, EVM, Multi-Project)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ms_project",
+        "oracle_primavera",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "proj.earned_value",
+      "name": "Earned Value Management (EVM)",
+      "tier": "advanced",
+      "module": "project_management",
+      "sub_module": "Project Delivery (Gantt, EVM, Multi-Project)",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q5"
+      ],
+      "backing_q_titles": [
+        "BE Payment Management",
+        "BE Payment Management",
+        "BE Payment Management"
+      ],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [
+        "built-environment__digital-contract-management-digital-payment"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ms_project",
+        "oracle_primavera",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "proj.customer_portal",
+      "name": "Customer Portal & Approval Workflows",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Delivery (Gantt, EVM, Multi-Project)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite_srp",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "proj.workflow_automation",
+      "name": "Workflow Automation & Approvals",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Delivery (Gantt, EVM, Multi-Project)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "retail__integrated-pos-with-mobile-features"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "retail__integrated-pos-with-mobile-features"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "jira",
+        "ms_project",
+        "netsuite_srp",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "proj.dependencies_scheduling",
+      "name": "Task Dependencies & Auto-Scheduling",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Delivery (Gantt, EVM, Multi-Project)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
+        "built-environment__built-environment-digital-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
+        "built-environment__built-environment-digital-platform"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "ms_project",
+        "odoo_project",
+        "oracle_primavera"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "proj.reporting_dashboards",
+      "name": "Project Reporting & Dashboards",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Analytics & Profitability",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "jira",
+        "ms_project",
+        "netsuite_srp",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "proj.analytics_profitability",
+      "name": "Project Analytics & Profitability",
+      "tier": "advanced",
+      "module": "project_management",
+      "sub_module": "Project Analytics & Profitability",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ms_project",
+        "netsuite_srp",
+        "sap_ps"
       ],
       "vendor_citations_count": 3
     },
@@ -4164,6 +4773,766 @@
       "expansion_verdict": "potential_overreach"
     },
     {
+      "cap_id": "proj.project_master",
+      "name": "Project Master & Hierarchy",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Core",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__digital-marketing-packages"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__digital-marketing-packages"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "erpnext_projects",
+        "ms_project",
+        "netsuite_srp",
+        "odoo_project",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 5,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.task_management",
+      "name": "Task Management & Assignment",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Core",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms",
+        "personal-care-services__salon-management-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms",
+        "personal-care-services__salon-management-system"
+      ],
+      "imda_sources_count": 4,
+      "vendor_citations": [
+        "erpnext_projects",
+        "jira",
+        "ms_project",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.document_collaboration",
+      "name": "Document Management & Collaboration",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Core",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "jira",
+        "ms_project",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.kanban_agile",
+      "name": "Kanban / Agile Board",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Core",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "jira",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.templates_repeating",
+      "name": "Template & Repeating Projects",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Core",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "jira",
+        "ms_project",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.notifications_reminders",
+      "name": "Notifications & Deadline Reminders",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Core",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__matters-management-and-collaboration-tool"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "essential-business__human-resource-e-scheduling-system",
+        "legal__matters-management-and-collaboration-tool"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "jira",
+        "ms_project",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.time_tracking",
+      "name": "Time Tracking & Timesheets",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Time & Resources",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "erpnext_projects",
+        "jira",
+        "netsuite_srp",
+        "odoo_timesheets"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.resource_allocation",
+      "name": "Resource Allocation & Scheduling",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Time & Resources",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
+        "built-environment__built-environment-digital-platform",
+        "logistics__transport-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
+        "built-environment__built-environment-digital-platform",
+        "logistics__transport-management"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "ms_project",
+        "netsuite_srp",
+        "oracle_primavera",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.resource_pool_skills",
+      "name": "Resource Pool & Skills Matrix",
+      "tier": "advanced",
+      "module": "project_management",
+      "sub_module": "Project Time & Resources",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ms_project",
+        "netsuite_srp",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.expense_tracking",
+      "name": "Expense Tracking",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Time & Resources",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext_projects",
+        "netsuite_srp",
+        "odoo_timesheets"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.contractor_management",
+      "name": "Contractor & Subcontractor Management",
+      "tier": "advanced",
+      "module": "project_management",
+      "sub_module": "Project Time & Resources",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__field-service-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__field-service-management"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "netsuite_srp",
+        "oracle_primavera",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.budget_cost",
+      "name": "Project Budget & Cost Tracking",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Financial Control",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext_projects",
+        "ms_project",
+        "netsuite_srp",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.change_orders",
+      "name": "Change Order Management",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Financial Control",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite_srp",
+        "oracle_primavera",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.revenue_recognition",
+      "name": "Revenue Recognition",
+      "tier": "advanced",
+      "module": "project_management",
+      "sub_module": "Project Financial Control",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite_srp",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.rate_cards",
+      "name": "Rate Cards & Cost Models",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Financial Control",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite_srp",
+        "odoo_timesheets",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.gantt_critical_path",
+      "name": "Gantt Chart & Critical Path",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Delivery (Gantt, EVM, Multi-Project)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__cross-border-e-commerce-packages"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__cross-border-e-commerce-packages"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext_projects",
+        "ms_project",
+        "odoo_project",
+        "oracle_primavera"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.risk_issues",
+      "name": "Risk Register & Issue Tracking",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Delivery (Gantt, EVM, Multi-Project)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ms_project",
+        "oracle_primavera"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.multi_project",
+      "name": "Multi-Project & Programme Management",
+      "tier": "advanced",
+      "module": "project_management",
+      "sub_module": "Project Delivery (Gantt, EVM, Multi-Project)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "ms_project",
+        "oracle_primavera",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.customer_portal",
+      "name": "Customer Portal & Approval Workflows",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Delivery (Gantt, EVM, Multi-Project)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite_srp",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.workflow_automation",
+      "name": "Workflow Automation & Approvals",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Delivery (Gantt, EVM, Multi-Project)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "retail__integrated-pos-with-mobile-features"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "retail__integrated-pos-with-mobile-features"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "jira",
+        "ms_project",
+        "netsuite_srp",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.dependencies_scheduling",
+      "name": "Task Dependencies & Auto-Scheduling",
+      "tier": "preferred",
+      "module": "project_management",
+      "sub_module": "Project Delivery (Gantt, EVM, Multi-Project)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
+        "built-environment__built-environment-digital-platform"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
+        "built-environment__built-environment-digital-platform"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "ms_project",
+        "odoo_project",
+        "oracle_primavera"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.reporting_dashboards",
+      "name": "Project Reporting & Dashboards",
+      "tier": "required",
+      "module": "project_management",
+      "sub_module": "Project Analytics & Profitability",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "built-environment__built-environment-digital-platform",
+        "legal__matters-management-and-collaboration-tool",
+        "legal__practice-management-system-pms"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "jira",
+        "ms_project",
+        "netsuite_srp",
+        "odoo_project"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "proj.analytics_profitability",
+      "name": "Project Analytics & Profitability",
+      "tier": "advanced",
+      "module": "project_management",
+      "sub_module": "Project Analytics & Profitability",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "ms_project",
+        "netsuite_srp",
+        "sap_ps"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
       "cap_id": "other.email_communication",
       "name": "Email & Communication Integration",
       "tier": "preferred",
@@ -5001,12 +6370,12 @@
     "cross_imda_traced": {
       "justified_real_world": 0,
       "questionable": 0,
-      "potential_overreach": 41
+      "potential_overreach": 56
     },
     "proxy_only": {
       "justified_real_world": 0,
       "questionable": 0,
-      "potential_overreach": 20
+      "potential_overreach": 28
     }
   },
   "by_module": {
@@ -5022,6 +6391,13 @@
       "cross_imda_traced": 15,
       "proxy_only": 10,
       "expansion_overreach": 25,
+      "expansion_justified": 0
+    },
+    "project_management": {
+      "imda_traced": 2,
+      "cross_imda_traced": 15,
+      "proxy_only": 8,
+      "expansion_overreach": 23,
       "expansion_justified": 0
     },
     "others": {
@@ -5135,6 +6511,61 @@
       "status": "fail"
     },
     {
+      "module": "project_management",
+      "sub_module": "Project Core",
+      "r_total": 3,
+      "r_backed": [],
+      "r_unbacked": [
+        "proj.project_master",
+        "proj.task_management",
+        "proj.document_collaboration"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "project_management",
+      "sub_module": "Project Time & Resources",
+      "r_total": 2,
+      "r_backed": [],
+      "r_unbacked": [
+        "proj.time_tracking",
+        "proj.resource_allocation"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "project_management",
+      "sub_module": "Project Financial Control",
+      "r_total": 2,
+      "r_backed": [
+        "proj.billing_invoicing"
+      ],
+      "r_unbacked": [
+        "proj.budget_cost"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "project_management",
+      "sub_module": "Project Delivery (Gantt, EVM, Multi-Project)",
+      "r_total": 1,
+      "r_backed": [],
+      "r_unbacked": [
+        "proj.gantt_critical_path"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "project_management",
+      "sub_module": "Project Analytics & Profitability",
+      "r_total": 1,
+      "r_backed": [],
+      "r_unbacked": [
+        "proj.reporting_dashboards"
+      ],
+      "status": "fail"
+    },
+    {
       "module": "others",
       "sub_module": "Workflow & Approval Engine",
       "r_total": 1,
@@ -5160,6 +6591,12 @@
       "passing_sub_mods": [],
       "status": "fail"
     },
+    "project_management": {
+      "r_sub_mod_count": 5,
+      "r_sub_mod_passing": 0,
+      "passing_sub_mods": [],
+      "status": "fail"
+    },
     "others": {
       "r_sub_mod_count": 1,
       "r_sub_mod_passing": 0,
@@ -5173,11 +6610,14 @@
     "supply_chain_and_inventory": [
       "sc.delivery_dispatch"
     ],
+    "project_management": [
+      "proj.budget_cost"
+    ],
     "others": [
       "other.notification_alerts"
     ]
   },
-  "plan_total_demotions": 2,
+  "plan_total_demotions": 3,
   "q_inverse_view": [
     {
       "q_num": "Q1",
@@ -5258,13 +6698,13 @@
           "cap_id": "proj.billing_invoicing",
           "name": "Project Billing & Invoicing",
           "module": "project_management",
-          "out_of_scope": true
+          "out_of_scope": false
         },
         {
           "cap_id": "proj.earned_value",
           "name": "Earned Value Management (EVM)",
           "module": "project_management",
-          "out_of_scope": true
+          "out_of_scope": false
         }
       ],
       "modules": [
