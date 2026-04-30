@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Architecture · ERP Mapper</title>
+<style>
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #0f172a;
+    background: #f8fafc;
+    line-height: 1.55;
+  }
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px 60px;
+  }
+  .legend {
+    display: flex; gap: 14px; flex-wrap: wrap;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 16px 0 24px;
+    font-size: 12px;
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-chip {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 10px;
+  }
+  .legend-chip.active { background: #dcfce7; color: #14532d; border: 1px solid #16a34a; }
+  .legend-chip.partial { background: #fef9c3; color: #713f12; border: 1px solid #ca8a04; }
+  .legend-chip.future { background: #e0e7ff; color: #312e81; border: 1px solid #6366f1; }
+  .legend-chip.paused { background: #f1f5f9; color: #475569; border: 1px dashed #94a3b8; }
+  .meta-bar {
+    margin: 8px 0 0;
+    color: #64748b;
+    font-size: 12px;
+  }
+  .meta-bar a { color: #0284c7; }
+</style>
+</head>
+<body>
+<style>
+  .top-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e5ea;
+    padding: 0 24px;
+    flex-shrink: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .top-bar-inner {
+    display: flex;
+    align-items: stretch;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 2px;
+  }
+  .top-bar-brand {
+    font-size: 12px;
+    color: #6b7380;
+    padding: 14px 18px 14px 0;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-right: 1px solid #e2e5ea;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .top-bar-link:hover {
+    color: #2563eb;
+    background: #f5f6f8;
+  }
+  .top-bar-link.active {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  /* Two-row nav (2026-04-29): row 1 = analysis tools, row 2 = modules. */
+  .top-bar.two-row .top-bar-row1 {
+    border-bottom: 1px solid #f1f3f6;
+  }
+  .top-bar.two-row .top-bar-row2 {
+    background: #fafbfc;
+  }
+  .top-bar.two-row .top-bar-row2 .top-bar-link {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .top-bar-row-label {
+    font-size: 10px;
+    color: #6b7380;
+    padding: 9px 14px 9px 0;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    align-self: center;
+    border-right: 1px solid #e8ebef;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-dropdown { position: relative; display: inline-flex; }
+  .top-bar-dropdown summary {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 14px 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    user-select: none;
+  }
+  .top-bar-dropdown summary::-webkit-details-marker { display: none; }
+  .top-bar-dropdown summary::after {
+    content: "";
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #6b7380;
+    margin-left: 7px;
+    transition: transform 0.12s;
+  }
+  .top-bar-dropdown[open] summary::after { transform: rotate(180deg); }
+  .top-bar-dropdown summary:hover { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown[open] summary { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown.active summary {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  .top-bar-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: -1px;
+    background: #ffffff;
+    border: 1px solid #e2e5ea;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    padding: 6px;
+    min-width: 220px;
+    z-index: 110;
+  }
+  .top-bar-dropdown-menu a {
+    display: block;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-radius: 4px;
+    line-height: 1.35;
+  }
+  .top-bar-dropdown-menu a:hover { background: #f1f5f9; color: #2563eb; }
+  .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
+  .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
+</style>
+<nav class="top-bar two-row">
+  <div class="top-bar-inner top-bar-row1">
+    <span class="top-bar-brand">PSG ERP Spec</span>
+    <a class="top-bar-link" href="index.html">Overview</a>
+    <a class="top-bar-link" href="stakeholders.html">Stakeholders</a>
+    <a class="top-bar-link" href="vendor_coverage.html">Coverage</a>
+    <a class="top-bar-link" href="integrations.html">Integrations</a>
+    <details class="top-bar-dropdown active"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="active" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 + L1 intra-module + L2 inter-module proposals awaiting review</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="methodology.html">Methodology (legacy)<span class="sub">Replaced by Stakeholders view</span></a><a class="" href="gap_analysis.html">Gaps (legacy)<span class="sub">Replaced by Stakeholders → Sol-cat fulfilment matrix</span></a><a class="" href="use_cases.html">Use Cases (legacy)<span class="sub">UC concept retired; flows are the replacement</span></a></div></details>
+  </div>
+  <div class="top-bar-inner top-bar-row2">
+    <span class="top-bar-row-label">Modules</span>
+    <a class="top-bar-link" href="canonical_financial_management.html">Financial</a>
+    <a class="top-bar-link" href="canonical_human_resources_management.html">HR</a>
+    <a class="top-bar-link" href="canonical_sales_and_crm.html">Sales & CRM</a>
+    <a class="top-bar-link" href="canonical_supply_chain_and_inventory.html">Supply Chain</a>
+    <a class="top-bar-link" href="canonical_project_management.html">Project Mgmt</a>
+    <a class="top-bar-link" href="canonical_asset_management.html">Asset Mgmt</a>
+    <a class="top-bar-link" href="canonical_manufacturing_management.html">Manufacturing</a>
+    <a class="top-bar-link" href="canonical_field_service_management.html">Field Service</a>
+    <a class="top-bar-link" href="canonical_fleet_management.html">Fleet</a>
+    <a class="top-bar-link" href="canonical_others.html">Other</a>
+  </div>
+</nav>
+<div class="container">
+  <div class="legend">
+    <div class="legend-item"><span class="legend-chip active">ACTIVE</span> built and running today</div>
+    <div class="legend-item"><span class="legend-chip partial">PARTIAL</span> exists but not full scope</div>
+    <div class="legend-item"><span class="legend-chip future">FUTURE</span> designed, not yet built</div>
+    <div class="legend-item"><span class="legend-chip paused">PAUSED</span> built but superseded; archive candidate</div>
+  </div>
+  <div class="meta-bar">
+    Source of truth: <a href="https://github.com/jersgcodes/erp-mapper/blob/main/docs/architecture.md">docs/architecture.md</a> ·
+    Data flow: <a href="https://github.com/jersgcodes/erp-mapper/blob/main/docs/data_flow.md">docs/data_flow.md</a> ·
+    Tasks: <a href="https://github.com/jersgcodes/erp-mapper/blob/main/TASKS.md">TASKS.md</a>
+  </div>
+<h1 style='margin:18px 0 10px;font-size:28px;color:#0f172a;font-weight:700'>Architecture</h1>
+<p style='margin:8px 0;line-height:1.6'>ERP Mapper takes Singapore's PSG (Productivity Solutions Grant) Pre-Approval Guide — 89 solution categories across 14 verticals, published on GitBook — and projects them onto a canonical capability library that also draws from mainstream reference ERPs (NetSuite, Salesforce, HubSpot, Odoo, ERPNext, SAP, Oracle, Workday). Today's outputs are stakeholder-ready vendor self-assessment checklists per module, cross-module compliance baselines (CEM, PDPA, VA/PT), 546 typed integration edges between capabilities, and 71 sol-cat audit reports. Future direction extends the same cap library to project synthesised sol cats, pain-point demand sensing, solution-fit scoring, cap-progression maps, and educational flow visualisations.</p>
+<p style='margin:8px 0;line-height:1.6'><strong>Stack:</strong> Python 3.9+ (httpx, BeautifulSoup, anthropic, pyyaml) for the pipeline. Standalone HTML + rough.js + Mermaid for viewers. Claude Haiku 4.5 for LLM synthesis.</p>
+<p style='margin:8px 0;line-height:1.6'><strong>Status legend used in diagrams below:</strong></p>
+<ul style='margin:6px 0 8px 26px'>
+<li style='margin:3px 0'><strong>ACTIVE</strong> — built and running today</li>
+<li style='margin:3px 0'><strong>PARTIAL</strong> — exists but not full scope</li>
+<li style='margin:3px 0'><strong>FUTURE</strong> — designed, not yet built (#1-#5 future direction)</li>
+<li style='margin:3px 0'><strong>PAUSED</strong> — built but superseded; archive candidate</li>
+</ul>
+<h2 style='margin:24px 0 10px;font-size:22px;color:#0f172a'>Future direction (locked 2026-04-30)</h2><p style='margin:8px 0;line-height:1.6'>The cap library is the central abstraction. Everything else is a projection. Five future direction streams:</p>
+<p style='margin:8px 0'>1. <strong>Synthesised sol cats</strong> — generate new (non-IMDA) sol cats by composing caps to address a problem statement / business outcome. Output: candidate checklists PSG could publish.</p>
+<p style='margin:8px 0'>2. <strong>Pain-point → cap → solution discovery</strong> — inverse direction. Given an unmet pain point, locate addressing cap(s), audit existing solution coverage, surface gap as market signal.</p>
+<p style='margin:8px 0'>3. <strong>Solution → checklist fit-test</strong> — given a candidate solution, score it against problem statement (a) and synthesised sol cat (b). Combines #1 + reverse-vendor-scoring.</p>
+<p style='margin:8px 0'>4. <strong>Cap input-format variants</strong> — document how a cap can be fulfilled by different input formats (manual / Excel / POS-generated / API-fed) at different maturity stages.</p>
+<p style='margin:8px 0'>5. <strong>Cap-flow visualisation</strong> — diagrams showing cap-replacement / advancement / disruption patterns. Visualisation tier of #4.</p>
+<p style='margin:8px 0;line-height:1.6'>Sequencing: <strong>#4 → #1 → #5 → #3 → #2</strong>. Currently scoped only — no new build until module checklist finalisation completes.</p>
+<h2 style='margin:24px 0 10px;font-size:22px;color:#0f172a'>Locked architecture decisions (2026-04-30)</h2><p style='margin:8px 0'>1. Cap library is the central abstraction; everything else is a projection over it.</p>
+<p style='margin:8px 0'>2. Authored vs derived split is enforced by step6c/6d/13 + override files. New future authored files (<code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>synthesised_solcats/</code>, <code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>pain_points.yaml</code>, <code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>cap_input_variants.yaml</code>) follow the same pattern.</p>
+<p style='margin:8px 0'>3. <code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>data/workflows.yaml</code> survives — hand-curated cap flows; foundation for #4 and #5.</p>
+<p style='margin:8px 0'>4. <code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>pipeline/flow_gen/step3_propose_inter_module.py</code> + <code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>step4_propose_intra_module.py</code> + <code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>output/flow_review.html</code> archived. Proposed-flow generation was a dead end superseded by direction pivot.</p>
+<p style='margin:8px 0'>5. <code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>pipeline/uc_gen/*</code> archived entirely. UC concept fully retired per direction pivot 2026-04-24.</p>
+<p style='margin:8px 0'>6. Synthesised sol cats use parallel <code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>evidence_refs</code> (decision: extend <code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>imda_refs</code> schema with optional <code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>source_type</code> to handle both IMDA + synthetic).</p>
+<p style='margin:8px 0'>7. Each future use case (#1-#5) is an agentic workflow — composable Haiku tool-use, idempotent reads-canonical-writes-derived. No multi-step state machines yet.</p>
+<h2 id='future-direction-locked' style='margin:32px 0 10px;font-size:22px;color:#0f172a'>Future direction (locked 2026-04-30)</h2><div style='background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:18px;margin:10px 0;overflow:auto'><pre class='mermaid' style='margin:0'>graph TB
+  subgraph "INPUTS — sources of truth"
+    PSG[PSG GitBook<br/>89 IMDA sol cats<br/>ACTIVE]
+    PROXY[Reference ERPs<br/>NetSuite, SAP, Odoo, etc.<br/>ACTIVE]
+    PSGDIR[PSG Vendor Directory<br/>414 approved vendors<br/>ACTIVE]
+    PAIN["Pain-point registry<br/>forums, surveys, calls<br/>FUTURE 2"]
+    NEWSOL["Synthesised problem<br/>statements / use cases<br/>FUTURE 1"]
+  end
+
+  subgraph "CAP LIBRARY — central abstraction"
+    CAPS[Canonical Cap Library<br/>303 caps · 10 modules<br/>tier-classified · sub-module-grouped<br/>ACTIVE]
+  end
+
+  subgraph "PROJECTIONS — derived deliverables"
+    IMDA_CL["IMDA-anchored Final Checklist<br/>per module<br/>ACTIVE"]
+    SYN_CL["Synthesised Sol Cat Checklist<br/>per problem/use-case<br/>FUTURE 1"]
+    VEND_FIT["Vendor → Sol Cat Fit Score<br/>existing T1/T2 + future T3<br/>PARTIAL"]
+    PAIN_MAP["Pain Point → Cap → Solution<br/>demand-sensing report<br/>FUTURE 2"]
+    PROG["Cap Progression Map<br/>input format × maturity<br/>FUTURE 4 5"]
+  end
+
+  subgraph "STAKEHOLDER OUTPUTS"
+    VENDOR["Vendor self-assessment<br/>Yes/No L2 + L3<br/>ACTIVE"]
+    BUYER["Buyer needs filter<br/>by sub-module / pack<br/>ACTIVE"]
+    GOV["Govt policy memo<br/>IMDA enhancement,<br/>demand signals<br/>FUTURE"]
+    EDU["Education / progression<br/>visualisation<br/>FUTURE 5"]
+  end
+
+  PSG --> CAPS
+  PROXY --> CAPS
+  PSGDIR --> CAPS
+  PAIN -.-> CAPS
+  NEWSOL -.-> CAPS
+
+  CAPS --> IMDA_CL
+  CAPS -.-> SYN_CL
+  CAPS --> VEND_FIT
+  CAPS -.-> PAIN_MAP
+  CAPS -.-> PROG
+
+  IMDA_CL --> VENDOR
+  IMDA_CL --> BUYER
+  SYN_CL -.-> VENDOR
+  PAIN_MAP -.-> GOV
+  VEND_FIT --> BUYER
+  PROG -.-> EDU
+
+  classDef active fill:#dcfce7,stroke:#16a34a,color:#14532d
+  classDef partial fill:#fef9c3,stroke:#ca8a04,color:#713f12
+  classDef future fill:#e0e7ff,stroke:#6366f1,color:#312e81
+  classDef paused fill:#f1f5f9,stroke:#94a3b8,color:#475569,stroke-dasharray: 5 5
+  class PSG,PROXY,PSGDIR,CAPS,IMDA_CL,VENDOR,BUYER active
+  class VEND_FIT partial
+  class PAIN,NEWSOL,SYN_CL,PAIN_MAP,PROG,GOV,EDU future</pre></div>
+<h2 id='technical-architecture' style='margin:32px 0 10px;font-size:22px;color:#0f172a'>Technical Architecture</h2><div style='background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:18px;margin:10px 0;overflow:auto'><pre class='mermaid' style='margin:0'>graph TB
+  subgraph "RAW [active]"
+    R1["data/raw/*.html<br/>scraper output"]
+    R2["data/parsed/*.json<br/>89 IMDA Qs"]
+    R3["data/external/psg-solutions.json<br/>414 vendors"]
+  end
+
+  subgraph "AUTHORED — source of truth [active]"
+    A1["data/proxy/*.yaml<br/>10 modules × caps + tier"]
+    A2["config/sub_modules.yaml<br/>cap → sub-module"]
+    A3["data/solcat_crosswalk.yaml<br/>display_name + flags<br/>(scope = primary_modules)"]
+    A4["data/manual_imda_ref_overrides.yaml<br/>51 hand-curated mappings"]
+    A5["data/vendor_question_rewrites.yaml<br/>284 generalised + SG-restored"]
+    A6["data/workflows.yaml<br/>hand-curated cap flows"]
+  end
+
+  subgraph "AUTHORED [future]"
+    F1["data/synthesised_solcats/*.yaml<br/>FUTURE 1"]
+    F2["data/pain_points.yaml<br/>FUTURE 2"]
+    F3["config/cap_input_variants.yaml<br/>FUTURE 4"]
+  end
+
+  subgraph "PIPELINE — canonicalise [active]"
+    P1["step1 group → step2 merge<br/>step2.5 features"]
+    P2["step3 rank → step4 sme_min<br/>step5 module rollup"]
+    P3["step6 vendor_qs<br/>step6c apply_rewrites<br/>step6d apply_overrides"]
+    P4["step3b revalidate<br/>step7/7b/7c sector"]
+    P5["step8 verification<br/>format-audit gate"]
+    P6["step13 L2 questions sync<br/>workspace-level"]
+  end
+
+  subgraph "PIPELINE [future]"
+    PF1["pipeline/synthesise_solcat.py<br/>FUTURE 1"]
+    PF2["pipeline/match_pain_to_cap.py<br/>FUTURE 2"]
+    PF3["pipeline/score_solution_against_solcat.py<br/>FUTURE 3"]
+    PF4["pipeline/derive_cap_progression.py<br/>FUTURE 4"]
+  end
+
+  subgraph "DERIVED [active]"
+    D1["output/canonical/*.json ×10<br/>THE schema"]
+    D2["data/sub_module_vendor_questions.yaml<br/>124 L2 questions, derived"]
+    D3["data/_derived/solcat_module_scope.yaml"]
+    D4["data/sol_cat_sub_module_join.yaml"]
+    D5["output/solcat_to_checklist_gap_*.json (×71)"]
+    D6["output/compliance_baseline.json"]
+  end
+
+  subgraph "AUDITS — gates [active]"
+    AU1["audit_l2_question_consistency.py<br/>P0=0 today"]
+    AU2["audit_unbacked_required_caps.py"]
+    AU3["audit_imda_q_cap_coverage.py"]
+    AU4["audit_checklist_format.py"]
+  end
+
+  subgraph "VIEWERS [active]"
+    V1["canonical_<module>.html ×10"]
+    V2["stakeholders.html"]
+    V3["vendor_coverage.html"]
+    V4["index.html"]
+    V5["architecture.html"]
+  end
+
+  subgraph "VIEWERS [future]"
+    VF1["synthesised_solcats.html — FUTURE 1"]
+    VF2["pain_demand_map.html — FUTURE 2"]
+    VF3["cap_progression.html — FUTURE 5"]
+  end
+
+  subgraph "PAUSED — archive candidates"
+    PA1["pipeline/flow_gen/step3 step4<br/>proposed-flow generation"]
+    PA2["output/flow_review.html<br/>data/proposed_flows_*.yaml"]
+    PA3["pipeline/uc_gen/* + step9-11<br/>UC concept retired"]
+    PA4["output/use_cases.html<br/>methodology.html · gap_analysis.html"]
+  end
+
+  R1 --> R2
+  A1 --> P1
+  R2 --> P1
+  P1 --> P2 --> P3 --> P4 --> P5
+  A4 --> P3
+  A5 --> P3
+  P5 --> D1
+  D1 --> P6
+  A2 --> P6
+  P6 --> D2
+
+  A3 --> D3
+  D3 --> D4
+  D1 --> D5
+
+  D1 --> AU1
+  D1 --> AU2
+  D1 --> AU3
+  D1 --> AU4
+
+  D1 --> V1
+  D1 --> V2
+  D1 --> V3
+  D5 --> V3
+
+  F1 -.-> PF1
+  F2 -.-> PF2
+  F3 -.-> PF4
+  PF1 -.-> D1
+  PF2 -.-> D1
+  PF3 -.-> D5
+  PF4 -.-> D2
+
+  D1 -.-> VF1
+  D1 -.-> VF2
+  D1 -.-> VF3
+
+  classDef active fill:#dcfce7,stroke:#16a34a,color:#14532d
+  classDef future fill:#e0e7ff,stroke:#6366f1,color:#312e81
+  classDef paused fill:#f1f5f9,stroke:#94a3b8,color:#475569,stroke-dasharray: 5 5
+  class R1,R2,R3,A1,A2,A3,A4,A5,A6,P1,P2,P3,P4,P5,P6,D1,D2,D3,D4,D5,D6,AU1,AU2,AU3,AU4,V1,V2,V3,V4,V5 active
+  class F1,F2,F3,PF1,PF2,PF3,PF4,VF1,VF2,VF3 future
+  class PA1,PA2,PA3,PA4 paused</pre></div>
+<h2 style='margin:32px 0 10px;font-size:22px;color:#0f172a'>Business Architecture</h2>
+<h2 style='margin:32px 0 10px;font-size:22px;color:#0f172a'>Key Files</h2><table style='border-collapse:collapse;margin:14px 0;font-size:13px'>
+<tr><th style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>File</th><th style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>Purpose</th></tr>
+<tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>data/proxy/&lt;module&gt;.yaml</code> (×10)</td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>Source of truth for caps, tiers, descriptions</td></tr>
+<tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>config/sub_modules.yaml</code></td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>Cap → sub-module assignment</td></tr>
+<tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>data/manual_imda_ref_overrides.yaml</code></td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>51 hand-curated (sol_cat, q_num, cap) mappings</td></tr>
+<tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>data/vendor_question_rewrites.yaml</code></td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>284 generalised vendor questions, SG-specificity-restored</td></tr>
+<tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>data/workflows.yaml</code></td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>Hand-curated cap flows</td></tr>
+<tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>output/canonical/&lt;module&gt;.json</code> (×10)</td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>The schema — every viewer reads from here</td></tr>
+<tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>data/sub_module_vendor_questions.yaml</code></td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>124 L2 questions (derived from canonical, not hand-edited)</td></tr>
+<tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>pipeline/canonicalise.py</code></td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>Per-module pipeline orchestrator</td></tr>
+<tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>pipeline/steps/step6c_apply_rewrites.py</code></td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>Idempotent re-apply of vendor question generalisations</td></tr>
+<tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>pipeline/steps/step6d_apply_imda_ref_overrides.py</code></td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>Idempotent re-apply of manual Q→cap mappings</td></tr>
+<tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>pipeline/steps/step13_l2_questions_sync.py</code></td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>Workspace-level: regenerates L2 questions from canonical sme_tier</td></tr>
+<tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>scripts/audit_l2_question_consistency.py</code></td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>P0 gate: L2 tier-homogeneity + dangling-ref check</td></tr>
+<tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>scripts/audit_unbacked_required_caps.py</code></td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>Surfaces likely Q→cap mapping misses</td></tr>
+<tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>scripts/audit_imda_q_cap_coverage.py</code></td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>Surfaces orphan + undermapped IMDA Qs</td></tr>
+<tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>scripts/build_architecture_viewer.py</code></td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>Renders this file as <code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>output/architecture.html</code></td></tr>
+</table>
+<h2 style='margin:32px 0 10px;font-size:22px;color:#0f172a'>Run order (operator-level)</h2><pre style='background:#f1f5f9;border:1px solid #cbd5e1;border-radius:4px;padding:10px 14px;font-size:12px;overflow:auto;line-height:1.5'><code># Per module (×10)
+python3 -m pipeline.canonicalise &lt;module_slug&gt;
+
+# Workspace-level (after all modules)
+python3 scripts/derive_solcat_modules.py
+python3 scripts/build_solcat_sub_module_join.py
+python3 -m pipeline.steps.step13_l2_questions_sync
+python3 scripts/audit_l2_question_consistency.py  # gate: P0=0
+for sc in $(ls output/solcat_to_checklist_gap_*.json | sed 's|.*gap_||;s|\.json||'); do
+  python3 scripts/analyse_solcat_to_checklist_gap.py "$sc"
+done
+
+# Viewers
+for slug in $(ls data/proxy/*.yaml | xargs -n1 basename | sed 's/.yaml//'); do
+  python3 scripts/build_canonical_viewer.py $slug
+done
+python3 scripts/build_stakeholders_viewer.py
+python3 scripts/build_vendor_coverage_viewer.py
+python3 scripts/build_index_viewer.py
+python3 scripts/build_architecture_viewer.py</code></pre>
+<p style='margin:8px 0;line-height:1.6'>See <a href='data_flow.md' style='color:#0284c7'>docs/data_flow.md</a> for the full storage layout, copy-relationship defects, and rectification path.</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'default',
+    flowchart: { htmlLabels: true, curve: 'basis' },
+    securityLevel: 'loose',
+  });
+</script>
+</body>
+</html>

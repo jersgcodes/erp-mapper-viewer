@@ -1,0 +1,1863 @@
+{
+  "sol_cat_id": "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
+  "vendor_count": 0,
+  "imda_qs_total": 19,
+  "imda_qs_mapped": 10,
+  "imda_qs_orphan": 9,
+  "caps_in_scope_total": 28,
+  "step1_classification_counts": {
+    "imda_traced": 4,
+    "cross_imda_traced": 7,
+    "proxy_only": 17
+  },
+  "step1_caps": [
+    {
+      "cap_id": "mfg.bom",
+      "name": "Bill of Materials (BOM)",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Product Engineering & PLM",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "odoo",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "mfg.routing",
+      "name": "Routings, Operations & Work Centers",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Product Engineering & PLM",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext",
+        "odoo",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "mfg.engineering_change",
+      "name": "Engineering Change Management (ECO / ECR)",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Product Engineering & PLM",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "infor_cloudsuite",
+        "odoo",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "mfg.product_master_basic",
+      "name": "Product Master & Document Management (Basic)",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Product Engineering & PLM",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "netsuite"
+      ],
+      "vendor_citations_count": 1
+    },
+    {
+      "cap_id": "mfg.plm_advanced",
+      "name": "Enterprise PLM (Advanced)",
+      "tier": "advanced",
+      "module": "manufacturing_management",
+      "sub_module": "Product Engineering & PLM",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [],
+      "vendor_citations_count": 0
+    },
+    {
+      "cap_id": "mfg.work_orders",
+      "name": "Work Orders & Job Cards",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Production Execution (MES)",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q1",
+        "Q3"
+      ],
+      "backing_q_titles": [
+        "Work Order Management",
+        "Shopfloor Work Completion Status Tracking"
+      ],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "odoo",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "mfg.production_scheduling",
+      "name": "Production Scheduling & Capacity Planning",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Production Execution (MES)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "mfg.shop_floor_execution",
+      "name": "Shop Floor Execution & MES",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Production Execution (MES)",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q3"
+      ],
+      "backing_q_titles": [
+        "Shopfloor Work Completion Status Tracking",
+        "Shopfloor Work Completion Status Tracking"
+      ],
+      "cross_imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "advanced-manufacturing__manufacturing-quality-management",
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "netsuite",
+        "odoo",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "mfg.process_manufacturing",
+      "name": "Process & Batch Manufacturing",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Production Execution (MES)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "infor_cloudsuite",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "mfg.discrete_modes",
+      "name": "Mixed-Mode & Configure-to-Order Manufacturing",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Production Execution (MES)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "infor_cloudsuite",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "mfg.shop_floor_iot",
+      "name": "IoT, Machine Integration & Data Collection",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Production Execution (MES)",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q4"
+      ],
+      "backing_q_titles": [
+        "Production Equipment Monitoring and Alerts"
+      ],
+      "cross_imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "odoo",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "mfg.labor_management",
+      "name": "Labour Tracking & Shop Floor Time Management",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Production Execution (MES)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "mfg.mrp",
+      "name": "Material Requirements Planning (MRP)",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Planning & Costing (Manufacturing)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "mfg.inventory_wip",
+      "name": "Inventory & Work-in-Progress Tracking",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Planning & Costing (Manufacturing)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "odoo",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "mfg.product_costing",
+      "name": "Product Costing & Variance Analysis",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Planning & Costing (Manufacturing)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "mfg.subcontracting",
+      "name": "Subcontract & Outsourced Manufacturing",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Planning & Costing (Manufacturing)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "infor_cloudsuite",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "mfg.demand_planning",
+      "name": "Demand Planning & Forecasting",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Planning & Costing (Manufacturing)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "mfg.capacity_sop",
+      "name": "Rough-Cut Capacity & S&OP Integration",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Planning & Costing (Manufacturing)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "mfg.quality_management",
+      "name": "Quality Management (QM)",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Quality & Compliance (QMS)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "odoo",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "mfg.traceability_genealogy",
+      "name": "Lot/Serial Traceability & Genealogy",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Quality & Compliance (QMS)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "mfg.safety_compliance",
+      "name": "Manufacturing Safety, EHS & Regulatory Compliance",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Quality & Compliance (QMS)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "infor_cloudsuite",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "mfg.energy_sustainability",
+      "name": "Energy, Utility & Sustainability Tracking",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Quality & Compliance (QMS)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "mfg.oee_performance",
+      "name": "OEE & Manufacturing Performance Analytics",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Manufacturing Maintenance & Analytics",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "netsuite",
+        "odoo",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "mfg.repair_returns",
+      "name": "Repair, Rework & Returned-Goods Manufacturing",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Manufacturing Maintenance & Analytics",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "odoo",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "mfg.maintenance_integration",
+      "name": "Maintenance Integration (CMMS / EAM Linkage)",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Manufacturing Maintenance & Analytics",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q4"
+      ],
+      "backing_q_titles": [
+        "Production Equipment Monitoring and Alerts"
+      ],
+      "cross_imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "legal__practice-management-system-pms"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking",
+        "legal__practice-management-system-pms"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "odoo",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "mfg.digital_thread_twin",
+      "name": "Digital Thread & Manufacturing Digital Twin",
+      "tier": "advanced",
+      "module": "manufacturing_management",
+      "sub_module": "Manufacturing Maintenance & Analytics",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "mfg.multi_site_intercompany",
+      "name": "Multi-Site & Inter-Company Manufacturing",
+      "tier": "advanced",
+      "module": "manufacturing_management",
+      "sub_module": "Manufacturing Maintenance & Analytics",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "infor_cloudsuite",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "mfg.ai_ml_analytics",
+      "name": "AI / ML for Manufacturing",
+      "tier": "advanced",
+      "module": "manufacturing_management",
+      "sub_module": "Manufacturing Maintenance & Analytics",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 2
+    }
+  ],
+  "imda_q_status": [
+    {
+      "q_num": "Q1",
+      "q_title": "Work Order Management",
+      "priority": "mandatory",
+      "mapped": true
+    },
+    {
+      "q_num": "Q2",
+      "q_title": "Work Order Viewing",
+      "priority": "mandatory",
+      "mapped": true
+    },
+    {
+      "q_num": "Q3",
+      "q_title": "Shopfloor Work Completion Status Tracking",
+      "priority": "mandatory",
+      "mapped": true
+    },
+    {
+      "q_num": "Q4",
+      "q_title": "Production Equipment Monitoring and Alerts",
+      "priority": "mandatory",
+      "mapped": true
+    },
+    {
+      "q_num": "Q5",
+      "q_title": "Work Order Scheduling",
+      "priority": "mandatory",
+      "mapped": true
+    },
+    {
+      "q_num": "Q6",
+      "q_title": "Cloud and Multi-Device Accessibility",
+      "priority": "mandatory",
+      "mapped": false
+    },
+    {
+      "q_num": "Q7",
+      "q_title": "System Integration and Connectivity",
+      "priority": "preferred",
+      "mapped": true
+    },
+    {
+      "q_num": "Q8",
+      "q_title": "Dashboards and Reports",
+      "priority": "mandatory",
+      "mapped": true
+    },
+    {
+      "q_num": "Q9",
+      "q_title": "AI Features",
+      "priority": "preferred",
+      "mapped": false
+    },
+    {
+      "q_num": "Q10",
+      "q_title": "AI Features - Elaboration",
+      "priority": "mandatory",
+      "mapped": false
+    },
+    {
+      "q_num": "Q11",
+      "q_title": "Business Data Extraction",
+      "priority": "mandatory",
+      "mapped": false
+    },
+    {
+      "q_num": "Q12",
+      "q_title": "Personal Data Collection",
+      "priority": "preferred",
+      "mapped": false
+    },
+    {
+      "q_num": "Q13",
+      "q_title": "Personal Data Protection",
+      "priority": "mandatory",
+      "mapped": true
+    },
+    {
+      "q_num": "Q14",
+      "q_title": "Vulnerability Assessment/Penetration Testing (VA/PT)",
+      "priority": "mandatory",
+      "mapped": true
+    },
+    {
+      "q_num": "Q15",
+      "q_title": "Cybersecurity Compliance - Cyber Essentials Mark (CEM)",
+      "priority": "preferred",
+      "mapped": false
+    },
+    {
+      "q_num": "Q16",
+      "q_title": "CEM for Product Principal",
+      "priority": "preferred",
+      "mapped": true
+    },
+    {
+      "q_num": "Q17",
+      "q_title": "CEM for Product Principal - Elaboration",
+      "priority": "mandatory",
+      "mapped": false
+    },
+    {
+      "q_num": "Q18",
+      "q_title": "CEM for Resellers",
+      "priority": "preferred",
+      "mapped": false
+    },
+    {
+      "q_num": "Q19",
+      "q_title": "CEM for Resellers - Elaboration",
+      "priority": "mandatory",
+      "mapped": false
+    }
+  ],
+  "expansion_caps": [
+    {
+      "cap_id": "mfg.bom",
+      "name": "Bill of Materials (BOM)",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Product Engineering & PLM",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "odoo",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.routing",
+      "name": "Routings, Operations & Work Centers",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Product Engineering & PLM",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext",
+        "odoo",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.engineering_change",
+      "name": "Engineering Change Management (ECO / ECR)",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Product Engineering & PLM",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "infor_cloudsuite",
+        "odoo",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.product_master_basic",
+      "name": "Product Master & Document Management (Basic)",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Product Engineering & PLM",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "netsuite"
+      ],
+      "vendor_citations_count": 1,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.plm_advanced",
+      "name": "Enterprise PLM (Advanced)",
+      "tier": "advanced",
+      "module": "manufacturing_management",
+      "sub_module": "Product Engineering & PLM",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [],
+      "vendor_citations_count": 0,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.production_scheduling",
+      "name": "Production Scheduling & Capacity Planning",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Production Execution (MES)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.process_manufacturing",
+      "name": "Process & Batch Manufacturing",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Production Execution (MES)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "infor_cloudsuite",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.discrete_modes",
+      "name": "Mixed-Mode & Configure-to-Order Manufacturing",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Production Execution (MES)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "infor_cloudsuite",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.labor_management",
+      "name": "Labour Tracking & Shop Floor Time Management",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Production Execution (MES)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.mrp",
+      "name": "Material Requirements Planning (MRP)",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Planning & Costing (Manufacturing)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.inventory_wip",
+      "name": "Inventory & Work-in-Progress Tracking",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Planning & Costing (Manufacturing)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "odoo",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.product_costing",
+      "name": "Product Costing & Variance Analysis",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Planning & Costing (Manufacturing)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.subcontracting",
+      "name": "Subcontract & Outsourced Manufacturing",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Planning & Costing (Manufacturing)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "erpnext",
+        "infor_cloudsuite",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.demand_planning",
+      "name": "Demand Planning & Forecasting",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Planning & Costing (Manufacturing)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.capacity_sop",
+      "name": "Rough-Cut Capacity & S&OP Integration",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Planning & Costing (Manufacturing)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.quality_management",
+      "name": "Quality Management (QM)",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Quality & Compliance (QMS)",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "erpnext",
+        "netsuite",
+        "odoo",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.traceability_genealogy",
+      "name": "Lot/Serial Traceability & Genealogy",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Quality & Compliance (QMS)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "netsuite",
+        "odoo",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.safety_compliance",
+      "name": "Manufacturing Safety, EHS & Regulatory Compliance",
+      "tier": "required",
+      "module": "manufacturing_management",
+      "sub_module": "Quality & Compliance (QMS)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "infor_cloudsuite",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.energy_sustainability",
+      "name": "Energy, Utility & Sustainability Tracking",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Quality & Compliance (QMS)",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.oee_performance",
+      "name": "OEE & Manufacturing Performance Analytics",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Manufacturing Maintenance & Analytics",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection",
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "netsuite",
+        "odoo",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.repair_returns",
+      "name": "Repair, Rework & Returned-Goods Manufacturing",
+      "tier": "preferred",
+      "module": "manufacturing_management",
+      "sub_module": "Manufacturing Maintenance & Analytics",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "odoo",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.digital_thread_twin",
+      "name": "Digital Thread & Manufacturing Digital Twin",
+      "tier": "advanced",
+      "module": "manufacturing_management",
+      "sub_module": "Manufacturing Maintenance & Analytics",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.multi_site_intercompany",
+      "name": "Multi-Site & Inter-Company Manufacturing",
+      "tier": "advanced",
+      "module": "manufacturing_management",
+      "sub_module": "Manufacturing Maintenance & Analytics",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "infor_cloudsuite",
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "mfg.ai_ml_analytics",
+      "name": "AI / ML for Manufacturing",
+      "tier": "advanced",
+      "module": "manufacturing_management",
+      "sub_module": "Manufacturing Maintenance & Analytics",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "oracle_fusion_mfg",
+        "sap_s4hana_pp"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    }
+  ],
+  "expansion_summary": {
+    "proxy_only": {
+      "justified_real_world": 0,
+      "questionable": 0,
+      "potential_overreach": 17
+    },
+    "cross_imda_traced": {
+      "justified_real_world": 0,
+      "questionable": 0,
+      "potential_overreach": 7
+    }
+  },
+  "by_module": {
+    "manufacturing_management": {
+      "imda_traced": 4,
+      "cross_imda_traced": 7,
+      "proxy_only": 17,
+      "expansion_overreach": 24,
+      "expansion_justified": 0
+    }
+  },
+  "sub_module_pass": [
+    {
+      "module": "manufacturing_management",
+      "sub_module": "Product Engineering & PLM",
+      "r_total": 2,
+      "r_backed": [],
+      "r_unbacked": [
+        "mfg.bom",
+        "mfg.routing"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "manufacturing_management",
+      "sub_module": "Production Execution (MES)",
+      "r_total": 2,
+      "r_backed": [
+        "mfg.work_orders"
+      ],
+      "r_unbacked": [
+        "mfg.production_scheduling"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "manufacturing_management",
+      "sub_module": "Planning & Costing (Manufacturing)",
+      "r_total": 3,
+      "r_backed": [],
+      "r_unbacked": [
+        "mfg.mrp",
+        "mfg.inventory_wip",
+        "mfg.product_costing"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "manufacturing_management",
+      "sub_module": "Quality & Compliance (QMS)",
+      "r_total": 3,
+      "r_backed": [],
+      "r_unbacked": [
+        "mfg.quality_management",
+        "mfg.traceability_genealogy",
+        "mfg.safety_compliance"
+      ],
+      "status": "fail"
+    }
+  ],
+  "module_pass": {
+    "manufacturing_management": {
+      "r_sub_mod_count": 4,
+      "r_sub_mod_passing": 0,
+      "passing_sub_mods": [],
+      "status": "fail"
+    }
+  },
+  "sol_cat_passes_canonical": false,
+  "smallest_demotion_plan": {
+    "manufacturing_management": [
+      "mfg.production_scheduling"
+    ]
+  },
+  "plan_total_demotions": 1,
+  "q_inverse_view": [
+    {
+      "q_num": "Q1",
+      "q_title": "Work Order Management",
+      "priority": "mandatory",
+      "caps_backed": [
+        {
+          "cap_id": "mfg.work_orders",
+          "name": "Work Orders & Job Cards",
+          "module": "manufacturing_management",
+          "out_of_scope": false
+        },
+        {
+          "cap_id": "fsm.work_orders",
+          "name": "Work Order Management",
+          "module": "field_service_management",
+          "out_of_scope": true
+        }
+      ],
+      "modules": [
+        "field_service_management",
+        "manufacturing_management"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q2",
+      "q_title": "Work Order Viewing",
+      "priority": "mandatory",
+      "caps_backed": [
+        {
+          "cap_id": "fsm.work_orders",
+          "name": "Work Order Management",
+          "module": "field_service_management",
+          "out_of_scope": true
+        }
+      ],
+      "modules": [
+        "field_service_management"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q3",
+      "q_title": "Shopfloor Work Completion Status Tracking",
+      "priority": "mandatory",
+      "caps_backed": [
+        {
+          "cap_id": "mfg.work_orders",
+          "name": "Work Orders & Job Cards",
+          "module": "manufacturing_management",
+          "out_of_scope": false
+        },
+        {
+          "cap_id": "mfg.shop_floor_execution",
+          "name": "Shop Floor Execution & MES",
+          "module": "manufacturing_management",
+          "out_of_scope": false
+        }
+      ],
+      "modules": [
+        "manufacturing_management"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q4",
+      "q_title": "Production Equipment Monitoring and Alerts",
+      "priority": "mandatory",
+      "caps_backed": [
+        {
+          "cap_id": "mfg.shop_floor_iot",
+          "name": "IoT, Machine Integration & Data Collection",
+          "module": "manufacturing_management",
+          "out_of_scope": false
+        },
+        {
+          "cap_id": "mfg.maintenance_integration",
+          "name": "Maintenance Integration (CMMS / EAM Linkage)",
+          "module": "manufacturing_management",
+          "out_of_scope": false
+        }
+      ],
+      "modules": [
+        "manufacturing_management"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q5",
+      "q_title": "Work Order Scheduling",
+      "priority": "mandatory",
+      "caps_backed": [
+        {
+          "cap_id": "fsm.dispatch_scheduling",
+          "name": "Dispatch & Scheduling",
+          "module": "field_service_management",
+          "out_of_scope": true
+        },
+        {
+          "cap_id": "proj.resource_allocation",
+          "name": "Resource Allocation & Scheduling",
+          "module": "project_management",
+          "out_of_scope": true
+        },
+        {
+          "cap_id": "proj.dependencies_scheduling",
+          "name": "Task Dependencies & Auto-Scheduling",
+          "module": "project_management",
+          "out_of_scope": true
+        }
+      ],
+      "modules": [
+        "field_service_management",
+        "project_management"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q6",
+      "q_title": "Cloud and Multi-Device Accessibility",
+      "priority": "mandatory",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q7",
+      "q_title": "System Integration and Connectivity",
+      "priority": "preferred",
+      "caps_backed": [
+        {
+          "cap_id": "mfg.integration_import_export",
+          "name": "Data Import, Export & Integration",
+          "module": "manufacturing_management",
+          "out_of_scope": true
+        }
+      ],
+      "modules": [
+        "manufacturing_management"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q8",
+      "q_title": "Dashboards and Reports",
+      "priority": "mandatory",
+      "caps_backed": [
+        {
+          "cap_id": "other.bi_dashboards",
+          "name": "Business Intelligence & Dashboards",
+          "module": "others",
+          "out_of_scope": true
+        }
+      ],
+      "modules": [
+        "others"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q9",
+      "q_title": "AI Features",
+      "priority": "preferred",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q10",
+      "q_title": "AI Features - Elaboration",
+      "priority": "mandatory",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q11",
+      "q_title": "Business Data Extraction",
+      "priority": "mandatory",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q12",
+      "q_title": "Personal Data Collection",
+      "priority": "preferred",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q13",
+      "q_title": "Personal Data Protection",
+      "priority": "mandatory",
+      "caps_backed": [
+        {
+          "cap_id": "other.data_governance",
+          "name": "Data Security, Privacy & Consent",
+          "module": "others",
+          "out_of_scope": true
+        }
+      ],
+      "modules": [
+        "others"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q14",
+      "q_title": "Vulnerability Assessment/Penetration Testing (VA/PT)",
+      "priority": "mandatory",
+      "caps_backed": [
+        {
+          "cap_id": "other.data_governance",
+          "name": "Data Security, Privacy & Consent",
+          "module": "others",
+          "out_of_scope": true
+        }
+      ],
+      "modules": [
+        "others"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q15",
+      "q_title": "Cybersecurity Compliance - Cyber Essentials Mark (CEM)",
+      "priority": "preferred",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q16",
+      "q_title": "CEM for Product Principal",
+      "priority": "preferred",
+      "caps_backed": [
+        {
+          "cap_id": "other.data_governance",
+          "name": "Data Security, Privacy & Consent",
+          "module": "others",
+          "out_of_scope": true
+        }
+      ],
+      "modules": [
+        "others"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q17",
+      "q_title": "CEM for Product Principal - Elaboration",
+      "priority": "mandatory",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q18",
+      "q_title": "CEM for Resellers",
+      "priority": "preferred",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q19",
+      "q_title": "CEM for Resellers - Elaboration",
+      "priority": "mandatory",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    }
+  ]
+}

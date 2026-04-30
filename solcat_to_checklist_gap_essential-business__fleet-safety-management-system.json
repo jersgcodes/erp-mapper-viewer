@@ -1,0 +1,1525 @@
+{
+  "sol_cat_id": "essential-business__fleet-safety-management-system",
+  "vendor_count": 0,
+  "imda_qs_total": 17,
+  "imda_qs_mapped": 4,
+  "imda_qs_orphan": 13,
+  "caps_in_scope_total": 22,
+  "step1_classification_counts": {
+    "imda_traced": 3,
+    "cross_imda_traced": 6,
+    "proxy_only": 13
+  },
+  "step1_caps": [
+    {
+      "cap_id": "fleet.vehicle_register",
+      "name": "Vehicle & Asset Register",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Vehicle Register & Procurement",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "security__automated-visitor-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "security__automated-visitor-management"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio",
+        "odoo_fleet",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fleet.insurance_claims",
+      "name": "Insurance & Claims Management",
+      "tier": "preferred",
+      "module": "fleet_management",
+      "sub_module": "Vehicle Register & Procurement",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "fleet.procurement_disposal",
+      "name": "Fleet Procurement & Disposal",
+      "tier": "preferred",
+      "module": "fleet_management",
+      "sub_module": "Vehicle Register & Procurement",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "oracle_otm",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "fleet.driver_management",
+      "name": "Driver Management",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Driver & Safety",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "fleetio",
+        "odoo_fleet",
+        "samsara",
+        "verizon_connect"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fleet.driver_safety",
+      "name": "Driver Safety & Behaviour Scoring",
+      "tier": "preferred",
+      "module": "fleet_management",
+      "sub_module": "Driver & Safety",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q2",
+        "Q3"
+      ],
+      "backing_q_titles": [
+        "Driver Behaviour Monitoring",
+        "Driver Behaviour Monitoring",
+        "Driver Behaviour Monitoring",
+        "Fleet Safety Management",
+        "Driver Behaviour Monitoring",
+        "Fleet Safety Management",
+        "Fleet Safety Management",
+        "Fleet Safety Management",
+        "Fleet Safety Management",
+        "Fleet Safety Management"
+      ],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [
+        "essential-business__fleet-safety-management-system"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "samsara",
+        "verizon_connect"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "fleet.accident_incident",
+      "name": "Accident & Incident Tracking",
+      "tier": "preferred",
+      "module": "fleet_management",
+      "sub_module": "Driver & Safety",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q2"
+      ],
+      "backing_q_titles": [
+        "Fleet Safety Management",
+        "Fleet Safety Management",
+        "Fleet Safety Management",
+        "Fleet Safety Management",
+        "Fleet Safety Management"
+      ],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [
+        "essential-business__fleet-safety-management-system"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio",
+        "verizon_connect"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "fleet.gps_telematics",
+      "name": "GPS Tracking & Telematics",
+      "tier": "preferred",
+      "module": "fleet_management",
+      "sub_module": "Telematics & Routing",
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q4"
+      ],
+      "backing_q_titles": [
+        "Vehicle Cabin Monitoring"
+      ],
+      "cross_imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management",
+        "security__mobile-enabled-patrol-and-incident-management",
+        "security__surveillance-and-analytics",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__fleet-management-system",
+        "essential-business__fleet-safety-management-system",
+        "logistics__transport-management",
+        "security__mobile-enabled-patrol-and-incident-management",
+        "security__surveillance-and-analytics",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 6,
+      "vendor_citations": [
+        "samsara",
+        "verizon_connect"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "fleet.route_planning",
+      "name": "Route Planning & Optimisation",
+      "tier": "preferred",
+      "module": "fleet_management",
+      "sub_module": "Telematics & Routing",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "oracle_otm",
+        "samsara",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "fleet.trip_mileage",
+      "name": "Trip & Mileage Tracking",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Telematics & Routing",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "fleetio",
+        "odoo_fleet",
+        "samsara",
+        "verizon_connect"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fleet.fuel_management",
+      "name": "Fuel Management",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Bookings & Fuel",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "fleetio",
+        "odoo_fleet",
+        "samsara",
+        "verizon_connect"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fleet.booking_reservation",
+      "name": "Vehicle Booking & Reservation",
+      "tier": "preferred",
+      "module": "fleet_management",
+      "sub_module": "Bookings & Fuel",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "odoo_fleet"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "fleet.pool_car_sharing",
+      "name": "Pool Vehicle & Car Sharing",
+      "tier": "preferred",
+      "module": "fleet_management",
+      "sub_module": "Bookings & Fuel",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "fleet.maintenance_scheduling",
+      "name": "Preventive Maintenance Scheduling",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Fleet Maintenance & Workshop",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio",
+        "odoo_fleet",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fleet.maintenance_work_orders",
+      "name": "Maintenance Work Orders",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Fleet Maintenance & Workshop",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "fleet.tyre_management",
+      "name": "Tyre Management",
+      "tier": "advanced",
+      "module": "fleet_management",
+      "sub_module": "Fleet Maintenance & Workshop",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "fleet.vendor_workshop",
+      "name": "Vendor & Workshop Management",
+      "tier": "advanced",
+      "module": "fleet_management",
+      "sub_module": "Fleet Maintenance & Workshop",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "fleet.cost_management",
+      "name": "Fleet Cost Management",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Fleet Cost, Compliance & Analytics",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio",
+        "odoo_fleet",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fleet.reporting_dashboards",
+      "name": "Fleet Reporting & Dashboards",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Fleet Cost, Compliance & Analytics",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management",
+        "security__mobile-enabled-patrol-and-incident-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management",
+        "security__mobile-enabled-patrol-and-incident-management"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio",
+        "odoo_fleet",
+        "samsara"
+      ],
+      "vendor_citations_count": 4
+    },
+    {
+      "cap_id": "fleet.compliance_regulatory",
+      "name": "Compliance & Regulatory Management",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Fleet Cost, Compliance & Analytics",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "fleet.emissions_tracking",
+      "name": "Environmental & Emissions Tracking",
+      "tier": "advanced",
+      "module": "fleet_management",
+      "sub_module": "Fleet Cost, Compliance & Analytics",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "odoo_fleet",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 3
+    },
+    {
+      "cap_id": "fleet.analytics_basic",
+      "name": "Fleet Analytics & Optimal Replacement (Basic)",
+      "tier": "preferred",
+      "module": "fleet_management",
+      "sub_module": "Fleet Cost, Compliance & Analytics",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "fleetio",
+        "samsara"
+      ],
+      "vendor_citations_count": 2
+    },
+    {
+      "cap_id": "fleet.analytics_ml",
+      "name": "Fleet ML & Predictive Analytics (Advanced)",
+      "tier": "advanced",
+      "module": "fleet_management",
+      "sub_module": "Fleet Cost, Compliance & Analytics",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [],
+      "vendor_citations_count": 0
+    }
+  ],
+  "imda_q_status": [
+    {
+      "q_num": "Q1",
+      "q_title": "Cloud and Multi-Device Accessibility",
+      "priority": "mandatory",
+      "mapped": false
+    },
+    {
+      "q_num": "Q2",
+      "q_title": "Fleet Safety Management",
+      "priority": "mandatory",
+      "mapped": true
+    },
+    {
+      "q_num": "Q3",
+      "q_title": "Driver Behaviour Monitoring",
+      "priority": "preferred",
+      "mapped": true
+    },
+    {
+      "q_num": "Q4",
+      "q_title": "Vehicle Cabin Monitoring",
+      "priority": "preferred",
+      "mapped": true
+    },
+    {
+      "q_num": "Q5",
+      "q_title": "Fleet Security Features",
+      "priority": "preferred",
+      "mapped": false
+    },
+    {
+      "q_num": "Q6",
+      "q_title": "Dashboards and Reports",
+      "priority": "mandatory",
+      "mapped": false
+    },
+    {
+      "q_num": "Q7",
+      "q_title": "AI Features",
+      "priority": "preferred",
+      "mapped": false
+    },
+    {
+      "q_num": "Q8",
+      "q_title": "AI Features - Elaboration",
+      "priority": "mandatory",
+      "mapped": false
+    },
+    {
+      "q_num": "Q9",
+      "q_title": "Business Data Extraction",
+      "priority": "mandatory",
+      "mapped": false
+    },
+    {
+      "q_num": "Q10",
+      "q_title": "Personal Data Collection",
+      "priority": "preferred",
+      "mapped": false
+    },
+    {
+      "q_num": "Q11",
+      "q_title": "Personal Data Protection",
+      "priority": "mandatory",
+      "mapped": false
+    },
+    {
+      "q_num": "Q12",
+      "q_title": "Vulnerability Assessment/Penetration Testing (VA/PT)",
+      "priority": "mandatory",
+      "mapped": true
+    },
+    {
+      "q_num": "Q13",
+      "q_title": "Cybersecurity Compliance - Cyber Essentials Mark (CEM)",
+      "priority": "preferred",
+      "mapped": false
+    },
+    {
+      "q_num": "Q14",
+      "q_title": "CEM for Product Principal",
+      "priority": "preferred",
+      "mapped": false
+    },
+    {
+      "q_num": "Q15",
+      "q_title": "CEM for Product Principal - Elaboration",
+      "priority": "mandatory",
+      "mapped": false
+    },
+    {
+      "q_num": "Q16",
+      "q_title": "CEM for Resellers",
+      "priority": "preferred",
+      "mapped": false
+    },
+    {
+      "q_num": "Q17",
+      "q_title": "CEM for Resellers - Elaboration",
+      "priority": "mandatory",
+      "mapped": false
+    }
+  ],
+  "expansion_caps": [
+    {
+      "cap_id": "fleet.vehicle_register",
+      "name": "Vehicle & Asset Register",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Vehicle Register & Procurement",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "security__automated-visitor-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "security__automated-visitor-management"
+      ],
+      "imda_sources_count": 1,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio",
+        "odoo_fleet",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.insurance_claims",
+      "name": "Insurance & Claims Management",
+      "tier": "preferred",
+      "module": "fleet_management",
+      "sub_module": "Vehicle Register & Procurement",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.procurement_disposal",
+      "name": "Fleet Procurement & Disposal",
+      "tier": "preferred",
+      "module": "fleet_management",
+      "sub_module": "Vehicle Register & Procurement",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "oracle_otm",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.driver_management",
+      "name": "Driver Management",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Driver & Safety",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "fleetio",
+        "odoo_fleet",
+        "samsara",
+        "verizon_connect"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.route_planning",
+      "name": "Route Planning & Optimisation",
+      "tier": "preferred",
+      "module": "fleet_management",
+      "sub_module": "Telematics & Routing",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "oracle_otm",
+        "samsara",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.trip_mileage",
+      "name": "Trip & Mileage Tracking",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Telematics & Routing",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "fleetio",
+        "odoo_fleet",
+        "samsara",
+        "verizon_connect"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.fuel_management",
+      "name": "Fuel Management",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Bookings & Fuel",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "fleetio",
+        "odoo_fleet",
+        "samsara",
+        "verizon_connect"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.booking_reservation",
+      "name": "Vehicle Booking & Reservation",
+      "tier": "preferred",
+      "module": "fleet_management",
+      "sub_module": "Bookings & Fuel",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "odoo_fleet"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.pool_car_sharing",
+      "name": "Pool Vehicle & Car Sharing",
+      "tier": "preferred",
+      "module": "fleet_management",
+      "sub_module": "Bookings & Fuel",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.maintenance_scheduling",
+      "name": "Preventive Maintenance Scheduling",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Fleet Maintenance & Workshop",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio",
+        "odoo_fleet",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.maintenance_work_orders",
+      "name": "Maintenance Work Orders",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Fleet Maintenance & Workshop",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.tyre_management",
+      "name": "Tyre Management",
+      "tier": "advanced",
+      "module": "fleet_management",
+      "sub_module": "Fleet Maintenance & Workshop",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.vendor_workshop",
+      "name": "Vendor & Workshop Management",
+      "tier": "advanced",
+      "module": "fleet_management",
+      "sub_module": "Fleet Maintenance & Workshop",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.cost_management",
+      "name": "Fleet Cost Management",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Fleet Cost, Compliance & Analytics",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio",
+        "odoo_fleet",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.reporting_dashboards",
+      "name": "Fleet Reporting & Dashboards",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Fleet Cost, Compliance & Analytics",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management",
+        "security__mobile-enabled-patrol-and-incident-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management",
+        "security__mobile-enabled-patrol-and-incident-management"
+      ],
+      "imda_sources_count": 3,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio",
+        "odoo_fleet",
+        "samsara"
+      ],
+      "vendor_citations_count": 4,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.compliance_regulatory",
+      "name": "Compliance & Regulatory Management",
+      "tier": "required",
+      "module": "fleet_management",
+      "sub_module": "Fleet Cost, Compliance & Analytics",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "fleetio"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.emissions_tracking",
+      "name": "Environmental & Emissions Tracking",
+      "tier": "advanced",
+      "module": "fleet_management",
+      "sub_module": "Fleet Cost, Compliance & Analytics",
+      "classification": "proxy_only",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [],
+      "has_cross_imda": false,
+      "imda_sources": [],
+      "imda_sources_count": 0,
+      "vendor_citations": [
+        "chevin_fleetwave",
+        "odoo_fleet",
+        "sap_vehicle"
+      ],
+      "vendor_citations_count": 3,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.analytics_basic",
+      "name": "Fleet Analytics & Optimal Replacement (Basic)",
+      "tier": "preferred",
+      "module": "fleet_management",
+      "sub_module": "Fleet Cost, Compliance & Analytics",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [
+        "fleetio",
+        "samsara"
+      ],
+      "vendor_citations_count": 2,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    },
+    {
+      "cap_id": "fleet.analytics_ml",
+      "name": "Fleet ML & Predictive Analytics (Advanced)",
+      "tier": "advanced",
+      "module": "fleet_management",
+      "sub_module": "Fleet Cost, Compliance & Analytics",
+      "classification": "cross_imda_traced",
+      "backing_q_nums": [],
+      "backing_q_titles": [],
+      "cross_imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__fleet-management-system",
+        "logistics__transport-management"
+      ],
+      "imda_sources_count": 2,
+      "vendor_citations": [],
+      "vendor_citations_count": 0,
+      "vendor_coverage": {
+        "yes": 0,
+        "partial": 0,
+        "no": 0,
+        "unknown": 0,
+        "total": 0,
+        "coverage_pct": 0
+      },
+      "expansion_verdict": "potential_overreach"
+    }
+  ],
+  "expansion_summary": {
+    "cross_imda_traced": {
+      "justified_real_world": 0,
+      "questionable": 0,
+      "potential_overreach": 6
+    },
+    "proxy_only": {
+      "justified_real_world": 0,
+      "questionable": 0,
+      "potential_overreach": 13
+    }
+  },
+  "by_module": {
+    "fleet_management": {
+      "imda_traced": 3,
+      "cross_imda_traced": 6,
+      "proxy_only": 13,
+      "expansion_overreach": 19,
+      "expansion_justified": 0
+    }
+  },
+  "sub_module_pass": [
+    {
+      "module": "fleet_management",
+      "sub_module": "Vehicle Register & Procurement",
+      "r_total": 1,
+      "r_backed": [],
+      "r_unbacked": [
+        "fleet.vehicle_register"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "fleet_management",
+      "sub_module": "Driver & Safety",
+      "r_total": 1,
+      "r_backed": [],
+      "r_unbacked": [
+        "fleet.driver_management"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "fleet_management",
+      "sub_module": "Telematics & Routing",
+      "r_total": 1,
+      "r_backed": [],
+      "r_unbacked": [
+        "fleet.trip_mileage"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "fleet_management",
+      "sub_module": "Bookings & Fuel",
+      "r_total": 1,
+      "r_backed": [],
+      "r_unbacked": [
+        "fleet.fuel_management"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "fleet_management",
+      "sub_module": "Fleet Maintenance & Workshop",
+      "r_total": 2,
+      "r_backed": [],
+      "r_unbacked": [
+        "fleet.maintenance_scheduling",
+        "fleet.maintenance_work_orders"
+      ],
+      "status": "fail"
+    },
+    {
+      "module": "fleet_management",
+      "sub_module": "Fleet Cost, Compliance & Analytics",
+      "r_total": 3,
+      "r_backed": [],
+      "r_unbacked": [
+        "fleet.cost_management",
+        "fleet.reporting_dashboards",
+        "fleet.compliance_regulatory"
+      ],
+      "status": "fail"
+    }
+  ],
+  "module_pass": {
+    "fleet_management": {
+      "r_sub_mod_count": 6,
+      "r_sub_mod_passing": 0,
+      "passing_sub_mods": [],
+      "status": "fail"
+    }
+  },
+  "sol_cat_passes_canonical": false,
+  "smallest_demotion_plan": {
+    "fleet_management": [
+      "fleet.vehicle_register"
+    ]
+  },
+  "plan_total_demotions": 1,
+  "q_inverse_view": [
+    {
+      "q_num": "Q1",
+      "q_title": "Cloud and Multi-Device Accessibility",
+      "priority": "mandatory",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q2",
+      "q_title": "Fleet Safety Management",
+      "priority": "mandatory",
+      "caps_backed": [
+        {
+          "cap_id": "fleet.driver_safety",
+          "name": "Driver Safety & Behaviour Scoring",
+          "module": "fleet_management",
+          "out_of_scope": false
+        },
+        {
+          "cap_id": "fleet.accident_incident",
+          "name": "Accident & Incident Tracking",
+          "module": "fleet_management",
+          "out_of_scope": false
+        }
+      ],
+      "modules": [
+        "fleet_management"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q3",
+      "q_title": "Driver Behaviour Monitoring",
+      "priority": "preferred",
+      "caps_backed": [
+        {
+          "cap_id": "fleet.driver_safety",
+          "name": "Driver Safety & Behaviour Scoring",
+          "module": "fleet_management",
+          "out_of_scope": false
+        }
+      ],
+      "modules": [
+        "fleet_management"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q4",
+      "q_title": "Vehicle Cabin Monitoring",
+      "priority": "preferred",
+      "caps_backed": [
+        {
+          "cap_id": "fleet.gps_telematics",
+          "name": "GPS Tracking & Telematics",
+          "module": "fleet_management",
+          "out_of_scope": false
+        }
+      ],
+      "modules": [
+        "fleet_management"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q5",
+      "q_title": "Fleet Security Features",
+      "priority": "preferred",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q6",
+      "q_title": "Dashboards and Reports",
+      "priority": "mandatory",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q7",
+      "q_title": "AI Features",
+      "priority": "preferred",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q8",
+      "q_title": "AI Features - Elaboration",
+      "priority": "mandatory",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": false
+    },
+    {
+      "q_num": "Q9",
+      "q_title": "Business Data Extraction",
+      "priority": "mandatory",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q10",
+      "q_title": "Personal Data Collection",
+      "priority": "preferred",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q11",
+      "q_title": "Personal Data Protection",
+      "priority": "mandatory",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q12",
+      "q_title": "Vulnerability Assessment/Penetration Testing (VA/PT)",
+      "priority": "mandatory",
+      "caps_backed": [
+        {
+          "cap_id": "other.data_governance",
+          "name": "Data Security, Privacy & Consent",
+          "module": "others",
+          "out_of_scope": true
+        }
+      ],
+      "modules": [
+        "others"
+      ],
+      "is_orphan": false,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q13",
+      "q_title": "Cybersecurity Compliance - Cyber Essentials Mark (CEM)",
+      "priority": "preferred",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q14",
+      "q_title": "CEM for Product Principal",
+      "priority": "preferred",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q15",
+      "q_title": "CEM for Product Principal - Elaboration",
+      "priority": "mandatory",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q16",
+      "q_title": "CEM for Resellers",
+      "priority": "preferred",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    },
+    {
+      "q_num": "Q17",
+      "q_title": "CEM for Resellers - Elaboration",
+      "priority": "mandatory",
+      "caps_backed": [],
+      "modules": [],
+      "is_orphan": true,
+      "is_baseline_q": true
+    }
+  ]
+}
