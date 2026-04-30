@@ -6,9 +6,9 @@
   "imda_qs_orphan": 10,
   "caps_in_scope_total": 35,
   "step1_classification_counts": {
-    "imda_traced": 5,
-    "cross_imda_traced": 18,
-    "proxy_only": 12
+    "imda_traced": 7,
+    "cross_imda_traced": 17,
+    "proxy_only": 11
   },
   "step1_caps": [
     {
@@ -31,10 +31,13 @@
         "essential-business__accounting-management-+-sales-management-system",
         "essential-business__chatbots-for-customer-engagement",
         "essential-business__digital-marketing-packages",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
         "essential-business__inventory-management-and-sales-management-system",
         "food-services__connected-business-suite",
         "personal-care-services__salon-management-system",
         "retail__integrated-pos-with-mobile-features",
+        "retail__omnichannel-retail-management-ocrm",
         "tourism-travel-agent__travel-management-system-e-commerce",
         "tourism-travel-agent__travel-management-system-operations",
         "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
@@ -46,15 +49,18 @@
         "essential-business__chatbots-for-customer-engagement",
         "essential-business__customer-relationship-management-crm",
         "essential-business__digital-marketing-packages",
+        "essential-business__e-commerce-online-shop-b2c",
+        "essential-business__e-loyalty-and-marketing-automation",
         "essential-business__inventory-management-and-sales-management-system",
         "food-services__connected-business-suite",
         "personal-care-services__salon-management-system",
         "retail__integrated-pos-with-mobile-features",
+        "retail__omnichannel-retail-management-ocrm",
         "tourism-travel-agent__travel-management-system-e-commerce",
         "tourism-travel-agent__travel-management-system-operations",
         "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
       ],
-      "imda_sources_count": 12,
+      "imda_sources_count": 15,
       "vendor_citations": [
         "hubspot",
         "netsuite",
@@ -113,13 +119,26 @@
       "tier": "required",
       "module": "sales_and_crm",
       "sub_module": "CRM & Relationship",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q3"
+      ],
+      "backing_q_titles": [
+        "Lead Management and Sales Pipeline"
+      ],
+      "cross_imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__inventory-management-and-sales-management-system"
+      ],
+      "has_cross_imda": true,
+      "imda_sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__inventory-management-and-sales-management-system"
+      ],
+      "imda_sources_count": 4,
       "vendor_citations": [
         "hubspot",
         "netsuite",
@@ -134,10 +153,15 @@
       "tier": "required",
       "module": "sales_and_crm",
       "sub_module": "CRM & Relationship",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
+      "classification": "imda_traced",
+      "backing_q_nums": [
+        "Q2"
+      ],
+      "backing_q_titles": [
+        "Customer Relationship Management"
+      ],
       "cross_imda_sources": [
+        "essential-business__e-loyalty-and-marketing-automation",
         "personal-care-services__salon-management-system",
         "tourism-travel-agent__travel-management-system-e-commerce",
         "tourism-travel-agent__travel-management-system-operations",
@@ -145,12 +169,14 @@
       ],
       "has_cross_imda": true,
       "imda_sources": [
+        "essential-business__customer-relationship-management-crm",
+        "essential-business__e-loyalty-and-marketing-automation",
         "personal-care-services__salon-management-system",
         "tourism-travel-agent__travel-management-system-e-commerce",
         "tourism-travel-agent__travel-management-system-operations",
         "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
       ],
-      "imda_sources_count": 4,
+      "imda_sources_count": 6,
       "vendor_citations": [
         "hubspot",
         "netsuite",
@@ -239,8 +265,10 @@
         "essential-business__e-commerce-online-shop-b2c",
         "essential-business__inventory-management-and-sales-management-system",
         "essential-business__multichannel-e-commerce-software-mes",
+        "food-services__connected-business-suite",
         "logistics__freight-management",
         "personal-care-services__salon-management-system",
+        "retail__integrated-pos-with-mobile-features",
         "retail__omnichannel-retail-management-ocrm",
         "retail__self-checkout-solution",
         "tourism-travel-agent__travel-management-system-e-commerce",
@@ -256,8 +284,10 @@
         "essential-business__e-commerce-online-shop-b2c",
         "essential-business__inventory-management-and-sales-management-system",
         "essential-business__multichannel-e-commerce-software-mes",
+        "food-services__connected-business-suite",
         "logistics__freight-management",
         "personal-care-services__salon-management-system",
+        "retail__integrated-pos-with-mobile-features",
         "retail__omnichannel-retail-management-ocrm",
         "retail__self-checkout-solution",
         "tourism-travel-agent__travel-management-system-e-commerce",
@@ -265,7 +295,7 @@
         "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
         "wholesale__sales-management"
       ],
-      "imda_sources_count": 14,
+      "imda_sources_count": 16,
       "vendor_citations": [
         "hubspot",
         "netsuite",
@@ -885,25 +915,37 @@
         "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
         "essential-business__accounting-management-+-sales-management-system",
         "essential-business__automated-order-management",
+        "essential-business__cross-border-e-commerce-packages",
+        "essential-business__digital-marketing-packages",
         "essential-business__e-commerce-online-shop-b2c",
         "essential-business__e-loyalty-and-marketing-automation",
         "essential-business__inventory-management-and-sales-management-system",
         "essential-business__marketing-and-sales-content-generation",
-        "personal-care-services__salon-management-system"
+        "food-services__connected-business-suite",
+        "personal-care-services__salon-management-system",
+        "retail__integrated-pos-with-mobile-features",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
       ],
       "has_cross_imda": true,
       "imda_sources": [
         "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
         "essential-business__accounting-management-+-sales-management-system",
         "essential-business__automated-order-management",
+        "essential-business__cross-border-e-commerce-packages",
         "essential-business__customer-relationship-management-crm",
+        "essential-business__digital-marketing-packages",
         "essential-business__e-commerce-online-shop-b2c",
         "essential-business__e-loyalty-and-marketing-automation",
         "essential-business__inventory-management-and-sales-management-system",
         "essential-business__marketing-and-sales-content-generation",
-        "personal-care-services__salon-management-system"
+        "food-services__connected-business-suite",
+        "personal-care-services__salon-management-system",
+        "retail__integrated-pos-with-mobile-features",
+        "tourism-travel-agent__travel-management-system-e-commerce",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
       ],
-      "imda_sources_count": 9,
+      "imda_sources_count": 15,
       "vendor_citations": [
         "hubspot",
         "netsuite",
@@ -1092,76 +1134,6 @@
   ],
   "expansion_caps": [
     {
-      "cap_id": "sales.opportunities_pipeline",
-      "name": "Opportunity & Pipeline Management",
-      "tier": "required",
-      "module": "sales_and_crm",
-      "sub_module": "CRM & Relationship",
-      "classification": "proxy_only",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [],
-      "has_cross_imda": false,
-      "imda_sources": [],
-      "imda_sources_count": 0,
-      "vendor_citations": [
-        "hubspot",
-        "netsuite",
-        "odoo_crm",
-        "salesforce_sales_cloud"
-      ],
-      "vendor_citations_count": 4,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
-      "cap_id": "sales.activities",
-      "name": "Customer Interaction Log",
-      "tier": "required",
-      "module": "sales_and_crm",
-      "sub_module": "CRM & Relationship",
-      "classification": "cross_imda_traced",
-      "backing_q_nums": [],
-      "backing_q_titles": [],
-      "cross_imda_sources": [
-        "personal-care-services__salon-management-system",
-        "tourism-travel-agent__travel-management-system-e-commerce",
-        "tourism-travel-agent__travel-management-system-operations",
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-      ],
-      "has_cross_imda": true,
-      "imda_sources": [
-        "personal-care-services__salon-management-system",
-        "tourism-travel-agent__travel-management-system-e-commerce",
-        "tourism-travel-agent__travel-management-system-operations",
-        "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
-      ],
-      "imda_sources_count": 4,
-      "vendor_citations": [
-        "hubspot",
-        "netsuite",
-        "odoo_crm",
-        "salesforce_sales_cloud"
-      ],
-      "vendor_citations_count": 4,
-      "vendor_coverage": {
-        "yes": 0,
-        "partial": 0,
-        "no": 0,
-        "unknown": 0,
-        "total": 0,
-        "coverage_pct": 0
-      },
-      "expansion_verdict": "potential_overreach"
-    },
-    {
       "cap_id": "sales.partner_channel",
       "name": "Partner Relationship Management (PRM)",
       "tier": "preferred",
@@ -1268,8 +1240,10 @@
         "essential-business__e-commerce-online-shop-b2c",
         "essential-business__inventory-management-and-sales-management-system",
         "essential-business__multichannel-e-commerce-software-mes",
+        "food-services__connected-business-suite",
         "logistics__freight-management",
         "personal-care-services__salon-management-system",
+        "retail__integrated-pos-with-mobile-features",
         "retail__omnichannel-retail-management-ocrm",
         "retail__self-checkout-solution",
         "tourism-travel-agent__travel-management-system-e-commerce",
@@ -1285,8 +1259,10 @@
         "essential-business__e-commerce-online-shop-b2c",
         "essential-business__inventory-management-and-sales-management-system",
         "essential-business__multichannel-e-commerce-software-mes",
+        "food-services__connected-business-suite",
         "logistics__freight-management",
         "personal-care-services__salon-management-system",
+        "retail__integrated-pos-with-mobile-features",
         "retail__omnichannel-retail-management-ocrm",
         "retail__self-checkout-solution",
         "tourism-travel-agent__travel-management-system-e-commerce",
@@ -1294,7 +1270,7 @@
         "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
         "wholesale__sales-management"
       ],
-      "imda_sources_count": 14,
+      "imda_sources_count": 16,
       "vendor_citations": [
         "hubspot",
         "netsuite",
@@ -2101,23 +2077,23 @@
     }
   ],
   "expansion_summary": {
-    "proxy_only": {
-      "justified_real_world": 0,
-      "questionable": 0,
-      "potential_overreach": 12
-    },
     "cross_imda_traced": {
       "justified_real_world": 0,
       "questionable": 0,
-      "potential_overreach": 18
+      "potential_overreach": 17
+    },
+    "proxy_only": {
+      "justified_real_world": 0,
+      "questionable": 0,
+      "potential_overreach": 11
     }
   },
   "by_module": {
     "sales_and_crm": {
-      "imda_traced": 5,
-      "cross_imda_traced": 18,
-      "proxy_only": 12,
-      "expansion_overreach": 30,
+      "imda_traced": 7,
+      "cross_imda_traced": 17,
+      "proxy_only": 11,
+      "expansion_overreach": 28,
       "expansion_justified": 0
     }
   },
@@ -2128,13 +2104,12 @@
       "r_total": 4,
       "r_backed": [
         "sales.contacts_accounts",
-        "sales.leads"
-      ],
-      "r_unbacked": [
+        "sales.leads",
         "sales.opportunities_pipeline",
         "sales.activities"
       ],
-      "status": "fail"
+      "r_unbacked": [],
+      "status": "pass"
     },
     {
       "module": "sales_and_crm",
@@ -2160,8 +2135,9 @@
   "module_pass": {
     "sales_and_crm": {
       "r_sub_mod_count": 3,
-      "r_sub_mod_passing": 1,
+      "r_sub_mod_passing": 2,
       "passing_sub_mods": [
+        "CRM & Relationship",
         "Sales Analytics & Customer 360"
       ],
       "status": "pass"
@@ -2194,6 +2170,12 @@
           "out_of_scope": false
         },
         {
+          "cap_id": "sales.activities",
+          "name": "Customer Interaction Log",
+          "module": "sales_and_crm",
+          "out_of_scope": false
+        },
+        {
           "cap_id": "fsm.customer_site_management",
           "name": "Customer & Site Management",
           "module": "field_service_management",
@@ -2215,6 +2197,12 @@
         {
           "cap_id": "sales.leads",
           "name": "Lead Management",
+          "module": "sales_and_crm",
+          "out_of_scope": false
+        },
+        {
+          "cap_id": "sales.opportunities_pipeline",
+          "name": "Opportunity & Pipeline Management",
           "module": "sales_and_crm",
           "out_of_scope": false
         }
