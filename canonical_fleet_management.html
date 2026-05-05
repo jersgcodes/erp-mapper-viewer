@@ -1509,7 +1509,7 @@
     <a class="top-bar-link" href="stakeholders.html">Stakeholders</a>
     <a class="top-bar-link" href="vendor_coverage.html">Coverage</a>
     <a class="top-bar-link" href="integrations.html">Integrations</a>
-    <details class="top-bar-dropdown"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 + L1 intra-module + L2 inter-module proposals awaiting review</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_fleet_management.html">Flows (this module)<span class="sub">Partial-L3 UCs from workflows touching this module</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="methodology.html">Methodology (legacy)<span class="sub">Replaced by Stakeholders view</span></a><a class="" href="gap_analysis.html">Gaps (legacy)<span class="sub">Replaced by Stakeholders → Sol-cat fulfilment matrix</span></a><a class="" href="use_cases.html">Use Cases (legacy)<span class="sub">UC concept retired; flows are the replacement</span></a></div></details>
+    <details class="top-bar-dropdown"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_fleet_management.html">Flows (this module)<span class="sub">Partial-L3 UCs from workflows touching this module</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a></div></details>
   </div>
   <div class="top-bar-inner top-bar-row2">
     <span class="top-bar-row-label">Modules</span>
@@ -2268,7 +2268,7 @@ function renderOverview() {
 
     ${state.viewMode === "final" ? `
       <div class="tag-legend">
-        <span class="legend-group"><b>Tier:</b> <i>Mandatory</i> = required day-one · <i>Mandatory if applicable</i> = preferred · <i>Enterprise / advanced</i> = scale-only</span>
+        <span class="legend-group"><b>Tier:</b> <i>Mandatory</i> = required day-one · <i>Preferred</i> = SME-important but industry-specific · <i>Enterprise / advanced</i> = scale-only</span>
         <span class="legend-group"><b>Sector pill:</b> <i>generic</i> = relevant across this module's applicable sectors · <i>N/M sectors</i> = relevant in N of M</span>
       </div>
     ` : `
@@ -3135,7 +3135,7 @@ function renderFinalChecklist() {
   // Tier label + chip styling
   const tierStyle = (t) => {
     if (t === "required") return {label: "Mandatory", bg: "#fef3c7", fg: "#92400e", brd: "#fcd34d"};
-    if (t === "preferred") return {label: "Mandatory if applicable", bg: "#e0f2fe", fg: "#075985", brd: "#7dd3fc"};
+    if (t === "preferred") return {label: "Preferred", bg: "#e0f2fe", fg: "#075985", brd: "#7dd3fc"};
     if (t === "advanced") return {label: "Enterprise / advanced", bg: "#f3e8ff", fg: "#6b21a8", brd: "#d8b4fe"};
     return {label: t, bg: "#f1f5f9", fg: "#334155", brd: "#cbd5e1"};
   };
@@ -3539,8 +3539,14 @@ function renderGranularList() {
     const proxyRefs = r.proxy_refs && r.proxy_refs.length > 0
       ? `<div class="section"><div class="section-label">Original catalogue wording</div><ul>${r.proxy_refs.map(p => `<li>${escapeHtml(p)}</li>`).join("")}</ul></div>`
       : "";
+    const followUpBadge = (x) => {
+      if (!x.is_follow_up) return '';
+      const parents = (x.follow_up_of || []).map(f => f.parent_q_num).filter(Boolean);
+      const parentTxt = parents.length ? ' of ' + [...new Set(parents)].join('/') : '';
+      return ` <span class="badge follow-up" title="IMDA Mandatory Follow-up — fires only if parent Preferred Q is Yes" style="background:#fef3c7;color:#92400e;border:1px solid #fcd34d;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:600;text-transform:uppercase">↳ follow-up${parentTxt}</span>`;
+    };
     const imdaRefs = r.imda_refs && r.imda_refs.length > 0
-      ? `<div class="section"><div class="section-label">Original PSG wording</div><ul>${r.imda_refs.map(x => `<li>${escapeHtml(x.text)} <code style="font-size:10px;">${escapeHtml(shortSolcat((x.sources||[])[0] || ''))}</code></li>`).join("")}</ul></div>`
+      ? `<div class="section"><div class="section-label">Original PSG wording</div><ul>${r.imda_refs.map(x => `<li>${escapeHtml(x.text)} <code style="font-size:10px;">${escapeHtml(shortSolcat((x.sources||[])[0] || ''))}</code>${followUpBadge(x)}</li>`).join("")}</ul></div>`
       : "";
     const featLabel = r.feature_name ? `<span class="badge feature">${escapeHtml(r.feature_name)}</span>` : "";
     return `
