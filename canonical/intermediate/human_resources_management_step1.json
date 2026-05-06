@@ -3,11 +3,11 @@
   "stats": {
     "input_reqs": 118,
     "unique_section_pairs": 63,
-    "placed_via_section_lookup": 96,
-    "placed_via_fallback": 11,
-    "unmapped": 12,
-    "total_placements": 123,
-    "unique_reqs_placed": 106
+    "placed_via_section_lookup": 104,
+    "placed_via_fallback": 7,
+    "unmapped": 7,
+    "total_placements": 131,
+    "unique_reqs_placed": 111
   },
   "placements": {
     "hr.employee_master": [
@@ -62,7 +62,8 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "hr.employee_master"
+          "hr.employee_master",
+          "hr.document_management"
         ]
       },
       {
@@ -75,8 +76,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "hr.employee_master",
-          "hr.learning_development"
+          "hr.employee_master"
         ]
       },
       {
@@ -131,7 +131,8 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "hr.employee_master"
+          "hr.employee_master",
+          "hr.document_management"
         ]
       },
       {
@@ -159,7 +160,8 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "hr.employee_master"
+          "hr.employee_master",
+          "hr.document_management"
         ]
       },
       {
@@ -199,7 +201,8 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "hr.employee_master"
+          "hr.employee_master",
+          "hr.document_management"
         ]
       },
       {
@@ -227,7 +230,8 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "hr.employee_master"
+          "hr.employee_master",
+          "hr.document_management"
         ]
       },
       {
@@ -280,7 +284,8 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "hr.employee_master"
+          "hr.employee_master",
+          "hr.document_management"
         ]
       },
       {
@@ -307,7 +312,8 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "hr.employee_master"
+          "hr.employee_master",
+          "hr.document_management"
         ]
       },
       {
@@ -358,10 +364,9 @@
         "sources": [
           "essential-business__human-resource-management-system-hrms"
         ],
-        "placed_via": "fallback_llm",
+        "placed_via": "section_lookup",
         "capabilities": [
-          "hr.employee_master",
-          "hr.document_management"
+          "hr.employee_master"
         ]
       }
     ],
@@ -453,20 +458,6 @@
         "subsection": "Optional HR Areas",
         "sources": [
           "personal-care-services__salon-management-system"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "hr.time_attendance"
-        ]
-      },
-      {
-        "id": "req-00895",
-        "text": "Manual and automated check-in and check-out (e.g. via digital QR codes and/or in-app sign in or out by teachers and/or facial recognition etc.)",
-        "q_title": "Child Attendance Management",
-        "subsection": "Functional Requirements",
-        "sources": [
-          "early-childhood__pre-school-management-system",
-          "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
@@ -591,22 +582,23 @@
       }
     ],
     "hr.self_service_portal": [],
-    "hr.org_chart": [
-      {
-        "id": "req-01216",
-        "text": "Set up and edit business units for different employee categories (e.g. geography, division, tenure, etc)",
-        "q_title": "General Setup",
-        "subsection": "Setup Requirements",
-        "sources": [
-          "essential-business__human-resource-e-scheduling-system"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "hr.org_chart"
-        ]
-      }
-    ],
+    "hr.org_chart": [],
     "hr.document_management": [
+      {
+        "id": "req-00189",
+        "text": "Benefits and Claims Management",
+        "q_title": "Staff Records Management - Preferred Features",
+        "subsection": "",
+        "sources": [
+          "early-childhood__pre-school-management-system",
+          "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "hr.employee_master",
+          "hr.document_management"
+        ]
+      },
       {
         "id": "req-00210",
         "text": "c. Withdrawal from child care centre or subsidy scheme",
@@ -622,14 +614,90 @@
         ]
       },
       {
-        "id": "req-01380",
-        "text": "Tracking of vaccination status of employees and their test results for the purpose of Personnel management",
-        "q_title": "Employee Health Status Tracking",
-        "subsection": "Employee Health Status Tracking",
+        "id": "req-00411",
+        "text": "Daily Staff Deployment Planning Management with Staff-Child Ratio evaluation",
+        "q_title": "Staff Records Management - Preferred Features",
+        "subsection": "",
         "sources": [
-          "essential-business__human-resource-management-system-hrms"
+          "early-childhood__pre-school-management-system",
+          "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
         ],
-        "placed_via": "fallback_llm",
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "hr.employee_master",
+          "hr.document_management"
+        ]
+      },
+      {
+        "id": "req-00636",
+        "text": "Employment Profile Management",
+        "q_title": "Staff Records Management - Preferred Features",
+        "subsection": "Functional Requirements",
+        "sources": [
+          "early-childhood__pre-school-management-system",
+          "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "hr.employee_master",
+          "hr.document_management"
+        ]
+      },
+      {
+        "id": "req-00975",
+        "text": "Payroll and Leave Management",
+        "q_title": "Staff Records Management - Preferred Features",
+        "subsection": "",
+        "sources": [
+          "early-childhood__pre-school-management-system",
+          "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "hr.employee_master",
+          "hr.document_management"
+        ]
+      },
+      {
+        "id": "req-00983",
+        "text": "Performance Appraisal Management",
+        "q_title": "Staff Records Management - Preferred Features",
+        "subsection": "",
+        "sources": [
+          "early-childhood__pre-school-management-system",
+          "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "hr.employee_master",
+          "hr.document_management"
+        ]
+      },
+      {
+        "id": "req-01115",
+        "text": "Relief Staff Deployment Management",
+        "q_title": "Staff Records Management - Preferred Features",
+        "subsection": "",
+        "sources": [
+          "early-childhood__pre-school-management-system",
+          "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "hr.employee_master",
+          "hr.document_management"
+        ]
+      },
+      {
+        "id": "req-01278",
+        "text": "Staff Communication and e-Surveys",
+        "q_title": "Staff Records Management - Preferred Features",
+        "subsection": "",
+        "sources": [
+          "early-childhood__pre-school-management-system",
+          "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+        ],
+        "placed_via": "section_lookup",
         "capabilities": [
           "hr.employee_master",
           "hr.document_management"
@@ -691,20 +759,6 @@
         ]
       },
       {
-        "id": "req-00122",
-        "text": "Analytics or reports for candidate application tracking and recruitment performance analysis (e.g., Application to Vacancies Ratio (AVR), Job Offer Rate, etc)",
-        "q_title": "Dashboards and Reports (Applicant Tracking and Sourcing System)",
-        "subsection": "Dashboard and Reports Requirements",
-        "sources": [
-          "essential-business__applicant-tracking-and-sourcing-system"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "hr.analytics_dashboards",
-          "hr.recruitment_ats"
-        ]
-      },
-      {
         "id": "req-00279",
         "text": "Candidate CV summarisation",
         "q_title": "AI Powered Recruitment and Talent Matching - Elaboration",
@@ -755,20 +809,6 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "hr.recruitment_ats"
-        ]
-      },
-      {
-        "id": "req-00413",
-        "text": "Dashboard with an overview of all job posts and application status",
-        "q_title": "Dashboards and Reports (Applicant Tracking and Sourcing System)",
-        "subsection": "Dashboard and Reports Requirements",
-        "sources": [
-          "essential-business__applicant-tracking-and-sourcing-system"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "hr.analytics_dashboards",
           "hr.recruitment_ats"
         ]
       },
@@ -1041,20 +1081,6 @@
         ]
       },
       {
-        "id": "req-00265",
-        "text": "Can your solution keep a record of the company's staff and corresponding skillsets in order to support the deployment of relevant staff to affected job functions during peak periods",
-        "q_title": "Staff and Skillsets Record",
-        "subsection": "Staff and Skillsets Record",
-        "sources": [
-          "essential-business__human-resource-e-scheduling-system"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "hr.employee_master",
-          "hr.learning_development"
-        ]
-      },
-      {
         "id": "req-00349",
         "text": "Create and assign learning paths/ workflows for different learners' profiles with courses and plans customised for each profile",
         "q_title": "Trainers' Module - Mandatory",
@@ -1133,24 +1159,24 @@
         ]
       }
     ],
-    "hr.compensation_benefits": [],
-    "hr.benefits_administration": [],
-    "hr.succession_talent": [],
-    "hr.engagement_surveys": [
+    "hr.compensation_benefits": [
       {
-        "id": "req-01059",
-        "text": "Provide a posting board to announce appreciations",
-        "q_title": "Employee Rewards and Recognition",
-        "subsection": "Core Functionality Requirements",
+        "id": "req-00309",
+        "text": "Commission Management",
+        "q_title": "Enhanced POS Features",
+        "subsection": "Enhanced POS Modules",
         "sources": [
-          "essential-business__employee-rewards-and-recognition"
+          "retail__integrated-pos-with-mobile-features"
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "hr.engagement_surveys"
+          "hr.compensation_benefits"
         ]
       }
     ],
+    "hr.benefits_administration": [],
+    "hr.succession_talent": [],
+    "hr.engagement_surveys": [],
     "hr.expense_claims": [],
     "hr.workforce_planning": [
       {
@@ -1348,8 +1374,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "hr.analytics_dashboards",
-          "hr.recruitment_ats"
+          "hr.analytics_dashboards"
         ]
       },
       {
@@ -1362,8 +1387,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "hr.analytics_dashboards",
-          "hr.recruitment_ats"
+          "hr.analytics_dashboards"
         ]
       },
       {
@@ -1661,7 +1685,20 @@
         "sources": [
           "essential-business__human-resource-e-scheduling-system"
         ],
-        "placed_via": "fallback_llm",
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "hr.user_access_roles"
+        ]
+      },
+      {
+        "id": "req-01216",
+        "text": "Set up and edit business units for different employee categories (e.g. geography, division, tenure, etc)",
+        "q_title": "General Setup",
+        "subsection": "Setup Requirements",
+        "sources": [
+          "essential-business__human-resource-e-scheduling-system"
+        ],
+        "placed_via": "section_lookup",
         "capabilities": [
           "hr.user_access_roles"
         ]
@@ -1707,31 +1744,89 @@
           "hr.integration_import_export"
         ]
       }
+    ],
+    "hr.rewards_recognition": [
+      {
+        "id": "req-00091",
+        "text": "Allow employees to utilise points, or a dollar value, to redeem Rewards from a merchant network of at least 100 Singapore-based merchants across a wide range of industries (e.g, Retail, F&B, Recreation, etc.)",
+        "q_title": "Employee Rewards and Recognition",
+        "subsection": "Core Functionality Requirements",
+        "sources": [
+          "essential-business__employee-rewards-and-recognition"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "hr.rewards_recognition"
+        ]
+      },
+      {
+        "id": "req-00092",
+        "text": "Allow employers to award points, or a dollar value, to employees (both on an ad-hoc basis or upon the above occasions), and send words of appreciation which can be tagged to the core values of the company",
+        "q_title": "Employee Rewards and Recognition",
+        "subsection": "Core Functionality Requirements",
+        "sources": [
+          "essential-business__employee-rewards-and-recognition"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "hr.rewards_recognition"
+        ]
+      },
+      {
+        "id": "req-00352",
+        "text": "Create and edit occasions for Rewards and Recognition (e.g., Achieving KPIs, Events Attendance, Long Service Award, etc.)",
+        "q_title": "Employee Rewards and Recognition",
+        "subsection": "Core Functionality Requirements",
+        "sources": [
+          "essential-business__employee-rewards-and-recognition"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "hr.rewards_recognition"
+        ]
+      },
+      {
+        "id": "req-00485",
+        "text": "Does your solution automate the awarding of points at key milestones (e.g., Work Anniversary, Birthday, Completion of Survey, etc.)",
+        "q_title": "Employee Recognition and Rewards Automation",
+        "subsection": "Employee Recognition and Rewards Automation",
+        "sources": [
+          "essential-business__employee-rewards-and-recognition"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "hr.rewards_recognition"
+        ]
+      },
+      {
+        "id": "req-01059",
+        "text": "Provide a posting board to announce appreciations",
+        "q_title": "Employee Rewards and Recognition",
+        "subsection": "Core Functionality Requirements",
+        "sources": [
+          "essential-business__employee-rewards-and-recognition"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "hr.rewards_recognition"
+        ]
+      },
+      {
+        "id": "req-00327",
+        "text": "Configuration of approval workflow to manage manual reward points adjustment",
+        "q_title": "Customer Rewards or Loyalty Programme Features",
+        "subsection": "Loyalty Programme Features",
+        "sources": [
+          "personal-care-services__salon-management-system"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "hr.rewards_recognition"
+        ]
+      }
     ]
   },
   "unmapped": [
-    {
-      "id": "req-00091",
-      "text": "Allow employees to utilise points, or a dollar value, to redeem Rewards from a merchant network of at least 100 Singapore-based merchants across a wide range of industries (e.g, Retail, F&B, Recreation, etc.)",
-      "q_title": "Employee Rewards and Recognition",
-      "subsection": "Core Functionality Requirements",
-      "sources": [
-        "essential-business__employee-rewards-and-recognition"
-      ],
-      "placed_via": "fallback_llm",
-      "capabilities": []
-    },
-    {
-      "id": "req-00092",
-      "text": "Allow employers to award points, or a dollar value, to employees (both on an ad-hoc basis or upon the above occasions), and send words of appreciation which can be tagged to the core values of the company",
-      "q_title": "Employee Rewards and Recognition",
-      "subsection": "Core Functionality Requirements",
-      "sources": [
-        "essential-business__employee-rewards-and-recognition"
-      ],
-      "placed_via": "fallback_llm",
-      "capabilities": []
-    },
     {
       "id": "req-00207",
       "text": "Bus transport attendance and temperature tracking",
@@ -1792,56 +1887,24 @@
       "capabilities": []
     },
     {
-      "id": "req-00309",
-      "text": "Commission Management",
-      "q_title": "Enhanced POS Features",
-      "subsection": "Enhanced POS Modules",
-      "sources": [
-        "retail__integrated-pos-with-mobile-features"
-      ],
-      "placed_via": "fallback_llm",
-      "capabilities": []
-    },
-    {
-      "id": "req-00327",
-      "text": "Configuration of approval workflow to manage manual reward points adjustment",
-      "q_title": "Customer Rewards or Loyalty Programme Features",
-      "subsection": "Loyalty Programme Features",
-      "sources": [
-        "personal-care-services__salon-management-system"
-      ],
-      "placed_via": "fallback_llm",
-      "capabilities": []
-    },
-    {
-      "id": "req-00352",
-      "text": "Create and edit occasions for Rewards and Recognition (e.g., Achieving KPIs, Events Attendance, Long Service Award, etc.)",
-      "q_title": "Employee Rewards and Recognition",
-      "subsection": "Core Functionality Requirements",
-      "sources": [
-        "essential-business__employee-rewards-and-recognition"
-      ],
-      "placed_via": "fallback_llm",
-      "capabilities": []
-    },
-    {
-      "id": "req-00485",
-      "text": "Does your solution automate the awarding of points at key milestones (e.g., Work Anniversary, Birthday, Completion of Survey, etc.)",
-      "q_title": "Employee Recognition and Rewards Automation",
-      "subsection": "Employee Recognition and Rewards Automation",
-      "sources": [
-        "essential-business__employee-rewards-and-recognition"
-      ],
-      "placed_via": "fallback_llm",
-      "capabilities": []
-    },
-    {
       "id": "req-00631",
       "text": "Employee commuting",
       "q_title": "Organisation-level Scope 3 Emissions Calculation",
       "subsection": "Examples",
       "sources": [
         "essential-business__carbon-management-solution"
+      ],
+      "placed_via": "fallback_llm",
+      "capabilities": []
+    },
+    {
+      "id": "req-00895",
+      "text": "Manual and automated check-in and check-out (e.g. via digital QR codes and/or in-app sign in or out by teachers and/or facial recognition etc.)",
+      "q_title": "Child Attendance Management",
+      "subsection": "Functional Requirements",
+      "sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
       ],
       "placed_via": "fallback_llm",
       "capabilities": []

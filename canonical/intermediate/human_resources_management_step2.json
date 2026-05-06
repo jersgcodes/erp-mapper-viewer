@@ -2,8 +2,8 @@
   "module": "human_resources_management",
   "module_name": "Human Resources Management",
   "stats": {
-    "haiku_calls": 31,
-    "total_merged_reqs": 326
+    "haiku_calls": 32,
+    "total_merged_reqs": 335
   },
   "capabilities": [
     {
@@ -28,11 +28,49 @@
       "requirements": [
         {
           "text": "Capture and maintain personal details including NRIC, FIN, passport, and emergency contacts",
-          "source": "proxy",
+          "source": "both",
           "proxy_refs": [
             "Capture personal details, NRIC / FIN / passport, and emergency contacts"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00359",
+              "text": "Create employees records and details",
+              "q_title": "Employee Records Management",
+              "subsection": "",
+              "sources": [
+                "essential-business__human-resource-management-system-hrms"
+              ]
+            },
+            {
+              "id": "req-00632",
+              "text": "Employee data module (i.e Maintain and update employee data)",
+              "q_title": "HR Administrative Support and Payroll Processing",
+              "subsection": "Required HRMS Modules",
+              "sources": [
+                "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin"
+              ]
+            },
+            {
+              "id": "req-00987",
+              "text": "Personnel Management (i.e. Create employees records and details, Allow for employee self-service to maintain updates)",
+              "q_title": "Human Resource Management",
+              "subsection": "HR Administrative Areas",
+              "sources": [
+                "personal-care-services__salon-management-system"
+              ]
+            },
+            {
+              "id": "req-01280",
+              "text": "Staff personnel particulars, attendance and health record management",
+              "q_title": "Staff Records Management",
+              "subsection": "Functional Requirements",
+              "sources": [
+                "early-childhood__pre-school-management-system",
+                "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+              ]
+            }
+          ],
           "vendor_citations": [
             "bamboohr",
             "erpnext_hr",
@@ -41,15 +79,49 @@
             "sap_successfactors",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "early-childhood__pre-school-management-system",
+            "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+            "essential-business__human-resource-management-system-hrms",
+            "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin",
+            "personal-care-services__salon-management-system"
+          ]
         },
         {
           "text": "Record employment start date, job title, department, and reporting manager",
-          "source": "proxy",
+          "source": "both",
           "proxy_refs": [
             "Record employment start date, job title, department, and reporting manager"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00359",
+              "text": "Create employees records and details",
+              "q_title": "Employee Records Management",
+              "subsection": "",
+              "sources": [
+                "essential-business__human-resource-management-system-hrms"
+              ]
+            },
+            {
+              "id": "req-00632",
+              "text": "Employee data module (i.e Maintain and update employee data)",
+              "q_title": "HR Administrative Support and Payroll Processing",
+              "subsection": "Required HRMS Modules",
+              "sources": [
+                "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin"
+              ]
+            },
+            {
+              "id": "req-00987",
+              "text": "Personnel Management (i.e. Create employees records and details, Allow for employee self-service to maintain updates)",
+              "q_title": "Human Resource Management",
+              "subsection": "HR Administrative Areas",
+              "sources": [
+                "personal-care-services__salon-management-system"
+              ]
+            }
+          ],
           "vendor_citations": [
             "bamboohr",
             "erpnext_hr",
@@ -58,15 +130,48 @@
             "sap_successfactors",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "essential-business__human-resource-management-system-hrms",
+            "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin",
+            "personal-care-services__salon-management-system"
+          ]
         },
         {
-          "text": "Track employment type (full-time, part-time, contract, intern)",
-          "source": "proxy",
+          "text": "Track employment type (full-time, part-time, contract, intern, relief staff)",
+          "source": "both",
           "proxy_refs": [
             "Store employment type (full-time, part-time, contract, intern)"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00099",
+              "text": "Allow part time staff and applicants to amend their particulars at their own time",
+              "q_title": "Employee Database Management",
+              "subsection": "Database Management Capabilities",
+              "sources": [
+                "early-childhood__talent-attraction-platform"
+              ]
+            },
+            {
+              "id": "req-01115",
+              "text": "Relief Staff Deployment Management",
+              "q_title": "Staff Records Management - Preferred Features",
+              "subsection": "",
+              "sources": [
+                "early-childhood__pre-school-management-system",
+                "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+              ]
+            },
+            {
+              "id": "req-01285",
+              "text": "Store a list of part-time and relief staff which includes their names, contact number, certifications, availability and their work history at the various centres (if an operator has more than 1 centre)",
+              "q_title": "Employee Database Management",
+              "subsection": "Database Management Capabilities",
+              "sources": [
+                "early-childhood__talent-attraction-platform"
+              ]
+            }
+          ],
           "vendor_citations": [
             "bamboohr",
             "erpnext_hr",
@@ -75,15 +180,47 @@
             "sap_successfactors",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "early-childhood__pre-school-management-system",
+            "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+            "early-childhood__talent-attraction-platform"
+          ]
         },
         {
           "text": "Store salary, currency, and pay frequency per employee",
-          "source": "proxy",
+          "source": "both",
           "proxy_refs": [
             "Track salary, currency, and pay frequency per employee"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00974",
+              "text": "Payroll and Commission Management (i.e. E-payroll, Commission reports, Payroll reports, MOM itemised payslip, Policy and statutory compliance)",
+              "q_title": "Human Resource Management",
+              "subsection": "HR Administrative Areas",
+              "sources": [
+                "personal-care-services__salon-management-system"
+              ]
+            },
+            {
+              "id": "req-00977",
+              "text": "Payroll module (i.e Prepare MOM itemised pay slips and payroll reports, E-payment of salaries to staff, assist in yearly IRAS filing, compy to policy and statutory requirements)",
+              "q_title": "HR Administrative Support and Payroll Processing",
+              "subsection": "Required HRMS Modules",
+              "sources": [
+                "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin"
+              ]
+            },
+            {
+              "id": "req-01039",
+              "text": "Process E-payroll",
+              "q_title": "Employee Records Management",
+              "subsection": "",
+              "sources": [
+                "essential-business__human-resource-management-system-hrms"
+              ]
+            }
+          ],
           "vendor_citations": [
             "bamboohr",
             "erpnext_hr",
@@ -92,15 +229,39 @@
             "sap_successfactors",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "essential-business__human-resource-management-system-hrms",
+            "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin",
+            "personal-care-services__salon-management-system"
+          ]
         },
         {
           "text": "Maintain employment history including promotions, transfers, and role changes",
-          "source": "proxy",
+          "source": "both",
           "proxy_refs": [
             "Maintain employment history with promotions, transfers, and role changes"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00632",
+              "text": "Employee data module (i.e Maintain and update employee data)",
+              "q_title": "HR Administrative Support and Payroll Processing",
+              "subsection": "Required HRMS Modules",
+              "sources": [
+                "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin"
+              ]
+            },
+            {
+              "id": "req-00636",
+              "text": "Employment Profile Management",
+              "q_title": "Staff Records Management - Preferred Features",
+              "subsection": "Functional Requirements",
+              "sources": [
+                "early-childhood__pre-school-management-system",
+                "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+              ]
+            }
+          ],
           "vendor_citations": [
             "bamboohr",
             "erpnext_hr",
@@ -109,15 +270,30 @@
             "sap_successfactors",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "early-childhood__pre-school-management-system",
+            "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+            "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin"
+          ]
         },
         {
-          "text": "Support multiple active contracts per employee with version history",
-          "source": "proxy",
+          "text": "Support multiple active contracts per employee with version history and change tracking",
+          "source": "both",
           "proxy_refs": [
             "Support multiple active contracts per employee with version history"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00636",
+              "text": "Employment Profile Management",
+              "q_title": "Staff Records Management - Preferred Features",
+              "subsection": "Functional Requirements",
+              "sources": [
+                "early-childhood__pre-school-management-system",
+                "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+              ]
+            }
+          ],
           "vendor_citations": [
             "bamboohr",
             "erpnext_hr",
@@ -126,7 +302,71 @@
             "sap_successfactors",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "early-childhood__pre-school-management-system",
+            "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+          ]
+        },
+        {
+          "text": "Assign and maintain employee skillsets to support staff deployment and matching to operational needs",
+          "source": "both",
+          "proxy_refs": [
+            "Custom fields for industry-specific or regulatory attributes"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00265",
+              "text": "Can your solution keep a record of the company's staff and corresponding skillsets in order to support the deployment of relevant staff to affected job functions during peak periods",
+              "q_title": "Staff and Skillsets Record",
+              "subsection": "Staff and Skillsets Record",
+              "sources": [
+                "essential-business__human-resource-e-scheduling-system"
+              ]
+            },
+            {
+              "id": "req-00411",
+              "text": "Daily Staff Deployment Planning Management with Staff-Child Ratio evaluation",
+              "q_title": "Staff Records Management - Preferred Features",
+              "subsection": "",
+              "sources": [
+                "early-childhood__pre-school-management-system",
+                "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+              ]
+            },
+            {
+              "id": "req-01115",
+              "text": "Relief Staff Deployment Management",
+              "q_title": "Staff Records Management - Preferred Features",
+              "subsection": "",
+              "sources": [
+                "early-childhood__pre-school-management-system",
+                "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+              ]
+            },
+            {
+              "id": "req-01285",
+              "text": "Store a list of part-time and relief staff which includes their names, contact number, certifications, availability and their work history at the various centres (if an operator has more than 1 centre)",
+              "q_title": "Employee Database Management",
+              "subsection": "Database Management Capabilities",
+              "sources": [
+                "early-childhood__talent-attraction-platform"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "bamboohr",
+            "erpnext_hr",
+            "netsuite_suitepeople",
+            "odoo_employees",
+            "sap_successfactors",
+            "workday_hcm"
+          ],
+          "solcat_citations": [
+            "early-childhood__pre-school-management-system",
+            "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+            "early-childhood__talent-attraction-platform",
+            "essential-business__human-resource-e-scheduling-system"
+          ]
         },
         {
           "text": "Support custom fields for industry-specific or regulatory attributes",
@@ -146,7 +386,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Implement soft-delete with retention rules after employee termination",
+          "text": "Implement soft-delete with retention rules and archival after employee termination",
           "source": "proxy",
           "proxy_refs": [
             "Soft-delete with retention rules after termination"
@@ -163,12 +403,40 @@
           "solcat_citations": []
         },
         {
-          "text": "Assign unique employee ID and enable lookup across all HR modules",
-          "source": "proxy",
+          "text": "Generate and maintain unique employee ID with lookup capability across all HR modules",
+          "source": "both",
           "proxy_refs": [
             "Unique employee ID and lookup across all HR modules"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00359",
+              "text": "Create employees records and details",
+              "q_title": "Employee Records Management",
+              "subsection": "",
+              "sources": [
+                "essential-business__human-resource-management-system-hrms"
+              ]
+            },
+            {
+              "id": "req-00632",
+              "text": "Employee data module (i.e Maintain and update employee data)",
+              "q_title": "HR Administrative Support and Payroll Processing",
+              "subsection": "Required HRMS Modules",
+              "sources": [
+                "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin"
+              ]
+            },
+            {
+              "id": "req-00987",
+              "text": "Personnel Management (i.e. Create employees records and details, Allow for employee self-service to maintain updates)",
+              "q_title": "Human Resource Management",
+              "subsection": "HR Administrative Areas",
+              "sources": [
+                "personal-care-services__salon-management-system"
+              ]
+            }
+          ],
           "vendor_citations": [
             "bamboohr",
             "erpnext_hr",
@@ -177,10 +445,14 @@
             "sap_successfactors",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "essential-business__human-resource-management-system-hrms",
+            "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin",
+            "personal-care-services__salon-management-system"
+          ]
         },
         {
-          "text": "Allow employees to amend their personal particulars through self-service",
+          "text": "Enable employee self-service for updating personal particulars and availability",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -210,22 +482,22 @@
           ]
         },
         {
-          "text": "Maintain staff skillsets and certifications to support deployment planning",
+          "text": "Maintain applicant records including application history and prior applications",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {
-              "id": "req-00265",
-              "text": "Can your solution keep a record of the company's staff and corresponding skillsets in order to support the deployment of relevant staff to affected job functions during peak periods",
-              "q_title": "Staff and Skillsets Record",
-              "subsection": "Staff and Skillsets Record",
+              "id": "req-00099",
+              "text": "Allow part time staff and applicants to amend their particulars at their own time",
+              "q_title": "Employee Database Management",
+              "subsection": "Database Management Capabilities",
               "sources": [
-                "essential-business__human-resource-e-scheduling-system"
+                "early-childhood__talent-attraction-platform"
               ]
             },
             {
-              "id": "req-01285",
-              "text": "Store a list of part-time and relief staff which includes their names, contact number, certifications, availability and their work history at the various centres (if an operator has more than 1 centre)",
+              "id": "req-01284",
+              "text": "Store a list of applicants who have applied for positions prior",
               "q_title": "Employee Database Management",
               "subsection": "Database Management Capabilities",
               "sources": [
@@ -235,12 +507,11 @@
           ],
           "vendor_citations": [],
           "solcat_citations": [
-            "early-childhood__talent-attraction-platform",
-            "essential-business__human-resource-e-scheduling-system"
+            "early-childhood__talent-attraction-platform"
           ]
         },
         {
-          "text": "Track employee availability and work schedule preferences",
+          "text": "Track employee availability windows and work schedule preferences for scheduling and deployment",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -269,10 +540,20 @@
           ]
         },
         {
-          "text": "Maintain work history across multiple locations or centres",
+          "text": "Record certifications, qualifications, and compliance status (e.g., vaccination, health records)",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
+            {
+              "id": "req-01280",
+              "text": "Staff personnel particulars, attendance and health record management",
+              "q_title": "Staff Records Management",
+              "subsection": "Functional Requirements",
+              "sources": [
+                "early-childhood__pre-school-management-system",
+                "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+              ]
+            },
             {
               "id": "req-01285",
               "text": "Store a list of part-time and relief staff which includes their names, contact number, certifications, availability and their work history at the various centres (if an operator has more than 1 centre)",
@@ -281,18 +562,7 @@
               "sources": [
                 "early-childhood__talent-attraction-platform"
               ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "early-childhood__talent-attraction-platform"
-          ]
-        },
-        {
-          "text": "Track vaccination status and health test results for personnel management",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
+            },
             {
               "id": "req-01380",
               "text": "Tracking of vaccination status of employees and their test results for the purpose of Personnel management",
@@ -305,17 +575,20 @@
           ],
           "vendor_citations": [],
           "solcat_citations": [
+            "early-childhood__pre-school-management-system",
+            "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+            "early-childhood__talent-attraction-platform",
             "essential-business__human-resource-management-system-hrms"
           ]
         },
         {
-          "text": "Store applicant records including contact information and application history",
+          "text": "Maintain work history across multiple centres or locations for multi-site organizations",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {
-              "id": "req-01284",
-              "text": "Store a list of applicants who have applied for positions prior",
+              "id": "req-01285",
+              "text": "Store a list of part-time and relief staff which includes their names, contact number, certifications, availability and their work history at the various centres (if an operator has more than 1 centre)",
               "q_title": "Employee Database Management",
               "subsection": "Database Management Capabilities",
               "sources": [
@@ -355,7 +628,7 @@
       ],
       "requirements": [
         {
-          "text": "Configure leave types with statutory minimums, accrual rules, carry-forward policies, encashment terms, and expiry rules",
+          "text": "Configure leave types with statutory minimums, accrual rules, carry-forward policies, encashment eligibility, and expiry rules",
           "source": "both",
           "proxy_refs": [
             "Configure leave types with statutory minimums and custom rules",
@@ -385,12 +658,31 @@
           ]
         },
         {
-          "text": "Submit leave applications via web or mobile interface with optional supporting document attachment",
+          "text": "Support Singapore statutory leave categories including annual, medical, hospitalisation, maternity, paternity, childcare, and unpaid leave",
           "source": "proxy",
-          "proxy_refs": [
-            "Apply for leave via web or mobile with supporting documents"
-          ],
+          "proxy_refs": [],
           "imda_refs": [],
+          "vendor_citations": [],
+          "solcat_citations": []
+        },
+        {
+          "text": "Submit leave applications via web or mobile interface with document attachment capability",
+          "source": "both",
+          "proxy_refs": [
+            "Apply for leave via web or mobile with supporting documents",
+            "Medical certificate upload with retention"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00852",
+              "text": "Leave Management (i.e. Comprehensive Leave Management and settings, Leave policy configurations, leaves reports)",
+              "q_title": "Other Optional HR Modules",
+              "subsection": "Optional HR Areas",
+              "sources": [
+                "personal-care-services__salon-management-system"
+              ]
+            }
+          ],
           "vendor_citations": [
             "bamboohr",
             "erpnext_hr",
@@ -398,15 +690,27 @@
             "odoo_employees",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "personal-care-services__salon-management-system"
+          ]
         },
         {
           "text": "Route leave applications through multi-level approval workflows including manager, HR, and skip-level approvers",
-          "source": "proxy",
+          "source": "both",
           "proxy_refs": [
             "Multi-level approval workflow (manager, HR, skip-level)"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00852",
+              "text": "Leave Management (i.e. Comprehensive Leave Management and settings, Leave policy configurations, leaves reports)",
+              "q_title": "Other Optional HR Modules",
+              "subsection": "Optional HR Areas",
+              "sources": [
+                "personal-care-services__salon-management-system"
+              ]
+            }
+          ],
           "vendor_citations": [
             "bamboohr",
             "erpnext_hr",
@@ -414,11 +718,13 @@
             "odoo_employees",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "personal-care-services__salon-management-system"
+          ]
         },
         {
-          "text": "Display real-time leave balance and entitlement visibility to employees and managers",
-          "source": "proxy",
+          "text": "Display real-time leave balance visibility to employees and managers",
+          "source": "both",
           "proxy_refs": [
             "Real-time leave balance visibility for employee and manager"
           ],
@@ -445,12 +751,22 @@
           ]
         },
         {
-          "text": "Support half-day and hourly leave granularity in addition to full-day leave",
-          "source": "proxy",
+          "text": "Support half-day and hourly leave increments in addition to full-day leave",
+          "source": "both",
           "proxy_refs": [
             "Half-day and hourly leave support"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00852",
+              "text": "Leave Management (i.e. Comprehensive Leave Management and settings, Leave policy configurations, leaves reports)",
+              "q_title": "Other Optional HR Modules",
+              "subsection": "Optional HR Areas",
+              "sources": [
+                "personal-care-services__salon-management-system"
+              ]
+            }
+          ],
           "vendor_citations": [
             "bamboohr",
             "erpnext_hr",
@@ -458,15 +774,27 @@
             "odoo_employees",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "personal-care-services__salon-management-system"
+          ]
         },
         {
           "text": "Display team leave calendar showing employee absence periods and availability status",
-          "source": "proxy",
+          "source": "both",
           "proxy_refs": [
             "Team calendar showing who is out and when"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00852",
+              "text": "Leave Management (i.e. Comprehensive Leave Management and settings, Leave policy configurations, leaves reports)",
+              "q_title": "Other Optional HR Modules",
+              "subsection": "Optional HR Areas",
+              "sources": [
+                "personal-care-services__salon-management-system"
+              ]
+            }
+          ],
           "vendor_citations": [
             "bamboohr",
             "erpnext_hr",
@@ -474,15 +802,27 @@
             "odoo_employees",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "personal-care-services__salon-management-system"
+          ]
         },
         {
-          "text": "Define and enforce block-out dates during critical business periods when leave is restricted",
-          "source": "proxy",
+          "text": "Define block-out dates and blackout periods when leave cannot be taken",
+          "source": "both",
           "proxy_refs": [
             "Block-out dates for critical business periods"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00852",
+              "text": "Leave Management (i.e. Comprehensive Leave Management and settings, Leave policy configurations, leaves reports)",
+              "q_title": "Other Optional HR Modules",
+              "subsection": "Optional HR Areas",
+              "sources": [
+                "personal-care-services__salon-management-system"
+              ]
+            }
+          ],
           "vendor_citations": [
             "bamboohr",
             "erpnext_hr",
@@ -490,15 +830,27 @@
             "odoo_employees",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "personal-care-services__salon-management-system"
+          ]
         },
         {
-          "text": "Automatically accrue leave entitlements based on service length and configured accrual policies",
-          "source": "proxy",
+          "text": "Automatically accrue leave balances based on service length, employment type, and policy rules",
+          "source": "both",
           "proxy_refs": [
             "Automatic leave accrual by service length and policy"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00852",
+              "text": "Leave Management (i.e. Comprehensive Leave Management and settings, Leave policy configurations, leaves reports)",
+              "q_title": "Other Optional HR Modules",
+              "subsection": "Optional HR Areas",
+              "sources": [
+                "personal-care-services__salon-management-system"
+              ]
+            }
+          ],
           "vendor_citations": [
             "bamboohr",
             "erpnext_hr",
@@ -506,27 +858,13 @@
             "odoo_employees",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "personal-care-services__salon-management-system"
+          ]
         },
         {
-          "text": "Manage medical certificate uploads and retention for leave applications requiring medical documentation",
-          "source": "proxy",
-          "proxy_refs": [
-            "Medical certificate upload with retention"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "bamboohr",
-            "erpnext_hr",
-            "netsuite_suitepeople",
-            "odoo_employees",
-            "workday_hcm"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Generate leave reports covering balances, usage, approvals, and policy compliance",
-          "source": "imda",
+          "text": "Generate leave reports including balance summaries, utilisation trends, and compliance metrics",
+          "source": "both",
           "proxy_refs": [],
           "imda_refs": [
             {
@@ -571,7 +909,7 @@
       ],
       "requirements": [
         {
-          "text": "Clock in and out via multiple methods: web portal, mobile app, biometric device, RFID badge, QR code, or facial recognition",
+          "text": "Clock in and out via multiple channels: web interface, mobile app, biometric device, or RFID badge",
           "source": "both",
           "proxy_refs": [
             "Clock in and out via web, mobile, biometric, or RFID"
@@ -585,16 +923,6 @@
               "sources": [
                 "essential-business__human-resource-management-system-hrms"
               ]
-            },
-            {
-              "id": "req-00895",
-              "text": "Manual and automated check-in and check-out (e.g. via digital QR codes and/or in-app sign in or out by teachers and/or facial recognition etc.)",
-              "q_title": "Child Attendance Management",
-              "subsection": "Functional Requirements",
-              "sources": [
-                "early-childhood__pre-school-management-system",
-                "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
-              ]
             }
           ],
           "vendor_citations": [
@@ -605,13 +933,11 @@
             "workday_hcm"
           ],
           "solcat_citations": [
-            "early-childhood__pre-school-management-system",
-            "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
             "essential-business__human-resource-management-system-hrms"
           ]
         },
         {
-          "text": "Capture and validate geolocation or geofence data at clock in/out for field and retail staff",
+          "text": "Capture and stamp geolocation or geofence data for field and retail staff at clock in/out",
           "source": "proxy",
           "proxy_refs": [
             "Geolocation or geofence stamping for field and retail staff"
@@ -627,12 +953,22 @@
           "solcat_citations": []
         },
         {
-          "text": "Record daily timesheet entries with project, cost centre, or task assignment",
-          "source": "proxy",
+          "text": "Record daily timesheet entries with project or cost-centre assignment for labour costing",
+          "source": "both",
           "proxy_refs": [
             "Daily timesheet entry with project or cost-centre tagging"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00767",
+              "text": "Integrated time management system comprising functions such as e-leave, payroll, time and attendance and shift scheduling with generation of labour costing reports",
+              "q_title": "Time Management Integration",
+              "subsection": "Time Management Integration",
+              "sources": [
+                "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+              ]
+            }
+          ],
           "vendor_citations": [
             "bamboohr",
             "erpnext_hr",
@@ -640,10 +976,12 @@
             "oracle_hcm_cloud",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "wholesale__enterprise-resource-planning-erp-software-for-wholesale"
+          ]
         },
         {
-          "text": "Automatically apply break deductions based on shift policy and duration",
+          "text": "Automatically apply break deductions based on shift policy rules",
           "source": "proxy",
           "proxy_refs": [
             "Automatic break deduction per shift policy"
@@ -659,7 +997,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Detect and flag overtime hours against contracted or standard working hours",
+          "text": "Detect and flag overtime hours against contracted working hours",
           "source": "proxy",
           "proxy_refs": [
             "Overtime detection against contract hours"
@@ -675,7 +1013,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Alert supervisors when workers approach or exceed maximum allowed working hours per regulatory limits",
+          "text": "Alert supervisors when workers approach regulatory maximum working hours limits",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -701,52 +1039,7 @@
             "Late, early-leave, and absence flagging",
             "Exception report for missing punches and unmatched pairs"
           ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "bamboohr",
-            "erpnext_hr",
-            "odoo_employees",
-            "oracle_hcm_cloud",
-            "workday_hcm"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Monitor worker safety conditions including fatigue levels, location tracking, and fall detection with real-time alerts",
-          "source": "imda",
-          "proxy_refs": [],
           "imda_refs": [
-            {
-              "id": "req-00915",
-              "text": "Monitor worker safety conditions (e.g. fatigue levels, location tracking, fall detection etc) and provide real-time alerts to identify hazards and predict workers' safety",
-              "q_title": "Digital Wearables Capabilities - Elaboration",
-              "subsection": "",
-              "sources": [
-                "built-environment__smart-inspection-and-management"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "built-environment__smart-inspection-and-management"
-          ]
-        },
-        {
-          "text": "Generate attendance reports and records for personnel management and compliance",
-          "source": "both",
-          "proxy_refs": [
-            "Exception report for missing punches and unmatched pairs"
-          ],
-          "imda_refs": [
-            {
-              "id": "req-00515",
-              "text": "Does your solution come with an attendance management module to keep track of the security officer's attendance for the purpose of computing working hours and/or salaries",
-              "q_title": "Time Attendance Tracking",
-              "subsection": "Time Attendance Tracking",
-              "sources": [
-                "security__mobile-enabled-patrol-and-incident-management"
-              ]
-            },
             {
               "id": "req-00158",
               "text": "Attendance Tracking (i.e. daily recording of employee attendance, attendance reports)",
@@ -765,12 +1058,31 @@
             "workday_hcm"
           ],
           "solcat_citations": [
-            "personal-care-services__salon-management-system",
-            "security__mobile-enabled-patrol-and-incident-management"
+            "personal-care-services__salon-management-system"
           ]
         },
         {
-          "text": "Enable manager review and approval of timesheets before payroll processing",
+          "text": "Generate attendance reports summarizing daily employee attendance records",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00158",
+              "text": "Attendance Tracking (i.e. daily recording of employee attendance, attendance reports)",
+              "q_title": "Other Optional HR Modules",
+              "subsection": "Optional HR Areas",
+              "sources": [
+                "personal-care-services__salon-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "personal-care-services__salon-management-system"
+          ]
+        },
+        {
+          "text": "Require manager approval of timesheets before payroll cutoff",
           "source": "proxy",
           "proxy_refs": [
             "Manager approval of timesheets before payroll cutoff"
@@ -786,7 +1098,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Export approved time and attendance data to payroll module for salary and wage calculations",
+          "text": "Export approved time and attendance data to payroll processing",
           "source": "both",
           "proxy_refs": [
             "Export approved time data to the payroll run"
@@ -824,7 +1136,27 @@
           ]
         },
         {
-          "text": "Integrate time and attendance with leave management, shift scheduling, and labour costing reporting",
+          "text": "Monitor worker safety conditions including fatigue levels and location tracking with real-time hazard alerts",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00915",
+              "text": "Monitor worker safety conditions (e.g. fatigue levels, location tracking, fall detection etc) and provide real-time alerts to identify hazards and predict workers' safety",
+              "q_title": "Digital Wearables Capabilities - Elaboration",
+              "subsection": "",
+              "sources": [
+                "built-environment__smart-inspection-and-management"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "built-environment__smart-inspection-and-management"
+          ]
+        },
+        {
+          "text": "Integrate time and attendance with leave management and shift scheduling modules",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -846,7 +1178,7 @@
       ],
       "stats": {
         "proxy_in": 9,
-        "imda_in": 7,
+        "imda_in": 6,
         "merged_out": 12
       }
     },
@@ -930,21 +1262,11 @@
         },
         {
           "text": "Calculate Skills Development Levy (SDL) and Foreign Worker Levy (FWL) based on payroll and worker classification",
-          "source": "both",
+          "source": "proxy",
           "proxy_refs": [
             "Skills Development Levy (SDL) and Foreign Worker Levy (FWL) calculation"
           ],
-          "imda_refs": [
-            {
-              "id": "req-00977",
-              "text": "Payroll module (i.e Prepare MOM itemised pay slips and payroll reports, E-payment of salaries to staff, assist in yearly IRAS filing, compy to policy and statutory requirements)",
-              "q_title": "HR Administrative Support and Payroll Processing",
-              "subsection": "Required HRMS Modules",
-              "sources": [
-                "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin"
-              ]
-            }
-          ],
+          "imda_refs": [],
           "vendor_citations": [
             "adp_workforce_now",
             "erpnext_hr",
@@ -953,12 +1275,10 @@
             "odoo_payroll",
             "sap_successfactors"
           ],
-          "solcat_citations": [
-            "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin"
-          ]
+          "solcat_citations": []
         },
         {
-          "text": "Handle statutory bonuses (e.g. AWS), variable pay, and performance-based compensation in payroll calculations",
+          "text": "Handle statutory bonuses (e.g., AWS), variable pay, and performance-based compensation in payroll calculations",
           "source": "proxy",
           "proxy_refs": [
             "Statutory bonus, AWS, and variable pay handling"
@@ -975,7 +1295,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Prorate gross and net pay for employee joiners, leavers, and mid-month salary changes or leave taken",
+          "text": "Prorate gross and net pay for employee joiners, leavers, and mid-month salary changes",
           "source": "proxy",
           "proxy_refs": [
             "Prorated pay for joiners, leavers, and mid-month changes"
@@ -992,7 +1312,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate CPF e-submission files in CPF Board-approved format (e.g. CPF EZPay) for statutory contribution reporting",
+          "text": "Generate CPF e-submission files in CPF EZPay format for statutory contribution reporting",
           "source": "proxy",
           "proxy_refs": [
             "CPF e-submission file generation (CPF EZPay format)"
@@ -1009,7 +1329,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate IRAS Auto-Inclusion Scheme (AIS) IR8A files for annual tax filing and income reporting",
+          "text": "Generate IRAS Auto-Inclusion Scheme (AIS) IR8A files for annual tax filing",
           "source": "proxy",
           "proxy_refs": [
             "IRAS Auto-Inclusion Scheme (AIS) IR8A file generation"
@@ -1038,7 +1358,7 @@
           ]
         },
         {
-          "text": "Support IR21 tax clearance workflow for foreign employee departure and final tax settlement",
+          "text": "Support IR21 tax clearance workflow for foreign employee departure",
           "source": "proxy",
           "proxy_refs": [
             "IR21 tax clearance workflow for foreign staff departure"
@@ -1055,7 +1375,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support multi-currency payroll processing for cross-border and expatriate staff with currency conversion and reporting",
+          "text": "Support multi-currency payroll processing for cross-border and expatriate staff",
           "source": "proxy",
           "proxy_refs": [
             "Multi-currency payroll for cross-border staff"
@@ -1072,7 +1392,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Automatically post payroll journal entries to the finance general ledger upon payroll run completion",
+          "text": "Automatically post payroll journal entries to the finance general ledger upon payroll completion",
           "source": "proxy",
           "proxy_refs": [
             "Post payroll journal entries to finance GL automatically"
@@ -1089,7 +1409,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Process off-cycle payments, payroll corrections, and retrospective adjustments with recalculation of statutory contributions",
+          "text": "Process off-cycle payments, payroll corrections, and retrospective adjustments with full audit trail",
           "source": "proxy",
           "proxy_refs": [
             "Off-cycle payments, corrections, and retrospective adjustments"
@@ -1106,7 +1426,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Enforce payroll run approval workflow with audit trail and role-based authorization before salary payment",
+          "text": "Enforce payroll run approval workflow with complete audit trail of all changes and approvals",
           "source": "proxy",
           "proxy_refs": [
             "Payroll run approval workflow with audit trail"
@@ -1123,7 +1443,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate itemized pay slips for each employee showing gross pay, statutory deductions, net pay, and YTD totals",
+          "text": "Generate itemized pay slips for each employee showing gross pay, statutory deductions, and net pay",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1143,7 +1463,7 @@
           ]
         },
         {
-          "text": "Enable electronic payment of salaries to employee bank accounts and generate payment confirmation records",
+          "text": "Enable electronic payment of salaries to employee bank accounts",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1163,10 +1483,19 @@
           ]
         },
         {
-          "text": "Automatically synchronize employee master data (name, ID, salary, CPF number, tax residency) from the HR system to payroll",
+          "text": "Automatically synchronize employee data changes from the HR system to payroll module",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
+            {
+              "id": "req-00632",
+              "text": "Employee data module (i.e Maintain and update employee data)",
+              "q_title": "HR Administrative Support and Payroll Processing",
+              "subsection": "Required HRMS Modules",
+              "sources": [
+                "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin"
+              ]
+            },
             {
               "id": "req-00976",
               "text": "Payroll data is automatically updated from the HR system.",
@@ -1179,11 +1508,12 @@
           ],
           "vendor_citations": [],
           "solcat_citations": [
-            "essential-business__field-service-management"
+            "essential-business__field-service-management",
+            "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin"
           ]
         },
         {
-          "text": "Generate payroll reports for compliance, audit, and management review (e.g. payroll summary, statutory deduction reports, headcount reports)",
+          "text": "Generate payroll reports for compliance, audit, and management review",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1277,7 +1607,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Distribute payslips securely to employees via portal or email",
+          "text": "Distribute payslips securely via employee portal or email",
           "source": "proxy",
           "proxy_refs": [
             "Distribute payslips via secure employee portal or email"
@@ -1325,7 +1655,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support payslip reissuance and cancellation with full audit trail",
+          "text": "Support payslip reissuance and cancellation with audit trail",
           "source": "proxy",
           "proxy_refs": [
             "Reissue and cancel payslips with audit trail"
@@ -1431,7 +1761,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate equipment and access provisioning tasks to IT department",
+          "text": "Generate and route equipment and access provisioning tasks to IT department",
           "source": "proxy",
           "proxy_refs": [
             "Equipment and access provisioning tasks to IT"
@@ -1447,7 +1777,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Assign buddy and trigger welcome communication sequence for new hires",
+          "text": "Assign buddy or mentor and trigger welcome communication sequence for new hires",
           "source": "proxy",
           "proxy_refs": [
             "Buddy assignment and welcome sequence"
@@ -1463,7 +1793,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Schedule and capture first-week and first-month check-in surveys",
+          "text": "Schedule and collect structured check-in surveys at defined intervals (e.g., first week, first month)",
           "source": "proxy",
           "proxy_refs": [
             "First-week and first-month check-in surveys"
@@ -1479,7 +1809,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Provide personalized document submission module for onboarding candidates to upload certificates, testimonials, and required documentation",
+          "text": "Provide personalized document submission module for new hires to upload required onboarding documents (certificates, testimonials, etc.)",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1531,7 +1861,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Calculate final settlement and track last-day clearance activities",
+          "text": "Calculate final settlement and track last-day clearance tasks",
           "source": "proxy",
           "proxy_refs": [
             "Final settlement calculation and last-day clearance"
@@ -1547,7 +1877,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track access revocation and asset return during offboarding",
+          "text": "Track and enforce access revocation and asset return completion for departing employees",
           "source": "proxy",
           "proxy_refs": [
             "Access revocation and asset return tracking"
@@ -1621,7 +1951,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Employees can apply for leave and view remaining leave balance",
+          "text": "Employees can apply for leave and view their leave balance",
           "source": "proxy",
           "proxy_refs": [
             "Apply for leave and check balance"
@@ -1685,7 +2015,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Employees can access company announcements and policy documents",
+          "text": "Employees can access company announcements and policies",
           "source": "proxy",
           "proxy_refs": [
             "Read company announcements and policies"
@@ -1701,7 +2031,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Employees can update bank account details for payroll deposits",
+          "text": "Employees can update bank account information for payroll deposits",
           "source": "proxy",
           "proxy_refs": [
             "Update bank account for payroll deposits"
@@ -1717,7 +2047,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Employees can request and download official letters such as employment verification, salary certificate, and tax residency letters",
+          "text": "Employees can request and download official letters such as employment verification, salary, and tax residency letters",
           "source": "proxy",
           "proxy_refs": [
             "Request letters (employment, salary, tax residency)"
@@ -1758,7 +2088,7 @@
       ],
       "requirements": [
         {
-          "text": "Auto-generate organizational chart from employee reporting-manager relationships",
+          "text": "Auto-generate organisation chart from employee reporting manager relationships",
           "source": "proxy",
           "proxy_refs": [
             "Auto-generated org chart from reporting manager fields"
@@ -1773,7 +2103,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Organize and display department and team hierarchy with cost-centre linkage",
+          "text": "Support department and team hierarchy with cost-centre linkage",
           "source": "proxy",
           "proxy_refs": [
             "Department and team hierarchy with cost-centre linkage"
@@ -1818,7 +2148,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Export organizational chart to PDF or image format",
+          "text": "Export organisation chart to PDF or image format",
           "source": "proxy",
           "proxy_refs": [
             "Export org chart to PDF or image"
@@ -1833,7 +2163,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Display vacant positions within the organizational structure for workforce planning",
+          "text": "Display vacant positions within the hierarchy for workforce planning",
           "source": "proxy",
           "proxy_refs": [
             "Vacant-position visibility for planning"
@@ -1848,7 +2178,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Calculate and display headcount roll-up by organizational branch",
+          "text": "Calculate and display headcount roll-up by organisational branch",
           "source": "proxy",
           "proxy_refs": [
             "Headcount roll-up per branch of the tree"
@@ -1863,7 +2193,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track effective-dated changes to organizational structure and reporting relationships",
+          "text": "Support effective-dated changes to hierarchy structure for historical tracking",
           "source": "proxy",
           "proxy_refs": [
             "Effective-dated changes to the hierarchy"
@@ -1876,32 +2206,12 @@
             "workday_hcm"
           ],
           "solcat_citations": []
-        },
-        {
-          "text": "Create and edit business units to segment employees by classification criteria such as geography, division, or tenure",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-01216",
-              "text": "Set up and edit business units for different employee categories (e.g. geography, division, tenure, etc)",
-              "q_title": "General Setup",
-              "subsection": "Setup Requirements",
-              "sources": [
-                "essential-business__human-resource-e-scheduling-system"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "essential-business__human-resource-e-scheduling-system"
-          ]
         }
       ],
       "stats": {
         "proxy_in": 8,
-        "imda_in": 1,
-        "merged_out": 9
+        "imda_in": 0,
+        "merged_out": 8
       }
     },
     {
@@ -2028,7 +2338,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Complete audit trail recording user identity, timestamp, and action (view, download, upload) for all document access",
+          "text": "Complete audit trail recording who accessed, viewed, or downloaded each document and when",
           "source": "proxy",
           "proxy_refs": [
             "Audit log of who viewed or downloaded each document"
@@ -2043,29 +2353,31 @@
           "solcat_citations": []
         },
         {
-          "text": "Track and store employee vaccination status and test results for personnel management and compliance purposes",
+          "text": "Store and manage employment profile information linked to employee records",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {
-              "id": "req-01380",
-              "text": "Tracking of vaccination status of employees and their test results for the purpose of Personnel management",
-              "q_title": "Employee Health Status Tracking",
-              "subsection": "Employee Health Status Tracking",
+              "id": "req-00636",
+              "text": "Employment Profile Management",
+              "q_title": "Staff Records Management - Preferred Features",
+              "subsection": "Functional Requirements",
               "sources": [
-                "essential-business__human-resource-management-system-hrms"
+                "early-childhood__pre-school-management-system",
+                "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
               ]
             }
           ],
           "vendor_citations": [],
           "solcat_citations": [
-            "essential-business__human-resource-management-system-hrms"
+            "early-childhood__pre-school-management-system",
+            "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
           ]
         }
       ],
       "stats": {
         "proxy_in": 8,
-        "imda_in": 2,
+        "imda_in": 8,
         "merged_out": 9
       }
     },
@@ -2079,7 +2391,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_recruitment",
         "bamboohr",
@@ -2124,15 +2436,6 @@
           ],
           "imda_refs": [
             {
-              "id": "req-00098",
-              "text": "Allow operators to advertise the careers/openings available with a short write-up and update the listing as and when required",
-              "q_title": "Outreach, Attract and Recruit Staff Including ECEs (Early Childhood Educators)",
-              "subsection": "Core Functionality Requirements",
-              "sources": [
-                "early-childhood__talent-attraction-platform"
-              ]
-            },
-            {
               "id": "req-01081",
               "text": "Publish job postings to multiple job boards (e.g., LinkedIn, Jobstreet, MyCareersFuture, IHLs, etc)",
               "q_title": "Recruitment Management",
@@ -2150,7 +2453,6 @@
             "workday_hcm"
           ],
           "solcat_citations": [
-            "early-childhood__talent-attraction-platform",
             "essential-business__applicant-tracking-and-sourcing-system"
           ]
         },
@@ -2203,7 +2505,7 @@
           ]
         },
         {
-          "text": "Configure custom application forms with custom questions and document upload fields",
+          "text": "Support custom application forms with configurable questions and document uploads",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -2243,27 +2545,7 @@
           ]
         },
         {
-          "text": "Obtain and track applicant consent for personal data submission",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-00928",
-              "text": "Obtain applicant's consent for the submission of personal particulars to the operator",
-              "q_title": "Outreach, Attract and Recruit Staff Including ECEs (Early Childhood Educators)",
-              "subsection": "Core Functionality Requirements",
-              "sources": [
-                "early-childhood__talent-attraction-platform"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "early-childhood__talent-attraction-platform"
-          ]
-        },
-        {
-          "text": "Parse resumes and search candidate database for matching profiles",
+          "text": "Parse resumes and search candidate database for skill and experience matching",
           "source": "both",
           "proxy_refs": [
             "Resume parsing and candidate database search"
@@ -2277,6 +2559,15 @@
               "sources": [
                 "essential-business__applicant-tracking-and-sourcing-system"
               ]
+            },
+            {
+              "id": "req-00308",
+              "text": "Come with AI capabilities e.g. matching of applicant to available openings based on certification / years of experience submitted",
+              "q_title": "Job Applications and Onboarding",
+              "subsection": "Advanced Application Features",
+              "sources": [
+                "early-childhood__talent-attraction-platform"
+              ]
             }
           ],
           "vendor_citations": [
@@ -2287,16 +2578,26 @@
             "workday_hcm"
           ],
           "solcat_citations": [
+            "early-childhood__talent-attraction-platform",
             "essential-business__applicant-tracking-and-sourcing-system"
           ]
         },
         {
-          "text": "Match candidates to job openings based on qualifications, certifications, and experience",
+          "text": "Provide AI-powered candidate recommendations based on job requirements and qualifications",
           "source": "both",
           "proxy_refs": [
             "Resume parsing and candidate database search"
           ],
           "imda_refs": [
+            {
+              "id": "req-00077",
+              "text": "AI Features related to Recruitment and Talent Matching",
+              "q_title": "AI Powered Recruitment and Talent Matching",
+              "subsection": "AI Powered Recruitment and Talent Matching",
+              "sources": [
+                "essential-business__applicant-tracking-and-sourcing-system"
+              ]
+            },
             {
               "id": "req-00308",
               "text": "Come with AI capabilities e.g. matching of applicant to available openings based on certification / years of experience submitted",
@@ -2329,15 +2630,15 @@
           ]
         },
         {
-          "text": "Tag candidates and maintain recruitment notes within candidate profiles",
+          "text": "Generate candidate CV summaries to accelerate screening",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {
-              "id": "req-01314",
-              "text": "Tag candidates and make recruitment notes on candidate in the system",
-              "q_title": "Recruitment Management",
-              "subsection": "Recruitment Module Requirements",
+              "id": "req-00279",
+              "text": "Candidate CV summarisation",
+              "q_title": "AI Powered Recruitment and Talent Matching - Elaboration",
+              "subsection": "AI Features Examples",
               "sources": [
                 "essential-business__applicant-tracking-and-sourcing-system"
               ]
@@ -2349,35 +2650,7 @@
           ]
         },
         {
-          "text": "Display candidate pipeline in Kanban view across hiring stages",
-          "source": "both",
-          "proxy_refs": [
-            "Kanban pipeline of candidates across hiring stages"
-          ],
-          "imda_refs": [
-            {
-              "id": "req-01391",
-              "text": "Update and track candidate application status (e.g., New, Shortlisted, Scheduled, Interviewed, Offered, Rejected, etc)",
-              "q_title": "Recruitment Management",
-              "subsection": "Recruitment Module Requirements",
-              "sources": [
-                "essential-business__applicant-tracking-and-sourcing-system"
-              ]
-            }
-          ],
-          "vendor_citations": [
-            "bamboohr",
-            "netsuite_suitepeople",
-            "odoo_recruitment",
-            "sap_successfactors",
-            "workday_hcm"
-          ],
-          "solcat_citations": [
-            "essential-business__applicant-tracking-and-sourcing-system"
-          ]
-        },
-        {
-          "text": "Track candidate application status through defined workflow stages",
+          "text": "Maintain candidate pipeline with status tracking across hiring stages (New, Shortlisted, Interviewed, Offered, Rejected, etc.)",
           "source": "both",
           "proxy_refs": [
             "Kanban pipeline of candidates across hiring stages"
@@ -2415,15 +2688,15 @@
           ]
         },
         {
-          "text": "Provide dashboard overview of all job postings and application statuses",
+          "text": "Tag candidates and maintain recruitment notes within candidate records",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {
-              "id": "req-00413",
-              "text": "Dashboard with an overview of all job posts and application status",
-              "q_title": "Dashboards and Reports (Applicant Tracking and Sourcing System)",
-              "subsection": "Dashboard and Reports Requirements",
+              "id": "req-01314",
+              "text": "Tag candidates and make recruitment notes on candidate in the system",
+              "q_title": "Recruitment Management",
+              "subsection": "Recruitment Module Requirements",
               "sources": [
                 "essential-business__applicant-tracking-and-sourcing-system"
               ]
@@ -2432,26 +2705,6 @@
           "vendor_citations": [],
           "solcat_citations": [
             "essential-business__applicant-tracking-and-sourcing-system"
-          ]
-        },
-        {
-          "text": "Send configurable notifications to operators when applications are received",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-00925",
-              "text": "Notify operators each time a job application is sent in automatically (Notification settings should preferably be configurable for operators to edit frequency and recipients of the notifications)",
-              "q_title": "Outreach, Attract and Recruit Staff Including ECEs (Early Childhood Educators)",
-              "subsection": "Core Functionality Requirements",
-              "sources": [
-                "early-childhood__talent-attraction-platform"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "early-childhood__talent-attraction-platform"
           ]
         },
         {
@@ -2475,7 +2728,7 @@
           ]
         },
         {
-          "text": "Assess candidate suitability through job fit and organizational fit surveys",
+          "text": "Assess candidate fit through self-assessment surveys and operator evaluation forms",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -2533,7 +2786,7 @@
           ]
         },
         {
-          "text": "Generate meeting links for video conferencing platforms within the system",
+          "text": "Generate meeting links for video conferencing platforms (Zoom, MS Teams, Google Meet) within the system",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -2553,7 +2806,7 @@
           ]
         },
         {
-          "text": "Collect structured interviewer feedback and scorecards for candidates",
+          "text": "Collect structured interviewer feedback and scorecards for candidate evaluation",
           "source": "both",
           "proxy_refs": [
             "Structured scorecards and interviewer feedback"
@@ -2581,7 +2834,7 @@
           ]
         },
         {
-          "text": "Send templated emails to candidates for interview scheduling, offers, and rejections",
+          "text": "Send templated communications to candidates (interview scheduling, offers, rejections) with role-based visibility controls",
           "source": "both",
           "proxy_refs": [
             "Offer letter generation with e-signature"
@@ -2604,6 +2857,15 @@
               "sources": [
                 "essential-business__applicant-tracking-and-sourcing-system"
               ]
+            },
+            {
+              "id": "req-01201",
+              "text": "Send job offers to candidates via the system",
+              "q_title": "Recruitment Management",
+              "subsection": "Recruitment Module Requirements",
+              "sources": [
+                "essential-business__applicant-tracking-and-sourcing-system"
+              ]
             }
           ],
           "vendor_citations": [
@@ -2619,7 +2881,7 @@
           ]
         },
         {
-          "text": "Support bulk email communication to multiple candidates with role-based privacy controls",
+          "text": "Send bulk templated emails to multiple candidates with configurable privacy settings for different user roles",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -2667,9 +2929,51 @@
           ]
         },
         {
-          "text": "Allocate vacancies to candidates based on predefined rules and priority order",
+          "text": "Collect applicant consent for personal data submission before processing applications",
           "source": "imda",
           "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00928",
+              "text": "Obtain applicant's consent for the submission of personal particulars to the operator",
+              "q_title": "Outreach, Attract and Recruit Staff Including ECEs (Early Childhood Educators)",
+              "subsection": "Core Functionality Requirements",
+              "sources": [
+                "early-childhood__talent-attraction-platform"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "early-childhood__talent-attraction-platform"
+          ]
+        },
+        {
+          "text": "Provide onboarding document collection portal for selected candidates (certificates, testimonials, etc.)",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00751",
+              "text": "Include a personalised module for selected applicants to submit necessary documents for onboarding purposes (e.g. certificates, testimonials, etc.)",
+              "q_title": "Job Applications and Onboarding",
+              "subsection": "Advanced Application Features",
+              "sources": [
+                "early-childhood__talent-attraction-platform"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "early-childhood__talent-attraction-platform"
+          ]
+        },
+        {
+          "text": "Convert selected candidate to employee record with one-click action",
+          "source": "both",
+          "proxy_refs": [
+            "One-click conversion from candidate to employee"
+          ],
           "imda_refs": [
             {
               "id": "req-01364",
@@ -2683,7 +2987,13 @@
               ]
             }
           ],
-          "vendor_citations": [],
+          "vendor_citations": [
+            "bamboohr",
+            "netsuite_suitepeople",
+            "odoo_recruitment",
+            "sap_successfactors",
+            "workday_hcm"
+          ],
           "solcat_citations": [
             "early-childhood__pre-school-management-system",
             "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
@@ -2691,43 +3001,15 @@
           ]
         },
         {
-          "text": "Convert selected candidate to employee record with one-click action",
-          "source": "both",
-          "proxy_refs": [
-            "One-click conversion from candidate to employee"
-          ],
-          "imda_refs": [
-            {
-              "id": "req-00751",
-              "text": "Include a personalised module for selected applicants to submit necessary documents for onboarding purposes (e.g. certificates, testimonials, etc.)",
-              "q_title": "Job Applications and Onboarding",
-              "subsection": "Advanced Application Features",
-              "sources": [
-                "early-childhood__talent-attraction-platform"
-              ]
-            }
-          ],
-          "vendor_citations": [
-            "bamboohr",
-            "netsuite_suitepeople",
-            "odoo_recruitment",
-            "sap_successfactors",
-            "workday_hcm"
-          ],
-          "solcat_citations": [
-            "early-childhood__talent-attraction-platform"
-          ]
-        },
-        {
-          "text": "Provide onboarding document submission portal for selected candidates",
+          "text": "Send configurable notifications to operators when applications are received",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {
-              "id": "req-00751",
-              "text": "Include a personalised module for selected applicants to submit necessary documents for onboarding purposes (e.g. certificates, testimonials, etc.)",
-              "q_title": "Job Applications and Onboarding",
-              "subsection": "Advanced Application Features",
+              "id": "req-00925",
+              "text": "Notify operators each time a job application is sent in automatically (Notification settings should preferably be configurable for operators to edit frequency and recipients of the notifications)",
+              "q_title": "Outreach, Attract and Recruit Staff Including ECEs (Early Childhood Educators)",
+              "subsection": "Core Functionality Requirements",
               "sources": [
                 "early-childhood__talent-attraction-platform"
               ]
@@ -2739,19 +3021,19 @@
           ]
         },
         {
-          "text": "Generate recruitment analytics including source-of-hire, time-to-hire, and application ratios",
+          "text": "Report on source-of-hire, time-to-hire, and recruitment pipeline metrics",
           "source": "both",
           "proxy_refs": [
             "Source-of-hire and time-to-hire analytics"
           ],
           "imda_refs": [
             {
-              "id": "req-00122",
-              "text": "Analytics or reports for candidate application tracking and recruitment performance analysis (e.g., Application to Vacancies Ratio (AVR), Job Offer Rate, etc)",
-              "q_title": "Dashboards and Reports (Applicant Tracking and Sourcing System)",
-              "subsection": "Dashboard and Reports Requirements",
+              "id": "req-01363",
+              "text": "Track and inform operators from the point when each application is received till the point when evaluation of the application is complete i.e. applicant is hired or rejected",
+              "q_title": "Application Tracking",
+              "subsection": "Application Management Features",
               "sources": [
-                "essential-business__applicant-tracking-and-sourcing-system"
+                "early-childhood__talent-attraction-platform"
               ]
             }
           ],
@@ -2763,34 +3045,14 @@
             "workday_hcm"
           ],
           "solcat_citations": [
-            "essential-business__applicant-tracking-and-sourcing-system"
-          ]
-        },
-        {
-          "text": "Provide AI-powered candidate summarization of CVs and qualifications",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-00279",
-              "text": "Candidate CV summarisation",
-              "q_title": "AI Powered Recruitment and Talent Matching - Elaboration",
-              "subsection": "AI Features Examples",
-              "sources": [
-                "essential-business__applicant-tracking-and-sourcing-system"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "essential-business__applicant-tracking-and-sourcing-system"
+            "early-childhood__talent-attraction-platform"
           ]
         }
       ],
       "stats": {
         "proxy_in": 10,
-        "imda_in": 27,
-        "merged_out": 27
+        "imda_in": 25,
+        "merged_out": 24
       }
     },
     {
@@ -2893,7 +3155,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support configurable review cycles including annual, semi-annual, and quarterly periods",
+          "text": "Support configurable review cycles (annual, semi-annual, quarterly)",
           "source": "proxy",
           "proxy_refs": [
             "Configurable review cycles (annual, semi-annual, quarterly)"
@@ -2925,7 +3187,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Manage performance improvement plan (PIP) workflows with defined milestones and outcomes",
+          "text": "Manage performance improvement plan (PIP) workflows with defined milestones and monitoring",
           "source": "proxy",
           "proxy_refs": [
             "Performance improvement plan (PIP) workflow"
@@ -2973,7 +3235,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "workday_hcm",
         "sap_successfactors",
@@ -3009,9 +3271,10 @@
           ]
         },
         {
-          "text": "Enable employee self-registration and enrolment in courses with search, filtering, and sorting capabilities",
+          "text": "Enable employees to search, filter, and browse available courses with sorting by ratings and availability",
           "source": "both",
           "proxy_refs": [
+            "Course catalogue with classroom, e-learning, and external formats",
             "Employee enrolment and self-registration"
           ],
           "imda_refs": [
@@ -3036,22 +3299,35 @@
           ]
         },
         {
-          "text": "Manage training calendar with capacity planning, waitlist functionality, and scheduling",
-          "source": "proxy",
+          "text": "Support employee self-registration and enrolment in courses with waitlist management and capacity tracking",
+          "source": "both",
           "proxy_refs": [
+            "Employee enrolment and self-registration",
             "Training calendar with capacity and waitlist"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00202",
+              "text": "Browse course catalogue, search/ sort available courses/ training based on feedback ratings and sign up for courses/ training",
+              "q_title": "Learners' Module",
+              "subsection": "Essential Learner Features",
+              "sources": [
+                "early-childhood__learning-platform-for-cpd-and-mentoring"
+              ]
+            }
+          ],
           "vendor_citations": [
             "erpnext_hr",
             "oracle_hcm_cloud",
             "sap_successfactors",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "early-childhood__learning-platform-for-cpd-and-mentoring"
+          ]
         },
         {
-          "text": "Track training completion and issue certificates or performance records upon course completion",
+          "text": "Track and record training completion with certificate issuance and performance grades or remarks",
           "source": "both",
           "proxy_refs": [
             "Completion tracking and certificate issuance"
@@ -3093,25 +3369,10 @@
           "solcat_citations": []
         },
         {
-          "text": "Track certification and credential expiry dates with automated renewal alerts and reminders",
+          "text": "Monitor certification expiry dates and trigger renewal alerts and reminders",
           "source": "proxy",
           "proxy_refs": [
             "Certification expiry tracking and renewal alerts"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "erpnext_hr",
-            "oracle_hcm_cloud",
-            "sap_successfactors",
-            "workday_hcm"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Support external training requests with approval workflow and reimbursement tracking",
-          "source": "proxy",
-          "proxy_refs": [
-            "External training request and reimbursement workflow"
           ],
           "imda_refs": [],
           "vendor_citations": [
@@ -3159,24 +3420,11 @@
           ]
         },
         {
-          "text": "Track training costs per employee and per course for budgeting and reporting",
-          "source": "proxy",
+          "text": "Create and assign personalized learning paths and development plans tailored to individual employee profiles and skill gaps",
+          "source": "both",
           "proxy_refs": [
-            "Training cost tracking per employee and per course"
+            "Skill-gap analysis against role competency profile"
           ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "erpnext_hr",
-            "oracle_hcm_cloud",
-            "sap_successfactors",
-            "workday_hcm"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Create and assign personalized learning paths and development plans tailored to employee profiles and competency needs",
-          "source": "imda",
-          "proxy_refs": [],
           "imda_refs": [
             {
               "id": "req-00349",
@@ -3188,33 +3436,146 @@
               ]
             }
           ],
-          "vendor_citations": [],
+          "vendor_citations": [
+            "erpnext_hr",
+            "oracle_hcm_cloud",
+            "sap_successfactors",
+            "workday_hcm"
+          ],
           "solcat_citations": [
             "early-childhood__learning-platform-for-cpd-and-mentoring"
           ]
         },
         {
-          "text": "Maintain a skills inventory recording employee competencies and proficiency levels to support workforce deployment and planning",
+          "text": "Enable learners to conduct self-assessment and learning needs analysis with manager review and approval",
+          "source": "both",
+          "proxy_refs": [
+            "Employee enrolment and self-registration"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00097",
+              "text": "Allow learners to do a self-assessment and conduct a learning needs analysis with the centre leader referencing the Technical Skills and Competencies tied to their roles",
+              "q_title": "Learners' Module",
+              "subsection": "Essential Learner Features",
+              "sources": [
+                "early-childhood__learning-platform-for-cpd-and-mentoring"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "erpnext_hr",
+            "oracle_hcm_cloud",
+            "sap_successfactors",
+            "workday_hcm"
+          ],
+          "solcat_citations": [
+            "early-childhood__learning-platform-for-cpd-and-mentoring"
+          ]
+        },
+        {
+          "text": "Track learner progress in building technical skills and competencies aligned to role requirements",
+          "source": "both",
+          "proxy_refs": [
+            "Completion tracking and certificate issuance"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00152",
+              "text": "Assess and track learners' progress in building their Technical Skills and Competencies",
+              "q_title": "Trainers' Module - Mandatory",
+              "subsection": "Essential Trainer Features",
+              "sources": [
+                "early-childhood__learning-platform-for-cpd-and-mentoring"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "erpnext_hr",
+            "oracle_hcm_cloud",
+            "sap_successfactors",
+            "workday_hcm"
+          ],
+          "solcat_citations": [
+            "early-childhood__learning-platform-for-cpd-and-mentoring"
+          ]
+        },
+        {
+          "text": "Provide learner profile view with training schedule, progress charts, and development plan mapped to technical skills and competencies",
+          "source": "both",
+          "proxy_refs": [
+            "Training calendar with capacity and waitlist"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-01075",
+              "text": "Provide profile view, schedule and progress chart / plan based on the relevant Technical Skills and Competencies to map training/development and update the plan based on training attended. When applicable, include data sync to One@ECDA for Continuing Professional Development (CPD) hours tracking",
+              "q_title": "Learners' Module",
+              "subsection": "Essential Learner Features",
+              "sources": [
+                "early-childhood__learning-platform-for-cpd-and-mentoring"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "erpnext_hr",
+            "oracle_hcm_cloud",
+            "sap_successfactors",
+            "workday_hcm"
+          ],
+          "solcat_citations": [
+            "early-childhood__learning-platform-for-cpd-and-mentoring"
+          ]
+        },
+        {
+          "text": "Support skills proficiency levels in accordance with recognized frameworks such as SkillsFuture",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {
-              "id": "req-00265",
-              "text": "Can your solution keep a record of the company's staff and corresponding skillsets in order to support the deployment of relevant staff to affected job functions during peak periods",
-              "q_title": "Staff and Skillsets Record",
-              "subsection": "Staff and Skillsets Record",
+              "id": "req-00590",
+              "text": "Does your solution specify the Skills Proficiency levels in accordance with the SkillsFuture Framework",
+              "q_title": "Skills Proficiency Levels Specification",
+              "subsection": "Skills Proficiency Levels Specification",
               "sources": [
-                "essential-business__human-resource-e-scheduling-system"
+                "essential-business__applicant-tracking-and-sourcing-system"
               ]
             }
           ],
           "vendor_citations": [],
           "solcat_citations": [
-            "essential-business__human-resource-e-scheduling-system"
+            "essential-business__applicant-tracking-and-sourcing-system"
           ]
         },
         {
-          "text": "Provide course recommendations based on learning needs analysis and skill gaps",
+          "text": "Recommend courses and learning content based on identified learning needs and skill gaps",
+          "source": "both",
+          "proxy_refs": [
+            "Skill-gap analysis against role competency profile"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-01109",
+              "text": "Recommend courses/ learning content based on learning needs and if applicable, allow for users to flag out courses to be notified when there are available classes for registration",
+              "q_title": "Learners' Module",
+              "subsection": "Essential Learner Features",
+              "sources": [
+                "early-childhood__learning-platform-for-cpd-and-mentoring"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "erpnext_hr",
+            "oracle_hcm_cloud",
+            "sap_successfactors",
+            "workday_hcm"
+          ],
+          "solcat_citations": [
+            "early-childhood__learning-platform-for-cpd-and-mentoring"
+          ]
+        },
+        {
+          "text": "Allow learners to flag courses for notification when classes become available for registration",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -3234,27 +3595,7 @@
           ]
         },
         {
-          "text": "Enable learners to flag courses for notification when classes become available",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-01109",
-              "text": "Recommend courses/ learning content based on learning needs and if applicable, allow for users to flag out courses to be notified when there are available classes for registration",
-              "q_title": "Learners' Module",
-              "subsection": "Essential Learner Features",
-              "sources": [
-                "early-childhood__learning-platform-for-cpd-and-mentoring"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "early-childhood__learning-platform-for-cpd-and-mentoring"
-          ]
-        },
-        {
-          "text": "Collect and display course feedback ratings and learner reviews visible to other users",
+          "text": "Collect and display quantitative and qualitative feedback on attended courses viewable by relevant users",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -3274,29 +3615,11 @@
           ]
         },
         {
-          "text": "Provide learner profile view with progress tracking, development plan, and competency mapping against role requirements",
+          "text": "Provide learner access to course materials, files, assignments, and performance certificates",
           "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-01075",
-              "text": "Provide profile view, schedule and progress chart / plan based on the relevant Technical Skills and Competencies to map training/development and update the plan based on training attended. When applicable, include data sync to One@ECDA for Continuing Professional Development (CPD) hours tracking",
-              "q_title": "Learners' Module",
-              "subsection": "Essential Learner Features",
-              "sources": [
-                "early-childhood__learning-platform-for-cpd-and-mentoring"
-              ]
-            }
+          "proxy_refs": [
+            "Completion tracking and certificate issuance"
           ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "early-childhood__learning-platform-for-cpd-and-mentoring"
-          ]
-        },
-        {
-          "text": "Support submission of assignments and access to course materials and learning content",
-          "source": "imda",
-          "proxy_refs": [],
           "imda_refs": [
             {
               "id": "req-01288",
@@ -3308,13 +3631,48 @@
               ]
             }
           ],
-          "vendor_citations": [],
+          "vendor_citations": [
+            "erpnext_hr",
+            "oracle_hcm_cloud",
+            "sap_successfactors",
+            "workday_hcm"
+          ],
           "solcat_citations": [
             "early-childhood__learning-platform-for-cpd-and-mentoring"
           ]
         },
         {
-          "text": "Integrate with external systems for Continuing Professional Development (CPD) hours tracking where applicable",
+          "text": "Manage external training requests and reimbursement workflows",
+          "source": "proxy",
+          "proxy_refs": [
+            "External training request and reimbursement workflow"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext_hr",
+            "oracle_hcm_cloud",
+            "sap_successfactors",
+            "workday_hcm"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Track training costs by employee and by course for budgeting and reporting",
+          "source": "proxy",
+          "proxy_refs": [
+            "Training cost tracking per employee and per course"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext_hr",
+            "oracle_hcm_cloud",
+            "sap_successfactors",
+            "workday_hcm"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Synchronize continuing professional development (CPD) hours to external systems such as One@ECDA where applicable",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -3336,8 +3694,8 @@
       ],
       "stats": {
         "proxy_in": 9,
-        "imda_in": 10,
-        "merged_out": 17
+        "imda_in": 9,
+        "merged_out": 19
       }
     },
     {
@@ -3389,7 +3747,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Allocate and cascade compensation budget from HR to line managers with tracking",
+          "text": "Allocate and cascade compensation budget from HR to line managers with tracking and controls",
           "source": "proxy",
           "proxy_refs": [
             "Budget allocation and cascade from HR to line managers"
@@ -3404,7 +3762,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Apply merit matrices linked to performance ratings for salary adjustments",
+          "text": "Apply merit matrices linked to performance ratings to determine salary increases",
           "source": "proxy",
           "proxy_refs": [
             "Merit matrix linked to performance ratings"
@@ -3419,7 +3777,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Manage bonus pool allocation and distribution to employees",
+          "text": "Manage bonus pool allocation and distribution to eligible employees",
           "source": "proxy",
           "proxy_refs": [
             "Bonus pool allocation and distribution"
@@ -3434,7 +3792,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate total rewards statements showing salary, benefits, and compensation value per employee",
+          "text": "Generate total rewards statements showing base salary, bonuses, benefits, and equity value per employee",
           "source": "proxy",
           "proxy_refs": [
             "Total rewards statement per employee"
@@ -3449,7 +3807,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Integrate market benchmarking data to inform compensation decisions",
+          "text": "Integrate market benchmarking data to inform compensation positioning and competitiveness",
           "source": "proxy",
           "proxy_refs": [
             "Market benchmarking data integration"
@@ -3464,7 +3822,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track and manage equity and stock option plans",
+          "text": "Track and manage equity and stock option plans including vesting schedules",
           "source": "proxy",
           "proxy_refs": [
             "Equity / stock option plan tracking"
@@ -3479,7 +3837,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Enforce approval workflows for salary changes and compensation adjustments",
+          "text": "Route salary change requests through approval workflow with authorization controls",
           "source": "proxy",
           "proxy_refs": [
             "Salary change approval workflow"
@@ -3492,12 +3850,32 @@
             "workday_hcm"
           ],
           "solcat_citations": []
+        },
+        {
+          "text": "Calculate, track, and pay commissions based on defined commission plans and performance metrics",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00309",
+              "text": "Commission Management",
+              "q_title": "Enhanced POS Features",
+              "subsection": "Enhanced POS Modules",
+              "sources": [
+                "retail__integrated-pos-with-mobile-features"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "retail__integrated-pos-with-mobile-features"
+          ]
         }
       ],
       "stats": {
         "proxy_in": 9,
-        "imda_in": 0,
-        "merged_out": 9
+        "imda_in": 1,
+        "merged_out": 10
       }
     },
     {
@@ -3594,7 +3972,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Integrate with insurance providers for census file generation and plan administration",
+          "text": "Integrate with insurance providers for census file generation and data synchronisation",
           "source": "proxy",
           "proxy_refs": [
             "Insurance provider integration for census files"
@@ -3609,7 +3987,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track wellness programmes and Employee Assistance Programme (EAP) participation",
+          "text": "Track employee participation in wellness programmes and Employee Assistance Plans",
           "source": "proxy",
           "proxy_refs": [
             "Wellness and EAP programme tracking"
@@ -3624,7 +4002,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Allocate benefit costs between employee and employer portions with payroll integration",
+          "text": "Allocate benefit costs between employee and employer portions for payroll integration",
           "source": "proxy",
           "proxy_refs": [
             "Cost allocation to employee and employer portions"
@@ -3655,7 +4033,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "advanced",
       "cited_sources": [
         "workday_hcm",
         "sap_successfactors",
@@ -3691,7 +4069,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Evaluate employees using a 9-box grid matrix to assess performance and potential",
+          "text": "Support 9-box grid analysis to evaluate employees on performance and potential dimensions",
           "source": "proxy",
           "proxy_refs": [
             "9-box grid for performance-versus-potential review"
@@ -3705,7 +4083,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Maintain talent pools organized by competency, skill set, or role family",
+          "text": "Maintain talent pools organized by competency, role family, or organizational unit",
           "source": "proxy",
           "proxy_refs": [
             "Talent pool management by competency or role family"
@@ -3747,7 +4125,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Score and assess internal candidates for role fit and mobility potential",
+          "text": "Assess internal mobility readiness and role-fit scoring for candidate placement",
           "source": "proxy",
           "proxy_refs": [
             "Internal mobility and role-fit scoring"
@@ -3791,7 +4169,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "bamboohr",
         "workday_hcm",
@@ -3813,7 +4191,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Anonymous response collection with minimum respondent thresholds to protect confidentiality",
+          "text": "Anonymous response collection with statistical threshold guarantees to protect respondent confidentiality",
           "source": "proxy",
           "proxy_refs": [
             "Anonymous response collection with threshold guarantees"
@@ -3841,7 +4219,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Segmented survey reporting by department, tenure, and location",
+          "text": "Segmented reporting and analysis by department, tenure, location, and other organizational dimensions",
           "source": "proxy",
           "proxy_refs": [
             "Segmented reporting by department, tenure, and location"
@@ -3869,7 +4247,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Action planning workflow to track interventions with assigned owners and due dates",
+          "text": "Action planning workflow to capture, assign, and track interventions with owners and due dates",
           "source": "proxy",
           "proxy_refs": [
             "Action planning workflow with owner and due date"
@@ -3897,7 +4275,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Manager dashboard displaying team-level survey results and trends",
+          "text": "Manager dashboard displaying engagement metrics and survey results for their direct team",
           "source": "proxy",
           "proxy_refs": [
             "Dashboard visible to managers for their team"
@@ -3909,32 +4287,12 @@
             "workday_hcm"
           ],
           "solcat_citations": []
-        },
-        {
-          "text": "Recognition board for posting peer and manager appreciations",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-01059",
-              "text": "Provide a posting board to announce appreciations",
-              "q_title": "Employee Rewards and Recognition",
-              "subsection": "Core Functionality Requirements",
-              "sources": [
-                "essential-business__employee-rewards-and-recognition"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "essential-business__employee-rewards-and-recognition"
-          ]
         }
       ],
       "stats": {
         "proxy_in": 8,
-        "imda_in": 1,
-        "merged_out": 9
+        "imda_in": 0,
+        "merged_out": 8
       }
     },
     {
@@ -3986,7 +4344,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Expense line items support category and cost-centre assignment for proper GL coding",
+          "text": "Expense line items can be tagged with expense category and cost centre for allocation",
           "source": "proxy",
           "proxy_refs": [
             "Category and cost-centre tagging per line"
@@ -4016,7 +4374,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Multi-level approval workflow with sequential or parallel review by manager and finance roles",
+          "text": "Multi-level approval workflow with sequential or parallel review by manager and finance personnel",
           "source": "proxy",
           "proxy_refs": [
             "Multi-level approval by manager and finance"
@@ -4031,7 +4389,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track employee advances and settlement against submitted claims",
+          "text": "Track employee advances and settlement of claims against advances",
           "source": "proxy",
           "proxy_refs": [
             "Employee advance and settlement tracking"
@@ -4046,7 +4404,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Process reimbursement via payroll integration or direct payment to employee bank account",
+          "text": "Process reimbursement through payroll integration or direct payment to employee bank account",
           "source": "proxy",
           "proxy_refs": [
             "Reimbursement via payroll or direct payment"
@@ -4061,7 +4419,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Automated policy compliance checking to flag violations such as missing receipts or amount limits exceeded",
+          "text": "Automated policy compliance checking to flag violations such as missing receipts or amounts exceeding policy limits",
           "source": "proxy",
           "proxy_refs": [
             "Policy violation flagging (over-limit, missing receipt)"
@@ -4076,7 +4434,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Export approved claims to finance GL with correct account coding and cost-centre allocation",
+          "text": "Export approved expense claims to general ledger with correct account coding and cost centre allocation",
           "source": "proxy",
           "proxy_refs": [
             "Export to finance GL with correct account coding"
@@ -4103,10 +4461,11 @@
       "description": "Forward-looking view of headcount — budgeted vs actual, open requisitions, attrition projection, and scenario modelling. Links HR to finance budgeting.",
       "priority_proxy": "advanced",
       "applicability": [
+        "sme",
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "advanced",
+      "sme_tier": "preferred",
       "cited_sources": [
         "workday_hcm",
         "sap_successfactors",
@@ -4252,7 +4611,7 @@
           ]
         },
         {
-          "text": "Allocate workforce costs by project, cost centre, and business unit for financial planning and reporting",
+          "text": "Allocate workforce costs to projects, cost centres, and departments for integrated financial planning",
           "source": "both",
           "proxy_refs": [
             "Workforce cost allocation by project and cost centre"
@@ -4303,7 +4662,7 @@
       ],
       "requirements": [
         {
-          "text": "Build and maintain shift rosters by location, covering weekly or monthly planning horizons",
+          "text": "Build and maintain shift rosters by location, supporting weekly and monthly planning cycles",
           "source": "both",
           "proxy_refs": [
             "Build weekly or monthly shift rosters per location"
@@ -4418,7 +4777,7 @@
           ]
         },
         {
-          "text": "Configure shift slots based on available employee capacity and constraints",
+          "text": "Configure shift slots based on available employee capacity and demand patterns",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -4498,7 +4857,7 @@
           ]
         },
         {
-          "text": "Calculate labour cost forecast from draft rosters",
+          "text": "Forecast labour costs from draft rosters",
           "source": "proxy",
           "proxy_refs": [
             "Labour cost forecast from the draft roster"
@@ -4532,7 +4891,7 @@
           ]
         },
         {
-          "text": "Generate attendance and overtime reports from scheduling and actual work data",
+          "text": "Generate attendance and overtime reports from scheduling and actual clock data",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -4590,7 +4949,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate automated alerts for work pass issue, expiry, and renewal deadlines with configurable lead times",
+          "text": "Generate alerts and workflow notifications for work pass issue dates, expiry dates, and renewal deadlines",
           "source": "proxy",
           "proxy_refs": [
             "Pass issue, expiry, and renewal alert workflow"
@@ -4604,7 +4963,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Maintain Foreign Worker Levy (FWL) rates by sector and worker tier, with automatic rate updates and levy calculation",
+          "text": "Maintain Foreign Worker Levy (FWL) rates by sector and worker tier, with automatic rate updates",
           "source": "proxy",
           "proxy_refs": [
             "Foreign Worker Levy (FWL) rate tracking by sector and tier"
@@ -4618,7 +4977,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Monitor and enforce dependency ratio and work pass quota limits by sector and company",
+          "text": "Monitor and enforce dependency ratio and work pass quota limits by sector",
           "source": "proxy",
           "proxy_refs": [
             "Dependency ratio and quota monitoring per sector"
@@ -4632,7 +4991,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Record and track medical examination status and insurance coverage requirements for each foreign worker",
+          "text": "Record and track medical examination status and insurance coverage for each foreign worker",
           "source": "proxy",
           "proxy_refs": [
             "Medical examination and insurance status per worker"
@@ -4646,7 +5005,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Manage security bond and repatriation deposit records, including amount, holder, and release conditions",
+          "text": "Track security bond and repatriation deposit amounts, due dates, and payment status",
           "source": "proxy",
           "proxy_refs": [
             "Security bond and repatriation deposit tracking"
@@ -4660,7 +5019,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate MOM EP Online submission files in required format for work pass applications and renewals",
+          "text": "Generate and prepare MOM EP Online submission files in required format for work pass applications and renewals",
           "source": "proxy",
           "proxy_refs": [
             "MOM EP Online submission file preparation"
@@ -4688,7 +5047,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Provide compliance dashboard summarizing work pass status, levy obligations, quota utilization, and audit-ready documentation",
+          "text": "Provide compliance dashboard with work permit and foreign worker management status for audit readiness",
           "source": "proxy",
           "proxy_refs": [
             "Compliance dashboard for audit readiness"
@@ -4726,7 +5085,7 @@
       ],
       "requirements": [
         {
-          "text": "Generate and format monthly CPF contribution submission file compliant with CPF Board EZPay specifications",
+          "text": "Generate monthly CPF submission file in CPF EZPay format",
           "source": "proxy",
           "proxy_refs": [
             "Generate monthly CPF submission file for CPF EZPay"
@@ -4740,7 +5099,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate annual IR8A, Appendix 8A, Appendix 8B, and IR8S tax forms for employee income reporting",
+          "text": "Produce annual IRAS employment income returns (IR8A, Appendix 8A, Appendix 8B, IR8S)",
           "source": "proxy",
           "proxy_refs": [
             "Produce IR8A, Appendix 8A, Appendix 8B, and IR8S annually"
@@ -4754,7 +5113,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Submit employment income tax returns to IRAS via the Auto-Inclusion Scheme (AIS) API",
+          "text": "Submit employment income returns to IRAS via Auto-Inclusion Scheme (AIS) API",
           "source": "both",
           "proxy_refs": [
             "Submit via IRAS Auto-Inclusion Scheme (AIS) API"
@@ -4782,7 +5141,7 @@
           ]
         },
         {
-          "text": "Generate IR21 tax clearance form for foreign employees upon departure",
+          "text": "Generate IR21 tax clearance form for foreign employee departures",
           "source": "proxy",
           "proxy_refs": [
             "IR21 tax clearance form generation for foreign leavers"
@@ -4796,7 +5155,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate and submit MOM labour market survey returns as required",
+          "text": "Generate MOM labour market survey returns",
           "source": "proxy",
           "proxy_refs": [
             "MOM labour market survey returns"
@@ -4824,7 +5183,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Maintain complete audit trail of all statutory submissions, including timestamps and government acknowledgements",
+          "text": "Maintain audit trail of all statutory submissions and acknowledgements",
           "source": "proxy",
           "proxy_refs": [
             "Audit trail of every submission and acknowledgement"
@@ -4838,7 +5197,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support correction and amendment workflows for submitted returns with resubmission capability",
+          "text": "Support correction and amendment workflow for submitted returns",
           "source": "proxy",
           "proxy_refs": [
             "Correction and amendment workflow per return"
@@ -4937,7 +5296,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Integrate incentive and commission pay from external sales or performance systems and include in payroll calculation.",
+          "text": "Integrate incentive and commission pay from external sales or performance systems and include in variable pay calculation.",
           "source": "proxy",
           "proxy_refs": [
             "Incentive and commission pay-in from sales system"
@@ -4952,7 +5311,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Calculate piece-rate and output-based pay (e.g., per unit produced or service delivered) with configurable rates and aggregation rules.",
+          "text": "Calculate piece-rate and output-based pay according to defined unit rates and production or service metrics.",
           "source": "proxy",
           "proxy_refs": [
             "Piece-rate and output-based pay calculation"
@@ -4967,7 +5326,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support retroactive pay adjustments when pay rates are changed with backdated effective dates, recalculating affected periods.",
+          "text": "Support retroactive pay adjustments when pay rates or rules are changed with backdated effective dates.",
           "source": "proxy",
           "proxy_refs": [
             "Retro-pay for backdated rate changes"
@@ -4982,7 +5341,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Provide preview and validation of calculated variable pay components before final posting to payroll, with drill-down detail and exception reporting.",
+          "text": "Provide preview and validation of calculated variable pay components before final posting to payroll.",
           "source": "proxy",
           "proxy_refs": [
             "Preview of variable pay before posting to payroll"
@@ -5154,10 +5513,11 @@
       "description": "Structured case management for disciplinary actions, warnings, investigations, and employee grievances — with confidentiality, audit trail, and fair-process safeguards.",
       "priority_proxy": "standard",
       "applicability": [
+        "sme",
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "advanced",
+      "sme_tier": "preferred",
       "cited_sources": [
         "workday_hcm",
         "sap_successfactors",
@@ -5207,7 +5567,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Capture investigation notes, witness statements, and evidence within case records",
+          "text": "Capture investigation notes, witness statements, and evidence documentation within case records",
           "source": "proxy",
           "proxy_refs": [
             "Investigation notes and witness statements"
@@ -5221,7 +5581,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Schedule disciplinary and grievance hearings with outcome recording and decision documentation",
+          "text": "Schedule disciplinary and grievance hearings with participant notification and outcome recording",
           "source": "proxy",
           "proxy_refs": [
             "Hearing scheduling and outcome recording"
@@ -5235,7 +5595,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support appeal and escalation paths with clear routing and status tracking",
+          "text": "Support formal appeal and escalation paths with documented decision trails",
           "source": "proxy",
           "proxy_refs": [
             "Appeal and escalation path"
@@ -5263,7 +5623,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Validate statutory notice-period compliance requirements before case closure or termination",
+          "text": "Validate statutory notice-period compliance requirements for disciplinary actions",
           "source": "proxy",
           "proxy_refs": [
             "Statutory notice-period compliance check"
@@ -5275,20 +5635,12 @@
             "workday_hcm"
           ],
           "solcat_citations": []
-        },
-        {
-          "text": "Maintain complete audit trail of all case actions, decisions, and document changes",
-          "source": "proxy",
-          "proxy_refs": [],
-          "imda_refs": [],
-          "vendor_citations": [],
-          "solcat_citations": []
         }
       ],
       "stats": {
         "proxy_in": 8,
         "imda_in": 0,
-        "merged_out": 9
+        "merged_out": 8
       }
     },
     {
@@ -5297,10 +5649,11 @@
       "description": "Capture structured leaver feedback to reduce future attrition and maintain relationships with former staff as alumni — a source of rehires, referrals, and contractors.",
       "priority_proxy": "standard",
       "applicability": [
+        "sme",
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "advanced",
+      "sme_tier": "preferred",
       "cited_sources": [
         "workday_hcm",
         "bamboohr",
@@ -5308,7 +5661,7 @@
       ],
       "requirements": [
         {
-          "text": "Provide configurable exit interview templates with scheduling and workflow management",
+          "text": "Provide configurable exit interview templates with scheduling capability to conduct structured interviews with departing employees",
           "source": "proxy",
           "proxy_refs": [
             "Exit interview template and scheduling"
@@ -5322,7 +5675,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Capture reason for leaving using a structured, configurable taxonomy",
+          "text": "Capture reason for leaving using a structured taxonomy to enable consistent categorization and analysis of attrition drivers",
           "source": "proxy",
           "proxy_refs": [
             "Reason-for-leaving capture with structured taxonomy"
@@ -5336,7 +5689,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate aggregate attrition reporting by reason, department, tenure, and other dimensions",
+          "text": "Generate aggregate reporting on attrition reasons to identify trends and patterns across departments, roles, and time periods",
           "source": "proxy",
           "proxy_refs": [
             "Aggregate attrition reason reporting"
@@ -5350,7 +5703,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Maintain alumni profiles with opt-in consent for contact retention and future engagement",
+          "text": "Maintain alumni profiles with opt-in contact information to preserve relationships with former employees",
           "source": "proxy",
           "proxy_refs": [
             "Alumni profile with opt-in contact retention"
@@ -5364,7 +5717,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Enable alumni communications including newsletters and event invitations",
+          "text": "Enable alumni communications including newsletters and event invitations to maintain engagement with former staff",
           "source": "proxy",
           "proxy_refs": [
             "Alumni newsletter and event invitations"
@@ -5378,7 +5731,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Flag rehire eligibility status with documented reason for ineligibility where applicable",
+          "text": "Flag rehire eligibility status with documented reason to identify candidates suitable for re-employment",
           "source": "proxy",
           "proxy_refs": [
             "Rehire eligibility flag with reason"
@@ -5392,7 +5745,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track boomerang hires (returning former employees) and their rehire history",
+          "text": "Track boomerang hires (returning former employees) to monitor rehiring patterns and outcomes",
           "source": "proxy",
           "proxy_refs": [
             "Boomerang hire tracking"
@@ -5406,7 +5759,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Integrate alumni network with referral programme to encourage former staff to recommend candidates",
+          "text": "Integrate alumni network with referral programme to leverage former employees as sources of candidate referrals",
           "source": "proxy",
           "proxy_refs": [
             "Referral programme link to alumni network"
@@ -5671,7 +6024,7 @@
           ]
         },
         {
-          "text": "Staff profiling analytics to support retention and recruitment targeting based on employment history, location, and compensation expectations",
+          "text": "Staff profiling analytics to support retention and recruitment targeting based on employment history, location, and compensation data",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -5875,7 +6228,7 @@
           ]
         },
         {
-          "text": "Conversational HR chatbot to answer policy questions, process leave and claims applications, update balances in HRMS, and support employee onboarding",
+          "text": "Conversational HR chatbot to answer policy questions, process leave and claims applications, and support employee onboarding",
           "source": "both",
           "proxy_refs": [
             "HR chatbot for employee FAQ and self-service"
@@ -5934,28 +6287,16 @@
           "proxy_refs": [
             "Sentiment analysis on engagement survey comments"
           ],
-          "imda_refs": [
-            {
-              "id": "req-00043",
-              "text": "Ability to identify and assess characteristics and trends across the entire employee population",
-              "q_title": "AI Features HR - Elaboration",
-              "subsection": "",
-              "sources": [
-                "essential-business__human-resource-management-system-hrms"
-              ]
-            }
-          ],
+          "imda_refs": [],
           "vendor_citations": [
             "oracle_hcm_cloud",
             "sap_successfactors",
             "workday_hcm"
           ],
-          "solcat_citations": [
-            "essential-business__human-resource-management-system-hrms"
-          ]
+          "solcat_citations": []
         },
         {
-          "text": "Anomaly detection on payroll, timesheet, and hours data to identify irregularities",
+          "text": "Anomaly detection on payroll and timesheet data to identify irregularities and exceptions",
           "source": "both",
           "proxy_refs": [
             "Anomaly detection on payroll and timesheet data"
@@ -6019,7 +6360,7 @@
           ]
         },
         {
-          "text": "Analytics and trend analysis across employee population to identify patterns and insights",
+          "text": "Population-level analytics to identify characteristics, trends, and patterns across the employee base",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -6031,27 +6372,15 @@
               "sources": [
                 "essential-business__human-resource-management-system-hrms"
               ]
-            },
-            {
-              "id": "req-00929",
-              "text": "Obtain predictive insights on areas like health and safety management, optimise manpower deployment to improve churn rate and forecast staff turnover and employee performance as described in requirement 3",
-              "q_title": "AI Powered Analytics - Elaboration",
-              "subsection": "Examples",
-              "sources": [
-                "early-childhood__data-mining-and-analytics-centre-operations",
-                "early-childhood__data-mining-and-analytics-centre-operations-and-child-development"
-              ]
             }
           ],
           "vendor_citations": [],
           "solcat_citations": [
-            "early-childhood__data-mining-and-analytics-centre-operations",
-            "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
             "essential-business__human-resource-management-system-hrms"
           ]
         },
         {
-          "text": "Predictive insights on employee performance and workforce optimization",
+          "text": "Predictive insights on employee performance and productivity metrics",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -6081,12 +6410,32 @@
             "early-childhood__data-mining-and-analytics-centre-operations-and-child-development",
             "essential-business__human-resource-management-system-hrms"
           ]
+        },
+        {
+          "text": "Automated leave and claims balance updates in HRMS following chatbot approvals",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00012",
+              "text": "A HR chatbot to answer FAQs on company policies, allow Leave and Claims applications to be submitted and approved via the chatbot and for the Leave and Claims balance to be automatically updated on HRMS, and assist with the employee onboarding process",
+              "q_title": "AI Features HR - Elaboration",
+              "subsection": "",
+              "sources": [
+                "essential-business__human-resource-management-system-hrms"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__human-resource-management-system-hrms"
+          ]
         }
       ],
       "stats": {
         "proxy_in": 8,
         "imda_in": 12,
-        "merged_out": 11
+        "merged_out": 12
       }
     },
     {
@@ -6124,7 +6473,7 @@
           "solcat_citations": []
         },
         {
-          "text": "User interface uses responsive design to adapt layout and functionality across all screen sizes",
+          "text": "User interface automatically adapts to different screen sizes and orientations",
           "source": "proxy",
           "proxy_refs": [
             "Responsive design that works on all screen sizes"
@@ -6154,7 +6503,22 @@
           "solcat_citations": []
         },
         {
-          "text": "Employees can submit leave requests and view leave balance from mobile devices",
+          "text": "Employees can submit and manage leave requests from mobile devices",
+          "source": "proxy",
+          "proxy_refs": [
+            "Apply for leave and check balance from mobile"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "bamboohr",
+            "erpnext_hr",
+            "odoo_employees",
+            "workday_hcm"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Employees can view leave balance on mobile devices",
           "source": "proxy",
           "proxy_refs": [
             "Apply for leave and check balance from mobile"
@@ -6184,7 +6548,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Mobile time and attendance functionality with geolocation capture for clock in and clock out",
+          "text": "Mobile time tracking with geolocation capture for clock in and clock out",
           "source": "proxy",
           "proxy_refs": [
             "Clock in and out with geolocation from mobile"
@@ -6199,7 +6563,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Offline mode available for field workers with automatic synchronization when connectivity is restored",
+          "text": "Offline mode allows field workers to record transactions locally with automatic synchronization when connectivity is restored",
           "source": "proxy",
           "proxy_refs": [
             "Offline mode for field workers with later sync"
@@ -6217,7 +6581,7 @@
       "stats": {
         "proxy_in": 8,
         "imda_in": 0,
-        "merged_out": 7
+        "merged_out": 8
       }
     },
     {
@@ -6329,7 +6693,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Meet PSG Cyber Essentials Mark baseline security controls",
+          "text": "Comply with PSG Cyber Essentials Mark baseline security controls",
           "source": "proxy",
           "proxy_refs": [
             "Compliant with PSG Cyber Essentials Mark baseline"
@@ -6344,7 +6708,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Enforce role-based access controls to separate HR, payroll, and manager data views",
+          "text": "Enforce role-based access control to segregate HR, payroll, and manager data views",
           "source": "proxy",
           "proxy_refs": [
             "Separation of HR, payroll, and manager data views"
@@ -6384,37 +6748,62 @@
       ],
       "requirements": [
         {
-          "text": "Individual login credentials for every user with unique identifier",
-          "source": "proxy",
+          "text": "Create and manage individual user accounts with unique login credentials for all system users",
+          "source": "both",
           "proxy_refs": [
-            "Individual login credentials for every user"
+            "Individual login credentials for every user",
+            "Manager sees only their own team's data"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01213",
+              "text": "Set up admin and user accounts for all employees",
+              "q_title": "General Setup",
+              "subsection": "Setup Requirements",
+              "sources": [
+                "essential-business__human-resource-e-scheduling-system"
+              ]
+            }
+          ],
           "vendor_citations": [
             "netsuite_suitepeople",
             "odoo_employees",
             "sap_successfactors",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "essential-business__human-resource-e-scheduling-system"
+          ]
         },
         {
-          "text": "Role-based access control with distinct roles for HR admin, payroll officer, line manager, and employee",
-          "source": "proxy",
+          "text": "Implement role-based access control (RBAC) with distinct roles including HR administrator, payroll officer, line manager, employee, and finance",
+          "source": "both",
           "proxy_refs": [
             "Role-based permissions (HR admin, payroll, manager, employee)"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01213",
+              "text": "Set up admin and user accounts for all employees",
+              "q_title": "General Setup",
+              "subsection": "Setup Requirements",
+              "sources": [
+                "essential-business__human-resource-e-scheduling-system"
+              ]
+            }
+          ],
           "vendor_citations": [
             "netsuite_suitepeople",
             "odoo_employees",
             "sap_successfactors",
             "workday_hcm"
           ],
-          "solcat_citations": []
+          "solcat_citations": [
+            "essential-business__human-resource-e-scheduling-system"
+          ]
         },
         {
-          "text": "Restrict payroll and salary data visibility to authorized roles only",
+          "text": "Restrict access to payroll and salary data to authorized roles only",
           "source": "proxy",
           "proxy_refs": [
             "Restrict payroll and salary data to authorised roles only"
@@ -6429,7 +6818,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Line managers can view only their direct reports' data",
+          "text": "Limit manager access to employee records and data belonging only to their direct reports and team members",
           "source": "proxy",
           "proxy_refs": [
             "Manager sees only their own team's data"
@@ -6444,31 +6833,19 @@
           "solcat_citations": []
         },
         {
-          "text": "Employees can view only their own personnel and training records",
-          "source": "both",
+          "text": "Restrict employee access to view and edit only their own personal and employment records",
+          "source": "proxy",
           "proxy_refs": [
             "Employee sees only their own record"
           ],
-          "imda_refs": [
-            {
-              "id": "req-00848",
-              "text": "Learners management (training records/ progress): attendance, assessment, learners' profiles (i.e. Infant Educator, Early Years Educator, Preschool Educator, Inclusion Coordinator, Early Intervention and Learning Support tracks), users' learning needs analyses based on their job roles and Technical Skills Competencies",
-              "q_title": "Platform Administration and Management",
-              "subsection": "Core Administrative Functions",
-              "sources": [
-                "early-childhood__learning-platform-for-cpd-and-mentoring"
-              ]
-            }
-          ],
+          "imda_refs": [],
           "vendor_citations": [
             "netsuite_suitepeople",
             "odoo_employees",
             "sap_successfactors",
             "workday_hcm"
           ],
-          "solcat_citations": [
-            "early-childhood__learning-platform-for-cpd-and-mentoring"
-          ]
+          "solcat_citations": []
         },
         {
           "text": "Automatically deactivate user accounts upon employee termination",
@@ -6486,7 +6863,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support single sign-on integration with external identity providers (Google, Microsoft, SAML)",
+          "text": "Support single sign-on (SSO) integration with external identity providers such as Google, Microsoft, and SAML-compliant systems",
           "source": "proxy",
           "proxy_refs": [
             "Single sign-on support (Google, Microsoft, SAML)"
@@ -6501,7 +6878,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Enforce two-factor authentication for all user logins",
+          "text": "Enforce two-factor authentication (2FA) for all user logins",
           "source": "proxy",
           "proxy_refs": [
             "Two-factor authentication for all users"
@@ -6516,7 +6893,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Maintain audit log of all user logins and record access events",
+          "text": "Maintain audit logs recording all user logins and access to employee records with timestamps and user identification",
           "source": "proxy",
           "proxy_refs": [
             "Audit log of user logins and record access"
@@ -6531,13 +6908,13 @@
           "solcat_citations": []
         },
         {
-          "text": "Provision admin and user accounts for all employees during onboarding",
+          "text": "Define and manage business units and organizational structures to segment employees by geography, division, tenure, and other classification criteria",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {
-              "id": "req-01213",
-              "text": "Set up admin and user accounts for all employees",
+              "id": "req-01216",
+              "text": "Set up and edit business units for different employee categories (e.g. geography, division, tenure, etc)",
               "q_title": "General Setup",
               "subsection": "Setup Requirements",
               "sources": [
@@ -6551,27 +6928,7 @@
           ]
         },
         {
-          "text": "Track learner profiles and training progress including attendance and assessment records",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-00848",
-              "text": "Learners management (training records/ progress): attendance, assessment, learners' profiles (i.e. Infant Educator, Early Years Educator, Preschool Educator, Inclusion Coordinator, Early Intervention and Learning Support tracks), users' learning needs analyses based on their job roles and Technical Skills Competencies",
-              "q_title": "Platform Administration and Management",
-              "subsection": "Core Administrative Functions",
-              "sources": [
-                "early-childhood__learning-platform-for-cpd-and-mentoring"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "early-childhood__learning-platform-for-cpd-and-mentoring"
-          ]
-        },
-        {
-          "text": "Support role-based learning needs analysis to determine required training based on job function",
+          "text": "Support role-specific user profiles and competency tracking aligned to job roles and technical skills requirements",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -6593,8 +6950,8 @@
       ],
       "stats": {
         "proxy_in": 9,
-        "imda_in": 4,
-        "merged_out": 12
+        "imda_in": 5,
+        "merged_out": 11
       }
     },
     {
@@ -6760,7 +7117,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Integrate with identity providers for single sign-on and user provisioning",
+          "text": "Integrate with identity providers to support SSO and automated user provisioning",
           "source": "proxy",
           "proxy_refs": [
             "Connect with identity provider for SSO and user provisioning"
@@ -6799,6 +7156,275 @@
         "proxy_in": 9,
         "imda_in": 3,
         "merged_out": 10
+      }
+    },
+    {
+      "id": "hr.rewards_recognition",
+      "name": "Employee Rewards & Recognition",
+      "description": "Manage formal recognition programs — peer awards, spot bonuses, milestone acknowledgements — track points and redemptions, and integrate with payroll for bonus payments. Bundled inside most HRMS suites; standalone vendors (Bonusly, Achievers) also serve mid-market+. Added 2026-05-06 to close the SUSPICIOUS-bucket gap surfaced by stress-test (Employee R&R sol cat had 3 Required HR caps but no Preferred specialty cap to anchor to).",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "workday",
+        "sap_successfactors",
+        "justlogin",
+        "adaptive_pay",
+        "bonusly"
+      ],
+      "requirements": [
+        {
+          "text": "Maintain library of recognition program types (peer-to-peer, manager-to-staff, milestone, performance-based, ad-hoc awards)",
+          "source": "both",
+          "proxy_refs": [
+            "Maintain library of recognition program types (peer-to-peer, manager-to-staff, milestone, performance-based)"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00092",
+              "text": "Allow employers to award points, or a dollar value, to employees (both on an ad-hoc basis or upon the above occasions), and send words of appreciation which can be tagged to the core values of the company",
+              "q_title": "Employee Rewards and Recognition",
+              "subsection": "Core Functionality Requirements",
+              "sources": [
+                "essential-business__employee-rewards-and-recognition"
+              ]
+            },
+            {
+              "id": "req-00352",
+              "text": "Create and edit occasions for Rewards and Recognition (e.g., Achieving KPIs, Events Attendance, Long Service Award, etc.)",
+              "q_title": "Employee Rewards and Recognition",
+              "subsection": "Core Functionality Requirements",
+              "sources": [
+                "essential-business__employee-rewards-and-recognition"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "sap_successfactors"
+          ],
+          "solcat_citations": [
+            "essential-business__employee-rewards-and-recognition"
+          ]
+        },
+        {
+          "text": "Track points or monetary award balances per employee",
+          "source": "both",
+          "proxy_refs": [
+            "Track points, badges, or monetary award balances per employee"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00091",
+              "text": "Allow employees to utilise points, or a dollar value, to redeem Rewards from a merchant network of at least 100 Singapore-based merchants across a wide range of industries (e.g, Retail, F&B, Recreation, etc.)",
+              "q_title": "Employee Rewards and Recognition",
+              "subsection": "Core Functionality Requirements",
+              "sources": [
+                "essential-business__employee-rewards-and-recognition"
+              ]
+            },
+            {
+              "id": "req-00092",
+              "text": "Allow employers to award points, or a dollar value, to employees (both on an ad-hoc basis or upon the above occasions), and send words of appreciation which can be tagged to the core values of the company",
+              "q_title": "Employee Rewards and Recognition",
+              "subsection": "Core Functionality Requirements",
+              "sources": [
+                "essential-business__employee-rewards-and-recognition"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "sap_successfactors"
+          ],
+          "solcat_citations": [
+            "essential-business__employee-rewards-and-recognition"
+          ]
+        },
+        {
+          "text": "Integrate with payroll for bonus disbursement",
+          "source": "proxy",
+          "proxy_refs": [
+            "Integrate with payroll for bonus disbursement"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "sap_successfactors"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Provide redemption catalogue including gift cards, vouchers, time-off, and charitable donations",
+          "source": "proxy",
+          "proxy_refs": [
+            "Provide redemption catalogue (gift cards, vouchers, time-off, charitable donations)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "sap_successfactors"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Enable employee redemption of points or monetary value against merchant network of at least 100 merchants across diverse industries (retail, food & beverage, recreation, etc.)",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00091",
+              "text": "Allow employees to utilise points, or a dollar value, to redeem Rewards from a merchant network of at least 100 Singapore-based merchants across a wide range of industries (e.g, Retail, F&B, Recreation, etc.)",
+              "q_title": "Employee Rewards and Recognition",
+              "subsection": "Core Functionality Requirements",
+              "sources": [
+                "essential-business__employee-rewards-and-recognition"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__employee-rewards-and-recognition"
+          ]
+        },
+        {
+          "text": "Support nomination and award workflows with configurable approval gates",
+          "source": "both",
+          "proxy_refs": [
+            "Support nomination workflows with approval gates"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00327",
+              "text": "Configuration of approval workflow to manage manual reward points adjustment",
+              "q_title": "Customer Rewards or Loyalty Programme Features",
+              "subsection": "Loyalty Programme Features",
+              "sources": [
+                "personal-care-services__salon-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "sap_successfactors"
+          ],
+          "solcat_citations": [
+            "personal-care-services__salon-management-system"
+          ]
+        },
+        {
+          "text": "Allow tagging of recognition awards to company core values",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00092",
+              "text": "Allow employers to award points, or a dollar value, to employees (both on an ad-hoc basis or upon the above occasions), and send words of appreciation which can be tagged to the core values of the company",
+              "q_title": "Employee Rewards and Recognition",
+              "subsection": "Core Functionality Requirements",
+              "sources": [
+                "essential-business__employee-rewards-and-recognition"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__employee-rewards-and-recognition"
+          ]
+        },
+        {
+          "text": "Automate award of points at key milestones (work anniversary, birthday, survey completion, KPI achievement, event attendance, long service)",
+          "source": "both",
+          "proxy_refs": [
+            "Maintain library of recognition program types (peer-to-peer, manager-to-staff, milestone, performance-based)"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00352",
+              "text": "Create and edit occasions for Rewards and Recognition (e.g., Achieving KPIs, Events Attendance, Long Service Award, etc.)",
+              "q_title": "Employee Rewards and Recognition",
+              "subsection": "Core Functionality Requirements",
+              "sources": [
+                "essential-business__employee-rewards-and-recognition"
+              ]
+            },
+            {
+              "id": "req-00485",
+              "text": "Does your solution automate the awarding of points at key milestones (e.g., Work Anniversary, Birthday, Completion of Survey, etc.)",
+              "q_title": "Employee Recognition and Rewards Automation",
+              "subsection": "Employee Recognition and Rewards Automation",
+              "sources": [
+                "essential-business__employee-rewards-and-recognition"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "sap_successfactors"
+          ],
+          "solcat_citations": [
+            "essential-business__employee-rewards-and-recognition"
+          ]
+        },
+        {
+          "text": "Provide posting board or feed to announce recognition events and appreciations",
+          "source": "both",
+          "proxy_refs": [
+            "Notification and feed of recognition events (visibility builds engagement)"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-01059",
+              "text": "Provide a posting board to announce appreciations",
+              "q_title": "Employee Rewards and Recognition",
+              "subsection": "Core Functionality Requirements",
+              "sources": [
+                "essential-business__employee-rewards-and-recognition"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "sap_successfactors"
+          ],
+          "solcat_citations": [
+            "essential-business__employee-rewards-and-recognition"
+          ]
+        },
+        {
+          "text": "Generate engagement and recognition analytics by team, department, and program type",
+          "source": "proxy",
+          "proxy_refs": [
+            "Generate engagement and recognition analytics by team/department"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "sap_successfactors"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Support manual adjustment of reward points with approval workflow configuration",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00327",
+              "text": "Configuration of approval workflow to manage manual reward points adjustment",
+              "q_title": "Customer Rewards or Loyalty Programme Features",
+              "subsection": "Loyalty Programme Features",
+              "sources": [
+                "personal-care-services__salon-management-system"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "personal-care-services__salon-management-system"
+          ]
+        }
+      ],
+      "stats": {
+        "proxy_in": 7,
+        "imda_in": 6,
+        "merged_out": 11
       }
     }
   ]
