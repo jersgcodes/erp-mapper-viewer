@@ -6,6 +6,7 @@
 <title>Canonical Spec — Human Resources Management</title>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script src="https://unpkg.com/roughjs@4.6.6/bundled/rough.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@11/marked.min.js"></script>
 <style>
   :root {
     --bg: #f5f6f8;
@@ -3241,6 +3242,31 @@ document.addEventListener("click", (e) => {
 // step14 + audit) remains in place for hand-edited YAML use cases.
 // =============================================================================
 
+// Tier label + chip styling (module-scoped so live-update handlers can reuse).
+function _capTierStyle(t) {
+  if (t === "required") return {label: "Mandatory", bg: "#fef3c7", fg: "#92400e", brd: "#fcd34d"};
+  if (t === "preferred") return {label: "Preferred", bg: "#e0f2fe", fg: "#075985", brd: "#7dd3fc"};
+  if (t === "advanced") return {label: "Enterprise / advanced", bg: "#f3e8ff", fg: "#6b21a8", brd: "#d8b4fe"};
+  if (t === "deleted") return {label: "To delete", bg: "#fee2e2", fg: "#991b1b", brd: "#fca5a5"};
+  return {label: t || "", bg: "#f1f5f9", fg: "#334155", brd: "#cbd5e1"};
+}
+
+// Render markdown safely if marked.js is loaded; otherwise escape + preserve newlines.
+function renderMarkdownSafe(text) {
+  if (!text) return "";
+  if (typeof window !== "undefined" && window.marked && typeof window.marked.parse === "function") {
+    try {
+      // marked sanitizes by default in newer versions; escape any leftover HTML manually for safety
+      const html = window.marked.parse(String(text), { breaks: true, gfm: true });
+      return html;
+    } catch (_) {
+      // fallthrough to plain
+    }
+  }
+  // Fallback: escape and convert single newlines to <br>
+  return escapeHtml(text).replace(/\n/g, "<br>");
+}
+
 // Toast helper — used by both this file and the cap editor below.
 function _l2Toast(msg, kind = "info") {
   const t = document.createElement("div");
@@ -3296,6 +3322,20 @@ function _capClearLocal(mod, capId) {
   try { localStorage.removeItem(_capLocalKey(mod, capId)); } catch (_) {}
 }
 
+// YAML scalar emit helper. Uses block scalar `|` when text contains newlines
+// so multi-line markdown flows through cleanly. Single-quote otherwise.
+function _yamlScalar(value, indent) {
+  const v = String(value ?? "");
+  if (v.indexOf("\n") < 0) {
+    // Single-line: single-quote (escape internal single quotes)
+    return `'${v.replace(/'/g, "''")}'`;
+  }
+  // Multi-line: literal block scalar `|` — preserves all newlines + indentation
+  const pad = " ".repeat(indent + 2);
+  const body = v.split("\n").map(line => pad + line).join("\n");
+  return `|\n${body}`;
+}
+
 // Serialize a cap edit into a YAML snippet for data/manual_cap_overrides.yaml.
 function _capYamlSnippet(mod, capId, edit) {
   const today = new Date().toISOString().slice(0, 10);
@@ -3304,23 +3344,19 @@ function _capYamlSnippet(mod, capId, edit) {
     `  module: ${mod}`,
   ];
   if (edit.name !== undefined) {
-    const v = (edit.name || "").replace(/'/g, "''");
-    lines.push(`  name: '${v}'`);
+    lines.push(`  name: ${_yamlScalar(edit.name, 2)}`);
   }
   if (edit.description !== undefined) {
-    const v = (edit.description || "").replace(/'/g, "''");
-    lines.push(`  description: '${v}'`);
+    lines.push(`  description: ${_yamlScalar(edit.description, 2)}`);
   }
   if (edit.sme_tier !== undefined) {
     lines.push(`  sme_tier: ${edit.sme_tier}`);
   }
   if (edit.vendor_question !== undefined) {
-    const v = (edit.vendor_question || "").replace(/'/g, "''");
-    lines.push(`  vendor_question: '${v}'`);
+    lines.push(`  vendor_question: ${_yamlScalar(edit.vendor_question, 2)}`);
   }
   if (edit.vendor_question_terse !== undefined) {
-    const v = (edit.vendor_question_terse || "").replace(/'/g, "''");
-    lines.push(`  vendor_question_terse: '${v}'`);
+    lines.push(`  vendor_question_terse: ${_yamlScalar(edit.vendor_question_terse, 2)}`);
   }
   lines.push(`  author: human-review`);
   lines.push(`  edited_at: '${today}'`);
@@ -3391,6 +3427,7 @@ function renderCapEditor(c) {
         ${tierOpt("required", "required (Required L2)")}
         ${tierOpt("preferred", "preferred (Preferred L2)")}
         ${tierOpt("advanced", "advanced (Enterprise L2)")}
+        ${tierOpt("deleted", "to delete (hide from checklist)")}
       </select>
       <label>Type 1.1 question (terse — primary if filled)</label>
       <textarea class="cap-edit-question-terse" rows="2" placeholder="(blank = falls back to Type 1 verbose below)">${escapeHtml(editQT || "")}</textarea>
@@ -3408,14 +3445,59 @@ function renderCapEditor(c) {
       <div class="cap-original" style="display:none">
         <div class="cap-original-section">
           <div class="cap-original-label">Pre-override baseline (revert target):</div>
-          <div class="cap-original-name">name: ${escapeHtml(baseName || "")}</div>
-          <div class="cap-original-tier">sme_tier: ${escapeHtml(baseTier || "(none)")}</div>
+          <div class="cap-original-name"><b>Name:</b> ${escapeHtml(baseName || "")}</div>
+          <div class="cap-original-tier"><b>Tier:</b> <span class="cap-original-tier-badge" style="display:inline-block;padding:2px 8px;background:${_capTierStyle((baseTier || '').toLowerCase()).bg};color:${_capTierStyle((baseTier || '').toLowerCase()).fg};border:1px solid ${_capTierStyle((baseTier || '').toLowerCase()).brd};border-radius:3px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em">${escapeHtml(_capTierStyle((baseTier || '').toLowerCase()).label || baseTier || "(none)")}</span></div>
           <div class="cap-original-q"><b>Type 1.1:</b> ${escapeHtml(baseQT || "(none)")}</div>
           <div class="cap-original-q"><b>Type 1:</b> ${escapeHtml(baseQ || "(none)")}</div>
         </div>
       </div>
     </div>
   `;
+}
+
+// Live-update the visible cap row in-place (no full re-render).
+// Reads the current state of localStorage + override + canonical and refreshes:
+//   - cap-name-display (active name)
+//   - cap-question-display (active question — Type 1.1 if present, else Type 1)
+//   - cap-tier-display (badge label + colour)
+//   - cap-pills-display (override / draft / Type 1.1 pills)
+//   - Show original button visibility (since draft/override may now exist)
+function _capLiveUpdateRow(row, c) {
+  const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
+  const local = _capLocalEdit(moduleSlug, c.id);
+  const ovr = c._cap_override;
+  const vq = c.vendor_questions || {};
+
+  // Active values: localStorage > applied override (already in cap) > baseline
+  const activeName = (local && local.name !== undefined) ? local.name : c.name;
+  const activeTier = (local && local.sme_tier !== undefined) ? local.sme_tier : c.sme_tier;
+  const activeQT = (local && local.vendor_question_terse !== undefined)
+    ? local.vendor_question_terse : (vq.question_terse || "");
+  const activeQ = (local && local.vendor_question !== undefined)
+    ? local.vendor_question : (vq.question || "");
+  const primaryQuestion = activeQT || activeQ;
+
+  // Update name
+  const nameEl = row.querySelector(".cap-name-display");
+  if (nameEl) nameEl.textContent = activeName || "";
+
+  // Update tier badge
+  const tierEl = row.querySelector(".cap-tier-display");
+  if (tierEl) {
+    const ts = _capTierStyle((activeTier || "").toLowerCase());
+    tierEl.textContent = ts.label;
+    tierEl.style.background = ts.bg;
+    tierEl.style.color = ts.fg;
+    tierEl.style.borderColor = ts.brd;
+  }
+
+  // Update question (markdown-rendered)
+  const qEl = row.querySelector(".cap-question-display");
+  if (qEl) qEl.innerHTML = renderMarkdownSafe(primaryQuestion || "");
+
+  // Update pills
+  const pillsEl = row.querySelector(".cap-pills-display");
+  if (pillsEl) pillsEl.innerHTML = _capPills(c);
 }
 
 // Pills: override-applied / draft / terse (cap level)
@@ -3630,19 +3712,23 @@ document.addEventListener("click", (e) => {
     }
     console.log("Cap override YAML snippet:\n" + yaml);
     _renderExportDraftsButton();
-    if (typeof renderActiveView === "function") setTimeout(renderActiveView, 100);
+    // Live update visible cap row immediately — no page refresh needed.
+    _capLiveUpdateRow(row, c);
     return;
   }
   if (verb === "clear-local") {
     _capClearLocal(moduleSlug, capId);
     _l2Toast("Draft discarded.", "ok");
     _renderExportDraftsButton();
-    if (typeof renderActiveView === "function") setTimeout(renderActiveView, 100);
+    // Live update — drops draft state from displayed row
+    const c = (DATA.capabilities || []).find(x => x.id === capId);
+    if (c) _capLiveUpdateRow(row, c);
     return;
   }
 });
 
 // Auto-save on input change inside cap editors (debounced).
+// Also live-updates the visible cap row so the user sees their edit immediately.
 let _capAutoSaveTimer;
 document.addEventListener("input", (e) => {
   const editor = e.target.closest(".cap-editor");
@@ -3658,7 +3744,25 @@ document.addEventListener("input", (e) => {
     const edit = _capDiffEdit(row, c);
     _capSaveLocal(moduleSlug, capId, edit);
     _renderExportDraftsButton();
+    _capLiveUpdateRow(row, c);
   }, 300);
+});
+
+// Tier-select change should fire live-update immediately (input event doesn't
+// fire on <select> change in all browsers; change event is more reliable).
+document.addEventListener("change", (e) => {
+  const sel = e.target.closest(".cap-edit-tier");
+  if (!sel) return;
+  const row = sel.closest("[data-cap-row]");
+  if (!row) return;
+  const capId = row.getAttribute("data-cap-id");
+  const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
+  const c = (DATA.capabilities || []).find(x => x.id === capId);
+  if (!c) return;
+  const edit = _capDiffEdit(row, c);
+  _capSaveLocal(moduleSlug, capId, edit);
+  _renderExportDraftsButton();
+  _capLiveUpdateRow(row, c);
 });
 
 // On DOM ready: auto-clear matching drafts + show floating export button.
@@ -3736,13 +3840,8 @@ function renderFinalChecklist() {
     </div>
   `;
 
-  // Tier label + chip styling
-  const tierStyle = (t) => {
-    if (t === "required") return {label: "Mandatory", bg: "#fef3c7", fg: "#92400e", brd: "#fcd34d"};
-    if (t === "preferred") return {label: "Preferred", bg: "#e0f2fe", fg: "#075985", brd: "#7dd3fc"};
-    if (t === "advanced") return {label: "Enterprise / advanced", bg: "#f3e8ff", fg: "#6b21a8", brd: "#d8b4fe"};
-    return {label: t, bg: "#f1f5f9", fg: "#334155", brd: "#cbd5e1"};
-  };
+  // Tier label + chip styling (delegate to module-scoped helper).
+  const tierStyle = _capTierStyle;
 
   // Sub-module section header — thin rule + uppercase muted label.
   // Subtle by design: same body font-size, letter-spaced, no card/box.
@@ -3832,12 +3931,12 @@ function renderFinalChecklist() {
         <div style="display:flex;gap:16px">
           <div style="flex:0 0 70px;font-size:11px;color:#64748b;font-weight:600;font-family:ui-monospace,SFMono-Regular,monospace">${escapeHtml(idStr)}</div>
           <div style="flex:1">
-            <div style="font-size:14px;font-weight:600;color:#0f172a;margin-bottom:3px">${escapeHtml(activeName)}${sectorPill}${implicitPill}${supplyGapPill} ${editPills}</div>
-            <div style="font-size:13px;color:#1e293b;line-height:1.55">${escapeHtml(primaryQuestion || "")}${benefitInline}</div>
+            <div class="cap-name-row" style="font-size:14px;font-weight:600;color:#0f172a;margin-bottom:3px"><span class="cap-name-display">${escapeHtml(activeName)}</span>${sectorPill}${implicitPill}${supplyGapPill} <span class="cap-pills-display">${editPills}</span></div>
+            <div class="cap-question-display" style="font-size:13px;color:#1e293b;line-height:1.55">${renderMarkdownSafe(primaryQuestion || "")}${benefitInline}</div>
             <div style="font-size:10px;color:#94a3b8;margin-top:4px;text-transform:uppercase;letter-spacing:0.04em">L1: ${escapeHtml(fam)}</div>
           </div>
           <div style="flex:0 0 200px;font-size:10px;text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:4px">
-            <span style="display:inline-block;padding:3px 9px;background:${ts.bg};color:${ts.fg};border:1px solid ${ts.brd};border-radius:3px;font-weight:600;text-transform:uppercase;letter-spacing:0.03em">${escapeHtml(ts.label)}</span>
+            <span class="cap-tier-display" style="display:inline-block;padding:3px 9px;background:${ts.bg};color:${ts.fg};border:1px solid ${ts.brd};border-radius:3px;font-weight:600;text-transform:uppercase;letter-spacing:0.03em">${escapeHtml(ts.label)}</span>
             <div style="display:flex;gap:4px">
               ${showOriginalBtn}
               <button class="cap-edit-btn" data-cap-action="edit" data-cap-id="${escapeHtml(c.id)}">Edit</button>
