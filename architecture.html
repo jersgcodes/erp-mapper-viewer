@@ -186,7 +186,7 @@
     <a class="top-bar-link" href="stakeholders.html">Stakeholders</a>
     <a class="top-bar-link" href="vendor_coverage.html">Coverage</a>
     <a class="top-bar-link" href="integrations.html">Integrations</a>
-    <details class="top-bar-dropdown active"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="active" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="flow_review.html">Flow Proposals<span class="sub">Baseline L0 + L1 intra-module + L2 inter-module proposals awaiting review</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="methodology.html">Methodology (legacy)<span class="sub">Replaced by Stakeholders view</span></a><a class="" href="gap_analysis.html">Gaps (legacy)<span class="sub">Replaced by Stakeholders → Sol-cat fulfilment matrix</span></a><a class="" href="use_cases.html">Use Cases (legacy)<span class="sub">UC concept retired; flows are the replacement</span></a></div></details>
+    <details class="top-bar-dropdown active"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="active" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="stress_test.html">Stress Test<span class="sub">Solution + checklist stress-test with role-based verdict + coverage fingerprint diagram</span></a><a class="" href="inspection_log.html">Inspection Log<span class="sub">Per-item change log: caps, sub-modules, L2 questions — git-derived add/last-modified dates</span></a></div></details>
   </div>
   <div class="top-bar-inner top-bar-row2">
     <span class="top-bar-row-label">Modules</span>
@@ -360,7 +360,8 @@
 <tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>scripts/audit_imda_q_cap_coverage.py</code></td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>Surfaces orphan + undermapped IMDA Qs</td></tr>
 <tr><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'><code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>scripts/build_architecture_viewer.py</code></td><td style='border:1px solid #cbd5e1;padding:6px 12px;text-align:left'>Renders this file as <code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>output/architecture.html</code></td></tr>
 </table>
-<h2 style='margin:32px 0 10px;font-size:22px;color:#0f172a'>Run order (operator-level)</h2><pre style='background:#f1f5f9;border:1px solid #cbd5e1;border-radius:4px;padding:10px 14px;font-size:12px;overflow:auto;line-height:1.5'><code># Per module (×10)
+<h2 style='margin:32px 0 10px;font-size:22px;color:#0f172a'>Run order (operator-level)</h2><p style='margin:8px 0;line-height:1.6'>&gt; Loops marked <code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>xargs -P 4</code> are safe to run in parallel (independent reads, per-output writes). Drop <code style='background:#f1f5f9;padding:1px 5px;border-radius:3px;font-size:90%'>-P 4</code> if running on a low-RAM host.</p>
+<pre style='background:#f1f5f9;border:1px solid #cbd5e1;border-radius:4px;padding:10px 14px;font-size:12px;overflow:auto;line-height:1.5'><code># Per module (×10)
 python3 -m pipeline.canonicalise &lt;module_slug&gt;
 
 # Workspace-level (after all modules)
@@ -368,14 +369,10 @@ python3 scripts/derive_solcat_modules.py
 python3 scripts/build_solcat_sub_module_join.py
 python3 -m pipeline.steps.step13_l2_questions_sync
 python3 scripts/audit_l2_question_consistency.py  # gate: P0=0
-for sc in $(ls output/solcat_to_checklist_gap_*.json | sed 's|.*gap_||;s|\.json||'); do
-  python3 scripts/analyse_solcat_to_checklist_gap.py "$sc"
-done
+ls output/solcat_to_checklist_gap_*.json | sed 's|.*gap_||;s|\.json||' | xargs -n1 -P 4 -I{} python3 scripts/analyse_solcat_to_checklist_gap.py {}
 
 # Viewers
-for slug in $(ls data/proxy/*.yaml | xargs -n1 basename | sed 's/.yaml//'); do
-  python3 scripts/build_canonical_viewer.py $slug
-done
+ls data/proxy/*.yaml | xargs -n1 basename | sed 's/.yaml//' | xargs -n1 -P 4 -I{} python3 scripts/build_canonical_viewer.py {}
 python3 scripts/build_stakeholders_viewer.py
 python3 scripts/build_vendor_coverage_viewer.py
 python3 scripts/build_index_viewer.py
