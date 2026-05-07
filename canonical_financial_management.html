@@ -3360,7 +3360,15 @@ function _capYamlSnippet(mod, capId, edit) {
   }
   lines.push(`  author: human-review`);
   lines.push(`  edited_at: '${today}'`);
-  lines.push(`  note: ''  # please fill in why this override is needed`);
+  // Note field — use the user's typed note when present, else placeholder.
+  const noteValue = (edit.note !== undefined && String(edit.note || "").length > 0)
+    ? edit.note
+    : null;
+  if (noteValue !== null) {
+    lines.push(`  note: ${_yamlScalar(noteValue, 2)}`);
+  } else {
+    lines.push(`  note: ''  # please fill in why this override is needed`);
+  }
   return lines.join("\n") + "\n";
 }
 
@@ -3374,6 +3382,8 @@ function _capDiffEdit(card, capData) {
   const newTier = card.querySelector(".cap-edit-tier").value;
   const newQ = card.querySelector(".cap-edit-question").value.trim();
   const newQT = card.querySelector(".cap-edit-question-terse").value.trim();
+  const noteEl = card.querySelector(".cap-edit-note");
+  const newNote = noteEl ? noteEl.value.trim() : "";
 
   // Resolve the BASELINE (pre-override) values
   const ovr = c._cap_override;
@@ -3390,6 +3400,9 @@ function _capDiffEdit(card, capData) {
   if (newTier !== (baseTier || "")) out.sme_tier = newTier;
   if (newQ !== (baseQ || "")) out.vendor_question = newQ;
   if (newQT !== (baseQT || "")) out.vendor_question_terse = newQT;
+  // Note has no baseline — any non-empty value is captured. Empty note is
+  // omitted (so saving with no note doesn't trigger a "draft" state by note alone).
+  if (newNote.length > 0) out.note = newNote;
   return out;
 }
 
@@ -3412,6 +3425,10 @@ function renderCapEditor(c) {
   const editTier = (local && local.sme_tier !== undefined) ? local.sme_tier : (c.sme_tier || "");
   const editQ = (local && local.vendor_question !== undefined) ? local.vendor_question : (vq.question || "");
   const editQT = (local && local.vendor_question_terse !== undefined) ? local.vendor_question_terse : (vq.question_terse || "");
+  // Note has no canonical baseline — comes only from local edits or applied override.
+  const editNote = (local && local.note !== undefined)
+    ? local.note
+    : ((ovr && ovr.note) ? ovr.note : "");
 
   const tierOpt = (val, label) =>
     `<option value="${val}" ${val === editTier ? "selected" : ""}>${label}</option>`;
@@ -3433,6 +3450,8 @@ function renderCapEditor(c) {
       <textarea class="cap-edit-question-terse" rows="2" placeholder="(blank = falls back to Type 1 verbose below)">${escapeHtml(editQT || "")}</textarea>
       <label>Type 1 question (verbose — fallback / revert target)</label>
       <textarea class="cap-edit-question" rows="3">${escapeHtml(editQ || "")}</textarea>
+      <label>Note (why this override is needed — captured in YAML)</label>
+      <textarea class="cap-edit-note" rows="2" placeholder="e.g. 'Demoted to Preferred — many SMEs handle expenses outside ERP'">${escapeHtml(editNote || "")}</textarea>
       <div class="cap-editor-actions">
         <button class="cap-save-btn" data-cap-action="save" data-cap-id="${escapeHtml(c.id)}">Save → clipboard</button>
         <button class="cap-cancel-btn" data-cap-action="cancel" data-cap-id="${escapeHtml(c.id)}">Cancel</button>
@@ -3807,15 +3826,28 @@ function renderFinalChecklist() {
     }
   }
 
-  // Filter by tier (3-tier + req_pref + all)
+  // Resolve the active tier for a cap — local edit (localStorage) wins over
+  // canonical. This ensures "to delete" + tier shifts hide/show caps
+  // immediately, before the override is committed to YAML.
+  const _activeTierFor = (c) => {
+    const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
+    const local = _capLocalEdit(moduleSlug, c.id);
+    if (local && local.sme_tier !== undefined) return local.sme_tier;
+    return c.sme_tier;
+  };
+
+  // Filter by tier (3-tier + req_pref + all). Caps marked "deleted" via the
+  // edit overlay don't match any filter — they vanish from the view.
   const tierMatch = (c) => {
+    const t = _activeTierFor(c);
+    if (t === "deleted") return false;
     if (tier === "all") {
-      return c.sme_tier === "required" || c.sme_tier === "preferred" || c.sme_tier === "advanced";
+      return t === "required" || t === "preferred" || t === "advanced";
     }
     if (tier === "req_pref") {
-      return c.sme_tier === "required" || c.sme_tier === "preferred";
+      return t === "required" || t === "preferred";
     }
-    return c.sme_tier === tier;
+    return t === tier;
   };
 
   const tierCounts = {
@@ -3901,7 +3933,6 @@ function renderFinalChecklist() {
     // 2026-04-29: appended closing-benefit clause REMOVED.
     // R7-failing caps are now a step-6 generation issue, not render-time.
     const benefitInline = "";
-    const ts = tierStyle(c.sme_tier);
     const sectorPill = renderSectorPill(c);
     const implicitPill = c.assumed_essential ? `<span class="fc-implicit-pill" title="IMDA Q text rarely asks directly about this cap, but every buyer needs it. Realistic % is the better fulfilment signal than direct trace count." style="display:inline-block;padding:2px 7px;background:#f1f5f9;color:#475569;border:1px solid #cbd5e1;border-radius:10px;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.03em;margin-left:6px">implicit</span>` : "";
     const supplyGapPill = c.psg_supply_gap ? `<span class="fc-supply-gap-pill" title="ERP essential per mainstream ERPs but no PSG sol cat covers this cap via IMDA Q text. Existing PSG vendors may or may not fulfil — recommend reviewing PSG sol cat checklist coverage." style="display:inline-block;padding:2px 7px;background:#fee2e2;color:#991b1b;border:1px solid #fca5a5;border-radius:10px;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.03em;margin-left:6px">PSG gap</span>` : "";
@@ -3911,15 +3942,19 @@ function renderFinalChecklist() {
     const local = _capLocalEdit(moduleSlug, c.id);
     const ovr = c._cap_override;
     const editPills = _capPills(c);
-    // Active question precedence (highest to lowest):
-    //   localStorage draft → applied override (already in vq) → vq.question_terse → vq.question
+    // Active value precedence (highest to lowest):
+    //   localStorage draft → applied override (already in c) → canonical baseline
     const activeName = (local && local.name !== undefined) ? local.name : c.name;
+    const activeTier = (local && local.sme_tier !== undefined) ? local.sme_tier : c.sme_tier;
     const activeQT = (local && local.vendor_question_terse !== undefined)
       ? local.vendor_question_terse : (vq.question_terse || "");
     const activeQ = (local && local.vendor_question !== undefined)
       ? local.vendor_question : (vq.question || "");
     const primaryQuestion = activeQT || activeQ;
     const hasTerse = !!activeQT;
+    // Tier badge reflects the ACTIVE tier (so "to delete" + tier shifts show
+    // immediately without waiting for step16 → canonical refresh).
+    const ts = tierStyle((activeTier || "").toLowerCase());
     const hasOriginal = ovr || local;
     const showOriginalBtn = hasOriginal
       ? `<button class="cap-toggle-original" data-cap-action="toggle-original" data-cap-id="${escapeHtml(c.id)}">Show original</button>` : "";
@@ -4038,6 +4073,57 @@ function renderFinalChecklist() {
     </div>
   `;
 
+  // Compliance baseline section — CEM / PDPA / VA-PT (verbatim IMDA Q text)
+  // Always-mandatory; rendered after Digital cross-cutting, before AI Features.
+  // Reads output/compliance_baseline.json::groups (loaded into DATA.compliance_baseline).
+  const compliance = DATA.compliance_baseline;
+  let complianceCounter = 1;
+  const complianceRowsHtml = (compliance && compliance.groups || []).map(g => {
+    const items = g.checklist || [];
+    if (items.length === 0) return "";
+    const itemRows = items.map(item => {
+      const idStr = `${moduleId}.C${complianceCounter}`;
+      complianceCounter++;
+      // Verbatim IMDA Q text — pick the first source ref (most-cited).
+      const verbatim = (item.source_refs && item.source_refs[0] && item.source_refs[0].text) || "";
+      const verbatimQTitle = (item.source_refs && item.source_refs[0] && item.source_refs[0].question_title) || g.name || "";
+      // Primary: verbatim IMDA wording. Fallback: our synthesized text.
+      const primary = verbatim || item.text || "";
+      const synthesized = item.text || "";
+      const showSynth = (verbatim && synthesized && verbatim !== synthesized);
+      return `
+        <div class="fc-row" style="padding:12px 14px;border-bottom:1px solid #e2e8f0;background:#fff">
+          <div style="display:flex;gap:16px">
+            <div style="flex:0 0 70px;font-size:11px;color:#64748b;font-weight:600;font-family:ui-monospace,SFMono-Regular,monospace">${escapeHtml(idStr)}</div>
+            <div style="flex:1">
+              <div style="font-size:14px;font-weight:600;color:#0f172a;margin-bottom:3px">${escapeHtml(verbatimQTitle)} <span class="cap-type-pill cap-type-1" title="Verbatim IMDA sol-cat Q text">IMDA VERBATIM</span></div>
+              <div style="font-size:13px;color:#1e293b;line-height:1.55">${renderMarkdownSafe(primary)}</div>
+              ${showSynth ? `<details style="margin-top:6px"><summary style="font-size:10px;color:#94a3b8;cursor:pointer">Show our consolidated phrasing</summary><div style="font-size:12px;color:#475569;margin-top:4px;font-style:italic">${escapeHtml(synthesized)}</div></details>` : ""}
+              <div style="font-size:10px;color:#94a3b8;margin-top:4px;text-transform:uppercase;letter-spacing:0.04em">L1: Compliance baseline · ${escapeHtml(g.short || g.name || g.id)}</div>
+            </div>
+            <div style="flex:0 0 200px;font-size:10px;text-align:right">
+              <span style="display:inline-block;padding:3px 9px;background:#fef3c7;color:#92400e;border:1px solid #fcd34d;border-radius:3px;font-weight:600;text-transform:uppercase;letter-spacing:0.03em">Mandatory</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join("");
+    return `
+      <div style="padding:8px 14px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:11px;color:#475569;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">
+        ${escapeHtml(g.name || g.id)} <span style="font-weight:400;color:#94a3b8;text-transform:none;letter-spacing:0">— ${escapeHtml(g.description || "")}</span>
+      </div>
+      ${itemRows}
+    `;
+  }).filter(s => s).join("");
+  const complianceSectionHtml = !complianceRowsHtml ? "" : `
+    <div style="margin-top:18px">
+      <div style="font-size:11px;color:#64748b;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px">
+        Compliance baseline (CEM / PDPA / VA-PT — verbatim IMDA wording)
+      </div>
+      <div style="background:#fff;border:1px solid #e2e8f0;border-radius:6px;overflow:hidden">${complianceRowsHtml}</div>
+    </div>
+  `;
+
   // AI Features tail (always shown, ignores tier filter)
   const aif = DATA.ai_features;
   const aiFeaturesHtml = (aif && aif.question) ? `
@@ -4065,7 +4151,7 @@ function renderFinalChecklist() {
     <div style="background:#fff;border:1px solid #e2e8f0;border-radius:6px;overflow:hidden">${rowsHtml}</div>
   `;
 
-  return headerHtml + moduleRowsBlock + digitalSectionHtml + aiFeaturesHtml;
+  return headerHtml + moduleRowsBlock + digitalSectionHtml + complianceSectionHtml + aiFeaturesHtml;
 }
 
 
