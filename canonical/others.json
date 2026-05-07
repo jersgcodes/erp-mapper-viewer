@@ -17845,15 +17845,16 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "in_checklist"
         ],
         "original": {
-          "sme_tier": "required"
+          "in_checklist": null
         },
         "author": "human-review",
         "edited_at": "2026-05-07",
-        "note": "Shifted from required → preferred (display-only via override). Hidden in 'Under review' accordion in cross-cutting section to revisit whether data security baseline should be considered required for every module. Pair with other.user_access_roles.\n"
-      }
+        "note": "Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. User intent: not a baseline gate; revisit later. Pair with other.user_access_roles.\n"
+      },
+      "in_checklist": false
     },
     {
       "id": "other.user_access_roles",
@@ -18770,15 +18771,16 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "in_checklist"
         ],
         "original": {
-          "sme_tier": "required"
+          "in_checklist": null
         },
         "author": "human-review",
         "edited_at": "2026-05-07",
-        "note": "Shifted from required → preferred (display-only via override). Hidden in 'Under review' accordion in cross-cutting section to revisit whether user account / RBAC baseline should be considered required for every module. Pair with other.data_governance.\n"
-      }
+        "note": "Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. User intent: not a baseline gate; revisit later. Pair with other.data_governance.\n"
+      },
+      "in_checklist": false
     },
     {
       "id": "other.integration_import_export",
@@ -20001,7 +20003,7 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-07T18:58:09.530979+08:00",
-    "step16_applied_count": 0
+    "step16_applied_at": "2026-05-07T21:10:00.979991+08:00",
+    "step16_applied_count": 2
   }
 }

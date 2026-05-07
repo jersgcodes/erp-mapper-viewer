@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Meeting Summary — ERP Mapper</title>
+<script src="https://cdn.jsdelivr.net/npm/marked@11/marked.min.js"></script>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         margin: 0; background: #f8fafc; color: #0f172a; font-size: 14px; }
+  .container { max-width: 980px; margin: 0 auto; padding: 24px; }
+  h1 { margin: 0 0 4px; font-size: 22px; color: #0f172a; }
+  .lede { font-size: 13px; color: #64748b; margin-bottom: 22px; }
+  .ms-section {
+    background: #fff; border: 1px solid #e2e8f0; border-radius: 6px;
+    padding: 18px 22px; margin-bottom: 14px;
+  }
+  .ms-section h2 {
+    margin: 0 0 12px; font-size: 15.5px; color: #0f172a; padding-bottom: 8px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .ms-section .body p { margin: 0 0 10px; line-height: 1.6; }
+  .ms-section .body ul { margin: 8px 0; padding-left: 22px; }
+  .ms-section .body li { margin-bottom: 4px; line-height: 1.55; }
+  .ms-section .body table {
+    width: 100%; border-collapse: collapse; font-size: 12px; margin: 10px 0;
+  }
+  .ms-section .body th, .ms-section .body td {
+    padding: 6px 10px; border: 1px solid #e2e8f0; text-align: left;
+  }
+  .ms-section .body th { background: #f8fafc; font-weight: 600; }
+  .ms-section .body code {
+    background: #f1f5f9; padding: 1px 5px; border-radius: 3px; font-size: 12px;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+  }
+  .ms-section .body strong { color: #0f172a; }
+</style>
+</head>
+<body>
+<style>
+  .top-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e5ea;
+    padding: 0 24px;
+    flex-shrink: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .top-bar-inner {
+    display: flex;
+    align-items: stretch;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 2px;
+  }
+  .top-bar-brand {
+    font-size: 12px;
+    color: #6b7380;
+    padding: 14px 18px 14px 0;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-right: 1px solid #e2e5ea;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .top-bar-link:hover {
+    color: #2563eb;
+    background: #f5f6f8;
+  }
+  .top-bar-link.active {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  /* Two-row nav (2026-04-29): row 1 = analysis tools, row 2 = modules. */
+  .top-bar.two-row .top-bar-row1 {
+    border-bottom: 1px solid #f1f3f6;
+  }
+  .top-bar.two-row .top-bar-row2 {
+    background: #fafbfc;
+  }
+  .top-bar.two-row .top-bar-row2 .top-bar-link {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .top-bar-row-label {
+    font-size: 10px;
+    color: #6b7380;
+    padding: 9px 14px 9px 0;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    align-self: center;
+    border-right: 1px solid #e8ebef;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-dropdown { position: relative; display: inline-flex; }
+  .top-bar-dropdown summary {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 14px 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    user-select: none;
+  }
+  .top-bar-dropdown summary::-webkit-details-marker { display: none; }
+  .top-bar-dropdown summary::after {
+    content: "";
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #6b7380;
+    margin-left: 7px;
+    transition: transform 0.12s;
+  }
+  .top-bar-dropdown[open] summary::after { transform: rotate(180deg); }
+  .top-bar-dropdown summary:hover { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown[open] summary { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown.active summary {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  .top-bar-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: -1px;
+    background: #ffffff;
+    border: 1px solid #e2e5ea;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    padding: 6px;
+    min-width: 220px;
+    z-index: 110;
+  }
+  .top-bar-dropdown-menu a {
+    display: block;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-radius: 4px;
+    line-height: 1.35;
+  }
+  .top-bar-dropdown-menu a:hover { background: #f1f5f9; color: #2563eb; }
+  .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
+  .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
+</style>
+<nav class="top-bar two-row">
+  <div class="top-bar-inner top-bar-row1">
+    <span class="top-bar-brand">PSG ERP Spec</span>
+    <a class="top-bar-link" href="index.html">Overview</a>
+    <a class="top-bar-link active" href="meeting_summary.html">Meeting Summary</a>
+    <a class="top-bar-link" href="stakeholders.html">Stakeholders</a>
+    <a class="top-bar-link" href="vendor_coverage.html">Coverage</a>
+    <a class="top-bar-link" href="coverage_analysis.html">Coverage Analysis</a>
+    <a class="top-bar-link" href="integrations.html">Integrations</a>
+    <details class="top-bar-dropdown"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="stress_test.html">Stress Test<span class="sub">Solution + checklist stress-test with role-based verdict + coverage fingerprint diagram</span></a><a class="" href="inspection_log.html">Inspection Log<span class="sub">Per-item change log: caps, sub-modules, L2 questions — git-derived add/last-modified dates</span></a></div></details>
+  </div>
+  <div class="top-bar-inner top-bar-row2">
+    <span class="top-bar-row-label">Modules</span>
+    <a class="top-bar-link" href="canonical_financial_management.html">Financial</a>
+    <a class="top-bar-link" href="canonical_human_resources_management.html">HR</a>
+    <a class="top-bar-link" href="canonical_sales_and_crm.html">Sales & CRM</a>
+    <a class="top-bar-link" href="canonical_supply_chain_and_inventory.html">Supply Chain</a>
+    <a class="top-bar-link" href="canonical_project_management.html">Project Mgmt</a>
+    <a class="top-bar-link" href="canonical_asset_management.html">Asset Mgmt</a>
+    <a class="top-bar-link" href="canonical_manufacturing_management.html">Manufacturing</a>
+    <a class="top-bar-link" href="canonical_field_service_management.html">Field Service</a>
+    <a class="top-bar-link" href="canonical_fleet_management.html">Fleet</a>
+    <a class="top-bar-link" href="canonical_others.html">Other</a>
+  </div>
+</nav>
+<div class="container">
+  <h1>Meeting Summary</h1>
+  <div class="lede">Quick-view of locked rules, recent edits, and open decisions for the next stakeholder meeting. Hand-edit <code>scripts/build_meeting_summary_viewer.py::SECTIONS</code> to update.</div>
+  <div id="sections"></div>
+</div>
+<script>
+const SECTIONS = [{"title":"1. Module checklist baseline — locked rules","body_md":"\n**Pass criterion** (locked 2026-05-07): A sol cat / vendor passes a module iff\n**every Required-bearing sub-module passes** (all Required caps covered yes/partial).\n\n* Sub-modules with no Required caps don't gate the module.\n* Tier filter affects rendering only — pass criterion always anchors on Required.\n* Verdicts: PASS / PARTIAL / FAIL / N/A — consistent across stakeholders, vendor_coverage,\n  and coverage_analysis viewers.\n\n**Type 2 (lumped) checklist** is now the IMDA shared-example format, accessible as a\nsub-tab in every canonical viewer's FINAL view. Required = single yes/no umbrella;\nPreferred = multi-select per cluster; Advanced hidden by default.\n"},{"title":"2. Module ordering","body_md":"\nPriority modules now sit 100–400 in checklist row IDs:\n\n| ID  | Module |\n|-----|---|\n| 100 | Financial Management |\n| 200 | Sales & CRM |\n| 300 | Supply Chain & Inventory |\n| 400 | Human Resources Management |\n| 500 | Manufacturing |\n| 600 | Asset Management |\n| 700 | Field Service Management |\n| 800 | Fleet Management |\n| 900 | Project Management |\n| 1000 | Others (cross-cutting) |\n"},{"title":"3. Recent cap-tier edits (review)","body_md":"\n*(Auto-populated from `data/manual_cap_overrides.yaml`. Edit the source to update.)*\n\n\n**3 cap-level overrides** in `data/manual_cap_overrides.yaml`:\n\n| Date | Cap | Module | Fields | Note (truncated) |\n|---|---|---|---|---|\n| 2026-05-07 | `other.data_governance` | others | sme_tier, in_checklist | Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. User inte |\n| 2026-05-07 | `other.user_access_roles` | others | sme_tier, in_checklist | Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. User inte |\n| 2026-05-07 | `sc.delivery_dispatch` | supply_chain_and_inventory | sme_tier | Demoted required → preferred. Not universal across sectors — service businesses don't dispatch goods. Sector applicability lens (Branch L) w |"},{"title":"4. Open decisions","body_md":"\n*(Hand-edit `scripts/build_meeting_summary_viewer.py::SECTIONS` to populate.\nReviewers can also make edits in the canonical viewer's cap editor — those\nflow through to data/manual_cap_overrides.yaml on YAML paste.)*\n\n- [ ] Multi-core analysis: which modules need per-sub-module Mandatory umbrellas (Manufacturing already locked; HR candidate flagged).\n- [ ] Sector applicability lens — pending Branch L\n- [ ] AI features expansion — Haiku draft 5–8 more candidates per module pending\n"},{"title":"5. Cross-cutting demotions (under review)","body_md":"\n- `other.data_governance` — was Required; demoted to **Preferred + out of checklist**.\n  Rationale: not all SMEs need a formal data-governance baseline — many rely on\n  cloud-vendor defaults (encryption-at-rest, role-based access via SaaS provider).\n- `other.user_access_roles` — same treatment. Listed in Optional / Add-ons; user\n  decides whether to fold back in via the canonical viewer cap editor.\n- `sc.delivery_dispatch` — was Required for SC; demoted to **Preferred**. Rationale:\n  service businesses (consultancies, SaaS) don't dispatch goods; demote so the\n  Required gate doesn't unfairly block them.\n"},{"title":"6. Pre-approval form features","body_md":"\n- **Compliance baseline (Q23–Q31)** — verbatim IMDA pre-approval form. Embedded inline\n  in both Type 1.1 and Type 2 sub-tabs.\n- **AI Features** — multi-select checkboxes + \"Others — please define\" textbox.\n- **Multi-select state** — saved in browser localStorage per cap. (Will need a\n  proper backend if we want cross-device persistence.)\n"},{"title":"7. Edit affordance for reviewers","body_md":"\nEvery cap row in the FINAL view has an **Edit** button (Type 1.1 view). Reviewers can:\n- Change Mandatory / Preferred / Advanced tier\n- Toggle \"Include in checklist\" (sets `in_checklist: false` → Optional / Add-ons tail)\n- Edit Type 1.1 question wording, Type 1 verbose, name, description, note\n- Save → YAML snippet copied to clipboard → paste into `data/manual_cap_overrides.yaml`\n\nDrafts auto-save to localStorage between page loads; \"Export N drafts\" floating button\nexports all unsaved edits in one batch.\n"}];
+function escapeHtml(s) {
+  return String(s ?? "").replace(/[&<>"']/g, c => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+}
+function renderMd(text) {
+  if (window.marked && window.marked.parse) {
+    try { return window.marked.parse(String(text), { breaks: true, gfm: true }); }
+    catch (_) { /* fall-through */ }
+  }
+  return escapeHtml(text).replace(/\n/g, "<br>");
+}
+const target = document.getElementById("sections");
+target.innerHTML = SECTIONS.map(s => `
+  <div class="ms-section">
+    <h2>${escapeHtml(s.title)}</h2>
+    <div class="body">${renderMd(s.body_md)}</div>
+  </div>
+`).join("");
+</script>
+</body>
+</html>
