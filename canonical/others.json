@@ -16602,7 +16602,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "ms_365",
         "odoo_platform",
@@ -17842,6 +17842,17 @@
             "reason": "Supplier data, customer information, transaction security required"
           }
         }
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "sme_tier"
+        ],
+        "original": {
+          "sme_tier": "required"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-07",
+        "note": "Shifted from required → preferred (display-only via override). Hidden in 'Under review' accordion in cross-cutting section to revisit whether data security baseline should be considered required for every module. Pair with other.user_access_roles.\n"
       }
     },
     {
@@ -17854,7 +17865,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "ms_365",
         "odoo_platform",
@@ -18756,6 +18767,17 @@
             "reason": "Sales and warehouse staff need controlled access to inventory and orders"
           }
         }
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "sme_tier"
+        ],
+        "original": {
+          "sme_tier": "required"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-07",
+        "note": "Shifted from required → preferred (display-only via override). Hidden in 'Under review' accordion in cross-cutting section to revisit whether user account / RBAC baseline should be considered required for every module. Pair with other.data_governance.\n"
       }
     },
     {
@@ -19977,5 +19999,9 @@
       "narrative": "This family lets you tailor the ERP to your unique business without hiring developers, connect it to your existing tools, and manage data quality across the system. SMEs need this flexibility to grow without being locked into rigid processes or expensive custom coding. A multi-branch retailer running separate P&Ls from one system; a firm integrating its ERP with a third-party logistics platform via API.",
       "sme_tier": "standard"
     }
+  },
+  "_meta": {
+    "step16_applied_at": "2026-05-07T15:38:14.723858+08:00",
+    "step16_applied_count": 2
   }
 }
