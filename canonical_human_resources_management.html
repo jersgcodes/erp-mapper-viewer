@@ -1387,6 +1387,106 @@
   .l2-tier-x { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
   .l2-question { color: #1e293b; line-height: 1.5; padding: 2px 0; }
 
+  /* ===== Sub-tab: Type 1.1 / Type 2 / Change log ===== */
+  .cl-fmt-btn {
+    padding: 5px 14px; font-size: 12px; font-weight: 500;
+    background: #fff; border: 1px solid #cbd5e1; color: #1e293b;
+    cursor: pointer; user-select: none;
+  }
+  .cl-fmt-btn:first-of-type { border-radius: 4px 0 0 4px; }
+  .cl-fmt-btn:last-of-type { border-radius: 0 4px 4px 0; border-left: none; }
+  .cl-fmt-btn:not(:first-of-type):not(:last-of-type) { border-left: none; }
+  .cl-fmt-btn:hover { background: #f1f5f9; }
+  .cl-fmt-btn.active { background: #0284c7; color: #fff; border-color: #0284c7; font-weight: 600; }
+
+  /* ===== Type 2 (lumped) renderer ===== */
+  .t2-umbrella {
+    background: #fff; border: 1px solid #cbd5e1; border-radius: 6px;
+    padding: 16px 18px; margin-bottom: 14px;
+  }
+  .t2-required { border-left: 4px solid #d97706; background: #fefce8; }
+  .t2-preferred { border-left: 4px solid #0284c7; background: #f0f9ff; }
+  .t2-advanced { border-left: 4px solid #7c3aed; background: #faf5ff; }
+  .t2-row-head {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 10px; flex-wrap: wrap;
+  }
+  .t2-row-id {
+    font-family: ui-monospace, SFMono-Regular, monospace; font-size: 11px;
+    font-weight: 600; color: #64748b;
+  }
+  .t2-row-title { font-size: 15px; font-weight: 700; color: #0f172a; flex: 1; }
+  .t2-row-tier {
+    padding: 3px 10px; border-radius: 3px; font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .t2-tier-mandatory { background: #d97706; color: #fff; }
+  .t2-tier-preferred { background: #0284c7; color: #fff; }
+  .t2-tier-advanced { background: #7c3aed; color: #fff; }
+  .t2-umbrella-q {
+    font-size: 13px; color: #1e293b; line-height: 1.55; margin-bottom: 12px;
+    font-style: italic;
+  }
+  .t2-bullet-list {
+    list-style: none; padding-left: 0; margin: 0 0 10px;
+    counter-reset: t2-bullet;
+  }
+  .t2-bullet {
+    padding: 6px 0; border-top: 1px solid #f1f5f9; line-height: 1.5;
+    counter-increment: t2-bullet;
+  }
+  .t2-bullet:first-child { border-top: 0; }
+  .t2-bullet::before {
+    content: counter(t2-bullet) ") ";
+    color: #64748b; font-weight: 600; margin-right: 4px;
+  }
+  .t2-bullet-multi::before { content: ""; }
+  .t2-bullet-id {
+    font-family: ui-monospace, SFMono-Regular, monospace; font-size: 10px;
+    color: #94a3b8; margin-right: 8px;
+  }
+  .t2-bullet-name { font-weight: 600; color: #0f172a; }
+  .t2-bullet-em-dash { color: #94a3b8; }
+  .t2-bullet-desc { color: #334155; }
+  .t2-row-answer {
+    margin-top: 8px; padding-top: 10px; border-top: 1px solid #e2e8f0;
+    font-size: 13px; color: #475569; font-weight: 500;
+  }
+  .t2-radio {
+    display: inline-block; width: 14px; height: 14px; border: 2px solid #94a3b8;
+    border-radius: 50%; vertical-align: middle; margin-right: 4px;
+  }
+  .t2-checkbox-label {
+    display: flex; align-items: flex-start; gap: 8px; cursor: pointer;
+    user-select: none;
+  }
+  .t2-checkbox {
+    margin-top: 2px; width: 14px; height: 14px; cursor: pointer;
+    accent-color: #0284c7;
+  }
+  .t2-others-row {
+    margin-top: 10px; padding-top: 10px; border-top: 1px solid #e2e8f0;
+  }
+  .t2-others-textarea {
+    width: 100%; margin-top: 6px; padding: 8px; border: 1px solid #cbd5e1;
+    border-radius: 4px; font-size: 12px; font-family: inherit; resize: vertical;
+    min-height: 40px; box-sizing: border-box;
+  }
+  .t2-optional-tail {
+    margin-top: 14px; background: #fff; border: 1px dashed #cbd5e1; border-radius: 6px;
+  }
+  .t2-optional-tail summary {
+    cursor: pointer; padding: 12px 16px; font-size: 12px; font-weight: 600;
+    color: #475569; text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .t2-optional-tail summary:hover { background: #f8fafc; }
+  .t2-optional-tail[open] summary { background: #f8fafc; border-bottom: 1px solid #e2e8f0; }
+  .t2-compliance-hint {
+    margin-top: 14px; padding: 12px 16px; background: #f1f5f9; border: 1px solid #cbd5e1;
+    border-radius: 6px; font-size: 12px; color: #475569;
+  }
+  .t2-compliance-hint code { background: #fff; padding: 1px 4px; border-radius: 2px; }
+  .t2-compliance-hint em { color: #0284c7; }
+
   /* ===== Cap-level Type 1/1.1 type tag ===== */
   .cap-type-pill {
     display: inline-block;
@@ -1726,6 +1826,7 @@ const state = {
   methodOpen: false,
   tierFilter: "all", // all | required | preferred
   overviewMode: "checklist", // FINAL: checklist | detailed — BUILD: uc_required | uc_preferred | uc_all | flows_all | flows_inter | flows_intra
+  checklistFormat: "type1_1", // FINAL.checklist sub-format: type1_1 (current — one row per cap) | type2 (lumped umbrellas — IMDA shared example) | change_log (this module's edit history). 2026-05-07.
   sectorFilter: "__generic__", // null = All, "__generic__" = Generic only (default), or PSG sector name
   ucTierFilter: "standard", // baseline | standard | advanced | enterprise | all (cumulative: baseline ⊂ standard ⊂ advanced)
   hideDimmed: false, // if true: hide dimmed UCs + dimmed specs entirely instead of showing grayed
@@ -2293,12 +2394,37 @@ function renderOverview() {
     }
     contentHtml = parts.join("");
   } else if (mode === "checklist") {
-    // FINAL view default — IMDA-format checklist (cap rows grouped by
-    // sub-module, AI Features tail). Tier filter lives on the toolbar.
+    // FINAL view default — IMDA-format checklist. Sub-tab toggle picks
+    // the format: Type 1.1 (current — one row per cap), Type 2 (lumped
+    // umbrellas — IMDA shared-example style), or Change log.
+    const fmt = state.checklistFormat || "type1_1";
+    const _fmtBtn = (val, label, hint) => `
+      <button class="cl-fmt-btn ${fmt === val ? 'active' : ''}" data-cl-fmt="${val}" title="${escapeHtml(hint)}">${label}</button>
+    `;
+    const formatToggleHtml = `
+      <div class="cl-fmt-toggle" style="display:flex;gap:0;align-items:stretch;margin-bottom:10px">
+        <span style="font-size:10px;color:#64748b;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;padding:6px 10px 6px 0;align-self:center">Format</span>
+        ${_fmtBtn("type1_1", "Type 1.1 (rows)", "Original IMDA Type 1.1 — one row per cap with terse 1-liner question")}
+        ${_fmtBtn("type2", "Type 2 (lumped)", "IMDA Type 2 — single umbrella question per tier with sub-bullets (the shared-example format)")}
+        ${_fmtBtn("change_log", "Change log", "This module's cap-level edit history (tier shifts, override notes)")}
+      </div>
+    `;
+    let formatBody;
+    if (fmt === "type2") {
+      formatBody = (typeof renderFinalChecklistType2 === "function")
+        ? renderFinalChecklistType2()
+        : "<div class='empty'>Type 2 renderer missing — please rebuild.</div>";
+    } else if (fmt === "change_log") {
+      formatBody = (typeof renderModuleChangeLog === "function")
+        ? renderModuleChangeLog()
+        : "<div class='empty' style='padding:40px;color:#94a3b8'>Change log builds in Branch K — coming after Type 2 ships.</div>";
+    } else {
+      formatBody = renderChecklistToolbar() + renderFinalChecklist();
+    }
     contentHtml = `
       <div class="compact-section">
-        ${renderChecklistToolbar()}
-        ${renderFinalChecklist()}
+        ${formatToggleHtml}
+        ${formatBody}
       </div>
     `;
   }
@@ -3232,6 +3358,13 @@ document.addEventListener("click", (e) => {
     else if (typeof renderOverview === "function") renderOverview();
     if (typeof renderSidebar === "function") renderSidebar();
   }
+  // Type 1.1 / Type 2 / Change log format toggle (FINAL view sub-tab)
+  const f = e.target.closest("[data-cl-fmt]");
+  if (f) {
+    state.checklistFormat = f.getAttribute("data-cl-fmt");
+    if (typeof renderActiveView === "function") renderActiveView();
+    else if (typeof renderOverview === "function") renderOverview();
+  }
 });
 
 // =============================================================================
@@ -3352,6 +3485,9 @@ function _capYamlSnippet(mod, capId, edit) {
   if (edit.sme_tier !== undefined) {
     lines.push(`  sme_tier: ${edit.sme_tier}`);
   }
+  if (edit.in_checklist !== undefined) {
+    lines.push(`  in_checklist: ${edit.in_checklist === false ? "false" : "true"}`);
+  }
   if (edit.vendor_question !== undefined) {
     lines.push(`  vendor_question: ${_yamlScalar(edit.vendor_question, 2)}`);
   }
@@ -3384,12 +3520,17 @@ function _capDiffEdit(card, capData) {
   const newQT = card.querySelector(".cap-edit-question-terse").value.trim();
   const noteEl = card.querySelector(".cap-edit-note");
   const newNote = noteEl ? noteEl.value.trim() : "";
+  const inChecklistEl = card.querySelector(".cap-edit-in-checklist");
+  const newInChecklist = inChecklistEl ? !!inChecklistEl.checked : true;
 
   // Resolve the BASELINE (pre-override) values
   const ovr = c._cap_override;
   const baseName = (ovr && ovr.original && ovr.original.name !== undefined) ? ovr.original.name : c.name;
   const baseDesc = (ovr && ovr.original && ovr.original.description !== undefined) ? ovr.original.description : (c.description || "");
   const baseTier = (ovr && ovr.original && ovr.original.sme_tier !== undefined) ? ovr.original.sme_tier : (c.sme_tier || "");
+  const baseInChecklist = (ovr && ovr.original && ovr.original.in_checklist !== undefined)
+    ? (ovr.original.in_checklist !== false)
+    : (c.in_checklist !== false);
   const vq = c.vendor_questions || {};
   const baseQ = (ovr && ovr.original && ovr.original.vendor_question !== undefined) ? ovr.original.vendor_question : (vq.question || "");
   const baseQT = (ovr && ovr.original && ovr.original.vendor_question_terse !== undefined) ? ovr.original.vendor_question_terse : (vq.question_terse || "");
@@ -3400,6 +3541,7 @@ function _capDiffEdit(card, capData) {
   if (newTier !== (baseTier || "")) out.sme_tier = newTier;
   if (newQ !== (baseQ || "")) out.vendor_question = newQ;
   if (newQT !== (baseQT || "")) out.vendor_question_terse = newQT;
+  if (newInChecklist !== baseInChecklist) out.in_checklist = newInChecklist;
   // Note has no baseline — any non-empty value is captured. Empty note is
   // omitted (so saving with no note doesn't trigger a "draft" state by note alone).
   if (newNote.length > 0) out.note = newNote;
@@ -3429,6 +3571,10 @@ function renderCapEditor(c) {
   const editNote = (local && local.note !== undefined)
     ? local.note
     : ((ovr && ovr.note) ? ovr.note : "");
+  // in_checklist defaults to true. Local edit > applied override > canonical default.
+  const editInChecklist = (local && local.in_checklist !== undefined)
+    ? (local.in_checklist !== false)
+    : (c.in_checklist !== false);
 
   const tierOpt = (val, label) =>
     `<option value="${val}" ${val === editTier ? "selected" : ""}>${label}</option>`;
@@ -3452,6 +3598,10 @@ function renderCapEditor(c) {
       <textarea class="cap-edit-question" rows="3">${escapeHtml(editQ || "")}</textarea>
       <label>Note (why this override is needed — captured in YAML)</label>
       <textarea class="cap-edit-note" rows="2" placeholder="e.g. 'Demoted to Preferred — many SMEs handle expenses outside ERP'">${escapeHtml(editNote || "")}</textarea>
+      <label class="cap-edit-in-checklist-row" style="display:flex;align-items:center;gap:8px;font-size:11px;color:#475569;margin-top:6px;cursor:pointer">
+        <input type="checkbox" class="cap-edit-in-checklist" ${editInChecklist ? "checked" : ""} style="width:14px;height:14px;cursor:pointer;accent-color:#0284c7"/>
+        <span><b>Include in checklist</b> — uncheck to flag as Optional / Add-on (still listed but not gated for verdict).</span>
+      </label>
       <div class="cap-editor-actions">
         <button class="cap-save-btn" data-cap-action="save" data-cap-id="${escapeHtml(c.id)}">Save → clipboard</button>
         <button class="cap-cancel-btn" data-cap-action="cancel" data-cap-id="${escapeHtml(c.id)}">Cancel</button>
@@ -3466,6 +3616,7 @@ function renderCapEditor(c) {
           <div class="cap-original-label">Pre-override baseline (revert target):</div>
           <div class="cap-original-name"><b>Name:</b> ${escapeHtml(baseName || "")}</div>
           <div class="cap-original-tier"><b>Tier:</b> <span class="cap-original-tier-badge" style="display:inline-block;padding:2px 8px;background:${_capTierStyle((baseTier || '').toLowerCase()).bg};color:${_capTierStyle((baseTier || '').toLowerCase()).fg};border:1px solid ${_capTierStyle((baseTier || '').toLowerCase()).brd};border-radius:3px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em">${escapeHtml(_capTierStyle((baseTier || '').toLowerCase()).label || baseTier || "(none)")}</span></div>
+          <div class="cap-original-tier"><b>In checklist:</b> ${(c.in_checklist === false) ? "no (was Optional/Add-on)" : "yes"}</div>
           <div class="cap-original-q"><b>Type 1.1:</b> ${escapeHtml(baseQT || "(none)")}</div>
           <div class="cap-original-q"><b>Type 1:</b> ${escapeHtml(baseQ || "(none)")}</div>
         </div>
@@ -3805,6 +3956,304 @@ if (document.readyState === "loading") {
 // Closing benefit appended INLINE (not via em-dash graft) where supplied
 // by escalation chain. This is what the approval reviewer sees.
 // =============================================================================
+
+// =============================================================================
+// TYPE 2 (LUMPED 1-LINER) RENDERER — IMDA shared-example format.
+// One umbrella row per tier × cluster, with numbered sub-bullets per cap.
+// Required: yes/no answer for the umbrella (gates whole bullet list).
+// Preferred: multi-select per sub-bullet + "Others — Please Define" textbox.
+// Optional / Add-ons (in_checklist:false): collapsed accordion at the tail.
+// State for multi-select in localStorage; aligns with the Type 1.1 cap editor.
+// =============================================================================
+
+const _t2State = {
+  multiSelectKey: (mod, capId) => `cap_t2_check:${mod}:${capId}`,
+  othersKey: (mod, cluster) => `cap_t2_others:${mod}:${cluster}`,
+};
+
+function _t2GetCheck(mod, capId) {
+  try { return localStorage.getItem(_t2State.multiSelectKey(mod, capId)) === "1"; }
+  catch (_) { return false; }
+}
+function _t2SetCheck(mod, capId, checked) {
+  try {
+    if (checked) localStorage.setItem(_t2State.multiSelectKey(mod, capId), "1");
+    else localStorage.removeItem(_t2State.multiSelectKey(mod, capId));
+  } catch (_) {}
+}
+function _t2GetOthers(mod, cluster) {
+  try { return localStorage.getItem(_t2State.othersKey(mod, cluster)) || ""; }
+  catch (_) { return ""; }
+}
+function _t2SetOthers(mod, cluster, value) {
+  try {
+    if (value) localStorage.setItem(_t2State.othersKey(mod, cluster), value);
+    else localStorage.removeItem(_t2State.othersKey(mod, cluster));
+  } catch (_) {}
+}
+
+// Active sme_tier resolver — local edit (cap edit) wins over canonical.
+function _activeSmeTier(c) {
+  const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
+  const local = (typeof _capLocalEdit === "function") ? _capLocalEdit(moduleSlug, c.id) : null;
+  if (local && local.sme_tier !== undefined) return local.sme_tier;
+  return c.sme_tier;
+}
+
+// Active in_checklist (default true). Local edit wins; then applied override (already in c); then default.
+function _activeInChecklist(c) {
+  const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
+  const local = (typeof _capLocalEdit === "function") ? _capLocalEdit(moduleSlug, c.id) : null;
+  if (local && local.in_checklist !== undefined) return local.in_checklist !== false;
+  if (c.in_checklist === false) return false;
+  return true;
+}
+
+// Sub-bullet text per IMDA Type 2 example format: "<Cap Name> — <outcome description>"
+// Use cap.description's first sentence (outcome-focused) per user OK.
+function _t2BulletText(c) {
+  const desc = (c.description || "").trim();
+  // First sentence — cut at ".", "?", or "!" (whichever first).
+  const m = desc.match(/^([^.?!]+[.?!])\s*/);
+  const firstSentence = m ? m[1].trim() : desc.slice(0, 160);
+  return firstSentence || c.name || c.id;
+}
+
+// Module-name prefix injected into umbrella question template.
+function _t2ModuleNoun(slug) {
+  const m = (DATA.module_name || (DATA.module && DATA.module.module_name) || slug || "").toLowerCase();
+  // Convert "supply chain & inventory management" → "supply chain", etc.
+  if (m.includes("financial")) return "finance";
+  if (m.includes("human resources")) return "HR";
+  if (m.includes("sales")) return "sales & CRM";
+  if (m.includes("supply chain")) return "supply chain";
+  if (m.includes("project")) return "project management";
+  if (m.includes("asset")) return "asset management";
+  if (m.includes("manufacturing")) return "manufacturing";
+  if (m.includes("field service")) return "field service";
+  if (m.includes("fleet")) return "fleet";
+  return m || "module";
+}
+
+function renderFinalChecklistType2() {
+  const order = DATA.family_order.length > 0 ? DATA.family_order : [];
+  const allCaps = DATA.capabilities || [];
+  const baselineFam = DATA.baseline_family_name || "Platform & Data";
+  const moduleId = DATA.module_id || "100";
+  const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
+  const moduleNoun = _t2ModuleNoun(moduleSlug);
+
+  // Partition caps: in-checklist required / preferred / advanced + out-of-checklist (any tier).
+  const requiredCaps = [];
+  const preferredCaps = [];
+  const advancedCaps = [];
+  const optionalCaps = [];   // in_checklist === false
+  const deletedCaps = [];    // sme_tier === 'deleted' — excluded from view (but tracked)
+  for (const c of allCaps) {
+    const t = (_activeSmeTier(c) || "").toLowerCase();
+    if (t === "deleted") { deletedCaps.push(c); continue; }
+    if (!_activeInChecklist(c)) { optionalCaps.push(c); continue; }
+    if (t === "required") requiredCaps.push(c);
+    else if (t === "preferred") preferredCaps.push(c);
+    else if (t === "advanced") advancedCaps.push(c);
+  }
+
+  const headerHtml = `
+    <div class="fc-header" style="margin-bottom:18px;padding:16px 18px;background:#fff;border:1px solid #cbd5e1;border-radius:6px">
+      <div style="font-size:11px;color:#64748b;font-weight:700;text-transform:uppercase;letter-spacing:0.06em">Solution Category · ${escapeHtml(moduleId)} · Type 2 (lumped — IMDA shared-example format)</div>
+      <div style="font-size:18px;font-weight:700;color:#0f172a;margin-top:2px">[ERP EDGE] ${escapeHtml(DATA.module_name || moduleSlug)}</div>
+      <div style="margin-top:8px;font-size:13px;color:#334155;line-height:1.55">${escapeHtml(DATA.module_description || DATA.module_headline || "")}</div>
+      <div style="margin-top:10px;font-size:11px;color:#64748b">
+        Required: ${requiredCaps.length} · Preferred: ${preferredCaps.length} · Advanced: ${advancedCaps.length} · Optional/Add-ons (not gated): ${optionalCaps.length}
+      </div>
+    </div>
+  `;
+
+  // ── Required umbrella ────────────────────────────────────────────────
+  // For Branch J: single-core only (one umbrella per module). Multi-core
+  // mode comes in Branch K when we have the diagnostic results.
+  let bulletNum = 1;
+  const reqBullets = requiredCaps.map(c => {
+    const idStr = `${moduleId}.01.${String(bulletNum).padStart(2, "0")}`;
+    bulletNum++;
+    return `
+      <li class="t2-bullet">
+        <span class="t2-bullet-id">${escapeHtml(idStr)}</span>
+        <span class="t2-bullet-name">${escapeHtml(c.name)}</span>
+        <span class="t2-bullet-em-dash"> — </span>
+        <span class="t2-bullet-desc">${escapeHtml(_t2BulletText(c))}</span>
+      </li>
+    `;
+  }).join("");
+  const requiredUmbrellaHtml = requiredCaps.length === 0 ? "" : `
+    <div class="t2-umbrella t2-required">
+      <div class="t2-row-head">
+        <span class="t2-row-id">${escapeHtml(moduleId)}.01</span>
+        <span class="t2-row-title">Core ${escapeHtml(moduleNoun)} module features</span>
+        <span class="t2-row-tier t2-tier-mandatory">Mandatory</span>
+      </div>
+      <div class="t2-umbrella-q">Does your ${escapeHtml(moduleNoun)} module provide the following functions?</div>
+      <ol class="t2-bullet-list">${reqBullets}</ol>
+      <div class="t2-row-answer"><span class="t2-radio">○</span> Yes &nbsp; <span class="t2-radio">○</span> No</div>
+    </div>
+  `;
+
+  // ── Preferred umbrella (multi-select) ────────────────────────────────
+  // Branch J default: single-cluster (all preferred caps under one umbrella).
+  // Branch L will add handcrafted clustering via config/preferred_clusters.yaml.
+  let prefBulletNum = 1;
+  const prefBullets = preferredCaps.map(c => {
+    const idStr = `${moduleId}.02.${String(prefBulletNum).padStart(2, "0")}`;
+    prefBulletNum++;
+    const checked = _t2GetCheck(moduleSlug, c.id) ? "checked" : "";
+    return `
+      <li class="t2-bullet t2-bullet-multi">
+        <label class="t2-checkbox-label">
+          <input type="checkbox" class="t2-checkbox" data-t2-cap="${escapeHtml(c.id)}" ${checked}/>
+          <span class="t2-bullet-id">${escapeHtml(idStr)}</span>
+          <span class="t2-bullet-name">${escapeHtml(c.name)}</span>
+          <span class="t2-bullet-em-dash"> — </span>
+          <span class="t2-bullet-desc">${escapeHtml(_t2BulletText(c))}</span>
+        </label>
+      </li>
+    `;
+  }).join("");
+  const prefOthersValue = _t2GetOthers(moduleSlug, "preferred");
+  const preferredUmbrellaHtml = preferredCaps.length === 0 ? "" : `
+    <div class="t2-umbrella t2-preferred">
+      <div class="t2-row-head">
+        <span class="t2-row-id">${escapeHtml(moduleId)}.02</span>
+        <span class="t2-row-title">Preferred ${escapeHtml(moduleNoun)} module features</span>
+        <span class="t2-row-tier t2-tier-preferred">Preferred (multi-select)</span>
+      </div>
+      <div class="t2-umbrella-q">Which of the following preferred features does your solution provide? Tick all that apply.</div>
+      <ol class="t2-bullet-list">${prefBullets}</ol>
+      <div class="t2-others-row">
+        <label class="t2-checkbox-label">
+          <input type="checkbox" class="t2-checkbox" data-t2-others-toggle="preferred" ${prefOthersValue ? "checked" : ""}/>
+          <span class="t2-bullet-name">Others — please define</span>
+        </label>
+        <textarea class="t2-others-textarea" data-t2-others="preferred" rows="2" placeholder="Describe any additional preferred capabilities your solution provides">${escapeHtml(prefOthersValue)}</textarea>
+      </div>
+    </div>
+  `;
+
+  // ── Advanced umbrella (multi-select, separate from Preferred) ──────────
+  let advBulletNum = 1;
+  const advBullets = advancedCaps.map(c => {
+    const idStr = `${moduleId}.03.${String(advBulletNum).padStart(2, "0")}`;
+    advBulletNum++;
+    const checked = _t2GetCheck(moduleSlug, c.id) ? "checked" : "";
+    return `
+      <li class="t2-bullet t2-bullet-multi">
+        <label class="t2-checkbox-label">
+          <input type="checkbox" class="t2-checkbox" data-t2-cap="${escapeHtml(c.id)}" ${checked}/>
+          <span class="t2-bullet-id">${escapeHtml(idStr)}</span>
+          <span class="t2-bullet-name">${escapeHtml(c.name)}</span>
+          <span class="t2-bullet-em-dash"> — </span>
+          <span class="t2-bullet-desc">${escapeHtml(_t2BulletText(c))}</span>
+        </label>
+      </li>
+    `;
+  }).join("");
+  const advancedUmbrellaHtml = advancedCaps.length === 0 ? "" : `
+    <div class="t2-umbrella t2-advanced">
+      <div class="t2-row-head">
+        <span class="t2-row-id">${escapeHtml(moduleId)}.03</span>
+        <span class="t2-row-title">Advanced / Enterprise ${escapeHtml(moduleNoun)} features</span>
+        <span class="t2-row-tier t2-tier-advanced">Advanced (multi-select)</span>
+      </div>
+      <div class="t2-umbrella-q">Which of the following advanced / enterprise-tier features does your solution provide?</div>
+      <ol class="t2-bullet-list">${advBullets}</ol>
+    </div>
+  `;
+
+  // ── Optional / Add-ons (in_checklist:false) — collapsed accordion ────
+  let optBulletNum = 1;
+  const optBullets = optionalCaps.map(c => {
+    const tierLbl = (_activeSmeTier(c) || "—").toLowerCase();
+    const idStr = `${moduleId}.opt.${String(optBulletNum).padStart(2, "0")}`;
+    optBulletNum++;
+    return `
+      <li class="t2-bullet">
+        <span class="t2-bullet-id">${escapeHtml(idStr)}</span>
+        <span class="t2-bullet-name">${escapeHtml(c.name)}</span>
+        <span class="t2-bullet-em-dash"> — </span>
+        <span class="t2-bullet-desc">${escapeHtml(_t2BulletText(c))}</span>
+        <span style="margin-left:6px;font-size:9px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.04em">[${escapeHtml(tierLbl)}]</span>
+      </li>
+    `;
+  }).join("");
+  const optionalAccordionHtml = optionalCaps.length === 0 ? "" : `
+    <details class="t2-optional-tail">
+      <summary>Optional / Add-ons — listed but NOT gated for verdict (${optionalCaps.length})</summary>
+      <div class="t2-umbrella-q" style="margin:10px 14px 4px;font-style:italic;color:#475569">These capabilities exist in our catalogue but are flagged <code>in_checklist: false</code> — too narrow / situational to be part of the main checklist. Listed here for reference only.</div>
+      <ol class="t2-bullet-list" style="margin-left:14px;margin-right:14px">${optBullets}</ol>
+    </details>
+  `;
+
+  // Reuse existing compliance + AI Features tail from Type 1.1 (they're verbatim IMDA — format-independent)
+  const compliance = DATA.imda_baseline_compliance;
+  const imdaQs = (compliance && compliance.questions) || [];
+  // (Cheap stub: we re-render the same compliance section markup as Type 1.1 — same data, format-agnostic.)
+  // For Branch J, just embed a "see Type 1.1 for full Q23-Q31" pointer to keep the change minimal.
+  const complianceHintHtml = imdaQs.length === 0 ? "" : `
+    <div class="t2-compliance-hint">
+      <strong>Baseline compliance Q23–Q31</strong> — full verbatim IMDA wording is shown in the Type 1.1 view. Switch the format toggle above to <em>Type 1.1 (rows)</em> to read each compliance Q.
+    </div>
+  `;
+
+  // AI Features tail — same as Type 1.1; included verbatim here.
+  const aif = DATA.ai_features;
+  const aiFeaturesHtml = (aif && aif.question) ? `
+    <div style="margin-top:16px;padding:14px 18px;background:#fef3c7;border:1px solid #fcd34d;border-radius:6px;border-left:4px solid #d97706">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap">
+        <span style="font-size:11px;color:#64748b;font-weight:600;font-family:ui-monospace,SFMono-Regular,monospace">${escapeHtml(moduleId)}.AI</span>
+        <span style="font-size:14px;font-weight:700;color:#92400e">AI Features</span>
+        <span style="padding:2px 8px;background:#d97706;color:#fff;border-radius:3px;font-size:9px;font-weight:700;letter-spacing:0.03em;text-transform:uppercase">${escapeHtml(aif.tier_label || 'Mandatory to provide a response')}</span>
+      </div>
+      <div style="font-size:13px;color:#78350f;line-height:1.5;margin-bottom:10px">${escapeHtml(aif.question)}</div>
+      <ol style="margin:0;padding-left:22px;color:#78350f;font-size:13px;line-height:1.5">
+        ${(aif.examples || []).map(ex => `
+          <li style="margin-bottom:4px"><strong>${escapeHtml(ex.title || '')}</strong>${ex.description ? ` — ${escapeHtml(ex.description)}` : ''}</li>
+        `).join("")}
+      </ol>
+    </div>
+  ` : "";
+
+  return headerHtml + requiredUmbrellaHtml + preferredUmbrellaHtml + advancedUmbrellaHtml + optionalAccordionHtml + complianceHintHtml + aiFeaturesHtml;
+}
+
+// Multi-select / Others input persistence handlers.
+document.addEventListener("change", (e) => {
+  const cb = e.target.closest(".t2-checkbox[data-t2-cap]");
+  if (cb) {
+    const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
+    _t2SetCheck(moduleSlug, cb.getAttribute("data-t2-cap"), cb.checked);
+    return;
+  }
+});
+document.addEventListener("input", (e) => {
+  const ta = e.target.closest("[data-t2-others]");
+  if (ta) {
+    const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
+    _t2SetOthers(moduleSlug, ta.getAttribute("data-t2-others"), ta.value);
+    return;
+  }
+});
+
+// =============================================================================
+// MODULE CHANGE LOG (Branch K placeholder — rendered as empty state for now)
+// =============================================================================
+function renderModuleChangeLog() {
+  return `
+    <div class="empty" style="padding:40px;text-align:center;color:#94a3b8;font-size:13px;line-height:1.6">
+      Change log — coming in Branch K.<br>
+      Will render git-derived edit history of <code>data/proxy/&lt;module&gt;.yaml</code> +
+      <code>data/manual_cap_overrides.yaml</code> for this module.
+    </div>
+  `;
+}
 
 function renderFinalChecklist() {
   const tier = state.checklistTier || "required";
