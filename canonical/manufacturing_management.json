@@ -14899,7 +14899,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo",
         "netsuite",
@@ -15295,6 +15295,20 @@
             "reason": "PDPA compliance, audit trails, and access control mandatory for all SMEs"
           }
         }
+      },
+      "in_checklist": false,
+      "_cap_override": {
+        "fields_overridden": [
+          "sme_tier",
+          "in_checklist"
+        ],
+        "original": {
+          "sme_tier": "required",
+          "in_checklist": null
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-07",
+        "note": "Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_all_modules: each module has its own copy (fin.*, hr.*, sales.* …); flag propagates the override to every canonical. User intent: not a baseline gate; revisit later. Pair with other.user_access_roles.\n"
       }
     },
     {
@@ -15307,7 +15321,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo",
         "erpnext",
@@ -15746,6 +15760,20 @@
             "reason": "Mandatory for food safety compliance, traceability, and hygiene documentation"
           }
         }
+      },
+      "in_checklist": false,
+      "_cap_override": {
+        "fields_overridden": [
+          "sme_tier",
+          "in_checklist"
+        ],
+        "original": {
+          "sme_tier": "required",
+          "in_checklist": null
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-07",
+        "note": "Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_all_modules: propagates to fin.user_access_roles, hr.user_access_roles, sales.user_access_roles, etc. Pair with other.data_governance.\n"
       }
     },
     {
@@ -17021,5 +17049,9 @@
       "narrative": "This family monitors machine health, calculates overall equipment effectiveness (OEE), and handles repairs and rework. SMEs need this to minimize unplanned downtime, spot performance trends, and make data-driven decisions about equipment investment. For example: your OEE dashboard reveals that a packaging line has 15% downtime due to changeovers; you use that insight to negotiate a maintenance contract or justify a faster changeover tool.",
       "sme_tier": "standard"
     }
+  },
+  "_meta": {
+    "step16_applied_at": "2026-05-07T22:26:42.933761+08:00",
+    "step16_applied_count": 2
   }
 }

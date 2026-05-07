@@ -24866,7 +24866,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "salesforce_sales_cloud",
         "ms_dynamics_365_ce",
@@ -25437,6 +25437,20 @@
             "reason": "Customer accounts, order data, privacy compliance required"
           }
         }
+      },
+      "in_checklist": false,
+      "_cap_override": {
+        "fields_overridden": [
+          "sme_tier",
+          "in_checklist"
+        ],
+        "original": {
+          "sme_tier": "required",
+          "in_checklist": null
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-07",
+        "note": "Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_all_modules: each module has its own copy (fin.*, hr.*, sales.* …); flag propagates the override to every canonical. User intent: not a baseline gate; revisit later. Pair with other.user_access_roles.\n"
       }
     },
     {
@@ -25449,7 +25463,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "salesforce_sales_cloud",
         "odoo_crm",
@@ -25897,6 +25911,20 @@
             "reason": "Sales and warehouse staff need differentiated customer data access"
           }
         }
+      },
+      "in_checklist": false,
+      "_cap_override": {
+        "fields_overridden": [
+          "sme_tier",
+          "in_checklist"
+        ],
+        "original": {
+          "sme_tier": "required",
+          "in_checklist": null
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-07",
+        "note": "Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_all_modules: propagates to fin.user_access_roles, hr.user_access_roles, sales.user_access_roles, etc. Pair with other.data_governance.\n"
       }
     },
     {
@@ -27098,6 +27126,8 @@
   },
   "_meta": {
     "step15_generated_at": "2026-05-07T13:56:06.499479+08:00",
-    "step15_processed": 39
+    "step15_processed": 39,
+    "step16_applied_at": "2026-05-07T22:26:43.149366+08:00",
+    "step16_applied_count": 2
   }
 }
