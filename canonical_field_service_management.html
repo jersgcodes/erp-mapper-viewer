@@ -4119,12 +4119,16 @@ function renderCapEditor(c) {
         <span><b>Include in checklist</b> — uncheck to flag as Optional / Add-on (still listed but not gated for verdict).</span>
       </label>
       <div class="cap-editor-actions">
-        <button class="cap-save-btn" data-cap-action="save" data-cap-id="${escapeHtml(c.id)}">Save → clipboard</button>
-        <button class="cap-cancel-btn" data-cap-action="cancel" data-cap-id="${escapeHtml(c.id)}">Cancel</button>
+        <button class="cap-save-btn" data-cap-action="save" data-cap-id="${escapeHtml(c.id)}">Save &amp; close</button>
+        <button class="cap-cancel-btn" data-cap-action="cancel" data-cap-id="${escapeHtml(c.id)}">Close</button>
         ${local ? `<button class="cap-clear-btn" data-cap-action="clear-local" data-cap-id="${escapeHtml(c.id)}">Discard draft</button>` : ""}
         <span class="cap-editor-autosave-hint">Auto-saving as you type…</span>
       </div>
-      <div class="cap-editor-hint">After Save: the YAML snippet is on your clipboard. Paste it into <code>data/manual_cap_overrides.yaml</code> under <code>overrides:</code>, fill the <code>note:</code> field, then run <code>python3 -m pipeline.steps.step16_apply_cap_overrides</code> + rebuild viewers.</div>
+      <div class="cap-editor-hint">
+        Edits auto-save to the shared draft store as you type, visible to other reviewers.
+        <b>Save &amp; close</b> confirms + collapses this editor; <b>Close</b> just collapses (your changes are already saved).
+        When ready, click the floating <b>Publish</b> button (bottom-right) to commit all drafts to the repo.
+      </div>
 
       <!-- Original block: Type 1 baseline + applied-override original -->
       <div class="cap-original" style="display:none">
@@ -4727,23 +4731,33 @@ document.addEventListener("click", (e) => {
     if (!c) return;
     const edit = _capDiffEdit(row, c);
     if (!edit || Object.keys(edit).length === 0) {
-      _l2Toast("No changes to save.", "warn");
+      // Nothing to save — just close the editor; no need to nag.
+      const editor = row.querySelector(".cap-editor");
+      if (editor) editor.style.display = "none";
+      _l2Toast("No changes — closed.", "ok");
       return;
     }
+    // Auto-save has likely already mirrored this to cloud, but call _capSaveLocal
+    // again to ensure the latest in-flight values are flushed (the autosave
+    // debounce may not have fired yet if the user typed and clicked Save quickly).
     _capSaveLocal(moduleSlug, capId, edit);
-    const yaml = _capYamlSnippet(moduleSlug, capId, edit);
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(yaml).then(
-        () => _l2Toast("Saved. YAML snippet copied to clipboard.", "ok"),
-        () => _l2Toast("Saved locally. (Clipboard write failed.)", "warn"),
-      );
-    } else {
-      _l2Toast("Saved locally. (Clipboard not supported.)", "warn");
+    // Best-effort immediate cloud flush so reviewers see the change without
+    // waiting on the 500ms debounce.
+    if (typeof _capCloudPut === "function" && window._capCloudOnline) {
+      _capCloudPut(moduleSlug, capId, edit);
     }
-    console.log("Cap override YAML snippet:\n" + yaml);
     _renderExportDraftsButton();
-    // Live update visible cap row immediately — no page refresh needed.
     _capLiveUpdateRow(row, c);
+    // Close the editor — the change is committed to drafts (visible via the
+    // draft / cloud pill on the cap row).
+    const editor = row.querySelector(".cap-editor");
+    if (editor) editor.style.display = "none";
+    const fieldCount = Object.keys(edit).length;
+    if (window._capCloudOnline) {
+      _l2Toast(`Saved ${fieldCount} change${fieldCount === 1 ? "" : "s"} to shared drafts.`, "ok");
+    } else {
+      _l2Toast(`Saved ${fieldCount} change${fieldCount === 1 ? "" : "s"} locally (cloud offline).`, "warn");
+    }
     return;
   }
   if (verb === "clear-local") {
