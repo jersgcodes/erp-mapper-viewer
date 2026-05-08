@@ -1,0 +1,293 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-tse3voba style="--fontStack: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Helvetica, Arial, sans-serif;--text: #0f172a;--bg: #ffffff;"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Manufacturing Management — Astro view</title><link rel="stylesheet" href="./_astro/_module_.dPLOlrvc.css">
+<style>.viewer-layout[data-astro-cid-tse3voba]{display:flex;align-items:flex-start;min-height:calc(100vh - 44px)}.viewer-main[data-astro-cid-tse3voba]{flex:1;padding:18px 24px;max-width:1280px;overflow-x:hidden}.build-badge[data-astro-cid-tse3voba]{position:fixed;top:8px;right:12px;z-index:100;padding:3px 9px;border-radius:11px;font-size:10px;font-weight:800;letter-spacing:.08em;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;cursor:help;box-shadow:0 1px 3px #0f172a2e;user-select:none}.build-badge-astro[data-astro-cid-tse3voba]{background:#ddd6fe;color:#5b21b6;border:1px solid #c4b5fd}html,body{margin:0;padding:0}body{font-family:var(--fontStack);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}a{color:inherit}code{font-family:ui-monospace,SFMono-Regular,monospace;font-size:.92em}
+</style><script type="module">const a="erp-sidebar-collapsed",e=document.querySelector(".sidebar"),o=document.querySelector("[data-toggle]");e&&o&&(localStorage.getItem(a)==="1"&&(e.dataset.collapsed="true"),o.addEventListener("click",()=>{const t=e.dataset.collapsed==="true";e.dataset.collapsed=t?"false":"true",localStorage.setItem(a,t?"0":"1")}));
+</script></head> <body data-astro-cid-tse3voba style="--fontStack: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Helvetica, Arial, sans-serif;--text: #0f172a;--bg: #ffffff;"> <style>
+  .top-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e5ea;
+    padding: 0 24px;
+    flex-shrink: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .top-bar-inner {
+    display: flex;
+    align-items: stretch;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 2px;
+  }
+  .top-bar-brand {
+    font-size: 12px;
+    color: #6b7380;
+    padding: 14px 18px 14px 0;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-right: 1px solid #e2e5ea;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .top-bar-link:hover {
+    color: #2563eb;
+    background: #f5f6f8;
+  }
+  .top-bar-link.active {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  /* Two-row nav (2026-04-29): row 1 = analysis tools, row 2 = modules. */
+  .top-bar.two-row .top-bar-row1 {
+    border-bottom: 1px solid #f1f3f6;
+  }
+  .top-bar.two-row .top-bar-row2 {
+    background: #fafbfc;
+  }
+  .top-bar.two-row .top-bar-row2 .top-bar-link {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .top-bar-row-label {
+    font-size: 10px;
+    color: #6b7380;
+    padding: 9px 14px 9px 0;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    align-self: center;
+    border-right: 1px solid #e8ebef;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-dropdown { position: relative; display: inline-flex; }
+  .top-bar-dropdown summary {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 14px 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    user-select: none;
+  }
+  .top-bar-dropdown summary::-webkit-details-marker { display: none; }
+  .top-bar-dropdown summary::after {
+    content: "";
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #6b7380;
+    margin-left: 7px;
+    transition: transform 0.12s;
+  }
+  .top-bar-dropdown[open] summary::after { transform: rotate(180deg); }
+  .top-bar-dropdown summary:hover { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown[open] summary { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown.active summary {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  .top-bar-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: -1px;
+    background: #ffffff;
+    border: 1px solid #e2e5ea;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    padding: 6px;
+    min-width: 220px;
+    z-index: 110;
+  }
+  .top-bar-dropdown-menu a {
+    display: block;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-radius: 4px;
+    line-height: 1.35;
+  }
+  .top-bar-dropdown-menu a:hover { background: #f1f5f9; color: #2563eb; }
+  .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
+  .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
+
+  /* Build-source badge — fixed top-right so reviewers know which pipeline
+     emitted the page they're looking at (Python vs Astro). */
+  .build-badge {
+    position: fixed;
+    top: 8px;
+    right: 12px;
+    z-index: 100;
+    padding: 3px 9px;
+    border-radius: 11px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    cursor: help;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.18);
+    user-select: none;
+  }
+  .build-badge-python {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+  }
+  .build-badge-astro {
+    background: #ddd6fe;
+    color: #5b21b6;
+    border: 1px solid #c4b5fd;
+  }
+  /* Toggle pair: render PY + ASTRO side-by-side; inactive one is a clickable
+     link OR greyed-out span (no counterpart). Lives inline as the FIRST item
+     in the nav row 1 (was previously fixed top-right corner). */
+  .build-badge-toggle {
+    display: inline-flex;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12);
+    border-radius: 9px;
+    overflow: hidden;
+    cursor: help;
+    margin-right: 12px;
+  }
+  .build-badge-toggle.inline { position: static; top: auto; right: auto; }
+  .build-badge-toggle .build-badge {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 3px 9px;
+  }
+  .build-badge-toggle .build-badge-python { border-right: none; }
+  .build-badge-toggle a.build-badge { opacity: 0.6; text-decoration: none; }
+  .build-badge-toggle a.build-badge:hover { opacity: 1; }
+  .build-badge-toggle .build-badge.active { font-weight: 800; }
+  .build-badge-toggle .build-badge.no-counterpart {
+    opacity: 0.32; cursor: not-allowed; background: #f1f5f9; color: #94a3b8; border-color: #e2e8f0;
+  }
+
+  /* Greyed nav links — current build doesn't have an equivalent, but link
+     remains clickable (you'll jump out to the other build). */
+  .top-bar-link.no-counterpart { opacity: 0.42; }
+  .top-bar-link.no-counterpart:hover { opacity: 0.7; }
+  .top-bar-dropdown.no-counterpart > summary { opacity: 0.42; }
+  .top-bar-dropdown.no-counterpart > summary:hover { opacity: 0.7; }
+</style>
+<nav class="top-bar two-row">
+  <div class="top-bar-inner top-bar-row1">
+    <div class="build-badge-toggle inline" title="Switch between Python and Astro views of the same data"><a class="build-badge build-badge-python" href="canonical_manufacturing_management.html" title="Python pipeline (scripts/build_*.py). Source of truth. Click to switch.">PY</a><span class="build-badge build-badge-astro active" title="Astro pipeline (viewer/). Parallel viewer for migration evaluation.">ASTRO</span></div>
+    <span class="top-bar-brand">PSG ERP Spec</span>
+    <a class="top-bar-link no-counterpart" href="index.html">Overview</a>
+    <a class="top-bar-link" href="dashboard.html">Dashboard</a>
+    <a class="top-bar-link no-counterpart" href="meeting_summary.html">Meeting Summary</a>
+    <a class="top-bar-link no-counterpart" href="stakeholders.html">Stakeholders</a>
+    <a class="top-bar-link no-counterpart" href="coverage_analysis.html">Coverage Analysis</a>
+    <a class="top-bar-link no-counterpart" href="integrations.html">Integrations</a>
+    <details class="top-bar-dropdown no-counterpart"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_manufacturing_management.html">Flows (this module)<span class="sub">Partial-L3 UCs from workflows touching this module</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="vendor_coverage.html">Vendor Coverage<span class="sub">Per-vendor scoring (legacy — vendor-level data is sparse; treat as research not stakeholder)</span></a><a class="" href="coverage_audit.html">Pipeline Coverage Audit<span class="sub">Sol cat → canonical pipeline QA — CLEAN/LEAK/LOW status per sol cat (engineering view)</span></a><a class="" href="stress_test.html">Stress Test<span class="sub">Solution + checklist stress-test with role-based verdict + coverage fingerprint diagram</span></a><a class="" href="inspection_log.html">Inspection Log<span class="sub">Per-item change log: caps, sub-modules, L2 questions — git-derived add/last-modified dates</span></a></div></details>
+  </div>
+  <div class="top-bar-inner top-bar-row2">
+    <span class="top-bar-row-label">Modules</span>
+    <a class="top-bar-link" href="canonical_financial_management_astro.html">Financial</a>
+    <a class="top-bar-link" href="canonical_human_resources_management_astro.html">HR</a>
+    <a class="top-bar-link" href="canonical_sales_and_crm_astro.html">Sales & CRM</a>
+    <a class="top-bar-link" href="canonical_supply_chain_and_inventory_astro.html">Supply Chain</a>
+    <a class="top-bar-link" href="canonical_project_management_astro.html">Project Mgmt</a>
+    <a class="top-bar-link" href="canonical_asset_management_astro.html">Asset Mgmt</a>
+    <a class="top-bar-link active" href="canonical_manufacturing_management_astro.html">Manufacturing</a>
+    <a class="top-bar-link" href="canonical_field_service_management_astro.html">Field Service</a>
+    <a class="top-bar-link" href="canonical_fleet_management_astro.html">Fleet</a>
+    <a class="top-bar-link" href="canonical_others_astro.html">Other</a>
+  </div>
+</nav> <div class="viewer-layout" data-astro-cid-tse3voba style="--fontStack: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Helvetica, Arial, sans-serif;--text: #0f172a;--bg: #ffffff;"> <aside class="sidebar" data-collapsed="false" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <div class="sidebar-head" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="sidebar-title" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Sub-modules</span> <button class="sidebar-toggle" aria-label="Toggle sidebar" data-toggle data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="toggle-icon" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">‹</span> </button> </div> <nav class="sidebar-nav" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <a class="sidebar-link" href="#sm-product_engineering" title="Product Engineering &#38; PLM" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">PR</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Product Engineering &amp; PLM</span> </a><a class="sidebar-link" href="#sm-production_execution" title="Production Execution (MES)" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">PR</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Production Execution (MES)</span> </a><a class="sidebar-link" href="#sm-planning_costing" title="Planning &#38; Costing (Manufacturing)" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">PL</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Planning &amp; Costing (Manufacturing)</span> </a><a class="sidebar-link" href="#sm-quality_compliance" title="Quality &#38; Compliance (QMS)" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">QU</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Quality &amp; Compliance (QMS)</span> </a><a class="sidebar-link" href="#sm-manufacturing_maintenance_analytics" title="Manufacturing Maintenance &#38; Analytics" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">MA</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Manufacturing Maintenance &amp; Analytics</span> </a> </nav> </aside>   <main class="viewer-main" data-astro-cid-tse3voba style="--fontStack: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Helvetica, Arial, sans-serif;--text: #0f172a;--bg: #ffffff;">  <header class="pilot-header" data-astro-cid-4equnste> <h1 data-astro-cid-4equnste>Manufacturing Management</h1> <p class="meta" data-astro-cid-4equnste>
+Module ID <strong data-astro-cid-4equnste>500</strong> ·
+30 caps in checklist ·
+5 sub-modules <span data-astro-cid-4equnste> · 2 unassigned</span> </p> <p class="origin" data-astro-cid-4equnste>
+Astro parallel render. Python source of truth:  <a href="canonical_manufacturing_management.html" data-astro-cid-4equnste>
+canonical_manufacturing_management.html
+</a> </p> </header> <section id="sm-product_engineering" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Product Engineering &amp; PLM</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[2R · 2P · 1A]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">5 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="mfg.bom" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Bill of Materials (BOM)</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution maintain multi-level BOM hierarchies with component relationships, alternate and substitute variants, phantom sub-assemblies, and automatic cost roll-up to finished goods, so you can plan production accurately and manage engineering changes?</span> </li> <li class="cap-row" data-cap-id="mfg.routing" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Routings, Operations &amp; Work Centers</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution manage ordered manufacturing operation sequences with work centre capacity and cost data, assign resources with skill requirements, record setup and run times, support alternate paths, and maintain routing versions with effectivity dates, so you can plan production accurately and adapt to process changes?</span> </li> <li class="cap-row" data-cap-id="mfg.engineering_change" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>3)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Engineering Change Management (ECO / ECR)</span> <span class="sector-pill sector-pill-partial" title="Relevant (2/3):
+  ✓ Advanced Manufacturing, Precision Engineering
+
+Not relevant (1/3):
+  ✗ Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">2/3 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution manage engineering change requests through formal approval workflows, assess impact on product structure and routings, maintain audit trails, and support multiple effectivity methods, so you can implement product changes safely and compliantly?</span> </li> <li class="cap-row" data-cap-id="mfg.product_master_basic" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>4)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Product Master &amp; Document Management (Basic)</span> <span class="sector-pill sector-pill-partial" title="Relevant (2/3):
+  ✓ Advanced Manufacturing, Precision Engineering
+
+Not relevant (1/3):
+  ✗ Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">2/3 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution maintain an item master with revision control, attach engineering documents, track item status through lifecycle stages, and manage manufacturing process information so you have a complete product record?</span> </li> <li class="cap-row" data-cap-id="mfg.plm_advanced" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>5)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Enterprise PLM (Advanced)</span> <span class="sector-pill sector-pill-partial" title="Relevant (2/3):
+  ✓ Advanced Manufacturing, Precision Engineering
+
+Not relevant (1/3):
+  ✗ Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">2/3 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution compare item revisions, classify and search items by attributes, manage technical documentation, track compliance records, and integrate with external PLM systems?</span> </li>  </ol> </section><section id="sm-production_execution" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Production Execution (MES)</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[2R · 5P]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">7 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="mfg.work_orders" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Work Orders &amp; Job Cards</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution create and manage work orders against bills of materials and routings, automatically reserve components, track status through execution, and record labour time and scrap per operation, so production can be scheduled and monitored end-to-end?</span> </li> <li class="cap-row" data-cap-id="mfg.production_scheduling" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Production Scheduling &amp; Capacity Planning</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution schedule work orders to work centres respecting finite capacity and operation sequence, with visual load display, automatic bottleneck identification, and conflict detection, so planners can balance demand against available capacity?</span> </li> <li class="cap-row" data-cap-id="mfg.shop_floor_execution" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>3)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Shop Floor Execution &amp; MES</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution capture operator actions at the work centre, including start/stop events with timestamps, material scans, quality measurements, and downtime reasons, with real-time alerts for disruptions and specification breaches, so you have complete shop-floor visibility and traceability?</span> </li> <li class="cap-row" data-cap-id="mfg.process_manufacturing" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>4)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Process &amp; Batch Manufacturing</span> <span class="sector-pill sector-pill-partial" title="Relevant (2/3):
+  ✓ Advanced Manufacturing, Food
+
+Not relevant (1/3):
+  ✗ Precision Engineering" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">2/3 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution manage production using recipes and formulas with batch-level tracking, yield measurement, by-product and co-product capture, genealogy traceability, and potency and shelf-life attributes, so you can manufacture and trace variable-yield batches with full compliance visibility?</span> </li> <li class="cap-row" data-cap-id="mfg.discrete_modes" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>5)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Mixed-Mode &amp; Configure-to-Order Manufacturing</span> <span class="sector-pill sector-pill-partial" title="Relevant (2/3):
+  ✓ Advanced Manufacturing, Precision Engineering
+
+Not relevant (1/3):
+  ✗ Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">2/3 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution manage multiple manufacturing modes—discrete, repetitive, make-to-stock, make-to-order, engineer-to-order, and configure-to-order—with automatic bill of materials generation and mode-specific cost calculation, so you can fulfil diverse customer orders without switching systems?</span> </li> <li class="cap-row" data-cap-id="mfg.shop_floor_iot" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>6)</span> <span class="cap-name" data-astro-cid-xjia6wbs>IoT, Machine Integration &amp; Data Collection</span> <span class="sector-pill sector-pill-partial" title="Relevant (2/3):
+  ✓ Advanced Manufacturing, Precision Engineering
+
+Not relevant (1/3):
+  ✗ Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">2/3 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Can your solution connect to production equipment using standard industrial protocols, capture machine status and cycle data automatically, store time-series telemetry for performance analysis, and generate real-time alerts on equipment anomalies, so you eliminate manual data entry and gain visibility into production performance?</span> </li> <li class="cap-row" data-cap-id="mfg.labor_management" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>7)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Labour Tracking &amp; Shop Floor Time Management</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution capture operator time against work orders, distinguish labour categories, export to payroll, and compare actual hours against standard time per operation, so labour efficiency and job costs are tracked accurately?</span> </li>  </ol> </section><section id="sm-planning_costing" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Planning &amp; Costing (Manufacturing)</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[3R · 3P]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">6 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="mfg.mrp" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Material Requirements Planning (MRP)</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution consolidate demand from sales orders and forecasts, explode multi-level BOMs against inventory and on-order quantities, apply lot-sizing and safety-stock policies, and generate planned orders with lead-time offsetting and exception alerts, so you can meet customer demand without stock-outs or excess inventory?</span> </li> <li class="cap-row" data-cap-id="mfg.inventory_wip" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Inventory &amp; Work-in-Progress Tracking</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution track raw materials, work-in-progress, and finished goods separately, maintain lot and serial traceability through production, manage bin locations across facilities, automatically consume materials on work order completion, and support quality holds and quarantine areas, so you have full visibility and control of inventory throughout your manufacturing process?</span> </li> <li class="cap-row" data-cap-id="mfg.product_costing" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>3)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Product Costing &amp; Variance Analysis</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution calculate standard and actual product costs from material, labour, and overhead, decompose variances by type, and revalue inventory when costs change, so planners and accountants have accurate cost visibility and variance reporting?</span> </li> <li class="cap-row" data-cap-id="mfg.subcontracting" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>4)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Subcontract &amp; Outsourced Manufacturing</span> <span class="sector-pill sector-pill-partial" title="Relevant (2/3):
+  ✓ Advanced Manufacturing, Precision Engineering
+
+Not relevant (1/3):
+  ✗ Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">2/3 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Send materials to an external manufacturer who performs part or all of the production and returns finished or semi-finished goods. Distinct from a simple purchase because the organisation owns the material throughout.
+</span> </li> <li class="cap-row" data-cap-id="mfg.demand_planning" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>5)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Demand Planning &amp; Forecasting</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution generate statistical forecasts using multiple methods, aggregate demand across dimensions, track forecast consumption against actual sales, and measure accuracy with standard metrics, so you can align supply planning with realistic demand signals?</span> </li> <li class="cap-row" data-cap-id="mfg.capacity_sop" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>6)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Rough-Cut Capacity &amp; S&amp;OP Integration</span> <span class="sector-pill sector-pill-partial" title="Relevant (2/3):
+  ✓ Advanced Manufacturing, Precision Engineering
+
+Not relevant (1/3):
+  ✗ Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">2/3 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution model rough-cut capacity constraints against critical resources, maintain resource load profiles, and generate the master production schedule from your S&amp;OP plan, so bottlenecks are visible before detailed MRP planning begins?</span> </li>  </ol> </section><section id="sm-quality_compliance" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Quality &amp; Compliance (QMS)</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[3R · 1P]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">4 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="mfg.quality_management" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Quality Management (QM)</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution manage quality inspections across incoming, in-process, and final stages, record non-conformances with corrective-action workflows, maintain audit trails linked to lot or serial number, and generate certificates of conformance, so you can demonstrate compliance and prevent defective goods reaching customers?</span> </li> <li class="cap-row" data-cap-id="mfg.traceability_genealogy" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Lot/Serial Traceability &amp; Genealogy</span> <span class="sector-pill sector-pill-partial" title="Relevant (3/3):
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">3/3 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution track material lots bidirectionally through production and supply chain, maintain serial numbers per unit, generate recall lists by lot and customer, display genealogy across assembly levels, and monitor expiry dates, so you execute rapid recalls and prove product safety to regulators?</span> </li> <li class="cap-row" data-cap-id="mfg.safety_compliance" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>3)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Manufacturing Safety, EHS &amp; Regulatory Compliance</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution manage hazardous materials on bills of materials, attach safety documentation to components, define PPE and lockout/tagout requirements per operation, track worker certifications, and capture safety incidents with corrective actions, so compliance risks and worker safety gaps are identified before harm occurs?</span> </li> <li class="cap-row" data-cap-id="mfg.energy_sustainability" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>4)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Energy, Utility &amp; Sustainability Tracking</span> <span class="sector-pill sector-pill-partial" title="Relevant (3/3):
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">3/3 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution track utility consumption by production line, calculate emissions per unit, allocate energy costs to work orders, and monitor resource streams, so sustainability reporting obligations are met with auditable data?</span> </li>  </ol> </section><section id="sm-manufacturing_maintenance_analytics" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Manufacturing Maintenance &amp; Analytics</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[3P · 3A]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">6 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="mfg.oee_performance" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>OEE &amp; Manufacturing Performance Analytics</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution calculate Overall Equipment Effectiveness from availability, performance, and quality metrics, display dashboards accessible to shopfloor and mobile users, drill down across organisational hierarchy, analyse downtime with trend identification, and alert when KPI thresholds are breached, so plant managers identify bottlenecks and optimise production?</span> </li> <li class="cap-row" data-cap-id="mfg.repair_returns" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Repair, Rework &amp; Returned-Goods Manufacturing</span> <span class="sector-pill sector-pill-partial" title="Relevant (2/3):
+  ✓ Advanced Manufacturing, Precision Engineering
+
+Not relevant (1/3):
+  ✗ Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">2/3 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution manage repair orders with warranty classification, disassembly specifications, RMA linkage, and separate cost tracking, so returned goods are processed without restarting production?</span> </li> <li class="cap-row" data-cap-id="mfg.maintenance_integration" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>3)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Maintenance Integration (CMMS / EAM Linkage)</span> <span class="sector-pill sector-pill-partial" title="Relevant (3/3):
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">3/3 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution link production work centres to asset maintenance records, automatically reserve capacity for planned maintenance, create work requests from equipment faults, and display unified production and maintenance schedules, so production planners optimise scheduling around equipment reliability?</span> </li> <li class="cap-row" data-cap-id="mfg.digital_thread_twin" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>4)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Digital Thread &amp; Manufacturing Digital Twin</span> <span class="sector-pill sector-pill-partial" title="Relevant (2/3):
+  ✓ Advanced Manufacturing, Precision Engineering
+
+Not relevant (1/3):
+  ✗ Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">2/3 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Can your solution maintain a continuous digital record linking design, manufacturing specifications, and as-built data per unit, simulate production schedules to forecast cycle times, and provide operator training simulation, so end-to-end traceability and workflow optimisation are achieved without disrupting live production?</span> </li> <li class="cap-row" data-cap-id="mfg.multi_site_intercompany" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>5)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Multi-Site &amp; Inter-Company Manufacturing</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Can your solution coordinate production across multiple sites, standardise bills of material and routings, optimise material flow between plants, and calculate available-to-promise across your network, so you fulfil orders from your entire manufacturing footprint?</span> </li> <li class="cap-row" data-cap-id="mfg.ai_ml_analytics" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>6)</span> <span class="cap-name" data-astro-cid-xjia6wbs>AI / ML for Manufacturing</span> <span class="sector-pill sector-pill-partial" title="Relevant (2/3):
+  ✓ Advanced Manufacturing, Precision Engineering
+
+Not relevant (1/3):
+  ✗ Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">2/3 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution detect equipment anomalies and forecast defect rates from production data, analyse historical runs for yield optimisation, and generate AI-driven scheduling recommendations, so manufacturers can intervene early and optimise output?</span> </li>  </ol> </section><section id="sm-_orphans" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Unassigned</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[2R]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">2 caps</span> <span class="fam-desc" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">— Caps not yet assigned to any sub-module in config/sub_modules.yaml</span> </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="mfg.mobile_access" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Mobile and Multi-Device Access</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution deliver production data and shop floor status across phones, tablets, and desktops through responsive web interfaces, with real-time notifications and barcode capture, so supervisors monitor operations from any location?</span> </li> <li class="cap-row" data-cap-id="mfg.integration_import_export" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Data Import, Export &amp; Integration</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 3 sectors this module applies to:
+  ✓ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution import data from standard file formats, export operational data, support scheduled automated backups, and integrate with third-party systems via API, so you consolidate existing data and share information without manual re-entry?</span> </li>  </ol> </section></main> </div> <!-- Build-source badge is now embedded in the Python-rendered nav via
+       _nav.py's compare_url toggle. No duplicate here. -->  </body> </html> 

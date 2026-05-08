@@ -272,17 +272,79 @@
   .top-bar-dropdown-menu a:hover { background: #f1f5f9; color: #2563eb; }
   .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
   .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
+
+  /* Build-source badge — fixed top-right so reviewers know which pipeline
+     emitted the page they're looking at (Python vs Astro). */
+  .build-badge {
+    position: fixed;
+    top: 8px;
+    right: 12px;
+    z-index: 100;
+    padding: 3px 9px;
+    border-radius: 11px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    cursor: help;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.18);
+    user-select: none;
+  }
+  .build-badge-python {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+  }
+  .build-badge-astro {
+    background: #ddd6fe;
+    color: #5b21b6;
+    border: 1px solid #c4b5fd;
+  }
+  /* Toggle pair: render PY + ASTRO side-by-side; inactive one is a clickable
+     link OR greyed-out span (no counterpart). Lives inline as the FIRST item
+     in the nav row 1 (was previously fixed top-right corner). */
+  .build-badge-toggle {
+    display: inline-flex;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12);
+    border-radius: 9px;
+    overflow: hidden;
+    cursor: help;
+    margin-right: 12px;
+  }
+  .build-badge-toggle.inline { position: static; top: auto; right: auto; }
+  .build-badge-toggle .build-badge {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 3px 9px;
+  }
+  .build-badge-toggle .build-badge-python { border-right: none; }
+  .build-badge-toggle a.build-badge { opacity: 0.6; text-decoration: none; }
+  .build-badge-toggle a.build-badge:hover { opacity: 1; }
+  .build-badge-toggle .build-badge.active { font-weight: 800; }
+  .build-badge-toggle .build-badge.no-counterpart {
+    opacity: 0.32; cursor: not-allowed; background: #f1f5f9; color: #94a3b8; border-color: #e2e8f0;
+  }
+
+  /* Greyed nav links — current build doesn't have an equivalent, but link
+     remains clickable (you'll jump out to the other build). */
+  .top-bar-link.no-counterpart { opacity: 0.42; }
+  .top-bar-link.no-counterpart:hover { opacity: 0.7; }
+  .top-bar-dropdown.no-counterpart > summary { opacity: 0.42; }
+  .top-bar-dropdown.no-counterpart > summary:hover { opacity: 0.7; }
 </style>
 <nav class="top-bar two-row">
   <div class="top-bar-inner top-bar-row1">
+    <div class="build-badge-toggle inline" title="No Astro counterpart for this Python page"><span class="build-badge build-badge-python active" title="Python pipeline (scripts/build_*.py). Source of truth.">PY</span><span class="build-badge build-badge-astro no-counterpart" title="No Astro equivalent for this page">ASTRO</span></div>
     <span class="top-bar-brand">PSG ERP Spec</span>
     <a class="top-bar-link" href="index.html">Overview</a>
+    <a class="top-bar-link no-counterpart" href="dashboard.html">Dashboard</a>
     <a class="top-bar-link" href="meeting_summary.html">Meeting Summary</a>
     <a class="top-bar-link" href="stakeholders.html">Stakeholders</a>
-    <a class="top-bar-link" href="vendor_coverage.html">Coverage</a>
     <a class="top-bar-link" href="coverage_analysis.html">Coverage Analysis</a>
     <a class="top-bar-link" href="integrations.html">Integrations</a>
-    <details class="top-bar-dropdown"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_financial_management.html">Flows (this module)<span class="sub">Partial-L3 UCs from workflows touching this module</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="stress_test.html">Stress Test<span class="sub">Solution + checklist stress-test with role-based verdict + coverage fingerprint diagram</span></a><a class="" href="inspection_log.html">Inspection Log<span class="sub">Per-item change log: caps, sub-modules, L2 questions — git-derived add/last-modified dates</span></a></div></details>
+    <details class="top-bar-dropdown"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_financial_management.html">Flows (this module)<span class="sub">Partial-L3 UCs from workflows touching this module</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="vendor_coverage.html">Vendor Coverage<span class="sub">Per-vendor scoring (legacy — vendor-level data is sparse; treat as research not stakeholder)</span></a><a class="" href="coverage_audit.html">Pipeline Coverage Audit<span class="sub">Sol cat → canonical pipeline QA — CLEAN/LEAK/LOW status per sol cat (engineering view)</span></a><a class="" href="stress_test.html">Stress Test<span class="sub">Solution + checklist stress-test with role-based verdict + coverage fingerprint diagram</span></a><a class="" href="inspection_log.html">Inspection Log<span class="sub">Per-item change log: caps, sub-modules, L2 questions — git-derived add/last-modified dates</span></a></div></details>
   </div>
   <div class="top-bar-inner top-bar-row2">
     <span class="top-bar-row-label">Modules</span>

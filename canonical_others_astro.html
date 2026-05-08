@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-tse3voba style="--fontStack: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Helvetica, Arial, sans-serif;--text: #0f172a;--bg: #ffffff;"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Others (Cross-Cutting) — Astro view</title><link rel="stylesheet" href="./_astro/_module_.dPLOlrvc.css">
+<style>.viewer-layout[data-astro-cid-tse3voba]{display:flex;align-items:flex-start;min-height:calc(100vh - 44px)}.viewer-main[data-astro-cid-tse3voba]{flex:1;padding:18px 24px;max-width:1280px;overflow-x:hidden}.build-badge[data-astro-cid-tse3voba]{position:fixed;top:8px;right:12px;z-index:100;padding:3px 9px;border-radius:11px;font-size:10px;font-weight:800;letter-spacing:.08em;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;cursor:help;box-shadow:0 1px 3px #0f172a2e;user-select:none}.build-badge-astro[data-astro-cid-tse3voba]{background:#ddd6fe;color:#5b21b6;border:1px solid #c4b5fd}html,body{margin:0;padding:0}body{font-family:var(--fontStack);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}a{color:inherit}code{font-family:ui-monospace,SFMono-Regular,monospace;font-size:.92em}
+</style><script type="module">const a="erp-sidebar-collapsed",e=document.querySelector(".sidebar"),o=document.querySelector("[data-toggle]");e&&o&&(localStorage.getItem(a)==="1"&&(e.dataset.collapsed="true"),o.addEventListener("click",()=>{const t=e.dataset.collapsed==="true";e.dataset.collapsed=t?"false":"true",localStorage.setItem(a,t?"0":"1")}));
+</script></head> <body data-astro-cid-tse3voba style="--fontStack: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Helvetica, Arial, sans-serif;--text: #0f172a;--bg: #ffffff;"> <style>
+  .top-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e5ea;
+    padding: 0 24px;
+    flex-shrink: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .top-bar-inner {
+    display: flex;
+    align-items: stretch;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 2px;
+  }
+  .top-bar-brand {
+    font-size: 12px;
+    color: #6b7380;
+    padding: 14px 18px 14px 0;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-right: 1px solid #e2e5ea;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .top-bar-link:hover {
+    color: #2563eb;
+    background: #f5f6f8;
+  }
+  .top-bar-link.active {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  /* Two-row nav (2026-04-29): row 1 = analysis tools, row 2 = modules. */
+  .top-bar.two-row .top-bar-row1 {
+    border-bottom: 1px solid #f1f3f6;
+  }
+  .top-bar.two-row .top-bar-row2 {
+    background: #fafbfc;
+  }
+  .top-bar.two-row .top-bar-row2 .top-bar-link {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .top-bar-row-label {
+    font-size: 10px;
+    color: #6b7380;
+    padding: 9px 14px 9px 0;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    align-self: center;
+    border-right: 1px solid #e8ebef;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-dropdown { position: relative; display: inline-flex; }
+  .top-bar-dropdown summary {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 14px 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    user-select: none;
+  }
+  .top-bar-dropdown summary::-webkit-details-marker { display: none; }
+  .top-bar-dropdown summary::after {
+    content: "";
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #6b7380;
+    margin-left: 7px;
+    transition: transform 0.12s;
+  }
+  .top-bar-dropdown[open] summary::after { transform: rotate(180deg); }
+  .top-bar-dropdown summary:hover { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown[open] summary { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown.active summary {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  .top-bar-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: -1px;
+    background: #ffffff;
+    border: 1px solid #e2e5ea;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    padding: 6px;
+    min-width: 220px;
+    z-index: 110;
+  }
+  .top-bar-dropdown-menu a {
+    display: block;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-radius: 4px;
+    line-height: 1.35;
+  }
+  .top-bar-dropdown-menu a:hover { background: #f1f5f9; color: #2563eb; }
+  .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
+  .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
+
+  /* Build-source badge — fixed top-right so reviewers know which pipeline
+     emitted the page they're looking at (Python vs Astro). */
+  .build-badge {
+    position: fixed;
+    top: 8px;
+    right: 12px;
+    z-index: 100;
+    padding: 3px 9px;
+    border-radius: 11px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    cursor: help;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.18);
+    user-select: none;
+  }
+  .build-badge-python {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+  }
+  .build-badge-astro {
+    background: #ddd6fe;
+    color: #5b21b6;
+    border: 1px solid #c4b5fd;
+  }
+  /* Toggle pair: render PY + ASTRO side-by-side; inactive one is a clickable
+     link OR greyed-out span (no counterpart). Lives inline as the FIRST item
+     in the nav row 1 (was previously fixed top-right corner). */
+  .build-badge-toggle {
+    display: inline-flex;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12);
+    border-radius: 9px;
+    overflow: hidden;
+    cursor: help;
+    margin-right: 12px;
+  }
+  .build-badge-toggle.inline { position: static; top: auto; right: auto; }
+  .build-badge-toggle .build-badge {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 3px 9px;
+  }
+  .build-badge-toggle .build-badge-python { border-right: none; }
+  .build-badge-toggle a.build-badge { opacity: 0.6; text-decoration: none; }
+  .build-badge-toggle a.build-badge:hover { opacity: 1; }
+  .build-badge-toggle .build-badge.active { font-weight: 800; }
+  .build-badge-toggle .build-badge.no-counterpart {
+    opacity: 0.32; cursor: not-allowed; background: #f1f5f9; color: #94a3b8; border-color: #e2e8f0;
+  }
+
+  /* Greyed nav links — current build doesn't have an equivalent, but link
+     remains clickable (you'll jump out to the other build). */
+  .top-bar-link.no-counterpart { opacity: 0.42; }
+  .top-bar-link.no-counterpart:hover { opacity: 0.7; }
+  .top-bar-dropdown.no-counterpart > summary { opacity: 0.42; }
+  .top-bar-dropdown.no-counterpart > summary:hover { opacity: 0.7; }
+</style>
+<nav class="top-bar two-row">
+  <div class="top-bar-inner top-bar-row1">
+    <div class="build-badge-toggle inline" title="Switch between Python and Astro views of the same data"><a class="build-badge build-badge-python" href="canonical_others.html" title="Python pipeline (scripts/build_*.py). Source of truth. Click to switch.">PY</a><span class="build-badge build-badge-astro active" title="Astro pipeline (viewer/). Parallel viewer for migration evaluation.">ASTRO</span></div>
+    <span class="top-bar-brand">PSG ERP Spec</span>
+    <a class="top-bar-link no-counterpart" href="index.html">Overview</a>
+    <a class="top-bar-link" href="dashboard.html">Dashboard</a>
+    <a class="top-bar-link no-counterpart" href="meeting_summary.html">Meeting Summary</a>
+    <a class="top-bar-link no-counterpart" href="stakeholders.html">Stakeholders</a>
+    <a class="top-bar-link no-counterpart" href="coverage_analysis.html">Coverage Analysis</a>
+    <a class="top-bar-link no-counterpart" href="integrations.html">Integrations</a>
+    <details class="top-bar-dropdown no-counterpart"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_others.html">Flows (this module)<span class="sub">Partial-L3 UCs from workflows touching this module</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="vendor_coverage.html">Vendor Coverage<span class="sub">Per-vendor scoring (legacy — vendor-level data is sparse; treat as research not stakeholder)</span></a><a class="" href="coverage_audit.html">Pipeline Coverage Audit<span class="sub">Sol cat → canonical pipeline QA — CLEAN/LEAK/LOW status per sol cat (engineering view)</span></a><a class="" href="stress_test.html">Stress Test<span class="sub">Solution + checklist stress-test with role-based verdict + coverage fingerprint diagram</span></a><a class="" href="inspection_log.html">Inspection Log<span class="sub">Per-item change log: caps, sub-modules, L2 questions — git-derived add/last-modified dates</span></a></div></details>
+  </div>
+  <div class="top-bar-inner top-bar-row2">
+    <span class="top-bar-row-label">Modules</span>
+    <a class="top-bar-link" href="canonical_financial_management_astro.html">Financial</a>
+    <a class="top-bar-link" href="canonical_human_resources_management_astro.html">HR</a>
+    <a class="top-bar-link" href="canonical_sales_and_crm_astro.html">Sales & CRM</a>
+    <a class="top-bar-link" href="canonical_supply_chain_and_inventory_astro.html">Supply Chain</a>
+    <a class="top-bar-link" href="canonical_project_management_astro.html">Project Mgmt</a>
+    <a class="top-bar-link" href="canonical_asset_management_astro.html">Asset Mgmt</a>
+    <a class="top-bar-link" href="canonical_manufacturing_management_astro.html">Manufacturing</a>
+    <a class="top-bar-link" href="canonical_field_service_management_astro.html">Field Service</a>
+    <a class="top-bar-link" href="canonical_fleet_management_astro.html">Fleet</a>
+    <a class="top-bar-link active" href="canonical_others_astro.html">Other</a>
+  </div>
+</nav> <div class="viewer-layout" data-astro-cid-tse3voba style="--fontStack: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Helvetica, Arial, sans-serif;--text: #0f172a;--bg: #ffffff;"> <aside class="sidebar" data-collapsed="false" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <div class="sidebar-head" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="sidebar-title" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Sub-modules</span> <button class="sidebar-toggle" aria-label="Toggle sidebar" data-toggle data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="toggle-icon" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">‹</span> </button> </div> <nav class="sidebar-nav" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <a class="sidebar-link" href="#sm-productivity_collaboration" title="Productivity &#38; Collaboration" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">PR</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Productivity &amp; Collaboration</span> </a><a class="sidebar-link" href="#sm-workflow_engine" title="Workflow &#38; Approval Engine" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">WO</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Workflow &amp; Approval Engine</span> </a><a class="sidebar-link" href="#sm-document_forms" title="Document Management &#38; Forms" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">DO</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Document Management &amp; Forms</span> </a><a class="sidebar-link" href="#sm-intelligence_analytics_cross" title="BI, AI &#38; Compliance (Cross-cutting)" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">IN</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">BI, AI &amp; Compliance (Cross-cutting)</span> </a><a class="sidebar-link" href="#sm-multi_org_mdm" title="Multi-Org &#38; Master Data Management" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">MU</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Multi-Org &amp; Master Data Management</span> </a><a class="sidebar-link" href="#sm-low_code_api_platform" title="Low-Code &#38; Integration Platform" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">LO</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Low-Code &amp; Integration Platform</span> </a><a class="sidebar-link" href="#sm-utility_tools" title="Utility Tools (e-Sign, Label, Training)" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">UT</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Utility Tools (e-Sign, Label, Training)</span> </a> </nav> </aside>   <main class="viewer-main" data-astro-cid-tse3voba style="--fontStack: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Helvetica, Arial, sans-serif;--text: #0f172a;--bg: #ffffff;">  <header class="pilot-header" data-astro-cid-4equnste> <h1 data-astro-cid-4equnste>Others (Cross-Cutting)</h1> <p class="meta" data-astro-cid-4equnste>
+Module ID <strong data-astro-cid-4equnste>1000</strong> ·
+22 caps in checklist ·
+7 sub-modules <span data-astro-cid-4equnste> · 4 unassigned</span> </p> <p class="origin" data-astro-cid-4equnste>
+Astro parallel render. Python source of truth:  <a href="canonical_others.html" data-astro-cid-4equnste>
+canonical_others.html
+</a> </p> </header> <section id="sm-productivity_collaboration" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Productivity &amp; Collaboration</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[4P]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">4 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="other.email_communication" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Email &amp; Communication Integration</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution integrate email and messaging platforms, attach conversations to customer and order records, enable team inbox management with templates and bulk sending, and store all communications searchably for compliance and traceability?</span> </li> <li class="cap-row" data-cap-id="other.calendar_scheduling" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Calendar &amp; Scheduling</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution maintain shared team calendars with real-time availability checking, customer record linking, and resource booking for facilities and equipment, so staff coordinate meetings and allocate assets without double-booking?</span> </li> <li class="cap-row" data-cap-id="other.knowledge_base" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>3)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Knowledge Base &amp; Wiki</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution maintain a searchable knowledge base with hierarchical organisation, granular access control, version history, and content upload, so teams can document and retrieve institutional knowledge securely?</span> </li> <li class="cap-row" data-cap-id="other.social_collaboration" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>4)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Social Collaboration &amp; Internal Messaging</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution enable team messaging through channels and threads with presence indicators, file sharing, and activity feeds linked to ERP records, so teams can coordinate without email?</span> </li>  </ol> </section><section id="sm-workflow_engine" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Workflow &amp; Approval Engine</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[2R]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">2 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="other.workflow_automation" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Workflow Automation &amp; Approval Engine</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution enable configuration of approval workflows with conditional routing, escalation, and audit trails across ERP modules, so you can enforce consistent governance without coding?</span> </li> <li class="cap-row" data-cap-id="other.notification_alerts" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Notification &amp; Alert Management</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution manage alert rules based on record events and thresholds, send notifications across multiple channels, support user-configurable delivery preferences and quiet hours, and track read status, so users stay informed without information overload?</span> </li>  </ol> </section><section id="sm-document_forms" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Document Management &amp; Forms</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[2R]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">2 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="other.document_management" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Document Management System</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution manage documents linked to ERP records, track changes with audit trails, organise by folder and tag, control access by permission, and search by keyword, so you can retrieve and comply with retention rules?</span> </li> <li class="cap-row" data-cap-id="other.custom_forms_surveys" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Custom Forms &amp; Survey Builder</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution enable business users to build custom forms with drag-and-drop fields, conditional logic, and response visualisation, then share and export results, so you can collect and analyse feedback without IT involvement?</span> </li>  </ol> </section><section id="sm-intelligence_analytics_cross" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">BI, AI &amp; Compliance (Cross-cutting)</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[3P]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">3 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="other.bi_dashboards" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Business Intelligence &amp; Dashboards</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution aggregate data from ERP modules into interactive dashboards with filtering, role-based access, and automated report scheduling, so business owners gain cross-functional visibility without technical expertise?</span> </li> <li class="cap-row" data-cap-id="other.ai_assistant" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>AI Assistant &amp; Copilot</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution deliver cross-module AI assistance through natural-language search, auto-generated summaries, anomaly detection, and smart field suggestions grounded in approved business data sources, so users find answers and complete tasks faster?</span> </li> <li class="cap-row" data-cap-id="other.compliance_audit" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>3)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Compliance &amp; Audit Framework</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution maintain an immutable audit log of all create, update, and delete operations with user and timestamp records, support PDPA data subject access requests, and provide reports for Cyber Essentials Mark (CEM) certification audits, so your compliance posture is provable?</span> </li>  </ol> </section><section id="sm-multi_org_mdm" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Multi-Org &amp; Master Data Management</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[2P]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">2 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="other.multi_company_branch" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Multi-Company &amp; Multi-Branch</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution manage multiple legal entities from a single instance, with separate financial books, shared master data, automatic inter-company elimination, and entity-level access controls, so you can operate your group structure without separate systems?</span> </li> <li class="cap-row" data-cap-id="other.master_data_management" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Master Data Management</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution maintain a single authoritative master record for core entities, with automatic validation rules, change approval workflows, and full audit trails, to ensure consistent data governance across all modules?</span> </li>  </ol> </section><section id="sm-low_code_api_platform" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Low-Code &amp; Integration Platform</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[2P]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">2 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="other.low_code" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Low-Code / No-Code Customisation</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Can your solution enable business administrators to create custom fields, automate conditional rules, design forms visually, and customise layouts without developer involvement, so your team can adapt the system to your needs independently?</span> </li> <li class="cap-row" data-cap-id="other.api_integration" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>API &amp; Integration Platform</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution offer a RESTful API with OAuth 2.0 authentication, webhook support for real-time events, bulk data import and export, pre-built connectors for external systems, and iPaaS compatibility, so you can integrate with external platforms without custom coding?</span> </li>  </ol> </section><section id="sm-utility_tools" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Utility Tools (e-Sign, Label, Training)</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[3P]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">3 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="other.digital_signature" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Digital Signature &amp; e-Signing</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Capture legally binding electronic signatures on contracts, approvals, and documents directly within the ERP workflow — eliminating paper and speeding up deal closure.
+</span> </li> <li class="cap-row" data-cap-id="other.print_label" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Print &amp; Label Management</span> <span class="sector-pill sector-pill-partial" title="Relevant (6/14):
+  ✓ Advanced Manufacturing, Food, Marine &#38; Offshore, Precision Engineering, Retail, Wholesale Trade
+
+Not relevant (8/14):
+  ✗ Accountancy, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Personal Care Services, Security" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">6/14 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution generate and print customised documents from ERP records, support batch operations and thermal printers, and allow preview and export to standard formats before output, so you can produce compliant documents efficiently without manual formatting?</span> </li> <li class="cap-row" data-cap-id="other.training_help" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>3)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Training &amp; Help System</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution provide guided learning content, searchable help resources, and customisable training materials accessible via individual user accounts, so staff can self-serve onboarding and reduce training overhead?</span> </li>  </ol> </section><section id="sm-_orphans" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Unassigned</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[3R · 1P]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">4 caps</span> <span class="fam-desc" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">— Caps not yet assigned to any sub-module in config/sub_modules.yaml</span> </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="other.backup_disaster_recovery" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Backup &amp; Disaster Recovery</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution maintain automated backups with encrypted offsite storage, point-in-time recovery capability, and documented recovery objectives, so your business can restore data quickly after failure or loss?</span> </li> <li class="cap-row" data-cap-id="other.multi_language" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Multi-Language &amp; Localisation</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution enable users to switch between multiple UI languages, format dates and currency by locale, generate business documents in multiple languages, and translate custom fields, so multilingual teams can work efficiently in their preferred language?</span> </li> <li class="cap-row" data-cap-id="other.mobile_access" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>3)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Mobile and Multi-Device Access</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution deliver core Sales and CRM functions across multiple devices through responsive web or native mobile interfaces, so your team can work from any device without local installation?</span> </li> <li class="cap-row" data-cap-id="other.integration_import_export" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>4)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Data Import, Export &amp; Integration</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 14 sectors this module applies to:
+  ✓ Accountancy, Advanced Manufacturing, Built Environment, Early Childhood, Engineering Services, Environmental Services, Estate Agency, Food, Marine &#38; Offshore, Personal Care Services, Precision Engineering, Retail, Security, Wholesale Trade" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution import data from spreadsheets, export to standard formats, integrate with external platforms, and validate data with scheduled automation, so you can consolidate business data without manual re-entry?</span> </li>  </ol> </section></main> </div> <!-- Build-source badge is now embedded in the Python-rendered nav via
+       _nav.py's compare_url toggle. No duplicate here. -->  </body> </html> 

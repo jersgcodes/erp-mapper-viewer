@@ -167,17 +167,79 @@
   .top-bar-dropdown-menu a:hover { background: #f1f5f9; color: #2563eb; }
   .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
   .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
+
+  /* Build-source badge — fixed top-right so reviewers know which pipeline
+     emitted the page they're looking at (Python vs Astro). */
+  .build-badge {
+    position: fixed;
+    top: 8px;
+    right: 12px;
+    z-index: 100;
+    padding: 3px 9px;
+    border-radius: 11px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    cursor: help;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.18);
+    user-select: none;
+  }
+  .build-badge-python {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+  }
+  .build-badge-astro {
+    background: #ddd6fe;
+    color: #5b21b6;
+    border: 1px solid #c4b5fd;
+  }
+  /* Toggle pair: render PY + ASTRO side-by-side; inactive one is a clickable
+     link OR greyed-out span (no counterpart). Lives inline as the FIRST item
+     in the nav row 1 (was previously fixed top-right corner). */
+  .build-badge-toggle {
+    display: inline-flex;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12);
+    border-radius: 9px;
+    overflow: hidden;
+    cursor: help;
+    margin-right: 12px;
+  }
+  .build-badge-toggle.inline { position: static; top: auto; right: auto; }
+  .build-badge-toggle .build-badge {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 3px 9px;
+  }
+  .build-badge-toggle .build-badge-python { border-right: none; }
+  .build-badge-toggle a.build-badge { opacity: 0.6; text-decoration: none; }
+  .build-badge-toggle a.build-badge:hover { opacity: 1; }
+  .build-badge-toggle .build-badge.active { font-weight: 800; }
+  .build-badge-toggle .build-badge.no-counterpart {
+    opacity: 0.32; cursor: not-allowed; background: #f1f5f9; color: #94a3b8; border-color: #e2e8f0;
+  }
+
+  /* Greyed nav links — current build doesn't have an equivalent, but link
+     remains clickable (you'll jump out to the other build). */
+  .top-bar-link.no-counterpart { opacity: 0.42; }
+  .top-bar-link.no-counterpart:hover { opacity: 0.7; }
+  .top-bar-dropdown.no-counterpart > summary { opacity: 0.42; }
+  .top-bar-dropdown.no-counterpart > summary:hover { opacity: 0.7; }
 </style>
 <nav class="top-bar two-row">
   <div class="top-bar-inner top-bar-row1">
+    <div class="build-badge-toggle inline" title="No Astro counterpart for this Python page"><span class="build-badge build-badge-python active" title="Python pipeline (scripts/build_*.py). Source of truth.">PY</span><span class="build-badge build-badge-astro no-counterpart" title="No Astro equivalent for this page">ASTRO</span></div>
     <span class="top-bar-brand">PSG ERP Spec</span>
     <a class="top-bar-link" href="index.html">Overview</a>
+    <a class="top-bar-link no-counterpart" href="dashboard.html">Dashboard</a>
     <a class="top-bar-link active" href="meeting_summary.html">Meeting Summary</a>
     <a class="top-bar-link" href="stakeholders.html">Stakeholders</a>
-    <a class="top-bar-link" href="vendor_coverage.html">Coverage</a>
     <a class="top-bar-link" href="coverage_analysis.html">Coverage Analysis</a>
     <a class="top-bar-link" href="integrations.html">Integrations</a>
-    <details class="top-bar-dropdown"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="stress_test.html">Stress Test<span class="sub">Solution + checklist stress-test with role-based verdict + coverage fingerprint diagram</span></a><a class="" href="inspection_log.html">Inspection Log<span class="sub">Per-item change log: caps, sub-modules, L2 questions — git-derived add/last-modified dates</span></a></div></details>
+    <details class="top-bar-dropdown"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="vendor_coverage.html">Vendor Coverage<span class="sub">Per-vendor scoring (legacy — vendor-level data is sparse; treat as research not stakeholder)</span></a><a class="" href="coverage_audit.html">Pipeline Coverage Audit<span class="sub">Sol cat → canonical pipeline QA — CLEAN/LEAK/LOW status per sol cat (engineering view)</span></a><a class="" href="stress_test.html">Stress Test<span class="sub">Solution + checklist stress-test with role-based verdict + coverage fingerprint diagram</span></a><a class="" href="inspection_log.html">Inspection Log<span class="sub">Per-item change log: caps, sub-modules, L2 questions — git-derived add/last-modified dates</span></a></div></details>
   </div>
   <div class="top-bar-inner top-bar-row2">
     <span class="top-bar-row-label">Modules</span>
@@ -199,7 +261,7 @@
   <div id="sections"></div>
 </div>
 <script>
-const SECTIONS = [{"title":"1. Module checklist baseline — locked rules","body_md":"\n**Pass criterion** (locked 2026-05-07): A sol cat / vendor passes a module iff\n**every Required-bearing sub-module passes** (all Required caps covered yes/partial).\n\n* Sub-modules with no Required caps don't gate the module.\n* Tier filter affects rendering only — pass criterion always anchors on Required.\n* Verdicts: PASS / PARTIAL / FAIL / N/A — consistent across stakeholders, vendor_coverage,\n  and coverage_analysis viewers.\n\n**Type 2 (lumped) checklist** is now the IMDA shared-example format, accessible as a\nsub-tab in every canonical viewer's FINAL view. Required = single yes/no umbrella;\nPreferred = multi-select per cluster; Advanced hidden by default.\n"},{"title":"2. Module ordering","body_md":"\nPriority modules now sit 100–400 in checklist row IDs:\n\n| ID  | Module |\n|-----|---|\n| 100 | Financial Management |\n| 200 | Sales & CRM |\n| 300 | Supply Chain & Inventory |\n| 400 | Human Resources Management |\n| 500 | Manufacturing |\n| 600 | Asset Management |\n| 700 | Field Service Management |\n| 800 | Fleet Management |\n| 900 | Project Management |\n| 1000 | Others (cross-cutting) |\n"},{"title":"3. Recent cap-tier edits (review)","body_md":"\n*(Auto-populated from `data/manual_cap_overrides.yaml`. Edit the source to update.)*\n\n\n**3 cap-level overrides** in `data/manual_cap_overrides.yaml`:\n\n| Date | Cap | Module | Fields | Note (truncated) |\n|---|---|---|---|---|\n| 2026-05-07 | `other.data_governance` | others | sme_tier, in_checklist | Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_ |\n| 2026-05-07 | `other.user_access_roles` | others | sme_tier, in_checklist | Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_ |\n| 2026-05-07 | `sc.delivery_dispatch` | supply_chain_and_inventory | sme_tier | Demoted required → preferred. Not universal across sectors — service businesses don't dispatch goods. Sector applicability lens (Branch L) w |"},{"title":"4. Open decisions","body_md":"\n*(Hand-edit `scripts/build_meeting_summary_viewer.py::SECTIONS` to populate.\nReviewers can also make edits in the canonical viewer's cap editor — those\nflow through to data/manual_cap_overrides.yaml on YAML paste.)*\n\n- [ ] Multi-core analysis: which modules need per-sub-module Mandatory umbrellas (Manufacturing already locked; HR candidate flagged).\n- [ ] Sector applicability lens — pending Branch L\n- [ ] AI features expansion — Haiku draft 5–8 more candidates per module pending\n"},{"title":"5. Cross-cutting demotions (under review)","body_md":"\n- `other.data_governance` — was Required; demoted to **Preferred + out of checklist**.\n  Rationale: not all SMEs need a formal data-governance baseline — many rely on\n  cloud-vendor defaults (encryption-at-rest, role-based access via SaaS provider).\n- `other.user_access_roles` — same treatment. Listed in Optional / Add-ons; user\n  decides whether to fold back in via the canonical viewer cap editor.\n- `sc.delivery_dispatch` — was Required for SC; demoted to **Preferred**. Rationale:\n  service businesses (consultancies, SaaS) don't dispatch goods; demote so the\n  Required gate doesn't unfairly block them.\n"},{"title":"6. Pre-approval form features","body_md":"\n- **Compliance baseline (Q23–Q31)** — verbatim IMDA pre-approval form. Embedded inline\n  in both Type 1.1 and Type 2 sub-tabs.\n- **AI Features** — multi-select checkboxes + \"Others — please define\" textbox.\n- **Multi-select state** — saved in browser localStorage per cap. (Will need a\n  proper backend if we want cross-device persistence.)\n"},{"title":"7. Edit affordance for reviewers","body_md":"\nEvery cap row in the FINAL view has an **Edit** button (Type 1.1 view). Reviewers can:\n- Change Mandatory / Preferred / Advanced tier\n- Toggle \"Include in checklist\" (sets `in_checklist: false` → Optional / Add-ons tail)\n- Edit Type 1.1 question wording, Type 1 verbose, name, description, note\n- Save → YAML snippet copied to clipboard → paste into `data/manual_cap_overrides.yaml`\n\nDrafts auto-save to localStorage between page loads; \"Export N drafts\" floating button\nexports all unsaved edits in one batch.\n"}];
+const SECTIONS = [{"title":"1. Module checklist baseline — locked rules","body_md":"\n**Pass criterion** (locked 2026-05-07): A sol cat / vendor passes a module iff\n**every Required-bearing sub-module passes** (all Required caps covered yes/partial).\n\n* Sub-modules with no Required caps don't gate the module.\n* Tier filter affects rendering only — pass criterion always anchors on Required.\n* Verdicts: PASS / PARTIAL / FAIL / N/A — consistent across stakeholders, vendor_coverage,\n  and coverage_analysis viewers.\n\n**Type 2 (lumped) checklist** is now the IMDA shared-example format, accessible as a\nsub-tab in every canonical viewer's FINAL view. Required = single yes/no umbrella;\nPreferred = multi-select per cluster; Advanced hidden by default.\n"},{"title":"2. Module ordering","body_md":"\nPriority modules now sit 100–400 in checklist row IDs:\n\n| ID  | Module |\n|-----|---|\n| 100 | Financial Management |\n| 200 | Sales & CRM |\n| 300 | Supply Chain & Inventory |\n| 400 | Human Resources Management |\n| 500 | Manufacturing |\n| 600 | Asset Management |\n| 700 | Field Service Management |\n| 800 | Fleet Management |\n| 900 | Project Management |\n| 1000 | Others (cross-cutting) |\n"},{"title":"3. Recent cap-tier edits (review)","body_md":"\n*(Auto-populated from `data/manual_cap_overrides.yaml`. Edit the source to update.)*\n\n\n**6 cap-level overrides** in `data/manual_cap_overrides.yaml`:\n\n| Date | Cap | Module | Fields | Note (truncated) |\n|---|---|---|---|---|\n| 2026-05-08 | `fin.multi_currency` | financial_management | in_checklist | Demoted to Optional / Add-on. Not universal — most SMEs trade in SGD only; multi-currency only matters for export, regional, or franchise bu |\n| 2026-05-08 | `fin.project_accounting` | financial_management | in_checklist | Demoted to Optional / Add-on. Project-level P&L is essential for professional services / construction / consulting only. Generic SMEs don't  |\n| 2026-05-08 | `fin.revenue_recognition` | financial_management | in_checklist | Demoted to Optional / Add-on. ASC 606 / IFRS 15 five-step model is mandatory for SaaS and bundled-contract sellers, optional otherwise. Gene |\n| 2026-05-07 | `other.data_governance` | others | sme_tier, in_checklist | Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_ |\n| 2026-05-07 | `other.user_access_roles` | others | sme_tier, in_checklist | Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_ |\n| 2026-05-07 | `sc.delivery_dispatch` | supply_chain_and_inventory | sme_tier | Demoted required → preferred. Not universal across sectors — service businesses don't dispatch goods. Sector applicability lens (Branch L) w |"},{"title":"4. Open decisions","body_md":"\n*(Hand-edit `scripts/build_meeting_summary_viewer.py::SECTIONS` to populate.\nReviewers can also make edits in the canonical viewer's cap editor — those\nflow through to data/manual_cap_overrides.yaml on YAML paste.)*\n\n- [ ] Multi-core analysis: which modules need per-sub-module Mandatory umbrellas (Manufacturing already locked; HR candidate flagged).\n- [ ] Sector applicability lens — pending Branch L\n- [ ] AI features expansion — Haiku draft 5–8 more candidates per module pending\n"},{"title":"5. Cross-cutting demotions (under review)","body_md":"\n- `other.data_governance` — was Required; demoted to **Preferred + out of checklist**.\n  Rationale: not all SMEs need a formal data-governance baseline — many rely on\n  cloud-vendor defaults (encryption-at-rest, role-based access via SaaS provider).\n- `other.user_access_roles` — same treatment. Listed in Optional / Add-ons; user\n  decides whether to fold back in via the canonical viewer cap editor.\n- `sc.delivery_dispatch` — was Required for SC; demoted to **Preferred**. Rationale:\n  service businesses (consultancies, SaaS) don't dispatch goods; demote so the\n  Required gate doesn't unfairly block them.\n"},{"title":"6. Pre-approval form features","body_md":"\n- **Compliance baseline (Q23–Q31)** — verbatim IMDA pre-approval form. Embedded inline\n  in both Type 1.1 and Type 2 sub-tabs.\n- **AI Features** — multi-select checkboxes + \"Others — please define\" textbox.\n- **Multi-select state** — saved in browser localStorage per cap. (Will need a\n  proper backend if we want cross-device persistence.)\n"},{"title":"7. Edit affordance for reviewers","body_md":"\nEvery cap row in the FINAL view has an **Edit** button (Type 1.1 view). Reviewers can:\n- Change Mandatory / Preferred / Advanced tier\n- Toggle \"Include in checklist\" (sets `in_checklist: false` → Optional / Add-ons tail)\n- Edit Type 1.1 question wording, Type 1 verbose, name, description, note\n- Save → YAML snippet copied to clipboard → paste into `data/manual_cap_overrides.yaml`\n\nDrafts auto-save to localStorage between page loads; \"Export N drafts\" floating button\nexports all unsaved edits in one batch.\n"}];
 function escapeHtml(s) {
   return String(s ?? "").replace(/[&<>"']/g, c => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"

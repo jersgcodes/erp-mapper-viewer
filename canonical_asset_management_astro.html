@@ -1,0 +1,284 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-tse3voba style="--fontStack: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Helvetica, Arial, sans-serif;--text: #0f172a;--bg: #ffffff;"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Asset Management — Astro view</title><link rel="stylesheet" href="./_astro/_module_.dPLOlrvc.css">
+<style>.viewer-layout[data-astro-cid-tse3voba]{display:flex;align-items:flex-start;min-height:calc(100vh - 44px)}.viewer-main[data-astro-cid-tse3voba]{flex:1;padding:18px 24px;max-width:1280px;overflow-x:hidden}.build-badge[data-astro-cid-tse3voba]{position:fixed;top:8px;right:12px;z-index:100;padding:3px 9px;border-radius:11px;font-size:10px;font-weight:800;letter-spacing:.08em;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;cursor:help;box-shadow:0 1px 3px #0f172a2e;user-select:none}.build-badge-astro[data-astro-cid-tse3voba]{background:#ddd6fe;color:#5b21b6;border:1px solid #c4b5fd}html,body{margin:0;padding:0}body{font-family:var(--fontStack);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}a{color:inherit}code{font-family:ui-monospace,SFMono-Regular,monospace;font-size:.92em}
+</style><script type="module">const a="erp-sidebar-collapsed",e=document.querySelector(".sidebar"),o=document.querySelector("[data-toggle]");e&&o&&(localStorage.getItem(a)==="1"&&(e.dataset.collapsed="true"),o.addEventListener("click",()=>{const t=e.dataset.collapsed==="true";e.dataset.collapsed=t?"false":"true",localStorage.setItem(a,t?"0":"1")}));
+</script></head> <body data-astro-cid-tse3voba style="--fontStack: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Helvetica, Arial, sans-serif;--text: #0f172a;--bg: #ffffff;"> <style>
+  .top-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e5ea;
+    padding: 0 24px;
+    flex-shrink: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .top-bar-inner {
+    display: flex;
+    align-items: stretch;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 2px;
+  }
+  .top-bar-brand {
+    font-size: 12px;
+    color: #6b7380;
+    padding: 14px 18px 14px 0;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-right: 1px solid #e2e5ea;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .top-bar-link:hover {
+    color: #2563eb;
+    background: #f5f6f8;
+  }
+  .top-bar-link.active {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  /* Two-row nav (2026-04-29): row 1 = analysis tools, row 2 = modules. */
+  .top-bar.two-row .top-bar-row1 {
+    border-bottom: 1px solid #f1f3f6;
+  }
+  .top-bar.two-row .top-bar-row2 {
+    background: #fafbfc;
+  }
+  .top-bar.two-row .top-bar-row2 .top-bar-link {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .top-bar-row-label {
+    font-size: 10px;
+    color: #6b7380;
+    padding: 9px 14px 9px 0;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    align-self: center;
+    border-right: 1px solid #e8ebef;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-dropdown { position: relative; display: inline-flex; }
+  .top-bar-dropdown summary {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 14px 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    user-select: none;
+  }
+  .top-bar-dropdown summary::-webkit-details-marker { display: none; }
+  .top-bar-dropdown summary::after {
+    content: "";
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #6b7380;
+    margin-left: 7px;
+    transition: transform 0.12s;
+  }
+  .top-bar-dropdown[open] summary::after { transform: rotate(180deg); }
+  .top-bar-dropdown summary:hover { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown[open] summary { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown.active summary {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  .top-bar-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: -1px;
+    background: #ffffff;
+    border: 1px solid #e2e5ea;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    padding: 6px;
+    min-width: 220px;
+    z-index: 110;
+  }
+  .top-bar-dropdown-menu a {
+    display: block;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-radius: 4px;
+    line-height: 1.35;
+  }
+  .top-bar-dropdown-menu a:hover { background: #f1f5f9; color: #2563eb; }
+  .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
+  .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
+
+  /* Build-source badge — fixed top-right so reviewers know which pipeline
+     emitted the page they're looking at (Python vs Astro). */
+  .build-badge {
+    position: fixed;
+    top: 8px;
+    right: 12px;
+    z-index: 100;
+    padding: 3px 9px;
+    border-radius: 11px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    cursor: help;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.18);
+    user-select: none;
+  }
+  .build-badge-python {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+  }
+  .build-badge-astro {
+    background: #ddd6fe;
+    color: #5b21b6;
+    border: 1px solid #c4b5fd;
+  }
+  /* Toggle pair: render PY + ASTRO side-by-side; inactive one is a clickable
+     link OR greyed-out span (no counterpart). Lives inline as the FIRST item
+     in the nav row 1 (was previously fixed top-right corner). */
+  .build-badge-toggle {
+    display: inline-flex;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12);
+    border-radius: 9px;
+    overflow: hidden;
+    cursor: help;
+    margin-right: 12px;
+  }
+  .build-badge-toggle.inline { position: static; top: auto; right: auto; }
+  .build-badge-toggle .build-badge {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 3px 9px;
+  }
+  .build-badge-toggle .build-badge-python { border-right: none; }
+  .build-badge-toggle a.build-badge { opacity: 0.6; text-decoration: none; }
+  .build-badge-toggle a.build-badge:hover { opacity: 1; }
+  .build-badge-toggle .build-badge.active { font-weight: 800; }
+  .build-badge-toggle .build-badge.no-counterpart {
+    opacity: 0.32; cursor: not-allowed; background: #f1f5f9; color: #94a3b8; border-color: #e2e8f0;
+  }
+
+  /* Greyed nav links — current build doesn't have an equivalent, but link
+     remains clickable (you'll jump out to the other build). */
+  .top-bar-link.no-counterpart { opacity: 0.42; }
+  .top-bar-link.no-counterpart:hover { opacity: 0.7; }
+  .top-bar-dropdown.no-counterpart > summary { opacity: 0.42; }
+  .top-bar-dropdown.no-counterpart > summary:hover { opacity: 0.7; }
+</style>
+<nav class="top-bar two-row">
+  <div class="top-bar-inner top-bar-row1">
+    <div class="build-badge-toggle inline" title="Switch between Python and Astro views of the same data"><a class="build-badge build-badge-python" href="canonical_asset_management.html" title="Python pipeline (scripts/build_*.py). Source of truth. Click to switch.">PY</a><span class="build-badge build-badge-astro active" title="Astro pipeline (viewer/). Parallel viewer for migration evaluation.">ASTRO</span></div>
+    <span class="top-bar-brand">PSG ERP Spec</span>
+    <a class="top-bar-link no-counterpart" href="index.html">Overview</a>
+    <a class="top-bar-link" href="dashboard.html">Dashboard</a>
+    <a class="top-bar-link no-counterpart" href="meeting_summary.html">Meeting Summary</a>
+    <a class="top-bar-link no-counterpart" href="stakeholders.html">Stakeholders</a>
+    <a class="top-bar-link no-counterpart" href="coverage_analysis.html">Coverage Analysis</a>
+    <a class="top-bar-link no-counterpart" href="integrations.html">Integrations</a>
+    <details class="top-bar-dropdown no-counterpart"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_asset_management.html">Flows (this module)<span class="sub">Partial-L3 UCs from workflows touching this module</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="vendor_coverage.html">Vendor Coverage<span class="sub">Per-vendor scoring (legacy — vendor-level data is sparse; treat as research not stakeholder)</span></a><a class="" href="coverage_audit.html">Pipeline Coverage Audit<span class="sub">Sol cat → canonical pipeline QA — CLEAN/LEAK/LOW status per sol cat (engineering view)</span></a><a class="" href="stress_test.html">Stress Test<span class="sub">Solution + checklist stress-test with role-based verdict + coverage fingerprint diagram</span></a><a class="" href="inspection_log.html">Inspection Log<span class="sub">Per-item change log: caps, sub-modules, L2 questions — git-derived add/last-modified dates</span></a></div></details>
+  </div>
+  <div class="top-bar-inner top-bar-row2">
+    <span class="top-bar-row-label">Modules</span>
+    <a class="top-bar-link" href="canonical_financial_management_astro.html">Financial</a>
+    <a class="top-bar-link" href="canonical_human_resources_management_astro.html">HR</a>
+    <a class="top-bar-link" href="canonical_sales_and_crm_astro.html">Sales & CRM</a>
+    <a class="top-bar-link" href="canonical_supply_chain_and_inventory_astro.html">Supply Chain</a>
+    <a class="top-bar-link" href="canonical_project_management_astro.html">Project Mgmt</a>
+    <a class="top-bar-link active" href="canonical_asset_management_astro.html">Asset Mgmt</a>
+    <a class="top-bar-link" href="canonical_manufacturing_management_astro.html">Manufacturing</a>
+    <a class="top-bar-link" href="canonical_field_service_management_astro.html">Field Service</a>
+    <a class="top-bar-link" href="canonical_fleet_management_astro.html">Fleet</a>
+    <a class="top-bar-link" href="canonical_others_astro.html">Other</a>
+  </div>
+</nav> <div class="viewer-layout" data-astro-cid-tse3voba style="--fontStack: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Helvetica, Arial, sans-serif;--text: #0f172a;--bg: #ffffff;"> <aside class="sidebar" data-collapsed="false" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <div class="sidebar-head" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="sidebar-title" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Sub-modules</span> <button class="sidebar-toggle" aria-label="Toggle sidebar" data-toggle data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="toggle-icon" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">‹</span> </button> </div> <nav class="sidebar-nav" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <a class="sidebar-link" href="#sm-asset_register_lifecycle" title="Asset Register &#38; Lifecycle" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">AS</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Asset Register &amp; Lifecycle</span> </a><a class="sidebar-link" href="#sm-maintenance_operations" title="Maintenance Operations (CMMS/EAM)" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">MA</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Maintenance Operations (CMMS/EAM)</span> </a><a class="sidebar-link" href="#sm-compliance_hse_cyber" title="Compliance, HSE &#38; OT Cybersecurity" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">CO</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Compliance, HSE &amp; OT Cybersecurity</span> </a><a class="sidebar-link" href="#sm-reliability_engineering" title="Reliability Engineering" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">RE</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Reliability Engineering</span> </a><a class="sidebar-link" href="#sm-asset_analytics_digital" title="Asset Analytics &#38; Digital Twin" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">AS</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Asset Analytics &amp; Digital Twin</span> </a><a class="sidebar-link" href="#sm-capital_commercial" title="Capital &#38; Commercial Asset Management" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;"> <span class="link-icon" aria-hidden="true" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">CA</span> <span class="link-label" data-astro-cid-ssfzsv2f style="--full: 220px;--collapsed: 48px;--border: #e2e8f0;--bg: #f8fafc;--text: #0f172a;--textMuted: #475569;--primary: #0284c7;">Capital &amp; Commercial Asset Management</span> </a> </nav> </aside>   <main class="viewer-main" data-astro-cid-tse3voba style="--fontStack: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Helvetica, Arial, sans-serif;--text: #0f172a;--bg: #ffffff;">  <header class="pilot-header" data-astro-cid-4equnste> <h1 data-astro-cid-4equnste>Asset Management</h1> <p class="meta" data-astro-cid-4equnste>
+Module ID <strong data-astro-cid-4equnste>600</strong> ·
+28 caps in checklist ·
+6 sub-modules <span data-astro-cid-4equnste> · 2 unassigned</span> </p> <p class="origin" data-astro-cid-4equnste>
+Astro parallel render. Python source of truth:  <a href="canonical_asset_management.html" data-astro-cid-4equnste>
+canonical_asset_management.html
+</a> </p> </header> <section id="sm-asset_register_lifecycle" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Asset Register &amp; Lifecycle</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[3R · 1P]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">4 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="asset.register" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Asset Register &amp; Hierarchy</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution maintain a centralised asset register with hierarchical classification, unique identifiers, technical specifications, custodian tracking, and lifecycle metadata, so you have complete visibility for maintenance planning and compliance?</span> </li> <li class="cap-row" data-cap-id="asset.lifecycle" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Asset Lifecycle Management</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution track asset states through their full lifecycle, record key dates and transfers with audit trail, and retain complete historical records, so you maintain compliance and visibility across acquisition to retirement?</span> </li> <li class="cap-row" data-cap-id="asset.depreciation" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>3)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Depreciation &amp; Valuation</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution calculate depreciation using multiple methods, maintain separate book and tax schedules, automatically post entries to the general ledger, and track revaluations with audit trail, so you manage asset values accurately across reporting periods?</span> </li> <li class="cap-row" data-cap-id="asset.leasing" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>4)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Asset Leasing &amp; Lease Accounting</span> <span class="sector-pill sector-pill-partial" title="Relevant (5/6):
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering
+
+Not relevant (1/6):
+  ✗ Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">5/6 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution calculate and maintain right-of-use assets and lease liabilities with re-measurement on term changes, payment schedules, and residual value tracking, for IFRS 16 compliance?</span> </li>  </ol> </section><section id="sm-maintenance_operations" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Maintenance Operations (CMMS/EAM)</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[4R · 2P · 1A]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">7 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="asset.pm_planning" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Preventive Maintenance Planning</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution generate scheduled work orders from preventive maintenance plans, support multiple maintenance strategies, and display upcoming activities with completion status, so you avoid unplanned equipment downtime?</span> </li> <li class="cap-row" data-cap-id="asset.work_orders" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Work Order Management</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution create, assign, and close work orders for maintenance types, with spare parts reservation, labour tracking, failure codes, approval workflows, and contractor cost management, so technicians execute planned maintenance with full visibility and compliance?</span> </li> <li class="cap-row" data-cap-id="asset.maintenance_requests" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>3)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Maintenance Requests &amp; Service Desk</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution enable non-maintenance users to submit service requests via multiple channels, categorise and prioritise requests at submission, track status with notifications, and attach supporting documentation, so service issues are captured and resolved without manual re-entry?</span> </li> <li class="cap-row" data-cap-id="asset.spare_parts" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>4)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Spare Parts &amp; Maintenance Inventory</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution maintain a spare parts catalogue with multi-location tracking, automatic reorder alerts, work order reservations, and consumption history by asset, so you prevent stockouts and optimise maintenance spending?</span> </li> <li class="cap-row" data-cap-id="asset.mobile_field" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>5)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Mobile Field Work</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Can your solution enable technicians to execute work orders on mobile devices with offline capability, data capture functionality, and location stamping, so field teams remain productive without constant connectivity?</span> </li> <li class="cap-row" data-cap-id="asset.shutdown_turnaround" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>6)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Shutdown, Turnaround &amp; Outage Management</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution manage shutdown events as distinct planning objects with aggregated work orders, critical-path scheduling, resource allocation, event-level approvals, progress tracking, and post-event reporting, so you can execute major maintenance with full cost control and audit visibility?</span> </li> <li class="cap-row" data-cap-id="asset.mobile_disconnected" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>7)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Disconnected / Offline Field Operations</span> <span class="sector-pill sector-pill-partial" title="Relevant (3/6):
+  ✓ Built Environment, Environmental Services, Marine &#38; Offshore
+
+Not relevant (3/6):
+  ✗ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">3/6 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Can your solution enable technicians to work offline with pre-downloaded work orders and assets, automatically resolve sync conflicts upon reconnection, and queue attachments for asynchronous upload, so field teams remain productive without connectivity?</span> </li>  </ol> </section><section id="sm-compliance_hse_cyber" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Compliance, HSE &amp; OT Cybersecurity</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[1R · 1A]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">2 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="asset.compliance" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Inspection, Safety &amp; Regulatory Compliance</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution manage inspections and safety checks with configurable types and frequencies, record pass/fail outcomes, maintain audit trails, and generate expiry alerts, so you stay compliant with regulatory and insurance requirements?</span> </li> <li class="cap-row" data-cap-id="asset.cybersecurity_ot" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>OT / ICS Cybersecurity &amp; Asset Vulnerability</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution track patch and firmware versions per OT asset, enforce approval workflows for changes, document network zones and compensating controls, and log security incidents with audit trails, so you manage OT vulnerability exposure and demonstrate compliance without production disruption?</span> </li>  </ol> </section><section id="sm-reliability_engineering" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Reliability Engineering</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[1P · 2A]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">3 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="asset.condition_monitoring" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Condition Monitoring &amp; Predictive Maintenance</span> <span class="sector-pill sector-pill-partial" title="Relevant (5/6):
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering
+
+Not relevant (1/6):
+  ✗ Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">5/6 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution capture asset condition data from multiple sources, configure independent thresholds, automatically create maintenance work orders when limits are exceeded, and display historical trends with real-time alerts, so you shift from calendar-based to condition-based maintenance?</span> </li> <li class="cap-row" data-cap-id="asset.rcm_fmea" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Reliability-Centred Maintenance &amp; FMEA</span> <span class="sector-pill sector-pill-partial" title="Relevant (6/6):
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">6/6 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution maintain a failure mode library with risk scoring and maintenance strategy assignment, linking each failure mode to its preventive maintenance plan, so you can justify and optimise maintenance decisions by failure risk?</span> </li> <li class="cap-row" data-cap-id="asset.reliability_engineering" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>3)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Reliability Engineering &amp; Bad-Actor Analysis</span> <span class="sector-pill sector-pill-partial" title="Relevant (6/6):
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">6/6 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Can your solution identify chronically failing assets using failure metrics and downtime data, support root cause analysis with corrective action tracking, maintain failure code taxonomy, and monitor reliability improvement trends, so you can eliminate repeat failures and optimise asset performance?</span> </li>  </ol> </section><section id="sm-asset_analytics_digital" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Asset Analytics &amp; Digital Twin</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[1R · 2P · 2A]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">5 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="asset.analytics_kpi" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Maintenance Analytics &amp; KPIs</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution calculate and report maintenance KPIs including asset and labour cost analysis, preventive schedule compliance, and downtime tracking by failure category, so you can monitor asset health and optimise maintenance planning?</span> </li> <li class="cap-row" data-cap-id="asset.linear_assets" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Linear Assets</span> <span class="sector-pill sector-pill-partial" title="Relevant (3/6):
+  ✓ Built Environment, Environmental Services, Marine &#38; Offshore
+
+Not relevant (3/6):
+  ✗ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">3/6 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Can your solution manage linear assets by distance-based reference points, record condition data across segments, create work orders scoped to segment ranges, and retain historical records through segment changes, to enable visibility of asset condition and optimise spare-parts inventory?</span> </li> <li class="cap-row" data-cap-id="asset.geospatial_gis" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>3)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Geospatial Asset Visualisation &amp; GIS Integration</span> <span class="sector-pill sector-pill-partial" title="Relevant (3/6):
+  ✓ Built Environment, Environmental Services, Marine &#38; Offshore
+
+Not relevant (3/6):
+  ✗ Advanced Manufacturing, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">3/6 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution display assets on an interactive map with layer control, synchronise coordinates from authoritative GIS sources, and enable work order creation and crew assignment based on asset location and geofence boundaries, for organisations managing distributed assets?</span> </li> <li class="cap-row" data-cap-id="asset.spares_optimization" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>4)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Spare Parts Optimisation</span> <span class="sector-pill sector-pill-partial" title="Relevant (5/6):
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering
+
+Not relevant (1/6):
+  ✗ Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">5/6 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Can your solution analyse spare-parts inventory to recommend optimal stock levels and locations, calculate safety stock and economic order quantities, identify obsolescence risk, and model policy changes before deployment, so you balance stock-outs against carrying costs?</span> </li> <li class="cap-row" data-cap-id="asset.ar_vr_digital_twin" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>5)</span> <span class="cap-name" data-astro-cid-xjia6wbs>AR / Digital Twin Work Instruction</span> <span class="sector-pill sector-pill-partial" title="Relevant (4/6):
+  ✓ Advanced Manufacturing, Built Environment, Marine &#38; Offshore, Precision Engineering
+
+Not relevant (2/6):
+  ✗ Environmental Services, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">4/6 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Can your solution maintain a 3D digital twin linked to each asset, overlay work instructions via mobile AR, and enable remote expert annotation for maintenance and training, so technicians can practise safely and collaborate in real time?</span> </li>  </ol> </section><section id="sm-capital_commercial" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Capital &amp; Commercial Asset Management</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[4P · 1A]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">5 caps</span>  </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="asset.contracts_warranty" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Warranty &amp; Service Contracts</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Can your solution track warranty and service contract terms, route in-warranty work orders to responsible vendors automatically, and link warranty claims to maintenance requests, so repair costs are correctly recovered and assigned?</span> </li> <li class="cap-row" data-cap-id="asset.capital_projects" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Capital Projects &amp; New Asset Commissioning</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution track capital project costs and progressively capitalise assets as components enter service, with handover checklists and transfer of technical documentation to the asset register, so new assets transition to operational maintenance?</span> </li> <li class="cap-row" data-cap-id="asset.investment_planning" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>3)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Asset Investment Planning &amp; Replacement Strategy</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution model asset replacement scenarios across multiple time horizons, calculate remaining useful life by condition and age, rank candidates by replacement risk, and compare capital impacts by asset class, so you can prioritise spending and prevent unplanned downtime?</span> </li> <li class="cap-row" data-cap-id="asset.sla_commercial" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>4)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Asset SLA &amp; Commercial Uptime Management</span> <span class="sector-pill sector-pill-partial" title="Relevant (5/6):
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering
+
+Not relevant (1/6):
+  ✗ Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">5/6 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution track contractual SLA terms per asset, calculate real-time uptime compliance excluding planned maintenance, monitor breach thresholds, and generate customer-facing compliance reports, so you can bill penalties or bonuses accurately?</span> </li> <li class="cap-row" data-cap-id="asset.energy_carbon" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>5)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Energy &amp; Carbon Tracking per Asset</span> <span class="sector-pill sector-pill-partial" title="Relevant (5/6):
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering
+
+Not relevant (1/6):
+  ✗ Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">5/6 sectors</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution track energy consumption and carbon footprint per asset with meter source, calculate carbon by emission factors, aggregate to multiple organisational levels, detect consumption anomalies, and export data to sustainability reporting, for informed operational decisions?</span> </li>  </ol> </section><section id="sm-_orphans" data-astro-cid-4equnste> <div class="fam-head" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;"> <span class="fam-rule" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">──</span> <span class="fam-name" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">Unassigned</span> <span class="fam-tag" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">[2R]</span> <span class="fam-count" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">2 caps</span> <span class="fam-desc" data-astro-cid-mg4n4y7u style="--border: #e2e8f0;--textMuted: #475569;--textDim: #64748b;--textFaint: #94a3b8;">— Caps not yet assigned to any sub-module in config/sub_modules.yaml</span> </div>  <ol class="cap-list" data-astro-cid-4equnste> <li class="cap-row" data-cap-id="asset.mobile_access" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>1)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Mobile and Multi-Device Access</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution run on multiple device types without installation, adapt the interface to different screen sizes, and allow users to view, update, and close work orders and asset records from any device with push notifications?</span> </li> <li class="cap-row" data-cap-id="asset.integration_import_export" data-astro-cid-xjia6wbs> <span class="cap-num" data-astro-cid-xjia6wbs>2)</span> <span class="cap-name" data-astro-cid-xjia6wbs>Data Import, Export &amp; Integration</span> <span class="sector-pill sector-pill-generic" title="Generic — relevant across all 6 sectors this module applies to:
+  ✓ Advanced Manufacturing, Built Environment, Environmental Services, Marine &#38; Offshore, Precision Engineering, Food" data-astro-cid-btffvvak style="--genericBg: #ecfdf5;--genericFg: #047857;--genericBrd: #a7f3d0;--partialBg: #fef3c7;--partialFg: #92400e;--partialBrd: #fcd34d;--fontPill: 10px;--radiusPill: 10px;">generic ✓</span> <span class="cap-em" data-astro-cid-xjia6wbs>—</span> <span class="cap-desc" data-astro-cid-xjia6wbs>Does your solution import asset registers from standard file formats, export asset and work order data to standard formats, post depreciation automatically to accounting systems, and provide API access for third-party integrations, so you can migrate from spreadsheets and connect seamlessly with finance and enterprise platforms?</span> </li>  </ol> </section></main> </div> <!-- Build-source badge is now embedded in the Python-rendered nav via
+       _nav.py's compare_url toggle. No duplicate here. -->  </body> </html> 
