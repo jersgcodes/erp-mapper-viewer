@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-05-09T00:23:37.215544+08:00",
+  "kpis": {
+    "sol_cats": 89,
+    "sol_cats_excluded": 0,
+    "raw_requirements": 2774,
+    "unique_caps": 304,
+    "modules": 10,
+    "proxy_erps": 73,
+    "psg_solutions": 414
+  },
+  "pipeline_stages": [
+    {
+      "name": "Ingest",
+      "ds_analogue": "Web scraping + parse",
+      "plain_description": "Pull every sol cat page from IMDA's PSG pre-approval guide; extract every question and required-feature row.",
+      "stat": "83 sol cats"
+    },
+    {
+      "name": "Label & deduplicate",
+      "ds_analogue": "Topic modelling + entity resolution",
+      "plain_description": "Tag each requirement to one of 10 ERP modules, then merge near-duplicates across sol cats.",
+      "stat": "2,774 raw requirements"
+    },
+    {
+      "name": "Cluster into capabilities",
+      "ds_analogue": "Hierarchical clustering",
+      "plain_description": "Group merged requirements into capabilities — coherent vendor-qualification units.",
+      "stat": "304 capabilities"
+    },
+    {
+      "name": "Cross-validate",
+      "ds_analogue": "Multi-source consensus voting",
+      "plain_description": "Independently confirm each capability against reference ERPs (NetSuite, Odoo, ERPNext, SAP, Oracle, Microsoft) plus encyclopedic sources.",
+      "stat": "1425 features confirmed"
+    },
+    {
+      "name": "Enrich (sector + tier)",
+      "ds_analogue": "Conditional relevance scoring",
+      "plain_description": "Score each capability for relevance per sector (within the sectors the module applies to) and per SME tier.",
+      "stat": "304/304 caps scored"
+    },
+    {
+      "name": "Author vendor questions",
+      "ds_analogue": "Constrained text generation",
+      "plain_description": "Generate the vendor-facing checklist row per capability, format-locked to IMDA Type 1 (R1–R8 contract).",
+      "stat": "299 cap questions + 2606 use cases"
+    },
+    {
+      "name": "Audit & validate",
+      "ds_analogue": "Schema + rule-based testing",
+      "plain_description": "Run deterministic audits (P0 + P1 rules) against the produced checklist, sol-cat join, and use-case pipeline.",
+      "stat": "0 P0 violations target"
+    }
+  ],
+  "audit_summary": {
+    "solcat_p0": 0,
+    "solcat_p1": 18,
+    "checklist_p0": 0,
+    "uc_p0": null
+  }
+}
