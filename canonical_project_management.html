@@ -1628,6 +1628,15 @@
     padding: 1px 7px; border-radius: 10px; font-size: 9px; font-weight: 600;
     text-transform: uppercase; letter-spacing: 0.03em; margin-left: 4px;
   }
+  /* Cloud draft from another reviewer — visible to everyone via the shared
+     draft store (Cloudflare D1 via cap-edit-api). Distinct teal-ish hue so
+     reviewers can tell at a glance "this isn't mine; someone else is on this". */
+  .cap-cloud-pill {
+    display: inline-block;
+    background: #ccfbf1; color: #0f766e; border: 1px solid #5eead4;
+    padding: 1px 7px; border-radius: 10px; font-size: 9px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.03em; margin-left: 4px; cursor: help;
+  }
   .cap-terse-pill {
     display: inline-block;
     background: #dbeafe; color: #1e40af; border: 1px solid #93c5fd;
@@ -1730,6 +1739,97 @@
     cursor: pointer; font-weight: 600;
   }
   .copy-yaml-btn:hover { background: #0369a1; }
+
+  /* When the cloud editor backend is online, the floating button switches
+     to "publish" mode — green to signal it's a one-click commit, not a copy-
+     paste step. */
+  .export-drafts-btn-publish { background: #15803d; }
+  .export-drafts-btn-publish:hover { background: #166534; }
+  .export-drafts-btn-publish .count { background: #fef3c7; color: #92400e; }
+
+  /* ===== Publish modal (replaces Export-drafts when cloud is online) ===== */
+  .publish-modal {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 10000;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .publish-modal-inner {
+    background: #fff; border-radius: 8px; max-width: 880px; width: 92%;
+    max-height: 86vh; display: flex; flex-direction: column;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  .publish-modal-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 18px; border-bottom: 1px solid #e2e8f0;
+  }
+  .publish-modal-header h3 { margin: 0; font-size: 16px; color: #0f172a; }
+  .publish-modal-close {
+    background: none; border: none; font-size: 24px; cursor: pointer; color: #64748b;
+    line-height: 1; padding: 0 4px;
+  }
+  .publish-modal-close:hover { color: #0f172a; }
+  .publish-modal-body { padding: 14px 18px; overflow-y: auto; font-size: 13px; }
+  .publish-help {
+    margin: 0 0 12px; padding: 10px 14px;
+    background: #f0fdfa; border: 1px solid #5eead4; border-left: 3px solid #14b8a6;
+    border-radius: 4px; color: #0f766e; line-height: 1.5;
+  }
+  .publish-help code { background: #ccfbf1; padding: 1px 5px; border-radius: 3px; font-size: 0.92em; }
+  .publish-help b { color: #134e4a; }
+  .publish-table {
+    width: 100%; border-collapse: collapse; font-size: 12px;
+    margin: 0 0 12px;
+  }
+  .publish-table th {
+    background: #f8fafc; text-align: left; font-weight: 700;
+    color: #475569; padding: 6px 10px; border-bottom: 1px solid #e2e8f0;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .publish-table td {
+    padding: 7px 10px; border-bottom: 1px solid #f1f5f9; vertical-align: top;
+  }
+  .publish-table tr:last-child td { border-bottom: 0; }
+  .publish-table code {
+    background: #f1f5f9; padding: 1px 4px; border-radius: 2px;
+    font-size: 11px; color: #0f172a;
+  }
+  .publish-table .pub-fields code { background: #fef3c7; color: #92400e; margin-right: 3px; }
+  .publish-table .pub-author { color: #475569; font-weight: 500; }
+  .publish-table .pub-when { color: #64748b; font-size: 11px; }
+  .pub-origin {
+    display: inline-block; padding: 1px 7px; border-radius: 9px;
+    font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .pub-origin-local { background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
+  .pub-origin-cloud { background: #ccfbf1; color: #0f766e; border: 1px solid #5eead4; }
+  .publish-actions {
+    display: flex; gap: 8px; align-items: center; margin-top: 8px; flex-wrap: wrap;
+  }
+  .publish-btn-primary {
+    padding: 8px 18px; background: #15803d; color: #fff;
+    border: 1px solid #15803d; border-radius: 4px; font-weight: 700;
+    font-size: 13px; cursor: pointer;
+  }
+  .publish-btn-primary:hover:not([disabled]) { background: #166534; }
+  .publish-btn-primary[disabled] { opacity: 0.5; cursor: not-allowed; }
+  .publish-btn-secondary {
+    padding: 8px 14px; background: #fff; color: #0f172a;
+    border: 1px solid #cbd5e1; border-radius: 4px; font-size: 12px; cursor: pointer;
+  }
+  .publish-btn-secondary:hover { background: #f1f5f9; }
+  .publish-btn-cancel {
+    padding: 8px 14px; background: none; color: #64748b;
+    border: 1px solid transparent; border-radius: 4px; font-size: 12px; cursor: pointer;
+  }
+  .publish-btn-cancel:hover { color: #0f172a; }
+  .publish-status {
+    margin-top: 12px; padding: 8px 12px; border-radius: 4px;
+    font-size: 12px; line-height: 1.5; min-height: 14px;
+  }
+  .publish-status:not(:empty) { background: #f8fafc; border: 1px solid #e2e8f0; }
+  .publish-status-ok { background: #ecfdf5 !important; border-color: #6ee7b7 !important; color: #065f46; }
+  .publish-status-fail { background: #fef2f2 !important; border-color: #fca5a5 !important; color: #991b1b; }
+  .publish-status a { color: #047857; font-weight: 600; }
+  .pub-empty { color: #94a3b8; font-style: italic; padding: 20px; text-align: center; }
 
   /* Toast */
   .l2-toast {
@@ -2113,7 +2213,17 @@ function ucMatchesSector(uc, sectorName) {
 mermaid.initialize({ startOnLoad: false, theme: "default", flowchart: { curve: "basis" } });
 
 function escapeHtml(s) {
-  return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  // Defense-in-depth: also escape " and ' so the same helper is safe when
+  // interpolated inside attribute values (e.g. `title="${escapeHtml(...)}"`),
+  // not just text nodes. Cloud-drafts surface external author emails inside
+  // tooltips, so quote-escaping closes that injection path even though Cloudflare
+  // Access JWTs don't carry quote chars in practice.
+  return String(s == null ? "" : s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 function shortSolcat(sc) { const parts = sc.split("__"); return parts[parts.length - 1]; }
@@ -3659,15 +3769,166 @@ function _capSaveLocal(mod, capId, edit) {
   try {
     if (!edit || Object.keys(edit).length === 0) {
       localStorage.removeItem(_capLocalKey(mod, capId));
+      // Also clear cloud — this reviewer's draft equals canonical now.
+      if (typeof _capCloudDelete === "function") _capCloudDelete(mod, capId);
       return null;
     }
     localStorage.setItem(_capLocalKey(mod, capId), JSON.stringify(edit));
+    // Mirror to cloud (debounced) so other reviewers see the draft.
+    if (typeof _capCloudPutDebounced === "function") _capCloudPutDebounced(mod, capId, edit);
   } catch (_) {}
   return edit;
 }
 
 function _capClearLocal(mod, capId) {
   try { localStorage.removeItem(_capLocalKey(mod, capId)); } catch (_) {}
+  if (typeof _capCloudDelete === "function") _capCloudDelete(mod, capId);
+}
+
+// =============================================================================
+// CLOUD DRAFTS — shared multi-user draft store backed by the Cloudflare
+// Worker (workers/cap-edit-api/src/index.js) + Cloudflare D1.
+//
+// Read model:
+//   GET /api/drafts on page load → cached in window._capCloudCache (Map keyed
+//   by `<module>:<cap_id>`). Subsequent reads hit the cache; we re-fetch on
+//   focus / publish / explicit refresh.
+//
+// Write model:
+//   PUT /api/drafts/:mod/:cap (debounced 500ms per cap) on every cap edit.
+//   localStorage stays in lockstep as offline fallback; if the cloud call
+//   fails (no network, auth expired, Worker hiccup), the local copy survives.
+//
+// Publish:
+//   POST /api/publish replaces the legacy "Export drafts → paste YAML" flow.
+//   Worker drains all D1 drafts, commits them to manual_cap_overrides.yaml,
+//   dispatches the apply-published-overrides workflow.
+//
+// Read precedence per cap:
+//   1. localStorage draft (this reviewer's pending edit, possibly mid-typing)
+//   2. cloud draft (another reviewer's saved edit, or this reviewer's last
+//      synced state)
+//   3. canonical (no overrides)
+// =============================================================================
+
+window._capCloudCache = window._capCloudCache || new Map();
+window._capCloudReady = false;
+window._capCloudOnline = true;          // flips false on first fetch failure
+
+const _capCloudKey = (mod, capId) => `${mod}:${capId}`;
+
+async function _capCloudInit() {
+  try {
+    const res = await fetch("/api/drafts", { credentials: "same-origin" });
+    if (!res.ok) {
+      console.warn(`[cloud-drafts] /api/drafts returned ${res.status}; running offline`);
+      window._capCloudOnline = false;
+      window._capCloudReady = true;
+      return;
+    }
+    const data = await res.json();
+    const cache = new Map();
+    for (const d of (data.drafts || [])) {
+      cache.set(_capCloudKey(d.module, d.cap_id), d);
+    }
+    window._capCloudCache = cache;
+    window._capCloudOnline = true;
+    window._capCloudReady = true;
+  } catch (e) {
+    console.warn("[cloud-drafts] init failed:", e);
+    window._capCloudOnline = false;
+    window._capCloudReady = true;
+  }
+}
+
+function _capCloudGet(mod, capId) {
+  return window._capCloudCache && window._capCloudCache.get(_capCloudKey(mod, capId)) || null;
+}
+
+const _CAP_CLOUD_DEBOUNCE_MS = 500;
+const _capCloudPendingTimers = new Map();
+
+async function _capCloudPut(mod, capId, edit) {
+  if (!window._capCloudOnline) return;
+  try {
+    const res = await fetch(
+      `/api/drafts/${encodeURIComponent(mod)}/${encodeURIComponent(capId)}`,
+      {
+        method: "PUT",
+        credentials: "same-origin",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ fields: edit }),
+      }
+    );
+    if (!res.ok) {
+      console.warn(`[cloud-drafts] PUT ${capId} -> ${res.status}`);
+      return;
+    }
+    const saved = await res.json();
+    window._capCloudCache.set(_capCloudKey(mod, capId), saved);
+  } catch (e) {
+    console.warn(`[cloud-drafts] PUT ${capId} failed:`, e);
+  }
+}
+
+function _capCloudPutDebounced(mod, capId, edit) {
+  const key = _capCloudKey(mod, capId);
+  const existing = _capCloudPendingTimers.get(key);
+  if (existing) clearTimeout(existing);
+  const t = setTimeout(() => {
+    _capCloudPendingTimers.delete(key);
+    _capCloudPut(mod, capId, edit);
+  }, _CAP_CLOUD_DEBOUNCE_MS);
+  _capCloudPendingTimers.set(key, t);
+}
+
+async function _capCloudDelete(mod, capId) {
+  if (!window._capCloudOnline) return;
+  try {
+    await fetch(
+      `/api/drafts/${encodeURIComponent(mod)}/${encodeURIComponent(capId)}`,
+      { method: "DELETE", credentials: "same-origin" }
+    );
+    window._capCloudCache.delete(_capCloudKey(mod, capId));
+  } catch (e) {
+    console.warn(`[cloud-drafts] DELETE ${capId} failed:`, e);
+  }
+}
+
+async function _capCloudRefresh() {
+  // Soft refetch (no UI block). Used after publish + on focus.
+  if (!window._capCloudOnline) return;
+  await _capCloudInit();
+}
+
+// Effective edit for a cap: localStorage wins (mid-typing), then cloud.
+function _capActiveEdit(mod, capId) {
+  return _capLocalEdit(mod, capId) || _capCloudGet(mod, capId)?.fields || null;
+}
+
+// Helper — short display form of an author email ("alice@x.com" → "alice").
+function _capShortAuthor(emailOrName) {
+  if (!emailOrName) return "?";
+  const at = emailOrName.indexOf("@");
+  return at > 0 ? emailOrName.slice(0, at) : emailOrName;
+}
+
+// Helper — humanise a timestamp ("2 min ago", "yesterday", etc.).
+function _capRelTime(iso) {
+  if (!iso) return "";
+  const now = Date.now();
+  const t = new Date(iso).getTime();
+  if (isNaN(t)) return "";
+  const diff = Math.max(0, now - t);
+  const sec = Math.round(diff / 1000);
+  if (sec < 60) return "just now";
+  const min = Math.round(sec / 60);
+  if (min < 60) return `${min}m ago`;
+  const hr = Math.round(min / 60);
+  if (hr < 24) return `${hr}h ago`;
+  const day = Math.round(hr / 24);
+  if (day < 7) return `${day}d ago`;
+  return new Date(iso).toLocaleDateString();
 }
 
 // YAML scalar emit helper. Uses block scalar `|` when text contains newlines
@@ -3770,7 +4031,10 @@ function _capDiffEdit(card, capData) {
 // Render the inline editor for a cap row (hidden by default).
 function renderCapEditor(c) {
   const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
-  const local = _capLocalEdit(moduleSlug, c.id);
+  // Pre-fill the editor from the active draft layer (local > cloud > canonical).
+  // Reviewers see other reviewers' drafts as the starting point unless they've
+  // already started editing themselves.
+  const local = _capActiveEdit(moduleSlug, c.id);
   const ovr = c._cap_override;
 
   // Resolve display values: local edit > override-applied > baseline
@@ -3853,11 +4117,13 @@ function renderCapEditor(c) {
 //   - Show original button visibility (since draft/override may now exist)
 function _capLiveUpdateRow(row, c) {
   const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
-  const local = _capLocalEdit(moduleSlug, c.id);
+  // local edit (this reviewer, mid-typing) wins over cloud (other reviewers' saved
+  // drafts) wins over canonical baseline.
+  const local = _capActiveEdit(moduleSlug, c.id);
   const ovr = c._cap_override;
   const vq = c.vendor_questions || {};
 
-  // Active values: localStorage > applied override (already in cap) > baseline
+  // Active values: localStorage > cloud draft > applied override > baseline
   const activeName = (local && local.name !== undefined) ? local.name : c.name;
   const activeTier = (local && local.sme_tier !== undefined) ? local.sme_tier : c.sme_tier;
   const activeQT = (local && local.vendor_question_terse !== undefined)
@@ -3892,16 +4158,24 @@ function _capLiveUpdateRow(row, c) {
 // Pills: override-applied / draft / terse (cap level)
 function _capPills(c) {
   const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
-  const local = _capLocalEdit(moduleSlug, c.id);
+  const localOnly = _capLocalEdit(moduleSlug, c.id);
+  const cloud = _capCloudGet(moduleSlug, c.id);
   const ovr = c._cap_override;
   const vq = c.vendor_questions || {};
-  // Type tag is always shown — clear which question version the user is looking at.
-  // Type 1.1 if a terse version exists (in either localStorage or canonical),
-  // else Type 1 fallback.
-  const hasTerse = !!((local && local.vendor_question_terse) || vq.question_terse);
+  // Type tag: Type 1.1 if a terse version exists in any draft layer or canonical.
+  const activeTerse = (localOnly && localOnly.vendor_question_terse)
+    || (cloud && cloud.fields && cloud.fields.vendor_question_terse)
+    || vq.question_terse;
+  const hasTerse = !!activeTerse;
   const parts = [];
   if (ovr) parts.push(`<span class="cap-override-pill" title="Override applied via data/manual_cap_overrides.yaml. Fields: ${escapeHtml((ovr.fields_overridden || []).join(', '))}">override</span>`);
-  if (local) parts.push(`<span class="cap-draft-pill" title="Unsaved draft in localStorage — use Export drafts to transfer to YAML">draft</span>`);
+  if (localOnly) {
+    parts.push(`<span class="cap-draft-pill" title="Unsaved draft in your browser. Click Publish to commit to the repo.">draft (you)</span>`);
+  } else if (cloud) {
+    const author = cloud.author && cloud.author.email || "another reviewer";
+    const when = cloud.updated_at ? _capRelTime(cloud.updated_at) : "";
+    parts.push(`<span class="cap-cloud-pill" title="Saved draft from ${escapeHtml(author)}${when ? ` · ${escapeHtml(when)}` : ""}. Visible to all reviewers; not yet published to the repo.">draft (${escapeHtml(_capShortAuthor(author))})</span>`);
+  }
   if (hasTerse) {
     parts.push(`<span class="cap-type-pill cap-type-11" title="Type 1.1 (1-liner). Click 'Show original' to reveal the Type 1 verbose baseline.">TYPE 1.1</span>`);
   } else {
@@ -3965,21 +4239,33 @@ function _allDraftKeys() {
 
 function _renderExportDraftsButton() {
   const existing = document.getElementById("export-drafts-btn");
-  const drafts = _allDraftKeys();
-  const total = drafts.caps.length;
+  const localCount = _allDraftKeys().caps.length;
+  const cloudCount = (window._capCloudCache && window._capCloudCache.size) || 0;
+  // Show all drafts (local + cloud) so reviewers see what publish would commit.
+  const total = Math.max(localCount, cloudCount);
   if (total === 0) {
     if (existing) existing.remove();
     return;
   }
+  // When cloud is online, the button publishes; when offline, it falls back
+  // to the legacy "Export to YAML" copy-paste flow.
+  const onlineMode = !!window._capCloudOnline;
+  const label = onlineMode
+    ? `Publish <span class="count">${total}</span> draft${total === 1 ? "" : "s"} → repo`
+    : `Export <span class="count">${total}</span> draft${total === 1 ? "" : "s"} → YAML`;
   if (existing) {
-    existing.querySelector(".count").textContent = total;
+    existing.classList.toggle("export-drafts-btn-publish", onlineMode);
+    existing.innerHTML = label;
     return;
   }
   const btn = document.createElement("button");
   btn.id = "export-drafts-btn";
-  btn.className = "export-drafts-btn";
-  btn.innerHTML = `Export <span class="count">${total}</span> drafts → YAML`;
-  btn.addEventListener("click", _showExportDraftsModal);
+  btn.className = onlineMode ? "export-drafts-btn export-drafts-btn-publish" : "export-drafts-btn";
+  btn.innerHTML = label;
+  btn.addEventListener("click", () => {
+    if (window._capCloudOnline) _showPublishModal();
+    else _showExportDraftsModal();
+  });
   document.body.appendChild(btn);
 }
 
@@ -4032,6 +4318,198 @@ function _showExportDraftsModal() {
   `;
   document.body.appendChild(overlay);
 }
+
+// =============================================================================
+// PUBLISH MODAL — replaces the export-drafts paste-into-YAML dance with a
+// single "Publish to repo" click that hits the Worker /api/publish endpoint.
+// Modal lists every draft (local + cloud), grouped by author, so the reviewer
+// can see exactly what's about to be committed.
+// =============================================================================
+
+function _showPublishModal() {
+  // Collect all drafts (cloud cache + local) keyed by mod:cap. Local wins.
+  const merged = new Map();
+  for (const [key, d] of (window._capCloudCache || new Map())) {
+    merged.set(key, {
+      module: d.module,
+      cap_id: d.cap_id,
+      fields: d.fields,
+      author: (d.author && d.author.email) || "(unknown)",
+      updated_at: d.updated_at,
+      origin: "cloud",
+    });
+  }
+  const localKeys = _allDraftKeys().caps;
+  for (const k of localKeys) {
+    const parts = k.split(":");
+    const mod = parts[1]; const capId = parts.slice(2).join(":");
+    try {
+      const fields = JSON.parse(localStorage.getItem(k));
+      if (!fields || Object.keys(fields).length === 0) continue;
+      merged.set(`${mod}:${capId}`, {
+        module: mod,
+        cap_id: capId,
+        fields,
+        author: "(you, not yet synced)",
+        updated_at: new Date().toISOString(),
+        origin: "local",
+      });
+    } catch (_) {}
+  }
+
+  const drafts = Array.from(merged.values()).sort((a, b) => {
+    const ta = a.updated_at || ""; const tb = b.updated_at || "";
+    return tb.localeCompare(ta); // newest first
+  });
+
+  const fmtFields = (fields) => Object.keys(fields).map(f => `<code>${escapeHtml(f)}</code>`).join(" ");
+  const rows = drafts.map(d => {
+    const when = _capRelTime(d.updated_at);
+    const originBadge = d.origin === "local"
+      ? `<span class="pub-origin pub-origin-local" title="In your browser, not yet synced to the shared draft store.">local</span>`
+      : `<span class="pub-origin pub-origin-cloud" title="Saved in the shared draft store. Visible to all reviewers.">shared</span>`;
+    return `
+      <tr>
+        <td><code>${escapeHtml(d.cap_id)}</code></td>
+        <td class="pub-fields">${fmtFields(d.fields)}</td>
+        <td class="pub-author">${escapeHtml(_capShortAuthor(d.author))}</td>
+        <td class="pub-when">${escapeHtml(when)}</td>
+        <td>${originBadge}</td>
+      </tr>
+    `;
+  }).join("");
+
+  const empty = drafts.length === 0
+    ? `<p class="pub-empty">No drafts to publish.</p>`
+    : "";
+
+  const overlay = document.createElement("div");
+  overlay.id = "publish-modal";
+  overlay.className = "publish-modal";
+  overlay.innerHTML = `
+    <div class="publish-modal-inner">
+      <div class="publish-modal-header">
+        <h3>Publish ${drafts.length} draft${drafts.length === 1 ? "" : "s"} to repo</h3>
+        <button class="publish-modal-close" data-action="close-publish">×</button>
+      </div>
+      <div class="publish-modal-body">
+        <p class="publish-help">
+          Clicking <b>Publish</b> commits these drafts to <code>data/manual_cap_overrides.yaml</code>
+          via the editor API, then triggers the rebuild workflow. Local drafts are flushed to the
+          shared store first. Drafts disappear from this list as the rebuild runs (~30 s).
+        </p>
+        ${empty}
+        ${drafts.length > 0 ? `
+          <table class="publish-table">
+            <thead><tr>
+              <th>Cap</th><th>Fields</th><th>Author</th><th>When</th><th>Origin</th>
+            </tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+        ` : ""}
+        <div class="publish-actions">
+          <button class="publish-btn-primary" data-action="confirm-publish" ${drafts.length === 0 ? "disabled" : ""}>
+            Publish to repo
+          </button>
+          <button class="publish-btn-secondary" data-action="show-yaml-fallback" title="Open the legacy paste-into-YAML view if you'd rather commit by hand.">
+            Show YAML snippet (manual paste)
+          </button>
+          <button class="publish-btn-cancel" data-action="close-publish">Cancel</button>
+        </div>
+        <div class="publish-status" id="publish-status"></div>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+}
+
+async function _doPublish() {
+  const status = document.getElementById("publish-status");
+  if (status) status.textContent = "Flushing local drafts to shared store…";
+
+  // Flush any pending local-only drafts to cloud first, sequentially.
+  const localKeys = _allDraftKeys().caps;
+  for (const k of localKeys) {
+    const parts = k.split(":");
+    const mod = parts[1]; const capId = parts.slice(2).join(":");
+    try {
+      const fields = JSON.parse(localStorage.getItem(k));
+      if (fields && Object.keys(fields).length > 0) {
+        await _capCloudPut(mod, capId, fields);
+      }
+    } catch (_) {}
+  }
+
+  if (status) status.textContent = "Publishing to repo…";
+
+  try {
+    const res = await fetch("/api/publish", {
+      method: "POST",
+      credentials: "same-origin",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({}),
+    });
+    if (!res.ok) {
+      const body = await res.text();
+      if (status) {
+        status.classList.add("publish-status-fail");
+        status.textContent = `Publish failed: ${res.status}. ${body.slice(0, 200)}`;
+      }
+      return;
+    }
+    const data = await res.json();
+    if (data.ok) {
+      // Clear local drafts; cloud cache will refresh from the next /api/drafts call.
+      for (const k of localKeys) {
+        try { localStorage.removeItem(k); } catch (_) {}
+      }
+      window._capCloudCache = new Map();
+      if (status) {
+        status.classList.add("publish-status-ok");
+        status.innerHTML = `Published <b>${data.applied}</b> draft${data.applied === 1 ? "" : "s"}. ${
+          data.commit_url
+            ? `<a href="${escapeHtml(data.commit_url)}" target="_blank" rel="noopener">View commit ↗</a>`
+            : ""
+        } The rebuild workflow is running; refresh in ~30s to see the changes reflected in canonical.`;
+      }
+      if (typeof _capShowToast === "function") {
+        _capShowToast(`Published ${data.applied} draft${data.applied === 1 ? "" : "s"} to repo.`, "success");
+      }
+      // Re-render the active view so cleared drafts disappear.
+      setTimeout(() => {
+        if (typeof renderOverview === "function") renderOverview();
+        _renderExportDraftsButton();
+      }, 200);
+    } else {
+      if (status) status.textContent = data.message || "Publish returned no-op.";
+    }
+  } catch (e) {
+    if (status) {
+      status.classList.add("publish-status-fail");
+      status.textContent = `Publish error: ${e.message || e}`;
+    }
+  }
+}
+
+document.addEventListener("click", (e) => {
+  if (e.target.matches("[data-action='close-publish']") || e.target.closest("[data-action='close-publish']")) {
+    const m = document.getElementById("publish-modal");
+    if (m) m.remove();
+    return;
+  }
+  if (e.target.matches("[data-action='confirm-publish']")) {
+    e.target.disabled = true;
+    e.target.textContent = "Publishing…";
+    _doPublish();
+    return;
+  }
+  if (e.target.matches("[data-action='show-yaml-fallback']")) {
+    const m = document.getElementById("publish-modal");
+    if (m) m.remove();
+    _showExportDraftsModal();
+    return;
+  }
+});
 
 document.addEventListener("click", (e) => {
   if (e.target.matches("[data-action='close-export']")) {
@@ -4210,19 +4688,32 @@ document.addEventListener("change", (e) => {
   }
 });
 
-// On DOM ready: auto-clear matching drafts + show floating export button.
-// Fires once on page load. Re-fires after every save/clear via the action handlers.
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => {
-    _l2PurgeLegacyDrafts();
-    _capAutoClearMatchingDrafts();
-    _renderExportDraftsButton();
-  });
-} else {
+// On DOM ready: clean stale drafts, fetch shared drafts from the Worker,
+// then re-render so other reviewers' edits show up in the canonical view.
+async function _capPageInit() {
   _l2PurgeLegacyDrafts();
   _capAutoClearMatchingDrafts();
   _renderExportDraftsButton();
+  await _capCloudInit();
+  // Re-render the active view so cloud drafts overlay correctly.
+  if (window._capCloudOnline && typeof renderOverview === "function") {
+    try { renderOverview(); } catch (_) {}
+  }
+  // Refresh the floating button (count includes both local + cloud drafts now)
+  _renderExportDraftsButton();
 }
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", _capPageInit);
+} else {
+  _capPageInit();
+}
+
+// Refresh cloud cache when the user comes back to the tab — they may have
+// edited from another browser / device, or a colleague may have published.
+window.addEventListener("focus", () => {
+  if (window._capCloudReady) _capCloudRefresh();
+});
 
 // =============================================================================
 // FINAL CHECKLIST VIEW (cap-only, IMDA Type 1)
@@ -4329,19 +4820,20 @@ function _t2SetOthers(mod, cluster, value) {
   } catch (_) {}
 }
 
-// Active sme_tier resolver — local edit (cap edit) wins over canonical.
+// Active sme_tier resolver — local edit (this reviewer) > cloud (other
+// reviewers) > applied override > canonical baseline.
 function _activeSmeTier(c) {
   const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
-  const local = (typeof _capLocalEdit === "function") ? _capLocalEdit(moduleSlug, c.id) : null;
-  if (local && local.sme_tier !== undefined) return local.sme_tier;
+  const active = (typeof _capActiveEdit === "function") ? _capActiveEdit(moduleSlug, c.id) : null;
+  if (active && active.sme_tier !== undefined) return active.sme_tier;
   return c.sme_tier;
 }
 
-// Active in_checklist (default true). Local edit wins; then applied override (already in c); then default.
+// Active in_checklist (default true). local > cloud > applied override > default.
 function _activeInChecklist(c) {
   const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
-  const local = (typeof _capLocalEdit === "function") ? _capLocalEdit(moduleSlug, c.id) : null;
-  if (local && local.in_checklist !== undefined) return local.in_checklist !== false;
+  const active = (typeof _capActiveEdit === "function") ? _capActiveEdit(moduleSlug, c.id) : null;
+  if (active && active.in_checklist !== undefined) return active.in_checklist !== false;
   if (c.in_checklist === false) return false;
   return true;
 }
@@ -4363,11 +4855,11 @@ function _t2BulletText(c) {
   if (baselineOverride) return baselineOverride;
 
   const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
-  const local = (typeof _capLocalEdit === "function")
-    ? _capLocalEdit(moduleSlug, c.id) : null;
+  const active = (typeof _capActiveEdit === "function")
+    ? _capActiveEdit(moduleSlug, c.id) : null;
   const vq = c.vendor_questions || {};
-  const draftTerse = (local && local.vendor_question_terse !== undefined)
-    ? local.vendor_question_terse : null;
+  const draftTerse = (active && active.vendor_question_terse !== undefined)
+    ? active.vendor_question_terse : null;
   let src = (draftTerse !== null && draftTerse !== "")
     ? String(draftTerse).trim()
     : (vq.question_terse || "").trim();
@@ -5028,13 +5520,14 @@ function renderFinalChecklist() {
     }
   }
 
-  // Resolve the active tier for a cap — local edit (localStorage) wins over
-  // canonical. This ensures "to delete" + tier shifts hide/show caps
-  // immediately, before the override is committed to YAML.
+  // Resolve the active tier for a cap — local edit > cloud draft > canonical.
+  // This ensures "to delete" + tier shifts hide/show caps immediately, before
+  // the override is committed to YAML, and propagates other reviewers' edits
+  // to this view.
   const _activeTierFor = (c) => {
     const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
-    const local = _capLocalEdit(moduleSlug, c.id);
-    if (local && local.sme_tier !== undefined) return local.sme_tier;
+    const active = _capActiveEdit(moduleSlug, c.id);
+    if (active && active.sme_tier !== undefined) return active.sme_tier;
     return c.sme_tier;
   };
 
@@ -5127,7 +5620,7 @@ function renderFinalChecklist() {
 
     // Cap-edit override pills (override / draft / terse) + render decision
     const moduleSlug = (DATA.module && DATA.module.module) || (DATA.module || "");
-    const local = _capLocalEdit(moduleSlug, c.id);
+    const local = _capActiveEdit(moduleSlug, c.id);
     const ovr = c._cap_override;
     const editPills = _capPills(c);
     // Active value precedence (highest to lowest):
