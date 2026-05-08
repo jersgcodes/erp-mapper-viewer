@@ -980,7 +980,11 @@
             "reason": "Essential for inventory, sales, and financial management"
           }
         }
-      }
+      },
+      "family": "Core Ledger & Close",
+      "sub_module_id": "core_ledger_close",
+      "sub_module_name": "Core Ledger & Close",
+      "sub_module_desc": "General ledger, chart of accounts, financial reporting, fixed assets, audit trail, period close — a full accounting system."
     },
     {
       "id": "fin.accounts_receivable",
@@ -2024,7 +2028,11 @@
             "reason": "Core function for customer invoicing and receivables management"
           }
         }
-      }
+      },
+      "family": "Revenue Cycle",
+      "sub_module_id": "revenue_cycle",
+      "sub_module_name": "Revenue Cycle (AR)",
+      "sub_module_desc": "Order-to-cash finance leg — invoicing, credit, collections, revenue recognition, PEPPOL/InvoiceNow, payment gateway integration."
     },
     {
       "id": "fin.accounts_payable",
@@ -3023,7 +3031,11 @@
             "reason": "Critical for managing supplier and distributor invoice payments"
           }
         }
-      }
+      },
+      "family": "Expense Cycle",
+      "sub_module_id": "expense_cycle",
+      "sub_module_name": "Expense Cycle (AP)",
+      "sub_module_desc": "Procure-to-pay finance leg — vendor bills, three-way match, staff expense claims, project accounting, payroll GL posting."
     },
     {
       "id": "fin.bank_cash_management",
@@ -4009,7 +4021,11 @@
             "reason": "Critical for managing customer payments and supplier cash flows"
           }
         }
-      }
+      },
+      "family": "Treasury & Compliance",
+      "sub_module_id": "bank_tax_fx",
+      "sub_module_name": "Bank, Tax & FX (Core Treasury)",
+      "sub_module_desc": "Bank reconciliation, GST tax management, multi-currency and FX revaluation — day-to-day SG treasury operations."
     },
     {
       "id": "fin.tax_management",
@@ -4722,7 +4738,11 @@
         "author": "human-review",
         "edited_at": "2026-05-08",
         "note": "Demoted required → preferred. GST/VAT compliance is universal for registered businesses but Singapore SMEs below the GST threshold ($1M revenue) don't register; demotion lets non-registered vendors pass without gating.\n"
-      }
+      },
+      "family": "Treasury & Compliance",
+      "sub_module_id": "bank_tax_fx",
+      "sub_module_name": "Bank, Tax & FX (Core Treasury)",
+      "sub_module_desc": "Bank reconciliation, GST tax management, multi-currency and FX revaluation — day-to-day SG treasury operations."
     },
     {
       "id": "fin.financial_reporting",
@@ -5709,7 +5729,11 @@
             "reason": "Inventory valuation, margin analysis, supplier payment tracking"
           }
         }
-      }
+      },
+      "family": "Core Ledger & Close",
+      "sub_module_id": "core_ledger_close",
+      "sub_module_name": "Core Ledger & Close",
+      "sub_module_desc": "General ledger, chart of accounts, financial reporting, fixed assets, audit trail, period close — a full accounting system."
     },
     {
       "id": "fin.fixed_assets",
@@ -6382,7 +6406,11 @@
             "reason": "Warehouse equipment, vehicles, infrastructure depreciation"
           }
         }
-      }
+      },
+      "family": "Core Ledger & Close",
+      "sub_module_id": "core_ledger_close",
+      "sub_module_name": "Core Ledger & Close",
+      "sub_module_desc": "General ledger, chart of accounts, financial reporting, fixed assets, audit trail, period close — a full accounting system."
     },
     {
       "id": "fin.budgeting_forecasting",
@@ -7017,7 +7045,11 @@
             "reason": "Critical for inventory and sales forecasting"
           }
         }
-      }
+      },
+      "family": "Planning & Analytics",
+      "sub_module_id": "planning_analytics_finance",
+      "sub_module_name": "Planning & Analytics (Finance)",
+      "sub_module_desc": "Budgeting, forecasting, financial dashboards, AI/ML for finance."
     },
     {
       "id": "fin.multi_currency",
@@ -7640,7 +7672,11 @@
         "author": "human-review",
         "edited_at": "2026-05-08",
         "note": "Demoted to Optional / Add-on. Not universal — most SMEs trade in SGD only; multi-currency only matters for export, regional, or franchise businesses. Stays visible under Optional / Add-ons in Type 2.\n"
-      }
+      },
+      "family": "Treasury & Compliance",
+      "sub_module_id": "bank_tax_fx",
+      "sub_module_name": "Bank, Tax & FX (Core Treasury)",
+      "sub_module_desc": "Bank reconciliation, GST tax management, multi-currency and FX revaluation — day-to-day SG treasury operations."
     },
     {
       "id": "fin.expense_management",
@@ -8330,7 +8366,11 @@
             "reason": "Sales visits, supplier meetings, and distribution travel require expense management"
           }
         }
-      }
+      },
+      "family": "Expense Cycle",
+      "sub_module_id": "expense_cycle",
+      "sub_module_name": "Expense Cycle (AP)",
+      "sub_module_desc": "Procure-to-pay finance leg — vendor bills, three-way match, staff expense claims, project accounting, payroll GL posting."
     },
     {
       "id": "fin.purchase_finance",
@@ -8888,7 +8928,11 @@
             "reason": "Critical for inventory procurement and vendor invoice matching"
           }
         }
-      }
+      },
+      "family": "Expense Cycle",
+      "sub_module_id": "expense_cycle",
+      "sub_module_name": "Expense Cycle (AP)",
+      "sub_module_desc": "Procure-to-pay finance leg — vendor bills, three-way match, staff expense claims, project accounting, payroll GL posting."
     },
     {
       "id": "fin.project_accounting",
@@ -9688,7 +9732,11 @@
         "author": "human-review",
         "edited_at": "2026-05-08",
         "note": "Demoted to Optional / Add-on. Project-level P&L is essential for professional services / construction / consulting only. Generic SMEs don't track revenue at project granularity.\n"
-      }
+      },
+      "family": "Expense Cycle",
+      "sub_module_id": "expense_cycle",
+      "sub_module_name": "Expense Cycle (AP)",
+      "sub_module_desc": "Procure-to-pay finance leg — vendor bills, three-way match, staff expense claims, project accounting, payroll GL posting."
     },
     {
       "id": "fin.intercompany_consolidation",
@@ -10308,7 +10356,11 @@
             "reason": "Wholesale groups with multiple distribution/trading entities need consolidation"
           }
         }
-      }
+      },
+      "family": "Treasury & Compliance",
+      "sub_module_id": "group_consolidation",
+      "sub_module_name": "Group Consolidation & Cashflow",
+      "sub_module_desc": "Inter-company elimination, multi-entity consolidation, cashflow forecasting — specialist for multi-company SME groups."
     },
     {
       "id": "fin.revenue_recognition",
@@ -10777,7 +10829,11 @@
         "author": "human-review",
         "edited_at": "2026-05-08",
         "note": "Tagged for deletion. Even as Optional / Add-on this is too narrow for the SME baseline — only SaaS and bundled-contract sellers need the five-step model. Supersedes the earlier in_checklist:false override above; sme_tier:deleted removes from all umbrellas.\n"
-      }
+      },
+      "family": "Revenue Cycle",
+      "sub_module_id": "revenue_cycle",
+      "sub_module_name": "Revenue Cycle (AR)",
+      "sub_module_desc": "Order-to-cash finance leg — invoicing, credit, collections, revenue recognition, PEPPOL/InvoiceNow, payment gateway integration."
     },
     {
       "id": "fin.credit_collections",
@@ -11444,7 +11500,11 @@
             "reason": "Core B2B model; trade credit standard; DSO critical"
           }
         }
-      }
+      },
+      "family": "Revenue Cycle",
+      "sub_module_id": "revenue_cycle",
+      "sub_module_name": "Revenue Cycle (AR)",
+      "sub_module_desc": "Order-to-cash finance leg — invoicing, credit, collections, revenue recognition, PEPPOL/InvoiceNow, payment gateway integration."
     },
     {
       "id": "fin.audit_controls",
@@ -12013,7 +12073,11 @@
             "reason": "High-volume transactions require controls and auditor-ready evidence"
           }
         }
-      }
+      },
+      "family": "Core Ledger & Close",
+      "sub_module_id": "core_ledger_close",
+      "sub_module_name": "Core Ledger & Close",
+      "sub_module_desc": "General ledger, chart of accounts, financial reporting, fixed assets, audit trail, period close — a full accounting system."
     },
     {
       "id": "fin.period_close",
@@ -12672,7 +12736,11 @@
             "reason": "Essential for inventory accruals and monthly financial close"
           }
         }
-      }
+      },
+      "family": "Core Ledger & Close",
+      "sub_module_id": "core_ledger_close",
+      "sub_module_name": "Core Ledger & Close",
+      "sub_module_desc": "General ledger, chart of accounts, financial reporting, fixed assets, audit trail, period close — a full accounting system."
     },
     {
       "id": "fin.cashflow_treasury",
@@ -13275,7 +13343,11 @@
             "reason": "Essential for inventory financing and supplier payment timing"
           }
         }
-      }
+      },
+      "family": "Treasury & Compliance",
+      "sub_module_id": "group_consolidation",
+      "sub_module_name": "Group Consolidation & Cashflow",
+      "sub_module_desc": "Inter-company elimination, multi-entity consolidation, cashflow forecasting — specialist for multi-company SME groups."
     },
     {
       "id": "fin.payroll_posting",
@@ -14123,7 +14195,11 @@
             "reason": "Operational staff; payroll posting and cost allocation to departments needed"
           }
         }
-      }
+      },
+      "family": "Expense Cycle",
+      "sub_module_id": "expense_cycle",
+      "sub_module_name": "Expense Cycle (AP)",
+      "sub_module_desc": "Procure-to-pay finance leg — vendor bills, three-way match, staff expense claims, project accounting, payroll GL posting."
     },
     {
       "id": "fin.einvoicing_peppol",
@@ -14624,7 +14700,11 @@
         "author": "human-review",
         "edited_at": "2026-05-08",
         "note": "Renamed cap to anchor it to the IMDA accreditation programme rather than the underlying PEPPOL standard, and rewrote the Type 1.1 question to match the PSG submission language (\"Is your solution listed on IMDA IRSP Listing?\"). Tier untouched.\n"
-      }
+      },
+      "family": "Revenue Cycle",
+      "sub_module_id": "revenue_cycle",
+      "sub_module_name": "Revenue Cycle (AR)",
+      "sub_module_desc": "Order-to-cash finance leg — invoicing, credit, collections, revenue recognition, PEPPOL/InvoiceNow, payment gateway integration."
     },
     {
       "id": "fin.payment_gateways",
@@ -15509,7 +15589,11 @@
         "author": "human-review",
         "edited_at": "2026-05-08",
         "note": "Demoted required → preferred. Online payment acceptance only matters for B2C / e-commerce / subscription business models; B2B and service-only SMEs invoice + collect via bank transfer.\n"
-      }
+      },
+      "family": "Revenue Cycle",
+      "sub_module_id": "revenue_cycle",
+      "sub_module_name": "Revenue Cycle (AR)",
+      "sub_module_desc": "Order-to-cash finance leg — invoicing, credit, collections, revenue recognition, PEPPOL/InvoiceNow, payment gateway integration."
     },
     {
       "id": "fin.xbrl_reporting",
@@ -16063,7 +16147,11 @@
             "reason": "Trading firms often meet statutory filing size requirements"
           }
         }
-      }
+      },
+      "family": "Treasury & Compliance",
+      "sub_module_id": "advanced_statutory",
+      "sub_module_name": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
+      "sub_module_desc": "XBRL/BizFinx filing, IFRS 16 lease accounting, investment portfolios and hedge accounting — specialist standards-compliance vendors."
     },
     {
       "id": "fin.lease_accounting",
@@ -16649,7 +16737,11 @@
             "reason": "Warehouse and equipment leases; IFRS 16 mandatory"
           }
         }
-      }
+      },
+      "family": "Treasury & Compliance",
+      "sub_module_id": "advanced_statutory",
+      "sub_module_name": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
+      "sub_module_desc": "XBRL/BizFinx filing, IFRS 16 lease accounting, investment portfolios and hedge accounting — specialist standards-compliance vendors."
     },
     {
       "id": "fin.treasury_investments",
@@ -17222,7 +17314,11 @@
             "reason": "Trading operations; limited treasury management needs"
           }
         }
-      }
+      },
+      "family": "Treasury & Compliance",
+      "sub_module_id": "advanced_statutory",
+      "sub_module_name": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
+      "sub_module_desc": "XBRL/BizFinx filing, IFRS 16 lease accounting, investment portfolios and hedge accounting — specialist standards-compliance vendors."
     },
     {
       "id": "fin.analytics_dashboards",
@@ -18217,7 +18313,11 @@
             "reason": "Inventory costs, margin analysis, customer profitability"
           }
         }
-      }
+      },
+      "family": "Planning & Analytics",
+      "sub_module_id": "planning_analytics_finance",
+      "sub_module_name": "Planning & Analytics (Finance)",
+      "sub_module_desc": "Budgeting, forecasting, financial dashboards, AI/ML for finance."
     },
     {
       "id": "fin.ai_finance",
@@ -18937,7 +19037,11 @@
             "reason": "High-volume invoice processing, reconciliation, fraud detection critical"
           }
         }
-      }
+      },
+      "family": "Planning & Analytics",
+      "sub_module_id": "planning_analytics_finance",
+      "sub_module_name": "Planning & Analytics (Finance)",
+      "sub_module_desc": "Budgeting, forecasting, financial dashboards, AI/ML for finance."
     },
     {
       "id": "fin.mobile_access",
@@ -19456,7 +19560,11 @@
             "reason": "Finance staff need mobile access to approve supplier invoices and cash flow"
           }
         }
-      }
+      },
+      "family": null,
+      "sub_module_id": null,
+      "sub_module_name": null,
+      "sub_module_desc": null
     },
     {
       "id": "fin.data_governance",
@@ -20145,7 +20253,11 @@
         "author": "human-review",
         "edited_at": "2026-05-07",
         "note": "Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_all_modules: each module has its own copy (fin.*, hr.*, sales.* …); flag propagates the override to every canonical. User intent: not a baseline gate; revisit later. Pair with other.user_access_roles.\n"
-      }
+      },
+      "family": null,
+      "sub_module_id": null,
+      "sub_module_name": null,
+      "sub_module_desc": null
     },
     {
       "id": "fin.user_access_roles",
@@ -20767,7 +20879,11 @@
         "author": "human-review",
         "edited_at": "2026-05-07",
         "note": "Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_all_modules: propagates to fin.user_access_roles, hr.user_access_roles, sales.user_access_roles, etc. Pair with other.data_governance.\n"
-      }
+      },
+      "family": null,
+      "sub_module_id": null,
+      "sub_module_name": null,
+      "sub_module_desc": null
     },
     {
       "id": "fin.integration_import_export",
@@ -21725,7 +21841,11 @@
             "reason": "Import supplier data, integrate inventory, export customer invoicing"
           }
         }
-      }
+      },
+      "family": null,
+      "sub_module_id": null,
+      "sub_module_name": null,
+      "sub_module_desc": null
     }
   ],
   "module_sme_rollup": [
@@ -22024,5 +22144,89 @@
     "step15_processed": 28,
     "step16_applied_at": "2026-05-08T16:20:19.231868+08:00",
     "step16_applied_count": 4
-  }
+  },
+  "sub_modules": [
+    {
+      "id": "core_ledger_close",
+      "canonical_name": "Core Ledger & Close",
+      "description": "General ledger, chart of accounts, financial reporting, fixed assets, audit trail, period close — a full accounting system.",
+      "family": "Core Ledger & Close",
+      "caps": [
+        "fin.general_ledger",
+        "fin.financial_reporting",
+        "fin.fixed_assets",
+        "fin.audit_controls",
+        "fin.period_close"
+      ]
+    },
+    {
+      "id": "revenue_cycle",
+      "canonical_name": "Revenue Cycle (AR)",
+      "description": "Order-to-cash finance leg — invoicing, credit, collections, revenue recognition, PEPPOL/InvoiceNow, payment gateway integration.",
+      "family": "Revenue Cycle",
+      "caps": [
+        "fin.accounts_receivable",
+        "fin.revenue_recognition",
+        "fin.credit_collections",
+        "fin.einvoicing_peppol",
+        "fin.payment_gateways"
+      ]
+    },
+    {
+      "id": "expense_cycle",
+      "canonical_name": "Expense Cycle (AP)",
+      "description": "Procure-to-pay finance leg — vendor bills, three-way match, staff expense claims, project accounting, payroll GL posting.",
+      "family": "Expense Cycle",
+      "caps": [
+        "fin.accounts_payable",
+        "fin.expense_management",
+        "fin.purchase_finance",
+        "fin.project_accounting",
+        "fin.payroll_posting"
+      ]
+    },
+    {
+      "id": "bank_tax_fx",
+      "canonical_name": "Bank, Tax & FX (Core Treasury)",
+      "description": "Bank reconciliation, GST tax management, multi-currency and FX revaluation — day-to-day SG treasury operations.",
+      "family": "Treasury & Compliance",
+      "caps": [
+        "fin.bank_cash_management",
+        "fin.tax_management",
+        "fin.multi_currency"
+      ]
+    },
+    {
+      "id": "group_consolidation",
+      "canonical_name": "Group Consolidation & Cashflow",
+      "description": "Inter-company elimination, multi-entity consolidation, cashflow forecasting — specialist for multi-company SME groups.",
+      "family": "Treasury & Compliance",
+      "caps": [
+        "fin.intercompany_consolidation",
+        "fin.cashflow_treasury"
+      ]
+    },
+    {
+      "id": "advanced_statutory",
+      "canonical_name": "Advanced Statutory (XBRL, IFRS 16, Hedge)",
+      "description": "XBRL/BizFinx filing, IFRS 16 lease accounting, investment portfolios and hedge accounting — specialist standards-compliance vendors.",
+      "family": "Treasury & Compliance",
+      "caps": [
+        "fin.xbrl_reporting",
+        "fin.lease_accounting",
+        "fin.treasury_investments"
+      ]
+    },
+    {
+      "id": "planning_analytics_finance",
+      "canonical_name": "Planning & Analytics (Finance)",
+      "description": "Budgeting, forecasting, financial dashboards, AI/ML for finance.",
+      "family": "Planning & Analytics",
+      "caps": [
+        "fin.budgeting_forecasting",
+        "fin.analytics_dashboards",
+        "fin.ai_finance"
+      ]
+    }
+  ]
 }

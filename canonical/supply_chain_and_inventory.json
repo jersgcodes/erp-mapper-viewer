@@ -1096,7 +1096,11 @@
             "reason": "Essential foundation for managing product lines and supplier relationships"
           }
         }
-      }
+      },
+      "family": "Inventory Core",
+      "sub_module_id": "inventory_core",
+      "sub_module_name": "Inventory Core",
+      "sub_module_desc": "Item master, stock levels, cycle counts, valuation, barcode scanning, lot/serial tracking."
     },
     {
       "id": "sc.stock_levels",
@@ -2435,7 +2439,11 @@
             "reason": "Essential for managing bulk inventory across distribution centers"
           }
         }
-      }
+      },
+      "family": "Inventory Core",
+      "sub_module_id": "inventory_core",
+      "sub_module_name": "Inventory Core",
+      "sub_module_desc": "Item master, stock levels, cycle counts, valuation, barcode scanning, lot/serial tracking."
     },
     {
       "id": "sc.goods_receipt",
@@ -2948,7 +2956,11 @@
             "reason": "Core function for receiving bulk goods and warehouse putaway"
           }
         }
-      }
+      },
+      "family": "Warehouse & Logistics",
+      "sub_module_id": "warehouse_logistics",
+      "sub_module_name": "Warehouse & Logistics (WMS)",
+      "sub_module_desc": "Goods receipt, movements, delivery/dispatch, multi-warehouse, dropship, returns, kit assembly, dangerous goods, warehouse automation."
     },
     {
       "id": "sc.stock_movements",
@@ -3441,7 +3453,11 @@
             "reason": "Distribution hub operations depend on efficient inter-warehouse transfers and replenishment"
           }
         }
-      }
+      },
+      "family": "Warehouse & Logistics",
+      "sub_module_id": "warehouse_logistics",
+      "sub_module_name": "Warehouse & Logistics (WMS)",
+      "sub_module_desc": "Goods receipt, movements, delivery/dispatch, multi-warehouse, dropship, returns, kit assembly, dangerous goods, warehouse automation."
     },
     {
       "id": "sc.purchase_orders",
@@ -4507,7 +4523,11 @@
             "reason": "Core function for bulk purchasing and supplier management"
           }
         }
-      }
+      },
+      "family": "Procurement",
+      "sub_module_id": "procurement",
+      "sub_module_name": "Procurement",
+      "sub_module_desc": "Purchase orders, vendor master, consignment, VMI, procurement analytics."
     },
     {
       "id": "sc.vendor_master",
@@ -5333,7 +5353,11 @@
             "reason": "Core function for managing product suppliers and distribution partners"
           }
         }
-      }
+      },
+      "family": "Procurement",
+      "sub_module_id": "procurement",
+      "sub_module_name": "Procurement",
+      "sub_module_desc": "Purchase orders, vendor master, consignment, VMI, procurement analytics."
     },
     {
       "id": "sc.stock_counting",
@@ -5856,7 +5880,11 @@
             "reason": "Essential for bulk inventory management and reconciliation"
           }
         }
-      }
+      },
+      "family": "Inventory Core",
+      "sub_module_id": "inventory_core",
+      "sub_module_name": "Inventory Core",
+      "sub_module_desc": "Item master, stock levels, cycle counts, valuation, barcode scanning, lot/serial tracking."
     },
     {
       "id": "sc.reorder_rules",
@@ -6545,7 +6573,11 @@
             "reason": "Essential for bulk inventory management and customer fulfillment"
           }
         }
-      }
+      },
+      "family": "Planning & Compliance",
+      "sub_module_id": "supply_planning",
+      "sub_module_name": "Supply Planning & Replenishment",
+      "sub_module_desc": "Reorder rules, demand forecasting, landed cost — supply planning specialty."
     },
     {
       "id": "sc.delivery_dispatch",
@@ -7709,7 +7741,11 @@
         "author": "human-review",
         "edited_at": "2026-05-07",
         "note": "Demoted required → preferred. Not universal across sectors — service businesses don't dispatch goods. Sector applicability lens (Branch L) will surface this nuance more cleanly. Reviewed during Branch J Type 2 build.\n"
-      }
+      },
+      "family": "Warehouse & Logistics",
+      "sub_module_id": "warehouse_logistics",
+      "sub_module_name": "Warehouse & Logistics (WMS)",
+      "sub_module_desc": "Goods receipt, movements, delivery/dispatch, multi-warehouse, dropship, returns, kit assembly, dangerous goods, warehouse automation."
     },
     {
       "id": "sc.inventory_valuation",
@@ -8272,7 +8308,11 @@
             "reason": "Essential for bulk inventory valuation and GL integration"
           }
         }
-      }
+      },
+      "family": "Inventory Core",
+      "sub_module_id": "inventory_core",
+      "sub_module_name": "Inventory Core",
+      "sub_module_desc": "Item master, stock levels, cycle counts, valuation, barcode scanning, lot/serial tracking."
     },
     {
       "id": "sc.multi_warehouse",
@@ -8890,7 +8930,11 @@
             "reason": "Regional warehouses need independent yet coordinated stock management"
           }
         }
-      }
+      },
+      "family": "Warehouse & Logistics",
+      "sub_module_id": "warehouse_logistics",
+      "sub_module_name": "Warehouse & Logistics (WMS)",
+      "sub_module_desc": "Goods receipt, movements, delivery/dispatch, multi-warehouse, dropship, returns, kit assembly, dangerous goods, warehouse automation."
     },
     {
       "id": "sc.barcode_scanning",
@@ -9546,7 +9590,11 @@
         "author": "human-review",
         "edited_at": "2026-05-08",
         "note": "Promoted preferred → required. Barcode/QR scanning is the table-stakes mechanism for warehouse accuracy at scale; any SME running stock should be doing this on day one.\n"
-      }
+      },
+      "family": "Inventory Core",
+      "sub_module_id": "inventory_core",
+      "sub_module_name": "Inventory Core",
+      "sub_module_desc": "Item master, stock levels, cycle counts, valuation, barcode scanning, lot/serial tracking."
     },
     {
       "id": "sc.lot_serial_tracking",
@@ -10052,7 +10100,11 @@
             "reason": "Bulk distribution typically doesn't mandate individual lot tracking"
           }
         }
-      }
+      },
+      "family": "Inventory Core",
+      "sub_module_id": "inventory_core",
+      "sub_module_name": "Inventory Core",
+      "sub_module_desc": "Item master, stock levels, cycle counts, valuation, barcode scanning, lot/serial tracking."
     },
     {
       "id": "sc.demand_forecasting",
@@ -10642,7 +10694,11 @@
             "reason": "Essential for stock replenishment and demand-driven distribution planning"
           }
         }
-      }
+      },
+      "family": "Planning & Compliance",
+      "sub_module_id": "supply_planning",
+      "sub_module_name": "Supply Planning & Replenishment",
+      "sub_module_desc": "Reorder rules, demand forecasting, landed cost — supply planning specialty."
     },
     {
       "id": "sc.dropship_crossdock",
@@ -11065,7 +11121,11 @@
             "reason": "High-volume distribution benefits from cross-dock efficiency"
           }
         }
-      }
+      },
+      "family": "Warehouse & Logistics",
+      "sub_module_id": "warehouse_logistics",
+      "sub_module_name": "Warehouse & Logistics (WMS)",
+      "sub_module_desc": "Goods receipt, movements, delivery/dispatch, multi-warehouse, dropship, returns, kit assembly, dangerous goods, warehouse automation."
     },
     {
       "id": "sc.returns_reverse_logistics",
@@ -11604,7 +11664,11 @@
             "reason": "Manage customer returns, supplier returns, inventory reconciliation"
           }
         }
-      }
+      },
+      "family": "Warehouse & Logistics",
+      "sub_module_id": "warehouse_logistics",
+      "sub_module_name": "Warehouse & Logistics (WMS)",
+      "sub_module_desc": "Goods receipt, movements, delivery/dispatch, multi-warehouse, dropship, returns, kit assembly, dangerous goods, warehouse automation."
     },
     {
       "id": "sc.landed_cost",
@@ -12140,7 +12204,11 @@
             "reason": "Bulk imports goods for resale; landed costs directly impact wholesale pricing"
           }
         }
-      }
+      },
+      "family": "Planning & Compliance",
+      "sub_module_id": "supply_planning",
+      "sub_module_name": "Supply Planning & Replenishment",
+      "sub_module_desc": "Reorder rules, demand forecasting, landed cost — supply planning specialty."
     },
     {
       "id": "sc.consignment",
@@ -12537,7 +12605,11 @@
             "reason": "Core capability for managing supplier consignment inventory"
           }
         }
-      }
+      },
+      "family": "Procurement",
+      "sub_module_id": "procurement",
+      "sub_module_name": "Procurement",
+      "sub_module_desc": "Purchase orders, vendor master, consignment, VMI, procurement analytics."
     },
     {
       "id": "sc.kit_assembly",
@@ -13009,7 +13081,11 @@
             "reason": "Bulk bundling and kit assembly for distributor operations"
           }
         }
-      }
+      },
+      "family": "Warehouse & Logistics",
+      "sub_module_id": "warehouse_logistics",
+      "sub_module_name": "Warehouse & Logistics (WMS)",
+      "sub_module_desc": "Goods receipt, movements, delivery/dispatch, multi-warehouse, dropship, returns, kit assembly, dangerous goods, warehouse automation."
     },
     {
       "id": "sc.quality_control",
@@ -13472,7 +13548,11 @@
             "reason": "Wholesale typically resells; minimal in-process quality control needs"
           }
         }
-      }
+      },
+      "family": "Planning & Compliance",
+      "sub_module_id": "quality_trade_compliance",
+      "sub_module_name": "Quality & Trade Compliance",
+      "sub_module_desc": "Quality inspection and import/export/trade compliance — compliance specialty within supply chain."
     },
     {
       "id": "sc.dangerous_goods",
@@ -13877,7 +13957,11 @@
             "reason": "Depends on product type; most general wholesale doesn't require hazmat"
           }
         }
-      }
+      },
+      "family": "Warehouse & Logistics",
+      "sub_module_id": "warehouse_logistics",
+      "sub_module_name": "Warehouse & Logistics (WMS)",
+      "sub_module_desc": "Goods receipt, movements, delivery/dispatch, multi-warehouse, dropship, returns, kit assembly, dangerous goods, warehouse automation."
     },
     {
       "id": "sc.warehouse_automation",
@@ -14348,7 +14432,11 @@
             "reason": "High-volume distribution demands advanced warehouse automation and routing"
           }
         }
-      }
+      },
+      "family": "Warehouse & Logistics",
+      "sub_module_id": "warehouse_logistics",
+      "sub_module_name": "Warehouse & Logistics (WMS)",
+      "sub_module_desc": "Goods receipt, movements, delivery/dispatch, multi-warehouse, dropship, returns, kit assembly, dangerous goods, warehouse automation."
     },
     {
       "id": "sc.vmi",
@@ -14735,7 +14823,11 @@
             "reason": "Wholesalers control inventory as core business; VMI shifts control away"
           }
         }
-      }
+      },
+      "family": "Procurement",
+      "sub_module_id": "procurement",
+      "sub_module_name": "Procurement",
+      "sub_module_desc": "Purchase orders, vendor master, consignment, VMI, procurement analytics."
     },
     {
       "id": "sc.procurement_analytics",
@@ -15156,7 +15248,11 @@
             "reason": "Core capability for managing supplier relationships and margins"
           }
         }
-      }
+      },
+      "family": "Procurement",
+      "sub_module_id": "procurement",
+      "sub_module_name": "Procurement",
+      "sub_module_desc": "Purchase orders, vendor master, consignment, VMI, procurement analytics."
     },
     {
       "id": "sc.trade_compliance",
@@ -16036,7 +16132,11 @@
             "reason": "Imports goods for resale; manages tariffs, duties, trade agreements"
           }
         }
-      }
+      },
+      "family": "Planning & Compliance",
+      "sub_module_id": "quality_trade_compliance",
+      "sub_module_name": "Quality & Trade Compliance",
+      "sub_module_desc": "Quality inspection and import/export/trade compliance — compliance specialty within supply chain."
     },
     {
       "id": "sc.supply_chain_analytics",
@@ -17117,7 +17217,11 @@
             "reason": "Fundamental for distributor operations and order-to-delivery efficiency"
           }
         }
-      }
+      },
+      "family": "Analytics & Intelligence",
+      "sub_module_id": "supply_chain_analytics",
+      "sub_module_name": "Supply Chain Analytics",
+      "sub_module_desc": "Supply chain dashboards and AI/ML forecasting."
     },
     {
       "id": "sc.ai_ml_supply_chain",
@@ -17815,7 +17919,11 @@
             "reason": "Beneficial for replenishment optimization and inventory visibility at scale"
           }
         }
-      }
+      },
+      "family": "Analytics & Intelligence",
+      "sub_module_id": "supply_chain_analytics",
+      "sub_module_name": "Supply Chain Analytics",
+      "sub_module_desc": "Supply chain dashboards and AI/ML forecasting."
     },
     {
       "id": "sc.mobile_access",
@@ -18249,7 +18357,11 @@
             "reason": "Warehouse operations require mobile access for picking, receiving, and inventory scanning"
           }
         }
-      }
+      },
+      "family": null,
+      "sub_module_id": null,
+      "sub_module_name": null,
+      "sub_module_desc": null
     },
     {
       "id": "sc.data_governance",
@@ -18754,7 +18866,11 @@
         "author": "human-review",
         "edited_at": "2026-05-07",
         "note": "Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_all_modules: each module has its own copy (fin.*, hr.*, sales.* …); flag propagates the override to every canonical. User intent: not a baseline gate; revisit later. Pair with other.user_access_roles.\n"
-      }
+      },
+      "family": null,
+      "sub_module_id": null,
+      "sub_module_name": null,
+      "sub_module_desc": null
     },
     {
       "id": "sc.user_access_roles",
@@ -19244,7 +19360,11 @@
         "author": "human-review",
         "edited_at": "2026-05-07",
         "note": "Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_all_modules: propagates to fin.user_access_roles, hr.user_access_roles, sales.user_access_roles, etc. Pair with other.data_governance.\n"
-      }
+      },
+      "family": null,
+      "sub_module_id": null,
+      "sub_module_name": null,
+      "sub_module_desc": null
     },
     {
       "id": "sc.integration_import_export",
@@ -20220,7 +20340,11 @@
             "reason": "Import supplier catalogs, export orders and inventory to customers and accountants"
           }
         }
-      }
+      },
+      "family": null,
+      "sub_module_id": null,
+      "sub_module_name": null,
+      "sub_module_desc": null
     }
   ],
   "module_sme_rollup": [
@@ -20527,5 +20651,82 @@
     "step15_processed": 31,
     "step16_applied_at": "2026-05-08T16:20:19.783795+08:00",
     "step16_applied_count": 1
-  }
+  },
+  "sub_modules": [
+    {
+      "id": "inventory_core",
+      "canonical_name": "Inventory Core",
+      "description": "Item master, stock levels, cycle counts, valuation, barcode scanning, lot/serial tracking.",
+      "family": "Inventory Core",
+      "caps": [
+        "sc.item_master",
+        "sc.stock_levels",
+        "sc.stock_counting",
+        "sc.inventory_valuation",
+        "sc.barcode_scanning",
+        "sc.lot_serial_tracking"
+      ]
+    },
+    {
+      "id": "warehouse_logistics",
+      "canonical_name": "Warehouse & Logistics (WMS)",
+      "description": "Goods receipt, movements, delivery/dispatch, multi-warehouse, dropship, returns, kit assembly, dangerous goods, warehouse automation.",
+      "family": "Warehouse & Logistics",
+      "caps": [
+        "sc.goods_receipt",
+        "sc.stock_movements",
+        "sc.delivery_dispatch",
+        "sc.multi_warehouse",
+        "sc.dropship_crossdock",
+        "sc.returns_reverse_logistics",
+        "sc.kit_assembly",
+        "sc.dangerous_goods",
+        "sc.warehouse_automation"
+      ]
+    },
+    {
+      "id": "procurement",
+      "canonical_name": "Procurement",
+      "description": "Purchase orders, vendor master, consignment, VMI, procurement analytics.",
+      "family": "Procurement",
+      "caps": [
+        "sc.purchase_orders",
+        "sc.vendor_master",
+        "sc.consignment",
+        "sc.vmi",
+        "sc.procurement_analytics"
+      ]
+    },
+    {
+      "id": "supply_planning",
+      "canonical_name": "Supply Planning & Replenishment",
+      "description": "Reorder rules, demand forecasting, landed cost — supply planning specialty.",
+      "family": "Planning & Compliance",
+      "caps": [
+        "sc.reorder_rules",
+        "sc.demand_forecasting",
+        "sc.landed_cost"
+      ]
+    },
+    {
+      "id": "quality_trade_compliance",
+      "canonical_name": "Quality & Trade Compliance",
+      "description": "Quality inspection and import/export/trade compliance — compliance specialty within supply chain.",
+      "family": "Planning & Compliance",
+      "caps": [
+        "sc.quality_control",
+        "sc.trade_compliance"
+      ]
+    },
+    {
+      "id": "supply_chain_analytics",
+      "canonical_name": "Supply Chain Analytics",
+      "description": "Supply chain dashboards and AI/ML forecasting.",
+      "family": "Analytics & Intelligence",
+      "caps": [
+        "sc.supply_chain_analytics",
+        "sc.ai_ml_supply_chain"
+      ]
+    }
+  ]
 }
