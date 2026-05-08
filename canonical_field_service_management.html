@@ -1830,6 +1830,39 @@
   .publish-status-fail { background: #fef2f2 !important; border-color: #fca5a5 !important; color: #991b1b; }
   .publish-status a { color: #047857; font-weight: 600; }
   .pub-empty { color: #94a3b8; font-style: italic; padding: 20px; text-align: center; }
+  .pub-cap-name { font-weight: 600; color: #0f172a; font-size: 12.5px; }
+  .pub-cap-id { display: block; color: #94a3b8; font-size: 10px; margin-top: 1px; }
+  .pub-changes { margin: 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: #334155; }
+  .pub-changes li { margin: 1px 0; }
+  .pub-changes b { color: #0f172a; }
+  .pub-no-changes { color: #94a3b8; font-style: italic; font-size: 11.5px; }
+  /* Confirmation panel — hidden until the reviewer clicks "Publish to repo" on
+     the review screen; appears in the same modal frame so the reviewer can step
+     back without re-opening anything. */
+  .publish-confirm-panel { padding: 18px 20px 20px; font-size: 13px; }
+  .publish-confirm-panel h4 { margin: 0 0 10px; font-size: 14px; color: #0f172a; }
+  .publish-confirm-panel p { margin: 6px 0; line-height: 1.5; }
+  .publish-confirm-target {
+    margin: 6px 0 12px; padding-left: 22px; line-height: 1.6;
+    color: #334155; font-size: 12px;
+  }
+  .publish-confirm-target code { background: #f1f5f9; padding: 1px 5px; border-radius: 3px; }
+  .publish-confirm-summary {
+    margin: 6px 0 14px; padding: 10px 14px 10px 32px;
+    background: #f0fdfa; border: 1px solid #5eead4; border-left: 3px solid #14b8a6;
+    border-radius: 4px; line-height: 1.7; color: #0f766e;
+  }
+  .publish-confirm-summary li { margin: 1px 0; }
+  .publish-confirm-summary b { color: #134e4a; }
+  .publish-confirm-warn {
+    margin: 12px 0 14px; padding: 10px 14px;
+    background: #fffbeb; border: 1px solid #fcd34d; border-left: 3px solid #f59e0b;
+    border-radius: 4px; color: #78350f; line-height: 1.5; font-size: 12px;
+  }
+  .publish-confirm-warn b { color: #92400e; }
+  .publish-confirm-warn code { background: #fef3c7; padding: 1px 5px; border-radius: 3px; }
+  .publish-btn-confirm { background: #b45309; border-color: #b45309; }
+  .publish-btn-confirm:hover:not([disabled]) { background: #92400e; }
 
   /* Toast */
   .l2-toast {
@@ -4320,11 +4353,49 @@ function _showExportDraftsModal() {
 }
 
 // =============================================================================
-// PUBLISH MODAL — replaces the export-drafts paste-into-YAML dance with a
-// single "Publish to repo" click that hits the Worker /api/publish endpoint.
-// Modal lists every draft (local + cloud), grouped by author, so the reviewer
-// can see exactly what's about to be committed.
+// PUBLISH MODAL — two-step flow:
+//   1. Review summary of every pending draft (cap_id + plain-English change
+//      description like "Demote required → preferred", "Rewrite Type 1.1 Q").
+//   2. Click "Publish to repo" → confirmation panel restates the count +
+//      destination + warns this commits to git AND triggers CI rebuild;
+//      reviewer must click "Yes, publish" to actually fire the API call.
 // =============================================================================
+
+// Plain-English description of a draft's change set, for the summary list.
+// Returns an array of strings — one per field actually changed.
+function _capDescribeChange(draft, canonicalCap) {
+  const f = draft.fields || {};
+  const out = [];
+  if (f.sme_tier !== undefined) {
+    const from = (canonicalCap && canonicalCap.sme_tier) || "—";
+    const to = f.sme_tier;
+    if (from !== to) out.push(`Tier ${escapeHtml(from)} → <b>${escapeHtml(to)}</b>`);
+  }
+  if (f.in_checklist !== undefined) {
+    const newVal = f.in_checklist === false ? "out of checklist" : "in checklist";
+    out.push(`Set <b>${newVal}</b>`);
+  }
+  if (f.name !== undefined) {
+    const from = (canonicalCap && canonicalCap.name) || "";
+    if (from !== f.name) out.push(`Rename to <b>${escapeHtml(f.name.slice(0, 80))}</b>`);
+  }
+  if (f.description !== undefined) {
+    const from = (canonicalCap && canonicalCap.description) || "";
+    if (from !== f.description) out.push("Rewrite description");
+  }
+  if (f.vendor_question_terse !== undefined) {
+    const from = (canonicalCap && canonicalCap.vendor_questions && canonicalCap.vendor_questions.question_terse) || "";
+    if (from !== f.vendor_question_terse) out.push("Rewrite Type 1.1 question");
+  }
+  if (f.vendor_question !== undefined) {
+    const from = (canonicalCap && canonicalCap.vendor_questions && canonicalCap.vendor_questions.question) || "";
+    if (from !== f.vendor_question) out.push("Rewrite Type 1 question");
+  }
+  if (f.note !== undefined && String(f.note || "").trim().length > 0) {
+    out.push("Add reviewer note");
+  }
+  return out;
+}
 
 function _showPublishModal() {
   // Collect all drafts (cloud cache + local) keyed by mod:cap. Local wins.
@@ -4362,16 +4433,27 @@ function _showPublishModal() {
     return tb.localeCompare(ta); // newest first
   });
 
-  const fmtFields = (fields) => Object.keys(fields).map(f => `<code>${escapeHtml(f)}</code>`).join(" ");
+  // Lookup table for canonical caps so descriptions can show "tier from→to".
+  const capById = new Map((DATA.capabilities || []).map(c => [c.id, c]));
+
   const rows = drafts.map(d => {
     const when = _capRelTime(d.updated_at);
     const originBadge = d.origin === "local"
       ? `<span class="pub-origin pub-origin-local" title="In your browser, not yet synced to the shared draft store.">local</span>`
       : `<span class="pub-origin pub-origin-cloud" title="Saved in the shared draft store. Visible to all reviewers.">shared</span>`;
+    const cap = capById.get(d.cap_id);
+    const capName = cap ? cap.name : d.cap_id;
+    const changes = _capDescribeChange(d, cap);
+    const changesHtml = changes.length > 0
+      ? `<ul class="pub-changes">${changes.map(c => `<li>${c}</li>`).join("")}</ul>`
+      : `<span class="pub-no-changes">No-op (matches canonical)</span>`;
     return `
       <tr>
-        <td><code>${escapeHtml(d.cap_id)}</code></td>
-        <td class="pub-fields">${fmtFields(d.fields)}</td>
+        <td class="pub-cap">
+          <div class="pub-cap-name">${escapeHtml(capName)}</div>
+          <code class="pub-cap-id">${escapeHtml(d.cap_id)}</code>
+        </td>
+        <td class="pub-fields">${changesHtml}</td>
         <td class="pub-author">${escapeHtml(_capShortAuthor(d.author))}</td>
         <td class="pub-when">${escapeHtml(when)}</td>
         <td>${originBadge}</td>
@@ -4383,33 +4465,58 @@ function _showPublishModal() {
     ? `<p class="pub-empty">No drafts to publish.</p>`
     : "";
 
+  // Aggregate counts for the confirmation panel.
+  let nTier = 0, nInChecklist = 0, nName = 0, nDesc = 0, nQ = 0, nQTerse = 0, nNote = 0;
+  for (const d of drafts) {
+    const cap = capById.get(d.cap_id);
+    const f = d.fields || {};
+    if (f.sme_tier !== undefined && cap && cap.sme_tier !== f.sme_tier) nTier++;
+    if (f.in_checklist !== undefined) nInChecklist++;
+    if (f.name !== undefined && cap && cap.name !== f.name) nName++;
+    if (f.description !== undefined && cap && cap.description !== f.description) nDesc++;
+    if (f.vendor_question !== undefined && cap && (cap.vendor_questions || {}).question !== f.vendor_question) nQ++;
+    if (f.vendor_question_terse !== undefined && cap && (cap.vendor_questions || {}).question_terse !== f.vendor_question_terse) nQTerse++;
+    if (f.note !== undefined && String(f.note || "").trim().length > 0) nNote++;
+  }
+  const aggSummary = [
+    nTier > 0 && `<li><b>${nTier}</b> tier shift${nTier === 1 ? "" : "s"}</li>`,
+    nInChecklist > 0 && `<li><b>${nInChecklist}</b> in-checklist toggle${nInChecklist === 1 ? "" : "s"}</li>`,
+    nName > 0 && `<li><b>${nName}</b> rename${nName === 1 ? "" : "s"}</li>`,
+    nDesc > 0 && `<li><b>${nDesc}</b> description rewrite${nDesc === 1 ? "" : "s"}</li>`,
+    nQTerse > 0 && `<li><b>${nQTerse}</b> Type 1.1 question rewrite${nQTerse === 1 ? "" : "s"}</li>`,
+    nQ > 0 && `<li><b>${nQ}</b> Type 1 question rewrite${nQ === 1 ? "" : "s"}</li>`,
+    nNote > 0 && `<li><b>${nNote}</b> reviewer note${nNote === 1 ? "" : "s"} added</li>`,
+  ].filter(Boolean).join("");
+
   const overlay = document.createElement("div");
   overlay.id = "publish-modal";
   overlay.className = "publish-modal";
+  overlay.dataset.step = "review";
+  overlay.dataset.draftCount = String(drafts.length);
   overlay.innerHTML = `
     <div class="publish-modal-inner">
       <div class="publish-modal-header">
-        <h3>Publish ${drafts.length} draft${drafts.length === 1 ? "" : "s"} to repo</h3>
+        <h3 id="publish-modal-title">Publish ${drafts.length} draft${drafts.length === 1 ? "" : "s"} to repo</h3>
         <button class="publish-modal-close" data-action="close-publish">×</button>
       </div>
-      <div class="publish-modal-body">
+      <div class="publish-modal-body" id="publish-modal-body">
         <p class="publish-help">
-          Clicking <b>Publish</b> commits these drafts to <code>data/manual_cap_overrides.yaml</code>
-          via the editor API, then triggers the rebuild workflow. Local drafts are flushed to the
-          shared store first. Drafts disappear from this list as the rebuild runs (~30 s).
+          Review the changes below. Clicking <b>Publish</b> commits them to
+          <code>data/manual_cap_overrides.yaml</code> via the editor API, then triggers the
+          rebuild workflow. Local drafts are flushed to the shared store first.
         </p>
         ${empty}
         ${drafts.length > 0 ? `
           <table class="publish-table">
             <thead><tr>
-              <th>Cap</th><th>Fields</th><th>Author</th><th>When</th><th>Origin</th>
+              <th>Cap</th><th>Changes</th><th>Author</th><th>When</th><th>Origin</th>
             </tr></thead>
             <tbody>${rows}</tbody>
           </table>
         ` : ""}
         <div class="publish-actions">
-          <button class="publish-btn-primary" data-action="confirm-publish" ${drafts.length === 0 ? "disabled" : ""}>
-            Publish to repo
+          <button class="publish-btn-primary" data-action="show-confirm" ${drafts.length === 0 ? "disabled" : ""}>
+            Publish to repo →
           </button>
           <button class="publish-btn-secondary" data-action="show-yaml-fallback" title="Open the legacy paste-into-YAML view if you'd rather commit by hand.">
             Show YAML snippet (manual paste)
@@ -4417,6 +4524,30 @@ function _showPublishModal() {
           <button class="publish-btn-cancel" data-action="close-publish">Cancel</button>
         </div>
         <div class="publish-status" id="publish-status"></div>
+      </div>
+      <div class="publish-confirm-panel" id="publish-confirm-panel" style="display:none">
+        <h4>Confirm publish</h4>
+        <p>You're about to commit <b>${drafts.length}</b> draft${drafts.length === 1 ? "" : "s"} to:</p>
+        <ul class="publish-confirm-target">
+          <li>Repo: <code>jersgcodes/erp-mapper</code></li>
+          <li>File: <code>data/manual_cap_overrides.yaml</code></li>
+          <li>Branch: <code>main</code></li>
+        </ul>
+        ${aggSummary ? `
+          <p>Summary:</p>
+          <ul class="publish-confirm-summary">${aggSummary}</ul>
+        ` : ""}
+        <p class="publish-confirm-warn">
+          This commits to <b>main</b> and dispatches the <code>apply-published-overrides</code>
+          workflow. The rebuild auto-deploys to <code>mapper.jersgcodes.com</code> in ~1-2 min.
+          You won't be able to undo from inside this UI — you'd need to revert the commit on GitHub.
+        </p>
+        <div class="publish-actions">
+          <button class="publish-btn-primary publish-btn-confirm" data-action="confirm-publish">
+            Yes, publish to repo
+          </button>
+          <button class="publish-btn-cancel" data-action="back-to-review">← Back</button>
+        </div>
       </div>
     </div>
   `;
@@ -4497,6 +4628,38 @@ document.addEventListener("click", (e) => {
     if (m) m.remove();
     return;
   }
+  // Step 1 → Step 2: hide the review list, show the confirmation panel.
+  if (e.target.matches("[data-action='show-confirm']")) {
+    const body = document.getElementById("publish-modal-body");
+    const confirmPanel = document.getElementById("publish-confirm-panel");
+    const title = document.getElementById("publish-modal-title");
+    const overlay = document.getElementById("publish-modal");
+    if (body && confirmPanel) {
+      body.style.display = "none";
+      confirmPanel.style.display = "block";
+      if (title) title.textContent = "Confirm publish";
+      if (overlay) overlay.dataset.step = "confirm";
+    }
+    return;
+  }
+  // Step 2 → Step 1: back button restores the review list.
+  if (e.target.matches("[data-action='back-to-review']")) {
+    const body = document.getElementById("publish-modal-body");
+    const confirmPanel = document.getElementById("publish-confirm-panel");
+    const title = document.getElementById("publish-modal-title");
+    const overlay = document.getElementById("publish-modal");
+    if (body && confirmPanel) {
+      confirmPanel.style.display = "none";
+      body.style.display = "block";
+      if (title) {
+        const n = (overlay && parseInt(overlay.dataset.draftCount || "0", 10)) || 0;
+        title.textContent = `Publish ${n} draft${n === 1 ? "" : "s"} to repo`;
+      }
+      if (overlay) overlay.dataset.step = "review";
+    }
+    return;
+  }
+  // Final commit — wired only on the confirm button (step 2).
   if (e.target.matches("[data-action='confirm-publish']")) {
     e.target.disabled = true;
     e.target.textContent = "Publishing…";
@@ -4695,6 +4858,12 @@ async function _capPageInit() {
   _capAutoClearMatchingDrafts();
   _renderExportDraftsButton();
   await _capCloudInit();
+  // Module-scoped state (cap order) — fetch in parallel with re-render.
+  // Order's authoritative copy lives on the cloud once we go online.
+  const moduleSlug = (DATA && DATA.module && DATA.module.module) || (DATA && DATA.module) || "";
+  if (moduleSlug && window._capCloudOnline) {
+    await _capModuleStateInit(moduleSlug);
+  }
   // Re-render the active view so cloud drafts overlay correctly.
   if (window._capCloudOnline && typeof renderOverview === "function") {
     try { renderOverview(); } catch (_) {}
@@ -5058,6 +5227,60 @@ function _capGetOrderMap(moduleSlug) {
 function _capSaveOrderMap(moduleSlug, map) {
   try { localStorage.setItem(_capOrderKey(moduleSlug), JSON.stringify(map)); }
   catch (_) {}
+  // Mirror to cloud (debounced) so other reviewers see the same ordering.
+  if (typeof _capCloudPutOrderDebounced === "function") {
+    _capCloudPutOrderDebounced(moduleSlug, map);
+  }
+}
+
+// Cloud-mirror for module-scoped state (currently just `cap_order`).
+// On init, populate localStorage with whatever the Worker has — cloud is
+// authoritative for ordering since multi-user sync is the whole point.
+async function _capModuleStateInit(moduleSlug) {
+  if (!moduleSlug || !window._capCloudOnline) return;
+  try {
+    const res = await fetch(
+      `/api/module-state/${encodeURIComponent(moduleSlug)}`,
+      { credentials: "same-origin" }
+    );
+    if (!res.ok) return;
+    const data = await res.json();
+    const orderEntry = data.state && data.state.cap_order;
+    if (orderEntry && orderEntry.value) {
+      // Cloud value wins on init. localStorage gets refreshed.
+      try {
+        localStorage.setItem(
+          _capOrderKey(moduleSlug),
+          JSON.stringify(orderEntry.value),
+        );
+      } catch (_) {}
+    }
+  } catch (e) {
+    console.warn("[cloud-module-state] init failed:", e);
+  }
+}
+
+const _CAP_ORDER_DEBOUNCE_MS = 600;
+let _capOrderPutTimer = null;
+function _capCloudPutOrderDebounced(moduleSlug, map) {
+  if (!window._capCloudOnline) return;
+  if (_capOrderPutTimer) clearTimeout(_capOrderPutTimer);
+  _capOrderPutTimer = setTimeout(async () => {
+    _capOrderPutTimer = null;
+    try {
+      await fetch(
+        `/api/module-state/${encodeURIComponent(moduleSlug)}/cap_order`,
+        {
+          method: "PUT",
+          credentials: "same-origin",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ value: map }),
+        }
+      );
+    } catch (e) {
+      console.warn("[cloud-module-state] PUT cap_order failed:", e);
+    }
+  }, _CAP_ORDER_DEBOUNCE_MS);
 }
 function _capApplyOrder(caps, umbrellaKey, moduleSlug) {
   if (!umbrellaKey) return caps;
