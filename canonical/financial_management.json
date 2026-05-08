@@ -4021,7 +4021,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_accounting",
         "netsuite",
@@ -4711,6 +4711,17 @@
             "reason": "GST on bulk sales and distribution; critical requirement"
           }
         }
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "sme_tier"
+        ],
+        "original": {
+          "sme_tier": "required"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-08",
+        "note": "Demoted required → preferred. GST/VAT compliance is universal for registered businesses but Singapore SMEs below the GST threshold ($1M revenue) don't register; demotion lets non-registered vendors pass without gating.\n"
       }
     },
     {
@@ -10301,14 +10312,14 @@
     },
     {
       "id": "fin.revenue_recognition",
-      "name": "Revenue Recognition (ASC 606 / IFRS 15)",
+      "name": "[TO BE DELETED] Revenue Recognition (ASC 606 / IFRS 15)",
       "description": "Apply the five-step ASC 606 / IFRS 15 model — identify contract, performance obligations, transaction price, allocation, and recognition — for businesses selling bundled, subscription, or multi-element arrangements. Critical for SaaS and professional services.\n",
       "priority_proxy": "advanced",
       "applicability": [
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "deleted",
       "cited_sources": [
         "netsuite",
         "sage_intacct",
@@ -10756,14 +10767,16 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "sme_tier",
+          "name"
         ],
         "original": {
-          "in_checklist": null
+          "sme_tier": "preferred",
+          "name": "Revenue Recognition (ASC 606 / IFRS 15)"
         },
         "author": "human-review",
         "edited_at": "2026-05-08",
-        "note": "Demoted to Optional / Add-on. ASC 606 / IFRS 15 five-step model is mandatory for SaaS and bundled-contract sellers, optional otherwise. Generic SMEs follow simpler cash / accrual recognition.\n"
+        "note": "Tagged for deletion. Even as Optional / Add-on this is too narrow for the SME baseline — only SaaS and bundled-contract sellers need the five-step model. Supersedes the earlier in_checklist:false override above; sme_tier:deleted removes from all umbrellas.\n"
       }
     },
     {
@@ -14114,7 +14127,7 @@
     },
     {
       "id": "fin.einvoicing_peppol",
-      "name": "E-Invoicing & PEPPOL / InvoiceNow",
+      "name": "InvoiceNow-Ready Solution Provider Accreditation",
       "description": "Send and receive invoices in structured electronic format over the PEPPOL network — the Singapore government's InvoiceNow programme mandates this for GST-registered businesses. Machine-readable, no re-keying on the receiving side.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -14520,7 +14533,7 @@
           }
         ],
         "total_input_items": 4,
-        "question_terse": "Does your solution generate and transmit invoices through the InvoiceNow network?"
+        "question_terse": "Is your solution listed on IMDA InvoiceNow-Ready Solution Provider (IRSP) Listing?\n\n[1] If you are the Product Principal of the solution, you are required to be accredited as an IRSP by IMDA. [2] If you are the reseller of the solution, your Solution Product Principal must declare to IMDA that you are an authorised reseller of their solution.\nNote: For more information on InvoiceNow, refer to: Becoming an InvoiceNow-Ready Solution Provider | E-invoicing | IMDA (https://www.imda.gov.sg/how-we-can-help/nationwide-e-invoicing-framework/becoming-an-invoicenow-ready-solution-provider)\n"
       },
       "sector_relevance": {
         "generic": true,
@@ -14598,6 +14611,19 @@
             "reason": "Core B2B invoicing; GST-registered; supplier networks"
           }
         }
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "name",
+          "vendor_question_terse"
+        ],
+        "original": {
+          "name": "E-Invoicing & PEPPOL / InvoiceNow",
+          "vendor_question_terse": "Does your solution generate and transmit invoices through the InvoiceNow network?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-08",
+        "note": "Renamed cap to anchor it to the IMDA accreditation programme rather than the underlying PEPPOL standard, and rewrote the Type 1.1 question to match the PSG submission language (\"Is your solution listed on IMDA IRSP Listing?\"). Tier untouched.\n"
       }
     },
     {
@@ -14610,7 +14636,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_accounting",
         "odoo_invoicing",
@@ -15472,6 +15498,17 @@
             "reason": "B2B payment processing and customer settlement critical"
           }
         }
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "sme_tier"
+        ],
+        "original": {
+          "sme_tier": "required"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-08",
+        "note": "Demoted required → preferred. Online payment acceptance only matters for B2C / e-commerce / subscription business models; B2B and service-only SMEs invoice + collect via bank transfer.\n"
       }
     },
     {
@@ -21985,7 +22022,7 @@
   "_meta": {
     "step15_generated_at": "2026-05-07T13:54:30.861598+08:00",
     "step15_processed": 28,
-    "step16_applied_at": "2026-05-08T16:04:46.816812+08:00",
-    "step16_applied_count": 3
+    "step16_applied_at": "2026-05-08T16:20:19.231868+08:00",
+    "step16_applied_count": 4
   }
 }
