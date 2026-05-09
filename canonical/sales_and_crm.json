@@ -7822,7 +7822,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "deleted",
+      "sme_tier": "preferred",
       "cited_sources": [
         "mailchimp",
         "hubspot",
@@ -8719,19 +8719,20 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "in_checklist"
         ],
         "original": {
-          "sme_tier": "preferred"
+          "in_checklist": null
         },
         "author": "human-review",
         "edited_at": "2026-05-08",
-        "note": "Removed from checklist. Email/drip/landing-page automation is a Marketing-tool concern (Mailchimp, HubSpot Marketing) rather than core CRM — most SMEs use a separate marketing app.\n"
+        "note": "Demoted to Optional / Add-on. Email/drip/landing-page automation is a Marketing-tool concern (Mailchimp, HubSpot Marketing) rather than core CRM — most SMEs use a separate marketing app. Stays visible under Optional / Add-ons.\n"
       },
       "family": "Marketing",
       "sub_module_id": "marketing",
       "sub_module_name": "Marketing & Demand Generation",
-      "sub_module_desc": "Marketing automation, CMS/SEO, social CRM, customer journey orchestration, VoC/surveys."
+      "sub_module_desc": "Marketing automation, CMS/SEO, social CRM, customer journey orchestration, VoC/surveys.",
+      "in_checklist": false
     },
     {
       "id": "sales.marketing_automation_advanced",
@@ -11673,7 +11674,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "deleted",
+      "sme_tier": "preferred",
       "cited_sources": [
         "netsuite",
         "ms_dynamics_365_ce",
@@ -12377,19 +12378,20 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "in_checklist"
         ],
         "original": {
-          "sme_tier": "preferred"
+          "in_checklist": null
         },
         "author": "human-review",
         "edited_at": "2026-05-08",
-        "note": "Removed from checklist entirely. B2B e-commerce portal is a vertical specialty (wholesale, distribution) and overlaps with marketplace channels + multi-channel sync — better served by a focused \"wholesale e-commerce\" sub-module if reintroduced.\n"
+        "note": "Demoted to Optional / Add-on. B2B e-commerce portal is a vertical specialty (wholesale, distribution) and overlaps with marketplace channels + multi-channel sync — better served by a focused \"wholesale e-commerce\" sub-module if reintroduced. Stays visible under Optional / Add-ons.\n"
       },
       "family": "Commerce",
       "sub_module_id": "ecommerce_storefront",
       "sub_module_name": "E-Commerce Storefront",
-      "sub_module_desc": "B2C/B2B online storefronts — purchasable as a standalone commerce platform."
+      "sub_module_desc": "B2C/B2B online storefronts — purchasable as a standalone commerce platform.",
+      "in_checklist": false
     },
     {
       "id": "sales.cpq_basic",
@@ -22350,7 +22352,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "deleted",
+      "sme_tier": "preferred",
       "cited_sources": [
         "shopify",
         "lightspeed",
@@ -22680,19 +22682,20 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "in_checklist"
         ],
         "original": {
-          "sme_tier": "preferred"
+          "in_checklist": null
         },
         "author": "human-review",
         "edited_at": "2026-05-08",
-        "note": "Removed from checklist. Marketplace breadth (Amazon / Shopee / Lazada / eBay / TikTok Shop) is a niche vendor specialty, not a generic SME sales requirement.\n"
+        "note": "Demoted to Optional / Add-on. Marketplace breadth (Amazon / Shopee / Lazada / eBay / TikTok Shop) is a niche vendor specialty, not a generic SME sales requirement. Stays visible under Optional / Add-ons.\n"
       },
       "family": "Commerce",
       "sub_module_id": "multichannel",
       "sub_module_name": "Multi-Channel Selling",
-      "sub_module_desc": "Selling across multiple online channels — marketplace presence + online inventory/identity unification. No physical store required."
+      "sub_module_desc": "Selling across multiple online channels — marketplace presence + online inventory/identity unification. No physical store required.",
+      "in_checklist": false
     },
     {
       "id": "sales.multi_channel_sync",
@@ -22704,7 +22707,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "deleted",
+      "sme_tier": "preferred",
       "cited_sources": [
         "netsuite",
         "odoo_sales",
@@ -23469,19 +23472,20 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "in_checklist"
         ],
         "original": {
-          "sme_tier": "preferred"
+          "in_checklist": null
         },
         "author": "human-review",
         "edited_at": "2026-05-08",
-        "note": "Removed from checklist. Real-time cross-channel inventory + identity unification is omnichannel-retail territory (Shopify Plus, commercetools) — overkill for the generic SME baseline.\n"
+        "note": "Demoted to Optional / Add-on. Real-time cross-channel inventory + identity unification is omnichannel-retail territory (Shopify Plus, commercetools) — overkill for the generic SME baseline. Stays visible under Optional / Add-ons.\n"
       },
       "family": "Commerce",
       "sub_module_id": "multichannel",
       "sub_module_name": "Multi-Channel Selling",
-      "sub_module_desc": "Selling across multiple online channels — marketplace presence + online inventory/identity unification. No physical store required."
+      "sub_module_desc": "Selling across multiple online channels — marketplace presence + online inventory/identity unification. No physical store required.",
+      "in_checklist": false
     },
     {
       "id": "sales.omnichannel_basic",
@@ -25633,12 +25637,10 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier",
-          "in_checklist"
+          "sme_tier"
         ],
         "original": {
-          "sme_tier": "required",
-          "in_checklist": null
+          "sme_tier": "required"
         },
         "author": "human-review",
         "edited_at": "2026-05-07",
@@ -26111,12 +26113,10 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier",
-          "in_checklist"
+          "sme_tier"
         ],
         "original": {
-          "sme_tier": "required",
-          "in_checklist": null
+          "sme_tier": "required"
         },
         "author": "human-review",
         "edited_at": "2026-05-07",
@@ -27331,8 +27331,8 @@
   "_meta": {
     "step15_generated_at": "2026-05-07T13:56:06.499479+08:00",
     "step15_processed": 39,
-    "step16_applied_at": "2026-05-08T16:20:19.698036+08:00",
-    "step16_applied_count": 4
+    "step16_applied_at": "2026-05-09T13:48:00.686095+08:00",
+    "step16_applied_count": 2
   },
   "sub_modules": [
     {
