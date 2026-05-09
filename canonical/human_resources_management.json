@@ -11854,7 +11854,19 @@
       "family": "Talent & Growth",
       "sub_module_id": "performance_learning",
       "sub_module_name": "Performance & Learning",
-      "sub_module_desc": "Performance reviews, learning & development/LMS, succession planning, engagement surveys — employee growth specialty (distinct vendors from ATS)."
+      "sub_module_desc": "Performance reviews, learning & development/LMS, succession planning, engagement surveys — employee growth specialty (distinct vendors from ATS).",
+      "in_checklist": false,
+      "_cap_override": {
+        "fields_overridden": [
+          "in_checklist"
+        ],
+        "original": {
+          "in_checklist": null
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-09",
+        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+      }
     },
     {
       "id": "hr.engagement_surveys",
@@ -19543,7 +19555,19 @@
       "family": "Lifecycle & Analytics",
       "sub_module_id": "hr_lifecycle_analytics",
       "sub_module_name": "HR Lifecycle & Analytics",
-      "sub_module_desc": "Workforce planning, disciplinary/grievance, exit/alumni, HR dashboards, AI/ML people insights."
+      "sub_module_desc": "Workforce planning, disciplinary/grievance, exit/alumni, HR dashboards, AI/ML people insights.",
+      "in_checklist": false,
+      "_cap_override": {
+        "fields_overridden": [
+          "in_checklist"
+        ],
+        "original": {
+          "in_checklist": null
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-09",
+        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+      }
     },
     {
       "id": "hr.mobile_access",
@@ -20117,14 +20141,10 @@
       "sub_module_desc": null,
       "_cap_override": {
         "fields_overridden": [
-          "name",
-          "vendor_question",
-          "vendor_question_terse"
+          "name"
         ],
         "original": {
-          "name": "Mobile and Multi-Device Access",
-          "vendor_question": "Does your solution deliver full access to leave requests, payslip viewing, and time tracking across phones, tablets, and desktops with responsive layouts, so employees manage HR tasks from any device?",
-          "vendor_question_terse": "Does your solution allow employees to access leave requests, payslips, and time tracking from any device?"
+          "name": "Mobile and Multi-Device Access"
         },
         "author": "human-review",
         "edited_at": "2026-05-09",
@@ -20713,12 +20733,10 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier",
-          "in_checklist"
+          "sme_tier"
         ],
         "original": {
-          "sme_tier": "required",
-          "in_checklist": null
+          "sme_tier": "required"
         },
         "author": "human-review",
         "edited_at": "2026-05-07",
@@ -21445,12 +21463,10 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier",
-          "in_checklist"
+          "sme_tier"
         ],
         "original": {
-          "sme_tier": "required",
-          "in_checklist": null
+          "sme_tier": "required"
         },
         "author": "human-review",
         "edited_at": "2026-05-07",
@@ -21471,7 +21487,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_employees",
         "erpnext_hr",
@@ -22144,7 +22160,21 @@
       "family": null,
       "sub_module_id": null,
       "sub_module_name": null,
-      "sub_module_desc": null
+      "sub_module_desc": null,
+      "in_checklist": false,
+      "_cap_override": {
+        "fields_overridden": [
+          "sme_tier",
+          "in_checklist"
+        ],
+        "original": {
+          "sme_tier": "required",
+          "in_checklist": null
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-09",
+        "note": "Cross-cutting baseline — not module-specific Mandatory. Demoted to Preferred + in_checklist:false so it joins data_governance and user_access_roles under Optional / Add-ons. Universal data import/export concern; every modern ERP provides it; not a verdict gate.\n"
+      }
     },
     {
       "id": "hr.rewards_recognition",
@@ -23204,8 +23234,8 @@
   "_meta": {
     "step15_generated_at": "2026-05-07T13:55:14.798301+08:00",
     "step15_processed": 32,
-    "step16_applied_at": "2026-05-09T15:28:26.969037+08:00",
-    "step16_applied_count": 1
+    "step16_applied_at": "2026-05-09T16:09:57.579805+08:00",
+    "step16_applied_count": 0
   },
   "sub_modules": [
     {

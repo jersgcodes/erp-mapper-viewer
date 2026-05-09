@@ -9226,7 +9226,19 @@
       "family": "Equipment & Inventory",
       "sub_module_id": "installed_base_parts",
       "sub_module_name": "Installed Base, Parts & PM",
-      "sub_module_desc": "Customer/site records, installed equipment, parts inventory for field, preventive maintenance scheduling, return/swap-out workflow."
+      "sub_module_desc": "Customer/site records, installed equipment, parts inventory for field, preventive maintenance scheduling, return/swap-out workflow.",
+      "in_checklist": false,
+      "_cap_override": {
+        "fields_overridden": [
+          "in_checklist"
+        ],
+        "original": {
+          "in_checklist": null
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-09",
+        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+      }
     },
     {
       "id": "fsm.analytics_kpis",
@@ -12248,7 +12260,19 @@
       "family": "Analytics & Intelligence",
       "sub_module_id": "fsm_analytics_iot_ai",
       "sub_module_name": "FSM Analytics, IoT & AI",
-      "sub_module_desc": "Field service KPIs, workforce capacity, job costing, IoT remote monitoring, AI/ML for field service."
+      "sub_module_desc": "Field service KPIs, workforce capacity, job costing, IoT remote monitoring, AI/ML for field service.",
+      "in_checklist": false,
+      "_cap_override": {
+        "fields_overridden": [
+          "in_checklist"
+        ],
+        "original": {
+          "in_checklist": null
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-09",
+        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+      }
     },
     {
       "id": "fsm.mobile_access",
@@ -12666,14 +12690,10 @@
       "sub_module_desc": null,
       "_cap_override": {
         "fields_overridden": [
-          "name",
-          "vendor_question",
-          "vendor_question_terse"
+          "name"
         ],
         "original": {
-          "name": "Mobile and Multi-Device Access",
-          "vendor_question": "Does your solution provide responsive interfaces across device types, enable cloud-based deployment, support mobile field operations with offline capability, and synchronise data automatically upon reconnection, so field teams remain productive without fixed infrastructure?",
-          "vendor_question_terse": null
+          "name": "Mobile and Multi-Device Access"
         },
         "author": "human-review",
         "edited_at": "2026-05-09",
@@ -13156,12 +13176,10 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier",
-          "in_checklist"
+          "sme_tier"
         ],
         "original": {
-          "sme_tier": "required",
-          "in_checklist": null
+          "sme_tier": "required"
         },
         "author": "human-review",
         "edited_at": "2026-05-07",
@@ -13707,12 +13725,10 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier",
-          "in_checklist"
+          "sme_tier"
         ],
         "original": {
-          "sme_tier": "required",
-          "in_checklist": null
+          "sme_tier": "required"
         },
         "author": "human-review",
         "edited_at": "2026-05-07",
@@ -13733,7 +13749,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_field_service",
         "salesforce_field_service",
@@ -14452,7 +14468,21 @@
       "family": null,
       "sub_module_id": null,
       "sub_module_name": null,
-      "sub_module_desc": null
+      "sub_module_desc": null,
+      "in_checklist": false,
+      "_cap_override": {
+        "fields_overridden": [
+          "sme_tier",
+          "in_checklist"
+        ],
+        "original": {
+          "sme_tier": "required",
+          "in_checklist": null
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-09",
+        "note": "Cross-cutting baseline — not module-specific Mandatory. Demoted to Preferred + in_checklist:false so it joins data_governance and user_access_roles under Optional / Add-ons. Universal data import/export concern; every modern ERP provides it; not a verdict gate.\n"
+      }
     }
   ],
   "module_sme_rollup": [
@@ -14794,8 +14824,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-09T15:28:26.663893+08:00",
-    "step16_applied_count": 1
+    "step16_applied_at": "2026-05-09T16:09:57.143059+08:00",
+    "step16_applied_count": 0
   },
   "sub_modules": [
     {
