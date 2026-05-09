@@ -15132,7 +15132,7 @@
     },
     {
       "id": "sales.mobile_access",
-      "name": "Mobile and Multi-Device Access",
+      "name": "Cloud and Multi-Device Accessibility",
       "description": "The solution works on phones, tablets, and desktops. Universal requirement — PSG asks every vendor \"is this cloud and multi-device accessible?\" as the first question on every sol cat. Every modern SME expects their business software to be usable on a mobile device.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -15549,7 +15549,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution provide full customer record access and interaction logging across multiple device types and platforms, with offline capability and automatic synchronisation, so your team can work from any location?",
+        "question": "Does your solution support cloud-based, mobile-based, and/or web-based usage so users can access core workflows across phones, tablets, and desktops?\n",
         "free_text_prompt": "Describe which platforms your solution supports (web browser, iOS, Android, native apps) and confirm that mobile users can search customer records and log interactions from their devices.",
         "covers": [
           {
@@ -15574,7 +15574,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_terse": "Does your solution allow users to access and update customer records from multiple devices?"
+        "question_terse": "Does your solution support cloud-based, mobile-based, and/or web-based usage?\n"
       },
       "sector_relevance": {
         "generic": true,
@@ -15651,7 +15651,22 @@
       "family": null,
       "sub_module_id": null,
       "sub_module_name": null,
-      "sub_module_desc": null
+      "sub_module_desc": null,
+      "_cap_override": {
+        "fields_overridden": [
+          "name",
+          "vendor_question",
+          "vendor_question_terse"
+        ],
+        "original": {
+          "name": "Mobile and Multi-Device Access",
+          "vendor_question": "Does your solution provide full customer record access and interaction logging across multiple device types and platforms, with offline capability and automatic synchronisation, so your team can work from any location?",
+          "vendor_question_terse": "Does your solution allow users to access and update customer records from multiple devices?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-09",
+        "note": "Aligned to IMDA Q1 phrasing of essential-business__document-management- and-mobile-access-system (\"Cloud and Multi-Device Accessibility\"; req: \"For cloud-based, mobile-based, and/or web-based usage\"). Replaces the previous \"Mobile and Multi-Device Access\" name + the longer vendor question that didn't match IMDA standard wording. The IMDA trace was added separately in data/manual_imda_ref_overrides.yaml (10 entries).\n"
+      }
     },
     {
       "id": "sales.social_crm_basic",
@@ -27377,8 +27392,8 @@
   "_meta": {
     "step15_generated_at": "2026-05-07T13:56:06.499479+08:00",
     "step15_processed": 39,
-    "step16_applied_at": "2026-05-09T13:48:00.686095+08:00",
-    "step16_applied_count": 2
+    "step16_applied_at": "2026-05-09T15:28:27.382539+08:00",
+    "step16_applied_count": 1
   },
   "sub_modules": [
     {

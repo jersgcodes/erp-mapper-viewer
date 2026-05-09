@@ -14260,7 +14260,7 @@
     },
     {
       "id": "proj.mobile_access",
-      "name": "Mobile and Multi-Device Access",
+      "name": "Cloud and Multi-Device Accessibility",
       "description": "The solution works on phones, tablets, and desktops. Universal requirement — PSG asks every vendor about cloud and multi-device access as the first question on every sol cat.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -14686,7 +14686,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution deliver full project functionality across phones, tablets, and desktops with responsive design, task updates, notifications, and dashboard visibility, so teams stay productive from any device?",
+        "question": "Does your solution support cloud-based, mobile-based, and/or web-based usage so users can access core workflows across phones, tablets, and desktops?\n",
         "free_text_prompt": "Describe how your solution supports mobile access (phones and tablets), what core functions are available on mobile devices, and how the interface adapts to different screen sizes.",
         "covers": [
           {
@@ -14710,7 +14710,8 @@
             "rationale": "Leadership needs visibility into project status while away from the office."
           }
         ],
-        "total_input_items": 5
+        "total_input_items": 5,
+        "question_terse": "Does your solution support cloud-based, mobile-based, and/or web-based usage?\n"
       },
       "sector_relevance": {
         "generic": true,
@@ -14757,7 +14758,22 @@
       "family": null,
       "sub_module_id": null,
       "sub_module_name": null,
-      "sub_module_desc": null
+      "sub_module_desc": null,
+      "_cap_override": {
+        "fields_overridden": [
+          "name",
+          "vendor_question",
+          "vendor_question_terse"
+        ],
+        "original": {
+          "name": "Mobile and Multi-Device Access",
+          "vendor_question": "Does your solution deliver full project functionality across phones, tablets, and desktops with responsive design, task updates, notifications, and dashboard visibility, so teams stay productive from any device?",
+          "vendor_question_terse": null
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-09",
+        "note": "Aligned to IMDA Q1 phrasing of essential-business__document-management- and-mobile-access-system (\"Cloud and Multi-Device Accessibility\"; req: \"For cloud-based, mobile-based, and/or web-based usage\"). Replaces the previous \"Mobile and Multi-Device Access\" name + the longer vendor question that didn't match IMDA standard wording. The IMDA trace was added separately in data/manual_imda_ref_overrides.yaml (10 entries).\n"
+      }
     },
     {
       "id": "proj.data_governance",
@@ -16825,8 +16841,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-09T13:48:00.609723+08:00",
-    "step16_applied_count": 0
+    "step16_applied_at": "2026-05-09T15:28:27.275557+08:00",
+    "step16_applied_count": 1
   },
   "sub_modules": [
     {

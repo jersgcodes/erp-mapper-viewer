@@ -17954,7 +17954,7 @@
     },
     {
       "id": "sc.mobile_access",
-      "name": "Mobile and Multi-Device Access",
+      "name": "Cloud and Multi-Device Accessibility",
       "description": "The solution works on phones, tablets, and desktops. Universal requirement — PSG asks every vendor \"is this cloud and multi-device accessible?\" as the first question on every sol cat. Warehouse staff need mobile access for receiving, picking, counting, and scanning on the floor.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -18322,7 +18322,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution enable warehouse operations across mobile devices, tablets, and desktops with responsive design and automatic data synchronisation, so staff can work efficiently on any device without local installation?",
+        "question": "Does your solution support cloud-based, mobile-based, and/or web-based usage so users can access core workflows across phones, tablets, and desktops?\n",
         "free_text_prompt": "Describe which warehouse workflows (receiving, picking, counting, scanning) are supported on mobile, whether the interface is responsive, and how offline mode and data synchronisation work.",
         "covers": [
           {
@@ -18351,7 +18351,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_terse": "Does your solution allow warehouse staff to perform operations on mobile devices, tablets, and desktops?"
+        "question_terse": "Does your solution support cloud-based, mobile-based, and/or web-based usage?\n"
       },
       "sector_relevance": {
         "generic": true,
@@ -18398,7 +18398,22 @@
       "family": null,
       "sub_module_id": null,
       "sub_module_name": null,
-      "sub_module_desc": null
+      "sub_module_desc": null,
+      "_cap_override": {
+        "fields_overridden": [
+          "name",
+          "vendor_question",
+          "vendor_question_terse"
+        ],
+        "original": {
+          "name": "Mobile and Multi-Device Access",
+          "vendor_question": "Does your solution enable warehouse operations across mobile devices, tablets, and desktops with responsive design and automatic data synchronisation, so staff can work efficiently on any device without local installation?",
+          "vendor_question_terse": "Does your solution allow warehouse staff to perform operations on mobile devices, tablets, and desktops?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-09",
+        "note": "Aligned to IMDA Q1 phrasing of essential-business__document-management- and-mobile-access-system (\"Cloud and Multi-Device Accessibility\"; req: \"For cloud-based, mobile-based, and/or web-based usage\"). Replaces the previous \"Mobile and Multi-Device Access\" name + the longer vendor question that didn't match IMDA standard wording. The IMDA trace was added separately in data/manual_imda_ref_overrides.yaml (10 entries).\n"
+      }
     },
     {
       "id": "sc.data_governance",
@@ -20686,8 +20701,8 @@
   "_meta": {
     "step15_generated_at": "2026-05-07T13:56:52.266921+08:00",
     "step15_processed": 31,
-    "step16_applied_at": "2026-05-09T13:48:00.767076+08:00",
-    "step16_applied_count": 0
+    "step16_applied_at": "2026-05-09T15:28:27.497957+08:00",
+    "step16_applied_count": 1
   },
   "sub_modules": [
     {
