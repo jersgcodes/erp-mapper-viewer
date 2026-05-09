@@ -2665,19 +2665,10 @@
   "coverage_t2": {
     "essential-business__accounting-management-+-inventory-management-+-sales-management-system": {
       "financial_management": {
-        "verdict": "partial",
-        "n_r_passing": 8,
+        "verdict": "pass",
+        "n_r_passing": 9,
         "n_r_bearing": 9,
-        "failing_caps": [
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          }
-        ],
+        "failing_caps": [],
         "passing_caps": [
           {
             "id": "fin.general_ledger",
@@ -2742,12 +2733,20 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q5 covers filtered customer-group reports but lacks drill-down and ad-hoc query features."
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -2761,14 +2760,6 @@
           {
             "id": "sales.activities",
             "name": "Customer Interaction Log",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -2807,23 +2798,22 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q5 covers filtered customer group reports; drill-down and role-based dashboards not specified."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
-        "verdict": "partial",
-        "n_r_passing": 7,
+        "verdict": "pass",
+        "n_r_passing": 8,
         "n_r_bearing": 8,
-        "failing_caps": [
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          }
-        ],
+        "failing_caps": [],
         "passing_caps": [
           {
             "id": "sc.item_master",
@@ -2880,6 +2870,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q11 tracks inventory levels; Q5 filters customer groups; lacks supplier performance and cost-to-serve metrics"
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -3065,19 +3063,10 @@
     },
     "essential-business__accounting-management-+-sales-management-system": {
       "financial_management": {
-        "verdict": "partial",
-        "n_r_passing": 8,
+        "verdict": "pass",
+        "n_r_passing": 9,
         "n_r_bearing": 9,
-        "failing_caps": [
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          }
-        ],
+        "failing_caps": [],
         "passing_caps": [
           {
             "id": "fin.general_ledger",
@@ -3142,12 +3131,20 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q5 covers filtered customer/accounting reports but lacks drill-down and ad-hoc queries."
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -3161,14 +3158,6 @@
           {
             "id": "sales.activities",
             "name": "Customer Interaction Log",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -3207,6 +3196,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q12 covers sales monitoring and forecasts but lacks drill-down and role-based specifics."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -3479,8 +3476,8 @@
         "passing_caps": []
       },
       "supply_chain_and_inventory": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -3538,17 +3535,18 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Dashboards and delivery reports covered; inventory/supplier/procurement metrics absent."
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sc.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "human_resources_management": {
         "verdict": "not_in_scope",
@@ -3868,7 +3866,7 @@
       },
       "human_resources_management": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -3974,20 +3972,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "hr.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "hr.recruitment_ats",
             "name": "Recruitment & Applicant Tracking (ATS)",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "hr.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -4479,8 +4477,8 @@
         "passing_caps": []
       },
       "others": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -4522,17 +4520,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "other.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       }
     },
     "essential-business__carbon-management-solution": {
@@ -5598,8 +5597,8 @@
         "passing_caps": []
       },
       "supply_chain_and_inventory": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -5657,17 +5656,18 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q6 requires dashboards with charts but focuses on customs metrics not supply chain inventory"
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sc.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "human_resources_management": {
         "verdict": "not_in_scope",
@@ -5803,20 +5803,12 @@
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 5,
+        "n_r_passing": 6,
         "n_r_bearing": 7,
         "failing_caps": [
           {
             "id": "sales.quotes_orders",
             "name": "Orders & Invoicing",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -5863,6 +5855,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q4 covers dashboards with charts; drill-down and role-based access not specified."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -6135,8 +6135,8 @@
         "passing_caps": []
       },
       "others": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -6178,23 +6178,24 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "other.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       }
     },
     "built-environment__digital-contract-management-digital-payment": {
       "financial_management": {
         "verdict": "partial",
-        "n_r_passing": 5,
+        "n_r_passing": 6,
         "n_r_bearing": 9,
         "failing_caps": [
           {
@@ -6220,14 +6221,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q4 covers actual vs budget spending analytics but not full budgeting module"
-          },
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -6270,6 +6263,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q4 covers spending analytics and budget variance; lacks full drill-down and ad-hoc query features."
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -6282,7 +6283,7 @@
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -6324,14 +6325,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -6350,6 +6343,14 @@
             "trace_backed": true,
             "realistic": "no",
             "reason": "Scope covers payment/contract analytics, not inventory or supply chain metrics."
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -6478,8 +6479,8 @@
         ]
       },
       "others": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -6521,17 +6522,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "other.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       }
     },
     "essential-business__digital-marketing-packages": {
@@ -7080,7 +7082,7 @@
       },
       "others": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -7114,20 +7116,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "other.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "other.document_management",
             "name": "Document Management System",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "other.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -7202,7 +7204,7 @@
       },
       "others": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -7236,20 +7238,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "other.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "other.document_management",
             "name": "Document Management System",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "other.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -7324,7 +7326,7 @@
       },
       "others": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -7358,20 +7360,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "other.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "other.custom_forms_surveys",
             "name": "Custom Forms & Survey Builder",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "other.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -7383,7 +7385,7 @@
     "essential-business__e-commerce-online-shop-b2c": {
       "financial_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 9,
         "failing_caps": [
           {
@@ -7433,14 +7435,6 @@
             "trace_backed": false,
             "realistic": "no",
             "reason": "Q5 covers sales metrics only; no financial dashboards or variance analysis"
-          },
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -7459,12 +7453,20 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 3,
+        "n_r_passing": 4,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -7486,14 +7488,6 @@
           {
             "id": "sales.activities",
             "name": "Customer Interaction Log",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -7524,12 +7518,20 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q5 covers sales metrics dashboards but not role-based drill-down or forecasting."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 5,
+        "n_r_passing": 6,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -7543,14 +7545,6 @@
           {
             "id": "sc.barcode_scanning",
             "name": "Barcode & Scanning",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -7597,6 +7591,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q4 covers inventory tracking; Q5 covers sales dashboards, but supplier performance and cost-to-serve metrics absent."
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -7782,7 +7784,7 @@
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 3,
+        "n_r_passing": 4,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -7804,14 +7806,6 @@
           {
             "id": "sales.quotes_orders",
             "name": "Orders & Invoicing",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -7842,6 +7836,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q5 covers engagement/retention dashboards but not sales forecasting or drill-down"
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -8095,8 +8097,8 @@
         "passing_caps": []
       },
       "human_resources_management": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -8210,17 +8212,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "hr.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "manufacturing_management": {
         "verdict": "not_in_scope",
@@ -8316,19 +8319,10 @@
     },
     "wholesale__enterprise-resource-planning-erp-software-for-wholesale": {
       "financial_management": {
-        "verdict": "partial",
-        "n_r_passing": 8,
+        "verdict": "pass",
+        "n_r_passing": 9,
         "n_r_bearing": 9,
-        "failing_caps": [
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          }
-        ],
+        "failing_caps": [],
         "passing_caps": [
           {
             "id": "fin.general_ledger",
@@ -8393,12 +8387,20 @@
             "trace_backed": true,
             "realistic": "no",
             "reason": "Scope covers sales, purchasing, inventory; no financial analytics or dashboards mentioned."
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -8412,14 +8414,6 @@
           {
             "id": "sales.opportunities_pipeline",
             "name": "Opportunity & Pipeline Management",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -8458,12 +8452,20 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Sales management scope implies reporting; drill-down analytics not explicitly required."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 6,
+        "n_r_passing": 7,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -8473,14 +8475,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Scope covers inventory and supplier management but not full analytics dashboards."
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -8527,6 +8521,14 @@
           {
             "id": "sc.barcode_scanning",
             "name": "Barcode & Scanning",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -8899,8 +8901,8 @@
         "passing_caps": []
       },
       "manufacturing_management": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 11,
         "failing_caps": [
           {
@@ -8982,21 +8984,22 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "mfg.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "asset_management": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 10,
         "failing_caps": [
           {
@@ -9038,14 +9041,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "asset.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -9076,6 +9071,14 @@
           {
             "id": "asset.analytics_kpi",
             "name": "Maintenance Analytics & KPIs",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "asset.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -9619,7 +9622,7 @@
       },
       "fleet_management": {
         "verdict": "partial",
-        "n_r_passing": 3,
+        "n_r_passing": 4,
         "n_r_bearing": 10,
         "failing_caps": [
           {
@@ -9669,14 +9672,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Fleet tracking covers vehicle status; expiry alerts and compliance logs not explicit."
-          },
-          {
-            "id": "fleet.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -9703,6 +9698,14 @@
             "trace_backed": true,
             "realistic": "yes",
             "reason": "Q5, Q6, Q9 directly cover dashboards, fuel/mileage reports, and data export."
+          },
+          {
+            "id": "fleet.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -9772,8 +9775,8 @@
         "passing_caps": []
       },
       "fleet_management": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 10,
         "failing_caps": [
           {
@@ -9847,17 +9850,18 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Driver behaviour and safety monitored; licence/vehicle compliance expiry tracking not explicit."
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "fleet.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "project_management": {
         "verdict": "not_in_scope",
@@ -10022,8 +10026,8 @@
         ]
       },
       "supply_chain_and_inventory": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -10081,17 +10085,18 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q18 requires dashboards with 4+ charts but lacks inventory/supplier metrics depth"
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sc.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "human_resources_management": {
         "verdict": "not_in_scope",
@@ -10735,7 +10740,7 @@
       },
       "human_resources_management": {
         "verdict": "partial",
-        "n_r_passing": 7,
+        "n_r_passing": 8,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -10789,14 +10794,6 @@
           {
             "id": "hr.benefits_administration",
             "name": "Benefits Administration",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "hr.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -10855,6 +10852,14 @@
           {
             "id": "hr.overtime_variable_pay",
             "name": "Overtime & Variable Pay Calculation",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "hr.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -11424,8 +11429,8 @@
         ]
       },
       "supply_chain_and_inventory": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -11483,17 +11488,18 @@
             "trace_backed": false,
             "realistic": "no",
             "reason": "Scope covers sales/POS analytics; no supplier performance or supply chain metrics."
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sc.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "human_resources_management": {
         "verdict": "not_in_scope",
@@ -11693,7 +11699,7 @@
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -11719,14 +11725,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q7 covers dashboards/reports; Q10 covers data extraction; but supplier performance and cost-to-serve metrics not explici"
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -11757,6 +11755,14 @@
           {
             "id": "sc.barcode_scanning",
             "name": "Barcode & Scanning",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -12029,7 +12035,7 @@
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -12043,14 +12049,6 @@
           {
             "id": "sales.activities",
             "name": "Customer Interaction Log",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -12089,23 +12087,22 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q15 covers sales dashboards and forecasts but not role-based drill-down"
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
-        "verdict": "partial",
-        "n_r_passing": 7,
+        "verdict": "pass",
+        "n_r_passing": 8,
         "n_r_bearing": 8,
-        "failing_caps": [
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          }
-        ],
+        "failing_caps": [],
         "passing_caps": [
           {
             "id": "sc.item_master",
@@ -12162,6 +12159,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q6/Q15 cover inventory and sales dashboards but lack supplier performance and cost-to-serve metrics."
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -12319,8 +12324,8 @@
         "passing_caps": []
       },
       "human_resources_management": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -12434,17 +12439,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "hr.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "manufacturing_management": {
         "verdict": "not_in_scope",
@@ -12569,7 +12575,7 @@
       },
       "manufacturing_management": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 11,
         "failing_caps": [
           {
@@ -12643,20 +12649,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "mfg.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "mfg.quality_management",
             "name": "Quality Management (QM)",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "mfg.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -13695,7 +13701,7 @@
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -13737,14 +13743,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Dashboards and sales analytics covered; role-based drill-down and forecasting limited."
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -13755,12 +13753,20 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -13802,14 +13808,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -13828,6 +13826,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Covers inventory tracking and dashboards but lacks supplier performance and cost-to-serve metrics"
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -14229,7 +14235,7 @@
       },
       "manufacturing_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 11,
         "failing_caps": [
           {
@@ -14295,14 +14301,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "mfg.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -14317,6 +14315,14 @@
           {
             "id": "mfg.routing",
             "name": "Routings, Operations & Work Centers",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "mfg.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -14682,7 +14688,7 @@
       },
       "manufacturing_management": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 11,
         "failing_caps": [
           {
@@ -14756,20 +14762,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "mfg.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "mfg.work_orders",
             "name": "Work Orders & Job Cards",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "mfg.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -15107,8 +15113,8 @@
         "passing_caps": []
       },
       "others": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -15150,17 +15156,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "other.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       }
     },
     "wholesale__sales-management": {
@@ -15247,7 +15254,7 @@
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -15289,14 +15296,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q11 covers dashboards with charts; drill-down and forecasting not specified."
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -15307,12 +15306,20 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -15354,14 +15361,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q11 covers dashboards/reports; Q2 covers inventory but not supplier performance metrics"
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -15376,6 +15375,14 @@
           {
             "id": "sc.purchase_orders",
             "name": "Purchase Orders & Procurement",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -15581,7 +15588,7 @@
       },
       "others": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -15615,20 +15622,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "other.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "other.notification_alerts",
             "name": "Notification & Alert Management",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "other.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -16105,8 +16112,8 @@
         "passing_caps": []
       },
       "field_service_management": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 12,
         "failing_caps": [
           {
@@ -16196,17 +16203,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "fsm.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "fleet_management": {
         "verdict": "not_in_scope",
@@ -16303,7 +16311,7 @@
       },
       "human_resources_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -16401,14 +16409,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "hr.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -16423,6 +16423,14 @@
           {
             "id": "hr.recruitment_ats",
             "name": "Recruitment & Applicant Tracking (ATS)",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "hr.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -16538,8 +16546,8 @@
         "passing_caps": []
       },
       "supply_chain_and_inventory": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -16597,17 +16605,18 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Covers delivery lead times and job analytics dashboards but not inventory or supplier metrics"
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sc.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "human_resources_management": {
         "verdict": "not_in_scope",
@@ -17035,8 +17044,8 @@
         "passing_caps": []
       },
       "others": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -17078,17 +17087,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "other.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       }
     },
     "early-childhood__vacancy-and-waitlist-management": {
@@ -17100,8 +17110,8 @@
         "passing_caps": []
       },
       "sales_and_crm": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -17151,17 +17161,18 @@
             "trace_backed": false,
             "realistic": "no",
             "reason": "Dashboards cover vacancy/waitlist metrics, not sales CRM analytics"
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sales.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "supply_chain_and_inventory": {
         "verdict": "not_in_scope",
@@ -17334,8 +17345,8 @@
         "passing_caps": []
       },
       "others": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -17377,17 +17388,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "other.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       }
     },
     "logistics__warehouse-management": {
@@ -17481,7 +17493,7 @@
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -17523,14 +17535,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q8 covers dashboards/reports but scope lacks supplier performance and cost-to-serve metrics."
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -17545,6 +17549,14 @@
           {
             "id": "sc.stock_levels",
             "name": "Stock Levels & Warehouse Management",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -18313,7 +18325,7 @@
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 3,
+        "n_r_passing": 4,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -18335,14 +18347,6 @@
           {
             "id": "sales.activities",
             "name": "Customer Interaction Log",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -18373,12 +18377,20 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q6 covers business dashboards and analytics but lacks sales forecasting depth."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -18428,14 +18440,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -18446,6 +18450,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q7 covers inventory management and Q6 covers analytics dashboards, but supplier performance and cost-to-serve metrics ar"
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -18795,8 +18807,8 @@
     },
     "legal__practice-management-system-pms": {
       "financial_management": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 9,
         "failing_caps": [
           {
@@ -18862,17 +18874,18 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q8 covers dashboards and reports but not drill-down or ad-hoc queries"
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "fin.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "sales_and_crm": {
         "verdict": "not_in_scope",
@@ -19014,7 +19027,7 @@
       },
       "project_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 10,
         "failing_caps": [
           {
@@ -19072,14 +19085,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "proj.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -19098,12 +19103,20 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q8 covers dashboards and reporting but focuses on firm operations and case status, not cost variance or resource utilisa"
+          },
+          {
+            "id": "proj.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "others": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -19145,23 +19158,24 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "other.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       }
     },
     "early-childhood__pre-school-management-system": {
       "financial_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 9,
         "failing_caps": [
           {
@@ -19211,14 +19225,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Finance management covers fee tracking and grants but lacks full KPI dashboards and variance analysis."
-          },
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -19237,12 +19243,20 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -19292,17 +19306,18 @@
             "trace_backed": false,
             "realistic": "no",
             "reason": "Scope covers school fees and child records, not sales analytics dashboards."
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sales.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "supply_chain_and_inventory": {
         "verdict": "not_in_scope",
@@ -19313,7 +19328,7 @@
       },
       "human_resources_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -19411,14 +19426,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "hr.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -19433,6 +19440,14 @@
           {
             "id": "hr.document_management",
             "name": "HR Document Management",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "hr.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -19559,7 +19574,7 @@
       },
       "others": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -19585,14 +19600,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "other.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -19611,6 +19618,14 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "other.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       }
@@ -19618,7 +19633,7 @@
     "early-childhood__pre-school-management-system-+-e-forms-for-pre-school": {
       "financial_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 9,
         "failing_caps": [
           {
@@ -19668,14 +19683,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Finance module covers fee/grant tracking but not full KPI dashboards or variance analysis."
-          },
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -19694,12 +19701,20 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -19749,17 +19764,18 @@
             "trace_backed": false,
             "realistic": "no",
             "reason": "Scope covers school/child management; no sales CRM analytics domain."
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sales.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "supply_chain_and_inventory": {
         "verdict": "not_in_scope",
@@ -19770,7 +19786,7 @@
       },
       "human_resources_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -19868,14 +19884,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "hr.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -19890,6 +19898,14 @@
           {
             "id": "hr.document_management",
             "name": "HR Document Management",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "hr.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -20016,7 +20032,7 @@
       },
       "others": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -20042,14 +20058,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "other.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -20064,6 +20072,14 @@
           {
             "id": "other.custom_forms_surveys",
             "name": "Custom Forms & Survey Builder",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "other.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -20156,7 +20172,7 @@
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -20170,14 +20186,6 @@
           {
             "id": "sales.opportunities_pipeline",
             "name": "Opportunity & Pipeline Management",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -20216,12 +20224,20 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q3 covers salon sales dashboards and reports but lacks drill-down forecasting."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -20243,14 +20259,6 @@
           {
             "id": "sc.barcode_scanning",
             "name": "Barcode & Scanning",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -20289,12 +20297,20 @@
             "trace_backed": true,
             "realistic": "no",
             "reason": "Salon scope covers appointment/sales dashboards, not supply chain analytics metrics."
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "human_resources_management": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -20376,14 +20392,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "hr.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -20414,6 +20422,14 @@
           {
             "id": "hr.statutory_reporting",
             "name": "Statutory HR Reporting (CPF, IRAS, MOM)",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "hr.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -20696,7 +20712,7 @@
     "tourism-travel-agent__travel-management-system-e-commerce": {
       "financial_management": {
         "verdict": "partial",
-        "n_r_passing": 3,
+        "n_r_passing": 4,
         "n_r_bearing": 9,
         "failing_caps": [
           {
@@ -20738,14 +20754,6 @@
             "trace_backed": false,
             "realistic": "no",
             "reason": "Scope covers sales reporting only; no financial analytics or dashboards."
-          },
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -20772,25 +20780,25 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 5,
+        "n_r_passing": 6,
         "n_r_bearing": 7,
         "failing_caps": [
           {
             "id": "sales.opportunities_pipeline",
             "name": "Opportunity & Pipeline Management",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -20837,6 +20845,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Sales reporting module present but no drill-down or forecasting features specified."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -21015,7 +21031,7 @@
     "tourism-travel-agent__travel-management-system-operations": {
       "financial_management": {
         "verdict": "partial",
-        "n_r_passing": 5,
+        "n_r_passing": 6,
         "n_r_bearing": 9,
         "failing_caps": [
           {
@@ -21041,14 +21057,6 @@
             "trace_backed": false,
             "realistic": "no",
             "reason": "Scope covers sales/ops dashboards, not financial analytics with drill-down or variance analysis."
-          },
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -21091,12 +21099,20 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 3,
+        "n_r_passing": 4,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -21122,14 +21138,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q2 covers sales reporting and Q17 covers dashboards with charts, but role-based drill-down and forecasting not specified"
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -21156,12 +21164,20 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -21187,14 +21203,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q17 covers dashboards/reports; Q4/Q9/Q10 cover supplier and order tracking, but no inventory turnover or cost-to-serve m"
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -21225,6 +21233,14 @@
           {
             "id": "sc.vendor_master",
             "name": "Vendor & Supplier Master",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -21374,7 +21390,7 @@
       },
       "others": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -21408,20 +21424,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "other.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "other.notification_alerts",
             "name": "Notification & Alert Management",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "other.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -21434,19 +21450,10 @@
   "coverage_t11": {
     "essential-business__accounting-management-+-inventory-management-+-sales-management-system": {
       "financial_management": {
-        "verdict": "partial",
-        "n_r_passing": 8,
+        "verdict": "pass",
+        "n_r_passing": 9,
         "n_r_bearing": 9,
-        "failing_caps": [
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          }
-        ],
+        "failing_caps": [],
         "passing_caps": [
           {
             "id": "fin.general_ledger",
@@ -21511,12 +21518,20 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q5 covers filtered customer-group reports but lacks drill-down and ad-hoc query features."
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -21530,14 +21545,6 @@
           {
             "id": "sales.activities",
             "name": "Customer Interaction Log",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -21576,23 +21583,22 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q5 covers filtered customer group reports; drill-down and role-based dashboards not specified."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
-        "verdict": "partial",
-        "n_r_passing": 7,
+        "verdict": "pass",
+        "n_r_passing": 8,
         "n_r_bearing": 8,
-        "failing_caps": [
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          }
-        ],
+        "failing_caps": [],
         "passing_caps": [
           {
             "id": "sc.item_master",
@@ -21649,6 +21655,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q11 tracks inventory levels; Q5 filters customer groups; lacks supplier performance and cost-to-serve metrics"
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -21834,19 +21848,10 @@
     },
     "essential-business__accounting-management-+-sales-management-system": {
       "financial_management": {
-        "verdict": "partial",
-        "n_r_passing": 8,
+        "verdict": "pass",
+        "n_r_passing": 9,
         "n_r_bearing": 9,
-        "failing_caps": [
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          }
-        ],
+        "failing_caps": [],
         "passing_caps": [
           {
             "id": "fin.general_ledger",
@@ -21911,12 +21916,20 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q5 covers filtered customer/accounting reports but lacks drill-down and ad-hoc queries."
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -21930,14 +21943,6 @@
           {
             "id": "sales.activities",
             "name": "Customer Interaction Log",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -21976,6 +21981,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q12 covers sales monitoring and forecasts but lacks drill-down and role-based specifics."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -22248,8 +22261,8 @@
         "passing_caps": []
       },
       "supply_chain_and_inventory": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -22307,17 +22320,18 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Dashboards and delivery reports covered; inventory/supplier/procurement metrics absent."
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sc.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "human_resources_management": {
         "verdict": "not_in_scope",
@@ -22637,7 +22651,7 @@
       },
       "human_resources_management": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -22743,20 +22757,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "hr.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "hr.recruitment_ats",
             "name": "Recruitment & Applicant Tracking (ATS)",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "hr.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -23248,8 +23262,8 @@
         "passing_caps": []
       },
       "others": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -23291,17 +23305,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "other.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       }
     },
     "essential-business__carbon-management-solution": {
@@ -24367,8 +24382,8 @@
         "passing_caps": []
       },
       "supply_chain_and_inventory": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -24426,17 +24441,18 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q6 requires dashboards with charts but focuses on customs metrics not supply chain inventory"
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sc.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "human_resources_management": {
         "verdict": "not_in_scope",
@@ -24572,20 +24588,12 @@
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 5,
+        "n_r_passing": 6,
         "n_r_bearing": 7,
         "failing_caps": [
           {
             "id": "sales.quotes_orders",
             "name": "Orders & Invoicing",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -24632,6 +24640,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q4 covers dashboards with charts; drill-down and role-based access not specified."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -24904,8 +24920,8 @@
         "passing_caps": []
       },
       "others": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -24947,23 +24963,24 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "other.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       }
     },
     "built-environment__digital-contract-management-digital-payment": {
       "financial_management": {
         "verdict": "partial",
-        "n_r_passing": 5,
+        "n_r_passing": 6,
         "n_r_bearing": 9,
         "failing_caps": [
           {
@@ -24989,14 +25006,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q4 covers actual vs budget spending analytics but not full budgeting module"
-          },
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -25039,6 +25048,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q4 covers spending analytics and budget variance; lacks full drill-down and ad-hoc query features."
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -25051,7 +25068,7 @@
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -25093,14 +25110,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -25119,6 +25128,14 @@
             "trace_backed": true,
             "realistic": "no",
             "reason": "Scope covers payment/contract analytics, not inventory or supply chain metrics."
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -25247,8 +25264,8 @@
         ]
       },
       "others": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -25290,17 +25307,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "other.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       }
     },
     "essential-business__digital-marketing-packages": {
@@ -25849,7 +25867,7 @@
       },
       "others": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -25883,20 +25901,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "other.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "other.document_management",
             "name": "Document Management System",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "other.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -25971,7 +25989,7 @@
       },
       "others": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -26005,20 +26023,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "other.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "other.document_management",
             "name": "Document Management System",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "other.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -26093,7 +26111,7 @@
       },
       "others": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -26127,20 +26145,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "other.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "other.custom_forms_surveys",
             "name": "Custom Forms & Survey Builder",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "other.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -26152,7 +26170,7 @@
     "essential-business__e-commerce-online-shop-b2c": {
       "financial_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 9,
         "failing_caps": [
           {
@@ -26202,14 +26220,6 @@
             "trace_backed": false,
             "realistic": "no",
             "reason": "Q5 covers sales metrics only; no financial dashboards or variance analysis"
-          },
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -26228,12 +26238,20 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 3,
+        "n_r_passing": 4,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -26255,14 +26273,6 @@
           {
             "id": "sales.activities",
             "name": "Customer Interaction Log",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -26293,12 +26303,20 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q5 covers sales metrics dashboards but not role-based drill-down or forecasting."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 5,
+        "n_r_passing": 6,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -26312,14 +26330,6 @@
           {
             "id": "sc.barcode_scanning",
             "name": "Barcode & Scanning",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -26366,6 +26376,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q4 covers inventory tracking; Q5 covers sales dashboards, but supplier performance and cost-to-serve metrics absent."
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -26551,7 +26569,7 @@
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 3,
+        "n_r_passing": 4,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -26573,14 +26591,6 @@
           {
             "id": "sales.quotes_orders",
             "name": "Orders & Invoicing",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -26611,6 +26621,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q5 covers engagement/retention dashboards but not sales forecasting or drill-down"
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -26864,8 +26882,8 @@
         "passing_caps": []
       },
       "human_resources_management": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -26979,17 +26997,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "hr.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "manufacturing_management": {
         "verdict": "not_in_scope",
@@ -27085,19 +27104,10 @@
     },
     "wholesale__enterprise-resource-planning-erp-software-for-wholesale": {
       "financial_management": {
-        "verdict": "partial",
-        "n_r_passing": 8,
+        "verdict": "pass",
+        "n_r_passing": 9,
         "n_r_bearing": 9,
-        "failing_caps": [
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          }
-        ],
+        "failing_caps": [],
         "passing_caps": [
           {
             "id": "fin.general_ledger",
@@ -27162,12 +27172,20 @@
             "trace_backed": true,
             "realistic": "no",
             "reason": "Scope covers sales, purchasing, inventory; no financial analytics or dashboards mentioned."
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -27181,14 +27199,6 @@
           {
             "id": "sales.opportunities_pipeline",
             "name": "Opportunity & Pipeline Management",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -27227,12 +27237,20 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Sales management scope implies reporting; drill-down analytics not explicitly required."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 6,
+        "n_r_passing": 7,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -27242,14 +27260,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Scope covers inventory and supplier management but not full analytics dashboards."
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -27296,6 +27306,14 @@
           {
             "id": "sc.barcode_scanning",
             "name": "Barcode & Scanning",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -27668,8 +27686,8 @@
         "passing_caps": []
       },
       "manufacturing_management": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 11,
         "failing_caps": [
           {
@@ -27751,21 +27769,22 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "mfg.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "asset_management": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 10,
         "failing_caps": [
           {
@@ -27807,14 +27826,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "asset.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -27845,6 +27856,14 @@
           {
             "id": "asset.analytics_kpi",
             "name": "Maintenance Analytics & KPIs",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "asset.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -28388,7 +28407,7 @@
       },
       "fleet_management": {
         "verdict": "partial",
-        "n_r_passing": 3,
+        "n_r_passing": 4,
         "n_r_bearing": 10,
         "failing_caps": [
           {
@@ -28438,14 +28457,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Fleet tracking covers vehicle status; expiry alerts and compliance logs not explicit."
-          },
-          {
-            "id": "fleet.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -28472,6 +28483,14 @@
             "trace_backed": true,
             "realistic": "yes",
             "reason": "Q5, Q6, Q9 directly cover dashboards, fuel/mileage reports, and data export."
+          },
+          {
+            "id": "fleet.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -28541,8 +28560,8 @@
         "passing_caps": []
       },
       "fleet_management": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 10,
         "failing_caps": [
           {
@@ -28616,17 +28635,18 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Driver behaviour and safety monitored; licence/vehicle compliance expiry tracking not explicit."
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "fleet.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "project_management": {
         "verdict": "not_in_scope",
@@ -28791,8 +28811,8 @@
         ]
       },
       "supply_chain_and_inventory": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -28850,17 +28870,18 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q18 requires dashboards with 4+ charts but lacks inventory/supplier metrics depth"
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sc.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "human_resources_management": {
         "verdict": "not_in_scope",
@@ -29504,7 +29525,7 @@
       },
       "human_resources_management": {
         "verdict": "partial",
-        "n_r_passing": 7,
+        "n_r_passing": 8,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -29558,14 +29579,6 @@
           {
             "id": "hr.benefits_administration",
             "name": "Benefits Administration",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "hr.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -29624,6 +29637,14 @@
           {
             "id": "hr.overtime_variable_pay",
             "name": "Overtime & Variable Pay Calculation",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "hr.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -30193,8 +30214,8 @@
         ]
       },
       "supply_chain_and_inventory": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -30252,17 +30273,18 @@
             "trace_backed": false,
             "realistic": "no",
             "reason": "Scope covers sales/POS analytics; no supplier performance or supply chain metrics."
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sc.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "human_resources_management": {
         "verdict": "not_in_scope",
@@ -30462,7 +30484,7 @@
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -30488,14 +30510,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q7 covers dashboards/reports; Q10 covers data extraction; but supplier performance and cost-to-serve metrics not explici"
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -30526,6 +30540,14 @@
           {
             "id": "sc.barcode_scanning",
             "name": "Barcode & Scanning",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -30798,7 +30820,7 @@
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -30812,14 +30834,6 @@
           {
             "id": "sales.activities",
             "name": "Customer Interaction Log",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -30858,23 +30872,22 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q15 covers sales dashboards and forecasts but not role-based drill-down"
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
-        "verdict": "partial",
-        "n_r_passing": 7,
+        "verdict": "pass",
+        "n_r_passing": 8,
         "n_r_bearing": 8,
-        "failing_caps": [
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          }
-        ],
+        "failing_caps": [],
         "passing_caps": [
           {
             "id": "sc.item_master",
@@ -30931,6 +30944,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q6/Q15 cover inventory and sales dashboards but lack supplier performance and cost-to-serve metrics."
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -31088,8 +31109,8 @@
         "passing_caps": []
       },
       "human_resources_management": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -31203,17 +31224,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "hr.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "manufacturing_management": {
         "verdict": "not_in_scope",
@@ -31338,7 +31360,7 @@
       },
       "manufacturing_management": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 11,
         "failing_caps": [
           {
@@ -31412,20 +31434,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "mfg.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "mfg.quality_management",
             "name": "Quality Management (QM)",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "mfg.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -32464,7 +32486,7 @@
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -32506,14 +32528,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Dashboards and sales analytics covered; role-based drill-down and forecasting limited."
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -32524,12 +32538,20 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -32571,14 +32593,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -32597,6 +32611,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Covers inventory tracking and dashboards but lacks supplier performance and cost-to-serve metrics"
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -32998,7 +33020,7 @@
       },
       "manufacturing_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 11,
         "failing_caps": [
           {
@@ -33064,14 +33086,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "mfg.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -33086,6 +33100,14 @@
           {
             "id": "mfg.routing",
             "name": "Routings, Operations & Work Centers",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "mfg.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -33451,7 +33473,7 @@
       },
       "manufacturing_management": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 11,
         "failing_caps": [
           {
@@ -33525,20 +33547,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "mfg.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "mfg.work_orders",
             "name": "Work Orders & Job Cards",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "mfg.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -33876,8 +33898,8 @@
         "passing_caps": []
       },
       "others": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -33919,17 +33941,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "other.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       }
     },
     "wholesale__sales-management": {
@@ -34016,7 +34039,7 @@
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -34058,14 +34081,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q11 covers dashboards with charts; drill-down and forecasting not specified."
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -34076,12 +34091,20 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -34123,14 +34146,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q11 covers dashboards/reports; Q2 covers inventory but not supplier performance metrics"
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -34145,6 +34160,14 @@
           {
             "id": "sc.purchase_orders",
             "name": "Purchase Orders & Procurement",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -34350,7 +34373,7 @@
       },
       "others": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -34384,20 +34407,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "other.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "other.notification_alerts",
             "name": "Notification & Alert Management",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "other.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -34874,8 +34897,8 @@
         "passing_caps": []
       },
       "field_service_management": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 12,
         "failing_caps": [
           {
@@ -34965,17 +34988,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "fsm.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "fleet_management": {
         "verdict": "not_in_scope",
@@ -35072,7 +35096,7 @@
       },
       "human_resources_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -35170,14 +35194,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "hr.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -35192,6 +35208,14 @@
           {
             "id": "hr.recruitment_ats",
             "name": "Recruitment & Applicant Tracking (ATS)",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "hr.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -35307,8 +35331,8 @@
         "passing_caps": []
       },
       "supply_chain_and_inventory": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -35366,17 +35390,18 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Covers delivery lead times and job analytics dashboards but not inventory or supplier metrics"
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sc.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "human_resources_management": {
         "verdict": "not_in_scope",
@@ -35804,8 +35829,8 @@
         "passing_caps": []
       },
       "others": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -35847,17 +35872,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "other.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       }
     },
     "early-childhood__vacancy-and-waitlist-management": {
@@ -35869,8 +35895,8 @@
         "passing_caps": []
       },
       "sales_and_crm": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -35920,17 +35946,18 @@
             "trace_backed": false,
             "realistic": "no",
             "reason": "Dashboards cover vacancy/waitlist metrics, not sales CRM analytics"
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sales.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "supply_chain_and_inventory": {
         "verdict": "not_in_scope",
@@ -36103,8 +36130,8 @@
         "passing_caps": []
       },
       "others": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -36146,17 +36173,18 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "other.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       }
     },
     "logistics__warehouse-management": {
@@ -36250,7 +36278,7 @@
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -36292,14 +36320,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q8 covers dashboards/reports but scope lacks supplier performance and cost-to-serve metrics."
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -36314,6 +36334,14 @@
           {
             "id": "sc.stock_levels",
             "name": "Stock Levels & Warehouse Management",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -37082,7 +37110,7 @@
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 3,
+        "n_r_passing": 4,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -37104,14 +37132,6 @@
           {
             "id": "sales.activities",
             "name": "Customer Interaction Log",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -37142,12 +37162,20 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q6 covers business dashboards and analytics but lacks sales forecasting depth."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -37197,14 +37225,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -37215,6 +37235,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q7 covers inventory management and Q6 covers analytics dashboards, but supplier performance and cost-to-serve metrics ar"
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -37564,8 +37592,8 @@
     },
     "legal__practice-management-system-pms": {
       "financial_management": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 9,
         "failing_caps": [
           {
@@ -37631,17 +37659,18 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q8 covers dashboards and reports but not drill-down or ad-hoc queries"
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "fin.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "sales_and_crm": {
         "verdict": "not_in_scope",
@@ -37783,7 +37812,7 @@
       },
       "project_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 10,
         "failing_caps": [
           {
@@ -37841,14 +37870,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "proj.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -37867,12 +37888,20 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q8 covers dashboards and reporting but focuses on firm operations and case status, not cost variance or resource utilisa"
+          },
+          {
+            "id": "proj.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "others": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -37914,23 +37943,24 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "other.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       }
     },
     "early-childhood__pre-school-management-system": {
       "financial_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 9,
         "failing_caps": [
           {
@@ -37980,14 +38010,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Finance management covers fee tracking and grants but lacks full KPI dashboards and variance analysis."
-          },
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -38006,12 +38028,20 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -38061,17 +38091,18 @@
             "trace_backed": false,
             "realistic": "no",
             "reason": "Scope covers school fees and child records, not sales analytics dashboards."
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sales.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "supply_chain_and_inventory": {
         "verdict": "not_in_scope",
@@ -38082,7 +38113,7 @@
       },
       "human_resources_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -38180,14 +38211,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "hr.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -38202,6 +38225,14 @@
           {
             "id": "hr.document_management",
             "name": "HR Document Management",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "hr.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -38328,7 +38359,7 @@
       },
       "others": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -38354,14 +38385,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "other.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -38380,6 +38403,14 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "other.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       }
@@ -38387,7 +38418,7 @@
     "early-childhood__pre-school-management-system-+-e-forms-for-pre-school": {
       "financial_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 9,
         "failing_caps": [
           {
@@ -38437,14 +38468,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Finance module covers fee/grant tracking but not full KPI dashboards or variance analysis."
-          },
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -38463,12 +38486,20 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
-        "verdict": "fail",
-        "n_r_passing": 0,
+        "verdict": "partial",
+        "n_r_passing": 1,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -38518,17 +38549,18 @@
             "trace_backed": false,
             "realistic": "no",
             "reason": "Scope covers school/child management; no sales CRM analytics domain."
-          },
+          }
+        ],
+        "passing_caps": [
           {
             "id": "sales.mobile_access",
             "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
+            "fulfils": "yes",
+            "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
           }
-        ],
-        "passing_caps": []
+        ]
       },
       "supply_chain_and_inventory": {
         "verdict": "not_in_scope",
@@ -38539,7 +38571,7 @@
       },
       "human_resources_management": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -38637,14 +38669,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "hr.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -38659,6 +38683,14 @@
           {
             "id": "hr.document_management",
             "name": "HR Document Management",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "hr.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -38785,7 +38817,7 @@
       },
       "others": {
         "verdict": "partial",
-        "n_r_passing": 2,
+        "n_r_passing": 3,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -38811,14 +38843,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "other.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -38833,6 +38857,14 @@
           {
             "id": "other.custom_forms_surveys",
             "name": "Custom Forms & Survey Builder",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "other.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -38925,7 +38957,7 @@
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -38939,14 +38971,6 @@
           {
             "id": "sales.opportunities_pipeline",
             "name": "Opportunity & Pipeline Management",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -38985,12 +39009,20 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Q3 covers salon sales dashboards and reports but lacks drill-down forecasting."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -39012,14 +39044,6 @@
           {
             "id": "sc.barcode_scanning",
             "name": "Barcode & Scanning",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -39058,12 +39082,20 @@
             "trace_backed": true,
             "realistic": "no",
             "reason": "Salon scope covers appointment/sales dashboards, not supply chain analytics metrics."
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "human_resources_management": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 15,
         "failing_caps": [
           {
@@ -39145,14 +39177,6 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "hr.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -39183,6 +39207,14 @@
           {
             "id": "hr.statutory_reporting",
             "name": "Statutory HR Reporting (CPF, IRAS, MOM)",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "hr.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -39465,7 +39497,7 @@
     "tourism-travel-agent__travel-management-system-e-commerce": {
       "financial_management": {
         "verdict": "partial",
-        "n_r_passing": 3,
+        "n_r_passing": 4,
         "n_r_bearing": 9,
         "failing_caps": [
           {
@@ -39507,14 +39539,6 @@
             "trace_backed": false,
             "realistic": "no",
             "reason": "Scope covers sales reporting only; no financial analytics or dashboards."
-          },
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -39541,25 +39565,25 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 5,
+        "n_r_passing": 6,
         "n_r_bearing": 7,
         "failing_caps": [
           {
             "id": "sales.opportunities_pipeline",
             "name": "Opportunity & Pipeline Management",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "no",
             "trace_backed": false,
             "realistic": "unscored",
@@ -39606,6 +39630,14 @@
             "trace_backed": true,
             "realistic": "partial",
             "reason": "Sales reporting module present but no drill-down or forecasting features specified."
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
@@ -39784,7 +39816,7 @@
     "tourism-travel-agent__travel-management-system-operations": {
       "financial_management": {
         "verdict": "partial",
-        "n_r_passing": 5,
+        "n_r_passing": 6,
         "n_r_bearing": 9,
         "failing_caps": [
           {
@@ -39810,14 +39842,6 @@
             "trace_backed": false,
             "realistic": "no",
             "reason": "Scope covers sales/ops dashboards, not financial analytics with drill-down or variance analysis."
-          },
-          {
-            "id": "fin.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -39860,12 +39884,20 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "fin.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "sales_and_crm": {
         "verdict": "partial",
-        "n_r_passing": 3,
+        "n_r_passing": 4,
         "n_r_bearing": 7,
         "failing_caps": [
           {
@@ -39891,14 +39923,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q2 covers sales reporting and Q17 covers dashboards with charts, but role-based drill-down and forecasting not specified"
-          },
-          {
-            "id": "sales.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -39925,12 +39949,20 @@
             "trace_backed": true,
             "realistic": "unscored",
             "reason": ""
+          },
+          {
+            "id": "sales.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
           }
         ]
       },
       "supply_chain_and_inventory": {
         "verdict": "partial",
-        "n_r_passing": 4,
+        "n_r_passing": 5,
         "n_r_bearing": 8,
         "failing_caps": [
           {
@@ -39956,14 +39988,6 @@
             "trace_backed": false,
             "realistic": "partial",
             "reason": "Q17 covers dashboards/reports; Q4/Q9/Q10 cover supplier and order tracking, but no inventory turnover or cost-to-serve m"
-          },
-          {
-            "id": "sc.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
@@ -39994,6 +40018,14 @@
           {
             "id": "sc.vendor_master",
             "name": "Vendor & Supplier Master",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "sc.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
@@ -40143,7 +40175,7 @@
       },
       "others": {
         "verdict": "partial",
-        "n_r_passing": 1,
+        "n_r_passing": 2,
         "n_r_bearing": 6,
         "failing_caps": [
           {
@@ -40177,20 +40209,20 @@
             "trace_backed": false,
             "realistic": "unscored",
             "reason": ""
-          },
-          {
-            "id": "other.mobile_access",
-            "name": "Cloud and Multi-Device Accessibility",
-            "fulfils": "no",
-            "trace_backed": false,
-            "realistic": "unscored",
-            "reason": ""
           }
         ],
         "passing_caps": [
           {
             "id": "other.notification_alerts",
             "name": "Notification & Alert Management",
+            "fulfils": "yes",
+            "trace_backed": true,
+            "realistic": "unscored",
+            "reason": ""
+          },
+          {
+            "id": "other.mobile_access",
+            "name": "Cloud and Multi-Device Accessibility",
             "fulfils": "yes",
             "trace_backed": true,
             "realistic": "unscored",
