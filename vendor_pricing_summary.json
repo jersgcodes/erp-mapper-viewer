@@ -1,0 +1,1461 @@
+{
+  "_meta": {
+    "generated_at": "2026-05-10T21:38:03.861622+08:00",
+    "modules_in_scope": [
+      "financial",
+      "sales_crm",
+      "hr",
+      "supply_chain"
+    ],
+    "fx_assumption_usd_to_sgd": 1.35,
+    "user_baseline": 10,
+    "one_time_maintenance_pct": 0.2,
+    "vendor_count_total": 22,
+    "vendor_count_with_pricing": 7
+  },
+  "modules": {
+    "financial": {
+      "mandatory_total": 8,
+      "mandatory_caps": [
+        {
+          "cap_id": "fin.general_ledger",
+          "name": "General Ledger & Chart of Accounts",
+          "sub_module": "Core Ledger & Close"
+        },
+        {
+          "cap_id": "fin.accounts_receivable",
+          "name": "Accounts Receivable & Customer Invoicing",
+          "sub_module": "Revenue Cycle (AR)"
+        },
+        {
+          "cap_id": "fin.accounts_payable",
+          "name": "Accounts Payable & Vendor Bills",
+          "sub_module": "Expense Cycle (AP)"
+        },
+        {
+          "cap_id": "fin.bank_cash_management",
+          "name": "Bank & Cash Management",
+          "sub_module": "Bank, Tax & FX (Core Treasury)"
+        },
+        {
+          "cap_id": "fin.financial_reporting",
+          "name": "Financial Reporting & Statements",
+          "sub_module": "Core Ledger & Close"
+        },
+        {
+          "cap_id": "fin.budgeting_forecasting",
+          "name": "Budgeting & Forecasting",
+          "sub_module": "Planning & Analytics (Finance)"
+        },
+        {
+          "cap_id": "fin.einvoicing_peppol",
+          "name": "InvoiceNow-Ready Solution Provider Accreditation",
+          "sub_module": "Revenue Cycle (AR)"
+        },
+        {
+          "cap_id": "fin.analytics_dashboards",
+          "name": "Financial Analytics & Dashboards",
+          "sub_module": "Planning & Analytics (Finance)"
+        }
+      ],
+      "by_tier": {
+        "sme": {
+          "vendor_count_total": 7,
+          "vendor_count_with_pricing": 3,
+          "vendors": [
+            {
+              "id": "odoo_online",
+              "name": "Odoo Online (Standard)",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": "Standard",
+              "base_price_sgd_month_norm": 228.15,
+              "base_price_label": "16.9 USD/u/mo × 10 users",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 5,
+              "mandatory_total": 8,
+              "mandatory_pct": 62,
+              "add_on_caps": [],
+              "no_pricing_data": false
+            },
+            {
+              "id": "erpnext",
+              "name": "ERPNext (Frappe Cloud)",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": "SITES PLAN",
+              "base_price_sgd_month_norm": 6.75,
+              "base_price_label": "5 USD/mo flat",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 8,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": false
+            },
+            {
+              "id": "xero",
+              "name": "Xero",
+              "tier": "sme",
+              "vendor_type": "sg_local_non_psg",
+              "pricing_status": "public",
+              "base_plan_name": "Starter",
+              "base_price_sgd_month_norm": 39.0,
+              "base_price_label": "39 SGD/mo flat",
+              "currency_orig": "SGD",
+              "mandatory_covered_in_base": 5,
+              "mandatory_total": 8,
+              "mandatory_pct": 62,
+              "add_on_caps": [],
+              "no_pricing_data": false
+            },
+            {
+              "id": "quickbooks_online_sg",
+              "name": "QuickBooks Online Singapore",
+              "tier": "sme",
+              "vendor_type": "sg_local_non_psg",
+              "pricing_status": "public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 8,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "myob",
+              "name": "MYOB Business (SG)",
+              "tier": "sme",
+              "vendor_type": "sg_local_non_psg",
+              "pricing_status": "public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 8,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "tally_solutions_sg",
+              "name": "Tally Prime (Singapore)",
+              "tier": "sme",
+              "vendor_type": "sg_local_non_psg",
+              "pricing_status": "partial_public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 8,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "info_tech_accounting",
+              "name": "Info-Tech Cloud Accounting Software",
+              "tier": "sme",
+              "vendor_type": "sg_local_psg",
+              "pricing_status": "partial_public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 8,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            }
+          ],
+          "avg_base_price_sgd_month": 91,
+          "min_base_price_sgd_month": 7,
+          "max_base_price_sgd_month": 228
+        },
+        "mid": {
+          "vendor_count_total": 5,
+          "vendor_count_with_pricing": 1,
+          "vendors": [
+            {
+              "id": "netsuite",
+              "name": "NetSuite ERP",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 8,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "sap_business_one",
+              "name": "SAP Business One",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 8,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "ms_dynamics_365_business_central",
+              "name": "Microsoft Dynamics 365 Business Central",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": "Dynamics 365 Business Central Team Members",
+              "base_price_sgd_month_norm": 108.0,
+              "base_price_label": "8 USD/u/mo × 10 users",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 8,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": false
+            },
+            {
+              "id": "sage_intacct",
+              "name": "Sage Intacct",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 8,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "globe3_erp",
+              "name": "Globe3 ERP (Singapore)",
+              "tier": "mid",
+              "vendor_type": "sg_local_non_psg",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 8,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            }
+          ],
+          "avg_base_price_sgd_month": 108,
+          "min_base_price_sgd_month": 108,
+          "max_base_price_sgd_month": 108
+        },
+        "enterprise": {
+          "vendor_count_total": 0,
+          "vendor_count_with_pricing": 0,
+          "vendors": [],
+          "avg_base_price_sgd_month": null,
+          "min_base_price_sgd_month": null,
+          "max_base_price_sgd_month": null
+        }
+      },
+      "mandatory_caps_view": [
+        {
+          "cap_id": "fin.general_ledger",
+          "name": "General Ledger & Chart of Accounts",
+          "sub_module": "Core Ledger & Close",
+          "covered_in_base_at_count": 1,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 11,
+          "covered_in_base_vendors": [
+            "odoo_online"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "fin.accounts_receivable",
+          "name": "Accounts Receivable & Customer Invoicing",
+          "sub_module": "Revenue Cycle (AR)",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 10,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "xero"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "fin.accounts_payable",
+          "name": "Accounts Payable & Vendor Bills",
+          "sub_module": "Expense Cycle (AP)",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 10,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "xero"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "fin.bank_cash_management",
+          "name": "Bank & Cash Management",
+          "sub_module": "Bank, Tax & FX (Core Treasury)",
+          "covered_in_base_at_count": 1,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 11,
+          "covered_in_base_vendors": [
+            "xero"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "fin.financial_reporting",
+          "name": "Financial Reporting & Statements",
+          "sub_module": "Core Ledger & Close",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 10,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "xero"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "fin.budgeting_forecasting",
+          "name": "Budgeting & Forecasting",
+          "sub_module": "Planning & Analytics (Finance)",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 12,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "fin.einvoicing_peppol",
+          "name": "InvoiceNow-Ready Solution Provider Accreditation",
+          "sub_module": "Revenue Cycle (AR)",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 12,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "fin.analytics_dashboards",
+          "name": "Financial Analytics & Dashboards",
+          "sub_module": "Planning & Analytics (Finance)",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 10,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "xero"
+          ],
+          "covered_as_addon_vendors": []
+        }
+      ]
+    },
+    "sales_crm": {
+      "mandatory_total": 6,
+      "mandatory_caps": [
+        {
+          "cap_id": "sales.contacts_accounts",
+          "name": "Contact, Account & Customer Master",
+          "sub_module": "CRM & Relationship"
+        },
+        {
+          "cap_id": "sales.leads",
+          "name": "Lead Management",
+          "sub_module": "CRM & Relationship"
+        },
+        {
+          "cap_id": "sales.opportunities_pipeline",
+          "name": "Opportunity & Pipeline Management",
+          "sub_module": "CRM & Relationship"
+        },
+        {
+          "cap_id": "sales.activities",
+          "name": "Customer Interaction Log",
+          "sub_module": "CRM & Relationship"
+        },
+        {
+          "cap_id": "sales.quotes_orders",
+          "name": "Orders & Invoicing",
+          "sub_module": "Sales Transactions"
+        },
+        {
+          "cap_id": "sales.reporting_analytics",
+          "name": "Sales Reporting, Analytics & Dashboards",
+          "sub_module": "Sales Analytics & Customer 360"
+        }
+      ],
+      "by_tier": {
+        "sme": {
+          "vendor_count_total": 4,
+          "vendor_count_with_pricing": 2,
+          "vendors": [
+            {
+              "id": "odoo_online",
+              "name": "Odoo Online (Standard)",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": "Standard",
+              "base_price_sgd_month_norm": 228.15,
+              "base_price_label": "16.9 USD/u/mo × 10 users",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 6,
+              "mandatory_total": 6,
+              "mandatory_pct": 100,
+              "add_on_caps": [],
+              "no_pricing_data": false
+            },
+            {
+              "id": "erpnext",
+              "name": "ERPNext (Frappe Cloud)",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": "SITES PLAN",
+              "base_price_sgd_month_norm": 6.75,
+              "base_price_label": "5 USD/mo flat",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 6,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": false
+            },
+            {
+              "id": "hubspot_sales_hub",
+              "name": "HubSpot Sales Hub",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 6,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "sitegiant",
+              "name": "SiteGiant Omnichannel",
+              "tier": "sme",
+              "vendor_type": "sg_local_psg",
+              "pricing_status": "public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 6,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            }
+          ],
+          "avg_base_price_sgd_month": 117,
+          "min_base_price_sgd_month": 7,
+          "max_base_price_sgd_month": 228
+        },
+        "mid": {
+          "vendor_count_total": 4,
+          "vendor_count_with_pricing": 1,
+          "vendors": [
+            {
+              "id": "netsuite",
+              "name": "NetSuite ERP",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 6,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "sap_business_one",
+              "name": "SAP Business One",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 6,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "ms_dynamics_365_business_central",
+              "name": "Microsoft Dynamics 365 Business Central",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": "Dynamics 365 Business Central Team Members",
+              "base_price_sgd_month_norm": 108.0,
+              "base_price_label": "8 USD/u/mo × 10 users",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 6,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": false
+            },
+            {
+              "id": "globe3_erp",
+              "name": "Globe3 ERP (Singapore)",
+              "tier": "mid",
+              "vendor_type": "sg_local_non_psg",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 6,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            }
+          ],
+          "avg_base_price_sgd_month": 108,
+          "min_base_price_sgd_month": 108,
+          "max_base_price_sgd_month": 108
+        },
+        "enterprise": {
+          "vendor_count_total": 1,
+          "vendor_count_with_pricing": 0,
+          "vendors": [
+            {
+              "id": "salesforce_sales_cloud",
+              "name": "Salesforce Sales Cloud",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 6,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            }
+          ],
+          "avg_base_price_sgd_month": null,
+          "min_base_price_sgd_month": null,
+          "max_base_price_sgd_month": null
+        }
+      },
+      "mandatory_caps_view": [
+        {
+          "cap_id": "sales.contacts_accounts",
+          "name": "Contact, Account & Customer Master",
+          "sub_module": "CRM & Relationship",
+          "covered_in_base_at_count": 1,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 8,
+          "covered_in_base_vendors": [
+            "odoo_online"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "sales.leads",
+          "name": "Lead Management",
+          "sub_module": "CRM & Relationship",
+          "covered_in_base_at_count": 1,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 8,
+          "covered_in_base_vendors": [
+            "odoo_online"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "sales.opportunities_pipeline",
+          "name": "Opportunity & Pipeline Management",
+          "sub_module": "CRM & Relationship",
+          "covered_in_base_at_count": 1,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 8,
+          "covered_in_base_vendors": [
+            "odoo_online"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "sales.activities",
+          "name": "Customer Interaction Log",
+          "sub_module": "CRM & Relationship",
+          "covered_in_base_at_count": 1,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 8,
+          "covered_in_base_vendors": [
+            "odoo_online"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "sales.quotes_orders",
+          "name": "Orders & Invoicing",
+          "sub_module": "Sales Transactions",
+          "covered_in_base_at_count": 1,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 8,
+          "covered_in_base_vendors": [
+            "odoo_online"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "sales.reporting_analytics",
+          "name": "Sales Reporting, Analytics & Dashboards",
+          "sub_module": "Sales Analytics & Customer 360",
+          "covered_in_base_at_count": 1,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 8,
+          "covered_in_base_vendors": [
+            "odoo_online"
+          ],
+          "covered_as_addon_vendors": []
+        }
+      ]
+    },
+    "hr": {
+      "mandatory_total": 14,
+      "mandatory_caps": [
+        {
+          "cap_id": "hr.employee_master",
+          "name": "Employee Master Record & HRIS Core",
+          "sub_module": "Core HR"
+        },
+        {
+          "cap_id": "hr.leave_management",
+          "name": "Leave & Time-Off Management",
+          "sub_module": "Time & Attendance"
+        },
+        {
+          "cap_id": "hr.time_attendance",
+          "name": "Time & Attendance",
+          "sub_module": "Time & Attendance"
+        },
+        {
+          "cap_id": "hr.payroll_processing",
+          "name": "Payroll Processing & CPF Compliance",
+          "sub_module": "Payroll & Statutory (SG)"
+        },
+        {
+          "cap_id": "hr.payslips",
+          "name": "Payslip Generation & Distribution",
+          "sub_module": "Payroll & Statutory (SG)"
+        },
+        {
+          "cap_id": "hr.onboarding_offboarding",
+          "name": "Onboarding & Offboarding Workflows",
+          "sub_module": "Core HR"
+        },
+        {
+          "cap_id": "hr.self_service_portal",
+          "name": "Employee Self-Service Portal",
+          "sub_module": "Core HR"
+        },
+        {
+          "cap_id": "hr.document_management",
+          "name": "HR Document Management",
+          "sub_module": "Core HR"
+        },
+        {
+          "cap_id": "hr.recruitment_ats",
+          "name": "Recruitment & Applicant Tracking (ATS)",
+          "sub_module": "Talent Acquisition & Compensation"
+        },
+        {
+          "cap_id": "hr.performance_management",
+          "name": "Performance Management & Appraisals",
+          "sub_module": "Performance & Learning"
+        },
+        {
+          "cap_id": "hr.compensation_benefits",
+          "name": "Compensation & Benefits Management",
+          "sub_module": "Talent Acquisition & Compensation"
+        },
+        {
+          "cap_id": "hr.benefits_administration",
+          "name": "Benefits Administration",
+          "sub_module": "Talent Acquisition & Compensation"
+        },
+        {
+          "cap_id": "hr.statutory_reporting",
+          "name": "Statutory HR Reporting (CPF, IRAS, MOM)",
+          "sub_module": "Payroll & Statutory (SG)"
+        },
+        {
+          "cap_id": "hr.overtime_variable_pay",
+          "name": "Overtime & Variable Pay Calculation",
+          "sub_module": "Payroll & Statutory (SG)"
+        }
+      ],
+      "by_tier": {
+        "sme": {
+          "vendor_count_total": 6,
+          "vendor_count_with_pricing": 3,
+          "vendors": [
+            {
+              "id": "odoo_online",
+              "name": "Odoo Online (Standard)",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": "Standard",
+              "base_price_sgd_month_norm": 228.15,
+              "base_price_label": "16.9 USD/u/mo × 10 users",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 14,
+              "mandatory_total": 14,
+              "mandatory_pct": 100,
+              "add_on_caps": [],
+              "no_pricing_data": false
+            },
+            {
+              "id": "erpnext",
+              "name": "ERPNext (Frappe Cloud)",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": "SITES PLAN",
+              "base_price_sgd_month_norm": 6.75,
+              "base_price_label": "5 USD/mo flat",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 14,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": false
+            },
+            {
+              "id": "bamboohr",
+              "name": "BambooHR",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "partial_public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 14,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "justlogin_hr",
+              "name": "JustLogin HR Cloud",
+              "tier": "sme",
+              "vendor_type": "sg_local_psg",
+              "pricing_status": "public",
+              "base_plan_name": "Essential",
+              "base_price_sgd_month_norm": null,
+              "base_price_label": "quote-on-request",
+              "currency_orig": null,
+              "mandatory_covered_in_base": 11,
+              "mandatory_total": 14,
+              "mandatory_pct": 79,
+              "add_on_caps": [],
+              "no_pricing_data": false
+            },
+            {
+              "id": "info_tech_hrms",
+              "name": "Info-Tech Cloud HRMS",
+              "tier": "sme",
+              "vendor_type": "sg_local_psg",
+              "pricing_status": "partial_public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 14,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "talenox",
+              "name": "Talenox HR",
+              "tier": "sme",
+              "vendor_type": "sg_local_psg",
+              "pricing_status": "public",
+              "base_plan_name": "PAYROLL",
+              "base_price_sgd_month_norm": 43.6,
+              "base_price_label": "4.36 SGD/u/mo × 10 users",
+              "currency_orig": "SGD",
+              "mandatory_covered_in_base": 3,
+              "mandatory_total": 14,
+              "mandatory_pct": 21,
+              "add_on_caps": [],
+              "no_pricing_data": false
+            }
+          ],
+          "avg_base_price_sgd_month": 93,
+          "min_base_price_sgd_month": 7,
+          "max_base_price_sgd_month": 228
+        },
+        "mid": {
+          "vendor_count_total": 1,
+          "vendor_count_with_pricing": 0,
+          "vendors": [
+            {
+              "id": "netsuite",
+              "name": "NetSuite ERP",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 14,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            }
+          ],
+          "avg_base_price_sgd_month": null,
+          "min_base_price_sgd_month": null,
+          "max_base_price_sgd_month": null
+        },
+        "enterprise": {
+          "vendor_count_total": 1,
+          "vendor_count_with_pricing": 0,
+          "vendors": [
+            {
+              "id": "workday_hcm",
+              "name": "Workday HCM",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 14,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            }
+          ],
+          "avg_base_price_sgd_month": null,
+          "min_base_price_sgd_month": null,
+          "max_base_price_sgd_month": null
+        }
+      },
+      "mandatory_caps_view": [
+        {
+          "cap_id": "hr.employee_master",
+          "name": "Employee Master Record & HRIS Core",
+          "sub_module": "Core HR",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 6,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "justlogin_hr"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "hr.leave_management",
+          "name": "Leave & Time-Off Management",
+          "sub_module": "Time & Attendance",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 6,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "justlogin_hr"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "hr.time_attendance",
+          "name": "Time & Attendance",
+          "sub_module": "Time & Attendance",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 6,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "justlogin_hr"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "hr.payroll_processing",
+          "name": "Payroll Processing & CPF Compliance",
+          "sub_module": "Payroll & Statutory (SG)",
+          "covered_in_base_at_count": 3,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "justlogin_hr",
+            "talenox"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "hr.payslips",
+          "name": "Payslip Generation & Distribution",
+          "sub_module": "Payroll & Statutory (SG)",
+          "covered_in_base_at_count": 3,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "justlogin_hr",
+            "talenox"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "hr.onboarding_offboarding",
+          "name": "Onboarding & Offboarding Workflows",
+          "sub_module": "Core HR",
+          "covered_in_base_at_count": 1,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 7,
+          "covered_in_base_vendors": [
+            "odoo_online"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "hr.self_service_portal",
+          "name": "Employee Self-Service Portal",
+          "sub_module": "Core HR",
+          "covered_in_base_at_count": 1,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 7,
+          "covered_in_base_vendors": [
+            "odoo_online"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "hr.document_management",
+          "name": "HR Document Management",
+          "sub_module": "Core HR",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 6,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "justlogin_hr"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "hr.recruitment_ats",
+          "name": "Recruitment & Applicant Tracking (ATS)",
+          "sub_module": "Talent Acquisition & Compensation",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 6,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "justlogin_hr"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "hr.performance_management",
+          "name": "Performance Management & Appraisals",
+          "sub_module": "Performance & Learning",
+          "covered_in_base_at_count": 1,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 7,
+          "covered_in_base_vendors": [
+            "odoo_online"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "hr.compensation_benefits",
+          "name": "Compensation & Benefits Management",
+          "sub_module": "Talent Acquisition & Compensation",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 6,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "justlogin_hr"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "hr.benefits_administration",
+          "name": "Benefits Administration",
+          "sub_module": "Talent Acquisition & Compensation",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 6,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "justlogin_hr"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "hr.statutory_reporting",
+          "name": "Statutory HR Reporting (CPF, IRAS, MOM)",
+          "sub_module": "Payroll & Statutory (SG)",
+          "covered_in_base_at_count": 3,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "justlogin_hr",
+            "talenox"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "hr.overtime_variable_pay",
+          "name": "Overtime & Variable Pay Calculation",
+          "sub_module": "Payroll & Statutory (SG)",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 6,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "justlogin_hr"
+          ],
+          "covered_as_addon_vendors": []
+        }
+      ]
+    },
+    "supply_chain": {
+      "mandatory_total": 7,
+      "mandatory_caps": [
+        {
+          "cap_id": "sc.item_master",
+          "name": "Inventory Master & Item Management",
+          "sub_module": "Inventory Core"
+        },
+        {
+          "cap_id": "sc.stock_levels",
+          "name": "Stock Levels & Warehouse Management",
+          "sub_module": "Inventory Core"
+        },
+        {
+          "cap_id": "sc.purchase_orders",
+          "name": "Purchase Orders & Procurement",
+          "sub_module": "Procurement"
+        },
+        {
+          "cap_id": "sc.vendor_master",
+          "name": "Vendor & Supplier Master",
+          "sub_module": "Procurement"
+        },
+        {
+          "cap_id": "sc.reorder_rules",
+          "name": "Reorder Rules & Replenishment",
+          "sub_module": "Supply Planning & Replenishment"
+        },
+        {
+          "cap_id": "sc.barcode_scanning",
+          "name": "Barcode & Scanning",
+          "sub_module": "Inventory Core"
+        },
+        {
+          "cap_id": "sc.supply_chain_analytics",
+          "name": "Supply Chain Analytics & Dashboards",
+          "sub_module": "Supply Chain Analytics"
+        }
+      ],
+      "by_tier": {
+        "sme": {
+          "vendor_count_total": 7,
+          "vendor_count_with_pricing": 4,
+          "vendors": [
+            {
+              "id": "odoo_online",
+              "name": "Odoo Online (Standard)",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": "Standard",
+              "base_price_sgd_month_norm": 228.15,
+              "base_price_label": "16.9 USD/u/mo × 10 users",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 7,
+              "mandatory_total": 7,
+              "mandatory_pct": 100,
+              "add_on_caps": [],
+              "no_pricing_data": false
+            },
+            {
+              "id": "erpnext",
+              "name": "ERPNext (Frappe Cloud)",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": "SITES PLAN",
+              "base_price_sgd_month_norm": 6.75,
+              "base_price_label": "5 USD/mo flat",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 7,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": false
+            },
+            {
+              "id": "myob",
+              "name": "MYOB Business (SG)",
+              "tier": "sme",
+              "vendor_type": "sg_local_non_psg",
+              "pricing_status": "public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 7,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "tally_solutions_sg",
+              "name": "Tally Prime (Singapore)",
+              "tier": "sme",
+              "vendor_type": "sg_local_non_psg",
+              "pricing_status": "partial_public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 7,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "sitegiant",
+              "name": "SiteGiant Omnichannel",
+              "tier": "sme",
+              "vendor_type": "sg_local_psg",
+              "pricing_status": "public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 7,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "cin7",
+              "name": "Cin7 Core (Inventory)",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": "Standard",
+              "base_price_sgd_month_norm": 471.15000000000003,
+              "base_price_label": "349 USD/mo flat",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 6,
+              "mandatory_total": 7,
+              "mandatory_pct": 86,
+              "add_on_caps": [
+                {
+                  "cap_id": "sc.reorder_rules",
+                  "addon_name": "Cin7 ForesightAI Forecasting",
+                  "addon_price_sgd_month_norm": null,
+                  "addon_price_label": "quote-on-request"
+                },
+                {
+                  "cap_id": "sc.reorder_rules",
+                  "addon_name": "Material Requirements Planning (MRP)",
+                  "addon_price_sgd_month_norm": null,
+                  "addon_price_label": "quote-on-request"
+                }
+              ],
+              "no_pricing_data": false
+            },
+            {
+              "id": "fishbowl",
+              "name": "Fishbowl Inventory",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": "Essentials",
+              "base_price_sgd_month_norm": 309.15000000000003,
+              "base_price_label": "229 USD/mo flat",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 4,
+              "mandatory_total": 7,
+              "mandatory_pct": 57,
+              "add_on_caps": [
+                {
+                  "cap_id": "sc.supply_chain_analytics",
+                  "addon_name": "AI Insights (In Depth BI Reporting)",
+                  "addon_price_sgd_month_norm": null,
+                  "addon_price_label": "quote-on-request"
+                },
+                {
+                  "cap_id": "sc.supply_chain_analytics",
+                  "addon_name": "AI Insights (In Depth BI Reporting)",
+                  "addon_price_sgd_month_norm": null,
+                  "addon_price_label": "quote-on-request"
+                },
+                {
+                  "cap_id": "sc.supply_chain_analytics",
+                  "addon_name": "Custom Reports",
+                  "addon_price_sgd_month_norm": null,
+                  "addon_price_label": "quote-on-request"
+                },
+                {
+                  "cap_id": "sc.supply_chain_analytics",
+                  "addon_name": "Custom Reports",
+                  "addon_price_sgd_month_norm": null,
+                  "addon_price_label": "quote-on-request"
+                }
+              ],
+              "no_pricing_data": false
+            }
+          ],
+          "avg_base_price_sgd_month": 254,
+          "min_base_price_sgd_month": 7,
+          "max_base_price_sgd_month": 471
+        },
+        "mid": {
+          "vendor_count_total": 4,
+          "vendor_count_with_pricing": 1,
+          "vendors": [
+            {
+              "id": "netsuite",
+              "name": "NetSuite ERP",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 7,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "sap_business_one",
+              "name": "SAP Business One",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 7,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            },
+            {
+              "id": "ms_dynamics_365_business_central",
+              "name": "Microsoft Dynamics 365 Business Central",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": "Dynamics 365 Business Central Team Members",
+              "base_price_sgd_month_norm": 108.0,
+              "base_price_label": "8 USD/u/mo × 10 users",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 7,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": false
+            },
+            {
+              "id": "globe3_erp",
+              "name": "Globe3 ERP (Singapore)",
+              "tier": "mid",
+              "vendor_type": "sg_local_non_psg",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 7,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true
+            }
+          ],
+          "avg_base_price_sgd_month": 108,
+          "min_base_price_sgd_month": 108,
+          "max_base_price_sgd_month": 108
+        },
+        "enterprise": {
+          "vendor_count_total": 0,
+          "vendor_count_with_pricing": 0,
+          "vendors": [],
+          "avg_base_price_sgd_month": null,
+          "min_base_price_sgd_month": null,
+          "max_base_price_sgd_month": null
+        }
+      },
+      "mandatory_caps_view": [
+        {
+          "cap_id": "sc.item_master",
+          "name": "Inventory Master & Item Management",
+          "sub_module": "Inventory Core",
+          "covered_in_base_at_count": 3,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 8,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "cin7",
+            "fishbowl"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "sc.stock_levels",
+          "name": "Stock Levels & Warehouse Management",
+          "sub_module": "Inventory Core",
+          "covered_in_base_at_count": 3,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 8,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "cin7",
+            "fishbowl"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "sc.purchase_orders",
+          "name": "Purchase Orders & Procurement",
+          "sub_module": "Procurement",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 9,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "cin7"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "sc.vendor_master",
+          "name": "Vendor & Supplier Master",
+          "sub_module": "Procurement",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 9,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "cin7"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "sc.reorder_rules",
+          "name": "Reorder Rules & Replenishment",
+          "sub_module": "Supply Planning & Replenishment",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 1,
+          "not_covered_count": 8,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "fishbowl"
+          ],
+          "covered_as_addon_vendors": [
+            "cin7"
+          ]
+        },
+        {
+          "cap_id": "sc.barcode_scanning",
+          "name": "Barcode & Scanning",
+          "sub_module": "Inventory Core",
+          "covered_in_base_at_count": 3,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 8,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "cin7",
+            "fishbowl"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "sc.supply_chain_analytics",
+          "name": "Supply Chain Analytics & Dashboards",
+          "sub_module": "Supply Chain Analytics",
+          "covered_in_base_at_count": 2,
+          "covered_as_addon_at_count": 1,
+          "not_covered_count": 8,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "cin7"
+          ],
+          "covered_as_addon_vendors": [
+            "fishbowl"
+          ]
+        }
+      ]
+    }
+  }
+}
