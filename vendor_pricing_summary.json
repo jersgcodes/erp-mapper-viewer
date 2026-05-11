@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-05-10T23:36:54.985806+08:00",
+    "generated_at": "2026-05-11T11:32:08.765670+08:00",
     "modules_in_scope": [
       "financial",
       "sales_crm",
@@ -11,7 +11,7 @@
     "user_baseline": 10,
     "one_time_maintenance_pct": 0.2,
     "vendor_count_total": 23,
-    "vendor_count_with_pricing": 7
+    "vendor_count_with_pricing": 14
   },
   "modules": {
     "financial": {
@@ -61,7 +61,7 @@
       "by_tier": {
         "sme": {
           "vendor_count_total": 7,
-          "vendor_count_with_pricing": 3,
+          "vendor_count_with_pricing": 4,
           "vendors": [
             {
               "id": "odoo_online",
@@ -256,7 +256,7 @@
         },
         "mid": {
           "vendor_count_total": 6,
-          "vendor_count_with_pricing": 1,
+          "vendor_count_with_pricing": 4,
           "vendors": [
             {
               "id": "netsuite",
@@ -288,9 +288,9 @@
               "base_price_sgd_month_norm": null,
               "base_price_label": null,
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 7,
               "mandatory_total": 8,
-              "mandatory_pct": 0,
+              "mandatory_pct": 88,
               "add_on_caps": [],
               "no_pricing_data": true,
               "year1_total_sgd": 8630.0,
@@ -417,9 +417,9 @@
               "base_price_sgd_month_norm": null,
               "base_price_label": null,
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 5,
               "mandatory_total": 8,
-              "mandatory_pct": 0,
+              "mandatory_pct": 62,
               "add_on_caps": [],
               "no_pricing_data": true,
               "year1_total_sgd": 8952.0,
@@ -501,9 +501,9 @@
               "base_price_sgd_month_norm": null,
               "base_price_label": null,
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 5,
               "mandatory_total": 8,
-              "mandatory_pct": 0,
+              "mandatory_pct": 62,
               "add_on_caps": [],
               "no_pricing_data": true,
               "year1_total_sgd": 22000.0,
@@ -594,11 +594,14 @@
           "cap_id": "fin.general_ledger",
           "name": "General Ledger & Chart of Accounts",
           "sub_module": "Core Ledger & Close",
-          "covered_in_base_at_count": 1,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 12,
+          "not_covered_count": 9,
           "covered_in_base_vendors": [
-            "odoo_online"
+            "odoo_online",
+            "sap_business_one",
+            "sage_300",
+            "globe3_erp"
           ],
           "covered_as_addon_vendors": []
         },
@@ -606,12 +609,15 @@
           "cap_id": "fin.accounts_receivable",
           "name": "Accounts Receivable & Customer Invoicing",
           "sub_module": "Revenue Cycle (AR)",
-          "covered_in_base_at_count": 2,
+          "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 11,
+          "not_covered_count": 8,
           "covered_in_base_vendors": [
             "odoo_online",
-            "xero"
+            "xero",
+            "sap_business_one",
+            "sage_300",
+            "globe3_erp"
           ],
           "covered_as_addon_vendors": []
         },
@@ -619,12 +625,15 @@
           "cap_id": "fin.accounts_payable",
           "name": "Accounts Payable & Vendor Bills",
           "sub_module": "Expense Cycle (AP)",
-          "covered_in_base_at_count": 2,
+          "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 11,
+          "not_covered_count": 8,
           "covered_in_base_vendors": [
             "odoo_online",
-            "xero"
+            "xero",
+            "sap_business_one",
+            "sage_300",
+            "globe3_erp"
           ],
           "covered_as_addon_vendors": []
         },
@@ -632,11 +641,12 @@
           "cap_id": "fin.bank_cash_management",
           "name": "Bank & Cash Management",
           "sub_module": "Bank, Tax & FX (Core Treasury)",
-          "covered_in_base_at_count": 1,
+          "covered_in_base_at_count": 2,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 12,
+          "not_covered_count": 11,
           "covered_in_base_vendors": [
-            "xero"
+            "xero",
+            "sap_business_one"
           ],
           "covered_as_addon_vendors": []
         },
@@ -644,12 +654,14 @@
           "cap_id": "fin.financial_reporting",
           "name": "Financial Reporting & Statements",
           "sub_module": "Core Ledger & Close",
-          "covered_in_base_at_count": 2,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 11,
+          "not_covered_count": 9,
           "covered_in_base_vendors": [
             "odoo_online",
-            "xero"
+            "xero",
+            "sap_business_one",
+            "globe3_erp"
           ],
           "covered_as_addon_vendors": []
         },
@@ -667,22 +679,28 @@
           "cap_id": "fin.einvoicing_peppol",
           "name": "InvoiceNow-Ready Solution Provider Accreditation",
           "sub_module": "Revenue Cycle (AR)",
-          "covered_in_base_at_count": 0,
+          "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 13,
-          "covered_in_base_vendors": [],
+          "not_covered_count": 10,
+          "covered_in_base_vendors": [
+            "sap_business_one",
+            "sage_300",
+            "globe3_erp"
+          ],
           "covered_as_addon_vendors": []
         },
         {
           "cap_id": "fin.analytics_dashboards",
           "name": "Financial Analytics & Dashboards",
           "sub_module": "Planning & Analytics (Finance)",
-          "covered_in_base_at_count": 2,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 11,
+          "not_covered_count": 9,
           "covered_in_base_vendors": [
             "odoo_online",
-            "xero"
+            "xero",
+            "sap_business_one",
+            "sage_300"
           ],
           "covered_as_addon_vendors": []
         }
@@ -704,11 +722,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "in_base",
+            "globe3_erp": "in_base"
           }
         },
         {
@@ -727,11 +745,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "not_covered",
+            "globe3_erp": "in_base"
           }
         },
         {
@@ -750,11 +768,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "not_covered",
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -773,11 +791,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "not_covered",
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -796,11 +814,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "not_covered",
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -819,11 +837,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "in_base",
+            "globe3_erp": "in_base"
           }
         },
         {
@@ -842,11 +860,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "in_base",
+            "globe3_erp": "in_base"
           }
         },
         {
@@ -865,11 +883,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "not_covered",
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -888,11 +906,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "in_base",
+            "globe3_erp": "in_base"
           }
         },
         {
@@ -911,11 +929,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "not_covered",
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -934,11 +952,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "in_base",
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -957,11 +975,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "in_base",
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -980,11 +998,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "not_covered",
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -1003,11 +1021,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "not_covered",
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -1026,11 +1044,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "not_covered",
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -1049,11 +1067,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "in_base",
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -1072,11 +1090,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "not_covered",
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -1095,11 +1113,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "not_covered",
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -1118,11 +1136,11 @@
             "tally_solutions_sg": "no_data",
             "info_tech_accounting": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
             "sage_intacct": "no_data",
-            "sage_300": "no_data",
-            "globe3_erp": "no_data"
+            "sage_300": "not_covered",
+            "globe3_erp": "in_base"
           }
         }
       ]
@@ -1164,7 +1182,7 @@
       "by_tier": {
         "sme": {
           "vendor_count_total": 4,
-          "vendor_count_with_pricing": 2,
+          "vendor_count_with_pricing": 3,
           "vendors": [
             {
               "id": "odoo_online",
@@ -1305,7 +1323,7 @@
         },
         "mid": {
           "vendor_count_total": 4,
-          "vendor_count_with_pricing": 1,
+          "vendor_count_with_pricing": 3,
           "vendors": [
             {
               "id": "netsuite",
@@ -1337,9 +1355,9 @@
               "base_price_sgd_month_norm": null,
               "base_price_label": null,
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 3,
               "mandatory_total": 6,
-              "mandatory_pct": 0,
+              "mandatory_pct": 50,
               "add_on_caps": [],
               "no_pricing_data": true,
               "year1_total_sgd": 8630.0,
@@ -1446,9 +1464,9 @@
               "base_price_sgd_month_norm": null,
               "base_price_label": null,
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 3,
               "mandatory_total": 6,
-              "mandatory_pct": 0,
+              "mandatory_pct": 50,
               "add_on_caps": [],
               "no_pricing_data": true,
               "year1_total_sgd": 22000.0,
@@ -1560,11 +1578,13 @@
           "cap_id": "sales.contacts_accounts",
           "name": "Contact, Account & Customer Master",
           "sub_module": "CRM & Relationship",
-          "covered_in_base_at_count": 1,
+          "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
+          "not_covered_count": 6,
           "covered_in_base_vendors": [
-            "odoo_online"
+            "odoo_online",
+            "sap_business_one",
+            "globe3_erp"
           ],
           "covered_as_addon_vendors": []
         },
@@ -1608,11 +1628,13 @@
           "cap_id": "sales.quotes_orders",
           "name": "Orders & Invoicing",
           "sub_module": "Sales Transactions",
-          "covered_in_base_at_count": 1,
+          "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
+          "not_covered_count": 6,
           "covered_in_base_vendors": [
-            "odoo_online"
+            "odoo_online",
+            "sap_business_one",
+            "globe3_erp"
           ],
           "covered_as_addon_vendors": []
         },
@@ -1620,11 +1642,13 @@
           "cap_id": "sales.reporting_analytics",
           "name": "Sales Reporting, Analytics & Dashboards",
           "sub_module": "Sales Analytics & Customer 360",
-          "covered_in_base_at_count": 1,
+          "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
+          "not_covered_count": 6,
           "covered_in_base_vendors": [
-            "odoo_online"
+            "odoo_online",
+            "sap_business_one",
+            "globe3_erp"
           ],
           "covered_as_addon_vendors": []
         }
@@ -1643,9 +1667,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "in_base",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1662,9 +1686,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1681,9 +1705,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1700,9 +1724,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1719,9 +1743,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1738,9 +1762,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1757,9 +1781,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1776,9 +1800,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "in_base",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1795,9 +1819,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1814,9 +1838,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1833,9 +1857,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1852,9 +1876,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1871,9 +1895,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1890,9 +1914,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1909,9 +1933,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "in_base",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1928,9 +1952,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1947,9 +1971,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1966,9 +1990,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -1985,9 +2009,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -2004,9 +2028,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -2023,9 +2047,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -2042,9 +2066,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -2061,9 +2085,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "in_base",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -2080,9 +2104,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         },
@@ -2099,9 +2123,9 @@
             "hubspot_sales_hub": "no_data",
             "sitegiant": "no_data",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data",
+            "globe3_erp": "not_covered",
             "salesforce_sales_cloud": "no_data"
           }
         }
@@ -2184,7 +2208,7 @@
       "by_tier": {
         "sme": {
           "vendor_count_total": 6,
-          "vendor_count_with_pricing": 3,
+          "vendor_count_with_pricing": 5,
           "vendors": [
             {
               "id": "odoo_online",
@@ -3232,7 +3256,7 @@
       "by_tier": {
         "sme": {
           "vendor_count_total": 7,
-          "vendor_count_with_pricing": 4,
+          "vendor_count_with_pricing": 5,
           "vendors": [
             {
               "id": "odoo_online",
@@ -3499,7 +3523,7 @@
         },
         "mid": {
           "vendor_count_total": 4,
-          "vendor_count_with_pricing": 1,
+          "vendor_count_with_pricing": 3,
           "vendors": [
             {
               "id": "netsuite",
@@ -3531,9 +3555,9 @@
               "base_price_sgd_month_norm": null,
               "base_price_label": null,
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 7,
               "mandatory_total": 7,
-              "mandatory_pct": 0,
+              "mandatory_pct": 100,
               "add_on_caps": [],
               "no_pricing_data": true,
               "year1_total_sgd": 8630.0,
@@ -3640,9 +3664,9 @@
               "base_price_sgd_month_norm": null,
               "base_price_label": null,
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 6,
               "mandatory_total": 7,
-              "mandatory_pct": 0,
+              "mandatory_pct": 86,
               "add_on_caps": [],
               "no_pricing_data": true,
               "year1_total_sgd": 22000.0,
@@ -3733,13 +3757,15 @@
           "cap_id": "sc.item_master",
           "name": "Inventory Master & Item Management",
           "sub_module": "Inventory Core",
-          "covered_in_base_at_count": 3,
+          "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
+          "not_covered_count": 6,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
-            "fishbowl"
+            "fishbowl",
+            "sap_business_one",
+            "globe3_erp"
           ],
           "covered_as_addon_vendors": []
         },
@@ -3747,13 +3773,15 @@
           "cap_id": "sc.stock_levels",
           "name": "Stock Levels & Warehouse Management",
           "sub_module": "Inventory Core",
-          "covered_in_base_at_count": 3,
+          "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
+          "not_covered_count": 6,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
-            "fishbowl"
+            "fishbowl",
+            "sap_business_one",
+            "globe3_erp"
           ],
           "covered_as_addon_vendors": []
         },
@@ -3761,12 +3789,14 @@
           "cap_id": "sc.purchase_orders",
           "name": "Purchase Orders & Procurement",
           "sub_module": "Procurement",
-          "covered_in_base_at_count": 2,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 9,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "odoo_online",
-            "cin7"
+            "cin7",
+            "sap_business_one",
+            "globe3_erp"
           ],
           "covered_as_addon_vendors": []
         },
@@ -3774,12 +3804,14 @@
           "cap_id": "sc.vendor_master",
           "name": "Vendor & Supplier Master",
           "sub_module": "Procurement",
-          "covered_in_base_at_count": 2,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 9,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "odoo_online",
-            "cin7"
+            "cin7",
+            "sap_business_one",
+            "globe3_erp"
           ],
           "covered_as_addon_vendors": []
         },
@@ -3787,12 +3819,13 @@
           "cap_id": "sc.reorder_rules",
           "name": "Reorder Rules & Replenishment",
           "sub_module": "Supply Planning & Replenishment",
-          "covered_in_base_at_count": 2,
+          "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 8,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "odoo_online",
-            "fishbowl"
+            "fishbowl",
+            "sap_business_one"
           ],
           "covered_as_addon_vendors": [
             "cin7"
@@ -3802,13 +3835,15 @@
           "cap_id": "sc.barcode_scanning",
           "name": "Barcode & Scanning",
           "sub_module": "Inventory Core",
-          "covered_in_base_at_count": 3,
+          "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
+          "not_covered_count": 6,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
-            "fishbowl"
+            "fishbowl",
+            "sap_business_one",
+            "globe3_erp"
           ],
           "covered_as_addon_vendors": []
         },
@@ -3816,12 +3851,14 @@
           "cap_id": "sc.supply_chain_analytics",
           "name": "Supply Chain Analytics & Dashboards",
           "sub_module": "Supply Chain Analytics",
-          "covered_in_base_at_count": 2,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 8,
+          "not_covered_count": 6,
           "covered_in_base_vendors": [
             "odoo_online",
-            "cin7"
+            "cin7",
+            "sap_business_one",
+            "globe3_erp"
           ],
           "covered_as_addon_vendors": [
             "fishbowl"
@@ -3845,9 +3882,9 @@
             "cin7": "in_base",
             "fishbowl": "in_base",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "in_base"
           }
         },
         {
@@ -3866,9 +3903,9 @@
             "cin7": "in_base",
             "fishbowl": "in_base",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "in_base"
           }
         },
         {
@@ -3887,9 +3924,9 @@
             "cin7": "in_base",
             "fishbowl": "in_base",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "in_base"
           }
         },
         {
@@ -3908,9 +3945,9 @@
             "cin7": "not_covered",
             "fishbowl": "in_base",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -3929,9 +3966,9 @@
             "cin7": "in_base",
             "fishbowl": "in_base",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -3950,9 +3987,9 @@
             "cin7": "in_base",
             "fishbowl": "in_base",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -3971,9 +4008,9 @@
             "cin7": "add_on",
             "fishbowl": "in_base",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -3992,9 +4029,9 @@
             "cin7": "add_on",
             "fishbowl": "in_base",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -4013,9 +4050,9 @@
             "cin7": "add_on",
             "fishbowl": "in_base",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -4034,9 +4071,9 @@
             "cin7": "in_base",
             "fishbowl": "not_covered",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -4055,9 +4092,9 @@
             "cin7": "not_covered",
             "fishbowl": "not_covered",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -4076,9 +4113,9 @@
             "cin7": "add_on",
             "fishbowl": "not_covered",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -4097,9 +4134,9 @@
             "cin7": "in_base",
             "fishbowl": "in_base",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -4118,9 +4155,9 @@
             "cin7": "in_base",
             "fishbowl": "not_covered",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "in_base"
           }
         },
         {
@@ -4139,9 +4176,9 @@
             "cin7": "in_base",
             "fishbowl": "not_covered",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "in_base"
           }
         },
         {
@@ -4160,9 +4197,9 @@
             "cin7": "not_covered",
             "fishbowl": "not_covered",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -4181,9 +4218,9 @@
             "cin7": "not_covered",
             "fishbowl": "not_covered",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -4202,9 +4239,9 @@
             "cin7": "add_on",
             "fishbowl": "in_base",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -4223,9 +4260,9 @@
             "cin7": "add_on",
             "fishbowl": "add_on",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -4244,9 +4281,9 @@
             "cin7": "not_covered",
             "fishbowl": "not_covered",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -4265,9 +4302,9 @@
             "cin7": "not_covered",
             "fishbowl": "not_covered",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -4286,9 +4323,9 @@
             "cin7": "not_covered",
             "fishbowl": "not_covered",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "not_covered"
           }
         },
         {
@@ -4307,9 +4344,9 @@
             "cin7": "in_base",
             "fishbowl": "add_on",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "in_base",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "in_base"
           }
         },
         {
@@ -4328,9 +4365,9 @@
             "cin7": "in_base",
             "fishbowl": "in_base",
             "netsuite": "no_data",
-            "sap_business_one": "no_data",
+            "sap_business_one": "not_covered",
             "ms_dynamics_365_business_central": "not_covered",
-            "globe3_erp": "no_data"
+            "globe3_erp": "in_base"
           }
         }
       ]
