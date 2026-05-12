@@ -14873,7 +14873,12 @@
   },
   "_meta": {
     "step16_applied_at": "2026-05-10T00:12:24.473761+08:00",
-    "step16_applied_count": 0
+    "step16_applied_count": 0,
+    "preferred_clusters_embed": {
+      "from": "config/preferred_clusters.yaml",
+      "applied_at": "2026-05-13T02:57:21.975078+08:00",
+      "removed": false
+    }
   },
   "sub_modules": [
     {
@@ -14950,5 +14955,36 @@
         "asset.energy_carbon"
       ]
     }
-  ]
+  ],
+  "preferred_clusters": {
+    "required": {
+      "mode": "multi",
+      "clusters": [
+        {
+          "id": "compliance_inspection",
+          "name": "Compliance, inspection & analytics",
+          "caps": [
+            "asset.compliance",
+            "asset.analytics_kpi"
+          ]
+        },
+        {
+          "id": "lifecycle_maintenance",
+          "name": "Lifecycle & maintenance operations",
+          "caps": [
+            "asset.register",
+            "asset.lifecycle",
+            "asset.depreciation",
+            "asset.pm_planning",
+            "asset.work_orders",
+            "asset.maintenance_requests",
+            "asset.spare_parts"
+          ]
+        }
+      ]
+    },
+    "preferred": {
+      "mode": "single"
+    }
+  }
 }

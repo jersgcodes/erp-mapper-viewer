@@ -1,13 +1,13 @@
 {
   "_meta": {
     "generated_by": "scripts/build_psg_vendor_pricing.py",
-    "generated_at": "2026-05-13T02:41:24.934655+08:00",
+    "generated_at": "2026-05-13T02:59:45.105638+08:00",
     "summary_count": 414,
     "detailed_count": 15,
     "non_psg_benchmark_count": 16,
     "total_vendor_entries": 430,
     "category_count": 59,
-    "module_count": 10
+    "module_count": 9
   },
   "vendors": {
     "psg-001": {
@@ -7888,17 +7888,10 @@
       "payment_mode": null,
       "psg_support_pct_raw": "50%",
       "packages": [],
-      "excluded_from_erp": false,
-      "exclusion_reason": null,
-      "modules": [
-        "manufacturing_management"
-      ],
-      "families": [
-        {
-          "module": "manufacturing_management",
-          "family": "Product Engineering"
-        }
-      ]
+      "excluded_from_erp": true,
+      "exclusion_reason": "BIM/CAD/visualisation tools (used in architecture, construction, product design) \u2014 not an ERP manufacturing module. Multi-core validation (2026-05-13) showed all 5 sols are pure design tools with zero coverage of mfg.bom/routing/work_orders/MRP/scheduling/quality.",
+      "modules": [],
+      "families": []
     },
     "psg-111": {
       "psg_id": "psg-111",
@@ -7990,17 +7983,10 @@
           }
         }
       ],
-      "excluded_from_erp": false,
-      "exclusion_reason": null,
-      "modules": [
-        "manufacturing_management"
-      ],
-      "families": [
-        {
-          "module": "manufacturing_management",
-          "family": "Product Engineering"
-        }
-      ]
+      "excluded_from_erp": true,
+      "exclusion_reason": "BIM/CAD/visualisation tools (used in architecture, construction, product design) \u2014 not an ERP manufacturing module. Multi-core validation (2026-05-13) showed all 5 sols are pure design tools with zero coverage of mfg.bom/routing/work_orders/MRP/scheduling/quality.",
+      "modules": [],
+      "families": []
     },
     "psg-113": {
       "psg_id": "psg-113",
@@ -8213,17 +8199,10 @@
       "payment_mode": null,
       "psg_support_pct_raw": "50%",
       "packages": [],
-      "excluded_from_erp": false,
-      "exclusion_reason": null,
-      "modules": [
-        "manufacturing_management"
-      ],
-      "families": [
-        {
-          "module": "manufacturing_management",
-          "family": "Product Engineering"
-        }
-      ]
+      "excluded_from_erp": true,
+      "exclusion_reason": "BIM/CAD/visualisation tools (used in architecture, construction, product design) \u2014 not an ERP manufacturing module. Multi-core validation (2026-05-13) showed all 5 sols are pure design tools with zero coverage of mfg.bom/routing/work_orders/MRP/scheduling/quality.",
+      "modules": [],
+      "families": []
     },
     "psg-121": {
       "psg_id": "psg-121",
@@ -8467,17 +8446,12 @@
       "exclusion_reason": null,
       "modules": [
         "others",
-        "manufacturing_management",
         "fleet_management"
       ],
       "families": [
         {
           "module": "others",
           "family": "Intelligence & Analytics"
-        },
-        {
-          "module": "manufacturing_management",
-          "family": "Quality & Compliance"
         },
         {
           "module": "fleet_management",
@@ -9642,17 +9616,12 @@
       "exclusion_reason": null,
       "modules": [
         "others",
-        "manufacturing_management",
         "fleet_management"
       ],
       "families": [
         {
           "module": "others",
           "family": "Intelligence & Analytics"
-        },
-        {
-          "module": "manufacturing_management",
-          "family": "Quality & Compliance"
         },
         {
           "module": "fleet_management",
@@ -15428,17 +15397,12 @@
       "exclusion_reason": null,
       "modules": [
         "others",
-        "manufacturing_management",
         "fleet_management"
       ],
       "families": [
         {
           "module": "others",
           "family": "Intelligence & Analytics"
-        },
-        {
-          "module": "manufacturing_management",
-          "family": "Quality & Compliance"
         },
         {
           "module": "fleet_management",
@@ -19852,17 +19816,10 @@
           }
         }
       ],
-      "excluded_from_erp": false,
-      "exclusion_reason": null,
-      "modules": [
-        "manufacturing_management"
-      ],
-      "families": [
-        {
-          "module": "manufacturing_management",
-          "family": "Product Engineering"
-        }
-      ]
+      "excluded_from_erp": true,
+      "exclusion_reason": "BIM/CAD/visualisation tools (used in architecture, construction, product design) \u2014 not an ERP manufacturing module. Multi-core validation (2026-05-13) showed all 5 sols are pure design tools with zero coverage of mfg.bom/routing/work_orders/MRP/scheduling/quality.",
+      "modules": [],
+      "families": []
     },
     "psg-322": {
       "psg_id": "psg-322",
@@ -21513,17 +21470,10 @@
           }
         }
       ],
-      "excluded_from_erp": false,
-      "exclusion_reason": null,
-      "modules": [
-        "manufacturing_management"
-      ],
-      "families": [
-        {
-          "module": "manufacturing_management",
-          "family": "Product Engineering"
-        }
-      ]
+      "excluded_from_erp": true,
+      "exclusion_reason": "Engineering CAD/CAM software \u2014 not an ERP module. CAM produces NC toolpaths consumed by machine tools, not BOM/routing/MRP data consumed by an ERP. Excluded from manufacturing_management scope 2026-05-13 after multi-core validation confirmed zero ERP cap coverage.",
+      "modules": [],
+      "families": []
     },
     "psg-349": {
       "psg_id": "psg-349",
@@ -31404,17 +31354,10 @@
       "payment_mode": "Direct Purchase",
       "psg_support_pct_raw": "50%",
       "packages": [],
-      "excluded_from_erp": false,
-      "exclusion_reason": null,
-      "modules": [
-        "manufacturing_management"
-      ],
-      "families": [
-        {
-          "module": "manufacturing_management",
-          "family": "Production Execution"
-        }
-      ]
+      "excluded_from_erp": true,
+      "exclusion_reason": "Machine-tool process engineering software (cutting-parameter optimisation, chatter analysis) \u2014 used by CAM engineers, not part of an ERP module. Excluded from manufacturing_management scope 2026-05-13.",
+      "modules": [],
+      "families": []
     },
     "psg-477": {
       "psg_id": "psg-477",
@@ -31430,17 +31373,10 @@
       "payment_mode": "Direct Purchase",
       "psg_support_pct_raw": "50%",
       "packages": [],
-      "excluded_from_erp": false,
-      "exclusion_reason": null,
-      "modules": [
-        "manufacturing_management"
-      ],
-      "families": [
-        {
-          "module": "manufacturing_management",
-          "family": "Product Engineering"
-        }
-      ]
+      "excluded_from_erp": true,
+      "exclusion_reason": "Engineering CAD/CAM software \u2014 not an ERP module. CAM produces NC toolpaths consumed by machine tools, not BOM/routing/MRP data consumed by an ERP. Excluded from manufacturing_management scope 2026-05-13 after multi-core validation confirmed zero ERP cap coverage.",
+      "modules": [],
+      "families": []
     },
     "psg-478": {
       "psg_id": "psg-478",
@@ -33731,17 +33667,10 @@
           }
         }
       ],
-      "excluded_from_erp": false,
-      "exclusion_reason": null,
-      "modules": [
-        "manufacturing_management"
-      ],
-      "families": [
-        {
-          "module": "manufacturing_management",
-          "family": "Product Engineering"
-        }
-      ]
+      "excluded_from_erp": true,
+      "exclusion_reason": "BIM/CAD/visualisation tools (used in architecture, construction, product design) \u2014 not an ERP manufacturing module. Multi-core validation (2026-05-13) showed all 5 sols are pure design tools with zero coverage of mfg.bom/routing/work_orders/MRP/scheduling/quality.",
+      "modules": [],
+      "families": []
     },
     "psg-511": {
       "psg_id": "psg-511",
@@ -34739,17 +34668,12 @@
       "exclusion_reason": null,
       "modules": [
         "others",
-        "manufacturing_management",
         "fleet_management"
       ],
       "families": [
         {
           "module": "others",
           "family": "Intelligence & Analytics"
-        },
-        {
-          "module": "manufacturing_management",
-          "family": "Quality & Compliance"
         },
         {
           "module": "fleet_management",
@@ -35052,17 +34976,12 @@
       "exclusion_reason": null,
       "modules": [
         "others",
-        "manufacturing_management",
         "fleet_management"
       ],
       "families": [
         {
           "module": "others",
           "family": "Intelligence & Analytics"
-        },
-        {
-          "module": "manufacturing_management",
-          "family": "Quality & Compliance"
         },
         {
           "module": "fleet_management",
@@ -45102,17 +45021,10 @@
       ]
     },
     "3D Modelling, Immersive Visualisation & Analysis": {
-      "modules": [
-        "manufacturing_management"
-      ],
-      "families": [
-        {
-          "module": "manufacturing_management",
-          "family": "Product Engineering"
-        }
-      ],
-      "excluded": false,
-      "exclusion_reason": null,
+      "modules": [],
+      "families": [],
+      "excluded": true,
+      "exclusion_reason": "BIM/CAD/visualisation tools (used in architecture, construction, product design) \u2014 not an ERP manufacturing module. Multi-core validation (2026-05-13) showed all 5 sols are pure design tools with zero coverage of mfg.bom/routing/work_orders/MRP/scheduling/quality.",
       "vendor_ids": [
         "psg-110",
         "psg-111",
@@ -45166,17 +45078,12 @@
     "Carbon Management Solutions": {
       "modules": [
         "others",
-        "manufacturing_management",
         "fleet_management"
       ],
       "families": [
         {
           "module": "others",
           "family": "Intelligence & Analytics"
-        },
-        {
-          "module": "manufacturing_management",
-          "family": "Quality & Compliance"
         },
         {
           "module": "fleet_management",
@@ -45631,17 +45538,10 @@
       ]
     },
     "Computer-aided design & Computer-aided manufacturing (CAD/CAM)": {
-      "modules": [
-        "manufacturing_management"
-      ],
-      "families": [
-        {
-          "module": "manufacturing_management",
-          "family": "Product Engineering"
-        }
-      ],
-      "excluded": false,
-      "exclusion_reason": null,
+      "modules": [],
+      "families": [],
+      "excluded": true,
+      "exclusion_reason": "Engineering CAD/CAM software \u2014 not an ERP module. CAM produces NC toolpaths consumed by machine tools, not BOM/routing/MRP data consumed by an ERP. Excluded from manufacturing_management scope 2026-05-13 after multi-core validation confirmed zero ERP cap coverage.",
       "vendor_ids": [
         "psg-348",
         "psg-477"
@@ -45755,17 +45655,10 @@
       ]
     },
     "Machining Dynamics for Milling/Turning": {
-      "modules": [
-        "manufacturing_management"
-      ],
-      "families": [
-        {
-          "module": "manufacturing_management",
-          "family": "Production Execution"
-        }
-      ],
-      "excluded": false,
-      "exclusion_reason": null,
+      "modules": [],
+      "families": [],
+      "excluded": true,
+      "exclusion_reason": "Machine-tool process engineering software (cutting-parameter optimisation, chatter analysis) \u2014 used by CAM engineers, not part of an ERP module. Excluded from manufacturing_management scope 2026-05-13.",
       "vendor_ids": [
         "psg-476"
       ]
@@ -46343,24 +46236,6 @@
         "psg-464",
         "psg-528",
         "psg-529",
-        "psg-533"
-      ]
-    },
-    "manufacturing_management": {
-      "vendor_count": 13,
-      "vendor_ids": [
-        "psg-110",
-        "psg-111",
-        "psg-120",
-        "psg-125",
-        "psg-147",
-        "psg-257",
-        "psg-320",
-        "psg-348",
-        "psg-476",
-        "psg-477",
-        "psg-507",
-        "psg-528",
         "psg-533"
       ]
     },

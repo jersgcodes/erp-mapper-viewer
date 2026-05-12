@@ -17313,7 +17313,12 @@
   },
   "_meta": {
     "step16_applied_at": "2026-05-10T00:12:25.220526+08:00",
-    "step16_applied_count": 0
+    "step16_applied_count": 0,
+    "preferred_clusters_embed": {
+      "from": "config/preferred_clusters.yaml",
+      "applied_at": "2026-05-13T02:57:22.058079+08:00",
+      "removed": false
+    }
   },
   "sub_modules": [
     {
@@ -17384,5 +17389,39 @@
         "mfg.ai_ml_analytics"
       ]
     }
-  ]
+  ],
+  "preferred_clusters": {
+    "required": {
+      "mode": "multi",
+      "clusters": [
+        {
+          "id": "production_shop_floor",
+          "name": "Production planning & shop floor",
+          "caps": [
+            "mfg.bom",
+            "mfg.routing",
+            "mfg.work_orders",
+            "mfg.mrp",
+            "mfg.production_scheduling"
+          ]
+        },
+        {
+          "id": "quality_inventory",
+          "name": "Quality & inventory traceability",
+          "caps": [
+            "mfg.quality_management",
+            "mfg.inventory_wip",
+            "mfg.product_costing",
+            "mfg.traceability_genealogy",
+            "mfg.safety_compliance",
+            "mfg.mobile_access",
+            "mfg.integration_import_export"
+          ]
+        }
+      ]
+    },
+    "preferred": {
+      "mode": "single"
+    }
+  }
 }

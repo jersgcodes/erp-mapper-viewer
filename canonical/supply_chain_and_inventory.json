@@ -20809,7 +20809,12 @@
     "step15_generated_at": "2026-05-07T13:56:52.266921+08:00",
     "step15_processed": 31,
     "step16_applied_at": "2026-05-10T00:12:25.818876+08:00",
-    "step16_applied_count": 0
+    "step16_applied_count": 0,
+    "preferred_clusters_embed": {
+      "from": "config/preferred_clusters.yaml",
+      "applied_at": "2026-05-13T02:57:22.127664+08:00",
+      "removed": false
+    }
   },
   "sub_modules": [
     {
@@ -20887,5 +20892,34 @@
         "sc.ai_ml_supply_chain"
       ]
     }
-  ]
+  ],
+  "preferred_clusters": {
+    "required": {
+      "mode": "multi",
+      "clusters": [
+        {
+          "id": "inventory_operations",
+          "name": "Inventory & item operations",
+          "caps": [
+            "sc.item_master",
+            "sc.stock_levels",
+            "sc.reorder_rules",
+            "sc.barcode_scanning"
+          ]
+        },
+        {
+          "id": "procurement_analytics",
+          "name": "Procurement & supply analytics",
+          "caps": [
+            "sc.purchase_orders",
+            "sc.vendor_master",
+            "sc.supply_chain_analytics"
+          ]
+        }
+      ]
+    },
+    "preferred": {
+      "mode": "single"
+    }
+  }
 }

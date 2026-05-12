@@ -23248,7 +23248,12 @@
     "step15_generated_at": "2026-05-07T13:55:14.798301+08:00",
     "step15_processed": 32,
     "step16_applied_at": "2026-05-10T00:12:25.069971+08:00",
-    "step16_applied_count": 0
+    "step16_applied_count": 0,
+    "preferred_clusters_embed": {
+      "from": "config/preferred_clusters.yaml",
+      "applied_at": "2026-05-13T02:57:22.037614+08:00",
+      "removed": false
+    }
   },
   "sub_modules": [
     {
@@ -23326,5 +23331,47 @@
         "hr.ai_ml_insights"
       ]
     }
-  ]
+  ],
+  "preferred_clusters": {
+    "required": {
+      "mode": "multi",
+      "clusters": [
+        {
+          "id": "core_hr_operations",
+          "name": "Core HR operations",
+          "caps": [
+            "hr.employee_master",
+            "hr.leave_management",
+            "hr.time_attendance",
+            "hr.self_service_portal"
+          ]
+        },
+        {
+          "id": "payroll_compliance",
+          "name": "Payroll & statutory compliance",
+          "caps": [
+            "hr.payroll_processing",
+            "hr.payslips",
+            "hr.statutory_reporting",
+            "hr.overtime_variable_pay",
+            "hr.compensation_benefits",
+            "hr.benefits_administration"
+          ]
+        },
+        {
+          "id": "talent_learning",
+          "name": "Talent & learning",
+          "caps": [
+            "hr.recruitment_ats",
+            "hr.onboarding_offboarding",
+            "hr.performance_management",
+            "hr.document_management"
+          ]
+        }
+      ]
+    },
+    "preferred": {
+      "mode": "single"
+    }
+  }
 }
