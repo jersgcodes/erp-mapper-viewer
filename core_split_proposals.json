@@ -1,0 +1,408 @@
+{
+  "_meta": {
+    "generated_by": "scripts/propose_core_split_revisions.py",
+    "generated_at": "2026-05-13T02:21:37.501672+08:00",
+    "model": "claude-haiku-4-5-20251001",
+    "thresholds": {
+      "validated_specialty_single_min_pct": 60,
+      "validated_specialty_partial_max_pct": 20,
+      "theoretical_only_multi_min_pct": 60,
+      "boundary_mismatch_partial_min_pct": 40,
+      "data_thin_min_count": 5
+    }
+  },
+  "modules": {
+    "manufacturing_management": {
+      "current_split": [
+        {
+          "id": "production_shop_floor",
+          "name": "Production planning & shop floor",
+          "cap_count": 5
+        },
+        {
+          "id": "quality_inventory",
+          "name": "Quality & inventory traceability",
+          "cap_count": 7
+        }
+      ],
+      "stats": {
+        "total_classified": 13,
+        "counts": {
+          "unclassified": 8,
+          "partial_only": 5
+        },
+        "pct": {
+          "unclassified": 61.5,
+          "partial_only": 38.5
+        }
+      },
+      "verdict": "mixed"
+    },
+    "asset_management": {
+      "current_split": [
+        {
+          "id": "eam_register_lifecycle",
+          "name": "EAM \u2014 asset register & lifecycle",
+          "cap_count": 5
+        },
+        {
+          "id": "cmms_maintenance_ops",
+          "name": "CMMS \u2014 maintenance operations",
+          "cap_count": 6
+        }
+      ],
+      "stats": {
+        "total_classified": 10,
+        "counts": {
+          "partial_only": 10
+        },
+        "pct": {
+          "partial_only": 100.0
+        }
+      },
+      "verdict": "boundary_mismatch",
+      "proposed_revisions": [
+        {
+          "cores": [
+            {
+              "id": "asset_compliance_inspection",
+              "name": "Asset Compliance & Inspection",
+              "caps": [
+                "asset.compliance",
+                "asset.analytics_kpi",
+                "asset.mobile_access"
+              ]
+            },
+            {
+              "id": "asset_lifecycle_maintenance",
+              "name": "Asset Lifecycle & Maintenance Operations",
+              "caps": [
+                "asset.register",
+                "asset.lifecycle",
+                "asset.work_orders",
+                "asset.spare_parts",
+                "asset.maintenance_planning",
+                "asset.depreciation"
+              ]
+            }
+          ],
+          "rationale": "The partial_only solutions consistently cluster around inspection/compliance/mobile capabilities as one functional area, while lacking asset register, lifecycle, and maintenance planning fundamentals entirely. Regrouping splits the module into inspection-led (compliance-mobile-analytics) and operations-led (register-lifecycle-maintenance) cores that better reflect how vendors actually package these capabilities.",
+          "backing_evidence": [
+            {
+              "psg_id": "psg-039",
+              "reason": "Covers only inspection and safety monitoring (compliance-adjacent) with zero asset management or lifecycle capabilities."
+            },
+            {
+              "psg_id": "psg-265",
+              "reason": "Covers asset.compliance and asset.work_orders separately across two domains, suggesting inspection and work-order closure are distinct functional areas."
+            },
+            {
+              "psg_id": "psg-441",
+              "reason": "Explicitly noted as covering 'inspection and compliance' (eam side) and 'cloud accessibility' (cmms side) while lacking 'asset management fundamentals (register, lifecycle, depreciation, PM planning, work orders, spare parts)'."
+            }
+          ]
+        },
+        {
+          "cores": [
+            {
+              "id": "asset_management_operations",
+              "name": "Asset Management & Operations",
+              "caps": [
+                "asset.register",
+                "asset.lifecycle",
+                "asset.depreciation",
+                "asset.maintenance_planning",
+                "asset.spare_parts"
+              ]
+            },
+            {
+              "id": "asset_field_execution",
+              "name": "Asset Field Execution & Compliance",
+              "caps": [
+                "asset.work_orders",
+                "asset.mobile_access",
+                "asset.compliance",
+                "asset.analytics_kpi"
+              ]
+            }
+          ],
+          "rationale": "Partials show vendors clustering around field-level execution (work orders + mobile access + inspection) as a distinct offering from back-office asset management (register, lifecycle, planning). This split aligns with how vendors position solutions: either inspection-permit-work-order-mobile or comprehensive asset lifecycle management.",
+          "backing_evidence": [
+            {
+              "psg_id": "psg-232",
+              "reason": "Covers inspection/compliance and work order approval without any asset register or lifecycle functionality."
+            },
+            {
+              "psg_id": "psg-322",
+              "reason": "Covers inspection-compliance (back-office compliance) paired with mobile-access (field execution) as two separate capability layers."
+            },
+            {
+              "psg_id": "psg-442",
+              "reason": "Covers work_orders and mobile_access together as field execution layer while missing register, lifecycle, and planning entirely."
+            }
+          ]
+        }
+      ]
+    },
+    "supply_chain_and_inventory": {
+      "current_split": [
+        {
+          "id": "procurement",
+          "name": "Procurement & purchasing",
+          "cap_count": 2
+        },
+        {
+          "id": "warehouse_inventory",
+          "name": "Warehouse & inventory",
+          "cap_count": 6
+        }
+      ],
+      "stats": {
+        "total_classified": 66,
+        "counts": {
+          "partial_only": 49,
+          "multi_core_full": 13,
+          "single_core_full": 4
+        },
+        "pct": {
+          "partial_only": 74.2,
+          "multi_core_full": 19.7,
+          "single_core_full": 6.1
+        }
+      },
+      "verdict": "boundary_mismatch",
+      "proposed_revisions": [
+        {
+          "cores": [
+            {
+              "id": "inventory_and_item_management",
+              "name": "Inventory & Item Management",
+              "caps": [
+                "sc.item_master",
+                "sc.stock_levels",
+                "sc.reorder_rules",
+                "sc.mobile_access"
+              ]
+            },
+            {
+              "id": "supply_chain_operations",
+              "name": "Supply Chain Operations",
+              "caps": [
+                "sc.procurement",
+                "sc.supply_chain_analytics",
+                "sc.integration_import_export"
+              ]
+            }
+          ],
+          "rationale": "All 10 partial_only solutions demonstrate consistent coverage of item master, stock levels, and mobile access as a cohesive cluster, while procurement is consistently absent or minimal. This suggests vendors package inventory management and operational accessibility as one functional core, distinct from procurement and analytics which require deeper ERP integration.",
+          "backing_evidence": [
+            {
+              "psg_id": "psg-007",
+              "reason": "Covers 3 of 4 inventory_and_item_management caps (item_master, stock_levels, mobile_access); 0 procurement"
+            },
+            {
+              "psg_id": "psg-008",
+              "reason": "Covers 4 of 4 inventory_and_item_management caps fully; procurement and analytics remain partial"
+            },
+            {
+              "psg_id": "psg-051",
+              "reason": "Covers all 4 inventory_and_item_management caps (item_master, stock_levels, mobile_access, integration); procurement absent"
+            },
+            {
+              "psg_id": "psg-019",
+              "reason": "Covers 4 of 4 inventory_and_item_management caps; procurement partial only"
+            },
+            {
+              "psg_id": "psg-234",
+              "reason": "Covers 2 of 4 inventory_and_item_management caps (item_master, stock_levels); procurement entirely absent"
+            }
+          ]
+        },
+        {
+          "cores": [
+            {
+              "id": "inventory_operations",
+              "name": "Inventory Operations",
+              "caps": [
+                "sc.item_master",
+                "sc.stock_levels",
+                "sc.mobile_access",
+                "sc.integration_import_export"
+              ]
+            },
+            {
+              "id": "procurement_and_planning",
+              "name": "Procurement & Planning",
+              "caps": [
+                "sc.procurement",
+                "sc.reorder_rules",
+                "sc.supply_chain_analytics"
+              ]
+            }
+          ],
+          "rationale": "Vendors consistently bundle item master, stock levels, mobile access, and integration as a practical inventory operations layer. Procurement, reorder rules, and analytics represent a separate planning/strategy tier that requires deeper system capabilities and is rarely achieved in partial solutions.",
+          "backing_evidence": [
+            {
+              "psg_id": "psg-008",
+              "reason": "Fully covers all 4 inventory_operations caps; procurement_and_planning remains partial across all 3 caps"
+            },
+            {
+              "psg_id": "psg-051",
+              "reason": "Fully covers all 4 inventory_operations caps; procurement_and_planning completely absent"
+            },
+            {
+              "psg_id": "psg-019",
+              "reason": "Covers 4 of 4 inventory_operations caps; procurement_and_planning partial only"
+            }
+          ]
+        }
+      ]
+    },
+    "human_resources_management": {
+      "current_split": [
+        {
+          "id": "core_hr_payroll",
+          "name": "Core HR & payroll",
+          "cap_count": 12
+        },
+        {
+          "id": "talent_learning",
+          "name": "Talent & learning",
+          "cap_count": 4
+        }
+      ],
+      "stats": {
+        "total_classified": 42,
+        "counts": {
+          "single_core_full": 14,
+          "partial_only": 27,
+          "multi_core_full": 1
+        },
+        "pct": {
+          "single_core_full": 33.3,
+          "partial_only": 64.3,
+          "multi_core_full": 2.4
+        }
+      },
+      "verdict": "boundary_mismatch",
+      "proposed_revisions": [
+        {
+          "cores": [
+            {
+              "id": "core_hr_operations",
+              "name": "Core HR Operations",
+              "caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance",
+                "hr.self_service_portal",
+                "hr.mobile_access",
+                "hr.integration_import_export"
+              ]
+            },
+            {
+              "id": "core_payroll_compliance",
+              "name": "Core Payroll & Compliance",
+              "caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.statutory_reporting",
+                "hr.overtime_variable_pay",
+                "hr.benefits_administration"
+              ]
+            },
+            {
+              "id": "talent_learning",
+              "name": "Talent & Learning",
+              "caps": [
+                "hr.recruitment_ats",
+                "hr.onboarding_workflows",
+                "hr.performance_management",
+                "hr.document_management"
+              ]
+            }
+          ],
+          "rationale": "The partial_only solutions cluster into three distinct vendor packaging patterns: (1) HR operations vendors focus on employee master, leave, attendance, and self-service mobility; (2) payroll-specialized vendors deliver payroll, payslips, statutory reporting, and integration but not talent functions; (3) talent vendors address recruitment and performance separately. Splitting the current core_hr_payroll into HR operations and payroll-compliance cores aligns with how vendors actually segment their offerings and would better distinguish full-solution coverage from partial overlaps.",
+          "backing_evidence": [
+            {
+              "psg_id": "psg-114",
+              "reason": "Covers 8/12 current payroll caps (payroll, slips, statutory, mobile, integration) with zero talent\u2014fits proposed payroll_compliance + HR operations split cleanly."
+            },
+            {
+              "psg_id": "psg-127",
+              "reason": "Covers 6 HR operations caps (employee master, leave, attendance, payroll, payslips, mobile) but fails both current cores; aligns with proposed split where payroll alone is insufficient."
+            },
+            {
+              "psg_id": "psg-021",
+              "reason": "Spans both HR operations (leave, attendance, self-service, mobile) and payroll (processing, payslips) across two partial cores; proposed three-core model would better reflect this real-world packaging."
+            },
+            {
+              "psg_id": "psg-042",
+              "reason": "Covers only recruitment_ats; talent_learning as a standalone core justifies this solution as partial rather than 'none' in current structure."
+            },
+            {
+              "psg_id": "psg-303",
+              "reason": "Covers payroll, leave, statutory, integration (6 caps) with zero talent; clean fit for proposed payroll_compliance + HR operations, explains why it fails current split."
+            }
+          ]
+        },
+        {
+          "cores": [
+            {
+              "id": "core_hr_payroll_essential",
+              "name": "Core HR & Payroll (Essential)",
+              "caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance",
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.self_service_portal"
+              ]
+            },
+            {
+              "id": "core_hr_payroll_extended",
+              "name": "Core HR & Payroll (Extended)",
+              "caps": [
+                "hr.statutory_reporting",
+                "hr.overtime_variable_pay",
+                "hr.benefits_administration",
+                "hr.mobile_access",
+                "hr.integration_import_export",
+                "hr.onboarding_workflows"
+              ]
+            },
+            {
+              "id": "talent_learning",
+              "name": "Talent & Learning",
+              "caps": [
+                "hr.recruitment_ats",
+                "hr.performance_management",
+                "hr.document_management"
+              ]
+            }
+          ],
+          "rationale": "Analysis of partial_only solutions reveals a two-tier HR+payroll market: vendors offering 'basic' HR operations (employee, leave, attendance, payroll, self-service) versus those adding compliance and integration depth. Splitting core_hr_payroll into Essential (6 base caps covering the majority of partials) and Extended (6 advanced caps including compliance, mobile, integration) would recognize that most solutions cover the essential bundle first, then selectively add extended capabilities, while talent remains consistently separate.",
+          "backing_evidence": [
+            {
+              "psg_id": "psg-021",
+              "reason": "Covers 7 of 6 proposed essential caps plus performance; fits tiered model where vendors add one extended cap (self-service detail) but skip others."
+            },
+            {
+              "psg_id": "psg-127",
+              "reason": "Covers all 6 essential HR+payroll caps (employee, leave, attendance, payroll, payslips, mobile) and zero extended/talent; demonstrates that essential tier is a natural completion threshold."
+            },
+            {
+              "psg_id": "psg-114",
+              "reason": "Covers 5 essential + 3 extended (statutory, mobile, integration) with zero talent; supports tiered model showing vendors often add selective extended caps beyond essentials."
+            },
+            {
+              "psg_id": "psg-157",
+              "reason": "Covers 6 essential + 2 extended (statutory, mobile) with zero talent; aligns with pattern where essential is baseline, extended is selective add-on."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

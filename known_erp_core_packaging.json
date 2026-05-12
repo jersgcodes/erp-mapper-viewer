@@ -1,0 +1,314 @@
+{
+  "_meta": {
+    "generated_by": "scripts/research_known_erp_packaging.py",
+    "generated_at": "2026-05-13T02:20:35.895288+08:00",
+    "model": "claude-haiku-4-5-20251001",
+    "scope_erps": [
+      "sap_business_one",
+      "sage_300",
+      "globe3_erp",
+      "netsuite",
+      "odoo",
+      "ms_dynamics_bc",
+      "erpnext",
+      "ibm_maximo",
+      "upkeep",
+      "coupa",
+      "workday_hcm",
+      "adp",
+      "bamboohr"
+    ],
+    "scope_modules": [
+      "manufacturing_management",
+      "asset_management",
+      "supply_chain_and_inventory",
+      "human_resources_management"
+    ]
+  },
+  "modules": {
+    "manufacturing_management": {
+      "cores": [
+        {
+          "id": "production_shop_floor",
+          "name": "Production planning & shop floor"
+        },
+        {
+          "id": "quality_inventory",
+          "name": "Quality & inventory traceability"
+        }
+      ],
+      "erps": {
+        "sap_business_one": {
+          "name": "SAP Business One",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:20:48.419140+08:00",
+          "packaging_per_core": {
+            "production_shop_floor": {
+              "model": "bundled",
+              "sku_name": "SAP Business One Manufacturing & Production Module",
+              "pricing_unit": "per_user_month (cloud: $95-$250/month) or perpetual license (on-premise: $3,500-$5,500 one-time)",
+              "sources": [
+                "https://www.erpresearch.com/pages/en-us/sap-business-one-production-planning",
+                "https://www.b1-solutions.com/production-management-with-sap-business-one/",
+                "https://www.erpresearch.com/erp/sap-business-one/manufacturing-management",
+                "https://learning.sap.com/courses/managing-logistics-in-sap-business-one/running-the-production-process-in-sap-business-one"
+              ],
+              "notes": "Production planning, shop floor control, BOM management, and MRP are native features included in SAP Business One's standard manufacturing module. Not sold separately. Third-party add-ons exist for advanced functionality (400+ available), but core functionality is bundled."
+            },
+            "quality_inventory": {
+              "model": "bundled",
+              "sku_name": "SAP Business One Inventory Management Module & Quality Management Features",
+              "pricing_unit": "per_user_month (cloud: $95-$250/month) or perpetual license (on-premise: $3,500-$5,500 one-time)",
+              "sources": [
+                "https://www.erpresearch.com/pages/en-us/sap-business-one-inventory-management-module",
+                "https://softengine.com/resources-blog-traceability-with-sap-business-one/",
+                "https://www.top10erp.org/products/sap-business-one/materials-management",
+                "https://clientsfirst-us.com/blog/sap-business-one-for-manufacturing/"
+              ],
+              "notes": "Batch/lot/serial tracking, quality inspections, traceability, and inventory management are native features included in the core platform. SAP Business Network Material Traceability is a separate cloud service, but foundational quality & traceability is bundled with standard licenses."
+            }
+          },
+          "overall_summary": "SAP Business One packages both production planning/shop floor and quality/inventory traceability as bundled components of its core Manufacturing and Inventory Management modules. Neither core is sold as a separate SKU. The ERP uses named-user licensing priced at approximately $95\u2013$250/user/month for cloud deployments or $3,500\u2013$5,500 per user as a perpetual on-premise license, plus 18\u201320% annual maintenance. While over 400 third-party add-ons exist for advanced manufacturing and quality functionality, basic production planning, shop floor control, quality management, batch traceability, and inventory management are included standard across all Professional and Limited User licenses."
+        },
+        "sage_300": {
+          "name": "Sage 300",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:21:04.391674+08:00",
+          "packaging_per_core": {
+            "production_shop_floor": {
+              "model": "unknown",
+              "sku_name": "Sage 300 Shop Floor Control (S/C)",
+              "pricing_unit": "unknown - likely per_user_month (Sage 300 base: $75-200/user/mo)",
+              "sources": [
+                "https://aces.com.ph/sage-300-manufacturing.html",
+                "https://acutedata.com/sage-300-add-ons/"
+              ],
+              "notes": "Sage 300 documentation lists Shop Floor Control as a module component, but web sources do not confirm if it is separately licensed or bundled within manufacturing suite. Appears to be offered as an add-on based on third-party implementation sites."
+            },
+            "quality_inventory": {
+              "model": "unknown",
+              "sku_name": "Sage 300 Inventory Control + Manufacturing Lot Tracking",
+              "pricing_unit": "unknown - likely per_user_month",
+              "sources": [
+                "https://help.sage300.com/en-us/2024/classic/Content/Operations/Inventory/IC_Home.htm",
+                "https://acutedata.com/sage-300-add-ons/",
+                "https://triadme.com/lot-serial-tracking-in-sage-300-inventory-everything-you-need-to-know/"
+              ],
+              "notes": "Lot and Serial Tracking appear to be built into core Inventory Control module, but Manufacturing Lot Tracking is listed as a separate add-on. Unclear if quality/lot traceability is bundled or requires additional licensing."
+            }
+          },
+          "overall_summary": "Web sources confirm Sage 300 includes manufacturing shop floor control and inventory/lot traceability capabilities, but do not definitively establish whether these are sold as separate SKUs, bundled at no cost, or partially available with paid add-ons. Official Sage 300 pricing documentation pricing at $75-200/user/month but does not break down module-specific costs. Recommend contacting Sage directly or a certified partner for authoritative SKU and pricing details."
+        },
+        "globe3_erp": {
+          "name": "Globe3 ERP",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:21:18.560375+08:00",
+          "packaging_per_core": {
+            "production_shop_floor": {
+              "model": "unknown",
+              "sku_name": "Globe3 Manufacturing Module (MRP)",
+              "pricing_unit": "per_concurrent_user",
+              "sources": [
+                "https://www.globe3.com/erp-modules/material-requirement-planning/",
+                "https://www.globe3.com/pricing/"
+              ],
+              "notes": "No separate SKU documentation found. Features (production planning, scheduling) mentioned but pricing model unclear. Vendor uses custom quotes."
+            },
+            "quality_inventory": {
+              "model": "unknown",
+              "sku_name": "Globe3 Manufacturing Module (QA + Inventory)",
+              "pricing_unit": "per_concurrent_user",
+              "sources": [
+                "https://www.globe3.com/erp-modules/material-requirement-planning/",
+                "https://www.globe3.com/erp-modules/supply-chain-management/"
+              ],
+              "notes": "QA and Inventory described as integrated within Manufacturing/MRP. No separate add-on pricing documented. All modules bundled in standard system."
+            }
+          },
+          "overall_summary": "Globe3 ERP uses an integrated, bundled licensing model where manufacturing cores (production planning, quality, inventory) are sold as part of the Manufacturing/MRP module within the broader ERP suite. Per-concurrent-user pricing applies to entire system. No publicly available evidence of separate SKUs or add-on pricing for individual manufacturing sub-components. Vendor contact required for detailed module-level pricing."
+        },
+        "netsuite": {
+          "name": "Oracle NetSuite ERP",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:21:37.478088+08:00",
+          "packaging_per_core": {
+            "production_shop_floor": {
+              "model": "separate",
+              "sku_name": "NetSuite Advanced Manufacturing (with Work Orders & Assemblies + WIP & Routings prerequisites)",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://www.netsuite.com/portal/resource/articles/erp/netsuite-modules.shtml",
+                "https://nuagecg.com/blog/netsuite-advanced-manufacturing-user-guide/",
+                "https://erpnuggets.com/netsuite-manufacturing-pricing/",
+                "https://scalenorth.com/netsuite-modules/netsuite-advanced-manufacturing",
+                "https://www.brokenrubik.com/blog/netsuite-for-manufacturing"
+              ],
+              "notes": "Advanced Manufacturing is a separate add-on module priced independently. Production planning & shop floor capabilities are provided through tiered modules: Work Orders & Assemblies (basic), WIP & Routings (intermediate), and Advanced Manufacturing (comprehensive). Oracle does not publish exact pricing; custom quotes required based on user count and configuration."
+            },
+            "quality_inventory": {
+              "model": "partial",
+              "sku_name": "NetSuite Quality Management (add-on) + Inventory Management (base/core)",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://www.netsuite.com/portal/resource/articles/erp/netsuite-modules.shtml",
+                "https://www.netsuite.com/portal/products/erp/production-management/quality-management-software.shtml",
+                "https://netsuite.folio3.com/services/netsuite-modules/netsuite-quality-management/",
+                "https://www.netsuite.com/portal/products/erp/warehouse-fulfillment/inventory-management.shtml"
+              ],
+              "notes": "Inventory management (basic tracking, lot/serial numbers, replenishment) is included in the core platform. Quality Management is a separate optional add-on module for advanced quality control, inspections, and traceability. Advanced Inventory Management ($~500/month) available separately for multi-location demand planning and advanced controls."
+            }
+          },
+          "overall_summary": "Oracle NetSuite ERP packages manufacturing functionality across multiple tiers rather than as a single unified module. Production planning & shop floor represents 'separate' licensing through Advanced Manufacturing and supporting modules (Work Orders & Assemblies, WIP & Routings), priced as distinct add-ons. Quality & inventory traceability follows a 'partial' model where base inventory management is bundled in core, but Quality Management is a separate licensed add-on. All modules are licensed independently per user per month on top of the $999/month base platform fee. Exact pricing is not published by Oracle; implementation varies by contract negotiation, company size, and user count."
+        },
+        "odoo": {
+          "name": "Odoo Online (Standard)",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:21:53.608307+08:00",
+          "packaging_per_core": {
+            "production_shop_floor": {
+              "model": "bundled",
+              "sku_name": "Manufacturing module (includes Shop Floor)",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://www.odoo.com/pricing",
+                "https://www.odoo.com/documentation/18.0/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.html",
+                "https://www.odoo.com/forum/help-1/is-the-shop-floor-app-part-of-odoo-community-281093"
+              ],
+              "notes": "Shop Floor is a companion module to Manufacturing, automatically installed together with it at no separate cost. However, Shop Floor functionality is Enterprise-only and not available in Community Edition."
+            },
+            "quality_inventory": {
+              "model": "partial",
+              "sku_name": "Inventory module (core) + Quality module (Enterprise-only)",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://www.odoo.com/pricing",
+                "https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/product_management/product_tracking.html",
+                "https://www.odoo.com/forum/help-1/list-of-community-edition-apps-free-189585"
+              ],
+              "notes": "Inventory module with basic lot/serial tracking is included in Standard plan. Quality module (for advanced quality control, inspection points, test results) is Enterprise-only and not available in Odoo Online Standard. Traceability features exist in Inventory but full quality management is a separate paid Enterprise feature."
+            }
+          },
+          "overall_summary": "Both cores are partially supported in Odoo Online (Standard). Production planning and shop floor management are bundled within the Manufacturing module at no extra cost, though advanced Shop Floor features are restricted to Enterprise. Quality and inventory traceability have foundational features (lots, serial numbers) included in Inventory, but comprehensive quality control requiring the Quality module is Enterprise-only and not available on Odoo Online Standard plan. The Standard plan includes 'hundreds of apps' for a single price (~$24.90/user/month USD), but certain advanced features default to the Custom/Enterprise plan."
+        },
+        "ms_dynamics_bc": {
+          "name": "Microsoft Dynamics 365 Business Central",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:22:09.020533+08:00",
+          "packaging_per_core": {
+            "production_shop_floor": {
+              "model": "bundled",
+              "sku_name": "Dynamics 365 Business Central Premium",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://learn.microsoft.com/en-us/dynamics365/business-central/qms-overview",
+                "https://www.randgroup.com/insights/microsoft/dynamics-365/business-central/microsoft-dynamics-365-business-central-production-orders/",
+                "https://topdynamicspartners.com/learn/business-central/manufacturing"
+              ],
+              "notes": "Production planning & shop floor execution (production orders, capacity planning, routings, finite scheduling) are included in the Premium license ($110/user/month as of Oct 2025) with no separate SKU. Advanced shop floor features beyond native capabilities require AppSource extensions (e.g., Shop Floor Mobile, MxAPS)."
+            },
+            "quality_inventory": {
+              "model": "partial",
+              "sku_name": "Dynamics 365 Business Central Premium (base) + Quality Management module",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://learn.microsoft.com/en-us/dynamics365/business-central/qms-overview",
+                "https://dynamics-connect.co.uk/Blog/business-central-quality-management-module",
+                "https://www.manufacturingtomorrow.com/article/2026/03/when-quality-controls-break-down-in-business-central/27064"
+              ],
+              "notes": "Inventory traceability (lot/serial tracking, multi-location, warehouse management) is bundled in Premium. Native quality management (inspection records, batch attributes, pass/fail tracking) launched as built-in module. Advanced quality enforcement and traceability require third-party apps (e.g., Warehouse Insight, Shop Floor Insight)."
+            }
+          },
+          "overall_summary": "<cite index=\"41-1,49-9\">Microsoft Dynamics 365 Business Central Premium includes manufacturing capabilities bundled with the platform at $110/user/month</cite>. <cite index=\"17-6\">The manufacturing module is included exclusively in the Premium license</cite>, not sold separately. <cite index=\"21-1,21-13,21-14,21-15\">Quality inspection records and batch attributes are natively supported in Business Central, allowing users to document inspections and record pass/fail outcomes, though native Business Central does not enforce inspection results automatically within warehouse or production workflows</cite>. <cite index=\"6-17,17-10,17-11\">Advanced manufacturing and warehousing often require third-party apps from AppSource</cite>. Thus, production_shop_floor is fully **bundled** in Premium, while quality_inventory is **partial**\u2014base traceability is bundled, but full advanced quality enforcement requires add-ons."
+        },
+        "erpnext": {
+          "name": "ERPNext (Frappe Cloud)",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:22:23.629407+08:00",
+          "packaging_per_core": {
+            "production_shop_floor": {
+              "model": "bundled",
+              "sku_name": "ERPNext Manufacturing Module (included in base platform)",
+              "pricing_unit": "No per-module licensing; hosting cost is per-compute/month",
+              "sources": [
+                "https://frappe.io/erpnext/pricing",
+                "https://www.dexciss.io/blog/educational-6/the-ultimate-guide-to-erpnext-pricing-unveiling-the-true-cost-of-your-erp-43",
+                "https://frappe.io/erpnext/for-manufacturing-industry",
+                "https://www.erpresearch.com/pages/en-us/erpnext-for-manufacturing"
+              ],
+              "notes": "Production planning, shop floor control, work orders, and job cards are all core features included in the base Manufacturing module. No separate SKU or additional licensing fee. Costs are only for Frappe Cloud hosting (~$5-$400/month depending on compute tier) or self-hosting infrastructure."
+            },
+            "quality_inventory": {
+              "model": "bundled",
+              "sku_name": "ERPNext Quality Control & Inventory Management Modules (included in base platform)",
+              "pricing_unit": "No per-module licensing; hosting cost is per-compute/month",
+              "sources": [
+                "https://frappe.io/erpnext/pricing",
+                "https://www.dexciss.io/blog/educational-6/the-ultimate-guide-to-erpnext-pricing-unveiling-the-true-cost-of-your-erp-43",
+                "https://erpnext.com/domains/inventory-management-system",
+                "https://www.sigzen.com/erpnext/quality-control/",
+                "https://docs.frappe.io/erpnext/user/manual/en/quality-inspection"
+              ],
+              "notes": "Quality management (inspections, batch/serial traceability) and inventory management (stock tracking, multi-location control, batch/serial numbers) are both core modules included in base ERPNext. No separate licensing; same compute-based pricing applies to all modules."
+            }
+          },
+          "overall_summary": "ERPNext (Frappe Cloud) operates as a 100% open-source ERP with no per-module, per-user, or per-feature licensing fees. Both 'production_shop_floor' and 'quality_inventory' cores are fully bundled into the base Manufacturing and Inventory modules at no additional cost. All modules\u2014including production planning, shop floor control, quality inspections, batch/serial traceability, and inventory management\u2014are included in every instance. Pricing is solely based on Frappe Cloud hosting compute resources ($5/month shared to $400+/month dedicated), not on software licensing or feature activation. This represents a fundamental packaging difference vs. traditional vendor-specific ERPs (SAP, Oracle, Odoo Enterprise) which charge separately per module and per user."
+        },
+        "ibm_maximo": {
+          "name": "IBM Maximo Application Suite",
+          "tier": "enterprise",
+          "researched_at": "2026-05-13T02:22:43.649406+08:00",
+          "packaging_per_core": {
+            "production_shop_floor": {
+              "model": "absent",
+              "sku_name": "Not applicable - not an integrated Maximo module",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.ibm.com/products/maximo",
+                "https://maximosecrets.com/ibm-maximo-manage-overview/"
+              ],
+              "notes": "IBM Maximo is an EAM (Enterprise Asset Management) system, not a manufacturing ERP. Production planning and shop floor functionality are external to Maximo and would be sourced from a true ERP or MES system."
+            },
+            "quality_inventory": {
+              "model": "partial",
+              "sku_name": "Maximo Manage (core) - Inventory module + Visual Inspection add-on for quality",
+              "pricing_unit": "AppPoints (consumption-based)",
+              "sources": [
+                "https://www.ibm.com/docs/en/SSRHPA_cd/pdf/mas_licensing.pdf",
+                "https://www.ibm.com/products/maximo",
+                "https://maximosecrets.com/ibm-maximo-manage-overview/"
+              ],
+              "notes": "Inventory management is bundled in Maximo Manage core (no extra cost). Quality management requires separate Visual Inspection or Manage HSE add-ons; basic quality/traceability functions (calibration) are bundled, but full quality module functionality is add-on based."
+            }
+          },
+          "overall_summary": "IBM Maximo Application Suite is not a manufacturing ERP in the traditional sense. It is a best-of-breed asset and enterprise asset management (EAM) solution. Production planning and shop floor management are absent from Maximo's functional footprint. Inventory is bundled in the core Maximo Manage offering under a unified AppPoints licensing model. Quality/traceability has partial support\u2014basic calibration and traceability are included in Maximo Manage, but advanced quality management requires separate add-ons such as Visual Inspection or Health, Safety & Environment modules. For true manufacturing ERP capabilities (MRP, production scheduling, shop floor control), integration with a dedicated ERP (SAP, Oracle, Infor) is required."
+        },
+        "upkeep": {
+          "name": "UpKeep CMMS",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:22:54.282492+08:00",
+          "packaging_per_core": {
+            "production_shop_floor": {
+              "model": "unknown",
+              "sku_name": "Not applicable - UpKeep is CMMS, not ERP with manufacturing modules",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://upkeep.com/"
+              ],
+              "notes": "UpKeep does not segment shop floor planning as a distinct core. Work order and preventive maintenance features are included in all paid tiers starting at $24/user/month."
+            },
+            "quality_inventory": {
+              "model": "unknown",
+              "sku_name": "Not applicable - UpKeep is CMMS, not ERP with manufacturing modules",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://upkeep.com/"
+              ],
+              "notes": "UpKeep includes inventory management within tiered plans (Premium tier at $55/user/month adds inventory costing). Quality/safety features are in separate EHS product."
+            }
+          },
+          "overall_summary": "UpKeep CMMS does not match the evaluation criteria. It is not an ERP with a manufacturing_management module split into distinct cores. It is a mobile-first CMMS with bundled maintenance, asset, inventory, and basic quality features across tiered per-user pricing ($20\u2013$55+/month), not separate SKUs."
+        }
+      }
+    }
+  }
+}
