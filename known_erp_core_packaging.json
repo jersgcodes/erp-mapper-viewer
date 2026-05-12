@@ -541,6 +541,1014 @@
             }
           },
           "overall_summary": "Oracle NetSuite ERP does not package these two asset management cores as you have specified. Fixed Assets Management ($599/month) provides partial asset lifecycle tracking but lacks full EAM capabilities. CMMS maintenance operations are entirely absent from NetSuite and must be sourced from dedicated third-party maintenance vendors. NetSuite functions as the financial backbone, with external CMMS platforms handling shop-floor maintenance data via REST/API integration."
+        },
+        "odoo": {
+          "name": "Odoo Online (Standard)",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:26:16.362213+08:00",
+          "packaging_per_core": {
+            "eam_register_lifecycle": {
+              "model": "unknown",
+              "sku_name": "unknown",
+              "pricing_unit": "unknown",
+              "sources": [],
+              "notes": "Technical module name not found in public Odoo documentation. Cannot determine if this is a standard component or requires separate licensing."
+            },
+            "cmms_maintenance_ops": {
+              "model": "unknown",
+              "sku_name": "unknown",
+              "pricing_unit": "unknown",
+              "sources": [],
+              "notes": "Technical module name not found in public Odoo documentation. Cannot determine if this is a standard component or requires separate licensing."
+            }
+          },
+          "overall_summary": "Odoo Online (Standard) includes all standard Odoo modules for a single per-user-month fee. However, the specific internal technical identifiers requested do not appear in publicly available sources. Recommend consulting Odoo sales or technical documentation for module-level SKU details and licensing classification."
+        },
+        "ms_dynamics_bc": {
+          "name": "Microsoft Dynamics 365 Business Central",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:26:33.951105+08:00",
+          "packaging_per_core": {
+            "eam_register_lifecycle": {
+              "model": "bundled",
+              "sku_name": "Dynamics 365 Business Central - Financial Management Module (Fixed Assets)",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://learn.microsoft.com/en-us/dynamics365/business-central/fa-manage",
+                "https://www.randgroup.com/insights/microsoft/dynamics-365/business-central/what-modules-are-in-business-central/",
+                "https://erpsoftwareblog.com/2025/10/dynamics-365-business-central-fixed-assets-a-strategic-guide/"
+              ],
+              "notes": "Fixed asset management is bundled within the core Financial Management module of both Essentials ($80/user/month) and Premium editions. No separate cost or module required."
+            },
+            "cmms_maintenance_ops": {
+              "model": "partial",
+              "sku_name": "Dynamics 365 Business Central Premium - Service Management Module",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://www.randgroup.com/insights/microsoft/dynamics-365/business-central/what-is-business-central-service-management/",
+                "https://servicedynamics365.com/service-management-in-business-central/",
+                "https://marketplace.microsoft.com/en-us/product/dynamics-365-business-central/pubid.dynaway%7Caid.dynaway_eam_bc%7Cpappid.410f47b1-8f80-4a06-aaf2-149c773198b8",
+                "https://wrenchtime.io/"
+              ],
+              "notes": "Business Central includes basic Service Management for customer-facing maintenance in Premium edition ($110/user/month), but lacks dedicated internal maintenance/CMMS capabilities. Full CMMS functionality requires third-party add-ons (Dynaway EAM, WrenchTime, Maintenance Manager, TAG EAM) priced separately at $39-$149/user/month."
+            }
+          },
+          "overall_summary": "Business Central offers limited native asset management. EAM register & lifecycle (fixed assets) is bundled in all editions via the Financial Management module. CMMS maintenance operations are partially supported\u2014only customer-facing service management is in Premium edition; internal production/facility maintenance requires separate, paid third-party applications that integrate with Business Central."
+        },
+        "erpnext": {
+          "name": "ERPNext (Frappe Cloud)",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:26:47.405130+08:00",
+          "packaging_per_core": {
+            "eam_register_lifecycle": {
+              "model": "unknown",
+              "sku_name": "unknown",
+              "pricing_unit": "unknown",
+              "sources": [],
+              "notes": "No evidence found for distinct 'eam_register_lifecycle' core as separate SKU in ERPNext/Frappe Cloud documentation."
+            },
+            "cmms_maintenance_ops": {
+              "model": "unknown",
+              "sku_name": "unknown",
+              "pricing_unit": "unknown",
+              "sources": [],
+              "notes": "No evidence found for distinct 'cmms_maintenance_ops' core as separate SKU in ERPNext/Frappe Cloud documentation."
+            }
+          },
+          "overall_summary": "ERPNext asset management functionality could not be confirmed to exist as separately-priced 'cores' named eam_register_lifecycle or cmms_maintenance_ops. Asset management appears bundled as a unified module within ERPNext, included in base Frappe Cloud compute-based pricing (not module-specific SKUs). ERPNext maintains 100% open-source licensing with no per-module feature paywall; all asset functions documented (lifecycle, depreciation, maintenance scheduling) are integral to the single Assets module."
+        },
+        "ibm_maximo": {
+          "name": "IBM Maximo Application Suite",
+          "tier": "enterprise",
+          "researched_at": "2026-05-13T02:27:03.913381+08:00",
+          "packaging_per_core": {
+            "eam_register_lifecycle": {
+              "model": "unknown",
+              "sku_name": "IBM Maximo Application Suite (unified AppPoints model)",
+              "pricing_unit": "AppPoints (per_user_concurrent or per_user_authorized)",
+              "sources": [
+                "https://www.ibm.com/products/maximo",
+                "https://www.ibm.com/docs/en/SSRHPA_cd/pdf/mas_licensing.pdf",
+                "https://maximosecrets.com/ibm-maximo-application-suite-overview/"
+              ],
+              "notes": "MAS uses single unified AppPoints licensing, not module-based SKUs. Asset register & lifecycle management cannot be purchased separately; it is bundled into Maximo Manage as part of the suite."
+            },
+            "cmms_maintenance_ops": {
+              "model": "unknown",
+              "sku_name": "IBM Maximo Application Suite (unified AppPoints model)",
+              "pricing_unit": "AppPoints (per_user_concurrent or per_user_authorized)",
+              "sources": [
+                "https://www.ibm.com/products/maximo",
+                "https://www.ibm.com/docs/en/SSRHPA_cd/pdf/mas_licensing.pdf",
+                "https://maximosecrets.com/ibm-maximo-application-suite-overview/"
+              ],
+              "notes": "CMMS maintenance operations functionality is integrated into Maximo Manage and cannot be licensed separately. All core asset management capabilities are included in one subscription with shared AppPoints consumption."
+            }
+          },
+          "overall_summary": "IBM Maximo Application Suite does not package or license specific asset management 'cores' as separate modules or SKUs. Instead, it operates under a unified AppPoints licensing model where a single entitlement provides access to all capabilities. The requested cores do not map to IBM's product architecture, which uses integrated applications (Maximo Manage, Health, Predict, etc.) rather than separately licensable functional areas. Classification as 'separate,' 'bundled,' or 'partial' cannot be accurately applied to a licensing model that has no separate pricing tiers per functional area."
+        },
+        "upkeep": {
+          "name": "UpKeep CMMS",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:27:19.571311+08:00",
+          "packaging_per_core": {
+            "eam_register_lifecycle": {
+              "model": "bundled",
+              "sku_name": "UpKeep Asset Operations Management Platform (core product)",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://upkeep.com/",
+                "https://upkeep.com/product/eam/",
+                "https://upkeep.com/product/asset-management/"
+              ],
+              "notes": "EAM capabilities including asset register, depreciation tracking, and full lifecycle management are blended into the core Maintenance product with no separate pricing. Asset tracking, warranties, depreciation, and lifecycle data are included across all subscription tiers starting at $20/user/month (Essential plan)."
+            },
+            "cmms_maintenance_ops": {
+              "model": "bundled",
+              "sku_name": "UpKeep Maintenance (core CMMS product)",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://upkeep.com/",
+                "https://upkeep.com/product/cmms-software/",
+                "https://facilio.com/blog/upkeep-cmms-review/"
+              ],
+              "notes": "Work order management, preventive maintenance scheduling, asset tracking, parts/inventory, and mobile access are core features included in all plans. Premium/Professional tiers add features like PM optimization, inventory costing, and advanced analytics, but base CMMS operations ship at Essential tier ($20/user/month)."
+            }
+          },
+          "overall_summary": "UpKeep bundles both EAM and CMMS capabilities into a single platform with unified pricing and shared data foundation. There are no separately-licensed EAM or CMMS 'cores'\u2014instead, the platform offers a tiered subscription model (Essential $20, Premium $55, Professional/Enterprise custom) where higher tiers unlock advanced features within the same integrated product. Separate add-on products (EHS, Fleet, Edge, LMS, Studio) are available as optional extensions but operate on the same platform; however, the two functional cores you specified (asset register/lifecycle and maintenance operations) are not sold as independent modules."
+        },
+        "coupa": {
+          "name": "Coupa Procurement",
+          "tier": "enterprise",
+          "researched_at": "2026-05-13T02:27:33.339623+08:00",
+          "packaging_per_core": {
+            "eam_register_lifecycle": {
+              "model": "absent",
+              "sku_name": "N/A",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.coupa.com/platform/",
+                "https://ziphq.com/blog/what-is-coupa-used-for",
+                "https://upkeep.com/integrations/coupa-upkeep-integration/"
+              ],
+              "notes": "Coupa's platform focuses on spend management (procurement, invoicing, expenses, sourcing, contracts, supply chain planning). No evidence of asset register or lifecycle management module. UpKeep provides CMMS/EAM integration with Coupa for maintenance teams alignment."
+            },
+            "cmms_maintenance_ops": {
+              "model": "absent",
+              "sku_name": "N/A",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.coupa.com/platform/",
+                "https://www.vendr.com/marketplace/coupa",
+                "https://upkeep.com/integrations/coupa-upkeep-integration/"
+              ],
+              "notes": "Coupa does not offer native CMMS functionality. Third-party tools like UpKeep integrate with Coupa to bridge maintenance operations and procurement. Coupa's modular architecture covers Procurement, Sourcing, Contracts, Invoicing, Expenses, Pay, and Supply Chain Design & Planning only."
+            }
+          },
+          "overall_summary": "Coupa Procurement is a business spend management (BSM) platform, not an enterprise resource planning (ERP) system. It lacks both EAM and CMMS cores. The product focuses exclusively on procurement-to-pay workflows, supplier management, and spend visibility. Organizations requiring asset register/lifecycle and maintenance operations must integrate third-party specialized tools (e.g., UpKeep, SAP EAM, ServiceNow) with Coupa rather than sourcing these capabilities from Coupa directly."
+        },
+        "workday_hcm": {
+          "name": "Workday HCM",
+          "tier": "enterprise",
+          "researched_at": "2026-05-13T02:28:02.697848+08:00",
+          "packaging_per_core": {
+            "eam_register_lifecycle": {
+              "model": "partial",
+              "sku_name": "Workday Asset Management (within Financial Management)",
+              "pricing_unit": "unknown",
+              "sources": [
+                "https://www.erpresearch.com/erp/workday/asset-management",
+                "https://www.erpcloudtraining.com/blog/workday-financial-management"
+              ],
+              "notes": "Asset lifecycle tracking (acquisition, depreciation, disposal) is included in Workday Financial Management with basic capabilities. Advanced EAM requirements require third-party integrations or add-ons."
+            },
+            "cmms_maintenance_ops": {
+              "model": "partial",
+              "sku_name": "Workday Asset Management (within Financial Management)",
+              "pricing_unit": "unknown",
+              "sources": [
+                "https://www.erpresearch.com/erp/workday/asset-management",
+                "https://www.suretysystems.com/insights/workday-asset-management-real-time-visibility-into-core-investments/"
+              ],
+              "notes": "Workday includes foundational maintenance work order capabilities (calendar, meter, condition-based triggers, work order management). Full CMMS functionality and predictive maintenance features require advanced add-ons or third-party integrations."
+            }
+          },
+          "overall_summary": "Workday does not market EAM or CMMS as separate modules. Both asset lifecycle and maintenance operations are bundled into Workday Asset Management, which is part of Workday Financial Management. The offering is positioned as basic/foundational with explicit guidance that advanced EAM/CMMS requirements should be met with dedicated third-party solutions (e.g., Maximo, Infor EAM). Specific SKU names, pricing tiers (per user, per month, etc.), and packaging classifications do not follow traditional separate/bundled/partial distinctions\u2014Workday uses suite-level bundling (Foundation Suite, Premium Suite) that packages 6-8 modules together at apparent 20-30% discount. Exact pricing not disclosed in public sources."
+        },
+        "adp": {
+          "name": "ADP Workforce Now",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:28:12.964488+08:00",
+          "packaging_per_core": {
+            "eam_register_lifecycle": {
+              "model": "absent",
+              "sku_name": "Not applicable",
+              "pricing_unit": "Not applicable",
+              "sources": [
+                "https://www.adp.com/what-we-offer/products/adp-workforce-now.aspx",
+                "https://www.outsail.co/post/how-much-does-adp-workforce-now-cost",
+                "https://www.getapp.com/hr-employee-management-software/a/workforcenow/compare/assetworks-ams/"
+              ],
+              "notes": "ADP Workforce Now is an HCM/HRIS platform with no asset management capabilities. Multiple sources confirm it covers payroll, HR, benefits, and talent management only."
+            },
+            "cmms_maintenance_ops": {
+              "model": "absent",
+              "sku_name": "Not applicable",
+              "pricing_unit": "Not applicable",
+              "sources": [
+                "https://www.adp.com/what-we-offer/products/adp-workforce-now.aspx",
+                "https://www.outsail.co/post/how-much-does-adp-workforce-now-cost",
+                "https://www.getapp.com/operations-management-software/maintenance-management/w/workforcenow/"
+              ],
+              "notes": "ADP Workforce Now does not include CMMS or maintenance operations modules. It focuses exclusively on workforce/HR functions."
+            }
+          },
+          "overall_summary": "ADP Workforce Now is an HCM platform, not an ERP with asset management capabilities. Both requested EAM cores (asset register & lifecycle and CMMS maintenance operations) are absent from the product. The platform is designed for mid-market organizations needing integrated payroll, HR, benefits, and talent management\u2014not for managing physical assets or maintenance operations."
+        },
+        "bamboohr": {
+          "name": "BambooHR",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:28:21.797027+08:00",
+          "packaging_per_core": {
+            "eam_register_lifecycle": {
+              "model": "absent",
+              "sku_name": "N/A",
+              "pricing_unit": "N/A",
+              "sources": [],
+              "notes": "BambooHR is HR-focused software (Core HR, Payroll, Recruiting, Performance Mgmt, Time Tracking, Benefits). No EAM/asset lifecycle module found in product documentation."
+            },
+            "cmms_maintenance_ops": {
+              "model": "absent",
+              "sku_name": "N/A",
+              "pricing_unit": "N/A",
+              "sources": [],
+              "notes": "BambooHR does not support CMMS or maintenance operations. It integrates with third-party asset/CMMS tools but does not natively provide this functionality."
+            }
+          },
+          "overall_summary": "BambooHR is exclusively an HR software platform focused on Core HR, payroll, recruiting, performance management, time tracking, and benefits administration. It does not have an asset_management module, and neither EAM (asset register & lifecycle) nor CMMS (maintenance operations) functional areas exist as product offerings. BambooHR integrates with 150+ third-party applications for extended capabilities, but asset management and maintenance operations are outside its product scope."
+        }
+      }
+    },
+    "supply_chain_and_inventory": {
+      "cores": [
+        {
+          "id": "procurement",
+          "name": "Procurement & purchasing"
+        },
+        {
+          "id": "warehouse_inventory",
+          "name": "Warehouse & inventory"
+        }
+      ],
+      "erps": {
+        "sap_business_one": {
+          "name": "SAP Business One",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:28:34.688609+08:00",
+          "packaging_per_core": {
+            "procurement": {
+              "model": "bundled",
+              "sku_name": "SAP Business One - Purchasing A/P Module",
+              "pricing_unit": "per_named_user_monthly (cloud) or per_named_user_one_time (on-premise)",
+              "sources": [
+                "https://consensusintl.com/modules-included-in-sap-business-one",
+                "https://tipalti.com/resources/learn/sap-business-one-erp/",
+                "https://en.wikipedia.org/wiki/SAP_Business_One",
+                "https://www.seidor.com/en-us/solutions/what-sap-business-one-includes"
+              ],
+              "notes": "Purchasing functionality is a core module included in the base SAP Business One product. It is not sold separately; all Professional and Limited Logistics users have access to purchasing features as part of their license."
+            },
+            "warehouse_inventory": {
+              "model": "bundled",
+              "sku_name": "SAP Business One - Inventory Management Module",
+              "pricing_unit": "per_named_user_monthly (cloud) or per_named_user_one_time (on-premise)",
+              "sources": [
+                "https://consensusintl.com/modules-included-in-sap-business-one",
+                "https://tipalti.com/resources/learn/sap-business-one-erp/",
+                "https://en.wikipedia.org/wiki/SAP_Business_One",
+                "https://axxis-consulting.com/inventory-warehouse-management-module/"
+              ],
+              "notes": "Inventory and warehouse management are core modules included in the base SAP Business One product. No separate license or SKU is required; functionality is accessed through user roles and license type (Professional or Limited Logistics)."
+            }
+          },
+          "overall_summary": "<cite index=\"34-1\">SAP Business One includes full or restricted version access to all its core modules, depending on the plan or license.</cite> <cite index=\"31-1\">Financial Management, Sales and CRM, Purchasing and Inventory Control, and Production Planning are some of the modules included in SAP Business One.</cite> Both procurement (Purchasing A/P) and warehouse/inventory functionality are bundled core modules, not sold as separate SKUs. <cite index=\"22-4\">Some business requirements may necessitate extra modules, each of which comes with its pricing structure,</cite> but these two supply chain cores are foundational to the base product. Pricing is per named user (cloud subscriptions at $95-$250/month; on-premise perpetual at $3,500-$5,500 per user), not per module."
+        },
+        "sage_300": {
+          "name": "Sage 300",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:28:47.606417+08:00",
+          "packaging_per_core": {
+            "procurement": {
+              "model": "unknown",
+              "sku_name": "Purchase Orders (PO) Module",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://www.erpresearch.com/pricing/sage-300",
+                "https://www.trustradius.com/products/sage-300/pricing",
+                "https://www.equationtech.us/sage-services/sage-300-cloud"
+              ],
+              "notes": "Sage 300 uses module-based licensing. Purchase Orders can function standalone or integrated with Inventory Control. Precise pricing per module not publicly detailed; pricing aggregated at $75-200/user/month for base subscription with modules."
+            },
+            "warehouse_inventory": {
+              "model": "unknown",
+              "sku_name": "Inventory Control (IC) Module",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://www.erpresearch.com/pricing/sage-300",
+                "https://www.equationtech.us/sage-services/sage-300-cloud",
+                "https://help.sage300.com/en-us/2025/classic/Content/Operations/Inventory/Setup/Setup_TOC.htm"
+              ],
+              "notes": "Inventory Control is a core/strong module in Sage 300. Can be used independently or with Purchase Orders. Warehouse-specific add-ons (Mobile Inventory, SwiftCount) available separately, suggesting base functionality bundled but advanced WMS as add-on."
+            }
+          },
+          "overall_summary": "Sage 300 does not have a unified 'supply_chain_and_inventory' parent module. Instead, Procurement (Purchase Orders) and Warehouse & Inventory (Inventory Control) are separate, optional modules that can be licensed independently. Both are offered under module-based licensing ($1,655 per module base + per-user subscription), but Sage does not publish granular per-module pricing publicly. Procurement and Inventory Control have optional integration. Advanced warehouse management features (WMS, Mobile Inventory) are sold as separate add-ons/third-party products. Classification as 'bundled' vs 'separate' cannot be definitively confirmed from web sources; 'unknown' classification reflects lack of explicit pricing differentiation in public documentation."
+        },
+        "globe3_erp": {
+          "name": "Globe3 ERP",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:29:00.782311+08:00",
+          "packaging_per_core": {
+            "procurement": {
+              "model": "unknown",
+              "sku_name": "Globe3 Purchase Manager (within SCM module)",
+              "pricing_unit": "per_concurrent_user",
+              "sources": [
+                "https://www.globe3.com/erp-modules/supply-chain-management/",
+                "https://www.globe3.com/globe3-erp-faq/"
+              ],
+              "notes": "Globe3 offers 'Purchase Manager' as a named component, described as integrated within the SCM module. No public documentation found confirming separate SKU pricing or bundling strategy. Custom pricing model does not disclose module-level cost breakdown."
+            },
+            "warehouse_inventory": {
+              "model": "unknown",
+              "sku_name": "Globe3 Inventory module / Stock Master Control",
+              "pricing_unit": "per_concurrent_user",
+              "sources": [
+                "https://www.globe3.com/erp-modules/",
+                "https://www.globe3.com/erp-modules/inventory-management-system/"
+              ],
+              "notes": "Inventory and Stock Master Control are listed as named components but web sources do not explicitly state whether available as separate purchase or bundled. Pricing consistently quoted as per concurrent user, with no itemized module costs disclosed."
+            }
+          },
+          "overall_summary": "Globe3 ERP presents procurement and warehouse/inventory functionality as integrated named components within its Supply Chain Management (SCM) and Inventory modules respectively. However, the vendor's public materials do not clearly disclose the packaging model (separate SKU vs. bundled inclusion). The pricing model is uniformly described as 'per concurrent users' with custom quotes based on business requirements\u2014no granular module-level pricing is published online. Further clarification would require direct vendor contact."
+        },
+        "netsuite": {
+          "name": "Oracle NetSuite ERP",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:29:10.311750+08:00",
+          "packaging_per_core": {
+            "procurement": {
+              "model": "separate",
+              "sku_name": "NetSuite Procurement (Advanced Procurement module)",
+              "pricing_unit": "flat_year_per_module",
+              "sources": [
+                "https://www.netsuite.com/portal/products/erp/procurement/purchase.shtml",
+                "https://nuagecg.com/blog/netsuite-advanced-procurement-complete-guide/",
+                "https://www.brokenrubik.com/blog/netsuite-modules-list-in-features-pricing"
+              ],
+              "notes": "Procurement is a separate add-on module licensed independently from the core platform. Basic purchase request capabilities are included in core, but Advanced Procurement (requisitions, contracts, blanket POs) is purchased separately at estimated $499-$899/month."
+            },
+            "warehouse_inventory": {
+              "model": "partial",
+              "sku_name": "NetSuite Warehouse Management System (WMS) + Advanced Inventory Management",
+              "pricing_unit": "flat_year_per_module",
+              "sources": [
+                "https://www.netsuite.com/portal/products/erp/warehouse-fulfillment/inventory-management.shtml",
+                "https://www.brokenrubik.com/blog/netsuite-inventory-management-guide",
+                "https://www.netsuite.com/portal/products/erp/warehouse-fulfillment/wms.shtml"
+              ],
+              "notes": "Basic inventory management is included in the core platform license. Full warehouse and inventory functionality requires purchasing Advanced Inventory (~$500/month) and WMS (~$1,000-2,000/month) as separate add-on modules."
+            }
+          },
+          "overall_summary": "Oracle NetSuite ERP uses a modular licensing model where core platform includes basic inventory and purchasing, but advanced supply chain functionality is sold as separate add-on modules. Both procurement and warehouse/inventory capabilities follow a 'partial' to 'separate' model: basic features are bundled, but strategic functionality requires additional per-module licensing."
+        },
+        "odoo": {
+          "name": "Odoo Online (Standard)",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:29:22.397030+08:00",
+          "packaging_per_core": {
+            "procurement": {
+              "model": "bundled",
+              "sku_name": "Odoo Purchase (included in Odoo Online Standard plan)",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://www.odoo.com/pricing",
+                "https://www.vendr.com/marketplace/odoo",
+                "https://www.swell.is/content/odoo-pricing",
+                "https://thecfoclub.com/tools/odoo-pricing/"
+              ],
+              "notes": "The Purchase module (procurement & purchasing) is included in all Odoo Online Standard plan subscriptions at no separate cost. All modules are bundled at the single per-user price (~$24.90/user/month in US region)."
+            },
+            "warehouse_inventory": {
+              "model": "bundled",
+              "sku_name": "Odoo Inventory (included in Odoo Online Standard plan)",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://www.odoo.com/pricing",
+                "https://www.vendr.com/marketplace/odoo",
+                "https://www.swell.is/content/odoo-pricing",
+                "https://thecfoclub.com/tools/odoo-pricing/"
+              ],
+              "notes": "The Inventory module (warehouse & inventory) is included in all Odoo Online Standard plan subscriptions at no separate cost. Both cores are part of the single bundled pricing model."
+            }
+          },
+          "overall_summary": "<cite index=\"31-1,31-2,31-3\">All Odoo Online Standard plans provide access to hundreds of Odoo apps and modules for a single price on scalable cloud infrastructure, including hosting, incremental daily backups, email integration, top-notch security, 24/7 monitoring, and a control center to manage the Odoo environment.</cite> <cite index=\"37-2\">On the Standard plan, all modules are included in the per-user price; the cost impact is the added configuration and training time, not additional module fees.</cite> Neither procurement nor warehouse/inventory is sold separately or as a partial add-on\u2014both are fully bundled components of the Standard plan at approximately <cite index=\"33-1\">$31.10 per user/month when billed annually, or around $38.90 per user/month if choosing monthly billing.</cite>"
+        },
+        "ms_dynamics_bc": {
+          "name": "Microsoft Dynamics 365 Business Central",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:29:36.398522+08:00",
+          "packaging_per_core": {
+            "procurement": {
+              "model": "bundled",
+              "sku_name": "Dynamics 365 Business Central (Essentials or Premium)",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/deployment/licensing",
+                "https://www.randgroup.com/insights/microsoft/dynamics-365/business-central/what-modules-are-in-business-central/",
+                "https://www.congruentsoft.com/blog/business-central/dynamics-365-business-central-modules.aspx",
+                "https://erpsoftwareblog.com/2026/02/microsoft-business-central-purchasing-capabilities/"
+              ],
+              "notes": "<cite index=\"5-1\">Procurement is included as a core functional area in the Essentials license</cite>, with no separate SKU or add-on fee. Both Essentials ($80/user/month) and Premium ($110/user/month) include purchasing functionality."
+            },
+            "warehouse_inventory": {
+              "model": "bundled",
+              "sku_name": "Dynamics 365 Business Central (Essentials or Premium)",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://www.randgroup.com/insights/microsoft/dynamics-365/business-central/what-modules-are-in-business-central/",
+                "https://www.congruentsoft.com/blog/business-central/dynamics-365-business-central-warehouse-management.aspx",
+                "https://www.congruentsoft.com/blog/business-central/dynamics-365-business-central-modules.aspx"
+              ],
+              "notes": "<cite index=\"46-16,46-17\">Warehouse Management is included in Business Central Essentials license at $80/user/month, and all Essentials modules are carried forward into Premium at $110/user/month</cite>. No separate module pricing exists for warehouse or inventory functions."
+            }
+          },
+          "overall_summary": "<cite index=\"48-24,48-25,48-26\">Business Central is available in two editions, Essentials and Premium; both editions have core ERP capabilities like finance, sales, purchasing, inventory, and project management, while Premium adds advanced modules for manufacturing and service order management</cite>. Both procurement (purchasing) and warehouse/inventory management are standard components bundled into the base Essentials and Premium license tiers with no separate SKUs, add-ons, or incremental pricing. Pricing is strictly per-user-per-month subscription model."
+        },
+        "erpnext": {
+          "name": "ERPNext (Frappe Cloud)",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:29:47.596950+08:00",
+          "packaging_per_core": {
+            "procurement": {
+              "model": "bundled",
+              "sku_name": "Buying/Procurement Module (part of ERPNext core)",
+              "pricing_unit": "included_in_hosting_subscription",
+              "sources": [
+                "https://www.g2.com/products/erpnext/pricing",
+                "https://docs.frappe.io/erpnext/user/manual/en/buying",
+                "https://frappe.io/erpnext/open-source-procurement"
+              ],
+              "notes": "Procurement/Buying module is a core module included in all ERPNext Frappe Cloud plans at no additional charge. ERPNext is 100% open-source (GPL-3.0) with no feature paywalls or module-level licensing."
+            },
+            "warehouse_inventory": {
+              "model": "bundled",
+              "sku_name": "Stock/Inventory & Warehouse Module (part of ERPNext core)",
+              "pricing_unit": "included_in_hosting_subscription",
+              "sources": [
+                "https://www.g2.com/products/erpnext/pricing",
+                "https://docs.frappe.io/erpnext/user/manual/en/stock",
+                "https://frappe.io/erpnext/domains/inventory-management-system"
+              ],
+              "notes": "Inventory and Warehouse management are core modules included in all ERPNext plans with no additional charge. All modules\u2014accounting, inventory, manufacturing, HR, CRM, projects\u2014are included at no cost per ERPNext open-source licensing model."
+            }
+          },
+          "overall_summary": "Both procurement and warehouse/inventory cores are bundled as included features in ERPNext's base offering. ERPNext pricing is based purely on Frappe Cloud hosting costs (starting at $5-25/month), not on module or per-user licensing. No modules are sold separately, and all functionality is available in the open-source version. This is fundamentally different from proprietary ERPs that charge per-module or per-user fees."
+        },
+        "ibm_maximo": {
+          "name": "IBM Maximo Application Suite",
+          "tier": "enterprise",
+          "researched_at": "2026-05-13T02:30:00.151450+08:00",
+          "packaging_per_core": {
+            "procurement": {
+              "model": "bundled",
+              "sku_name": "IBM Maximo Application Suite (Manage - Purchasing Module)",
+              "pricing_unit": "AppPoints_based_on_user_tier",
+              "sources": [
+                "https://www.ibm.com/docs/en/SSRHPA_cd/pdf/mas_licensing.pdf",
+                "https://www.ibm.com/products/maximo/pricing"
+              ],
+              "notes": "Procurement is included in core Maximo Manage; licensing is AppPoints-based tied to user tier (Limited/Base/Premium), not module-specific. No separate SKU available."
+            },
+            "warehouse_inventory": {
+              "model": "bundled",
+              "sku_name": "IBM Maximo Application Suite (Manage - Inventory Module)",
+              "pricing_unit": "AppPoints_based_on_user_tier",
+              "sources": [
+                "https://www.ibm.com/docs/en/mas-cd/maximo-manage/continuous-delivery?topic=manage-inventory-module",
+                "https://www.ibm.com/products/maximo/pricing"
+              ],
+              "notes": "Inventory is included in core Maximo Manage; licensing is AppPoints-based tied to user tier (Limited/Base/Premium), not module-specific. Advanced inventory optimization available as separate 'Maximo Inventory Optimization' add-on."
+            }
+          },
+          "overall_summary": "IBM Maximo Application Suite does not package Procurement and Warehouse/Inventory as separate supply chain module cores. Both are integrated into Maximo Manage and licensed under a unified AppPoints model based on user tier and application access, not module-specific SKUs. MRO Inventory Optimization is available as a separate cloud-based add-on for advanced optimization."
+        },
+        "upkeep": {
+          "name": "UpKeep CMMS",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:30:19.181723+08:00",
+          "packaging_per_core": {
+            "procurement": {
+              "model": "partial",
+              "sku_name": "UpKeep Maintenance (Purchase Order Management - Enterprise Plan only)",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://facilio.com/blog/upkeep-cmms-review/",
+                "https://www.softwareadvice.com/cmms/upkeep-profile/",
+                "https://www.capterra.com/p/145635/UpKeep/pricing/"
+              ],
+              "notes": "Basic inventory tracking available in all tiers; purchase order management is restricted to Enterprise plan only. Mid-market teams cannot handle full procurement workflow in lower-tier plans."
+            },
+            "warehouse_inventory": {
+              "model": "partial",
+              "sku_name": "UpKeep Maintenance (Inventory Management - Premium and above)",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://facilio.com/blog/upkeep-cmms-review/",
+                "https://help.onupkeep.com/en/articles/6782499-what-features-are-included-in-the-enterprise-plan",
+                "https://www.softwareadvice.com/cmms/upkeep-profile/"
+              ],
+              "notes": "Basic barcode scanning and location-based stock management available in Lite and Starter plans. Inventory costing and full inventory management features locked behind Premium tier ($55/user/month or higher)."
+            }
+          },
+          "overall_summary": "UpKeep is a CMMS, not an ERP, so it does not have supply chain and inventory modules structured as distinct SKUs. Both procurement (PO management) and warehouse inventory are bundled within the core maintenance product but gated behind higher pricing tiers (Premium for inventory costing; Enterprise for full PO functionality). This represents a 'partial' model where essential capabilities are fragmented across tier levels rather than sold as separate add-ons."
+        },
+        "coupa": {
+          "name": "Coupa Procurement",
+          "tier": "enterprise",
+          "researched_at": "2026-05-13T02:30:30.434195+08:00",
+          "packaging_per_core": {
+            "procurement": {
+              "model": "unknown",
+              "sku_name": "Coupa Procurement / Coupa Buy",
+              "pricing_unit": "unknown - appears to be per_user + per_transaction",
+              "sources": [
+                "https://www.vendr.com/marketplace/coupa"
+              ],
+              "notes": "Module exists but exact licensing model (separate vs bundled) cannot be confirmed from public sources. Pricing is custom-quoted."
+            },
+            "warehouse_inventory": {
+              "model": "unknown",
+              "sku_name": "Coupa Inventory Management",
+              "pricing_unit": "unknown",
+              "sources": [
+                "https://www.coupa.com/products/procure-to-pay/inventory-management/"
+              ],
+              "notes": "Inventory features are integrated into procurement workflows, but whether sold separately is not publicly documented."
+            }
+          },
+          "overall_summary": "Coupa does not publish detailed packaging or licensing information. Both procurement and inventory appear to be modular capabilities within a configurable platform, but the exact SKUs, pricing units, and bundling arrangements require direct contact with Coupa sales."
+        },
+        "workday_hcm": {
+          "name": "Workday HCM",
+          "tier": "enterprise",
+          "researched_at": "2026-05-13T02:30:45.556743+08:00",
+          "packaging_per_core": {
+            "procurement": {
+              "model": "separate",
+              "sku_name": "Workday Procurement",
+              "pricing_unit": "per_user_month (PWPM)",
+              "sources": [
+                "https://www.workday.com/content/dam/web/en-us/documents/datasheets/datasheet-workday-procurement.pdf",
+                "https://redresscompliance.com/workday-hcm-module-licensing.html",
+                "https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/700649/332738008670764-pricing-document-2024-05-07-0719.pdf"
+              ],
+              "notes": "Workday Procurement is a distinct product (not bundled with HCM) sold as part of the Spend Management suite. Pricing is separate per-worker-per-month basis, similar to HCM modules. Not included in Core HCM."
+            },
+            "warehouse_inventory": {
+              "model": "separate",
+              "sku_name": "Workday Inventory",
+              "pricing_unit": "per_user_month (PWPM)",
+              "sources": [
+                "https://www.workday.com/en-us/products/spend-management/inventory.html",
+                "https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/700649/332738008670764-pricing-document-2024-05-07-0719.pdf",
+                "https://www.erpresearch.com/erp/workday/inventory-management"
+              ],
+              "notes": "Workday Inventory is offered as a separate, distinct module within Spend Management suite. Focused on internal materials management; designed primarily for goods/supplies used internally rather than full warehouse management systems for manufacturers. Quoted separately from HCM."
+            }
+          },
+          "overall_summary": "Workday HCM does not package Procurement or Inventory as bundled components. Both are separate SKUs within Workday's Spend Management product suite, each with independent per-worker-per-month (PWPM) pricing. Workday Inventory is limited to internal supply chain management (basic capability) and may require third-party integrations for advanced warehouse/manufacturing supply chain needs. Workday is categorized as an enterprise management platform focused on HR and finance, not a traditional ERP with comprehensive supply chain capabilities."
+        },
+        "adp": {
+          "name": "ADP Workforce Now",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:30:57.137402+08:00",
+          "packaging_per_core": {
+            "procurement": {
+              "model": "absent",
+              "sku_name": "N/A - Not offered in ADP Workforce Now",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.adp.com/what-we-offer/products/adp-workforce-now.aspx",
+                "https://www.softwareadvice.com/hr/adp-workforce-now-profile/",
+                "https://www.capterra.com/p/155895/WorkforceNow/",
+                "https://www.rockcrest.com/post/a-comprehensive-review-of-adp-workforce-now-features-benefits-pros-and-cons"
+              ],
+              "notes": "ADP Workforce Now is exclusively an HCM platform. All documented modules focus on HR, payroll, benefits, time tracking, talent acquisition, and performance management. No procurement or purchasing functionality is present in any product tier or add-on."
+            },
+            "warehouse_inventory": {
+              "model": "absent",
+              "sku_name": "N/A - Not offered in ADP Workforce Now",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.adp.com/what-we-offer/products/adp-workforce-now.aspx",
+                "https://www.softwareadvice.com/hr/adp-workforce-now-profile/",
+                "https://www.capterra.com/p/155895/WorkforceNow/",
+                "https://peoplemanagingpeople.com/tools/adp-workforce-now-pricing/"
+              ],
+              "notes": "No warehouse, inventory, or supply chain management capabilities are documented for ADP Workforce Now. The platform is purpose-built for human capital management only."
+            }
+          },
+          "overall_summary": "ADP Workforce Now does not support supply chain and inventory functional areas. The product is a dedicated HCM (Human Capital Management) platform serving mid-market businesses (50-999 employees) with modules for payroll, HR management, benefits administration, time tracking, talent acquisition, performance management, and compensation management. Supply chain, procurement, and warehouse inventory management are entirely outside the product's scope. Organizations requiring these capabilities must integrate separate ERP or supply chain management systems."
+        },
+        "bamboohr": {
+          "name": "BambooHR",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:31:06.025081+08:00",
+          "packaging_per_core": {
+            "procurement": {
+              "model": "absent",
+              "sku_name": "N/A",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.bamboohr.com/",
+                "https://www.bamboohr.com/integrations/listing-category/erp-accounting",
+                "https://technologyadvice.com/products/bamboohr-reviews/"
+              ],
+              "notes": "BambooHR is an HR/HCM platform with no procurement, purchasing, or supply chain management functionality. It does not offer this core."
+            },
+            "warehouse_inventory": {
+              "model": "absent",
+              "sku_name": "N/A",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.bamboohr.com/",
+                "https://sourceforge.net/software/inventory-management/integrates-with-bamboohr/",
+                "https://technologyadvice.com/products/bamboohr-reviews/"
+              ],
+              "notes": "BambooHR offers no warehouse or inventory management. Only third-party integrations exist (e.g., Odoo, SynergySuite) through external platforms."
+            }
+          },
+          "overall_summary": "BambooHR is an HCM platform focused on HR, payroll, benefits, onboarding, and performance management. It does not include supply chain, inventory, procurement, or warehouse management modules. Both requested cores are absent from this product."
+        }
+      }
+    },
+    "human_resources_management": {
+      "cores": [
+        {
+          "id": "core_hr_payroll",
+          "name": "Core HR & payroll"
+        },
+        {
+          "id": "talent_learning",
+          "name": "Talent & learning"
+        }
+      ],
+      "erps": {
+        "sap_business_one": {
+          "name": "SAP Business One",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:31:19.432844+08:00",
+          "packaging_per_core": {
+            "core_hr_payroll": {
+              "model": "absent",
+              "sku_name": "N/A - Not included in SAP Business One core",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.cogniscient.in/hr-payroll-add-on-compatible-with-sap-business-one/",
+                "https://community.sap.com/t5/enterprise-resource-planning-q-a/sap-business-one-payroll-module/qaq-p/7191015",
+                "https://sap-b1-blog.com/en/sap-business-one/sap-business-one-personal/",
+                "https://www.erpresearch.com/erp/sap-business-one/hr-payroll"
+              ],
+              "notes": "SAP Business One includes only basic employee master data; no integrated payroll module. <cite index=\"2-1\">SAP B1 doesn't pack an HR and Payroll module of its own</cite>, requiring third-party add-ons or integrations. <cite index=\"4-20,4-21\">Payroll is not there. It comes as an Addon and which needs to be purchased from partners.</cite>"
+            },
+            "talent_learning": {
+              "model": "absent",
+              "sku_name": "N/A - Not included in SAP Business One core",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://sap-b1-blog.com/en/sap-business-one/sap-business-one-personal/",
+                "https://www.erpresearch.com/erp/sap-business-one/hr-payroll",
+                "https://www.seidor.com/en-sa/blog/guide-modules-sap-business-one"
+              ],
+              "notes": "<cite index=\"16-3\">SAP Business One has functionalities that allow effective training and monitoring of the competencies of each employee</cite> at basic level, but no dedicated learning management, talent management, or L&D module. Talent and learning functions are not supported as native features or modules in SAP Business One."
+            }
+          },
+          "overall_summary": "SAP Business One lacks native support for both Core HR & Payroll and Talent & Learning cores. <cite index=\"27-1,27-2\">SAP Business One Human Resources provides support for personnel management in a way that is suitable for SMEs. There are some useful tools for personnel administration in small and medium-sized companies, but no complete payroll accounting.</cite> <cite index=\"30-5,30-6\">SAP Business One offers foundational HR & Payroll capabilities suitable for basic needs. Advanced hr & payroll requirements may need add-ons or third-party integrations.</cite> Organizations must procure separate add-on modules from SAP partners or integrate third-party HCM/payroll/L&D solutions to address these functional areas."
+        },
+        "sage_300": {
+          "name": "Sage 300",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:31:34.716226+08:00",
+          "packaging_per_core": {
+            "core_hr_payroll": {
+              "model": "bundled",
+              "sku_name": "Sage 300 People HR & Payroll",
+              "pricing_unit": "per_user_month (variable based on modules selected)",
+              "sources": [
+                "https://www.sage.com/en-us/sage-business-cloud/hr/pricing/",
+                "https://tydeco.com/software/sage-300-people/",
+                "https://www.netatwork.com/sage-erp-accounting-software-solutions/sage-300-erp/human-resources-management-payroll/"
+              ],
+              "notes": "Payroll is provided as part of core Sage 300 People module. Flexible modular pricing structure but no standalone payroll SKU identified."
+            },
+            "talent_learning": {
+              "model": "unknown",
+              "sku_name": "Sage 300 People Learning & Skills Development (inferred)",
+              "pricing_unit": "unknown",
+              "sources": [
+                "https://www.sysfinpro.com/index.php/kb20220909-01-sage-300-people-learning-skills-development-module/",
+                "https://tydeco.com/software/sage-300-people/"
+              ],
+              "notes": "Learning/talent functionality referenced as built-in module but unclear whether bundled or sold separately. No explicit pricing or SKU documentation found in web sources."
+            }
+          },
+          "overall_summary": "Sage 300 People uses a modular architecture where customers select modules based on needs. Core HR & Payroll appears bundled, but talent/learning packaging model cannot be definitively confirmed from available web sources. Detailed SKU and pricing information for individual functional cores is not publicly documented."
+        },
+        "globe3_erp": {
+          "name": "Globe3 ERP",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:31:47.270331+08:00",
+          "packaging_per_core": {},
+          "overall_summary": "Insufficient data available from web sources to classify packaging model. Globe3 marketing materials describe an integrated HRM module that includes payroll and training, but do not specify separate SKUs, licensing units, or separate add-on availability for core_hr_payroll or talent_learning. Direct vendor contact required."
+        },
+        "netsuite": {
+          "name": "Oracle NetSuite ERP",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:32:03.348856+08:00",
+          "packaging_per_core": {
+            "core_hr_payroll": {
+              "model": "separate",
+              "sku_name": "NetSuite SuitePeople (HR & Payroll bundle)",
+              "pricing_unit": "per_user_month",
+              "sources": [
+                "https://www.netsuite.com/portal/products/hcm.shtml",
+                "https://www.kimberlitepartners.com/blog/netsuite-pricing",
+                "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/chapter_1495573671.html"
+              ],
+              "notes": "SuitePeople is a distinct add-on module separate from the base NetSuite platform. Pricing ranges $5-$20 per employee per month. Core payroll (U.S.) and HR functionality are bundled together as one module."
+            },
+            "talent_learning": {
+              "model": "absent",
+              "sku_name": "Not offered natively",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://elearning.folio3.com/blog/lms-integration-with-netsuite/",
+                "https://sourceforge.net/software/learning-management-systems-lms/integrates-with-netsuite/",
+                "https://slashdot.org/software/learning-management-systems-lms/for-netsuite/"
+              ],
+              "notes": "NetSuite does not offer native talent management or learning management system (LMS) capabilities. Third-party LMS platforms (e.g., THRIVE, Cognita, Paradiso) can be integrated via APIs; talent management features must be sourced separately or through integrations."
+            }
+          },
+          "overall_summary": "Oracle NetSuite ERP packages Core HR & Payroll (SuitePeople) as a separate, licensable add-on module priced per user per month ($5-$20/emp/mo). Talent & Learning functionalities are entirely absent from NetSuite's native offering and must be procured through third-party integrations or external HR/talent platforms."
+        },
+        "odoo": {
+          "name": "Odoo Online (Standard)",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:32:16.158258+08:00",
+          "packaging_per_core": {
+            "core_hr_payroll": {
+              "model": "unknown",
+              "sku_name": "unknown",
+              "pricing_unit": "unknown",
+              "sources": [],
+              "notes": "Web sources do not confirm existence of 'core_hr_payroll' as a distinct packaged core for Odoo Online (Standard). Odoo's HR and Payroll functionality exists but is bundled into the Standard plan as all-inclusive modules at a per-user-month rate ($24.90/user/month USD). Cannot confirm if this corresponds to internal 'core_hr_payroll' designation."
+            },
+            "talent_learning": {
+              "model": "unknown",
+              "sku_name": "unknown",
+              "pricing_unit": "unknown",
+              "sources": [],
+              "notes": "Web sources do not confirm existence of 'talent_learning' as a packaged core. Odoo offers eLearning as a free module (with unlimited users for companies 250+). Cannot confirm if this corresponds to internal 'talent_learning' core designation or if learning-related HR features are bundled elsewhere."
+            }
+          },
+          "overall_summary": "The specific 'core' identifiers (core_hr_payroll, talent_learning) could not be verified in public Odoo documentation. Odoo Online (Standard) uses an all-inclusive model where all 70+ apps/modules are included at a flat per-user-month fee ($24.90 USD). HR & Payroll and eLearning features exist in Odoo but cannot be definitively mapped to the requested core identifiers without access to internal Odoo product taxonomy or technical documentation."
+        },
+        "ms_dynamics_bc": {
+          "name": "Microsoft Dynamics 365 Business Central",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:32:30.059928+08:00",
+          "packaging_per_core": {
+            "core_hr_payroll": {
+              "model": "partial",
+              "sku_name": "Dynamics 365 Business Central (Essentials or Premium) + Third-Party HR/Payroll Add-ons",
+              "pricing_unit": "per_user_month + separate add-on pricing",
+              "sources": [
+                "https://www.integrity-data.com/software/microsoft-dynamics-365-payroll-application/",
+                "https://gem365.ca/payroll-hr-extensions-dynamics-365-business-central-2025/",
+                "https://www.velosio.com/blog/integrated-payroll-for-microsoft-dynamics-365-business-central/",
+                "https://www.dynamicssquare.com/payroll-for-business-central-nav/"
+              ],
+              "notes": "Business Central includes basic HR functionality (employee records, absence tracking, qualifications) but lacks payroll capabilities. Full payroll requires third-party add-ons (Integrity Data HRP at ~$400/month base + $6/employee over 50; NaviPayroll; DynaPay; others) from AppSource marketplace."
+            },
+            "talent_learning": {
+              "model": "absent",
+              "sku_name": "Not available in Business Central",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.dynamicsedge.com/dynamics-365-business-central-developer-training/",
+                "https://companial.com/learning-journeys/",
+                "https://learn.microsoft.com/en-us/training/dynamics365/business-central"
+              ],
+              "notes": "Talent & learning management is not a native feature of Business Central. Microsoft offers separate Dynamics 365 applications (e.g., Talent, Learning) or third-party HR platforms for this functionality. Business Central focuses on core HR administration and finance/operations."
+            }
+          },
+          "overall_summary": "Microsoft Dynamics 365 Business Central includes basic human resources administration as a bundled feature within Essentials and Premium license tiers, covering employee data management, absence tracking, and qualifications. However, comprehensive payroll functionality is absent from the core product and requires separate third-party add-on purchases (typically $400+ monthly with per-employee fees). Talent development and learning management capabilities are entirely absent from Business Central and are not offered as add-ons, requiring customers to pursue separate Dynamics 365 applications or external solutions. The HR module is positioned for small-to-mid-market companies with modest HR complexity."
+        },
+        "erpnext": {
+          "name": "ERPNext (Frappe Cloud)",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:32:43.419674+08:00",
+          "packaging_per_core": {
+            "core_hr_payroll": {
+              "model": "bundled",
+              "sku_name": "ERPNext HR & Payroll Module",
+              "pricing_unit": "compute_based_hosting (not per_module)",
+              "sources": [
+                "https://frappe.io/erpnext/pricing",
+                "https://www.erpresearch.com/erp/erpnext/hr-payroll",
+                "https://sanskartechnolab.com/erpnext-implementation-cost"
+              ],
+              "notes": "Included in standard ERPNext deployment at no additional cost. HR & Payroll is a core capability. Pricing is based on Frappe Cloud hosting (starting ~$5/month for shared, ~$25/month for private benches), not per-module fees."
+            },
+            "talent_learning": {
+              "model": "bundled",
+              "sku_name": "ERPNext Training Program & Talent Acquisition (HR module subset)",
+              "pricing_unit": "compute_based_hosting (not per_module)",
+              "sources": [
+                "https://frappe.io/erpnext/pricing",
+                "https://docs.erpnext.com/docs/v13/user/manual/en/human-resources/training-program",
+                "https://erpnext.involvetechnologies.com/hrms-payroll-module-erpnext"
+              ],
+              "notes": "Training Program and Talent Acquisition features are included in the core HR module at no separate cost. No dedicated 'Learning' module exists; training is part of standard HR. Pricing remains compute-based, not module-specific."
+            }
+          },
+          "overall_summary": "ERPNext does not use traditional per-module licensing or SKU-based packaging. All core modules including HR & Payroll and talent/training functions are included in the free, open-source software. Costs are based on Frappe Cloud hosting (compute resources), implementation services, and optional support\u2014not on module selection. The traditional 'separate/bundled/partial/absent' framework does not apply to ERPNext's open-source, all-inclusive architecture."
+        },
+        "ibm_maximo": {
+          "name": "IBM Maximo Application Suite",
+          "tier": "enterprise",
+          "researched_at": "2026-05-13T02:32:53.494133+08:00",
+          "packaging_per_core": {
+            "core_hr_payroll": {
+              "model": "absent",
+              "sku_name": "N/A",
+              "pricing_unit": "N/A",
+              "sources": [],
+              "notes": "IBM Maximo Application Suite is an EAM (Enterprise Asset Management) platform with no HR/payroll modules. It can integrate with external HR systems for labor data lookup only."
+            },
+            "talent_learning": {
+              "model": "absent",
+              "sku_name": "N/A",
+              "pricing_unit": "N/A",
+              "sources": [],
+              "notes": "IBM Maximo Application Suite does not include talent management, learning, or training modules. The product scope is limited to asset and facilities management."
+            }
+          },
+          "overall_summary": "IBM Maximo Application Suite is an enterprise asset management (EAM) solution and does not support human resources management, payroll, or talent & learning functions. The two requested cores are absent from this ERP product. Organizations requiring these capabilities must integrate Maximo with dedicated HCM/HR systems."
+        },
+        "upkeep": {
+          "name": "UpKeep CMMS",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:33:03.059533+08:00",
+          "packaging_per_core": {
+            "core_hr_payroll": {
+              "model": "absent",
+              "sku_name": "N/A",
+              "pricing_unit": "N/A",
+              "sources": [],
+              "notes": "UpKeep is a CMMS platform without HR payroll functionality. No evidence of payroll module in any tier."
+            },
+            "talent_learning": {
+              "model": "separate",
+              "sku_name": "UpKeep Learn (LMS)",
+              "pricing_unit": "unknown",
+              "sources": [
+                "https://upkeep.com/",
+                "https://coastapp.com/blog/upkeep-review/"
+              ],
+              "notes": "UpKeep Learn is a separate learning/LMS product available as a distinct add-on for frontline technician training, not a traditional talent management or HRM module. Pricing model for this component was not disclosed in available sources."
+            }
+          },
+          "overall_summary": "UpKeep is a CMMS and Asset Operations Management platform, not an ERP. It does not contain a human_resources_management module. Core HR & Payroll functionality is absent. Talent & learning functionality exists only as a separate, narrowly-scoped LMS product (UpKeep Learn) focused on frontline technician training and compliance, not broader talent management."
+        },
+        "coupa": {
+          "name": "Coupa Procurement",
+          "tier": "enterprise",
+          "researched_at": "2026-05-13T02:33:16.245341+08:00",
+          "packaging_per_core": {
+            "core_hr_payroll": {
+              "model": "absent",
+              "sku_name": "N/A",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.vendr.com/marketplace/coupa",
+                "https://www.coupa.com/products/procure-to-pay/services-procurement/"
+              ],
+              "notes": "Coupa is a spend management platform focused on procurement, invoicing, and expenses. No dedicated HR or payroll module identified in product documentation or pricing materials."
+            },
+            "talent_learning": {
+              "model": "absent",
+              "sku_name": "N/A",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.coupa.com/products/contingent-workforce-management",
+                "https://www.vendr.com/marketplace/coupa"
+              ],
+              "notes": "Coupa offers contingent workforce management and services procurement, but no dedicated talent management or learning development module as a distinct product offering."
+            }
+          },
+          "overall_summary": "Coupa Procurement is exclusively a business spend management platform. Neither core_hr_payroll nor talent_learning modules are offered. Coupa integrates with external HR systems but does not provide native HR, payroll, or talent management functionality. The product focuses on procure-to-pay processes, sourcing, contracts, invoicing, and expense management."
+        },
+        "workday_hcm": {
+          "name": "Workday HCM",
+          "tier": "enterprise",
+          "researched_at": "2026-05-13T02:33:31.679805+08:00",
+          "packaging_per_core": {
+            "core_hr_payroll": {
+              "model": "separate",
+              "sku_name": "Workday Core HCM + Workday Payroll (US/Global)",
+              "pricing_unit": "per_employee_per_month (PEPM) or per_worker_per_month (PWPM)",
+              "sources": [
+                "https://redresscompliance.com/workday-hcm-module-licensing.html",
+                "https://www.vendr.com/marketplace/workday",
+                "https://workdaynegotiations.com/workday-pricing-benchmarks-and-market-rates-for-enterprises/"
+              ],
+              "notes": "Core HR ($10-16 PWPM) and Payroll ($10-14 PWPM for US, $5-9 PWPM per country for Global) are priced as distinct add-ons. Payroll is not included in base Core HCM and requires separate line-item licensing. Organizations frequently bundle them together in deals but they carry independent PWPM costs."
+            },
+            "talent_learning": {
+              "model": "separate",
+              "sku_name": "Workday Talent Management + Workday Learning (with optional Cloud Connect connectors)",
+              "pricing_unit": "per_employee_per_month (PEPM) or per_worker_per_month (PWPM); Learning sometimes priced per-user-per-month",
+              "sources": [
+                "https://redresscompliance.com/workday-learning-licensing-guide.html",
+                "https://redresscompliance.com/workday-hcm-module-licensing.html",
+                "https://www.workday.com/en-us/products/talent-management/learning.html"
+              ],
+              "notes": "Talent Management ($4-8 PWPM) and Learning ($3-6 PWPM base, $8-15 per user/month enterprise rates) are separately licensed modules. Learning incurs additional costs for content connectors (LinkedIn Learning, Coursera CCLRN SKU) not bundled in base fee. Extended Enterprise Learning requires separate pricing tier. Both are optional add-ons to Core HCM with independent pricing."
+            }
+          },
+          "overall_summary": "Workday HCM packages both evaluated cores as separate, \u00e0 la carte modules. Core HR and Payroll are distinct SKUs with independent per-worker-per-month costs (typically $10-16 and $10-14 respectively for US Payroll). Talent Management and Learning are also separately priced add-ons ($4-8 and $3-6 PWPM respectively, with Learning connectors charged separately). No core or functional area is included at no cost in the parent HCM bundle. Workday deliberately obscures published SKU pricing and requires custom quotes; all pricing units scale by employee count with multi-year discounts. Customers cannot purchase any of these cores as true bundled inclusions\u2014each requires explicit line-item negotiation."
+        },
+        "adp": {
+          "name": "ADP Workforce Now",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:33:47.096325+08:00",
+          "packaging_per_core": {
+            "core_hr_payroll": {
+              "model": "bundled",
+              "sku_name": "ADP Workforce Now (Select, Plus, or Premium plan)",
+              "pricing_unit": "per_employee_month",
+              "sources": [
+                "https://www.outsail.co/post/how-much-does-adp-workforce-now-cost",
+                "https://peoplemanagingpeople.com/tools/adp-workforce-now-pricing/",
+                "https://www.adp.com/what-we-offer/products/adp-workforce-now.aspx"
+              ],
+              "notes": "Payroll & Tax is core to the base Select plan and included in all tiered packages. It is not sold separately; the entire platform is priced per employee per month ($23-30 PEPM for base software access)."
+            },
+            "talent_learning": {
+              "model": "partial",
+              "sku_name": "ADP Workforce Now Essential Learning (base) + Premium Learning Content (add-on)",
+              "pricing_unit": "per_employee_month_with_add_on_fees",
+              "sources": [
+                "https://apps.adp.com/en-US/apps/407295/adp-workforce-now-essential-learning",
+                "https://apps.adp.com/en-US/apps/407287/adp-workforce-now-essential-learning-premium-learning-content",
+                "https://peoplemanagingpeople.com/tools/adp-workforce-now-pricing/"
+              ],
+              "notes": "Essential Learning (basic LMS with 40+ pre-packaged courses) is mentioned as a learnable module within the platform; however, full Learning Management functionality and Premium Learning Content require paid add-ons. Recruiting, Performance, and Compensation management are also available as separate paid add-ons."
+            }
+          },
+          "overall_summary": "ADP Workforce Now is marketed as an all-in-one suite with Core HR (payroll, benefits, time tracking) bundled into tiered base plans. Talent & Learning capabilities are partially included: basic learning/LMS can be included in base plans, but advanced learning content and features are offered as separate add-on modules with additional fees. The pricing model is per-employee-per-month with optional add-ons for Talent Acquisition, Performance Management, Compensation Management, and Advanced Learning."
+        },
+        "bamboohr": {
+          "name": "BambooHR",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:33:58.703062+08:00",
+          "packaging_per_core": {
+            "core_hr_payroll": {
+              "model": "separate",
+              "sku_name": "BambooHR Payroll",
+              "pricing_unit": "per_employee_month",
+              "sources": [
+                "https://www.pin.com/blog/bamboohr-pricing/",
+                "https://www.bamboohr.com/platform/payroll/",
+                "https://softwarefinder.com/hr/bamboohr",
+                "https://www.bamboohr.com/pricing/"
+              ],
+              "notes": "Payroll is a standalone add-on module with unpublished, quote-based pricing ($2-5 PEPM estimated). US-only; requires contacting sales for pricing. Some sources cite estimated add-on costs of $6-8/employee/month."
+            },
+            "talent_learning": {
+              "model": "absent",
+              "sku_name": "Not offered natively",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://elearningindustry.com/directory/software-categories/learning-management-systems/integrations/bamboo-hr",
+                "https://www.bamboohr.com/integrations/listing-category/learning-training",
+                "https://findlmsoftware.com/lms-with-bamboo-hr-integration"
+              ],
+              "notes": "BambooHR does not offer a native learning management system (LMS). Training/learning requires integration with third-party LMS platforms (TalentLMS, Docebo, Absorb, etc.). BambooHR provides training integration marketplace but no built-in L&D module."
+            }
+          },
+          "overall_summary": "BambooHR packages Core HR & Payroll as a separate add-on module with quote-based pricing unavailable on their website, while Talent & Learning is completely absent from their platform and must be sourced through third-party LMS integrations from their marketplace."
         }
       }
     }
