@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generated_by": "scripts/research_known_erp_packaging.py",
-    "generated_at": "2026-05-13T02:20:35.895288+08:00",
+    "generated_at": "2026-05-13T02:24:56.268041+08:00",
     "model": "claude-haiku-4-5-20251001",
     "scope_erps": [
       "sap_business_one",
@@ -307,6 +307,240 @@
             }
           },
           "overall_summary": "UpKeep CMMS does not match the evaluation criteria. It is not an ERP with a manufacturing_management module split into distinct cores. It is a mobile-first CMMS with bundled maintenance, asset, inventory, and basic quality features across tiered per-user pricing ($20\u2013$55+/month), not separate SKUs."
+        },
+        "coupa": {
+          "name": "Coupa Procurement",
+          "tier": "enterprise",
+          "researched_at": "2026-05-13T02:23:21.585449+08:00",
+          "packaging_per_core": {
+            "production_shop_floor": {
+              "model": "absent",
+              "sku_name": "N/A - Not offered by Coupa",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.coupa.com/products/procure-to-pay/procurement/",
+                "https://www.coupa.com/products/supply-chain-design/",
+                "https://www.coupa.com/"
+              ],
+              "notes": "Coupa offers Supply Chain Design & Planning (production planning at strategic level via LLamasoft acquisition) but no shop-floor production scheduling, MRP, or Advanced Planning & Scheduling (APS) capabilities. No dedicated production_shop_floor module exists."
+            },
+            "quality_inventory": {
+              "model": "partial",
+              "sku_name": "Coupa Inventory Management (within Procure-to-Pay suite)",
+              "pricing_unit": "custom_enterprise_quote",
+              "sources": [
+                "https://www.coupa.com/products/procure-to-pay/inventory-management/",
+                "https://www.zanovoy.com/modules/coupa-inventory-management",
+                "https://compass.coupa.com/en-us/products/product-documentation/supplier-resources/for-suppliers/coupa-supplier-portal/set-up-the-csp/inventory-collaboration/manage-inventories"
+              ],
+              "notes": "Coupa includes basic inventory tracking and supplier-managed inventory collaboration, but lacks dedicated quality management or traceability (serialization/lot tracking) needed for manufacturing. Quality collaboration features exist but are minimal."
+            }
+          },
+          "overall_summary": "Coupa Procurement is not a manufacturing ERP. It is a procurement/BSM platform. Production shop floor planning is absent entirely. Inventory management is included as a basic feature within the core Procure-to-Pay module but lacks manufacturing-grade quality management and full traceability capabilities. Coupa acquired LLamasoft for supply chain design & planning at the strategic (network design) level, not tactical shop-floor execution."
+        },
+        "workday_hcm": {
+          "name": "Workday HCM",
+          "tier": "enterprise",
+          "researched_at": "2026-05-13T02:23:34.008654+08:00",
+          "packaging_per_core": {
+            "production_shop_floor": {
+              "model": "absent",
+              "sku_name": "N/A - Not offered by Workday HCM",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://blogs.oracle.com/modernfinance/workday-is-not-an-erp-solution-and-thats-an-issue",
+                "https://www.armanino.com/articles/workday-ultimate-guide/",
+                "https://www.erpresearch.com/erp/workday/inventory-management"
+              ],
+              "notes": "Workday lacks native production planning and shop floor execution capabilities. Manufacturing organizations requiring these functions must implement third-party add-ons or use separate systems alongside Workday HCM, which focuses on HR/finance rather than manufacturing operations."
+            },
+            "quality_inventory": {
+              "model": "partial",
+              "sku_name": "Workday Inventory (internal supply chain); Quality/traceability via Prism Analytics integration",
+              "pricing_unit": "per_employee_month (bundled with core modules); add-on modules priced separately",
+              "sources": [
+                "https://www.workday.com/en-us/products/spend-management/inventory.html",
+                "https://www.erpresearch.com/erp/workday/inventory-management",
+                "https://www.workday.com/content/dam/web/en-us/documents/datasheets/datasheet-inventory-us.pdf",
+                "https://www.armanino.com/articles/workday-ultimate-guide/"
+              ],
+              "notes": "Workday offers basic inventory management (internal supply chain, replenishment, recall management) as part of its spend management suite. Quality traceability requires Prism Analytics (advanced feature, separate pricing). Advanced manufacturing quality management and lot/serial traceability for production require external integrations or add-ons."
+            }
+          },
+          "overall_summary": "Workday HCM is fundamentally an HR and financial management platform, not a complete ERP. Both evaluated manufacturing management cores fall short of traditional ERP capabilities: production_shop_floor is entirely absent from Workday's native offering, requiring external tools. quality_inventory is partially supported through Workday Inventory (internal supply chain focus) plus optional Prism Analytics, but lacks comprehensive manufacturing quality, lot tracking, and production-level traceability features found in dedicated manufacturing ERPs."
+        },
+        "adp": {
+          "name": "ADP Workforce Now",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:23:44.523411+08:00",
+          "packaging_per_core": {
+            "production_shop_floor": {
+              "model": "absent",
+              "sku_name": "N/A",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.adp.com/what-we-offer/products/adp-workforce-now.aspx",
+                "https://www.adp.com/what-we-offer/products/adp-workforce-now/capabilities.aspx"
+              ],
+              "notes": "ADP Workforce Now is an HCM (Human Capital Management) platform focused on payroll, HR, benefits, time tracking, and talent management. It does not include manufacturing-specific production planning or shop floor management modules."
+            },
+            "quality_inventory": {
+              "model": "absent",
+              "sku_name": "N/A",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.adp.com/what-we-offer/products/adp-workforce-now.aspx",
+                "https://www.adp.com/what-we-offer/products/adp-workforce-now/capabilities.aspx"
+              ],
+              "notes": "ADP Workforce Now does not include quality management or inventory traceability modules. These are manufacturing operations functions outside the scope of this HCM platform."
+            }
+          },
+          "overall_summary": "ADP Workforce Now is a Human Capital Management (HCM) platform, not an ERP system with manufacturing management capabilities. It focuses on payroll, HR administration, benefits, time and attendance, talent acquisition, and workforce management. The requested manufacturing management module 'cores' (production planning & shop floor, and quality & inventory traceability) are not supported by ADP Workforce Now. ADP does not appear to offer a distinct manufacturing ERP module. Organizations seeking manufacturing-specific ERP functionality would need alternative solutions such as SAP, NetSuite, or other manufacturing-focused ERP vendors."
+        },
+        "bamboohr": {
+          "name": "BambooHR",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:23:51.979014+08:00",
+          "packaging_per_core": {
+            "production_shop_floor": {
+              "model": "absent",
+              "sku_name": "N/A",
+              "pricing_unit": "N/A",
+              "sources": [],
+              "notes": "BambooHR is an HR/HRIS platform with no manufacturing operations modules. It does not support production planning or shop floor functionality."
+            },
+            "quality_inventory": {
+              "model": "absent",
+              "sku_name": "N/A",
+              "pricing_unit": "N/A",
+              "sources": [],
+              "notes": "BambooHR is an HR/HRIS platform with no quality management or inventory management modules. These functions are not supported."
+            }
+          },
+          "overall_summary": "BambooHR is an HR/HRIS (Human Resource Information System) platform designed for small to mid-sized businesses, not a manufacturing ERP. It provides HR functions (employee records, payroll, benefits, time tracking, onboarding, performance management) but does not include any manufacturing management modules. The requested evaluation cannot be completed as neither core (production_shop_floor, quality_inventory) exists in this product's feature set."
+        }
+      }
+    },
+    "asset_management": {
+      "cores": [
+        {
+          "id": "eam_register_lifecycle",
+          "name": "EAM \u2014 asset register & lifecycle"
+        },
+        {
+          "id": "cmms_maintenance_ops",
+          "name": "CMMS \u2014 maintenance operations"
+        }
+      ],
+      "erps": {
+        "sap_business_one": {
+          "name": "SAP Business One",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:25:13.699556+08:00",
+          "packaging_per_core": {
+            "eam_register_lifecycle": {
+              "model": "unknown",
+              "sku_name": "SAP Business One - Fixed Assets Management",
+              "pricing_unit": "per_user_month or perpetual_license",
+              "sources": [
+                "https://www.onepotenza.com/blog/sap-consultancy/sap-business-one-modules-and-their-functionalities-a-comprehensive-guide-to-maximizing-your-business-operations/",
+                "https://www.seidor.com/en-us/blog/sap-business-one-pricing"
+              ],
+              "notes": "Fixed asset register and lifecycle management appear to be part of SAP Business One's core Financial Management module, not sold separately. Exact packaging model (bundled vs. partial) could not be confirmed from web sources."
+            },
+            "cmms_maintenance_ops": {
+              "model": "unknown",
+              "sku_name": "SAP Business One for Service & Maintenance",
+              "pricing_unit": "per_user_month or perpetual_license",
+              "sources": [
+                "https://www.slideshare.net/slideshow/sap-business-one-for-service-maintenance/9472054",
+                "https://www.erpresearch.com/pages/en-us/sap-business-one-cost"
+              ],
+              "notes": "Service & Maintenance functionality is marketed as part of SAP Business One's integrated service module. No separate pricing tier or SKU designation found in public sources. CMMS is referenced as an add-on capability rather than a separately-licensable core."
+            }
+          },
+          "overall_summary": "Web sources do not provide sufficient detail to classify how SAP Business One packages these two functional cores. Both asset management and maintenance operations appear to be included within SAP Business One's bundled offering, but the exact packaging model (separate, bundled, or partial) cannot be confirmed. SAP Business One uses per-user naming licenses (Professional or Limited) rather than functional core-level SKUs. Further clarification from SAP directly would be required to validate the specific packaging and licensing structure for these cores."
+        },
+        "sage_300": {
+          "name": "Sage 300",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:25:27.300400+08:00",
+          "packaging_per_core": {
+            "eam_register_lifecycle": {
+              "model": "absent",
+              "sku_name": "N/A - Native module not found",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.acutedata.com/norming-asset-management-for-sage-300/",
+                "https://www.netatwork.com/sage-fixed-assets-integration-with-sage-300-ap-po-and-gl/",
+                "https://www.cbh.com/technologies/sage/sage-fixed-assets/"
+              ],
+              "notes": "Asset lifecycle management is not natively included in Sage 300 core. Available via third-party add-ons (Norming Asset Management, Sage Fixed Assets) sold separately."
+            },
+            "cmms_maintenance_ops": {
+              "model": "absent",
+              "sku_name": "N/A - Native module not found",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.technisoft.com/software/service-manager",
+                "https://www.dimomaint.com/integrations/sage-300/",
+                "https://acumenfl.com/service-management/"
+              ],
+              "notes": "CMMS functionality not natively bundled. Requires third-party solutions (Technisoft Service Manager, DimoMaint CMMS, others) sold as separate add-ons."
+            }
+          },
+          "overall_summary": "Sage 300 does not natively include either EAM asset register/lifecycle or CMMS maintenance operations cores. Both functional areas require acquisition of third-party add-on solutions. The product concentrates on financial management, inventory, and basic fixed asset accounting. Asset management and maintenance management are extended through certified partner integrations only."
+        },
+        "globe3_erp": {
+          "name": "Globe3 ERP",
+          "tier": "sme",
+          "researched_at": "2026-05-13T02:25:37.292846+08:00",
+          "packaging_per_core": {
+            "eam_register_lifecycle": {
+              "model": "unknown",
+              "sku_name": "unknown",
+              "pricing_unit": "unknown",
+              "sources": [],
+              "notes": "Web sources confirm Globe3 includes Asset Management module with lifecycle tracking but do not specify whether EAM register/lifecycle is sold separately, bundled, or partial."
+            },
+            "cmms_maintenance_ops": {
+              "model": "unknown",
+              "sku_name": "unknown",
+              "pricing_unit": "unknown",
+              "sources": [],
+              "notes": "Web sources mention 'Maintenance Contracts' as a Globe3 feature but do not detail CMMS packaging or licensing model."
+            }
+          },
+          "overall_summary": "Globe3 ERP documentation available online does not provide granular SKU-level or functional core-level packaging and pricing details. The product is marketed as an integrated, bundled suite with per-user/concurrent-user licensing. To obtain the specific packaging and licensing information for these two cores, contact Globe3 sales directly."
+        },
+        "netsuite": {
+          "name": "Oracle NetSuite ERP",
+          "tier": "mid",
+          "researched_at": "2026-05-13T02:25:49.687582+08:00",
+          "packaging_per_core": {
+            "eam_register_lifecycle": {
+              "model": "partial",
+              "sku_name": "NetSuite Fixed Assets Management",
+              "pricing_unit": "per_month",
+              "sources": [
+                "https://www.myerp.guru/blog/netsuite-fixed-assets-module",
+                "https://erppeers.com/netsuite-fixed-asset-management/"
+              ],
+              "notes": "Only fixed asset depreciation & lifecycle tracking included; full EAM asset register features require third-party SuiteApp supplements like Shepherd."
+            },
+            "cmms_maintenance_ops": {
+              "model": "absent",
+              "sku_name": "N/A \u2014 External CMMS integration required",
+              "pricing_unit": "N/A",
+              "sources": [
+                "https://www.netsuite.com/portal/resource/articles/erp/cmms-vs-eam.shtml",
+                "https://shepherdcmms.com/",
+                "https://imaintain.uk/optimising-maintenance-with-oracle-netsuite-imaintains-approach-to-cmms-and-erp-integration/"
+              ],
+              "notes": "NetSuite ERP does not include native CMMS. Maintenance operations require separate third-party CMMS systems (Shepherd, Limble, Tractian, MaintainX, etc.) integrated via APIs."
+            }
+          },
+          "overall_summary": "Oracle NetSuite ERP does not package these two asset management cores as you have specified. Fixed Assets Management ($599/month) provides partial asset lifecycle tracking but lacks full EAM capabilities. CMMS maintenance operations are entirely absent from NetSuite and must be sourced from dedicated third-party maintenance vendors. NetSuite functions as the financial backbone, with external CMMS platforms handling shop-floor maintenance data via REST/API integration."
         }
       }
     }
