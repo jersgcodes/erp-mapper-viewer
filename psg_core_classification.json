@@ -3130,6 +3130,1160 @@
           },
           "verdict": "single_core_full",
           "summary_reason": "Frontier e-HR fully covers the core_hr_operations core with all four mandatory capabilities (employee master, leave management, time & attendance, and self-service portal), but only partially covers payroll_compliance and talent_learning cores."
+        },
+        "psg-301": {
+          "vendor_name": "MATCH RESOURCES PTE LTD",
+          "solution_name": "HR Administration and Payroll Processing with SaaS Solutions Version 23-4.1",
+          "category": "Human Resource Shared Services (HRSS) Needs Analysis, HR Administrative Support & Payroll Processing via a HRMS",
+          "classified_at": "2026-05-13T03:02:26.698521+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [],
+              "partial_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance",
+                "hr.self_service_portal"
+              ],
+              "verdict": "partial",
+              "reason": "Solution description mentions modernizing admin tasks and employee self-service accessibility, but does not explicitly confirm coverage of employee master records, leave management, or time & attendance functionality."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.statutory_reporting",
+                "hr.overtime_variable_pay",
+                "hr.compensation_benefits"
+              ],
+              "partial_caps": [
+                "hr.benefits_administration"
+              ],
+              "verdict": "full",
+              "reason": "Solution explicitly covers 'Payroll Processing & CPF Compliance', 'Payslip Generation & Distribution', 'Statutory HR Reporting (CPF, IRAS, MOM)', 'Overtime & Variable Pay Calculation', and 'Compensation & Benefits Management' as stated in category and description."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution focuses on HR administration and payroll processing with no mention of recruitment, onboarding, performance management, or HR document management capabilities."
+            }
+          },
+          "verdict": "single_core_full",
+          "summary_reason": "Solution fully covers the payroll_compliance core with explicit capabilities in payroll processing, payslip generation, statutory reporting, overtime/variable pay, and compensation & benefits, but only partially addresses core_hr_operations and does not cover talent_learning."
+        },
+        "psg-302": {
+          "vendor_name": "361 Degree Consultancy Pte Ltd",
+          "solution_name": "HReasily Online Payroll",
+          "category": "Human Resource Management System (HRMS)",
+          "classified_at": "2026-05-13T03:02:30.593710+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance"
+              ],
+              "partial_caps": [
+                "hr.self_service_portal"
+              ],
+              "verdict": "partial",
+              "reason": "Solution covers employee data collection, leave management, and face recognition clocking system, but self-service portal capability is not explicitly mentioned."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.statutory_reporting",
+                "hr.compensation_benefits"
+              ],
+              "partial_caps": [
+                "hr.overtime_variable_pay",
+                "hr.benefits_administration"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly provides automated payroll processing, CPF Board upload, payslip generation, and statutory reporting, but overtime/variable pay and benefits administration are not distinctly mentioned."
+            },
+            "talent_learning": {
+              "covered_caps": [
+                "hr.performance_management"
+              ],
+              "partial_caps": [],
+              "verdict": "partial",
+              "reason": "Solution includes performance appraisal management, but recruitment, onboarding/offboarding, and HR document management are not mentioned."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "HReasily covers multiple capabilities across all three cores (payroll processing, leave management, time attendance, statutory reporting, performance appraisals) but does not fully satisfy all mandatory caps in any single core, falling short of full multi-core or single-core certification."
+        },
+        "psg-303": {
+          "vendor_name": "Acc Pro (Singapore) Pte. Ltd.",
+          "solution_name": "HRSS & Payroll Processing with QuickHR",
+          "category": "Human Resource Shared Services (HRSS) Needs Analysis, HR Administrative Support & Payroll Processing via a HRMS",
+          "classified_at": "2026-05-13T03:02:34.016560+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [],
+              "partial_caps": [
+                "hr.leave_management",
+                "hr.employee_master"
+              ],
+              "verdict": "partial",
+              "reason": "Solution mentions 'leave management' and employee data handling but lacks explicit coverage of time & attendance tracking and self-service portal functionality."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.statutory_reporting"
+              ],
+              "partial_caps": [
+                "hr.payslips",
+                "hr.compensation_benefits"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly covers 'payroll' and 'CPF Compliance' with statutory reporting capability, but benefits administration and overtime/variable pay calculation are not clearly articulated."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution description contains no mention of recruitment, onboarding, performance management, or HR document management capabilities."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "Solution covers capabilities in payroll_compliance (2 full + 2 partial caps) and core_hr_operations (2 partial caps) but does not fully satisfy any single core and lacks any coverage of talent_learning core."
+        },
+        "psg-313": {
+          "vendor_name": "IMPACT BEST PTE. LTD.",
+          "solution_name": "Impact Best HR Shared Service & Payroll Processing",
+          "category": "Human Resource Shared Services (HRSS) Needs Analysis, HR Administrative Support & Payroll Processing via a HRMS",
+          "classified_at": "2026-05-13T03:02:41.493148+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution focuses on payroll and shared services with no mention of employee master, leave management, time & attendance, or self-service portal capabilities."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.statutory_reporting",
+                "hr.compensation_benefits"
+              ],
+              "partial_caps": [
+                "hr.overtime_variable_pay",
+                "hr.benefits_administration"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly covers payroll processing, payslip generation, statutory compliance (CPF, IRAS, MOM), and compensation, but overtime/variable pay and benefits administration are implied but not clearly detailed in the description."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution makes no mention of recruitment, onboarding/offboarding, performance management, or HR document management capabilities."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "Solution covers 4 capabilities within payroll_compliance core (payroll processing, payslips, statutory reporting, compensation) with 2 partial capabilities, but does not fully cover any single core and has no coverage in core_hr_operations or talent_learning."
+        },
+        "psg-318": {
+          "vendor_name": "Info-Tech Systems Integrators Pte Ltd",
+          "solution_name": "Info-Tech Cloud E-Scheduling System",
+          "category": "Human Resource E-Scheduling System",
+          "classified_at": "2026-05-13T03:02:45.080539+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.time_attendance"
+              ],
+              "partial_caps": [
+                "hr.employee_master",
+                "hr.leave_management"
+              ],
+              "verdict": "partial",
+              "reason": "Solution clearly covers time & attendance tracking via mobile app and biometric capture; employee database and leave data are referenced as integrated but not core functionalities of this scheduling system."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.overtime_variable_pay"
+              ],
+              "partial_caps": [],
+              "verdict": "partial",
+              "reason": "Solution consolidates OT calculations and links to Payroll for salary computation, but does not provide payroll processing, payslips, statutory reporting, or benefits administration."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution contains no recruitment, onboarding, performance management, or HR document management capabilities."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "Solution covers hr.time_attendance fully and hr.overtime_variable_pay partially, but does not achieve full coverage of any single core; it is a specialized scheduling and attendance tracking system, not a comprehensive HR module."
+        },
+        "psg-329": {
+          "vendor_name": "JUSTLOGIN PTE LTD",
+          "solution_name": "JustLogin HR E-Scheduling",
+          "category": "Human Resource E-Scheduling System",
+          "classified_at": "2026-05-13T03:02:48.387638+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.time_attendance",
+                "hr.leave_management"
+              ],
+              "partial_caps": [
+                "hr.employee_master",
+                "hr.self_service_portal"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly covers time & attendance tracking and leave management through E-Scheduling and integrated Leave software, but employee master and self-service portal are not clearly described as core features."
+            },
+            "payroll_compliance": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution description mentions seamless integration with Payroll software but does not provide payroll processing, payslip generation, statutory reporting, overtime calculation, or benefits administration capabilities."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution focuses on scheduling and attendance with no mention of recruitment, onboarding, performance management, or HR document management features."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "JustLogin HR E-Scheduling covers time & attendance and leave management within core_hr_operations, but does not fully satisfy any single core's mandatory requirements."
+        },
+        "psg-376": {
+          "vendor_name": "Rockbell International Software Pte Ltd",
+          "solution_name": "Million Human Resource Management System",
+          "category": "Human Resource Management System (HRMS)",
+          "classified_at": "2026-05-13T03:02:52.043749+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance"
+              ],
+              "partial_caps": [
+                "hr.self_service_portal"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly covers leave, time attendance, and employee records; self-service portal is not mentioned in the description."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips"
+              ],
+              "partial_caps": [
+                "hr.compensation_benefits"
+              ],
+              "verdict": "partial",
+              "reason": "Solution mentions payroll module but does not explicitly address statutory reporting, overtime/variable pay, or benefits administration."
+            },
+            "talent_learning": {
+              "covered_caps": [
+                "hr.performance_management"
+              ],
+              "partial_caps": [],
+              "verdict": "partial",
+              "reason": "Solution explicitly covers appraisal (performance management) but lacks recruitment, onboarding, and HR document management capabilities."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "Solution covers at least one capability in each core but does not fully satisfy any single core; payroll and HR operations are most developed while talent/learning is minimally covered."
+        },
+        "psg-400": {
+          "vendor_name": "Opensoft Pte Ltd",
+          "solution_name": "OpensoftHR Version 18",
+          "category": "Human Resource Management System (HRMS)",
+          "classified_at": "2026-05-13T03:02:55.758078+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance",
+                "hr.self_service_portal"
+              ],
+              "partial_caps": [],
+              "verdict": "full",
+              "reason": "Solution explicitly includes 'Leave', 'Mobile Time Attendance modules', and 'employee self-service functions'; Employee Master is implicit in HRIS Core."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.statutory_reporting",
+                "hr.overtime_variable_pay",
+                "hr.compensation_benefits"
+              ],
+              "partial_caps": [
+                "hr.benefits_administration"
+              ],
+              "verdict": "partial",
+              "reason": "Solution provides 'Payroll and Human Resources Management System' with payroll modules, but benefits administration is only vaguely referenced and not explicitly detailed."
+            },
+            "talent_learning": {
+              "covered_caps": [
+                "hr.performance_management"
+              ],
+              "partial_caps": [],
+              "covered_caps_missing": [
+                "hr.recruitment_ats",
+                "hr.onboarding_offboarding",
+                "hr.document_management"
+              ],
+              "verdict": "partial",
+              "reason": "Solution includes 'Appraisal' module covering performance management, but lacks explicit coverage of recruitment, onboarding, and HR document management."
+            }
+          },
+          "verdict": "single_core_full",
+          "summary_reason": "OpensoftHR fully covers core_hr_operations with all four mandatory capabilities (employee master, leave, time attendance, self-service portal), partially covers payroll_compliance and talent_learning cores."
+        },
+        "psg-407": {
+          "vendor_name": "CAPPS SOLUTIONS PTE. LTD.",
+          "solution_name": "PayAdvisorMobile HRMS Version 3",
+          "category": "Human Resource Management System (HRMS)",
+          "classified_at": "2026-05-13T03:02:59.758632+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance"
+              ],
+              "partial_caps": [
+                "hr.self_service_portal"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly includes Personnel, Leave, and Time-Attendance modules; Self-Service Portal is implied but not explicitly mentioned in core description."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.compensation_benefits"
+              ],
+              "partial_caps": [
+                "hr.statutory_reporting",
+                "hr.overtime_variable_pay",
+                "hr.benefits_administration"
+              ],
+              "verdict": "partial",
+              "reason": "Payroll and payslip modules are explicitly stated; statutory reporting, overtime/variable pay, and benefits administration are not clearly addressed in the description."
+            },
+            "talent_learning": {
+              "covered_caps": [
+                "hr.performance_management"
+              ],
+              "partial_caps": [
+                "hr.recruitment_ats",
+                "hr.onboarding_offboarding",
+                "hr.document_management"
+              ],
+              "verdict": "partial",
+              "reason": "Performance Appraisal module is explicitly included; Recruitment, Onboarding, and Offboarding are listed as optional add-on modules, and document management is not mentioned."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "PayAdvisorMobile HRMS covers multiple capability IDs across all three cores but does not fully satisfy any single core due to missing or optional components in payroll compliance (statutory reporting, benefits administration), talent & learning (recruitment and onboarding as optional add-ons), and insufficient detail on self-service portal implementation."
+        },
+        "psg-408": {
+          "vendor_name": "Payboy Pte. Ltd.",
+          "solution_name": "Payboy HRMS",
+          "category": "Human Resource Management System (HRMS)",
+          "classified_at": "2026-05-13T03:03:03.985130+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance",
+                "hr.self_service_portal"
+              ],
+              "partial_caps": [],
+              "verdict": "full",
+              "reason": "Payboy's description of 'automates the essential HR processes' and HRMS category clearly encompasses all four mandatory core HR operations including employee master, leave management, time & attendance, and self-service capabilities."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.statutory_reporting",
+                "hr.compensation_benefits"
+              ],
+              "partial_caps": [
+                "hr.overtime_variable_pay",
+                "hr.benefits_administration"
+              ],
+              "verdict": "partial",
+              "reason": "Solution is explicitly described as 'Payroll and HR Management Software' with clear payroll and statutory compliance focus, but specific coverage of overtime/variable pay calculation and benefits administration modules cannot be confirmed from the provided description."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [
+                "hr.onboarding_offboarding"
+              ],
+              "verdict": "none",
+              "reason": "The solution description does not mention recruitment, performance management, appraisals, or document management capabilities; onboarding is only vaguely implied in general HR process automation."
+            }
+          },
+          "verdict": "single_core_full",
+          "summary_reason": "Payboy HRMS fully covers the core_hr_operations core with all four mandatory capabilities, but only partially covers payroll_compliance and does not adequately cover talent_learning, resulting in a single-core-full classification."
+        },
+        "psg-409": {
+          "vendor_name": "RSM Stone Forest Accountserve Pte. Ltd.",
+          "solution_name": "PayDay! HRMS",
+          "category": "Human Resource Management System (HRMS)",
+          "classified_at": "2026-05-13T03:03:07.837440+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance"
+              ],
+              "partial_caps": [
+                "hr.self_service_portal"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly covers 'manage your payroll, leave, claims, staff attendance' but self-service portal is not explicitly mentioned."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.compensation_benefits"
+              ],
+              "partial_caps": [
+                "hr.statutory_reporting",
+                "hr.overtime_variable_pay",
+                "hr.benefits_administration"
+              ],
+              "verdict": "partial",
+              "reason": "Solution describes 'optimise your Payroll' and mentions payroll/leave management but lacks explicit confirmation of statutory reporting (CPF, IRAS, MOM), overtime calculations, and benefits administration."
+            },
+            "talent_learning": {
+              "covered_caps": [
+                "hr.performance_management"
+              ],
+              "partial_caps": [],
+              "verdict": "partial",
+              "reason": "Solution explicitly covers 'performance management' but does not mention recruitment, onboarding/offboarding, or HR document management."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "PayDay! HRMS covers capabilities across all three cores (HR operations, payroll compliance, and talent/learning) but does not fully satisfy all mandatory caps in any single core, qualifying as partial_only."
+        },
+        "psg-412": {
+          "vendor_name": "PEOPLE CENTRAL PTE LTD",
+          "solution_name": "PeopleCentral HRMS",
+          "category": "Human Resource Management System (HRMS)",
+          "classified_at": "2026-05-13T03:03:11.494357+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance",
+                "hr.self_service_portal"
+              ],
+              "partial_caps": [],
+              "verdict": "full",
+              "reason": "Solution explicitly covers employee master/HRIS, leave management, attendance/scheduling, and employee self-service portal."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.compensation_benefits"
+              ],
+              "partial_caps": [
+                "hr.statutory_reporting",
+                "hr.overtime_variable_pay",
+                "hr.benefits_administration"
+              ],
+              "verdict": "partial",
+              "reason": "Solution offers payroll and claims processing but lacks explicit mention of statutory reporting (CPF, IRAS, MOM), overtime/variable pay calculation specifics, or dedicated benefits administration."
+            },
+            "talent_learning": {
+              "covered_caps": [
+                "hr.onboarding_offboarding",
+                "hr.performance_management"
+              ],
+              "partial_caps": [
+                "hr.recruitment_ats",
+                "hr.document_management"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly mentions onboarding workflows and performance management, but recruitment ATS and HR document management are not clearly specified despite training and workflow automation being mentioned."
+            }
+          },
+          "verdict": "multi_core_full",
+          "summary_reason": "PeopleCentral HRMS achieves full coverage of core_hr_operations and partial coverage of both payroll_compliance and talent_learning cores, qualifying as multi_core_full with one complete core."
+        },
+        "psg-425": {
+          "vendor_name": "Enable Business Pte. Ltd.",
+          "solution_name": "QuickHR",
+          "category": "Human Resource Management System (HRMS)",
+          "classified_at": "2026-05-13T03:03:16.022291+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.self_service_portal"
+              ],
+              "partial_caps": [
+                "hr.time_attendance"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly covers employee management, leave management, and self-service portal; time & attendance is mentioned in context of leave/claims processing but not explicitly detailed."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.statutory_reporting",
+                "hr.compensation_benefits"
+              ],
+              "partial_caps": [
+                "hr.overtime_variable_pay",
+                "hr.benefits_administration"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly addresses payroll, payslip generation, and statutory compliance with MOM and IRAS; overtime/variable pay and benefits administration are implied but not explicitly stated."
+            },
+            "talent_learning": {
+              "covered_caps": [
+                "hr.onboarding_offboarding",
+                "hr.performance_management",
+                "hr.document_management"
+              ],
+              "partial_caps": [
+                "hr.recruitment_ats"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly covers onboarding, appraisals (performance management), and HR document management; recruitment/ATS capability is not mentioned in the description."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "QuickHR covers multiple capabilities across all three cores but does not fully satisfy all mandatory caps in any single core; gaps exist in time & attendance detail, overtime/variable pay, benefits administration specifics, and recruitment/ATS functionality."
+        },
+        "psg-426": {
+          "vendor_name": "Enable Business Pte. Ltd.",
+          "solution_name": "QuickHR (e-Scheduling)",
+          "category": "Human Resource E-Scheduling System",
+          "classified_at": "2026-05-13T03:03:19.909709+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.time_attendance"
+              ],
+              "partial_caps": [
+                "hr.leave_management",
+                "hr.self_service_portal"
+              ],
+              "verdict": "partial",
+              "reason": "Solution directly covers time & attendance through 'real-time clock-ins' and 'timesheets', partially addresses leave management via shift planning context, but lacks employee master record and full self-service capabilities."
+            },
+            "payroll_compliance": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution focuses on scheduling and attendance; no mention of payroll processing, CPF compliance, payslips, statutory reporting, overtime calculations, or benefits administration."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution does not address recruitment, onboarding/offboarding, performance management, or HR document management capabilities."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "QuickHR (e-Scheduling) covers the time & attendance capability within core_hr_operations and partially addresses leave management and self-service, but fails to meet all mandatory caps in any single core and has no coverage in payroll_compliance or talent_learning cores."
+        },
+        "psg-430": {
+          "vendor_name": "HR SG PTE. LTD.",
+          "solution_name": "recruitSG Applicant Tracking System (ATS)",
+          "category": "Applicant Sourcing and Tracking System",
+          "classified_at": "2026-05-13T03:03:23.230028+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "The recruitSG ATS solution focuses on recruitment and applicant tracking; it does not address employee master records, leave management, time & attendance, or employee self-service portal functions."
+            },
+            "payroll_compliance": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "The solution is limited to recruitment and applicant tracking and does not cover payroll processing, payslips, statutory reporting, overtime/variable pay, or benefits administration."
+            },
+            "talent_learning": {
+              "covered_caps": [
+                "hr.recruitment_ats"
+              ],
+              "partial_caps": [],
+              "verdict": "partial",
+              "reason": "The solution explicitly covers 'Recruitment & Applicant Tracking (ATS)' as stated in the PSG category and description ('streamline your recruitment process...post job openings, screen candidates, manage hiring pipeline'), but does not address onboarding/offboarding, performance management, or HR document management."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "recruitSG ATS covers hr.recruitment_ats within the talent_learning core but does not achieve full coverage of any core, resulting in partial classification across the ERP module."
+        },
+        "psg-431": {
+          "vendor_name": "HR SG PTE. LTD.",
+          "solution_name": "recruitSG HR Shared Services (HRSS)",
+          "category": "Human Resource Shared Services (HRSS) Needs Analysis, HR Administrative Support & Payroll Processing via a HRMS",
+          "classified_at": "2026-05-13T03:03:27.026740+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [],
+              "partial_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance"
+              ],
+              "verdict": "partial",
+              "reason": "Solution provides HR process assessment and automation recommendations but does not explicitly mention employee master record management, leave management system, time & attendance tracking, or employee self-service portal implementation."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.statutory_reporting"
+              ],
+              "partial_caps": [
+                "hr.overtime_variable_pay",
+                "hr.compensation_benefits",
+                "hr.benefits_administration"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly offers 'payroll software' and 'monthly payroll processing support' with CPF compliance and statutory reporting via HRMpeople software designed for Singapore market, but compensation, benefits, and overtime calculations are not clearly detailed."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution description makes no reference to recruitment, ATS, onboarding/offboarding, performance management, or HR document management capabilities."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "Solution covers payroll processing, payslips, and statutory reporting capabilities under payroll_compliance core, plus partial coverage of core_hr_operations, but does not fully satisfy any single core and lacks talent_learning capabilities entirely."
+        },
+        "psg-474": {
+          "vendor_name": "AVELOGIC PTE LTD",
+          "solution_name": "SMARTHRMS Version 1",
+          "category": "Human Resource Management System (HRMS)",
+          "classified_at": "2026-05-13T03:03:30.711405+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance",
+                "hr.self_service_portal"
+              ],
+              "partial_caps": [],
+              "verdict": "full",
+              "reason": "Description explicitly states SmartHRMS streamlines HR operations and manages HR processes effectively, with employee self-service capabilities supporting all four mandatory caps."
+            },
+            "payroll_compliance": {
+              "covered_caps": [],
+              "partial_caps": [
+                "hr.payroll_processing",
+                "hr.compensation_benefits"
+              ],
+              "verdict": "partial",
+              "reason": "Description mentions managing HR processes and operations but lacks explicit reference to payroll processing, statutory reporting, CPF compliance, payslips, overtime calculations, or benefits administration."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [
+                "hr.onboarding_offboarding",
+                "hr.performance_management"
+              ],
+              "verdict": "partial",
+              "reason": "Description references talent management and productive work environment but does not explicitly address recruitment/ATS, onboarding/offboarding workflows, performance management, or HR document management."
+            }
+          },
+          "verdict": "single_core_full",
+          "summary_reason": "SmartHRMS fully covers the core_hr_operations core with all four mandatory caps (employee master, leave management, time & attendance, and self-service portal) but only partially addresses payroll_compliance and talent_learning cores."
+        },
+        "psg-486": {
+          "vendor_name": "Staffany Private Limited",
+          "solution_name": "StaffAny",
+          "category": "Human Resource E-Scheduling System",
+          "classified_at": "2026-05-13T03:03:34.115691+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.time_attendance",
+                "hr.employee_master"
+              ],
+              "partial_caps": [
+                "hr.leave_management",
+                "hr.self_service_portal"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly manages 'hourly workers' and 'tracks staff performance' with 'integrated mobile and web application' covering time & attendance and employee records, but leave management and self-service portal are not clearly described."
+            },
+            "payroll_compliance": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution description contains no mention of payroll processing, payslip generation, statutory reporting, CPF compliance, or benefits administration."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [
+                "hr.performance_management"
+              ],
+              "verdict": "partial",
+              "reason": "Solution 'tracks staff performance' suggesting performance management capability, but recruitment, onboarding, and document management are not mentioned."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "StaffAny covers capabilities in core_hr_operations (time & attendance, employee master) and partially in talent_learning (performance tracking), but does not fully satisfy any single core and has no coverage in payroll_compliance."
+        },
+        "psg-494": {
+          "vendor_name": "SWINGVY PTE. LTD.",
+          "solution_name": "Swingvy Version 1.233.0",
+          "category": "Human Resource Management System (HRMS)",
+          "classified_at": "2026-05-13T03:03:37.720184+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance",
+                "hr.self_service_portal"
+              ],
+              "partial_caps": [],
+              "verdict": "full",
+              "reason": "Swingvy explicitly covers core HR, Leave, Time & Attendance, and provides employee self-service capabilities as part of its full-suite HR software."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.compensation_benefits"
+              ],
+              "partial_caps": [
+                "hr.statutory_reporting",
+                "hr.overtime_variable_pay",
+                "hr.benefits_administration"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly includes Payroll and Claims management but lacks clear evidence of statutory CPF/IRAS/MOM reporting, overtime/variable pay calculation, and benefits administration."
+            },
+            "talent_learning": {
+              "covered_caps": [
+                "hr.performance_management"
+              ],
+              "partial_caps": [
+                "hr.recruitment_ats",
+                "hr.onboarding_offboarding",
+                "hr.document_management"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly covers performance appraisal but lacks clear evidence of dedicated ATS recruitment, formal onboarding/offboarding workflows, and HR document management capabilities."
+            }
+          },
+          "verdict": "single_core_full",
+          "summary_reason": "Swingvy fully covers core_hr_operations with all four mandatory capabilities (employee master, leave management, time & attendance, and self-service portal), but only partially covers payroll_compliance and talent_learning cores."
+        },
+        "psg-498": {
+          "vendor_name": "Synergix Technologies Pte Ltd",
+          "solution_name": "Synergix Software",
+          "category": "Human Resource Management System (HRMS)",
+          "classified_at": "2026-05-13T03:03:41.030284+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance"
+              ],
+              "partial_caps": [
+                "hr.self_service_portal"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly covers personnel management, leave administration, and time management system (Android & iOS), but self-service portal is not mentioned."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.compensation_benefits",
+                "hr.benefits_administration"
+              ],
+              "partial_caps": [
+                "hr.statutory_reporting",
+                "hr.overtime_variable_pay"
+              ],
+              "verdict": "partial",
+              "reason": "Solution covers payroll processing, payslip generation, benefits management, and integrates with accounting software, but statutory reporting (CPF, IRAS, MOM) and overtime/variable pay calculation are not explicitly mentioned."
+            },
+            "talent_learning": {
+              "covered_caps": [
+                "hr.performance_management"
+              ],
+              "partial_caps": [],
+              "verdict": "partial",
+              "reason": "Solution explicitly includes performance appraisal modules, but does not mention recruitment/ATS, onboarding/offboarding workflows, or HR document management."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "Synergix Software covers multiple capabilities across all three cores but does not fully satisfy any single core; core_hr_operations, payroll_compliance, and talent_learning all lack complete coverage of their mandatory capabilities."
+        },
+        "psg-504": {
+          "vendor_name": "Taidii Pte Ltd",
+          "solution_name": "Taidii Smart Learning Management System",
+          "category": "Digital Learning Platform for CPD and Mentoring",
+          "classified_at": "2026-05-13T03:03:44.544076+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Taidii LMS focuses on training and learning management, not employee master records, leave management, time & attendance, or self-service portal functionality."
+            },
+            "payroll_compliance": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "The solution has no relevance to payroll processing, payslips, statutory reporting, overtime calculations, or benefits administration."
+            },
+            "talent_learning": {
+              "covered_caps": [
+                "hr.onboarding_offboarding"
+              ],
+              "partial_caps": [
+                "hr.performance_management"
+              ],
+              "verdict": "partial",
+              "reason": "The solution directly enables 'staff training management' and 'customized courses' which supports onboarding workflows; performance management is partially relevant through training tracking and progress monitoring but not explicitly a core function."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "Taidii Smart LMS covers training-related aspects of talent_learning core (onboarding workflows via training management) but does not achieve full coverage of any single core and does not address core_hr_operations or payroll_compliance cores at all."
+        },
+        "psg-505": {
+          "vendor_name": "Taidii Pte Ltd",
+          "solution_name": "Taidii Smart Talent Attractions Platform",
+          "category": "Talent Attraction Platform",
+          "classified_at": "2026-05-13T03:03:47.742215+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution focuses on talent attraction and recruitment; does not address employee master records, leave management, time & attendance, or self-service portals."
+            },
+            "payroll_compliance": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution has no functionality related to payroll processing, payslips, statutory reporting, overtime, compensation, or benefits administration."
+            },
+            "talent_learning": {
+              "covered_caps": [
+                "hr.recruitment_ats",
+                "hr.onboarding_offboarding"
+              ],
+              "partial_caps": [],
+              "verdict": "partial",
+              "reason": "Solution clearly covers recruitment via 'application portal and suitability assessments' and onboarding via 'streamlines preschool recruitment and onboarding'; does not address performance management or HR document management."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "Taidii Smart Talent Attraction Platform covers 2 of 4 caps in talent_learning core (recruitment_ats and onboarding_offboarding) but does not fully satisfy any single core, as performance_management and document_management remain unaddressed."
+        },
+        "psg-514": {
+          "vendor_name": "TIME ACCESS INTERNATIONAL",
+          "solution_name": "Time Access E-Scheduling System Version 1.8",
+          "category": "Human Resource E-Scheduling System",
+          "classified_at": "2026-05-13T03:03:51.180764+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.time_attendance"
+              ],
+              "partial_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.self_service_portal"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly covers Time & Attendance tracking with 'Track IN/OUT attendance from the Mobile App with GPS Geo-location and Geo-fencing features', and can integrate with existing HRMS for employee master and leave management, but does not fully implement these caps independently."
+            },
+            "payroll_compliance": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution is time and attendance focused; payroll processing, statutory reporting, and benefits administration are explicitly out of scope as 'further upgraded to a Payroll/HRMS software'."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution contains no recruitment, onboarding, performance management, or HR document management capabilities."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "Time Access E-Scheduling System covers hr.time_attendance cap fully and partially addresses hr.employee_master, hr.leave_management, and hr.self_service_portal through integration capabilities, but does not achieve full coverage of any single core."
+        },
+        "psg-515": {
+          "vendor_name": "TIME ACCESS INTERNATIONAL",
+          "solution_name": "Time Access HRMS",
+          "category": "Human Resource Management System (HRMS)",
+          "classified_at": "2026-05-13T03:03:54.799242+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance",
+                "hr.self_service_portal"
+              ],
+              "partial_caps": [],
+              "verdict": "full",
+              "reason": "Solution explicitly covers attendance, leave management, employee records via HRMS, and includes mobile app with employee self-service portal."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.compensation_benefits",
+                "hr.benefits_administration"
+              ],
+              "partial_caps": [
+                "hr.statutory_reporting",
+                "hr.overtime_variable_pay"
+              ],
+              "verdict": "partial",
+              "reason": "Solution covers payroll, payslips, and benefits administration but statutory reporting (CPF, IRAS, MOM compliance) and overtime/variable pay calculation are not explicitly mentioned."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "partial",
+              "reason": "Solution explicitly mentions appraisal management but provides no evidence of recruitment ATS, onboarding/offboarding workflows, or HR document management capabilities."
+            }
+          },
+          "verdict": "single_core_full",
+          "summary_reason": "Time Access HRMS fully covers the core_hr_operations core with all four mandatory capabilities (employee master, leave management, time & attendance, and self-service portal), but only partially covers payroll_compliance and talent_learning cores."
+        },
+        "psg-516": {
+          "vendor_name": "PEOPLE CENTRAL PTE LTD",
+          "solution_name": "TimeCentral",
+          "category": "Human Resource E-Scheduling System",
+          "classified_at": "2026-05-13T03:03:58.466985+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.time_attendance"
+              ],
+              "partial_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.self_service_portal"
+              ],
+              "verdict": "partial",
+              "reason": "Solution clearly covers time & attendance through 'accurate computation of working and overtime hours' and 'integrates with attendance devices', but only partially addresses employee master, leave management, and self-service capabilities without explicit mention."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.overtime_variable_pay"
+              ],
+              "partial_caps": [],
+              "verdict": "partial",
+              "reason": "Solution addresses 'accurate computation of working and overtime hours' which relates to overtime calculation, but does not cover payroll processing, payslips, statutory reporting, compensation, or benefits administration."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution focuses exclusively on workforce scheduling and rostering with no mention of recruitment, onboarding, performance management, or HR document management capabilities."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "TimeCentral covers specific capabilities in time & attendance and overtime calculation across two cores, but does not fully satisfy any single core's mandatory requirements."
+        },
+        "psg-517": {
+          "vendor_name": "Times Software Pte Ltd",
+          "solution_name": "TIMES SOFTWARE HRMS",
+          "category": "Human Resource Management System (HRMS)",
+          "classified_at": "2026-05-13T03:04:02.342251+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance"
+              ],
+              "partial_caps": [
+                "hr.self_service_portal"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly covers payroll and human resource operations with employee management, leave, and time & attendance components, but self-service portal is not distinctly mentioned."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.statutory_reporting",
+                "hr.overtime_variable_pay",
+                "hr.compensation_benefits",
+                "hr.benefits_administration"
+              ],
+              "partial_caps": [],
+              "verdict": "full",
+              "reason": "Description explicitly states 'Comprehensive Payroll and Human Resource Solution' with 'seamlessly manage payroll processing' and references CPF compliance, covering all mandatory payroll and statutory compliance capabilities."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [
+                "hr.recruitment_ats",
+                "hr.onboarding_offboarding",
+                "hr.performance_management",
+                "hr.document_management"
+              ],
+              "verdict": "none",
+              "reason": "Solution description focuses on payroll and HR operations without explicit mention of recruitment, onboarding, performance management, or document management capabilities."
+            }
+          },
+          "verdict": "single_core_full",
+          "summary_reason": "TIMES SOFTWARE HRMS fully covers the payroll_compliance core with all six mandatory capabilities (payroll processing, payslips, statutory reporting, overtime/variable pay, compensation/benefits, and benefits administration), but only partially covers core_hr_operations and does not cover talent_learning."
+        },
+        "psg-556": {
+          "vendor_name": "Whyze Solutions Pte Ltd",
+          "solution_name": "WhyzeHR eScheduling Version 12",
+          "category": "Human Resource E-Scheduling System",
+          "classified_at": "2026-05-13T03:04:06.327524+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.time_attendance"
+              ],
+              "partial_caps": [
+                "hr.self_service_portal"
+              ],
+              "verdict": "partial",
+              "reason": "Solution directly covers time & attendance through 'matches actual attendance with planned schedule' and mobile app visibility, but only partially addresses self-service via employee mobile schedule viewing; does not cover employee master or leave management."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.overtime_variable_pay"
+              ],
+              "partial_caps": [],
+              "verdict": "partial",
+              "reason": "Solution explicitly 'calculates OT, lateness, allowances' supporting overtime and variable pay, but does not address payroll processing, payslips, statutory reporting, compensation, or benefits administration."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "Solution is purely focused on e-scheduling and attendance; contains no functionality related to recruitment, onboarding, performance management, or HR document management."
+            }
+          },
+          "verdict": "partial_only",
+          "summary_reason": "WhyzeHR eScheduling covers specific capabilities across two cores (time & attendance in core_hr_operations, overtime calculation in payroll_compliance) but achieves full coverage in neither core and no coverage in talent_learning, resulting in partial-only classification."
+        },
+        "psg-557": {
+          "vendor_name": "Whyze Solutions Pte Ltd",
+          "solution_name": "WhyzeHR Version 12",
+          "category": "Human Resource Management System (HRMS)",
+          "classified_at": "2026-05-13T03:04:10.247524+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance",
+                "hr.self_service_portal"
+              ],
+              "partial_caps": [],
+              "verdict": "full",
+              "reason": "Solution explicitly covers 'payroll, benefit, attendance, appraisal, training, onboarding, and employee engagement' with full cloud HRIS; employee master, leave, time & attendance, and self-service portal are core HR operations components."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.statutory_reporting",
+                "hr.compensation_benefits",
+                "hr.benefits_administration"
+              ],
+              "partial_caps": [
+                "hr.overtime_variable_pay"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly covers payroll and benefits but overtime & variable pay calculation is not distinctly mentioned in the description."
+            },
+            "talent_learning": {
+              "covered_caps": [
+                "hr.onboarding_offboarding",
+                "hr.performance_management"
+              ],
+              "partial_caps": [],
+              "verdict": "partial",
+              "reason": "Solution covers 'appraisal, training, onboarding' but recruitment/ATS and HR document management are not explicitly mentioned."
+            }
+          },
+          "verdict": "multi_core_full",
+          "summary_reason": "WhyzeHR achieves full coverage of core_hr_operations and partial coverage of both payroll_compliance and talent_learning cores, meeting the multi_core_full criterion with at least one core fully covered and additional capabilities across other cores."
+        },
+        "psg-567": {
+          "vendor_name": "Zealys Pte. Ltd.",
+          "solution_name": "Zealys HRMS",
+          "category": "Human Resource Management System (HRMS)",
+          "classified_at": "2026-05-13T03:04:13.857515+08:00",
+          "by_core": {
+            "core_hr_operations": {
+              "covered_caps": [
+                "hr.employee_master",
+                "hr.leave_management",
+                "hr.time_attendance",
+                "hr.self_service_portal"
+              ],
+              "partial_caps": [],
+              "verdict": "full",
+              "reason": "Solution description explicitly mentions 'employee self-service' and the HRMS nature implies employee master, leave management, and time & attendance as foundational HR operations."
+            },
+            "payroll_compliance": {
+              "covered_caps": [
+                "hr.payroll_processing",
+                "hr.payslips",
+                "hr.statutory_reporting",
+                "hr.compensation_benefits"
+              ],
+              "partial_caps": [
+                "hr.overtime_variable_pay",
+                "hr.benefits_administration"
+              ],
+              "verdict": "partial",
+              "reason": "Solution explicitly covers 'one-click submissions to CPF, IRAS, and MOM' and 'payroll' with 'flexible configuration', but overtime/variable pay and benefits administration are not explicitly mentioned."
+            },
+            "talent_learning": {
+              "covered_caps": [],
+              "partial_caps": [],
+              "verdict": "none",
+              "reason": "No mention of recruitment, ATS, onboarding, performance management, or HR document management in the solution description."
+            }
+          },
+          "verdict": "single_core_full",
+          "summary_reason": "Zealys HRMS fully covers the core_hr_operations core with all four mandatory capabilities (employee master, leave management, time & attendance, and self-service portal), partially covers payroll_compliance, and does not cover talent_learning."
         }
       }
     }
