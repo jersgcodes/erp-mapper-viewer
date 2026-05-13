@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-05-14T01:12:54.740181+08:00",
+    "generated_at": "2026-05-14T01:41:38.655046+08:00",
     "modules_in_scope": [
       "financial",
       "sales_crm",
@@ -13,7 +13,7 @@
     "user_baseline": 10,
     "one_time_maintenance_pct": 0.2,
     "vendor_count_total": 37,
-    "vendor_count_with_pricing": 14
+    "vendor_count_with_pricing": 18
   },
   "modules": {
     "financial": {
@@ -609,21 +609,26 @@
               "tier": "mid",
               "vendor_type": "erp_suite",
               "pricing_status": "quote_on_request",
-              "base_plan_name": null,
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
               "base_price_sgd_month_norm": null,
-              "base_price_label": null,
+              "base_price_label": "quote-on-request",
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 3,
               "mandatory_total": 8,
-              "mandatory_pct": 0,
+              "mandatory_pct": 38,
               "add_on_caps": [],
-              "no_pricing_data": true,
+              "no_pricing_data": false,
               "year1_total_sgd": null,
-              "year1_breakdown": {},
-              "year1_source": "no_data",
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
               "psg_packages": [],
-              "extracted_at": null,
-              "source_url": "https://www.epicor.com/en/erp-systems/kinetic/"
+              "extracted_at": "2026-05-14T01:39:44.015844+08:00",
+              "source_url": "https://www.epicor.com/en-us/products/kinetic/"
             }
           ],
           "avg_base_price_sgd_month": 108,
@@ -704,14 +709,15 @@
           "cap_id": "fin.financial_reporting",
           "name": "Financial Reporting & Statements",
           "sub_module": "Core Ledger & Close",
-          "covered_in_base_at_count": 4,
+          "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 10,
+          "not_covered_count": 9,
           "covered_in_base_vendors": [
             "odoo_online",
             "xero",
             "sap_business_one",
-            "globe3_erp"
+            "globe3_erp",
+            "epicor_kinetic"
           ],
           "covered_as_addon_vendors": []
         },
@@ -719,10 +725,12 @@
           "cap_id": "fin.budgeting_forecasting",
           "name": "Budgeting & Forecasting",
           "sub_module": "Planning & Analytics (Finance)",
-          "covered_in_base_at_count": 0,
+          "covered_in_base_at_count": 1,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 14,
-          "covered_in_base_vendors": [],
+          "not_covered_count": 13,
+          "covered_in_base_vendors": [
+            "epicor_kinetic"
+          ],
           "covered_as_addon_vendors": []
         },
         {
@@ -743,14 +751,15 @@
           "cap_id": "fin.analytics_dashboards",
           "name": "Financial Analytics",
           "sub_module": "Planning & Analytics (Finance)",
-          "covered_in_base_at_count": 4,
+          "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 10,
+          "not_covered_count": 9,
           "covered_in_base_vendors": [
             "odoo_online",
             "xero",
             "sap_business_one",
-            "sage_300"
+            "sage_300",
+            "epicor_kinetic"
           ],
           "covered_as_addon_vendors": []
         }
@@ -843,10 +852,10 @@
               "any": "in_base"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -937,10 +946,10 @@
               "any": "in_base"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -1031,10 +1040,10 @@
               "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -1125,10 +1134,10 @@
               "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -1219,10 +1228,10 @@
               "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -1313,10 +1322,10 @@
               "any": "in_base"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -1407,10 +1416,10 @@
               "any": "in_base"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -1501,10 +1510,10 @@
               "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -1595,10 +1604,10 @@
               "any": "in_base"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -1689,10 +1698,10 @@
               "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -1783,10 +1792,10 @@
               "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -1877,10 +1886,10 @@
               "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -1971,10 +1980,10 @@
               "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -2065,10 +2074,10 @@
               "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -2159,10 +2168,10 @@
               "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -2253,10 +2262,10 @@
               "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -2347,10 +2356,10 @@
               "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -2441,10 +2450,10 @@
               "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -2535,10 +2544,10 @@
               "any": "in_base"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         }
@@ -5073,21 +5082,26 @@
               "tier": "enterprise",
               "vendor_type": "enterprise",
               "pricing_status": "quote_on_request",
-              "base_plan_name": null,
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
               "base_price_sgd_month_norm": null,
-              "base_price_label": null,
+              "base_price_label": "quote-on-request",
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 7,
               "mandatory_total": 14,
-              "mandatory_pct": 0,
+              "mandatory_pct": 50,
               "add_on_caps": [],
-              "no_pricing_data": true,
+              "no_pricing_data": false,
               "year1_total_sgd": null,
-              "year1_breakdown": {},
-              "year1_source": "no_data",
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
               "psg_packages": [],
-              "extracted_at": null,
-              "source_url": "https://www.workday.com/en-us/pricing.html"
+              "extracted_at": "2026-05-14T01:40:02.968939+08:00",
+              "source_url": "https://www.workday.com/en-us/products/human-capital-management/overview.html"
             }
           ],
           "avg_base_price_sgd_month": null,
@@ -5100,12 +5114,13 @@
           "cap_id": "hr.employee_master",
           "name": "Employee Master & HRIS",
           "sub_module": "Core HR",
-          "covered_in_base_at_count": 2,
+          "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 6,
+          "not_covered_count": 5,
           "covered_in_base_vendors": [
             "odoo_online",
-            "justlogin_hr"
+            "justlogin_hr",
+            "workday_hcm"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5127,20 +5142,6 @@
           "cap_id": "hr.time_attendance",
           "name": "Time & Attendance",
           "sub_module": "Time & Attendance",
-          "covered_in_base_at_count": 3,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
-          "covered_in_base_vendors": [
-            "odoo_online",
-            "justlogin_hr",
-            "info_tech_hrms"
-          ],
-          "covered_as_addon_vendors": []
-        },
-        {
-          "cap_id": "hr.payroll_processing",
-          "name": "Payroll Processing",
-          "sub_module": "Payroll & Statutory (SG)",
           "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
           "not_covered_count": 4,
@@ -5148,7 +5149,23 @@
             "odoo_online",
             "justlogin_hr",
             "info_tech_hrms",
-            "talenox"
+            "workday_hcm"
+          ],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "hr.payroll_processing",
+          "name": "Payroll Processing",
+          "sub_module": "Payroll & Statutory (SG)",
+          "covered_in_base_at_count": 5,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 3,
+          "covered_in_base_vendors": [
+            "odoo_online",
+            "justlogin_hr",
+            "info_tech_hrms",
+            "talenox",
+            "workday_hcm"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5182,11 +5199,12 @@
           "cap_id": "hr.self_service_portal",
           "name": "Self-Service Portal",
           "sub_module": "Core HR",
-          "covered_in_base_at_count": 1,
+          "covered_in_base_at_count": 2,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 7,
+          "not_covered_count": 6,
           "covered_in_base_vendors": [
-            "odoo_online"
+            "odoo_online",
+            "workday_hcm"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5207,13 +5225,14 @@
           "cap_id": "hr.recruitment_ats",
           "name": "Recruitment & ATS",
           "sub_module": "Talent Acquisition & Compensation",
-          "covered_in_base_at_count": 3,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
+          "not_covered_count": 4,
           "covered_in_base_vendors": [
             "odoo_online",
             "justlogin_hr",
-            "info_tech_hrms"
+            "info_tech_hrms",
+            "workday_hcm"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5234,12 +5253,13 @@
           "cap_id": "hr.compensation_benefits",
           "name": "Compensation Management",
           "sub_module": "Talent Acquisition & Compensation",
-          "covered_in_base_at_count": 2,
+          "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 6,
+          "not_covered_count": 5,
           "covered_in_base_vendors": [
             "odoo_online",
-            "justlogin_hr"
+            "justlogin_hr",
+            "workday_hcm"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5247,11 +5267,12 @@
           "cap_id": "hr.benefits_administration",
           "name": "Benefits Administration",
           "sub_module": "Talent Acquisition & Compensation",
-          "covered_in_base_at_count": 1,
+          "covered_in_base_at_count": 2,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 7,
+          "not_covered_count": 6,
           "covered_in_base_vendors": [
-            "odoo_online"
+            "odoo_online",
+            "workday_hcm"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5335,10 +5356,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -5393,10 +5414,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -5451,10 +5472,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -5509,10 +5530,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -5567,10 +5588,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -5625,10 +5646,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -5683,10 +5704,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -5741,10 +5762,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -5799,10 +5820,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -5857,10 +5878,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -5915,10 +5936,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -5973,10 +5994,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -6031,10 +6052,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -6089,10 +6110,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -6147,10 +6168,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -6205,10 +6226,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -6263,10 +6284,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -6321,10 +6342,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -6379,10 +6400,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -6437,10 +6458,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -6495,10 +6516,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -6553,10 +6574,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -6611,10 +6632,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -6669,10 +6690,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -6727,10 +6748,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -6785,10 +6806,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -6843,10 +6864,10 @@
               "any": "no_data"
             },
             "workday_hcm": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         }
@@ -6894,7 +6915,7 @@
       "by_tier": {
         "sme": {
           "vendor_count_total": 9,
-          "vendor_count_with_pricing": 5,
+          "vendor_count_with_pricing": 6,
           "vendors": [
             {
               "id": "odoo_online",
@@ -7196,24 +7217,29 @@
               "tier": "sme",
               "vendor_type": "erp_suite",
               "pricing_status": "public",
-              "base_plan_name": null,
-              "base_price_sgd_month_norm": null,
-              "base_price_label": null,
-              "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "base_plan_name": "Core Plan",
+              "base_price_sgd_month_norm": 403.65000000000003,
+              "base_price_label": "299 USD/mo flat",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 5,
               "mandatory_total": 7,
-              "mandatory_pct": 0,
+              "mandatory_pct": 71,
               "add_on_caps": [],
-              "no_pricing_data": true,
-              "year1_total_sgd": null,
-              "year1_breakdown": {},
-              "year1_source": "no_data",
+              "no_pricing_data": false,
+              "year1_total_sgd": 7543.8,
+              "year1_breakdown": {
+                "software_year_sgd": 4843.8,
+                "ps_one_time_sgd": 2700.0,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "website_granular",
               "psg_packages": [],
-              "extracted_at": null,
+              "extracted_at": "2026-05-14T01:30:08.965344+08:00",
               "source_url": "https://katanamrp.com/pricing/"
             }
           ],
-          "avg_base_price_sgd_month": 254,
+          "avg_base_price_sgd_month": 284,
           "min_base_price_sgd_month": 7,
           "max_base_price_sgd_month": 471
         },
@@ -7448,20 +7474,25 @@
               "tier": "mid",
               "vendor_type": "sg_local_non_psg",
               "pricing_status": "quote_on_request",
-              "base_plan_name": null,
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
               "base_price_sgd_month_norm": null,
-              "base_price_label": null,
+              "base_price_label": "quote-on-request",
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 1,
               "mandatory_total": 7,
-              "mandatory_pct": 0,
+              "mandatory_pct": 14,
               "add_on_caps": [],
-              "no_pricing_data": true,
+              "no_pricing_data": false,
               "year1_total_sgd": null,
-              "year1_breakdown": {},
-              "year1_source": "no_data",
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
               "psg_packages": [],
-              "extracted_at": null,
+              "extracted_at": "2026-05-14T01:40:08.487890+08:00",
               "source_url": "https://www.infolog.com.sg/"
             },
             {
@@ -7470,21 +7501,26 @@
               "tier": "mid",
               "vendor_type": "enterprise",
               "pricing_status": "quote_on_request",
-              "base_plan_name": null,
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
               "base_price_sgd_month_norm": null,
-              "base_price_label": null,
+              "base_price_label": "quote-on-request",
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 2,
               "mandatory_total": 7,
-              "mandatory_pct": 0,
+              "mandatory_pct": 29,
               "add_on_caps": [],
-              "no_pricing_data": true,
+              "no_pricing_data": false,
               "year1_total_sgd": null,
-              "year1_breakdown": {},
-              "year1_source": "no_data",
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
               "psg_packages": [],
-              "extracted_at": null,
-              "source_url": "https://www.anchanto.com/products/pricing/"
+              "extracted_at": "2026-05-14T01:39:51.930908+08:00",
+              "source_url": "https://www.anchanto.com/"
             },
             {
               "id": "epicor_kinetic",
@@ -7492,21 +7528,26 @@
               "tier": "mid",
               "vendor_type": "erp_suite",
               "pricing_status": "quote_on_request",
-              "base_plan_name": null,
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
               "base_price_sgd_month_norm": null,
-              "base_price_label": null,
+              "base_price_label": "quote-on-request",
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 1,
               "mandatory_total": 7,
-              "mandatory_pct": 0,
+              "mandatory_pct": 14,
               "add_on_caps": [],
-              "no_pricing_data": true,
+              "no_pricing_data": false,
               "year1_total_sgd": null,
-              "year1_breakdown": {},
-              "year1_source": "no_data",
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
               "psg_packages": [],
-              "extracted_at": null,
-              "source_url": "https://www.epicor.com/en/erp-systems/kinetic/"
+              "extracted_at": "2026-05-14T01:39:44.015844+08:00",
+              "source_url": "https://www.epicor.com/en-us/products/kinetic/"
             }
           ],
           "avg_base_price_sgd_month": 108,
@@ -7523,20 +7564,25 @@
               "tier": "enterprise",
               "vendor_type": "enterprise",
               "pricing_status": "quote_on_request",
-              "base_plan_name": null,
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
               "base_price_sgd_month_norm": null,
-              "base_price_label": null,
+              "base_price_label": "quote-on-request",
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 3,
               "mandatory_total": 7,
-              "mandatory_pct": 0,
+              "mandatory_pct": 43,
               "add_on_caps": [],
-              "no_pricing_data": true,
+              "no_pricing_data": false,
               "year1_total_sgd": null,
-              "year1_breakdown": {},
-              "year1_source": "no_data",
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
               "psg_packages": [],
-              "extracted_at": null,
+              "extracted_at": "2026-05-14T01:40:12.458261+08:00",
               "source_url": "https://www.softeon.com/"
             },
             {
@@ -7581,7 +7627,7 @@
               "year1_source": "no_data",
               "psg_packages": [],
               "extracted_at": null,
-              "source_url": "https://www.infor.com/products/cloudsuite-industrial"
+              "source_url": "https://www.infor.com/products/cloudsuite-industrial-enterprise"
             }
           ],
           "avg_base_price_sgd_month": null,
@@ -7594,13 +7640,14 @@
           "cap_id": "sc.item_master",
           "name": "Item Master Management",
           "sub_module": "Inventory Core",
-          "covered_in_base_at_count": 5,
+          "covered_in_base_at_count": 6,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 14,
+          "not_covered_count": 13,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
             "fishbowl",
+            "katana_mrp",
             "sap_business_one",
             "globe3_erp"
           ],
@@ -7610,15 +7657,19 @@
           "cap_id": "sc.stock_levels",
           "name": "Stock Levels & Warehouse",
           "sub_module": "Inventory Core",
-          "covered_in_base_at_count": 5,
+          "covered_in_base_at_count": 9,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 14,
+          "not_covered_count": 10,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
             "fishbowl",
+            "katana_mrp",
             "sap_business_one",
-            "globe3_erp"
+            "globe3_erp",
+            "infolog",
+            "anchanto",
+            "ifs_softeon"
           ],
           "covered_as_addon_vendors": []
         },
@@ -7626,12 +7677,13 @@
           "cap_id": "sc.purchase_orders",
           "name": "Purchase Orders & Procurement",
           "sub_module": "Procurement",
-          "covered_in_base_at_count": 4,
+          "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 15,
+          "not_covered_count": 14,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
+            "katana_mrp",
             "sap_business_one",
             "globe3_erp"
           ],
@@ -7641,12 +7693,13 @@
           "cap_id": "sc.vendor_master",
           "name": "Vendor & Supplier Master",
           "sub_module": "Procurement",
-          "covered_in_base_at_count": 4,
+          "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 15,
+          "not_covered_count": 14,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
+            "katana_mrp",
             "sap_business_one",
             "globe3_erp"
           ],
@@ -7656,13 +7709,14 @@
           "cap_id": "sc.reorder_rules",
           "name": "Reorder Rules & Replenishment",
           "sub_module": "Supply Planning & Replenishment",
-          "covered_in_base_at_count": 3,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 15,
+          "not_covered_count": 14,
           "covered_in_base_vendors": [
             "odoo_online",
             "fishbowl",
-            "sap_business_one"
+            "sap_business_one",
+            "ifs_softeon"
           ],
           "covered_as_addon_vendors": [
             "cin7"
@@ -7688,14 +7742,18 @@
           "cap_id": "sc.supply_chain_analytics",
           "name": "Supply Chain Analytics",
           "sub_module": "Supply Chain Analytics",
-          "covered_in_base_at_count": 4,
+          "covered_in_base_at_count": 8,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 14,
+          "not_covered_count": 10,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
+            "katana_mrp",
             "sap_business_one",
-            "globe3_erp"
+            "globe3_erp",
+            "anchanto",
+            "epicor_kinetic",
+            "ifs_softeon"
           ],
           "covered_as_addon_vendors": [
             "fishbowl"
@@ -7760,10 +7818,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -7790,28 +7848,28 @@
               "any": "in_base"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -7884,10 +7942,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -7914,28 +7972,28 @@
               "any": "in_base"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -8008,10 +8066,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -8038,28 +8096,28 @@
               "any": "in_base"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -8132,10 +8190,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -8162,28 +8220,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -8256,10 +8314,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -8286,28 +8344,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -8380,10 +8438,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -8410,28 +8468,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -8504,10 +8562,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -8534,28 +8592,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -8628,10 +8686,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -8658,28 +8716,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -8752,10 +8810,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -8782,28 +8840,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -8876,10 +8934,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -8906,28 +8964,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -9000,10 +9058,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -9030,28 +9088,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -9124,10 +9182,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -9154,28 +9212,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -9248,10 +9306,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -9278,28 +9336,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -9372,10 +9430,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -9402,28 +9460,28 @@
               "any": "in_base"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -9496,10 +9554,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -9526,28 +9584,28 @@
               "any": "in_base"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -9620,10 +9678,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -9650,28 +9708,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -9744,10 +9802,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -9774,28 +9832,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -9868,10 +9926,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -9898,28 +9956,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -9992,10 +10050,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -10022,28 +10080,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -10116,10 +10174,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -10146,28 +10204,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -10240,10 +10298,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -10270,28 +10328,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -10364,10 +10422,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -10394,28 +10452,28 @@
               "any": "not_covered"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -10488,10 +10546,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -10518,28 +10576,28 @@
               "any": "in_base"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -10612,10 +10670,10 @@
               "any": "no_data"
             },
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -10642,28 +10700,28 @@
               "any": "in_base"
             },
             "infolog": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "anchanto": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "ifs_softeon": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "project_argus": {
               "cheapest": "no_data",
@@ -10738,7 +10796,7 @@
       "by_tier": {
         "sme": {
           "vendor_count_total": 1,
-          "vendor_count_with_pricing": 0,
+          "vendor_count_with_pricing": 1,
           "vendors": [
             {
               "id": "katana_mrp",
@@ -10746,26 +10804,104 @@
               "tier": "sme",
               "vendor_type": "erp_suite",
               "pricing_status": "public",
-              "base_plan_name": null,
-              "base_price_sgd_month_norm": null,
-              "base_price_label": null,
-              "currency_orig": null,
+              "base_plan_name": "Core Plan",
+              "base_price_sgd_month_norm": 403.65000000000003,
+              "base_price_label": "299 USD/mo flat",
+              "currency_orig": "USD",
               "mandatory_covered_in_base": 0,
               "mandatory_total": 10,
               "mandatory_pct": 0,
-              "add_on_caps": [],
-              "no_pricing_data": true,
-              "year1_total_sgd": null,
-              "year1_breakdown": {},
-              "year1_source": "no_data",
+              "add_on_caps": [
+                {
+                  "cap_id": "mfg.bom",
+                  "addon_name": "Manufacturing Management",
+                  "addon_price_sgd_month_norm": 268.65000000000003,
+                  "addon_price_label": "199 USD/mo flat"
+                },
+                {
+                  "cap_id": "mfg.routing",
+                  "addon_name": "Manufacturing Management",
+                  "addon_price_sgd_month_norm": 268.65000000000003,
+                  "addon_price_label": "199 USD/mo flat"
+                },
+                {
+                  "cap_id": "mfg.work_orders",
+                  "addon_name": "Manufacturing Management",
+                  "addon_price_sgd_month_norm": 268.65000000000003,
+                  "addon_price_label": "199 USD/mo flat"
+                },
+                {
+                  "cap_id": "mfg.mrp",
+                  "addon_name": "Manufacturing Management",
+                  "addon_price_sgd_month_norm": 268.65000000000003,
+                  "addon_price_label": "199 USD/mo flat"
+                },
+                {
+                  "cap_id": "mfg.production_scheduling",
+                  "addon_name": "Manufacturing Management",
+                  "addon_price_sgd_month_norm": 268.65000000000003,
+                  "addon_price_label": "199 USD/mo flat"
+                },
+                {
+                  "cap_id": "mfg.inventory_wip",
+                  "addon_name": "Manufacturing Management",
+                  "addon_price_sgd_month_norm": 268.65000000000003,
+                  "addon_price_label": "199 USD/mo flat"
+                },
+                {
+                  "cap_id": "mfg.product_costing",
+                  "addon_name": "Manufacturing Management",
+                  "addon_price_sgd_month_norm": 268.65000000000003,
+                  "addon_price_label": "199 USD/mo flat"
+                },
+                {
+                  "cap_id": "mfg.traceability_genealogy",
+                  "addon_name": "Manufacturing Management",
+                  "addon_price_sgd_month_norm": 268.65000000000003,
+                  "addon_price_label": "199 USD/mo flat"
+                },
+                {
+                  "cap_id": "mfg.quality_management",
+                  "addon_name": "Manufacturing Management",
+                  "addon_price_sgd_month_norm": 268.65000000000003,
+                  "addon_price_label": "199 USD/mo flat"
+                },
+                {
+                  "cap_id": "mfg.safety_compliance",
+                  "addon_name": "Manufacturing Management",
+                  "addon_price_sgd_month_norm": 268.65000000000003,
+                  "addon_price_label": "199 USD/mo flat"
+                },
+                {
+                  "cap_id": "mfg.inventory_wip",
+                  "addon_name": "Inventory management",
+                  "addon_price_sgd_month_norm": 336.15000000000003,
+                  "addon_price_label": "249 USD/mo flat"
+                },
+                {
+                  "cap_id": "mfg.traceability_genealogy",
+                  "addon_name": "Traceability Add-on",
+                  "addon_price_sgd_month_norm": null,
+                  "addon_price_label": "quote-on-request"
+                }
+              ],
+              "no_pricing_data": false,
+              "year1_total_sgd": 7543.8,
+              "year1_breakdown": {
+                "software_year_sgd": 4843.8,
+                "ps_one_time_sgd": 2700.0,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "website_granular",
               "psg_packages": [],
-              "extracted_at": null,
+              "extracted_at": "2026-05-14T01:30:08.965344+08:00",
               "source_url": "https://katanamrp.com/pricing/"
             }
           ],
-          "avg_base_price_sgd_month": null,
-          "min_base_price_sgd_month": null,
-          "max_base_price_sgd_month": null
+          "avg_base_price_sgd_month": 404,
+          "min_base_price_sgd_month": 404,
+          "max_base_price_sgd_month": 404
         },
         "mid": {
           "vendor_count_total": 2,
@@ -10799,21 +10935,26 @@
               "tier": "mid",
               "vendor_type": "erp_suite",
               "pricing_status": "quote_on_request",
-              "base_plan_name": null,
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
               "base_price_sgd_month_norm": null,
-              "base_price_label": null,
+              "base_price_label": "quote-on-request",
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 2,
               "mandatory_total": 10,
-              "mandatory_pct": 0,
+              "mandatory_pct": 20,
               "add_on_caps": [],
-              "no_pricing_data": true,
+              "no_pricing_data": false,
               "year1_total_sgd": null,
-              "year1_breakdown": {},
-              "year1_source": "no_data",
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
               "psg_packages": [],
-              "extracted_at": null,
-              "source_url": "https://www.epicor.com/en/erp-systems/kinetic/"
+              "extracted_at": "2026-05-14T01:39:44.015844+08:00",
+              "source_url": "https://www.epicor.com/en-us/products/kinetic/"
             }
           ],
           "avg_base_price_sgd_month": null,
@@ -10830,21 +10971,26 @@
               "tier": "enterprise",
               "vendor_type": "enterprise",
               "pricing_status": "quote_on_request",
-              "base_plan_name": null,
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
               "base_price_sgd_month_norm": null,
-              "base_price_label": null,
+              "base_price_label": "quote-on-request",
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 2,
               "mandatory_total": 10,
-              "mandatory_pct": 0,
+              "mandatory_pct": 20,
               "add_on_caps": [],
-              "no_pricing_data": true,
+              "no_pricing_data": false,
               "year1_total_sgd": null,
-              "year1_breakdown": {},
-              "year1_source": "no_data",
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
               "psg_packages": [],
-              "extracted_at": null,
-              "source_url": "https://www.plex.com/products/smart-manufacturing-platform"
+              "extracted_at": "2026-05-14T01:39:28.878816+08:00",
+              "source_url": "https://www.plex.com/products"
             },
             {
               "id": "infor_cloudsuite_industrial",
@@ -10866,7 +11012,7 @@
               "year1_source": "no_data",
               "psg_packages": [],
               "extracted_at": null,
-              "source_url": "https://www.infor.com/products/cloudsuite-industrial"
+              "source_url": "https://www.infor.com/products/cloudsuite-industrial-enterprise"
             }
           ],
           "avg_base_price_sgd_month": null,
@@ -10880,100 +11026,128 @@
           "name": "Bill of Materials",
           "sub_module": "Product Engineering & PLM",
           "covered_in_base_at_count": 0,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
+          "covered_as_addon_at_count": 1,
+          "not_covered_count": 4,
           "covered_in_base_vendors": [],
-          "covered_as_addon_vendors": []
+          "covered_as_addon_vendors": [
+            "katana_mrp"
+          ]
         },
         {
           "cap_id": "mfg.routing",
           "name": "Routings, Operations & Work Centers",
           "sub_module": "Product Engineering & PLM",
           "covered_in_base_at_count": 0,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
+          "covered_as_addon_at_count": 1,
+          "not_covered_count": 4,
           "covered_in_base_vendors": [],
-          "covered_as_addon_vendors": []
+          "covered_as_addon_vendors": [
+            "katana_mrp"
+          ]
         },
         {
           "cap_id": "mfg.work_orders",
           "name": "Work Orders & Job Cards",
           "sub_module": "Production Execution (MES)",
           "covered_in_base_at_count": 0,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
+          "covered_as_addon_at_count": 1,
+          "not_covered_count": 4,
           "covered_in_base_vendors": [],
-          "covered_as_addon_vendors": []
+          "covered_as_addon_vendors": [
+            "katana_mrp"
+          ]
         },
         {
           "cap_id": "mfg.mrp",
           "name": "Material Requirements Planning",
           "sub_module": "Planning & Costing (Manufacturing)",
-          "covered_in_base_at_count": 0,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
-          "covered_in_base_vendors": [],
-          "covered_as_addon_vendors": []
+          "covered_in_base_at_count": 1,
+          "covered_as_addon_at_count": 1,
+          "not_covered_count": 3,
+          "covered_in_base_vendors": [
+            "epicor_kinetic"
+          ],
+          "covered_as_addon_vendors": [
+            "katana_mrp"
+          ]
         },
         {
           "cap_id": "mfg.production_scheduling",
           "name": "Production Scheduling & Capacity Planning",
           "sub_module": "Production Execution (MES)",
-          "covered_in_base_at_count": 0,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
-          "covered_in_base_vendors": [],
-          "covered_as_addon_vendors": []
+          "covered_in_base_at_count": 1,
+          "covered_as_addon_at_count": 1,
+          "not_covered_count": 3,
+          "covered_in_base_vendors": [
+            "epicor_kinetic"
+          ],
+          "covered_as_addon_vendors": [
+            "katana_mrp"
+          ]
         },
         {
           "cap_id": "mfg.quality_management",
           "name": "Quality Management",
           "sub_module": "Quality & Compliance (QMS)",
-          "covered_in_base_at_count": 0,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
-          "covered_in_base_vendors": [],
-          "covered_as_addon_vendors": []
+          "covered_in_base_at_count": 1,
+          "covered_as_addon_at_count": 1,
+          "not_covered_count": 3,
+          "covered_in_base_vendors": [
+            "plex_smart_manufacturing"
+          ],
+          "covered_as_addon_vendors": [
+            "katana_mrp"
+          ]
         },
         {
           "cap_id": "mfg.inventory_wip",
           "name": "Inventory & Work-in-Progress Tracking",
           "sub_module": "Planning & Costing (Manufacturing)",
-          "covered_in_base_at_count": 0,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
-          "covered_in_base_vendors": [],
-          "covered_as_addon_vendors": []
+          "covered_in_base_at_count": 1,
+          "covered_as_addon_at_count": 1,
+          "not_covered_count": 3,
+          "covered_in_base_vendors": [
+            "plex_smart_manufacturing"
+          ],
+          "covered_as_addon_vendors": [
+            "katana_mrp"
+          ]
         },
         {
           "cap_id": "mfg.product_costing",
           "name": "Product Costing & Variance Analysis",
           "sub_module": "Planning & Costing (Manufacturing)",
           "covered_in_base_at_count": 0,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
+          "covered_as_addon_at_count": 1,
+          "not_covered_count": 4,
           "covered_in_base_vendors": [],
-          "covered_as_addon_vendors": []
+          "covered_as_addon_vendors": [
+            "katana_mrp"
+          ]
         },
         {
           "cap_id": "mfg.traceability_genealogy",
           "name": "Lot/Serial Traceability & Genealogy",
           "sub_module": "Quality & Compliance (QMS)",
           "covered_in_base_at_count": 0,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
+          "covered_as_addon_at_count": 1,
+          "not_covered_count": 4,
           "covered_in_base_vendors": [],
-          "covered_as_addon_vendors": []
+          "covered_as_addon_vendors": [
+            "katana_mrp"
+          ]
         },
         {
           "cap_id": "mfg.safety_compliance",
           "name": "Manufacturing EHS Compliance",
           "sub_module": "Quality & Compliance (QMS)",
           "covered_in_base_at_count": 0,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
+          "covered_as_addon_at_count": 1,
+          "not_covered_count": 4,
           "covered_in_base_vendors": [],
-          "covered_as_addon_vendors": []
+          "covered_as_addon_vendors": [
+            "katana_mrp"
+          ]
         }
       ],
       "caps_with_vendor_coverage": [
@@ -10986,10 +11160,10 @@
           "checklist_order": 0,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "add_on"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -10998,16 +11172,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11026,10 +11200,10 @@
           "checklist_order": 1,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11038,16 +11212,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11066,10 +11240,10 @@
           "checklist_order": 2,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11078,16 +11252,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11106,10 +11280,10 @@
           "checklist_order": 3,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11118,16 +11292,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11146,10 +11320,10 @@
           "checklist_order": 4,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "add_on"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11158,16 +11332,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11186,10 +11360,10 @@
           "checklist_order": 5,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "add_on"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11198,16 +11372,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11226,10 +11400,10 @@
           "checklist_order": 6,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "add_on"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11238,16 +11412,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11266,10 +11440,10 @@
           "checklist_order": 7,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11278,16 +11452,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11306,10 +11480,10 @@
           "checklist_order": 8,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11318,16 +11492,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11346,10 +11520,10 @@
           "checklist_order": 9,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11358,16 +11532,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11386,10 +11560,10 @@
           "checklist_order": 10,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11398,16 +11572,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11426,10 +11600,10 @@
           "checklist_order": 11,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "add_on"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11438,16 +11612,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11466,10 +11640,10 @@
           "checklist_order": 12,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11478,16 +11652,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11506,10 +11680,10 @@
           "checklist_order": 13,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11518,16 +11692,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11546,10 +11720,10 @@
           "checklist_order": 14,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11558,16 +11732,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11586,10 +11760,10 @@
           "checklist_order": 15,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11598,16 +11772,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11626,10 +11800,10 @@
           "checklist_order": 16,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "add_on"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11638,16 +11812,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11666,10 +11840,10 @@
           "checklist_order": 17,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "add_on"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11678,16 +11852,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11706,10 +11880,10 @@
           "checklist_order": 18,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "in_base"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11718,16 +11892,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11746,10 +11920,10 @@
           "checklist_order": 19,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "add_on"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11758,16 +11932,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11786,10 +11960,10 @@
           "checklist_order": 20,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11798,16 +11972,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11826,10 +12000,10 @@
           "checklist_order": 21,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11838,16 +12012,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11866,10 +12040,10 @@
           "checklist_order": 22,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11878,16 +12052,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11906,10 +12080,10 @@
           "checklist_order": 23,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11918,16 +12092,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -11946,10 +12120,10 @@
           "checklist_order": 24,
           "vendor_coverage": {
             "katana_mrp": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -11958,16 +12132,16 @@
               "any": "no_data"
             },
             "epicor_kinetic": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "plex_smart_manufacturing": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
@@ -12031,7 +12205,7 @@
       "by_tier": {
         "sme": {
           "vendor_count_total": 2,
-          "vendor_count_with_pricing": 0,
+          "vendor_count_with_pricing": 2,
           "vendors": [
             {
               "id": "upkeep",
@@ -12039,20 +12213,25 @@
               "tier": "sme",
               "vendor_type": "erp_suite",
               "pricing_status": "public",
-              "base_plan_name": null,
-              "base_price_sgd_month_norm": null,
-              "base_price_label": null,
-              "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "base_plan_name": "Maintenance Essential",
+              "base_price_sgd_month_norm": 324.00000000000006,
+              "base_price_label": "24 USD/u/mo × 10 users",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 2,
               "mandatory_total": 9,
-              "mandatory_pct": 0,
+              "mandatory_pct": 22,
               "add_on_caps": [],
-              "no_pricing_data": true,
-              "year1_total_sgd": null,
-              "year1_breakdown": {},
-              "year1_source": "no_data",
+              "no_pricing_data": false,
+              "year1_total_sgd": 3888.000000000001,
+              "year1_breakdown": {
+                "software_year_sgd": 3888.000000000001,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "website_software_only",
               "psg_packages": [],
-              "extracted_at": null,
+              "extracted_at": "2026-05-14T01:30:35.741770+08:00",
               "source_url": "https://www.upkeep.com/pricing"
             },
             {
@@ -12061,30 +12240,35 @@
               "tier": "sme",
               "vendor_type": "erp_suite",
               "pricing_status": "public",
-              "base_plan_name": null,
-              "base_price_sgd_month_norm": null,
-              "base_price_label": null,
-              "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "base_plan_name": "Essential",
+              "base_price_sgd_month_norm": 270.0,
+              "base_price_label": "20 USD/u/mo × 10 users",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 2,
               "mandatory_total": 9,
-              "mandatory_pct": 0,
+              "mandatory_pct": 22,
               "add_on_caps": [],
-              "no_pricing_data": true,
-              "year1_total_sgd": null,
-              "year1_breakdown": {},
-              "year1_source": "no_data",
+              "no_pricing_data": false,
+              "year1_total_sgd": 3240.0,
+              "year1_breakdown": {
+                "software_year_sgd": 3240.0,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "website_software_only",
               "psg_packages": [],
-              "extracted_at": null,
+              "extracted_at": "2026-05-14T01:31:15.146356+08:00",
               "source_url": "https://www.getmaintainx.com/pricing"
             }
           ],
-          "avg_base_price_sgd_month": null,
-          "min_base_price_sgd_month": null,
-          "max_base_price_sgd_month": null
+          "avg_base_price_sgd_month": 297,
+          "min_base_price_sgd_month": 270,
+          "max_base_price_sgd_month": 324
         },
         "mid": {
           "vendor_count_total": 1,
-          "vendor_count_with_pricing": 0,
+          "vendor_count_with_pricing": 1,
           "vendors": [
             {
               "id": "fiix",
@@ -12092,26 +12276,31 @@
               "tier": "mid",
               "vendor_type": "erp_suite",
               "pricing_status": "public",
-              "base_plan_name": null,
-              "base_price_sgd_month_norm": null,
-              "base_price_label": null,
-              "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "base_plan_name": "Basic",
+              "base_price_sgd_month_norm": 607.5000000000001,
+              "base_price_label": "45 USD/u/mo × 10 users",
+              "currency_orig": "USD",
+              "mandatory_covered_in_base": 3,
               "mandatory_total": 9,
-              "mandatory_pct": 0,
+              "mandatory_pct": 33,
               "add_on_caps": [],
-              "no_pricing_data": true,
-              "year1_total_sgd": null,
-              "year1_breakdown": {},
-              "year1_source": "no_data",
+              "no_pricing_data": false,
+              "year1_total_sgd": 7290.000000000002,
+              "year1_breakdown": {
+                "software_year_sgd": 7290.000000000002,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "website_software_only",
               "psg_packages": [],
-              "extracted_at": null,
+              "extracted_at": "2026-05-14T01:30:58.079366+08:00",
               "source_url": "https://www.fiixsoftware.com/pricing/"
             }
           ],
-          "avg_base_price_sgd_month": null,
-          "min_base_price_sgd_month": null,
-          "max_base_price_sgd_month": null
+          "avg_base_price_sgd_month": 608,
+          "min_base_price_sgd_month": 608,
+          "max_base_price_sgd_month": 608
         },
         "enterprise": {
           "vendor_count_total": 2,
@@ -12123,20 +12312,25 @@
               "tier": "enterprise",
               "vendor_type": "enterprise",
               "pricing_status": "quote_on_request",
-              "base_plan_name": null,
+              "base_plan_name": "Client Managed Software",
               "base_price_sgd_month_norm": null,
-              "base_price_label": null,
+              "base_price_label": "quote-on-request",
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 7,
               "mandatory_total": 9,
-              "mandatory_pct": 0,
+              "mandatory_pct": 78,
               "add_on_caps": [],
-              "no_pricing_data": true,
+              "no_pricing_data": false,
               "year1_total_sgd": null,
-              "year1_breakdown": {},
-              "year1_source": "no_data",
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
               "psg_packages": [],
-              "extracted_at": null,
+              "extracted_at": "2026-05-14T01:30:17.314963+08:00",
               "source_url": "https://www.ibm.com/products/maximo"
             },
             {
@@ -12145,20 +12339,25 @@
               "tier": "enterprise",
               "vendor_type": "enterprise",
               "pricing_status": "quote_on_request",
-              "base_plan_name": null,
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
               "base_price_sgd_month_norm": null,
-              "base_price_label": null,
+              "base_price_label": "quote-on-request",
               "currency_orig": null,
-              "mandatory_covered_in_base": 0,
+              "mandatory_covered_in_base": 3,
               "mandatory_total": 9,
-              "mandatory_pct": 0,
+              "mandatory_pct": 33,
               "add_on_caps": [],
-              "no_pricing_data": true,
+              "no_pricing_data": false,
               "year1_total_sgd": null,
-              "year1_breakdown": {},
-              "year1_source": "no_data",
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
               "psg_packages": [],
-              "extracted_at": null,
+              "extracted_at": "2026-05-14T01:40:05.315999+08:00",
               "source_url": "https://www.infor.com/products/eam"
             }
           ],
@@ -12172,20 +12371,26 @@
           "cap_id": "asset.register",
           "name": "Asset Register & Hierarchy",
           "sub_module": "Asset Register & Lifecycle",
-          "covered_in_base_at_count": 0,
+          "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
-          "covered_in_base_vendors": [],
+          "not_covered_count": 2,
+          "covered_in_base_vendors": [
+            "upkeep",
+            "ibm_maximo",
+            "infor_eam"
+          ],
           "covered_as_addon_vendors": []
         },
         {
           "cap_id": "asset.lifecycle",
           "name": "Asset Lifecycle Management",
           "sub_module": "Asset Register & Lifecycle",
-          "covered_in_base_at_count": 0,
+          "covered_in_base_at_count": 1,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
-          "covered_in_base_vendors": [],
+          "not_covered_count": 4,
+          "covered_in_base_vendors": [
+            "ibm_maximo"
+          ],
           "covered_as_addon_vendors": []
         },
         {
@@ -12202,60 +12407,79 @@
           "cap_id": "asset.pm_planning",
           "name": "Preventive Maintenance Planning",
           "sub_module": "Maintenance Operations (CMMS/EAM)",
-          "covered_in_base_at_count": 0,
+          "covered_in_base_at_count": 2,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
-          "covered_in_base_vendors": [],
+          "not_covered_count": 3,
+          "covered_in_base_vendors": [
+            "fiix",
+            "ibm_maximo"
+          ],
           "covered_as_addon_vendors": []
         },
         {
           "cap_id": "asset.work_orders",
           "name": "Work Order Management",
           "sub_module": "Maintenance Operations (CMMS/EAM)",
-          "covered_in_base_at_count": 0,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
-          "covered_in_base_vendors": [],
+          "not_covered_count": 1,
+          "covered_in_base_vendors": [
+            "upkeep",
+            "maintainx",
+            "ibm_maximo",
+            "infor_eam"
+          ],
           "covered_as_addon_vendors": []
         },
         {
           "cap_id": "asset.maintenance_requests",
           "name": "Maintenance Requests",
           "sub_module": "Maintenance Operations (CMMS/EAM)",
-          "covered_in_base_at_count": 0,
+          "covered_in_base_at_count": 1,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
-          "covered_in_base_vendors": [],
+          "not_covered_count": 4,
+          "covered_in_base_vendors": [
+            "ibm_maximo"
+          ],
           "covered_as_addon_vendors": []
         },
         {
           "cap_id": "asset.spare_parts",
           "name": "Spare Parts Management",
           "sub_module": "Maintenance Operations (CMMS/EAM)",
-          "covered_in_base_at_count": 0,
+          "covered_in_base_at_count": 1,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
-          "covered_in_base_vendors": [],
+          "not_covered_count": 4,
+          "covered_in_base_vendors": [
+            "ibm_maximo"
+          ],
           "covered_as_addon_vendors": []
         },
         {
           "cap_id": "asset.analytics_kpi",
           "name": "Maintenance Analytics & KPIs",
           "sub_module": "Asset Analytics & Digital Twin",
-          "covered_in_base_at_count": 0,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
-          "covered_in_base_vendors": [],
+          "not_covered_count": 1,
+          "covered_in_base_vendors": [
+            "maintainx",
+            "fiix",
+            "ibm_maximo",
+            "infor_eam"
+          ],
           "covered_as_addon_vendors": []
         },
         {
           "cap_id": "asset.compliance",
           "name": "Inspection, Safety & Regulatory Compliance",
           "sub_module": "Compliance, HSE & OT Cybersecurity",
-          "covered_in_base_at_count": 0,
+          "covered_in_base_at_count": 1,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
-          "covered_in_base_vendors": [],
+          "not_covered_count": 4,
+          "covered_in_base_vendors": [
+            "fiix"
+          ],
           "covered_as_addon_vendors": []
         }
       ],
@@ -12269,34 +12493,34 @@
           "checklist_order": 0,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -12309,34 +12533,34 @@
           "checklist_order": 1,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -12349,34 +12573,34 @@
           "checklist_order": 2,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -12389,34 +12613,34 @@
           "checklist_order": 3,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -12429,34 +12653,34 @@
           "checklist_order": 4,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -12469,34 +12693,34 @@
           "checklist_order": 5,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -12509,34 +12733,34 @@
           "checklist_order": 6,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -12549,34 +12773,34 @@
           "checklist_order": 7,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -12589,34 +12813,34 @@
           "checklist_order": 8,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -12629,34 +12853,34 @@
           "checklist_order": 9,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -12669,34 +12893,34 @@
           "checklist_order": 10,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -12709,34 +12933,34 @@
           "checklist_order": 11,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -12749,34 +12973,34 @@
           "checklist_order": 12,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -12789,34 +13013,34 @@
           "checklist_order": 13,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -12829,34 +13053,34 @@
           "checklist_order": 14,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "in_base",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -12869,34 +13093,34 @@
           "checklist_order": 15,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -12909,34 +13133,34 @@
           "checklist_order": 16,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -12949,34 +13173,34 @@
           "checklist_order": 17,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -12989,34 +13213,34 @@
           "checklist_order": 18,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -13029,34 +13253,34 @@
           "checklist_order": 19,
           "vendor_coverage": {
             "upkeep": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "maintainx": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
             },
             "fiix": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
             },
             "ibm_maximo": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "infor_eam": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         }
