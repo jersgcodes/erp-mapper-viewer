@@ -19,7 +19,7 @@
   "capabilities": [
     {
       "id": "mfg.bom",
-      "name": "Bill of Materials (BOM)",
+      "name": "Bill of Materials",
       "description": "Structured definition of the components, quantities, and assembly relationships that make up a manufactured product. Foundation for every other manufacturing function.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -1801,7 +1801,7 @@
     },
     {
       "id": "mfg.mrp",
-      "name": "Material Requirements Planning (MRP)",
+      "name": "Material Requirements Planning",
       "description": "Net-requirements explosion from demand (sales orders + forecast) through BOMs and inventory policies, generating planned purchase and production orders to meet demand without stock-outs or excess.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -2935,7 +2935,7 @@
     },
     {
       "id": "mfg.shop_floor_execution",
-      "name": "Shop Floor Execution & MES",
+      "name": "Shop Floor Execution",
       "description": "Real-time shop-floor interface for operators: start/stop operations, record output, scan materials, capture quality, report downtime. Bridges ERP work orders (ISA-95 level 4) and the physical process (level 2).\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -3691,7 +3691,7 @@
     },
     {
       "id": "mfg.quality_management",
-      "name": "Quality Management (QM)",
+      "name": "Quality Management",
       "description": "Plan, execute, and record quality inspections against materials, work in progress, and finished goods, with non-conformance tracking and corrective-action workflows.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -5430,7 +5430,7 @@
     },
     {
       "id": "mfg.engineering_change",
-      "name": "Engineering Change Management (ECO / ECR)",
+      "name": "Engineering Change Management",
       "description": "Formal workflow for proposing, reviewing, approving, and implementing changes to BOMs, routings, and product specifications — with full audit trail and impact assessment.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -5936,7 +5936,7 @@
     },
     {
       "id": "mfg.product_master_basic",
-      "name": "Product Master & Document Management (Basic)",
+      "name": "Product Master (Basic)",
       "description": "Maintain an item master with revision control, attach engineering documents like CAD drawings and specs, and track item status through the lifecycle from in-design to obsolete.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -7613,7 +7613,7 @@
     },
     {
       "id": "mfg.discrete_modes",
-      "name": "Mixed-Mode & Configure-to-Order Manufacturing",
+      "name": "Configure-to-Order Manufacturing",
       "description": "Support organisations that run multiple manufacturing modes simultaneously — discrete, repetitive, make-to-stock, make-to-order, engineer-to-order, configure-to-order — from the same system.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -9012,7 +9012,7 @@
     },
     {
       "id": "mfg.shop_floor_iot",
-      "name": "IoT, Machine Integration & Data Collection",
+      "name": "IoT & Machine Data Collection",
       "description": "Direct integration with production equipment and sensors for automated data capture — OEE, status, output, downtime, cycle times — without operator manual entry.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -9579,7 +9579,7 @@
     },
     {
       "id": "mfg.oee_performance",
-      "name": "OEE & Manufacturing Performance Analytics",
+      "name": "OEE & Performance Analytics",
       "description": "Canonical manufacturing KPIs and dashboards for plant managers: availability, performance, quality, OEE, throughput, yield.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -11402,7 +11402,7 @@
     },
     {
       "id": "mfg.safety_compliance",
-      "name": "Manufacturing Safety, EHS & Regulatory Compliance",
+      "name": "Manufacturing EHS Compliance",
       "description": "Environmental, health and safety integration tied to manufacturing: PPE requirements, hazardous-material handling, incident capture, and regulatory reporting.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -11889,7 +11889,7 @@
     },
     {
       "id": "mfg.labor_management",
-      "name": "Labour Tracking & Shop Floor Time Management",
+      "name": "Labour & Shop Floor Time",
       "description": "Track operator time against operations and work orders, feed payroll and costing, and provide visibility into labour efficiency and utilisation.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -12759,7 +12759,7 @@
     },
     {
       "id": "mfg.maintenance_integration",
-      "name": "Maintenance Integration (CMMS / EAM Linkage)",
+      "name": "Maintenance Integration",
       "description": "Bridge between the manufacturing module and the asset/maintenance module: planned downtime for PM, automatic work requests on breakdown, shared calendar for production scheduling.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -13388,7 +13388,7 @@
     },
     {
       "id": "mfg.digital_thread_twin",
-      "name": "Digital Thread & Manufacturing Digital Twin",
+      "name": "Digital Thread & Digital Twin",
       "description": "Continuous data linkage from design intent through as-planned to as-built, and a simulation model (\"digital twin\") of the production system used for scheduling, training, and continuous improvement.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -17316,7 +17316,7 @@
     "step16_applied_count": 0,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
-      "applied_at": "2026-05-13T16:05:50.720035+08:00",
+      "applied_at": "2026-05-13T16:58:33.872777+08:00",
       "removed": false
     }
   },
@@ -17397,7 +17397,7 @@
       "clusters": [
         {
           "id": "production_shop_floor",
-          "name": "Production planning & shop floor",
+          "name": "Production & Shop Floor",
           "caps": [
             "mfg.bom",
             "mfg.routing",
@@ -17408,7 +17408,7 @@
         },
         {
           "id": "quality_inventory",
-          "name": "Quality & inventory traceability",
+          "name": "Quality & Traceability",
           "caps": [
             "mfg.quality_management",
             "mfg.inventory_wip",

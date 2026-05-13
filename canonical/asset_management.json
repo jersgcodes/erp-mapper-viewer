@@ -3247,7 +3247,7 @@
     },
     {
       "id": "asset.maintenance_requests",
-      "name": "Maintenance Requests & Service Desk",
+      "name": "Maintenance Requests",
       "description": "Channel for non-maintenance users (operators, occupants, customers) to submit service requests that are triaged into work orders.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -3755,7 +3755,7 @@
     },
     {
       "id": "asset.spare_parts",
-      "name": "Spare Parts & Maintenance Inventory",
+      "name": "Spare Parts Management",
       "description": "Manage the inventory of parts and consumables used for maintenance, typically distinct from the saleable-goods inventory of an SCM module.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -4352,7 +4352,7 @@
     },
     {
       "id": "asset.condition_monitoring",
-      "name": "Condition Monitoring & Predictive Maintenance",
+      "name": "Condition Monitoring",
       "description": "Capture asset health data (manual readings or IoT sensor streams) and trigger maintenance based on measured condition rather than calendar or usage alone.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -6589,7 +6589,7 @@
     },
     {
       "id": "asset.contracts_warranty",
-      "name": "Warranty & Service Contracts",
+      "name": "Warranty & Contracts",
       "description": "Track warranty coverage and service contracts so that repair work is correctly routed to the responsible party and costs recovered.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -7660,7 +7660,7 @@
     },
     {
       "id": "asset.shutdown_turnaround",
-      "name": "Shutdown, Turnaround & Outage Management",
+      "name": "Shutdown & Turnaround",
       "description": "Planning and executing major maintenance events where the asset is taken out of service — distinct from day-to-day work orders because of the scale, critical-path scheduling, and contractor coordination involved.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -8062,7 +8062,7 @@
     },
     {
       "id": "asset.capital_projects",
-      "name": "Capital Projects & New Asset Commissioning",
+      "name": "Capital Projects & Commissioning",
       "description": "Linkage between capital project (capex) workflows and the asset register, so newly built or purchased assets flow cleanly into operational maintenance once commissioned.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -8516,7 +8516,7 @@
     },
     {
       "id": "asset.investment_planning",
-      "name": "Asset Investment Planning & Replacement Strategy",
+      "name": "Asset Investment Planning",
       "description": "Long-range planning for asset replacement, refurbishment, and retirement based on remaining useful life, criticality, and replacement cost — the \"strategic\" layer above tactical maintenance.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -9234,7 +9234,7 @@
     },
     {
       "id": "asset.geospatial_gis",
-      "name": "Geospatial Asset Visualisation & GIS Integration",
+      "name": "Geospatial & GIS Integration",
       "description": "Map-based visualisation of assets and work, with GIS layer integration for organisations whose assets are distributed across wide areas (utilities, telco, municipalities).\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -9569,7 +9569,7 @@
     },
     {
       "id": "asset.sla_commercial",
-      "name": "Asset SLA & Commercial Uptime Management",
+      "name": "Asset SLA Management",
       "description": "For organisations that lease equipment to customers or sell uptime as a service — track contractual SLAs per asset, measure compliance, and calculate penalties or bonus payments.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -10017,7 +10017,7 @@
     },
     {
       "id": "asset.energy_carbon",
-      "name": "Energy & Carbon Tracking per Asset",
+      "name": "Energy & Carbon per Asset",
       "description": "Capture energy consumption and carbon footprint at the asset level, identify anomalies, and feed sustainability reporting.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -10958,7 +10958,7 @@
     },
     {
       "id": "asset.mobile_disconnected",
-      "name": "Disconnected / Offline Field Operations",
+      "name": "Offline Field Operations",
       "description": "Beyond basic mobile — full workflows for technicians operating in remote locations with no connectivity, including multi-day disconnection and sync conflict resolution.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -11412,7 +11412,7 @@
     },
     {
       "id": "asset.ar_vr_digital_twin",
-      "name": "AR / Digital Twin Work Instruction",
+      "name": "AR & Digital Twin Instructions",
       "description": "Overlay work instructions on physical assets using augmented reality or a 3D digital twin, and use the twin for maintenance simulation and remote collaboration.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -11765,7 +11765,7 @@
     },
     {
       "id": "asset.leasing",
-      "name": "Asset Leasing & Lease Accounting",
+      "name": "Asset Leasing",
       "description": "Handle assets that are leased in (the organisation is the lessee) or leased out (the organisation is the lessor), including compliance with IFRS 16 / ASC 842 lease accounting standards which require even operating leases to be capitalised.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -12234,7 +12234,7 @@
     },
     {
       "id": "asset.cybersecurity_ot",
-      "name": "OT / ICS Cybersecurity & Asset Vulnerability",
+      "name": "OT Cybersecurity",
       "description": "Operational-technology security tied to the asset register: patch status, known vulnerabilities, and incidents per connected asset (PLCs, SCADA, ICS gateways, industrial IoT). Distinct from IT cybersecurity because the threat model prioritises availability and safety over confidentiality.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -14876,7 +14876,7 @@
     "step16_applied_count": 0,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
-      "applied_at": "2026-05-13T16:05:50.681087+08:00",
+      "applied_at": "2026-05-13T16:58:33.835899+08:00",
       "removed": false
     }
   },
@@ -14963,7 +14963,7 @@
       "clusters": [
         {
           "id": "compliance_inspection",
-          "name": "Compliance, inspection & analytics",
+          "name": "Compliance & Inspection",
           "caps": [
             "asset.compliance",
             "asset.analytics_kpi"
@@ -14971,7 +14971,7 @@
         },
         {
           "id": "lifecycle_maintenance",
-          "name": "Lifecycle & maintenance operations",
+          "name": "Lifecycle & Maintenance",
           "caps": [
             "asset.register",
             "asset.lifecycle",

@@ -19,7 +19,7 @@
   "capabilities": [
     {
       "id": "sc.item_master",
-      "name": "Inventory Master & Item Management",
+      "name": "Item Master Management",
       "description": "Central register of every stockable item — SKU codes, descriptions, units of measure, categories, variants, images, and supplier cross- references. The foundation record that every other capability depends on.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -1105,7 +1105,7 @@
     },
     {
       "id": "sc.stock_levels",
-      "name": "Stock Levels & Warehouse Management",
+      "name": "Stock Levels & Warehouse",
       "description": "Real-time visibility of stock on hand, allocated, in transit, and available across warehouses, locations, bins, and zones. Enables staff to answer \"what do we have and where is it?\" at any moment.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -8353,7 +8353,7 @@
     },
     {
       "id": "sc.multi_warehouse",
-      "name": "Multi-Warehouse & Multi-Location Management",
+      "name": "Multi-Warehouse Management",
       "description": "Operate multiple physical warehouses or virtual stock locations with independent inventory, replenishment rules, and fulfilment logic — essential for businesses with more than one site.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -9637,7 +9637,7 @@
     },
     {
       "id": "sc.lot_serial_tracking",
-      "name": "Lot & Serial Number Tracking",
+      "name": "Lot & Serial Tracking",
       "description": "Assign lot (batch) or serial numbers to items for end-to-end traceability from supplier through warehouse to customer. Required for regulated industries (food, pharma, electronics).\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -12658,7 +12658,7 @@
     },
     {
       "id": "sc.kit_assembly",
-      "name": "Kit, Bundle & Assembly Management",
+      "name": "Kit & Bundle Management",
       "description": "Define kits or bundles made from component items and manage the assembly process — light manufacturing (pick components, assemble, put away finished kit) without a full MRP system.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -13135,7 +13135,7 @@
     },
     {
       "id": "sc.quality_control",
-      "name": "Quality Inspection & Control",
+      "name": "Quality Control",
       "description": "Define quality checkpoints at receipt, in-process, and pre-dispatch. Record inspection results, enforce hold/release decisions, and track non-conformance and corrective actions.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -14025,7 +14025,7 @@
     },
     {
       "id": "sc.warehouse_automation",
-      "name": "Warehouse Automation & WMS Integration",
+      "name": "Warehouse Automation & WMS",
       "description": "Advanced warehouse management — pick routing optimisation, task interleaving, labour management, integration with conveyor systems, RFID, and robotics for high-volume operations.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -14513,7 +14513,7 @@
     },
     {
       "id": "sc.vmi",
-      "name": "Vendor Managed Inventory (VMI)",
+      "name": "Vendor Managed Inventory",
       "description": "The supplier monitors your stock levels and initiates replenishment without you raising a PO — shifts the replenishment burden to the vendor based on agreed min/max or forecast sharing.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -14917,7 +14917,7 @@
     },
     {
       "id": "sc.procurement_analytics",
-      "name": "Procurement Analytics & Spend Analysis",
+      "name": "Procurement Analytics",
       "description": "Reporting and dashboards for procurement — spend by vendor, category, and period; PO cycle time; vendor performance trends; savings tracking against negotiated prices.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -15343,7 +15343,7 @@
     },
     {
       "id": "sc.trade_compliance",
-      "name": "Import/Export & Trade Compliance",
+      "name": "Trade Compliance",
       "description": "Manage cross-border trade — customs declarations, HS tariff codes, export licences, trade agreements, and Singapore-specific requirements (TradeNet, permits, GST on imports).\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -16228,7 +16228,7 @@
     },
     {
       "id": "sc.supply_chain_analytics",
-      "name": "Supply Chain Analytics & Dashboards",
+      "name": "Supply Chain Analytics",
       "description": "End-to-end supply chain visibility — inventory turns, fill rates, order-to-delivery lead time, supplier performance, and cost-to- serve analysis across the entire supply network.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -17314,7 +17314,7 @@
     },
     {
       "id": "sc.ai_ml_supply_chain",
-      "name": "AI & Machine Learning for Supply Chain",
+      "name": "AI / ML for Supply Chain",
       "description": "Applied AI for supply chain optimisation — demand sensing from external signals, anomaly detection in consumption patterns, intelligent replenishment, and predictive lead time estimation.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -20812,7 +20812,7 @@
     "step16_applied_count": 0,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
-      "applied_at": "2026-05-13T16:05:50.744440+08:00",
+      "applied_at": "2026-05-13T16:58:33.894905+08:00",
       "removed": false
     }
   },
@@ -20900,7 +20900,7 @@
       "clusters": [
         {
           "id": "inventory_operations",
-          "name": "Inventory & item operations",
+          "name": "Inventory & Items",
           "caps": [
             "sc.item_master",
             "sc.stock_levels",
@@ -20910,7 +20910,7 @@
         },
         {
           "id": "procurement_analytics",
-          "name": "Procurement & supply analytics",
+          "name": "Procurement & Analytics",
           "caps": [
             "sc.purchase_orders",
             "sc.vendor_master",
