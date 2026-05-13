@@ -3,10 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GH Pages serves index.html with Cache-Control: max-age=600 by default,
+         which keeps stale HTML (pointing at stale JS hashes) in browser cache
+         for up to 10 minutes after a deploy. Modern browsers honor this
+         http-equiv for the document itself; Vite's content-hashed asset
+         filenames handle everything else automatically. -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>ERP Mapper — Editor</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <script type="module" crossorigin src="/spa/assets/index-CaDrK1cA.js"></script>
-    <link rel="stylesheet" crossorigin href="/spa/assets/index-B_rtfPzI.css">
+    <script type="module" crossorigin src="/spa/assets/index-B97_HmFK.js"></script>
+    <link rel="stylesheet" crossorigin href="/spa/assets/index-gYdkkXux.css">
   </head>
   <body>
     <div id="root"></div>
