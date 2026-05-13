@@ -1,16 +1,18 @@
 {
   "_meta": {
-    "generated_at": "2026-05-14T00:56:40.948338+08:00",
+    "generated_at": "2026-05-14T01:12:54.740181+08:00",
     "modules_in_scope": [
       "financial",
       "sales_crm",
       "hr",
-      "supply_chain"
+      "supply_chain",
+      "manufacturing",
+      "asset_mgmt"
     ],
     "fx_assumption_usd_to_sgd": 1.35,
     "user_baseline": 10,
     "one_time_maintenance_pct": 0.2,
-    "vendor_count_total": 28,
+    "vendor_count_total": 37,
     "vendor_count_with_pricing": 14
   },
   "modules": {
@@ -269,7 +271,7 @@
           "max_base_price_sgd_month": 228
         },
         "mid": {
-          "vendor_count_total": 6,
+          "vendor_count_total": 7,
           "vendor_count_with_pricing": 4,
           "vendors": [
             {
@@ -600,6 +602,28 @@
               ],
               "extracted_at": "2026-05-10T23:35:19.710377+08:00",
               "source_url": "https://www.globe3.com.sg/"
+            },
+            {
+              "id": "epicor_kinetic",
+              "name": "Epicor Kinetic",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 8,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://www.epicor.com/en/erp-systems/kinetic/"
             }
           ],
           "avg_base_price_sgd_month": 108,
@@ -622,7 +646,7 @@
           "sub_module": "Core Ledger & Close",
           "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 9,
+          "not_covered_count": 10,
           "covered_in_base_vendors": [
             "odoo_online",
             "sap_business_one",
@@ -637,7 +661,7 @@
           "sub_module": "Revenue Cycle (AR)",
           "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
+          "not_covered_count": 9,
           "covered_in_base_vendors": [
             "odoo_online",
             "xero",
@@ -653,7 +677,7 @@
           "sub_module": "Expense Cycle (AP)",
           "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
+          "not_covered_count": 9,
           "covered_in_base_vendors": [
             "odoo_online",
             "xero",
@@ -669,7 +693,7 @@
           "sub_module": "Bank, Tax & FX (Core Treasury)",
           "covered_in_base_at_count": 2,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 11,
+          "not_covered_count": 12,
           "covered_in_base_vendors": [
             "xero",
             "sap_business_one"
@@ -682,7 +706,7 @@
           "sub_module": "Core Ledger & Close",
           "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 9,
+          "not_covered_count": 10,
           "covered_in_base_vendors": [
             "odoo_online",
             "xero",
@@ -697,7 +721,7 @@
           "sub_module": "Planning & Analytics (Finance)",
           "covered_in_base_at_count": 0,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 13,
+          "not_covered_count": 14,
           "covered_in_base_vendors": [],
           "covered_as_addon_vendors": []
         },
@@ -707,7 +731,7 @@
           "sub_module": "Revenue Cycle (AR)",
           "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 10,
+          "not_covered_count": 11,
           "covered_in_base_vendors": [
             "sap_business_one",
             "sage_300",
@@ -721,7 +745,7 @@
           "sub_module": "Planning & Analytics (Finance)",
           "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 9,
+          "not_covered_count": 10,
           "covered_in_base_vendors": [
             "odoo_online",
             "xero",
@@ -817,6 +841,12 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -905,6 +935,12 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -993,6 +1029,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1081,6 +1123,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1169,6 +1217,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1257,6 +1311,12 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1345,6 +1405,12 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1433,6 +1499,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1521,6 +1593,12 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1609,6 +1687,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1697,6 +1781,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1785,6 +1875,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1873,6 +1969,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1961,6 +2063,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -2049,6 +2157,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -2137,6 +2251,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -2225,6 +2345,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -2313,6 +2439,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -2401,6 +2533,12 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         }
@@ -6755,7 +6893,7 @@
       ],
       "by_tier": {
         "sme": {
-          "vendor_count_total": 8,
+          "vendor_count_total": 9,
           "vendor_count_with_pricing": 5,
           "vendors": [
             {
@@ -7051,6 +7189,28 @@
               "psg_packages": [],
               "extracted_at": null,
               "source_url": null
+            },
+            {
+              "id": "katana_mrp",
+              "name": "Katana Cloud Inventory",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 7,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://katanamrp.com/pricing/"
             }
           ],
           "avg_base_price_sgd_month": 254,
@@ -7058,7 +7218,7 @@
           "max_base_price_sgd_month": 471
         },
         "mid": {
-          "vendor_count_total": 6,
+          "vendor_count_total": 7,
           "vendor_count_with_pricing": 3,
           "vendors": [
             {
@@ -7325,6 +7485,28 @@
               "psg_packages": [],
               "extracted_at": null,
               "source_url": "https://www.anchanto.com/products/pricing/"
+            },
+            {
+              "id": "epicor_kinetic",
+              "name": "Epicor Kinetic",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 7,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://www.epicor.com/en/erp-systems/kinetic/"
             }
           ],
           "avg_base_price_sgd_month": 108,
@@ -7332,7 +7514,7 @@
           "max_base_price_sgd_month": 108
         },
         "enterprise": {
-          "vendor_count_total": 2,
+          "vendor_count_total": 3,
           "vendor_count_with_pricing": 0,
           "vendors": [
             {
@@ -7378,6 +7560,28 @@
               "psg_packages": [],
               "extracted_at": null,
               "source_url": null
+            },
+            {
+              "id": "infor_cloudsuite_industrial",
+              "name": "Infor CloudSuite Industrial (SyteLine)",
+              "tier": "enterprise",
+              "vendor_type": "erp_suite",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 7,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://www.infor.com/products/cloudsuite-industrial"
             }
           ],
           "avg_base_price_sgd_month": null,
@@ -7392,7 +7596,7 @@
           "sub_module": "Inventory Core",
           "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 11,
+          "not_covered_count": 14,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
@@ -7408,7 +7612,7 @@
           "sub_module": "Inventory Core",
           "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 11,
+          "not_covered_count": 14,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
@@ -7424,7 +7628,7 @@
           "sub_module": "Procurement",
           "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 12,
+          "not_covered_count": 15,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
@@ -7439,7 +7643,7 @@
           "sub_module": "Procurement",
           "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 12,
+          "not_covered_count": 15,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
@@ -7454,7 +7658,7 @@
           "sub_module": "Supply Planning & Replenishment",
           "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 12,
+          "not_covered_count": 15,
           "covered_in_base_vendors": [
             "odoo_online",
             "fishbowl",
@@ -7470,7 +7674,7 @@
           "sub_module": "Inventory Core",
           "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 11,
+          "not_covered_count": 14,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
@@ -7486,7 +7690,7 @@
           "sub_module": "Supply Chain Analytics",
           "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 11,
+          "not_covered_count": 14,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
@@ -7555,6 +7759,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -7591,6 +7801,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -7598,6 +7814,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -7661,6 +7883,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -7697,6 +7925,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -7704,6 +7938,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -7767,6 +8007,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -7803,6 +8049,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -7810,6 +8062,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -7873,6 +8131,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -7909,6 +8173,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -7916,6 +8186,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -7979,6 +8255,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8015,6 +8297,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8022,6 +8310,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -8085,6 +8379,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8121,6 +8421,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8128,6 +8434,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -8191,6 +8503,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8227,6 +8545,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8234,6 +8558,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -8297,6 +8627,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8333,6 +8669,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8340,6 +8682,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -8403,6 +8751,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8439,6 +8793,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8446,6 +8806,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -8509,6 +8875,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8545,6 +8917,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8552,6 +8930,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -8615,6 +8999,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8651,6 +9041,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8658,6 +9054,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -8721,6 +9123,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8757,6 +9165,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8764,6 +9178,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -8827,6 +9247,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8863,6 +9289,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8870,6 +9302,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -8933,6 +9371,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8969,6 +9413,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -8976,6 +9426,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -9039,6 +9495,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9075,6 +9537,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9082,6 +9550,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -9145,6 +9619,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9181,6 +9661,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9188,6 +9674,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -9251,6 +9743,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9287,6 +9785,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9294,6 +9798,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -9357,6 +9867,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9393,6 +9909,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9400,6 +9922,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -9463,6 +9991,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9499,6 +10033,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9506,6 +10046,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -9569,6 +10115,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9605,6 +10157,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9612,6 +10170,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -9675,6 +10239,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9711,6 +10281,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9718,6 +10294,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -9781,6 +10363,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9817,6 +10405,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9824,6 +10418,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -9887,6 +10487,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9923,6 +10529,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -9930,6 +10542,12 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -9993,6 +10611,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -10029,6 +10653,12 @@
               "top": "no_data",
               "any": "no_data"
             },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -10036,6 +10666,2393 @@
               "any": "no_data"
             },
             "project_argus": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        }
+      ]
+    },
+    "manufacturing": {
+      "mandatory_total": 10,
+      "mandatory_caps": [
+        {
+          "cap_id": "mfg.bom",
+          "name": "Bill of Materials",
+          "sub_module": "Product Engineering & PLM"
+        },
+        {
+          "cap_id": "mfg.routing",
+          "name": "Routings, Operations & Work Centers",
+          "sub_module": "Product Engineering & PLM"
+        },
+        {
+          "cap_id": "mfg.work_orders",
+          "name": "Work Orders & Job Cards",
+          "sub_module": "Production Execution (MES)"
+        },
+        {
+          "cap_id": "mfg.mrp",
+          "name": "Material Requirements Planning",
+          "sub_module": "Planning & Costing (Manufacturing)"
+        },
+        {
+          "cap_id": "mfg.production_scheduling",
+          "name": "Production Scheduling & Capacity Planning",
+          "sub_module": "Production Execution (MES)"
+        },
+        {
+          "cap_id": "mfg.quality_management",
+          "name": "Quality Management",
+          "sub_module": "Quality & Compliance (QMS)"
+        },
+        {
+          "cap_id": "mfg.inventory_wip",
+          "name": "Inventory & Work-in-Progress Tracking",
+          "sub_module": "Planning & Costing (Manufacturing)"
+        },
+        {
+          "cap_id": "mfg.product_costing",
+          "name": "Product Costing & Variance Analysis",
+          "sub_module": "Planning & Costing (Manufacturing)"
+        },
+        {
+          "cap_id": "mfg.traceability_genealogy",
+          "name": "Lot/Serial Traceability & Genealogy",
+          "sub_module": "Quality & Compliance (QMS)"
+        },
+        {
+          "cap_id": "mfg.safety_compliance",
+          "name": "Manufacturing EHS Compliance",
+          "sub_module": "Quality & Compliance (QMS)"
+        }
+      ],
+      "by_tier": {
+        "sme": {
+          "vendor_count_total": 1,
+          "vendor_count_with_pricing": 0,
+          "vendors": [
+            {
+              "id": "katana_mrp",
+              "name": "Katana Cloud Inventory",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 10,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://katanamrp.com/pricing/"
+            }
+          ],
+          "avg_base_price_sgd_month": null,
+          "min_base_price_sgd_month": null,
+          "max_base_price_sgd_month": null
+        },
+        "mid": {
+          "vendor_count_total": 2,
+          "vendor_count_with_pricing": 0,
+          "vendors": [
+            {
+              "id": "netsuite",
+              "name": "NetSuite ERP",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 10,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://www.netsuite.com/portal/products/erp/pricing.shtml"
+            },
+            {
+              "id": "epicor_kinetic",
+              "name": "Epicor Kinetic",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 10,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://www.epicor.com/en/erp-systems/kinetic/"
+            }
+          ],
+          "avg_base_price_sgd_month": null,
+          "min_base_price_sgd_month": null,
+          "max_base_price_sgd_month": null
+        },
+        "enterprise": {
+          "vendor_count_total": 2,
+          "vendor_count_with_pricing": 0,
+          "vendors": [
+            {
+              "id": "plex_smart_manufacturing",
+              "name": "Plex Smart Manufacturing Platform",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 10,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://www.plex.com/products/smart-manufacturing-platform"
+            },
+            {
+              "id": "infor_cloudsuite_industrial",
+              "name": "Infor CloudSuite Industrial (SyteLine)",
+              "tier": "enterprise",
+              "vendor_type": "erp_suite",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 10,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://www.infor.com/products/cloudsuite-industrial"
+            }
+          ],
+          "avg_base_price_sgd_month": null,
+          "min_base_price_sgd_month": null,
+          "max_base_price_sgd_month": null
+        }
+      },
+      "mandatory_caps_view": [
+        {
+          "cap_id": "mfg.bom",
+          "name": "Bill of Materials",
+          "sub_module": "Product Engineering & PLM",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "mfg.routing",
+          "name": "Routings, Operations & Work Centers",
+          "sub_module": "Product Engineering & PLM",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "mfg.work_orders",
+          "name": "Work Orders & Job Cards",
+          "sub_module": "Production Execution (MES)",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "mfg.mrp",
+          "name": "Material Requirements Planning",
+          "sub_module": "Planning & Costing (Manufacturing)",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "mfg.production_scheduling",
+          "name": "Production Scheduling & Capacity Planning",
+          "sub_module": "Production Execution (MES)",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "mfg.quality_management",
+          "name": "Quality Management",
+          "sub_module": "Quality & Compliance (QMS)",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "mfg.inventory_wip",
+          "name": "Inventory & Work-in-Progress Tracking",
+          "sub_module": "Planning & Costing (Manufacturing)",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "mfg.product_costing",
+          "name": "Product Costing & Variance Analysis",
+          "sub_module": "Planning & Costing (Manufacturing)",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "mfg.traceability_genealogy",
+          "name": "Lot/Serial Traceability & Genealogy",
+          "sub_module": "Quality & Compliance (QMS)",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "mfg.safety_compliance",
+          "name": "Manufacturing EHS Compliance",
+          "sub_module": "Quality & Compliance (QMS)",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        }
+      ],
+      "caps_with_vendor_coverage": [
+        {
+          "cap_id": "mfg.bom",
+          "name": "Bill of Materials",
+          "sub_module": "Product Engineering & PLM",
+          "sub_module_id": "product_engineering",
+          "tier": "required",
+          "checklist_order": 0,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.routing",
+          "name": "Routings, Operations & Work Centers",
+          "sub_module": "Product Engineering & PLM",
+          "sub_module_id": "product_engineering",
+          "tier": "required",
+          "checklist_order": 1,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.engineering_change",
+          "name": "Engineering Change Management",
+          "sub_module": "Product Engineering & PLM",
+          "sub_module_id": "product_engineering",
+          "tier": "preferred",
+          "checklist_order": 2,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.product_master_basic",
+          "name": "Product Master (Basic)",
+          "sub_module": "Product Engineering & PLM",
+          "sub_module_id": "product_engineering",
+          "tier": "preferred",
+          "checklist_order": 3,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.work_orders",
+          "name": "Work Orders & Job Cards",
+          "sub_module": "Production Execution (MES)",
+          "sub_module_id": "production_execution",
+          "tier": "required",
+          "checklist_order": 4,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.production_scheduling",
+          "name": "Production Scheduling & Capacity Planning",
+          "sub_module": "Production Execution (MES)",
+          "sub_module_id": "production_execution",
+          "tier": "required",
+          "checklist_order": 5,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.shop_floor_execution",
+          "name": "Shop Floor Execution",
+          "sub_module": "Production Execution (MES)",
+          "sub_module_id": "production_execution",
+          "tier": "preferred",
+          "checklist_order": 6,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.process_manufacturing",
+          "name": "Process & Batch Manufacturing",
+          "sub_module": "Production Execution (MES)",
+          "sub_module_id": "production_execution",
+          "tier": "preferred",
+          "checklist_order": 7,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.discrete_modes",
+          "name": "Configure-to-Order Manufacturing",
+          "sub_module": "Production Execution (MES)",
+          "sub_module_id": "production_execution",
+          "tier": "preferred",
+          "checklist_order": 8,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.shop_floor_iot",
+          "name": "IoT & Machine Data Collection",
+          "sub_module": "Production Execution (MES)",
+          "sub_module_id": "production_execution",
+          "tier": "preferred",
+          "checklist_order": 9,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.labor_management",
+          "name": "Labour & Shop Floor Time",
+          "sub_module": "Production Execution (MES)",
+          "sub_module_id": "production_execution",
+          "tier": "preferred",
+          "checklist_order": 10,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.mrp",
+          "name": "Material Requirements Planning",
+          "sub_module": "Planning & Costing (Manufacturing)",
+          "sub_module_id": "planning_costing",
+          "tier": "required",
+          "checklist_order": 11,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.inventory_wip",
+          "name": "Inventory & Work-in-Progress Tracking",
+          "sub_module": "Planning & Costing (Manufacturing)",
+          "sub_module_id": "planning_costing",
+          "tier": "required",
+          "checklist_order": 12,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.product_costing",
+          "name": "Product Costing & Variance Analysis",
+          "sub_module": "Planning & Costing (Manufacturing)",
+          "sub_module_id": "planning_costing",
+          "tier": "required",
+          "checklist_order": 13,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.subcontracting",
+          "name": "Subcontract & Outsourced Manufacturing",
+          "sub_module": "Planning & Costing (Manufacturing)",
+          "sub_module_id": "planning_costing",
+          "tier": "preferred",
+          "checklist_order": 14,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.demand_planning",
+          "name": "Demand Planning & Forecasting",
+          "sub_module": "Planning & Costing (Manufacturing)",
+          "sub_module_id": "planning_costing",
+          "tier": "preferred",
+          "checklist_order": 15,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.capacity_sop",
+          "name": "Rough-Cut Capacity & S&OP Integration",
+          "sub_module": "Planning & Costing (Manufacturing)",
+          "sub_module_id": "planning_costing",
+          "tier": "preferred",
+          "checklist_order": 16,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.quality_management",
+          "name": "Quality Management",
+          "sub_module": "Quality & Compliance (QMS)",
+          "sub_module_id": "quality_compliance",
+          "tier": "required",
+          "checklist_order": 17,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.traceability_genealogy",
+          "name": "Lot/Serial Traceability & Genealogy",
+          "sub_module": "Quality & Compliance (QMS)",
+          "sub_module_id": "quality_compliance",
+          "tier": "required",
+          "checklist_order": 18,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.safety_compliance",
+          "name": "Manufacturing EHS Compliance",
+          "sub_module": "Quality & Compliance (QMS)",
+          "sub_module_id": "quality_compliance",
+          "tier": "required",
+          "checklist_order": 19,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.energy_sustainability",
+          "name": "Energy, Utility & Sustainability Tracking",
+          "sub_module": "Quality & Compliance (QMS)",
+          "sub_module_id": "quality_compliance",
+          "tier": "preferred",
+          "checklist_order": 20,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.oee_performance",
+          "name": "OEE & Performance Analytics",
+          "sub_module": "Manufacturing Maintenance & Analytics",
+          "sub_module_id": "manufacturing_maintenance_analytics",
+          "tier": "preferred",
+          "checklist_order": 21,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.repair_returns",
+          "name": "Repair, Rework & Returned-Goods Manufacturing",
+          "sub_module": "Manufacturing Maintenance & Analytics",
+          "sub_module_id": "manufacturing_maintenance_analytics",
+          "tier": "preferred",
+          "checklist_order": 22,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.maintenance_integration",
+          "name": "Maintenance Integration",
+          "sub_module": "Manufacturing Maintenance & Analytics",
+          "sub_module_id": "manufacturing_maintenance_analytics",
+          "tier": "preferred",
+          "checklist_order": 23,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "mfg.mobile_access",
+          "name": "Cloud and Multi-Device Accessibility",
+          "sub_module": null,
+          "sub_module_id": "_no_sub_module",
+          "tier": "preferred",
+          "checklist_order": 24,
+          "vendor_coverage": {
+            "katana_mrp": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "epicor_kinetic": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "plex_smart_manufacturing": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        }
+      ]
+    },
+    "asset_mgmt": {
+      "mandatory_total": 9,
+      "mandatory_caps": [
+        {
+          "cap_id": "asset.register",
+          "name": "Asset Register & Hierarchy",
+          "sub_module": "Asset Register & Lifecycle"
+        },
+        {
+          "cap_id": "asset.lifecycle",
+          "name": "Asset Lifecycle Management",
+          "sub_module": "Asset Register & Lifecycle"
+        },
+        {
+          "cap_id": "asset.depreciation",
+          "name": "Depreciation & Valuation",
+          "sub_module": "Asset Register & Lifecycle"
+        },
+        {
+          "cap_id": "asset.pm_planning",
+          "name": "Preventive Maintenance Planning",
+          "sub_module": "Maintenance Operations (CMMS/EAM)"
+        },
+        {
+          "cap_id": "asset.work_orders",
+          "name": "Work Order Management",
+          "sub_module": "Maintenance Operations (CMMS/EAM)"
+        },
+        {
+          "cap_id": "asset.maintenance_requests",
+          "name": "Maintenance Requests",
+          "sub_module": "Maintenance Operations (CMMS/EAM)"
+        },
+        {
+          "cap_id": "asset.spare_parts",
+          "name": "Spare Parts Management",
+          "sub_module": "Maintenance Operations (CMMS/EAM)"
+        },
+        {
+          "cap_id": "asset.analytics_kpi",
+          "name": "Maintenance Analytics & KPIs",
+          "sub_module": "Asset Analytics & Digital Twin"
+        },
+        {
+          "cap_id": "asset.compliance",
+          "name": "Inspection, Safety & Regulatory Compliance",
+          "sub_module": "Compliance, HSE & OT Cybersecurity"
+        }
+      ],
+      "by_tier": {
+        "sme": {
+          "vendor_count_total": 2,
+          "vendor_count_with_pricing": 0,
+          "vendors": [
+            {
+              "id": "upkeep",
+              "name": "UpKeep CMMS",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 9,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://www.upkeep.com/pricing"
+            },
+            {
+              "id": "maintainx",
+              "name": "MaintainX",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 9,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://www.getmaintainx.com/pricing"
+            }
+          ],
+          "avg_base_price_sgd_month": null,
+          "min_base_price_sgd_month": null,
+          "max_base_price_sgd_month": null
+        },
+        "mid": {
+          "vendor_count_total": 1,
+          "vendor_count_with_pricing": 0,
+          "vendors": [
+            {
+              "id": "fiix",
+              "name": "Fiix CMMS (Rockwell)",
+              "tier": "mid",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 9,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://www.fiixsoftware.com/pricing/"
+            }
+          ],
+          "avg_base_price_sgd_month": null,
+          "min_base_price_sgd_month": null,
+          "max_base_price_sgd_month": null
+        },
+        "enterprise": {
+          "vendor_count_total": 2,
+          "vendor_count_with_pricing": 0,
+          "vendors": [
+            {
+              "id": "ibm_maximo",
+              "name": "IBM Maximo Application Suite",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 9,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://www.ibm.com/products/maximo"
+            },
+            {
+              "id": "infor_eam",
+              "name": "Infor EAM",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 9,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://www.infor.com/products/eam"
+            }
+          ],
+          "avg_base_price_sgd_month": null,
+          "min_base_price_sgd_month": null,
+          "max_base_price_sgd_month": null
+        }
+      },
+      "mandatory_caps_view": [
+        {
+          "cap_id": "asset.register",
+          "name": "Asset Register & Hierarchy",
+          "sub_module": "Asset Register & Lifecycle",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "asset.lifecycle",
+          "name": "Asset Lifecycle Management",
+          "sub_module": "Asset Register & Lifecycle",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "asset.depreciation",
+          "name": "Depreciation & Valuation",
+          "sub_module": "Asset Register & Lifecycle",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "asset.pm_planning",
+          "name": "Preventive Maintenance Planning",
+          "sub_module": "Maintenance Operations (CMMS/EAM)",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "asset.work_orders",
+          "name": "Work Order Management",
+          "sub_module": "Maintenance Operations (CMMS/EAM)",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "asset.maintenance_requests",
+          "name": "Maintenance Requests",
+          "sub_module": "Maintenance Operations (CMMS/EAM)",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "asset.spare_parts",
+          "name": "Spare Parts Management",
+          "sub_module": "Maintenance Operations (CMMS/EAM)",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "asset.analytics_kpi",
+          "name": "Maintenance Analytics & KPIs",
+          "sub_module": "Asset Analytics & Digital Twin",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        },
+        {
+          "cap_id": "asset.compliance",
+          "name": "Inspection, Safety & Regulatory Compliance",
+          "sub_module": "Compliance, HSE & OT Cybersecurity",
+          "covered_in_base_at_count": 0,
+          "covered_as_addon_at_count": 0,
+          "not_covered_count": 5,
+          "covered_in_base_vendors": [],
+          "covered_as_addon_vendors": []
+        }
+      ],
+      "caps_with_vendor_coverage": [
+        {
+          "cap_id": "asset.register",
+          "name": "Asset Register & Hierarchy",
+          "sub_module": "Asset Register & Lifecycle",
+          "sub_module_id": "asset_register_lifecycle",
+          "tier": "required",
+          "checklist_order": 0,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.lifecycle",
+          "name": "Asset Lifecycle Management",
+          "sub_module": "Asset Register & Lifecycle",
+          "sub_module_id": "asset_register_lifecycle",
+          "tier": "required",
+          "checklist_order": 1,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.depreciation",
+          "name": "Depreciation & Valuation",
+          "sub_module": "Asset Register & Lifecycle",
+          "sub_module_id": "asset_register_lifecycle",
+          "tier": "required",
+          "checklist_order": 2,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.leasing",
+          "name": "Asset Leasing",
+          "sub_module": "Asset Register & Lifecycle",
+          "sub_module_id": "asset_register_lifecycle",
+          "tier": "preferred",
+          "checklist_order": 3,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.pm_planning",
+          "name": "Preventive Maintenance Planning",
+          "sub_module": "Maintenance Operations (CMMS/EAM)",
+          "sub_module_id": "maintenance_operations",
+          "tier": "required",
+          "checklist_order": 4,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.work_orders",
+          "name": "Work Order Management",
+          "sub_module": "Maintenance Operations (CMMS/EAM)",
+          "sub_module_id": "maintenance_operations",
+          "tier": "required",
+          "checklist_order": 5,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.maintenance_requests",
+          "name": "Maintenance Requests",
+          "sub_module": "Maintenance Operations (CMMS/EAM)",
+          "sub_module_id": "maintenance_operations",
+          "tier": "required",
+          "checklist_order": 6,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.spare_parts",
+          "name": "Spare Parts Management",
+          "sub_module": "Maintenance Operations (CMMS/EAM)",
+          "sub_module_id": "maintenance_operations",
+          "tier": "required",
+          "checklist_order": 7,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.mobile_field",
+          "name": "Mobile Field Work",
+          "sub_module": "Maintenance Operations (CMMS/EAM)",
+          "sub_module_id": "maintenance_operations",
+          "tier": "preferred",
+          "checklist_order": 8,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.mobile_disconnected",
+          "name": "Offline Field Operations",
+          "sub_module": "Maintenance Operations (CMMS/EAM)",
+          "sub_module_id": "maintenance_operations",
+          "tier": "preferred",
+          "checklist_order": 9,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.condition_monitoring",
+          "name": "Condition Monitoring",
+          "sub_module": "Reliability Engineering",
+          "sub_module_id": "reliability_engineering",
+          "tier": "preferred",
+          "checklist_order": 10,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.analytics_kpi",
+          "name": "Maintenance Analytics & KPIs",
+          "sub_module": "Asset Analytics & Digital Twin",
+          "sub_module_id": "asset_analytics_digital",
+          "tier": "required",
+          "checklist_order": 11,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.geospatial_gis",
+          "name": "Geospatial & GIS Integration",
+          "sub_module": "Asset Analytics & Digital Twin",
+          "sub_module_id": "asset_analytics_digital",
+          "tier": "preferred",
+          "checklist_order": 12,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.spares_optimization",
+          "name": "Spare Parts Optimisation",
+          "sub_module": "Asset Analytics & Digital Twin",
+          "sub_module_id": "asset_analytics_digital",
+          "tier": "preferred",
+          "checklist_order": 13,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.compliance",
+          "name": "Inspection, Safety & Regulatory Compliance",
+          "sub_module": "Compliance, HSE & OT Cybersecurity",
+          "sub_module_id": "compliance_hse_cyber",
+          "tier": "required",
+          "checklist_order": 14,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.contracts_warranty",
+          "name": "Warranty & Contracts",
+          "sub_module": "Capital & Commercial Asset Management",
+          "sub_module_id": "capital_commercial",
+          "tier": "preferred",
+          "checklist_order": 15,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.capital_projects",
+          "name": "Capital Projects & Commissioning",
+          "sub_module": "Capital & Commercial Asset Management",
+          "sub_module_id": "capital_commercial",
+          "tier": "preferred",
+          "checklist_order": 16,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.sla_commercial",
+          "name": "Asset SLA Management",
+          "sub_module": "Capital & Commercial Asset Management",
+          "sub_module_id": "capital_commercial",
+          "tier": "preferred",
+          "checklist_order": 17,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.energy_carbon",
+          "name": "Energy & Carbon per Asset",
+          "sub_module": "Capital & Commercial Asset Management",
+          "sub_module_id": "capital_commercial",
+          "tier": "preferred",
+          "checklist_order": 18,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "asset.mobile_access",
+          "name": "Cloud and Multi-Device Accessibility",
+          "sub_module": null,
+          "sub_module_id": "_no_sub_module",
+          "tier": "preferred",
+          "checklist_order": 19,
+          "vendor_coverage": {
+            "upkeep": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "maintainx": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "fiix": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ibm_maximo": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "infor_eam": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
