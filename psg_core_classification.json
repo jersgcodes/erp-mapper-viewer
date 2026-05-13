@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generated_by": "scripts/classify_psg_solutions_per_core.py",
-    "generated_at": "2026-05-13T10:57:21.198367+08:00",
+    "generated_at": "2026-05-13T16:07:21.642650+08:00",
     "model": "claude-haiku-4-5-20251001",
     "scope_modules": [
       "manufacturing_management",
@@ -350,7 +350,8 @@
           "verdict": "unclassified",
           "summary_reason": "Veridis is a specialized carbon/emissions management solution that does not cover any manufacturing_management ERP module cores comprehensively; it lacks functionality in production planning, shop floor operations, quality management, inventory tracking, and product costing."
         }
-      }
+      },
+      "rationale": "2 cores because production planning vs quality/inventory are\ndistinct vendor markets. MES (manufacturing execution) and QMS\n(quality management) are sold as separate products by different\nvendors; bundling them in one umbrella under-cuts both."
     },
     "asset_management": {
       "cores": [
@@ -643,7 +644,8 @@
           "verdict": "partial_only",
           "summary_reason": "SafetyCulture ePTW covers only asset.compliance within the compliance_inspection core through its safety compliance and audit trail capabilities, but fails to meet all mandatory caps in either core and does not address any functionality in lifecycle_maintenance."
         }
-      }
+      },
+      "rationale": "2 cores because PSG validation (100% partial_only against the\ntextbook EAM-vs-CMMS cut) showed vendors cluster around\ninspection/compliance/mobile capabilities OR around\nregister/lifecycle/work-order capabilities \u2014 never both. This\nrevised split reflects the actual vendor packaging: inspection-\nled specialists (carbon, e-PTW, BIM-attached compliance) vs\noperations specialists (CMMS + EAM combined)."
     },
     "supply_chain_and_inventory": {
       "cores": [
@@ -2620,7 +2622,8 @@
           "verdict": "partial_only",
           "summary_reason": "ZETTAPPs clearly covers inventory and item operations capabilities but does not fully satisfy either core's mandatory caps; procurement and analytics functions are insufficiently documented to confirm full core coverage."
         }
-      }
+      },
+      "rationale": "2 cores because procurement and warehouse-side inventory are\ndistinct vendor markets: Coupa / SAP Ariba are procurement-only\nsuites; Manhattan / Cin7 are warehouse-only. PSG validation\n(74% partial_only against the prior split) showed\nanalytics belongs with procurement, not warehouse \u2014 every\nPSG sol that fulfilled analytics also fulfilled purchase\norders + vendor master. Revised split groups item-master +\nstock-levels + reorder + barcoding as one operational\ncluster; PO + vendor + analytics as the strategic cluster."
     },
     "human_resources_management": {
       "cores": [
@@ -4350,7 +4353,8 @@
           "verdict": "single_core_full",
           "summary_reason": "Zealys HRMS fully covers the core_hr_operations core with all four mandatory capabilities (employee master, leave management, time & attendance, and self-service portal), partially covers payroll_compliance, and does not cover talent_learning."
         }
-      }
+      },
+      "rationale": "3 cores \u2014 the only module with 3 because PSG validation showed\n33% of HR sols are single_core_full on payroll specifically\n(Talenox, JustLogin payroll mode). Payroll specialists are a\ndistinct vendor market from HR-ops players (BambooHR-style)\nand from talent suites (SuccessFactors-style). The prior\nbinary cut bundled payroll with HR ops, masking that\npayroll-only is a real market. Splitting it out reflects how\nSG SMEs actually buy: many start with payroll-only, then add\nHR ops or talent as they grow."
     }
   }
 }

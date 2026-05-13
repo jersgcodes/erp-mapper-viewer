@@ -14876,7 +14876,7 @@
     "step16_applied_count": 0,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
-      "applied_at": "2026-05-13T02:57:21.975078+08:00",
+      "applied_at": "2026-05-13T16:05:50.681087+08:00",
       "removed": false
     }
   },
@@ -14959,6 +14959,7 @@
   "preferred_clusters": {
     "required": {
       "mode": "multi",
+      "rationale": "2 cores because PSG validation (100% partial_only against the\ntextbook EAM-vs-CMMS cut) showed vendors cluster around\ninspection/compliance/mobile capabilities OR around\nregister/lifecycle/work-order capabilities — never both. This\nrevised split reflects the actual vendor packaging: inspection-\nled specialists (carbon, e-PTW, BIM-attached compliance) vs\noperations specialists (CMMS + EAM combined).\n",
       "clusters": [
         {
           "id": "compliance_inspection",

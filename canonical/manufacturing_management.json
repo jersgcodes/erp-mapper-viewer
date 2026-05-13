@@ -17316,7 +17316,7 @@
     "step16_applied_count": 0,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
-      "applied_at": "2026-05-13T02:57:22.058079+08:00",
+      "applied_at": "2026-05-13T16:05:50.720035+08:00",
       "removed": false
     }
   },
@@ -17393,6 +17393,7 @@
   "preferred_clusters": {
     "required": {
       "mode": "multi",
+      "rationale": "2 cores because production planning vs quality/inventory are\ndistinct vendor markets. MES (manufacturing execution) and QMS\n(quality management) are sold as separate products by different\nvendors; bundling them in one umbrella under-cuts both.\n",
       "clusters": [
         {
           "id": "production_shop_floor",

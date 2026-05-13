@@ -20812,7 +20812,7 @@
     "step16_applied_count": 0,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
-      "applied_at": "2026-05-13T02:57:22.127664+08:00",
+      "applied_at": "2026-05-13T16:05:50.744440+08:00",
       "removed": false
     }
   },
@@ -20896,6 +20896,7 @@
   "preferred_clusters": {
     "required": {
       "mode": "multi",
+      "rationale": "2 cores because procurement and warehouse-side inventory are\ndistinct vendor markets: Coupa / SAP Ariba are procurement-only\nsuites; Manhattan / Cin7 are warehouse-only. PSG validation\n(74% partial_only against the prior split) showed\nanalytics belongs with procurement, not warehouse — every\nPSG sol that fulfilled analytics also fulfilled purchase\norders + vendor master. Revised split groups item-master +\nstock-levels + reorder + barcoding as one operational\ncluster; PO + vendor + analytics as the strategic cluster.\n",
       "clusters": [
         {
           "id": "inventory_operations",
