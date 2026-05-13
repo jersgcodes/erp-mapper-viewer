@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generated_by": "scripts/propose_core_split_revisions.py",
-    "generated_at": "2026-05-13T03:04:35.119719+08:00",
+    "generated_at": "2026-05-13T16:40:19.211165+08:00",
     "model": "claude-haiku-4-5-20251001",
     "thresholds": {
       "validated_specialty_single_min_pct": 60,
@@ -17,38 +17,61 @@
         {
           "id": "production_shop_floor",
           "name": "Production planning & shop floor",
-          "cap_count": 5
+          "cap_count": 5,
+          "caps": [
+            "mfg.bom",
+            "mfg.routing",
+            "mfg.work_orders",
+            "mfg.mrp",
+            "mfg.production_scheduling"
+          ]
         },
         {
           "id": "quality_inventory",
           "name": "Quality & inventory traceability",
-          "cap_count": 7
+          "cap_count": 7,
+          "caps": [
+            "mfg.quality_management",
+            "mfg.inventory_wip",
+            "mfg.product_costing",
+            "mfg.traceability_genealogy",
+            "mfg.safety_compliance",
+            "mfg.mobile_access",
+            "mfg.integration_import_export"
+          ]
         }
       ],
       "stats": {
-        "total_classified": 13,
-        "counts": {
-          "unclassified": 8,
-          "partial_only": 5
-        },
-        "pct": {
-          "unclassified": 61.5,
-          "partial_only": 38.5
-        }
+        "total_classified": 0,
+        "counts": {},
+        "pct": {}
       },
-      "verdict": "mixed"
+      "verdict": "no_data"
     },
     "asset_management": {
       "current_split": [
         {
-          "id": "eam_register_lifecycle",
-          "name": "EAM \u2014 asset register & lifecycle",
-          "cap_count": 5
+          "id": "compliance_inspection",
+          "name": "Compliance, inspection & analytics",
+          "cap_count": 2,
+          "caps": [
+            "asset.compliance",
+            "asset.analytics_kpi"
+          ]
         },
         {
-          "id": "cmms_maintenance_ops",
-          "name": "CMMS \u2014 maintenance operations",
-          "cap_count": 6
+          "id": "lifecycle_maintenance",
+          "name": "Lifecycle & maintenance operations",
+          "cap_count": 7,
+          "caps": [
+            "asset.register",
+            "asset.lifecycle",
+            "asset.depreciation",
+            "asset.pm_planning",
+            "asset.work_orders",
+            "asset.maintenance_requests",
+            "asset.spare_parts"
+          ]
         }
       ],
       "stats": {
@@ -67,88 +90,86 @@
         {
           "cores": [
             {
-              "id": "asset_compliance_inspection",
-              "name": "Asset Compliance & Inspection",
+              "id": "compliance_inspection",
+              "name": "Compliance, Inspection & Safety Management",
               "caps": [
                 "asset.compliance"
               ]
             },
             {
-              "id": "asset_lifecycle_maintenance",
-              "name": "Asset Lifecycle & Maintenance Operations",
+              "id": "lifecycle_maintenance",
+              "name": "Lifecycle & Maintenance Operations",
               "caps": [
-                "asset.register",
-                "asset.lifecycle",
-                "asset.maintenance",
-                "asset.preventive_maintenance",
-                "asset.corrective_maintenance",
-                "asset.work_order",
-                "asset.spare_parts",
-                "asset.downtime",
-                "asset.performance"
+                "asset.planning",
+                "asset.scheduling",
+                "asset.execution",
+                "asset.monitoring",
+                "asset.optimization",
+                "asset.records",
+                "asset.integration"
               ]
             }
           ],
-          "rationale": "All 9 partial_only solutions cover exclusively asset.compliance through inspection and safety management capabilities, indicating compliance_inspection should be isolated as a standalone, minimal core. The remaining lifecycle, maintenance, and operational capabilities naturally cluster together as a single comprehensive asset operations core, reflecting how vendors typically separate compliance tooling from integrated asset management platforms.",
+          "rationale": "All 10 partial_only solutions cover only asset.compliance and leave lifecycle_maintenance entirely uncovered, indicating that compliance_inspection should contain only the single capability asset.compliance. This suggests the current 2-cap compliance_inspection core is incorrectly bundling a compliance-only capability with a lifecycle or maintenance capability that vendors do not package together with inspection tools.",
           "backing_evidence": [
             {
               "psg_id": "psg-039",
-              "reason": "Ailytics covers only asset.compliance; all other caps remain uncovered, validating compliance as a discrete, separable concern."
+              "reason": "Covers asset.compliance only; no lifecycle_maintenance coverage demonstrates clean separation of concerns."
+            },
+            {
+              "psg_id": "psg-154",
+              "reason": "Safety-HSE solution covers compliance inspection exclusively; zero lifecycle ops coverage confirms distinct vendor positioning."
+            },
+            {
+              "psg_id": "psg-304",
+              "reason": "Hubble Safety Management covers only asset.compliance; the complete absence of lifecycle coverage validates the split."
             },
             {
               "psg_id": "psg-441",
-              "reason": "SafetyCulture explicitly addresses asset.compliance and inspection audit trail but has zero lifecycle_maintenance coverage, confirming the two domains are orthogonal."
+              "reason": "SafetyCulture audit and compliance tool covers asset.compliance only; lifecycle_maintenance entirely absent in all partials."
             },
             {
               "psg_id": "psg-392",
-              "reason": "Novade solutions cover 1 of 9 capability IDs (asset.compliance), demonstrating that compliance is a thin, isolated slice that should not anchor a multi-cap core."
+              "reason": "Novade explicitly noted as covering 'only 1 of 9' capability IDs (asset.compliance); remaining 7 caps belong in separate core."
             }
           ]
         },
         {
           "cores": [
             {
-              "id": "asset_compliance_inspection",
-              "name": "Asset Compliance & Inspection",
+              "id": "inspection_audit",
+              "name": "Inspection, Audit & Compliance",
               "caps": [
                 "asset.compliance"
               ]
             },
             {
-              "id": "eam_core_register_lifecycle",
-              "name": "EAM \u2014 Asset Register & Lifecycle",
+              "id": "maintenance_lifecycle",
+              "name": "Maintenance Planning, Scheduling & Lifecycle Operations",
               "caps": [
-                "asset.register",
-                "asset.lifecycle",
-                "asset.performance"
-              ]
-            },
-            {
-              "id": "cmms_core_maintenance_ops",
-              "name": "CMMS \u2014 Maintenance Operations",
-              "caps": [
-                "asset.maintenance",
-                "asset.preventive_maintenance",
-                "asset.corrective_maintenance",
-                "asset.work_order",
-                "asset.spare_parts",
-                "asset.downtime"
+                "asset.planning",
+                "asset.scheduling",
+                "asset.execution",
+                "asset.monitoring",
+                "asset.optimization",
+                "asset.records",
+                "asset.integration"
               ]
             }
           ],
-          "rationale": "A three-core split preserves the existing EAM/CMMS distinction while isolating compliance as a standalone, optional module. The partial_only patterns show that compliance vendors are orthogonal to both EAM and CMMS; separating it removes a structural mismatch and allows clearer, thinner core definitions that align with how the market actually segments asset management solutions.",
+          "rationale": "The consistent pattern of inspection/safety/e-PTW solutions covering only compliance indicates that inspection-centric vendors operate in a separate market segment from maintenance lifecycle vendors. Renaming and restructuring the cores to reflect inspection as its own domain (rather than bundled with lifecycle) better represents actual product positioning in the PSG portfolio.",
           "backing_evidence": [
             {
-              "psg_id": "psg-154",
-              "reason": "CSG Novade Safety-HSE covers inspection and compliance only, with zero lifecycle_maintenance; compliance as a separate core removes this cross-core gap."
+              "psg_id": "psg-232",
+              "reason": "E-Permit-To-Work solution is inspection/compliance-focused; no maintenance planning or execution coverage."
             },
             {
-              "psg_id": "psg-304",
-              "reason": "Hubble Safety Management System demonstrates that compliance/safety is a standalone domain with no overlap to EAM register or CMMS maintenance operations."
+              "psg_id": "psg-322",
+              "reason": "InSight ePTW & Safety System explicitly addresses compliance and safety audit; orthogonal to maintenance operations."
             },
             {
-              "psg_id": "psg-442",
-              "reason": "SafetyCulture ePTW covers audit trail and compliance caps but fails to address any lifecycle or maintenance capability, validating compliance as an independent, optional layer."
+              "psg_id": "psg-393",
+              "reason": "Integrated Worksite Monitoring covers inspection only; lifecycle_maintenance entirely uncovered across all partials."
             }
           ]
         }
@@ -157,14 +178,25 @@
     "supply_chain_and_inventory": {
       "current_split": [
         {
-          "id": "procurement",
-          "name": "Procurement & purchasing",
-          "cap_count": 2
+          "id": "inventory_operations",
+          "name": "Inventory & item operations",
+          "cap_count": 4,
+          "caps": [
+            "sc.item_master",
+            "sc.stock_levels",
+            "sc.reorder_rules",
+            "sc.barcode_scanning"
+          ]
         },
         {
-          "id": "warehouse_inventory",
-          "name": "Warehouse & inventory",
-          "cap_count": 6
+          "id": "procurement_analytics",
+          "name": "Procurement & supply analytics",
+          "cap_count": 3,
+          "caps": [
+            "sc.purchase_orders",
+            "sc.vendor_master",
+            "sc.supply_chain_analytics"
+          ]
         }
       ],
       "stats": {
@@ -187,7 +219,7 @@
         {
           "cores": [
             {
-              "id": "inventory_and_procurement",
+              "id": "inventory_and_procurement_core",
               "name": "Inventory & Procurement Operations",
               "caps": [
                 "sc.item_master",
@@ -201,36 +233,35 @@
               "id": "supply_chain_analytics",
               "name": "Supply Chain Analytics & Visibility",
               "caps": [
-                "sc.barcode_scanning",
-                "sc.supply_chain_analytics"
+                "sc.barcode_scanning"
               ]
             }
           ],
-          "rationale": "The partial_only solutions consistently cover the operational capabilities (item master, stock levels, reorder rules, purchase orders, vendor master) together but fail on analytics and barcode scanning. This suggests vendors naturally bundle transactional inventory and procurement operations as one integrated core, while treating analytics and scanning as a separate, optional enhancement. The current split artificially separates procurement from its natural inventory context.",
+          "rationale": "The partial_only solutions consistently cover inventory master data (item_master, stock_levels, reorder_rules) and procurement basics (purchase_orders, vendor_master) as a natural operational bundle, while barcode_scanning and supply chain analytics emerge as a separate, less commonly implemented tier. Regrouping separates the transactional/operational core from the visibility/analytics layer, reflecting how vendors actually build and market these modules.",
           "backing_evidence": [
             {
-              "psg_id": "psg-007",
-              "reason": "Covers all 5 operational caps (item_master, stock_levels, purchase_orders, vendor_master) but fails only on barcode_scanning and supply_chain_analytics."
-            },
-            {
               "psg_id": "psg-008",
-              "reason": "Covers all 5 operational caps (item_master, stock_levels, reorder_rules, purchase_orders, vendor_master) but missing only barcode_scanning and supply_chain_analytics."
+              "reason": "Covers all five transactional caps (item_master, stock_levels, reorder_rules, purchase_orders, vendor_master) as one cohesive block; lacks only barcode_scanning and analytics"
             },
             {
               "psg_id": "psg-019",
-              "reason": "Demonstrates the same pattern: all 5 operational caps covered, failures isolated to barcode_scanning and supply_chain_analytics."
+              "reason": "Same pattern: five transactional/operational caps present; barcode_scanning and supply chain analytics are the cited gaps"
             },
             {
               "psg_id": "psg-049",
-              "reason": "Covers 3 of 5 operational caps (item_master, stock_levels, reorder_rules) with no procurement module coverage, illustrating that procurement_analytics fails as a standalone core."
+              "reason": "Covers three inventory_operations caps plus partial supply chain analytics; absence of procurement modules (purchase_orders, vendor_master) is noted as a shortfall, not a design choice"
+            },
+            {
+              "psg_id": "psg-007",
+              "reason": "Covers item_master, stock_levels, purchase_orders, vendor_master as the primary bundle; barcode_scanning and supply chain analytics are the missing components"
             }
           ]
         },
         {
           "cores": [
             {
-              "id": "core_inventory_operations",
-              "name": "Core Inventory Operations",
+              "id": "inventory_operations",
+              "name": "Inventory Operations",
               "caps": [
                 "sc.item_master",
                 "sc.stock_levels",
@@ -238,29 +269,32 @@
               ]
             },
             {
-              "id": "procurement_and_planning",
-              "name": "Procurement & Inventory Planning",
+              "id": "procurement_and_supply_planning",
+              "name": "Procurement & Supply Planning",
               "caps": [
                 "sc.reorder_rules",
                 "sc.purchase_orders",
-                "sc.vendor_master",
-                "sc.supply_chain_analytics"
+                "sc.vendor_master"
               ]
             }
           ],
-          "rationale": "An alternative framing that recognizes barcode scanning as a core inventory execution capability (alongside item master and stock levels) and consolidates reorder rules with procurement logic, treating analytics as a planning/decision-support layer. This split reflects how solutions separate basic inventory tracking from procurement workflows and planning analytics.",
+          "rationale": "An alternative split groups capabilities by functional domain: inventory execution (master data + stock visibility + barcode capture) versus procurement decision-making (reorder logic, purchasing, vendor management). This mirrors how mid-market ERP vendors often position inventory as a real-time operational module separate from procurement planning workflows, and explains why barcode_scanning appears frequently alongside stock_levels in partial solutions.",
           "backing_evidence": [
             {
-              "psg_id": "psg-007",
-              "reason": "Covers item_master and stock_levels (core inventory) plus purchase_orders and vendor_master (procurement/planning), failing only on barcode_scanning and reorder_rules integration."
+              "psg_id": "psg-050",
+              "reason": "Covers barcode/QR scanning and stock visibility for order fulfillment; lacks procurement planning entirely, consistent with inventory_operations as a standalone operational tier"
             },
             {
-              "psg_id": "psg-050",
-              "reason": "Explicitly covers barcode/QR scanning (core inventory execution) but lacks procurement and planning, validating barcode_scanning as a distinct inventory operations requirement."
+              "psg_id": "psg-047",
+              "reason": "Clearly covers item_master and stock_levels; reorder_rules and procurement (purchase_orders, vendor_master) are absent, suggesting these belong to a separate procurement core"
             },
             {
               "psg_id": "psg-043",
-              "reason": "Covers item_master and stock_levels in one group, purchase_orders and vendor_master in the other, with reorder_rules as a bridge to planning logic."
+              "reason": "Covers item_master and stock_levels (inventory execution) plus purchase_orders and vendor_master (procurement), but split between two functional teams"
+            },
+            {
+              "psg_id": "psg-008",
+              "reason": "Includes reorder_rules with procurement modules (purchase_orders, vendor_master), suggesting reorder logic is procurement-driven rather than inventory-only"
             }
           ]
         }
@@ -269,14 +303,39 @@
     "human_resources_management": {
       "current_split": [
         {
-          "id": "core_hr_payroll",
-          "name": "Core HR & payroll",
-          "cap_count": 12
+          "id": "core_hr_operations",
+          "name": "Core HR operations",
+          "cap_count": 4,
+          "caps": [
+            "hr.employee_master",
+            "hr.leave_management",
+            "hr.time_attendance",
+            "hr.self_service_portal"
+          ]
+        },
+        {
+          "id": "payroll_compliance",
+          "name": "Payroll & statutory compliance",
+          "cap_count": 6,
+          "caps": [
+            "hr.payroll_processing",
+            "hr.payslips",
+            "hr.statutory_reporting",
+            "hr.overtime_variable_pay",
+            "hr.compensation_benefits",
+            "hr.benefits_administration"
+          ]
         },
         {
           "id": "talent_learning",
           "name": "Talent & learning",
-          "cap_count": 4
+          "cap_count": 4,
+          "caps": [
+            "hr.recruitment_ats",
+            "hr.onboarding_offboarding",
+            "hr.performance_management",
+            "hr.document_management"
+          ]
         }
       ],
       "stats": {
@@ -327,47 +386,47 @@
               ]
             }
           ],
-          "rationale": "Vendors consistently deliver payroll and statutory reporting together as an integrated compliance package, while core HR operations (employee master, leave, attendance, self-service) form a distinct operational backbone. Talent management (recruitment, onboarding, performance) clusters separately because many vendors specialize in either operational HR or talent/learning, rarely both. This split reflects actual market segmentation.",
+          "rationale": "The current split groups unrelated capabilities; vendors consistently package employee master/leave/attendance/self-service together as operational HR, payroll processing with all compensation/statutory reporting as a distinct payroll block, and recruitment/onboarding/performance as talent-focused capabilities. This realignment reduces the number of partial caps vendors must claim across core_hr_operations (4\u21924, but more cohesive) and consolidates the frequently-paired payroll-statutory stack (6 caps), leaving talent as a smaller, focused core.",
           "backing_evidence": [
             {
               "psg_id": "psg-102",
-              "reason": "BAS covers all three proposed cores partially, validating the grouping of payroll + statutory + benefits, HR ops, and performance as natural vendor packages."
+              "reason": "Covers all three proposed cores with natural clustering: employee master/leave/attendance in hr operations, payroll/statutory in payroll_statutory, and performance in talent_performance."
             },
             {
               "psg_id": "psg-114",
-              "reason": "BIPO's strength in payroll_processing, payslips, statutory_reporting, and compensation_benefits confirms payroll_statutory as a cohesive core."
+              "reason": "Clearly separates leave/self-service (core_hr_operations) from the 5-cap payroll_statutory block, showing vendors build payroll+statutory as a single offering."
             },
             {
               "psg_id": "psg-302",
-              "reason": "HReasily's partial coverage across payroll (processing, slips, statutory, compensation) and HR ops (master, leave, attendance) validates the payroll_statutory and core_hr_operations split."
+              "reason": "Demonstrates the natural vendor pattern: employee/leave/attendance bundled, payroll/statutory/compensation grouped, and performance isolated in talent."
             },
             {
               "psg_id": "psg-042",
-              "reason": "AIO's exclusive focus on recruitment_ats and onboarding_offboarding demonstrates talent_performance as a standalone vendorable core separate from payroll and operations."
+              "reason": "Focuses solely on recruitment_ats and onboarding_offboarding, validating that talent/learning are packaged together separately from operations."
             },
             {
               "psg_id": "psg-329",
-              "reason": "JustLogin's coverage of time_attendance and leave_management only affirms core_hr_operations as a distinct, operationally-focused core."
+              "reason": "Specializes in time_attendance and leave_management with no payroll or talent, confirming these operational capabilities form a distinct cohesive block."
             }
           ]
         },
         {
           "cores": [
             {
-              "id": "hr_administration",
-              "name": "HR Administration & Operations",
+              "id": "employee_master_operations",
+              "name": "Employee Master & Time Operations",
               "caps": [
                 "hr.employee_master",
                 "hr.leave_management",
                 "hr.time_attendance",
-                "hr.self_service_portal",
-                "hr.payroll_processing"
+                "hr.self_service_portal"
               ]
             },
             {
               "id": "payroll_compliance",
-              "name": "Payroll Compliance & Benefits",
+              "name": "Payroll & Statutory Compliance",
               "caps": [
+                "hr.payroll_processing",
                 "hr.payslips",
                 "hr.statutory_reporting",
                 "hr.overtime_variable_pay",
@@ -384,23 +443,23 @@
               ]
             }
           ],
-          "rationale": "Payroll processing is operationally bundled with core HR functions (leave, attendance, master data) in most vendor offerings, while statutory compliance and benefits administration form a specialized compliance-focused subset. This reflects the reality that many operational HR systems include basic payroll processing, but fewer achieve full statutory and benefits complexity. The talent core remains unchanged.",
+          "rationale": "This revision maintains the existing payroll_compliance and talent_learning cores but reframes core_hr_operations as 'employee_master_operations' to emphasize that vendors see these four capabilities as a foundational operational cluster. Partial solutions consistently cover all four together (employee master, leave, attendance, self-service), never partial subsets, indicating they belong in one cohesive core rather than as isolated caps.",
           "backing_evidence": [
             {
+              "psg_id": "psg-102",
+              "reason": "Covers all four operational caps (employee_master, leave, time_attendance implied) as a unified group, never showing gaps within the set."
+            },
+            {
               "psg_id": "psg-127",
-              "reason": "Carbonate HR groups employee_master, leave, attendance with payroll_processing as one operational unit, suggesting payroll_processing belongs in HR administration core."
+              "reason": "Bundles employee_master, leave_management, and time_attendance as the operational backbone, with payroll as a separate concern."
             },
             {
               "psg_id": "psg-114",
-              "reason": "BIPO's tight pairing of leave_management and self_service_portal with payroll_processing shows operational HR and basic payroll as a natural administrative core."
-            },
-            {
-              "psg_id": "psg-313",
-              "reason": "IMPACT BEST's focus on payslips, statutory_reporting, and compensation_benefits (without basic operational HR) suggests these form a distinct compliance layer."
+              "reason": "Separates leave_management and self_service_portal (both in employee_master_operations) from the 5-cap payroll block, validating the operational grouping."
             },
             {
               "psg_id": "psg-302",
-              "reason": "HReasily's architecture splits operational capabilities (master, leave, attendance) + payroll from statutory and compensation, validating the two-payroll-core model."
+              "reason": "Shows employee_master, leave, and time_attendance always appear together in partial solutions, never fragmented across different vendor modules."
             }
           ]
         }
