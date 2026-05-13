@@ -1,7 +1,7 @@
 {
   "_meta": {
     "generated_by": "scripts/classify_psg_solutions_per_core.py",
-    "generated_at": "2026-05-13T02:58:01.298405+08:00",
+    "generated_at": "2026-05-13T10:57:21.198367+08:00",
     "model": "claude-haiku-4-5-20251001",
     "scope_modules": [
       "manufacturing_management",
@@ -16,12 +16,28 @@
         {
           "id": "production_shop_floor",
           "name": "Production planning & shop floor",
-          "cap_count": 5
+          "cap_count": 5,
+          "caps": [
+            "mfg.bom",
+            "mfg.routing",
+            "mfg.work_orders",
+            "mfg.mrp",
+            "mfg.production_scheduling"
+          ]
         },
         {
           "id": "quality_inventory",
           "name": "Quality & inventory traceability",
-          "cap_count": 7
+          "cap_count": 7,
+          "caps": [
+            "mfg.quality_management",
+            "mfg.inventory_wip",
+            "mfg.product_costing",
+            "mfg.traceability_genealogy",
+            "mfg.safety_compliance",
+            "mfg.mobile_access",
+            "mfg.integration_import_export"
+          ]
         }
       ],
       "classifications": {
@@ -339,14 +355,27 @@
     "asset_management": {
       "cores": [
         {
-          "id": "eam_register_lifecycle",
-          "name": "EAM \u2014 asset register & lifecycle",
-          "cap_count": 5
+          "id": "compliance_inspection",
+          "name": "Compliance, inspection & analytics",
+          "cap_count": 2,
+          "caps": [
+            "asset.compliance",
+            "asset.analytics_kpi"
+          ]
         },
         {
-          "id": "cmms_maintenance_ops",
-          "name": "CMMS \u2014 maintenance operations",
-          "cap_count": 6
+          "id": "lifecycle_maintenance",
+          "name": "Lifecycle & maintenance operations",
+          "cap_count": 7,
+          "caps": [
+            "asset.register",
+            "asset.lifecycle",
+            "asset.depreciation",
+            "asset.pm_planning",
+            "asset.work_orders",
+            "asset.maintenance_requests",
+            "asset.spare_parts"
+          ]
         }
       ],
       "classifications": {
@@ -619,14 +648,25 @@
     "supply_chain_and_inventory": {
       "cores": [
         {
-          "id": "procurement",
-          "name": "Procurement & purchasing",
-          "cap_count": 2
+          "id": "inventory_operations",
+          "name": "Inventory & item operations",
+          "cap_count": 4,
+          "caps": [
+            "sc.item_master",
+            "sc.stock_levels",
+            "sc.reorder_rules",
+            "sc.barcode_scanning"
+          ]
         },
         {
-          "id": "warehouse_inventory",
-          "name": "Warehouse & inventory",
-          "cap_count": 6
+          "id": "procurement_analytics",
+          "name": "Procurement & supply analytics",
+          "cap_count": 3,
+          "caps": [
+            "sc.purchase_orders",
+            "sc.vendor_master",
+            "sc.supply_chain_analytics"
+          ]
         }
       ],
       "classifications": {
@@ -2585,14 +2625,39 @@
     "human_resources_management": {
       "cores": [
         {
-          "id": "core_hr_payroll",
-          "name": "Core HR & payroll",
-          "cap_count": 12
+          "id": "core_hr_operations",
+          "name": "Core HR operations",
+          "cap_count": 4,
+          "caps": [
+            "hr.employee_master",
+            "hr.leave_management",
+            "hr.time_attendance",
+            "hr.self_service_portal"
+          ]
+        },
+        {
+          "id": "payroll_compliance",
+          "name": "Payroll & statutory compliance",
+          "cap_count": 6,
+          "caps": [
+            "hr.payroll_processing",
+            "hr.payslips",
+            "hr.statutory_reporting",
+            "hr.overtime_variable_pay",
+            "hr.compensation_benefits",
+            "hr.benefits_administration"
+          ]
         },
         {
           "id": "talent_learning",
           "name": "Talent & learning",
-          "cap_count": 4
+          "cap_count": 4,
+          "caps": [
+            "hr.recruitment_ats",
+            "hr.onboarding_offboarding",
+            "hr.performance_management",
+            "hr.document_management"
+          ]
         }
       ],
       "classifications": {
