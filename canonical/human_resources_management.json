@@ -4406,7 +4406,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_employees",
         "bamboohr",
@@ -4970,11 +4970,11 @@
           "sme_tier"
         ],
         "original": {
-          "sme_tier": "required"
+          "sme_tier": "preferred"
         },
         "author": "leezhjerome@gmail.com",
         "edited_at": "2026-05-14",
-        "note": "Demoted from Mandatory to Preferred per 2026-05-14 HR walkthrough.\nIMDA mandate is weak (only 2 mandatory hits across all sol cats).\nModern HRIS feature but not part of the SG pre-approval payroll\nbaseline.\n"
+        "note": "REVERTED to Mandatory after deeper review per 2026-05-14 HR\nwalkthrough. Initial demote was overcorrection. Real signals:\nHRMS sol cat Q9 is mandatory. Landscape: every modern HRIS\nincludes it (BambooHR, Rippling, Workday strength). SME need:\nuniversal — every company hires and exits employees.\n"
       }
     },
     {
@@ -4987,7 +4987,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_employees",
         "erpnext_hr",
@@ -5645,11 +5645,11 @@
           "sme_tier"
         ],
         "original": {
-          "sme_tier": "required"
+          "sme_tier": "preferred"
         },
         "author": "leezhjerome@gmail.com",
         "edited_at": "2026-05-14",
-        "note": "Demoted from Mandatory to Preferred per 2026-05-14 HR walkthrough.\nIMDA mandate is weak (4 mandatory hits across only 3 sol cats).\nCommon modern feature but not Mandatory pre-approval baseline.\n"
+        "note": "REVERTED to Mandatory after deeper review per 2026-05-14 HR\nwalkthrough. Initial demote was overcorrection. Real signals:\nlandscape strong (62% cheapest plan; SG payroll vendors\nTalenox + JustLogin both have it). SME need: high — employees\nexpect mobile access to payslips + leave requests on phone.\nIMDA mandate weak (only Talent sol cat preferred) but the\ncommercial + SME-need signals override.\n"
       }
     },
     {
@@ -8133,7 +8133,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "erpnext_hr",
         "bamboohr",
@@ -8761,11 +8761,11 @@
           "sme_tier"
         ],
         "original": {
-          "sme_tier": "required"
+          "sme_tier": "preferred"
         },
         "author": "leezhjerome@gmail.com",
         "edited_at": "2026-05-14",
-        "note": "Demoted from Mandatory to Preferred per 2026-05-14 HR walkthrough.\nIMDA mandate is weak (only 2 mandatory hits across all sol cats).\nAnnual review / goal management is full-HCM territory.\n"
+        "note": "REVERTED to Mandatory after deeper review per 2026-05-14 HR\nwalkthrough. Initial demote was overcorrection. Real signals:\nHRMS sol cat Q1 (KPI) + Q4 (performance appraisal) both\nmandatory. Landscape: most HCM has it. SG SME need: real for\n20+ employee orgs.\n"
       }
     },
     {
@@ -19634,7 +19634,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_employees",
         "bamboohr",
@@ -20205,14 +20205,14 @@
       "sub_module_desc": null,
       "_cap_override": {
         "fields_overridden": [
-          "name"
+          "sme_tier"
         ],
         "original": {
-          "name": "Mobile and Multi-Device Access"
+          "sme_tier": "preferred"
         },
-        "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Aligned to IMDA Q1 phrasing of essential-business__document-management- and-mobile-access-system (\"Cloud and Multi-Device Accessibility\"; req: \"For cloud-based, mobile-based, and/or web-based usage\"). Replaces the previous \"Mobile and Multi-Device Access\" name + the longer vendor question that didn't match IMDA standard wording. The IMDA trace was added separately in data/manual_imda_ref_overrides.yaml (10 entries).\n"
+        "author": "leezhjerome@gmail.com",
+        "edited_at": "2026-05-14",
+        "note": "PROMOTED from Preferred to Mandatory per 2026-05-14 HR walkthrough\n(Cloud and Multi-Device Accessibility). Triangulated signals:\nlandscape 71% cheapest plan (every modern HRIS is cloud + mobile).\nSME need: high — employees expect to access HR on phone. Pairs\nwith hr.self_service_portal — both are about modern access\npatterns.\n"
       },
       "_meta": {
         "demoted_by_step15": true,
@@ -23302,8 +23302,8 @@
   "_meta": {
     "step15_generated_at": "2026-05-07T13:55:14.798301+08:00",
     "step15_processed": 32,
-    "step16_applied_at": "2026-05-14T21:04:51.364149+08:00",
-    "step16_applied_count": 5,
+    "step16_applied_at": "2026-05-14T21:38:04.365106+08:00",
+    "step16_applied_count": 1,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-14T10:45:03.622900+08:00",
