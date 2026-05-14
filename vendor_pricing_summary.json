@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-05-14T17:00:44.344430+08:00",
+    "generated_at": "2026-05-14T21:04:53.458497+08:00",
     "modules_in_scope": [
       "financial",
       "sales_crm",
@@ -12,7 +12,7 @@
     "fx_assumption_usd_to_sgd": 1.35,
     "user_baseline": 10,
     "one_time_maintenance_pct": 0.2,
-    "vendor_count_total": 42,
+    "vendor_count_total": 51,
     "vendor_count_with_pricing": 18
   },
   "modules": {
@@ -266,7 +266,7 @@
           "max_base_price_sgd_month": 228
         },
         "mid": {
-          "vendor_count_total": 7,
+          "vendor_count_total": 9,
           "vendor_count_with_pricing": 4,
           "vendors": [
             {
@@ -624,6 +624,55 @@
               "psg_packages": [],
               "extracted_at": "2026-05-14T01:39:44.015844+08:00",
               "source_url": "https://www.epicor.com/en-us/products/kinetic/"
+            },
+            {
+              "id": "rippling",
+              "name": "Rippling",
+              "tier": "mid",
+              "vendor_type": "enterprise",
+              "pricing_status": "public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": "quote-on-request",
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 7,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": false,
+              "year1_total_sgd": null,
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
+              "psg_packages": [],
+              "extracted_at": "2026-05-14T20:57:22.195183+08:00",
+              "source_url": "https://www.rippling.com/pricing"
+            },
+            {
+              "id": "netsuite_full",
+              "name": "NetSuite ERP (full suite)",
+              "tier": "mid",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 7,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": null
             }
           ],
           "avg_base_price_sgd_month": 108,
@@ -631,9 +680,108 @@
           "max_base_price_sgd_month": 108
         },
         "enterprise": {
-          "vendor_count_total": 0,
+          "vendor_count_total": 4,
           "vendor_count_with_pricing": 0,
-          "vendors": [],
+          "vendors": [
+            {
+              "id": "oracle_erp_cloud",
+              "name": "Oracle Fusion Cloud ERP",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
+              "base_price_sgd_month_norm": null,
+              "base_price_label": "quote-on-request",
+              "currency_orig": null,
+              "mandatory_covered_in_base": 5,
+              "mandatory_total": 7,
+              "mandatory_pct": 71,
+              "add_on_caps": [],
+              "no_pricing_data": false,
+              "year1_total_sgd": null,
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
+              "psg_packages": [],
+              "extracted_at": "2026-05-14T20:57:51.616411+08:00",
+              "source_url": "https://www.oracle.com/erp/"
+            },
+            {
+              "id": "infor_m3",
+              "name": "Infor M3 CloudSuite",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 7,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://www.infor.com/products/m3"
+            },
+            {
+              "id": "workday_financial_mgmt",
+              "name": "Workday Financial Management",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
+              "base_price_sgd_month_norm": null,
+              "base_price_label": "quote-on-request",
+              "currency_orig": null,
+              "mandatory_covered_in_base": 3,
+              "mandatory_total": 7,
+              "mandatory_pct": 43,
+              "add_on_caps": [],
+              "no_pricing_data": false,
+              "year1_total_sgd": null,
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
+              "psg_packages": [],
+              "extracted_at": "2026-05-14T20:57:57.242434+08:00",
+              "source_url": "https://www.workday.com/en-us/products/financial-management/overview.html"
+            },
+            {
+              "id": "ms_dynamics_365_finance_scm",
+              "name": "Microsoft Dynamics 365 Finance & SCM",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 7,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": null
+            }
+          ],
           "avg_base_price_sgd_month": null,
           "min_base_price_sgd_month": null,
           "max_base_price_sgd_month": null
@@ -644,9 +792,9 @@
           "cap_id": "fin.general_ledger",
           "name": "General Ledger & Chart of Accounts",
           "sub_module": "Core Ledger & Close",
-          "covered_in_base_at_count": 7,
+          "covered_in_base_at_count": 9,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 7,
+          "not_covered_count": 11,
           "covered_in_base_vendors": [
             "odoo_online",
             "xero",
@@ -654,7 +802,9 @@
             "sap_business_one",
             "sage_300",
             "globe3_erp",
-            "epicor_kinetic"
+            "epicor_kinetic",
+            "oracle_erp_cloud",
+            "workday_financial_mgmt"
           ],
           "covered_as_addon_vendors": []
         },
@@ -662,16 +812,17 @@
           "cap_id": "fin.accounts_receivable",
           "name": "Accounts Receivable & Customer Invoicing",
           "sub_module": "Revenue Cycle (AR)",
-          "covered_in_base_at_count": 6,
+          "covered_in_base_at_count": 7,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
+          "not_covered_count": 13,
           "covered_in_base_vendors": [
             "odoo_online",
             "xero",
             "info_tech_accounting",
             "sap_business_one",
             "sage_300",
-            "globe3_erp"
+            "globe3_erp",
+            "oracle_erp_cloud"
           ],
           "covered_as_addon_vendors": []
         },
@@ -679,16 +830,17 @@
           "cap_id": "fin.accounts_payable",
           "name": "Accounts Payable & Vendor Bills",
           "sub_module": "Expense Cycle (AP)",
-          "covered_in_base_at_count": 6,
+          "covered_in_base_at_count": 7,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
+          "not_covered_count": 13,
           "covered_in_base_vendors": [
             "odoo_online",
             "xero",
             "info_tech_accounting",
             "sap_business_one",
             "sage_300",
-            "globe3_erp"
+            "globe3_erp",
+            "oracle_erp_cloud"
           ],
           "covered_as_addon_vendors": []
         },
@@ -698,7 +850,7 @@
           "sub_module": "Bank, Tax & FX (Core Treasury)",
           "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 11,
+          "not_covered_count": 17,
           "covered_in_base_vendors": [
             "xero",
             "sap_business_one",
@@ -710,9 +862,9 @@
           "cap_id": "fin.financial_reporting",
           "name": "Financial Reporting & Statements",
           "sub_module": "Core Ledger & Close",
-          "covered_in_base_at_count": 7,
+          "covered_in_base_at_count": 9,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 7,
+          "not_covered_count": 11,
           "covered_in_base_vendors": [
             "odoo_online",
             "xero",
@@ -720,7 +872,9 @@
             "sap_business_one",
             "sage_300",
             "globe3_erp",
-            "epicor_kinetic"
+            "epicor_kinetic",
+            "oracle_erp_cloud",
+            "workday_financial_mgmt"
           ],
           "covered_as_addon_vendors": []
         },
@@ -730,7 +884,7 @@
           "sub_module": "Revenue Cycle (AR)",
           "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 10,
+          "not_covered_count": 16,
           "covered_in_base_vendors": [
             "info_tech_accounting",
             "sap_business_one",
@@ -743,15 +897,17 @@
           "cap_id": "fin.analytics_dashboards",
           "name": "Financial Analytics",
           "sub_module": "Planning & Analytics (Finance)",
-          "covered_in_base_at_count": 5,
+          "covered_in_base_at_count": 7,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 9,
+          "not_covered_count": 13,
           "covered_in_base_vendors": [
             "odoo_online",
             "xero",
             "sap_business_one",
             "sage_300",
-            "epicor_kinetic"
+            "epicor_kinetic",
+            "oracle_erp_cloud",
+            "workday_financial_mgmt"
           ],
           "covered_as_addon_vendors": []
         }
@@ -848,6 +1004,42 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -942,6 +1134,42 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1036,6 +1264,42 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1130,6 +1394,42 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1224,6 +1524,42 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1318,6 +1654,42 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1412,6 +1784,42 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1506,6 +1914,42 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1600,6 +2044,42 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1694,6 +2174,42 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1788,6 +2304,42 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1882,6 +2434,42 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -1895,9 +2483,9 @@
           "vendor_coverage": {
             "odoo_online": {
               "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "erpnext": {
               "cheapest": "not_covered",
@@ -1976,6 +2564,42 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -2070,6 +2694,42 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -2164,6 +2824,42 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -2258,6 +2954,42 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -2352,6 +3084,42 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -2446,6 +3214,42 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -2540,6 +3344,42 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_financial_mgmt": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         }
@@ -2730,7 +3570,7 @@
           "max_base_price_sgd_month": 228
         },
         "mid": {
-          "vendor_count_total": 4,
+          "vendor_count_total": 5,
           "vendor_count_with_pricing": 3,
           "vendors": [
             {
@@ -2953,6 +3793,28 @@
               ],
               "extracted_at": "2026-05-10T23:35:19.710377+08:00",
               "source_url": "https://www.globe3.com.sg/"
+            },
+            {
+              "id": "netsuite_full",
+              "name": "NetSuite ERP (full suite)",
+              "tier": "mid",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 6,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": null
             }
           ],
           "avg_base_price_sgd_month": 108,
@@ -2998,7 +3860,7 @@
           "sub_module": "CRM & Relationship",
           "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 6,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "odoo_online",
             "sap_business_one",
@@ -3012,7 +3874,7 @@
           "sub_module": "CRM & Relationship",
           "covered_in_base_at_count": 1,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
+          "not_covered_count": 9,
           "covered_in_base_vendors": [
             "odoo_online"
           ],
@@ -3024,7 +3886,7 @@
           "sub_module": "CRM & Relationship",
           "covered_in_base_at_count": 1,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
+          "not_covered_count": 9,
           "covered_in_base_vendors": [
             "odoo_online"
           ],
@@ -3036,7 +3898,7 @@
           "sub_module": "CRM & Relationship",
           "covered_in_base_at_count": 1,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
+          "not_covered_count": 9,
           "covered_in_base_vendors": [
             "odoo_online"
           ],
@@ -3048,7 +3910,7 @@
           "sub_module": "Sales Transactions",
           "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 6,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "odoo_online",
             "sap_business_one",
@@ -3062,7 +3924,7 @@
           "sub_module": "Sales Analytics & Customer 360",
           "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 6,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "odoo_online",
             "sap_business_one",
@@ -3128,6 +3990,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -3191,6 +4059,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
@@ -3256,6 +4130,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -3319,6 +4199,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
@@ -3384,6 +4270,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -3447,6 +4339,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
@@ -3512,6 +4410,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -3575,6 +4479,12 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
@@ -3640,6 +4550,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -3703,6 +4619,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
@@ -3768,6 +4690,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -3831,6 +4759,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
@@ -3896,6 +4830,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -3959,6 +4899,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
@@ -4024,6 +4970,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -4087,6 +5039,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
@@ -4152,6 +5110,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -4215,6 +5179,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
@@ -4280,6 +5250,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -4343,6 +5319,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
@@ -4408,6 +5390,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -4471,6 +5459,12 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
@@ -4536,6 +5530,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -4600,6 +5600,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -4617,10 +5623,10 @@
           "checklist_order": 24,
           "vendor_coverage": {
             "odoo_online": {
-              "cheapest": "not_covered",
+              "cheapest": "in_base",
               "mid": "not_covered",
               "top": "not_covered",
-              "any": "not_covered"
+              "any": "in_base"
             },
             "erpnext": {
               "cheapest": "not_covered",
@@ -4664,6 +5670,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "salesforce_sales_cloud": {
               "cheapest": "no_data",
               "mid": "no_data",
@@ -4675,7 +5687,7 @@
       ]
     },
     "hr": {
-      "mandatory_total": 14,
+      "mandatory_total": 9,
       "mandatory_caps": [
         {
           "cap_id": "hr.employee_master",
@@ -4703,16 +5715,6 @@
           "sub_module": "Payroll & Statutory (SG)"
         },
         {
-          "cap_id": "hr.onboarding_offboarding",
-          "name": "Onboarding & Offboarding",
-          "sub_module": "Core HR"
-        },
-        {
-          "cap_id": "hr.self_service_portal",
-          "name": "Self-Service Portal",
-          "sub_module": "Core HR"
-        },
-        {
           "cap_id": "hr.document_management",
           "name": "HR Document Management",
           "sub_module": "Core HR"
@@ -4720,21 +5722,6 @@
         {
           "cap_id": "hr.recruitment_ats",
           "name": "Recruitment & ATS",
-          "sub_module": "Talent Acquisition & Compensation"
-        },
-        {
-          "cap_id": "hr.performance_management",
-          "name": "Performance Management",
-          "sub_module": "Performance & Learning"
-        },
-        {
-          "cap_id": "hr.compensation_benefits",
-          "name": "Compensation Management",
-          "sub_module": "Talent Acquisition & Compensation"
-        },
-        {
-          "cap_id": "hr.benefits_administration",
-          "name": "Benefits Administration",
           "sub_module": "Talent Acquisition & Compensation"
         },
         {
@@ -4750,7 +5737,7 @@
       ],
       "by_tier": {
         "sme": {
-          "vendor_count_total": 6,
+          "vendor_count_total": 7,
           "vendor_count_with_pricing": 5,
           "vendors": [
             {
@@ -4763,9 +5750,9 @@
               "base_price_sgd_month_norm": 228.15,
               "base_price_label": "16.9 USD/u/mo × 10 users",
               "currency_orig": "USD",
-              "mandatory_covered_in_base": 3,
-              "mandatory_total": 14,
-              "mandatory_pct": 21,
+              "mandatory_covered_in_base": 9,
+              "mandatory_total": 9,
+              "mandatory_pct": 100,
               "add_on_caps": [],
               "no_pricing_data": false,
               "year1_total_sgd": 2737.8,
@@ -4791,7 +5778,7 @@
               "base_price_label": "5 USD/mo flat",
               "currency_orig": "USD",
               "mandatory_covered_in_base": 0,
-              "mandatory_total": 14,
+              "mandatory_total": 9,
               "mandatory_pct": 0,
               "add_on_caps": [],
               "no_pricing_data": false,
@@ -4818,7 +5805,7 @@
               "base_price_label": null,
               "currency_orig": null,
               "mandatory_covered_in_base": 0,
-              "mandatory_total": 14,
+              "mandatory_total": 9,
               "mandatory_pct": 0,
               "add_on_caps": [],
               "no_pricing_data": true,
@@ -4839,9 +5826,9 @@
               "base_price_sgd_month_norm": null,
               "base_price_label": "quote-on-request",
               "currency_orig": null,
-              "mandatory_covered_in_base": 10,
-              "mandatory_total": 14,
-              "mandatory_pct": 71,
+              "mandatory_covered_in_base": 9,
+              "mandatory_total": 9,
+              "mandatory_pct": 100,
               "add_on_caps": [],
               "no_pricing_data": false,
               "year1_total_sgd": 4560.0,
@@ -4925,9 +5912,9 @@
               "base_price_sgd_month_norm": null,
               "base_price_label": "quote-on-request",
               "currency_orig": null,
-              "mandatory_covered_in_base": 5,
-              "mandatory_total": 14,
-              "mandatory_pct": 36,
+              "mandatory_covered_in_base": 8,
+              "mandatory_total": 9,
+              "mandatory_pct": 89,
               "add_on_caps": [],
               "no_pricing_data": false,
               "year1_total_sgd": 5700.0,
@@ -5011,9 +5998,9 @@
               "base_price_sgd_month_norm": 43.6,
               "base_price_label": "4.36 SGD/u/mo × 10 users",
               "currency_orig": "SGD",
-              "mandatory_covered_in_base": 3,
-              "mandatory_total": 14,
-              "mandatory_pct": 21,
+              "mandatory_covered_in_base": 4,
+              "mandatory_total": 9,
+              "mandatory_pct": 44,
               "add_on_caps": [],
               "no_pricing_data": false,
               "year1_total_sgd": 523.2,
@@ -5027,6 +6014,28 @@
               "psg_packages": [],
               "extracted_at": "2026-05-10T22:10:14.956565+08:00",
               "source_url": "https://www.talenox.com/sg/pricing/"
+            },
+            {
+              "id": "bamboohr_full",
+              "name": "BambooHR (full feature set)",
+              "tier": "sme",
+              "vendor_type": "erp_suite",
+              "pricing_status": "public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 9,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": null
             }
           ],
           "avg_base_price_sgd_month": 93,
@@ -5034,7 +6043,7 @@
           "max_base_price_sgd_month": 228
         },
         "mid": {
-          "vendor_count_total": 1,
+          "vendor_count_total": 5,
           "vendor_count_with_pricing": 0,
           "vendors": [
             {
@@ -5048,7 +6057,7 @@
               "base_price_label": null,
               "currency_orig": null,
               "mandatory_covered_in_base": 0,
-              "mandatory_total": 14,
+              "mandatory_total": 9,
               "mandatory_pct": 0,
               "add_on_caps": [],
               "no_pricing_data": true,
@@ -5058,6 +6067,106 @@
               "psg_packages": [],
               "extracted_at": null,
               "source_url": "https://www.netsuite.com/portal/products/erp/pricing.shtml"
+            },
+            {
+              "id": "rippling",
+              "name": "Rippling",
+              "tier": "mid",
+              "vendor_type": "enterprise",
+              "pricing_status": "public",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": "quote-on-request",
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 9,
+              "mandatory_pct": 0,
+              "add_on_caps": [
+                {
+                  "cap_id": "hr.employee_master",
+                  "addon_name": "FSA, HSA & Commuter benefits",
+                  "addon_price_sgd_month_norm": null,
+                  "addon_price_label": "quote-on-request"
+                }
+              ],
+              "no_pricing_data": false,
+              "year1_total_sgd": null,
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
+              "psg_packages": [],
+              "extracted_at": "2026-05-14T20:57:22.195183+08:00",
+              "source_url": "https://www.rippling.com/pricing"
+            },
+            {
+              "id": "netsuite_full",
+              "name": "NetSuite ERP (full suite)",
+              "tier": "mid",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 9,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": null
+            },
+            {
+              "id": "personio",
+              "name": "Personio",
+              "tier": "mid",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 9,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": null
+            },
+            {
+              "id": "adp_workforce_now",
+              "name": "ADP Workforce Now",
+              "tier": "mid",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 9,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": null
             }
           ],
           "avg_base_price_sgd_month": null,
@@ -5078,9 +6187,9 @@
               "base_price_sgd_month_norm": null,
               "base_price_label": "quote-on-request",
               "currency_orig": null,
-              "mandatory_covered_in_base": 7,
-              "mandatory_total": 14,
-              "mandatory_pct": 50,
+              "mandatory_covered_in_base": 4,
+              "mandatory_total": 9,
+              "mandatory_pct": 44,
               "add_on_caps": [],
               "no_pricing_data": false,
               "year1_total_sgd": null,
@@ -5105,9 +6214,9 @@
               "base_price_sgd_month_norm": null,
               "base_price_label": "quote-on-request",
               "currency_orig": null,
-              "mandatory_covered_in_base": 10,
-              "mandatory_total": 14,
-              "mandatory_pct": 71,
+              "mandatory_covered_in_base": 5,
+              "mandatory_total": 9,
+              "mandatory_pct": 56,
               "add_on_caps": [],
               "no_pricing_data": false,
               "year1_total_sgd": null,
@@ -5133,7 +6242,7 @@
               "base_price_label": null,
               "currency_orig": null,
               "mandatory_covered_in_base": 0,
-              "mandatory_total": 14,
+              "mandatory_total": 9,
               "mandatory_pct": 0,
               "add_on_caps": [],
               "no_pricing_data": true,
@@ -5155,25 +6264,30 @@
           "cap_id": "hr.employee_master",
           "name": "Employee Master & HRIS",
           "sub_module": "Core HR",
-          "covered_in_base_at_count": 4,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 6,
+          "covered_in_base_at_count": 6,
+          "covered_as_addon_at_count": 1,
+          "not_covered_count": 8,
           "covered_in_base_vendors": [
             "odoo_online",
             "justlogin_hr",
+            "info_tech_hrms",
+            "talenox",
             "workday_hcm",
             "oracle_hcm_cloud"
           ],
-          "covered_as_addon_vendors": []
+          "covered_as_addon_vendors": [
+            "rippling"
+          ]
         },
         {
           "cap_id": "hr.leave_management",
           "name": "Leave Management",
           "sub_module": "Time & Attendance",
-          "covered_in_base_at_count": 3,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 7,
+          "not_covered_count": 11,
           "covered_in_base_vendors": [
+            "odoo_online",
             "justlogin_hr",
             "info_tech_hrms",
             "oracle_hcm_cloud"
@@ -5184,10 +6298,11 @@
           "cap_id": "hr.time_attendance",
           "name": "Time & Attendance",
           "sub_module": "Time & Attendance",
-          "covered_in_base_at_count": 4,
+          "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 6,
+          "not_covered_count": 10,
           "covered_in_base_vendors": [
+            "odoo_online",
             "justlogin_hr",
             "info_tech_hrms",
             "workday_hcm",
@@ -5201,7 +6316,7 @@
           "sub_module": "Payroll & Statutory (SG)",
           "covered_in_base_at_count": 6,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 4,
+          "not_covered_count": 9,
           "covered_in_base_vendors": [
             "odoo_online",
             "justlogin_hr",
@@ -5216,38 +6331,14 @@
           "cap_id": "hr.payslips",
           "name": "Payslip Generation",
           "sub_module": "Payroll & Statutory (SG)",
-          "covered_in_base_at_count": 3,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 7,
+          "not_covered_count": 11,
           "covered_in_base_vendors": [
             "odoo_online",
             "justlogin_hr",
+            "info_tech_hrms",
             "talenox"
-          ],
-          "covered_as_addon_vendors": []
-        },
-        {
-          "cap_id": "hr.onboarding_offboarding",
-          "name": "Onboarding & Offboarding",
-          "sub_module": "Core HR",
-          "covered_in_base_at_count": 1,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 9,
-          "covered_in_base_vendors": [
-            "oracle_hcm_cloud"
-          ],
-          "covered_as_addon_vendors": []
-        },
-        {
-          "cap_id": "hr.self_service_portal",
-          "name": "Self-Service Portal",
-          "sub_module": "Core HR",
-          "covered_in_base_at_count": 2,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
-          "covered_in_base_vendors": [
-            "workday_hcm",
-            "oracle_hcm_cloud"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5255,11 +6346,13 @@
           "cap_id": "hr.document_management",
           "name": "HR Document Management",
           "sub_module": "Core HR",
-          "covered_in_base_at_count": 1,
+          "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 9,
+          "not_covered_count": 12,
           "covered_in_base_vendors": [
-            "justlogin_hr"
+            "odoo_online",
+            "justlogin_hr",
+            "info_tech_hrms"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5267,52 +6360,13 @@
           "cap_id": "hr.recruitment_ats",
           "name": "Recruitment & ATS",
           "sub_module": "Talent Acquisition & Compensation",
-          "covered_in_base_at_count": 4,
+          "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 6,
+          "not_covered_count": 10,
           "covered_in_base_vendors": [
+            "odoo_online",
             "justlogin_hr",
             "info_tech_hrms",
-            "workday_hcm",
-            "oracle_hcm_cloud"
-          ],
-          "covered_as_addon_vendors": []
-        },
-        {
-          "cap_id": "hr.performance_management",
-          "name": "Performance Management",
-          "sub_module": "Performance & Learning",
-          "covered_in_base_at_count": 2,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
-          "covered_in_base_vendors": [
-            "info_tech_hrms",
-            "oracle_hcm_cloud"
-          ],
-          "covered_as_addon_vendors": []
-        },
-        {
-          "cap_id": "hr.compensation_benefits",
-          "name": "Compensation Management",
-          "sub_module": "Talent Acquisition & Compensation",
-          "covered_in_base_at_count": 3,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 7,
-          "covered_in_base_vendors": [
-            "justlogin_hr",
-            "workday_hcm",
-            "oracle_hcm_cloud"
-          ],
-          "covered_as_addon_vendors": []
-        },
-        {
-          "cap_id": "hr.benefits_administration",
-          "name": "Benefits Administration",
-          "sub_module": "Talent Acquisition & Compensation",
-          "covered_in_base_at_count": 2,
-          "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
-          "covered_in_base_vendors": [
             "workday_hcm",
             "oracle_hcm_cloud"
           ],
@@ -5322,11 +6376,13 @@
           "cap_id": "hr.statutory_reporting",
           "name": "Statutory Reporting (CPF/IRAS/MOM)",
           "sub_module": "Payroll & Statutory (SG)",
-          "covered_in_base_at_count": 2,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 8,
+          "not_covered_count": 11,
           "covered_in_base_vendors": [
+            "odoo_online",
             "justlogin_hr",
+            "info_tech_hrms",
             "talenox"
           ],
           "covered_as_addon_vendors": []
@@ -5335,10 +6391,11 @@
           "cap_id": "hr.overtime_variable_pay",
           "name": "Overtime & Variable Pay",
           "sub_module": "Payroll & Statutory (SG)",
-          "covered_in_base_at_count": 1,
+          "covered_in_base_at_count": 2,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 9,
+          "not_covered_count": 13,
           "covered_in_base_vendors": [
+            "odoo_online",
             "justlogin_hr"
           ],
           "covered_as_addon_vendors": []
@@ -5373,21 +6430,27 @@
             },
             "justlogin_hr": {
               "cheapest": "in_base",
-              "mid": "not_covered",
+              "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
             },
             "info_tech_hrms": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
-            },
-            "talenox": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
+              "cheapest": "in_base",
+              "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "talenox": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             },
             "netsuite": {
               "cheapest": "no_data",
@@ -5395,141 +6458,25 @@
               "top": "no_data",
               "any": "no_data"
             },
-            "workday_hcm": {
-              "cheapest": "in_base",
-              "mid": "in_base",
-              "top": "in_base",
-              "any": "in_base"
+            "rippling": {
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "add_on"
             },
-            "oracle_hcm_cloud": {
-              "cheapest": "in_base",
-              "mid": "in_base",
-              "top": "in_base",
-              "any": "in_base"
-            },
-            "sap_successfactors": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
-            }
-          }
-        },
-        {
-          "cap_id": "hr.onboarding_offboarding",
-          "name": "Onboarding & Offboarding",
-          "sub_module": "Core HR",
-          "sub_module_id": "core_hr",
-          "tier": "required",
-          "checklist_order": 1,
-          "vendor_coverage": {
-            "odoo_online": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
-            },
-            "erpnext": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
-            },
-            "bamboohr": {
+            "netsuite_full": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
             },
-            "justlogin_hr": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "in_base",
-              "any": "in_base"
-            },
-            "info_tech_hrms": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
-            },
-            "talenox": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
-            },
-            "netsuite": {
+            "personio": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
             },
-            "workday_hcm": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
-            },
-            "oracle_hcm_cloud": {
-              "cheapest": "in_base",
-              "mid": "in_base",
-              "top": "in_base",
-              "any": "in_base"
-            },
-            "sap_successfactors": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
-            }
-          }
-        },
-        {
-          "cap_id": "hr.self_service_portal",
-          "name": "Self-Service Portal",
-          "sub_module": "Core HR",
-          "sub_module_id": "core_hr",
-          "tier": "required",
-          "checklist_order": 2,
-          "vendor_coverage": {
-            "odoo_online": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
-            },
-            "erpnext": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
-            },
-            "bamboohr": {
-              "cheapest": "no_data",
-              "mid": "no_data",
-              "top": "no_data",
-              "any": "no_data"
-            },
-            "justlogin_hr": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "in_base",
-              "any": "in_base"
-            },
-            "info_tech_hrms": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
-            },
-            "talenox": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
-            },
-            "netsuite": {
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -5561,13 +6508,113 @@
           "sub_module": "Core HR",
           "sub_module_id": "core_hr",
           "tier": "required",
-          "checklist_order": 3,
+          "checklist_order": 1,
           "vendor_coverage": {
             "odoo_online": {
+              "cheapest": "in_base",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
+            },
+            "erpnext": {
               "cheapest": "not_covered",
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "bamboohr": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "justlogin_hr": {
+              "cheapest": "in_base",
+              "mid": "not_covered",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "info_tech_hrms": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "talenox": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_hcm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "hr.onboarding_offboarding",
+          "name": "Onboarding & Offboarding",
+          "sub_module": "Core HR",
+          "sub_module_id": "core_hr",
+          "tier": "preferred",
+          "checklist_order": 2,
+          "vendor_coverage": {
+            "odoo_online": {
+              "cheapest": "in_base",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
             },
             "erpnext": {
               "cheapest": "not_covered",
@@ -5599,7 +6646,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -5612,10 +6689,110 @@
               "any": "not_covered"
             },
             "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            }
+          }
+        },
+        {
+          "cap_id": "hr.self_service_portal",
+          "name": "Self-Service Portal",
+          "sub_module": "Core HR",
+          "sub_module_id": "core_hr",
+          "tier": "preferred",
+          "checklist_order": 3,
+          "vendor_coverage": {
+            "odoo_online": {
+              "cheapest": "in_base",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "in_base"
+            },
+            "erpnext": {
               "cheapest": "not_covered",
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "bamboohr": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "justlogin_hr": {
+              "cheapest": "in_base",
+              "mid": "not_covered",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "info_tech_hrms": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "talenox": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "workday_hcm": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "sap_successfactors": {
               "cheapest": "no_data",
@@ -5654,7 +6831,7 @@
             "justlogin_hr": {
               "cheapest": "in_base",
               "mid": "not_covered",
-              "top": "in_base",
+              "top": "not_covered",
               "any": "in_base"
             },
             "info_tech_hrms": {
@@ -5669,7 +6846,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -5704,9 +6911,9 @@
           "checklist_order": 5,
           "vendor_coverage": {
             "odoo_online": {
-              "cheapest": "not_covered",
-              "mid": "in_base",
-              "top": "in_base",
+              "cheapest": "in_base",
+              "mid": "not_covered",
+              "top": "not_covered",
               "any": "in_base"
             },
             "erpnext": {
@@ -5723,7 +6930,7 @@
             },
             "justlogin_hr": {
               "cheapest": "in_base",
-              "mid": "not_covered",
+              "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
             },
@@ -5739,7 +6946,37 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -5774,9 +7011,9 @@
           "checklist_order": 6,
           "vendor_coverage": {
             "odoo_online": {
-              "cheapest": "not_covered",
-              "mid": "in_base",
-              "top": "in_base",
+              "cheapest": "in_base",
+              "mid": "not_covered",
+              "top": "not_covered",
               "any": "in_base"
             },
             "erpnext": {
@@ -5793,7 +7030,7 @@
             },
             "justlogin_hr": {
               "cheapest": "in_base",
-              "mid": "not_covered",
+              "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
             },
@@ -5809,7 +7046,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -5864,7 +7131,7 @@
             "justlogin_hr": {
               "cheapest": "in_base",
               "mid": "not_covered",
-              "top": "in_base",
+              "top": "not_covered",
               "any": "in_base"
             },
             "info_tech_hrms": {
@@ -5879,7 +7146,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -5934,7 +7231,7 @@
             "justlogin_hr": {
               "cheapest": "in_base",
               "mid": "not_covered",
-              "top": "in_base",
+              "top": "not_covered",
               "any": "in_base"
             },
             "info_tech_hrms": {
@@ -5949,7 +7246,37 @@
               "top": "not_covered",
               "any": "in_base"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -6003,7 +7330,7 @@
             },
             "justlogin_hr": {
               "cheapest": "in_base",
-              "mid": "not_covered",
+              "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
             },
@@ -6019,7 +7346,37 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -6073,15 +7430,15 @@
             },
             "justlogin_hr": {
               "cheapest": "in_base",
-              "mid": "not_covered",
+              "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
             },
             "info_tech_hrms": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "talenox": {
               "cheapest": "in_base",
@@ -6089,7 +7446,37 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -6124,10 +7511,10 @@
           "checklist_order": 11,
           "vendor_coverage": {
             "odoo_online": {
-              "cheapest": "not_covered",
+              "cheapest": "in_base",
               "mid": "not_covered",
               "top": "not_covered",
-              "any": "not_covered"
+              "any": "in_base"
             },
             "erpnext": {
               "cheapest": "not_covered",
@@ -6148,10 +7535,10 @@
               "any": "in_base"
             },
             "info_tech_hrms": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "talenox": {
               "cheapest": "in_base",
@@ -6159,7 +7546,37 @@
               "top": "not_covered",
               "any": "in_base"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -6194,10 +7611,10 @@
           "checklist_order": 12,
           "vendor_coverage": {
             "odoo_online": {
-              "cheapest": "not_covered",
+              "cheapest": "in_base",
               "mid": "not_covered",
               "top": "not_covered",
-              "any": "not_covered"
+              "any": "in_base"
             },
             "erpnext": {
               "cheapest": "not_covered",
@@ -6213,7 +7630,7 @@
             },
             "justlogin_hr": {
               "cheapest": "in_base",
-              "mid": "not_covered",
+              "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
             },
@@ -6229,7 +7646,37 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -6299,7 +7746,37 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -6354,8 +7831,8 @@
             "justlogin_hr": {
               "cheapest": "not_covered",
               "mid": "not_covered",
-              "top": "in_base",
-              "any": "in_base"
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "info_tech_hrms": {
               "cheapest": "not_covered",
@@ -6369,7 +7846,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -6404,10 +7911,10 @@
           "checklist_order": 15,
           "vendor_coverage": {
             "odoo_online": {
-              "cheapest": "not_covered",
+              "cheapest": "in_base",
               "mid": "not_covered",
               "top": "not_covered",
-              "any": "not_covered"
+              "any": "in_base"
             },
             "erpnext": {
               "cheapest": "not_covered",
@@ -6439,7 +7946,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -6470,14 +8007,14 @@
           "name": "Compensation Management",
           "sub_module": "Talent Acquisition & Compensation",
           "sub_module_id": "talent_acquisition",
-          "tier": "required",
+          "tier": "preferred",
           "checklist_order": 16,
           "vendor_coverage": {
             "odoo_online": {
-              "cheapest": "not_covered",
+              "cheapest": "in_base",
               "mid": "not_covered",
               "top": "not_covered",
-              "any": "not_covered"
+              "any": "in_base"
             },
             "erpnext": {
               "cheapest": "not_covered",
@@ -6498,10 +8035,10 @@
               "any": "in_base"
             },
             "info_tech_hrms": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "talenox": {
               "cheapest": "not_covered",
@@ -6509,7 +8046,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -6540,14 +8107,14 @@
           "name": "Benefits Administration",
           "sub_module": "Talent Acquisition & Compensation",
           "sub_module_id": "talent_acquisition",
-          "tier": "required",
+          "tier": "preferred",
           "checklist_order": 17,
           "vendor_coverage": {
             "odoo_online": {
-              "cheapest": "not_covered",
+              "cheapest": "in_base",
               "mid": "not_covered",
               "top": "not_covered",
-              "any": "not_covered"
+              "any": "in_base"
             },
             "erpnext": {
               "cheapest": "not_covered",
@@ -6562,16 +8129,16 @@
               "any": "no_data"
             },
             "justlogin_hr": {
-              "cheapest": "not_covered",
+              "cheapest": "in_base",
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
             },
             "info_tech_hrms": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "talenox": {
               "cheapest": "not_covered",
@@ -6579,7 +8146,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "add_on",
+              "mid": "add_on",
+              "top": "add_on",
+              "any": "add_on"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -6610,14 +8207,14 @@
           "name": "Performance Management",
           "sub_module": "Performance & Learning",
           "sub_module_id": "performance_learning",
-          "tier": "required",
+          "tier": "preferred",
           "checklist_order": 18,
           "vendor_coverage": {
             "odoo_online": {
-              "cheapest": "not_covered",
+              "cheapest": "in_base",
               "mid": "not_covered",
               "top": "not_covered",
-              "any": "not_covered"
+              "any": "in_base"
             },
             "erpnext": {
               "cheapest": "not_covered",
@@ -6632,7 +8229,7 @@
               "any": "no_data"
             },
             "justlogin_hr": {
-              "cheapest": "not_covered",
+              "cheapest": "in_base",
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
@@ -6649,7 +8246,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -6704,14 +8331,14 @@
             "justlogin_hr": {
               "cheapest": "not_covered",
               "mid": "not_covered",
-              "top": "in_base",
-              "any": "in_base"
-            },
-            "info_tech_hrms": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "info_tech_hrms": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "talenox": {
               "cheapest": "not_covered",
@@ -6719,7 +8346,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -6774,14 +8431,14 @@
             "justlogin_hr": {
               "cheapest": "not_covered",
               "mid": "not_covered",
-              "top": "in_base",
-              "any": "in_base"
-            },
-            "info_tech_hrms": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "info_tech_hrms": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "talenox": {
               "cheapest": "not_covered",
@@ -6789,7 +8446,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -6844,8 +8531,8 @@
             "justlogin_hr": {
               "cheapest": "not_covered",
               "mid": "not_covered",
-              "top": "in_base",
-              "any": "in_base"
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "info_tech_hrms": {
               "cheapest": "not_covered",
@@ -6859,7 +8546,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -6914,8 +8631,8 @@
             "justlogin_hr": {
               "cheapest": "not_covered",
               "mid": "not_covered",
-              "top": "in_base",
-              "any": "in_base"
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "info_tech_hrms": {
               "cheapest": "not_covered",
@@ -6929,7 +8646,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -6984,8 +8731,8 @@
             "justlogin_hr": {
               "cheapest": "not_covered",
               "mid": "not_covered",
-              "top": "in_base",
-              "any": "in_base"
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "info_tech_hrms": {
               "cheapest": "not_covered",
@@ -6999,7 +8746,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -7054,14 +8831,14 @@
             "justlogin_hr": {
               "cheapest": "in_base",
               "mid": "not_covered",
-              "top": "in_base",
+              "top": "not_covered",
               "any": "in_base"
             },
             "info_tech_hrms": {
-              "cheapest": "not_covered",
-              "mid": "not_covered",
-              "top": "not_covered",
-              "any": "not_covered"
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             },
             "talenox": {
               "cheapest": "not_covered",
@@ -7069,7 +8846,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -7124,7 +8931,7 @@
             "justlogin_hr": {
               "cheapest": "in_base",
               "mid": "not_covered",
-              "top": "in_base",
+              "top": "not_covered",
               "any": "in_base"
             },
             "info_tech_hrms": {
@@ -7139,17 +8946,47 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
             },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "workday_hcm": {
-              "cheapest": "in_base",
-              "mid": "in_base",
-              "top": "in_base",
-              "any": "in_base"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "oracle_hcm_cloud": {
               "cheapest": "not_covered",
@@ -7194,8 +9031,8 @@
             "justlogin_hr": {
               "cheapest": "not_covered",
               "mid": "not_covered",
-              "top": "in_base",
-              "any": "in_base"
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "info_tech_hrms": {
               "cheapest": "not_covered",
@@ -7209,7 +9046,37 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "bamboohr_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "netsuite": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "rippling": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "personio": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "adp_workforce_now": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -7222,10 +9089,10 @@
               "any": "not_covered"
             },
             "oracle_hcm_cloud": {
-              "cheapest": "in_base",
-              "mid": "in_base",
-              "top": "in_base",
-              "any": "in_base"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "sap_successfactors": {
               "cheapest": "no_data",
@@ -7585,7 +9452,7 @@
           "max_base_price_sgd_month": 471
         },
         "mid": {
-          "vendor_count_total": 7,
+          "vendor_count_total": 8,
           "vendor_count_with_pricing": 3,
           "vendors": [
             {
@@ -7889,6 +9756,28 @@
               "psg_packages": [],
               "extracted_at": "2026-05-14T01:39:44.015844+08:00",
               "source_url": "https://www.epicor.com/en-us/products/kinetic/"
+            },
+            {
+              "id": "netsuite_full",
+              "name": "NetSuite ERP (full suite)",
+              "tier": "mid",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 5,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": null
             }
           ],
           "avg_base_price_sgd_month": 108,
@@ -7896,7 +9785,7 @@
           "max_base_price_sgd_month": 108
         },
         "enterprise": {
-          "vendor_count_total": 6,
+          "vendor_count_total": 9,
           "vendor_count_with_pricing": 0,
           "vendors": [
             {
@@ -8050,6 +9939,77 @@
               "psg_packages": [],
               "extracted_at": "2026-05-14T09:13:24.876193+08:00",
               "source_url": "https://www.koerber-supplychain.com/"
+            },
+            {
+              "id": "oracle_erp_cloud",
+              "name": "Oracle Fusion Cloud ERP",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
+              "base_price_sgd_month_norm": null,
+              "base_price_label": "quote-on-request",
+              "currency_orig": null,
+              "mandatory_covered_in_base": 3,
+              "mandatory_total": 5,
+              "mandatory_pct": 60,
+              "add_on_caps": [],
+              "no_pricing_data": false,
+              "year1_total_sgd": null,
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
+              "psg_packages": [],
+              "extracted_at": "2026-05-14T20:57:51.616411+08:00",
+              "source_url": "https://www.oracle.com/erp/"
+            },
+            {
+              "id": "infor_m3",
+              "name": "Infor M3 CloudSuite",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 5,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://www.infor.com/products/m3"
+            },
+            {
+              "id": "ms_dynamics_365_finance_scm",
+              "name": "Microsoft Dynamics 365 Finance & SCM",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 5,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": null
             }
           ],
           "avg_base_price_sgd_month": null,
@@ -8064,7 +10024,7 @@
           "sub_module": "Inventory Core",
           "covered_in_base_at_count": 12,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 10,
+          "not_covered_count": 14,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
@@ -8087,7 +10047,7 @@
           "sub_module": "Inventory Core",
           "covered_in_base_at_count": 12,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 10,
+          "not_covered_count": 14,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
@@ -8108,16 +10068,17 @@
           "cap_id": "sc.purchase_orders",
           "name": "Purchase Orders & Procurement",
           "sub_module": "Procurement",
-          "covered_in_base_at_count": 6,
+          "covered_in_base_at_count": 7,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 16,
+          "not_covered_count": 19,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
             "katana_mrp",
             "sap_business_one",
             "globe3_erp",
-            "epicor_kinetic"
+            "epicor_kinetic",
+            "oracle_erp_cloud"
           ],
           "covered_as_addon_vendors": []
         },
@@ -8125,9 +10086,9 @@
           "cap_id": "sc.vendor_master",
           "name": "Vendor & Supplier Master",
           "sub_module": "Procurement",
-          "covered_in_base_at_count": 8,
+          "covered_in_base_at_count": 9,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 14,
+          "not_covered_count": 17,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
@@ -8136,7 +10097,8 @@
             "globe3_erp",
             "epicor_kinetic",
             "ifs_softeon",
-            "blue_yonder"
+            "blue_yonder",
+            "oracle_erp_cloud"
           ],
           "covered_as_addon_vendors": []
         },
@@ -8144,9 +10106,9 @@
           "cap_id": "sc.supply_chain_analytics",
           "name": "Supply Chain Analytics",
           "sub_module": "Supply Chain Analytics",
-          "covered_in_base_at_count": 10,
+          "covered_in_base_at_count": 11,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 11,
+          "not_covered_count": 14,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
@@ -8157,7 +10119,8 @@
             "epicor_kinetic",
             "ifs_softeon",
             "manhattan_active_scm",
-            "blue_yonder"
+            "blue_yonder",
+            "oracle_erp_cloud"
           ],
           "covered_as_addon_vendors": [
             "fishbowl"
@@ -8269,6 +10232,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "in_base",
               "mid": "in_base",
@@ -8304,6 +10273,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -8411,6 +10398,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "in_base",
               "mid": "in_base",
@@ -8446,6 +10439,24 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -8553,6 +10564,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -8588,6 +10605,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -8695,6 +10730,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -8730,6 +10771,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -8837,6 +10896,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "in_base",
               "mid": "in_base",
@@ -8872,6 +10937,24 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -8979,6 +11062,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -9014,6 +11103,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -9121,6 +11228,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -9156,6 +11269,24 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -9263,6 +11394,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "in_base",
               "mid": "in_base",
@@ -9298,6 +11435,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -9405,6 +11560,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "in_base",
               "mid": "in_base",
@@ -9440,6 +11601,24 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -9547,6 +11726,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -9582,6 +11767,24 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -9689,6 +11892,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -9724,6 +11933,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -9831,6 +12058,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -9866,6 +12099,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -9973,6 +12224,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "in_base",
               "mid": "in_base",
@@ -10008,6 +12265,24 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -10115,6 +12390,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -10150,6 +12431,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -10257,6 +12556,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "in_base",
               "mid": "in_base",
@@ -10292,6 +12597,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -10399,6 +12722,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -10434,6 +12763,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -10541,6 +12888,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -10576,6 +12929,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -10588,10 +12959,10 @@
           "checklist_order": 17,
           "vendor_coverage": {
             "odoo_online": {
-              "cheapest": "in_base",
-              "mid": "in_base",
-              "top": "in_base",
-              "any": "in_base"
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             },
             "erpnext": {
               "cheapest": "not_covered",
@@ -10683,6 +13054,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -10718,6 +13095,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -10825,6 +13220,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -10860,6 +13261,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -10967,6 +13386,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -11002,6 +13427,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -11109,6 +13552,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -11144,6 +13593,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -11251,6 +13718,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -11286,6 +13759,24 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -11393,6 +13884,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "in_base",
               "mid": "in_base",
@@ -11428,6 +13925,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -11535,6 +14050,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "ifs_softeon": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -11570,6 +14091,24 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         }
@@ -11728,7 +14267,7 @@
           "max_base_price_sgd_month": 404
         },
         "mid": {
-          "vendor_count_total": 2,
+          "vendor_count_total": 3,
           "vendor_count_with_pricing": 0,
           "vendors": [
             {
@@ -11779,6 +14318,28 @@
               "psg_packages": [],
               "extracted_at": "2026-05-14T01:39:44.015844+08:00",
               "source_url": "https://www.epicor.com/en-us/products/kinetic/"
+            },
+            {
+              "id": "netsuite_full",
+              "name": "NetSuite ERP (full suite)",
+              "tier": "mid",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 10,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": null
             }
           ],
           "avg_base_price_sgd_month": null,
@@ -11786,7 +14347,7 @@
           "max_base_price_sgd_month": null
         },
         "enterprise": {
-          "vendor_count_total": 2,
+          "vendor_count_total": 5,
           "vendor_count_with_pricing": 0,
           "vendors": [
             {
@@ -11837,6 +14398,77 @@
               "psg_packages": [],
               "extracted_at": null,
               "source_url": "https://www.infor.com/products/cloudsuite-industrial-enterprise"
+            },
+            {
+              "id": "oracle_erp_cloud",
+              "name": "Oracle Fusion Cloud ERP",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
+              "base_price_sgd_month_norm": null,
+              "base_price_label": "quote-on-request",
+              "currency_orig": null,
+              "mandatory_covered_in_base": 1,
+              "mandatory_total": 10,
+              "mandatory_pct": 10,
+              "add_on_caps": [],
+              "no_pricing_data": false,
+              "year1_total_sgd": null,
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
+              "psg_packages": [],
+              "extracted_at": "2026-05-14T20:57:51.616411+08:00",
+              "source_url": "https://www.oracle.com/erp/"
+            },
+            {
+              "id": "infor_m3",
+              "name": "Infor M3 CloudSuite",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 10,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": "https://www.infor.com/products/m3"
+            },
+            {
+              "id": "ms_dynamics_365_finance_scm",
+              "name": "Microsoft Dynamics 365 Finance & SCM",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 10,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": null
             }
           ],
           "avg_base_price_sgd_month": null,
@@ -11851,7 +14483,7 @@
           "sub_module": "Product Engineering & PLM",
           "covered_in_base_at_count": 1,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 3,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "epicor_kinetic"
           ],
@@ -11865,7 +14497,7 @@
           "sub_module": "Product Engineering & PLM",
           "covered_in_base_at_count": 0,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 4,
+          "not_covered_count": 8,
           "covered_in_base_vendors": [],
           "covered_as_addon_vendors": [
             "katana_mrp"
@@ -11875,11 +14507,12 @@
           "cap_id": "mfg.work_orders",
           "name": "Work Orders & Job Cards",
           "sub_module": "Production Execution (MES)",
-          "covered_in_base_at_count": 1,
+          "covered_in_base_at_count": 2,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 3,
+          "not_covered_count": 6,
           "covered_in_base_vendors": [
-            "epicor_kinetic"
+            "epicor_kinetic",
+            "oracle_erp_cloud"
           ],
           "covered_as_addon_vendors": [
             "katana_mrp"
@@ -11891,7 +14524,7 @@
           "sub_module": "Planning & Costing (Manufacturing)",
           "covered_in_base_at_count": 1,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 3,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "epicor_kinetic"
           ],
@@ -11905,7 +14538,7 @@
           "sub_module": "Production Execution (MES)",
           "covered_in_base_at_count": 1,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 3,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "epicor_kinetic"
           ],
@@ -11919,7 +14552,7 @@
           "sub_module": "Quality & Compliance (QMS)",
           "covered_in_base_at_count": 1,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 3,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "plex_smart_manufacturing"
           ],
@@ -11933,7 +14566,7 @@
           "sub_module": "Planning & Costing (Manufacturing)",
           "covered_in_base_at_count": 2,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 3,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "katana_mrp",
             "plex_smart_manufacturing"
@@ -11946,7 +14579,7 @@
           "sub_module": "Planning & Costing (Manufacturing)",
           "covered_in_base_at_count": 0,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 4,
+          "not_covered_count": 8,
           "covered_in_base_vendors": [],
           "covered_as_addon_vendors": [
             "katana_mrp"
@@ -11958,7 +14591,7 @@
           "sub_module": "Quality & Compliance (QMS)",
           "covered_in_base_at_count": 0,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 4,
+          "not_covered_count": 8,
           "covered_in_base_vendors": [],
           "covered_as_addon_vendors": [
             "katana_mrp"
@@ -11970,7 +14603,7 @@
           "sub_module": "Quality & Compliance (QMS)",
           "covered_in_base_at_count": 0,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 4,
+          "not_covered_count": 8,
           "covered_in_base_vendors": [],
           "covered_as_addon_vendors": [
             "katana_mrp"
@@ -12004,6 +14637,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12011,6 +14650,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12044,6 +14701,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12051,6 +14714,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12084,6 +14765,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12091,6 +14778,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12124,6 +14829,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12131,6 +14842,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12164,6 +14893,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12171,6 +14906,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12204,6 +14957,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12211,6 +14970,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12244,6 +15021,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "in_base",
               "mid": "in_base",
@@ -12251,6 +15034,24 @@
               "any": "in_base"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12284,6 +15085,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12291,6 +15098,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12324,6 +15149,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12331,6 +15162,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12364,6 +15213,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "in_base",
               "mid": "in_base",
@@ -12371,6 +15226,24 @@
               "any": "in_base"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12404,6 +15277,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12411,6 +15290,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12444,6 +15341,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12451,6 +15354,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12484,6 +15405,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "in_base",
               "mid": "in_base",
@@ -12491,6 +15418,24 @@
               "any": "in_base"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12524,6 +15469,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12531,6 +15482,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12564,6 +15533,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12571,6 +15546,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12604,6 +15597,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12611,6 +15610,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12644,6 +15661,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12651,6 +15674,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12684,6 +15725,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "in_base",
               "mid": "in_base",
@@ -12691,6 +15738,24 @@
               "any": "in_base"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12724,6 +15789,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12731,6 +15802,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12764,6 +15853,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12771,6 +15866,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12804,6 +15917,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12811,6 +15930,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12844,6 +15981,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "in_base",
               "mid": "in_base",
@@ -12851,6 +15994,24 @@
               "any": "in_base"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12884,6 +16045,12 @@
               "top": "not_covered",
               "any": "not_covered"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12891,6 +16058,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12924,6 +16109,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12931,6 +16122,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
@@ -12964,6 +16173,12 @@
               "top": "in_base",
               "any": "in_base"
             },
+            "netsuite_full": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
             "plex_smart_manufacturing": {
               "cheapest": "not_covered",
               "mid": "not_covered",
@@ -12971,6 +16186,24 @@
               "any": "not_covered"
             },
             "infor_cloudsuite_industrial": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "oracle_erp_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "infor_m3": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
+            },
+            "ms_dynamics_365_finance_scm": {
               "cheapest": "no_data",
               "mid": "no_data",
               "top": "no_data",
