@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-05-14T01:41:38.655046+08:00",
+    "generated_at": "2026-05-14T09:14:55.875306+08:00",
     "modules_in_scope": [
       "financial",
       "sales_crm",
@@ -12,7 +12,7 @@
     "fx_assumption_usd_to_sgd": 1.35,
     "user_baseline": 10,
     "one_time_maintenance_pct": 0.2,
-    "vendor_count_total": 37,
+    "vendor_count_total": 42,
     "vendor_count_with_pricing": 18
   },
   "modules": {
@@ -5073,7 +5073,7 @@
           "max_base_price_sgd_month": null
         },
         "enterprise": {
-          "vendor_count_total": 1,
+          "vendor_count_total": 3,
           "vendor_count_with_pricing": 0,
           "vendors": [
             {
@@ -5102,6 +5102,55 @@
               "psg_packages": [],
               "extracted_at": "2026-05-14T01:40:02.968939+08:00",
               "source_url": "https://www.workday.com/en-us/products/human-capital-management/overview.html"
+            },
+            {
+              "id": "oracle_hcm_cloud",
+              "name": "Oracle Fusion Cloud HCM",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
+              "base_price_sgd_month_norm": null,
+              "base_price_label": "quote-on-request",
+              "currency_orig": null,
+              "mandatory_covered_in_base": 10,
+              "mandatory_total": 14,
+              "mandatory_pct": 71,
+              "add_on_caps": [],
+              "no_pricing_data": false,
+              "year1_total_sgd": null,
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
+              "psg_packages": [],
+              "extracted_at": "2026-05-14T09:13:06.050236+08:00",
+              "source_url": "https://www.oracle.com/human-capital-management/"
+            },
+            {
+              "id": "sap_successfactors",
+              "name": "SAP SuccessFactors",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": null,
+              "base_price_sgd_month_norm": null,
+              "base_price_label": null,
+              "currency_orig": null,
+              "mandatory_covered_in_base": 0,
+              "mandatory_total": 14,
+              "mandatory_pct": 0,
+              "add_on_caps": [],
+              "no_pricing_data": true,
+              "year1_total_sgd": null,
+              "year1_breakdown": {},
+              "year1_source": "no_data",
+              "psg_packages": [],
+              "extracted_at": null,
+              "source_url": null
             }
           ],
           "avg_base_price_sgd_month": null,
@@ -5114,13 +5163,14 @@
           "cap_id": "hr.employee_master",
           "name": "Employee Master & HRIS",
           "sub_module": "Core HR",
-          "covered_in_base_at_count": 3,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
+          "not_covered_count": 6,
           "covered_in_base_vendors": [
             "odoo_online",
             "justlogin_hr",
-            "workday_hcm"
+            "workday_hcm",
+            "oracle_hcm_cloud"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5128,13 +5178,14 @@
           "cap_id": "hr.leave_management",
           "name": "Leave Management",
           "sub_module": "Time & Attendance",
-          "covered_in_base_at_count": 3,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
+          "not_covered_count": 6,
           "covered_in_base_vendors": [
             "odoo_online",
             "justlogin_hr",
-            "info_tech_hrms"
+            "info_tech_hrms",
+            "oracle_hcm_cloud"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5142,14 +5193,15 @@
           "cap_id": "hr.time_attendance",
           "name": "Time & Attendance",
           "sub_module": "Time & Attendance",
-          "covered_in_base_at_count": 4,
+          "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 4,
+          "not_covered_count": 5,
           "covered_in_base_vendors": [
             "odoo_online",
             "justlogin_hr",
             "info_tech_hrms",
-            "workday_hcm"
+            "workday_hcm",
+            "oracle_hcm_cloud"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5157,15 +5209,16 @@
           "cap_id": "hr.payroll_processing",
           "name": "Payroll Processing",
           "sub_module": "Payroll & Statutory (SG)",
-          "covered_in_base_at_count": 5,
+          "covered_in_base_at_count": 6,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 3,
+          "not_covered_count": 4,
           "covered_in_base_vendors": [
             "odoo_online",
             "justlogin_hr",
             "info_tech_hrms",
             "talenox",
-            "workday_hcm"
+            "workday_hcm",
+            "oracle_hcm_cloud"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5175,7 +5228,7 @@
           "sub_module": "Payroll & Statutory (SG)",
           "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "odoo_online",
             "justlogin_hr",
@@ -5187,11 +5240,12 @@
           "cap_id": "hr.onboarding_offboarding",
           "name": "Onboarding & Offboarding",
           "sub_module": "Core HR",
-          "covered_in_base_at_count": 1,
+          "covered_in_base_at_count": 2,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 7,
+          "not_covered_count": 8,
           "covered_in_base_vendors": [
-            "odoo_online"
+            "odoo_online",
+            "oracle_hcm_cloud"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5199,12 +5253,13 @@
           "cap_id": "hr.self_service_portal",
           "name": "Self-Service Portal",
           "sub_module": "Core HR",
-          "covered_in_base_at_count": 2,
+          "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 6,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "odoo_online",
-            "workday_hcm"
+            "workday_hcm",
+            "oracle_hcm_cloud"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5214,7 +5269,7 @@
           "sub_module": "Core HR",
           "covered_in_base_at_count": 2,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 6,
+          "not_covered_count": 8,
           "covered_in_base_vendors": [
             "odoo_online",
             "justlogin_hr"
@@ -5225,14 +5280,15 @@
           "cap_id": "hr.recruitment_ats",
           "name": "Recruitment & ATS",
           "sub_module": "Talent Acquisition & Compensation",
-          "covered_in_base_at_count": 4,
+          "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 4,
+          "not_covered_count": 5,
           "covered_in_base_vendors": [
             "odoo_online",
             "justlogin_hr",
             "info_tech_hrms",
-            "workday_hcm"
+            "workday_hcm",
+            "oracle_hcm_cloud"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5240,12 +5296,13 @@
           "cap_id": "hr.performance_management",
           "name": "Performance Management",
           "sub_module": "Performance & Learning",
-          "covered_in_base_at_count": 2,
+          "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 6,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "odoo_online",
-            "info_tech_hrms"
+            "info_tech_hrms",
+            "oracle_hcm_cloud"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5253,13 +5310,14 @@
           "cap_id": "hr.compensation_benefits",
           "name": "Compensation Management",
           "sub_module": "Talent Acquisition & Compensation",
-          "covered_in_base_at_count": 3,
+          "covered_in_base_at_count": 4,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
+          "not_covered_count": 6,
           "covered_in_base_vendors": [
             "odoo_online",
             "justlogin_hr",
-            "workday_hcm"
+            "workday_hcm",
+            "oracle_hcm_cloud"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5267,12 +5325,13 @@
           "cap_id": "hr.benefits_administration",
           "name": "Benefits Administration",
           "sub_module": "Talent Acquisition & Compensation",
-          "covered_in_base_at_count": 2,
+          "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 6,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "odoo_online",
-            "workday_hcm"
+            "workday_hcm",
+            "oracle_hcm_cloud"
           ],
           "covered_as_addon_vendors": []
         },
@@ -5282,7 +5341,7 @@
           "sub_module": "Payroll & Statutory (SG)",
           "covered_in_base_at_count": 3,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 5,
+          "not_covered_count": 7,
           "covered_in_base_vendors": [
             "odoo_online",
             "justlogin_hr",
@@ -5296,7 +5355,7 @@
           "sub_module": "Payroll & Statutory (SG)",
           "covered_in_base_at_count": 2,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 6,
+          "not_covered_count": 8,
           "covered_in_base_vendors": [
             "odoo_online",
             "justlogin_hr"
@@ -5360,6 +5419,18 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -5418,6 +5489,18 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -5476,6 +5559,18 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -5534,6 +5629,18 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -5592,6 +5699,18 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -5650,6 +5769,18 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -5708,6 +5839,18 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -5766,6 +5909,18 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -5824,6 +5979,18 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -5882,6 +6049,18 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -5940,6 +6119,18 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -5998,6 +6189,18 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -6056,6 +6259,18 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -6114,6 +6329,18 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -6172,6 +6399,18 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -6230,6 +6469,18 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -6288,6 +6539,18 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -6346,6 +6609,18 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -6404,6 +6679,18 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -6462,6 +6749,18 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -6520,6 +6819,18 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -6578,6 +6889,18 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -6636,6 +6959,18 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -6694,6 +7029,18 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -6752,6 +7099,18 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -6810,6 +7169,18 @@
               "mid": "in_base",
               "top": "in_base",
               "any": "in_base"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         },
@@ -6868,6 +7239,18 @@
               "mid": "not_covered",
               "top": "not_covered",
               "any": "not_covered"
+            },
+            "oracle_hcm_cloud": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "sap_successfactors": {
+              "cheapest": "no_data",
+              "mid": "no_data",
+              "top": "no_data",
+              "any": "no_data"
             }
           }
         }
@@ -7555,7 +7938,7 @@
           "max_base_price_sgd_month": 108
         },
         "enterprise": {
-          "vendor_count_total": 3,
+          "vendor_count_total": 6,
           "vendor_count_with_pricing": 0,
           "vendors": [
             {
@@ -7628,6 +8011,87 @@
               "psg_packages": [],
               "extracted_at": null,
               "source_url": "https://www.infor.com/products/cloudsuite-industrial-enterprise"
+            },
+            {
+              "id": "manhattan_active_scm",
+              "name": "Manhattan Active Supply Chain",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
+              "base_price_sgd_month_norm": null,
+              "base_price_label": "quote-on-request",
+              "currency_orig": null,
+              "mandatory_covered_in_base": 3,
+              "mandatory_total": 7,
+              "mandatory_pct": 43,
+              "add_on_caps": [],
+              "no_pricing_data": false,
+              "year1_total_sgd": null,
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
+              "psg_packages": [],
+              "extracted_at": "2026-05-14T09:13:11.680369+08:00",
+              "source_url": "https://www.manh.com/products"
+            },
+            {
+              "id": "blue_yonder",
+              "name": "Blue Yonder (formerly JDA)",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
+              "base_price_sgd_month_norm": null,
+              "base_price_label": "quote-on-request",
+              "currency_orig": null,
+              "mandatory_covered_in_base": 3,
+              "mandatory_total": 7,
+              "mandatory_pct": 43,
+              "add_on_caps": [],
+              "no_pricing_data": false,
+              "year1_total_sgd": null,
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
+              "psg_packages": [],
+              "extracted_at": "2026-05-14T09:13:19.107215+08:00",
+              "source_url": "https://blueyonder.com/solutions"
+            },
+            {
+              "id": "koerber_supplychain",
+              "name": "Körber Supply Chain Software",
+              "tier": "enterprise",
+              "vendor_type": "enterprise",
+              "pricing_status": "quote_on_request",
+              "base_plan_name": "Product capabilities (no pricing tiers disclosed)",
+              "base_price_sgd_month_norm": null,
+              "base_price_label": "quote-on-request",
+              "currency_orig": null,
+              "mandatory_covered_in_base": 1,
+              "mandatory_total": 7,
+              "mandatory_pct": 14,
+              "add_on_caps": [],
+              "no_pricing_data": false,
+              "year1_total_sgd": null,
+              "year1_breakdown": {
+                "software_year_sgd": null,
+                "ps_one_time_sgd": null,
+                "training_one_time_sgd": null,
+                "bundled": false
+              },
+              "year1_source": "no_pricing_data",
+              "psg_packages": [],
+              "extracted_at": "2026-05-14T09:13:24.876193+08:00",
+              "source_url": "https://www.koerber-supplychain.com/"
             }
           ],
           "avg_base_price_sgd_month": null,
@@ -7642,7 +8106,7 @@
           "sub_module": "Inventory Core",
           "covered_in_base_at_count": 6,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 13,
+          "not_covered_count": 16,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
@@ -7657,9 +8121,9 @@
           "cap_id": "sc.stock_levels",
           "name": "Stock Levels & Warehouse",
           "sub_module": "Inventory Core",
-          "covered_in_base_at_count": 9,
+          "covered_in_base_at_count": 11,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 10,
+          "not_covered_count": 11,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
@@ -7669,7 +8133,9 @@
             "globe3_erp",
             "infolog",
             "anchanto",
-            "ifs_softeon"
+            "ifs_softeon",
+            "manhattan_active_scm",
+            "blue_yonder"
           ],
           "covered_as_addon_vendors": []
         },
@@ -7679,7 +8145,7 @@
           "sub_module": "Procurement",
           "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 14,
+          "not_covered_count": 17,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
@@ -7695,7 +8161,7 @@
           "sub_module": "Procurement",
           "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 14,
+          "not_covered_count": 17,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
@@ -7709,14 +8175,16 @@
           "cap_id": "sc.reorder_rules",
           "name": "Reorder Rules & Replenishment",
           "sub_module": "Supply Planning & Replenishment",
-          "covered_in_base_at_count": 4,
+          "covered_in_base_at_count": 6,
           "covered_as_addon_at_count": 1,
-          "not_covered_count": 14,
+          "not_covered_count": 15,
           "covered_in_base_vendors": [
             "odoo_online",
             "fishbowl",
             "sap_business_one",
-            "ifs_softeon"
+            "ifs_softeon",
+            "manhattan_active_scm",
+            "blue_yonder"
           ],
           "covered_as_addon_vendors": [
             "cin7"
@@ -7728,7 +8196,7 @@
           "sub_module": "Inventory Core",
           "covered_in_base_at_count": 5,
           "covered_as_addon_at_count": 0,
-          "not_covered_count": 14,
+          "not_covered_count": 17,
           "covered_in_base_vendors": [
             "odoo_online",
             "cin7",
@@ -7742,7 +8210,7 @@
           "cap_id": "sc.supply_chain_analytics",
           "name": "Supply Chain Analytics",
           "sub_module": "Supply Chain Analytics",
-          "covered_in_base_at_count": 8,
+          "covered_in_base_at_count": 11,
           "covered_as_addon_at_count": 1,
           "not_covered_count": 10,
           "covered_in_base_vendors": [
@@ -7753,7 +8221,10 @@
             "globe3_erp",
             "anchanto",
             "epicor_kinetic",
-            "ifs_softeon"
+            "ifs_softeon",
+            "manhattan_active_scm",
+            "blue_yonder",
+            "koerber_supplychain"
           ],
           "covered_as_addon_vendors": [
             "fishbowl"
@@ -7882,6 +8353,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -8006,6 +8495,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "blue_yonder": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -8130,6 +8637,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -8254,6 +8779,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -8378,6 +8921,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -8502,6 +9063,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -8626,6 +9205,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -8750,6 +9347,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -8874,6 +9489,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "blue_yonder": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "koerber_supplychain": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -8998,6 +9631,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "blue_yonder": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "koerber_supplychain": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -9122,6 +9773,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -9246,6 +9915,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "blue_yonder": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -9370,6 +10057,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -9494,6 +10199,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -9618,6 +10341,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -9742,6 +10483,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -9866,6 +10625,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -9990,6 +10767,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "blue_yonder": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -10114,6 +10909,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "blue_yonder": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -10238,6 +11051,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -10362,6 +11193,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         },
@@ -10486,6 +11335,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -10610,6 +11477,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "blue_yonder": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "koerber_supplychain": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
             }
           }
         },
@@ -10734,6 +11619,24 @@
               "mid": "no_data",
               "top": "no_data",
               "any": "no_data"
+            },
+            "manhattan_active_scm": {
+              "cheapest": "in_base",
+              "mid": "in_base",
+              "top": "in_base",
+              "any": "in_base"
+            },
+            "blue_yonder": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
+            },
+            "koerber_supplychain": {
+              "cheapest": "not_covered",
+              "mid": "not_covered",
+              "top": "not_covered",
+              "any": "not_covered"
             }
           }
         }
