@@ -6447,7 +6447,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_accounting",
         "netsuite",
@@ -7075,7 +7075,18 @@
       "family": "Planning & Analytics",
       "sub_module_id": "planning_analytics_finance",
       "sub_module_name": "Planning & Analytics (Finance)",
-      "sub_module_desc": "Budgeting, forecasting, financial dashboards, AI/ML for finance."
+      "sub_module_desc": "Budgeting, forecasting, financial dashboards, AI/ML for finance.",
+      "_cap_override": {
+        "fields_overridden": [
+          "sme_tier"
+        ],
+        "original": {
+          "sme_tier": "required"
+        },
+        "author": "leezhjerome@gmail.com",
+        "edited_at": "2026-05-14",
+        "note": "Demoted from Mandatory to Preferred per 2026-05-14 vendor evidence\nreview. Zero vendors market budgeting on pricing pages; only Xero\nmentions cash-flow forecast (and that's at every tier including\nStarter). SMEs typically do budgeting in spreadsheets, not in\ntheir accounting tool. Not splitting into separate budget +\nforecast caps — no commercial differentiation signal yet\n(revisit if AI-grounded forecasting becomes a distinct premium\ntier).\n"
+      }
     },
     {
       "id": "fin.multi_currency",
@@ -22314,8 +22325,8 @@
   "_meta": {
     "step15_generated_at": "2026-05-07T13:54:30.861598+08:00",
     "step15_processed": 28,
-    "step16_applied_at": "2026-05-10T00:12:24.772708+08:00",
-    "step16_applied_count": 0,
+    "step16_applied_at": "2026-05-14T10:44:01.926821+08:00",
+    "step16_applied_count": 1,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-13T02:57:22.003462+08:00",
