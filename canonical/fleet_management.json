@@ -19,7 +19,7 @@
   "capabilities": [
     {
       "id": "fleet.vehicle_register",
-      "name": "Vehicle & Asset Register",
+      "name": "Vehicle and Asset Register",
       "description": "Central master record for every vehicle and mobile asset in the fleet, with make, model, VIN, registration, insurance, and document storage.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -661,7 +661,7 @@
           }
         ],
         "total_input_items": 8,
-        "question_t2": "Central master record for every vehicle and mobile asset in the fleet, with make, model, VIN, registration, insurance, and document storage."
+        "question_t2": "Central master record for every vehicle with make, model, VIN, registration, and document storage."
       },
       "sector_relevance": {
         "generic": true,
@@ -708,7 +708,18 @@
       "family": "Vehicle Registry",
       "sub_module_id": "fleet_register",
       "sub_module_name": "Vehicle Register & Procurement",
-      "sub_module_desc": "Vehicle master, insurance/claims, procurement and disposal."
+      "sub_module_desc": "Vehicle master, insurance/claims, procurement and disposal.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Central master record for every vehicle and mobile asset in the fleet, with make, model, VIN, registration, insurance, and document storage."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 21→14 words."
+      }
     },
     {
       "id": "fleet.driver_management",
@@ -1095,7 +1106,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Maintain driver records including licence details, training history, and vehicle assignment. Ensuring the right driver is in the right vehicle with valid credentials"
+        "question_t2": "Maintain driver records with licence details, training history, and vehicle assignment."
       },
       "sector_relevance": {
         "generic": true,
@@ -1142,7 +1153,18 @@
       "family": "Driver & Safety",
       "sub_module_id": "fleet_driver_safety",
       "sub_module_name": "Driver & Safety",
-      "sub_module_desc": "Driver management, behaviour scoring, accident/incident tracking."
+      "sub_module_desc": "Driver management, behaviour scoring, accident/incident tracking.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Maintain driver records including licence details, training history, and vehicle assignment. Ensuring the right driver is in the right vehicle with valid credentials"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 23→12 words. Dropped 'Ensuring the right driver...' marketing tail."
+      }
     },
     {
       "id": "fleet.fuel_management",
@@ -1526,7 +1548,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Record fuel purchases, track consumption per vehicle, and calculate cost per kilometre to identify waste and optimise fuel spend."
+        "question_t2": "Record fuel purchases, track consumption per vehicle, and calculate cost per kilometre."
       },
       "sector_relevance": {
         "generic": true,
@@ -1573,7 +1595,18 @@
       "family": "Operations & Logistics",
       "sub_module_id": "fleet_bookings_fuel",
       "sub_module_name": "Bookings & Fuel",
-      "sub_module_desc": "Vehicle booking/reservation, pool car sharing, fuel management — operational admin specialty."
+      "sub_module_desc": "Vehicle booking/reservation, pool car sharing, fuel management — operational admin specialty.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Record fuel purchases, track consumption per vehicle, and calculate cost per kilometre to identify waste and optimise fuel spend."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 19→12 words."
+      }
     },
     {
       "id": "fleet.maintenance_scheduling",
@@ -1958,7 +1991,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Define service intervals by time or mileage, auto-generate upcoming service reminders, and ensure no vehicle misses a scheduled service."
+        "question_t2": "Define service intervals by time or mileage and automatically generate upcoming service reminders."
       },
       "sector_relevance": {
         "generic": true,
@@ -2005,7 +2038,18 @@
       "family": "Maintenance & Workshop",
       "sub_module_id": "fleet_maintenance",
       "sub_module_name": "Fleet Maintenance & Workshop",
-      "sub_module_desc": "PM scheduling, maintenance work orders, tyre management, workshop/vendor management."
+      "sub_module_desc": "PM scheduling, maintenance work orders, tyre management, workshop/vendor management.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Define service intervals by time or mileage and auto-generate upcoming service reminders."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 19→13 words. Spelled out 'auto-generate' → 'automatically generate' (contraction lint)."
+      }
     },
     {
       "id": "fleet.maintenance_work_orders",
@@ -2397,7 +2441,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Create, assign, and track repair and maintenance work orders from request through completion, including parts, labour, and cost."
+        "question_t2": "Create, assign, and track maintenance work orders from request to completion with parts and cost."
       },
       "sector_relevance": {
         "generic": true,
@@ -2444,11 +2488,22 @@
       "family": "Maintenance & Workshop",
       "sub_module_id": "fleet_maintenance",
       "sub_module_name": "Fleet Maintenance & Workshop",
-      "sub_module_desc": "PM scheduling, maintenance work orders, tyre management, workshop/vendor management."
+      "sub_module_desc": "PM scheduling, maintenance work orders, tyre management, workshop/vendor management.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Create, assign, and track repair and maintenance work orders from request through completion, including parts, labour, and cost."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 18→15 words."
+      }
     },
     {
       "id": "fleet.trip_mileage",
-      "name": "Trip & Mileage Tracking",
+      "name": "Trip and Mileage Tracking",
       "description": "Record odometer readings, log trips with start and end points, and track vehicle utilisation to support cost allocation and replacement planning.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -2948,7 +3003,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Record odometer readings, log trips with start and end points, and track vehicle utilisation to support cost allocation and replacement planning."
+        "question_t2": "Record odometer readings, log trips, and track vehicle utilisation per driver and route."
       },
       "sector_relevance": {
         "generic": true,
@@ -2995,7 +3050,18 @@
       "family": "Operations & Logistics",
       "sub_module_id": "fleet_telematics_routing",
       "sub_module_name": "Telematics & Routing",
-      "sub_module_desc": "GPS/telematics, route planning/optimisation, trip and mileage — telematics specialist vendors."
+      "sub_module_desc": "GPS/telematics, route planning/optimisation, trip and mileage — telematics specialist vendors.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Record odometer readings, log trips with start and end points, and track vehicle utilisation to support cost allocation and replacement planning."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 21→13 words."
+      }
     },
     {
       "id": "fleet.cost_management",
@@ -3387,7 +3453,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Track total cost of ownership per vehicle. Fuel, maintenance, insurance, registration, depreciation, and compare against budget."
+        "question_t2": "Track total cost of ownership per vehicle (fuel, maintenance, insurance, depreciation) against budget."
       },
       "sector_relevance": {
         "generic": true,
@@ -3434,11 +3500,22 @@
       "family": "Cost & Compliance",
       "sub_module_id": "fleet_cost_compliance",
       "sub_module_name": "Fleet Cost, Compliance & Analytics",
-      "sub_module_desc": "Fleet cost, reporting dashboards, regulatory compliance (LTA), emissions tracking, analytics/AI."
+      "sub_module_desc": "Fleet cost, reporting dashboards, regulatory compliance (LTA), emissions tracking, analytics/AI.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Track total cost of ownership per vehicle. Fuel, maintenance, insurance, registration, depreciation, and compare against budget."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 16→13 words."
+      }
     },
     {
       "id": "fleet.reporting_dashboards",
-      "name": "Fleet Reporting & Dashboards",
+      "name": "Fleet Reporting and Dashboards",
       "description": "Standard and custom reports and dashboards for fleet managers: vehicle status, cost summaries, maintenance compliance, driver performance, and fleet utilisation.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -4040,7 +4117,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Standard and custom reports and dashboards for fleet managers: vehicle status, cost summaries, maintenance compliance, driver performance, and fleet utilisation."
+        "question_t2": "Standard and custom dashboards for fleet managers covering status, costs, compliance, and utilisation."
       },
       "sector_relevance": {
         "generic": true,
@@ -4087,11 +4164,22 @@
       "family": "Cost & Compliance",
       "sub_module_id": "fleet_cost_compliance",
       "sub_module_name": "Fleet Cost, Compliance & Analytics",
-      "sub_module_desc": "Fleet cost, reporting dashboards, regulatory compliance (LTA), emissions tracking, analytics/AI."
+      "sub_module_desc": "Fleet cost, reporting dashboards, regulatory compliance (LTA), emissions tracking, analytics/AI.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Standard and custom reports and dashboards for fleet managers: vehicle status, cost summaries, maintenance compliance, driver performance, and fleet utilisation."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 20→13 words."
+      }
     },
     {
       "id": "fleet.gps_telematics",
-      "name": "GPS Tracking & Telematics",
+      "name": "GPS Tracking and Telematics",
       "description": "Real-time vehicle location via GPS, with breadcrumb trails, geofencing, speed alerts, and integration with on-board diagnostics (OBD) for engine data.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -4745,7 +4833,7 @@
           }
         ],
         "total_input_items": 8,
-        "question_t2": "Real-time vehicle location via GPS, with breadcrumb trails, geofencing, speed alerts, and integration with on-board diagnostics (OBD) for engine data."
+        "question_t2": "Real-time vehicle location via GPS with breadcrumb trails, geofencing, speed alerts, and OBD integration."
       },
       "sector_relevance": {
         "generic": false,
@@ -4792,11 +4880,22 @@
       "family": "Operations & Logistics",
       "sub_module_id": "fleet_telematics_routing",
       "sub_module_name": "Telematics & Routing",
-      "sub_module_desc": "GPS/telematics, route planning/optimisation, trip and mileage — telematics specialist vendors."
+      "sub_module_desc": "GPS/telematics, route planning/optimisation, trip and mileage — telematics specialist vendors.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Real-time vehicle location via GPS, with breadcrumb trails, geofencing, speed alerts, and integration with on-board diagnostics (OBD) for engine data."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 20→15 words."
+      }
     },
     {
       "id": "fleet.route_planning",
-      "name": "Route Planning & Optimisation",
+      "name": "Route Planning and Optimisation",
       "description": "Plan multi-stop delivery or service routes, optimise for distance, time, or fuel cost, and adapt routes in real time based on traffic.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -5345,7 +5444,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Plan multi-stop delivery or service routes, optimise for distance, time, or fuel cost, and adapt routes in real time based on traffic."
+        "question_t2": "Plan multi-stop routes optimised for distance, time, or fuel cost, with real-time traffic adaptation."
       },
       "sector_relevance": {
         "generic": true,
@@ -5392,11 +5491,22 @@
       "family": "Operations & Logistics",
       "sub_module_id": "fleet_telematics_routing",
       "sub_module_name": "Telematics & Routing",
-      "sub_module_desc": "GPS/telematics, route planning/optimisation, trip and mileage — telematics specialist vendors."
+      "sub_module_desc": "GPS/telematics, route planning/optimisation, trip and mileage — telematics specialist vendors.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Plan multi-stop delivery or service routes, optimise for distance, time, or fuel cost, and adapt routes in real time based on traffic."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 22→15 words."
+      }
     },
     {
       "id": "fleet.driver_safety",
-      "name": "Driver Safety & Behaviour Scoring",
+      "name": "Driver Safety and Behaviour Scoring",
       "description": "Monitor driving behaviour (harsh braking, speeding, distraction) and generate safety scores to reduce accidents and insurance costs.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -6105,7 +6215,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Monitor driving behaviour (harsh braking, speeding, distraction) and generate safety scores to reduce accidents and insurance costs."
+        "question_t2": "Monitor driving behaviour (harsh braking, speeding, distraction) and generate driver safety scores."
       },
       "sector_relevance": {
         "generic": false,
@@ -6152,11 +6262,22 @@
       "family": "Driver & Safety",
       "sub_module_id": "fleet_driver_safety",
       "sub_module_name": "Driver & Safety",
-      "sub_module_desc": "Driver management, behaviour scoring, accident/incident tracking."
+      "sub_module_desc": "Driver management, behaviour scoring, accident/incident tracking.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Monitor driving behaviour (harsh braking, speeding, distraction) and generate safety scores to reduce accidents and insurance costs."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 17→12 words."
+      }
     },
     {
       "id": "fleet.compliance_regulatory",
-      "name": "Compliance & Regulatory Management",
+      "name": "Compliance and Regulatory Management",
       "description": "Track regulatory obligations — road tax, COE (Singapore), vehicle inspections, driver hours, and certifications — with expiry alerts to avoid fines and downtime.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -6520,7 +6641,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Track regulatory obligations. Road tax, COE (Singapore), vehicle inspections, driver hours, and certifications, with expiry alerts to avoid fines and downtime."
+        "question_t2": "Track regulatory obligations: road tax, COE, vehicle inspections, certifications, with expiry alerts."
       },
       "sector_relevance": {
         "generic": true,
@@ -6567,7 +6688,18 @@
       "family": "Cost & Compliance",
       "sub_module_id": "fleet_cost_compliance",
       "sub_module_name": "Fleet Cost, Compliance & Analytics",
-      "sub_module_desc": "Fleet cost, reporting dashboards, regulatory compliance (LTA), emissions tracking, analytics/AI."
+      "sub_module_desc": "Fleet cost, reporting dashboards, regulatory compliance (LTA), emissions tracking, analytics/AI.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Track regulatory obligations. Road tax, COE (Singapore), vehicle inspections, driver hours, and certifications, with expiry alerts to avoid fines and downtime."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 21→12 words. SG-specific COE kept."
+      }
     },
     {
       "id": "fleet.tyre_management",
@@ -6918,7 +7050,7 @@
           }
         ],
         "total_input_items": 4,
-        "question_t2": "Track tyre inventory, monitor tread depth, schedule rotations, and record replacements to maximise tyre life and safety."
+        "question_t2": "Track tyre inventory, monitor tread depth, schedule rotations, and record replacements."
       },
       "sector_relevance": {
         "generic": false,
@@ -6969,19 +7101,19 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_t2"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_t2": "Track tyre inventory, monitor tread depth, schedule rotations, and record replacements to maximise tyre life and safety."
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup (parked cap). 17→12 words."
       }
     },
     {
       "id": "fleet.accident_incident",
-      "name": "Accident & Incident Tracking",
+      "name": "Accident and Incident Tracking",
       "description": "Record accidents and incidents with driver, vehicle, location, and damage details — feed into insurance claims, safety analysis, and driver coaching.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -7586,7 +7718,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Record accidents and incidents with driver, vehicle, location, and damage details. Feed into insurance claims, safety analysis, and driver coaching"
+        "question_t2": "Record accidents with driver, vehicle, location, and damage details for insurance claims and analysis."
       },
       "sector_relevance": {
         "generic": true,
@@ -7633,11 +7765,22 @@
       "family": "Driver & Safety",
       "sub_module_id": "fleet_driver_safety",
       "sub_module_name": "Driver & Safety",
-      "sub_module_desc": "Driver management, behaviour scoring, accident/incident tracking."
+      "sub_module_desc": "Driver management, behaviour scoring, accident/incident tracking.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Record accidents and incidents with driver, vehicle, location, and damage details. Feed into insurance claims, safety analysis, and driver coaching"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 20→15 words."
+      }
     },
     {
       "id": "fleet.booking_reservation",
-      "name": "Vehicle Booking & Reservation",
+      "name": "Vehicle Booking and Reservation",
       "description": "Allow staff to book pool or shared vehicles for trips, with calendar-based availability, approval workflows, and key handover.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -8033,7 +8176,7 @@
     },
     {
       "id": "fleet.insurance_claims",
-      "name": "Insurance & Claims Management",
+      "name": "Insurance and Claims Management",
       "description": "Track insurance policies per vehicle, manage claims from incident through settlement, and monitor premium trends.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -8430,7 +8573,7 @@
     },
     {
       "id": "fleet.procurement_disposal",
-      "name": "Fleet Procurement & Disposal",
+      "name": "Fleet Procurement and Disposal",
       "description": "Manage vehicle acquisition (purchase, lease, rental), replacement planning based on age or TCO, and disposal via auction, trade-in, or write-off.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -8802,7 +8945,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Manage vehicle acquisition (purchase, lease, rental), replacement planning based on age or TCO, and disposal via auction, trade-in, or write-off."
+        "question_t2": "Manage vehicle acquisition, replacement planning by age or TCO, and disposal pathways."
       },
       "sector_relevance": {
         "generic": true,
@@ -8849,11 +8992,22 @@
       "family": "Vehicle Registry",
       "sub_module_id": "fleet_register",
       "sub_module_name": "Vehicle Register & Procurement",
-      "sub_module_desc": "Vehicle master, insurance/claims, procurement and disposal."
+      "sub_module_desc": "Vehicle master, insurance/claims, procurement and disposal.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Manage vehicle acquisition (purchase, lease, rental), replacement planning based on age or TCO, and disposal via auction, trade-in, or write-off."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 20→13 words."
+      }
     },
     {
       "id": "fleet.vendor_workshop",
-      "name": "Vendor & Workshop Management",
+      "name": "Vendor and Workshop Management",
       "description": "Maintain a register of external workshops and service vendors, track service quality, costs, and turnaround times.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -9200,7 +9354,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Maintain a register of external workshops and service vendors, track service quality, costs, and turnaround times."
+        "question_t2": "Maintain register of external workshops and vendors with quality, cost, and turnaround tracking."
       },
       "sector_relevance": {
         "generic": true,
@@ -9251,19 +9405,19 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_t2"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_t2": "Maintain a register of external workshops and service vendors, track service quality, costs, and turnaround times."
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup (parked cap). 16→13 words."
       }
     },
     {
       "id": "fleet.emissions_tracking",
-      "name": "Environmental & Emissions Tracking",
+      "name": "Environmental and Emissions Tracking",
       "description": "Monitor fleet carbon emissions, track EV transition progress, and generate sustainability reports for ESG compliance.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -9676,7 +9830,7 @@
     },
     {
       "id": "fleet.pool_car_sharing",
-      "name": "Pool Vehicle & Car Sharing",
+      "name": "Pool Vehicle and Car Sharing",
       "description": "Manage a shared vehicle pool with self-service booking, keyless access, usage-based billing, and automated return workflows.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -10002,7 +10156,7 @@
           }
         ],
         "total_input_items": 3,
-        "question_t2": "Manage a shared vehicle pool with self-service booking, keyless access, usage-based billing, and automated return workflows."
+        "question_t2": "Manage shared vehicle pool with self-service booking, keyless access, and usage-based billing."
       },
       "sector_relevance": {
         "generic": false,
@@ -10049,11 +10203,22 @@
       "family": "Operations & Logistics",
       "sub_module_id": "fleet_bookings_fuel",
       "sub_module_name": "Bookings & Fuel",
-      "sub_module_desc": "Vehicle booking/reservation, pool car sharing, fuel management — operational admin specialty."
+      "sub_module_desc": "Vehicle booking/reservation, pool car sharing, fuel management — operational admin specialty.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Manage a shared vehicle pool with self-service booking, keyless access, usage-based billing, and automated return workflows."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 16→13 words."
+      }
     },
     {
       "id": "fleet.analytics_basic",
-      "name": "Fleet Analytics & Optimal Replacement (Basic)",
+      "name": "Fleet Analytics and Optimal Replacement (Basic)",
       "description": "Calculate optimal vehicle replacement timing, forecast fleet demand by season or project, and generate cost-saving maintenance recommendations from usage trends.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -10436,7 +10601,7 @@
           }
         ],
         "total_input_items": 4,
-        "question_t2": "Calculate optimal vehicle replacement timing, forecast fleet demand by season or project, and generate cost-saving maintenance recommendations from usage trends."
+        "question_t2": "Calculate optimal replacement timing, forecast fleet demand, and surface cost-saving maintenance recommendations."
       },
       "sector_relevance": {
         "generic": false,
@@ -10483,11 +10648,22 @@
       "family": "Cost & Compliance",
       "sub_module_id": "fleet_cost_compliance",
       "sub_module_name": "Fleet Cost, Compliance & Analytics",
-      "sub_module_desc": "Fleet cost, reporting dashboards, regulatory compliance (LTA), emissions tracking, analytics/AI."
+      "sub_module_desc": "Fleet cost, reporting dashboards, regulatory compliance (LTA), emissions tracking, analytics/AI.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Calculate optimal vehicle replacement timing, forecast fleet demand by season or project, and generate cost-saving maintenance recommendations from usage trends."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup. 20→12 words."
+      }
     },
     {
       "id": "fleet.analytics_ml",
-      "name": "Fleet ML & Predictive Analytics (Advanced)",
+      "name": "Fleet ML and Predictive Analytics (Advanced)",
       "description": "Predictive maintenance based on usage patterns, fuel consumption anomaly detection, and driver risk prediction from behaviour data.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -10791,7 +10967,7 @@
           }
         ],
         "total_input_items": 4,
-        "question_t2": "Predictive maintenance based on usage patterns, fuel consumption anomaly detection, and driver risk prediction from behaviour data."
+        "question_t2": "Apply machine learning for predictive maintenance, anomaly detection, and driver risk prediction."
       },
       "sector_relevance": {
         "generic": false,
@@ -10842,14 +11018,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_t2"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_t2": "Predictive maintenance based on usage patterns, fuel consumption anomaly detection, and driver risk prediction from behaviour data."
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-15",
+        "note": "Fleet t2 cleanup (parked cap). 17→12 words."
       }
     },
     {
@@ -10862,7 +11038,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "fleetio",
         "samsara",
@@ -11292,7 +11468,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "samsara",
         "chevin_fleetwave"
@@ -11730,7 +11906,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "fleetio",
         "samsara",
@@ -12156,7 +12332,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_fleet",
         "fleetio",
@@ -13002,8 +13178,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-15T02:59:48.846243+08:00",
-    "step16_applied_count": 0,
+    "step16_applied_at": "2026-05-15T18:47:03.614916+08:00",
+    "step16_applied_count": 1,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-13T02:57:22.022153+08:00",
