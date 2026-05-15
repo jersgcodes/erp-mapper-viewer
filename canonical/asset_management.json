@@ -19,7 +19,7 @@
   "capabilities": [
     {
       "id": "asset.register",
-      "name": "Asset Register & Hierarchy",
+      "name": "Asset Register and Hierarchy",
       "description": "Centralised inventory of every asset the organisation owns or manages, with hierarchical structure, classification, and identifying metadata.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -764,7 +764,7 @@
           }
         ],
         "total_input_items": 10,
-        "question_t2": "Centralised inventory of every asset the organisation owns or manages, with hierarchical structure, classification, and identifying metadata."
+        "question_t2": "Centralised inventory of every asset with hierarchical structure and identifying metadata."
       },
       "sector_relevance": {
         "generic": true,
@@ -806,7 +806,18 @@
       "family": "Asset Register & Lifecycle",
       "sub_module_id": "asset_register_lifecycle",
       "sub_module_name": "Asset Register & Lifecycle",
-      "sub_module_desc": "Asset master, hierarchy, lifecycle management, depreciation, leasing."
+      "sub_module_desc": "Asset master, hierarchy, lifecycle management, depreciation, leasing.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Centralised inventory of every asset the organisation owns or manages, with hierarchical structure, classification, and identifying metadata."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup. 17→12 words."
+      }
     },
     {
       "id": "asset.lifecycle",
@@ -1290,7 +1301,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Track each asset through its full lifecycle: acquisition, commissioning, operation, retirement, and disposal, with an audit trail of every state change."
+        "question_t2": "Track each asset from acquisition through commissioning, operation, retirement, and disposal."
       },
       "sector_relevance": {
         "generic": true,
@@ -1332,11 +1343,22 @@
       "family": "Asset Register & Lifecycle",
       "sub_module_id": "asset_register_lifecycle",
       "sub_module_name": "Asset Register & Lifecycle",
-      "sub_module_desc": "Asset master, hierarchy, lifecycle management, depreciation, leasing."
+      "sub_module_desc": "Asset master, hierarchy, lifecycle management, depreciation, leasing.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Track each asset through its full lifecycle: acquisition, commissioning, operation, retirement, and disposal, with an audit trail of every state change."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup. 21→12 words. Dropped 'with an audit trail of every state change' (implied by 'track')."
+      }
     },
     {
       "id": "asset.depreciation",
-      "name": "Depreciation & Valuation",
+      "name": "Depreciation and Valuation",
       "description": "Calculate book and tax depreciation across multiple methods, track accumulated depreciation, handle revaluations, and feed the GL automatically.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -1818,7 +1840,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Calculate book and tax depreciation across multiple methods, track accumulated depreciation, handle revaluations, and feed the GL automatically."
+        "question_t2": "Calculate book and tax depreciation, handle revaluations, and post to the GL."
       },
       "sector_relevance": {
         "generic": true,
@@ -1864,14 +1886,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_t2"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_t2": "Calculate book and tax depreciation across multiple methods, track accumulated depreciation, handle revaluations, and feed the GL automatically."
         },
         "author": "human-review",
         "edited_at": "2026-05-15",
-        "note": "PARKED (in_checklist: false, not deleted). Reason: duplicate of\nfin.fixed_assets which already carries depreciation accounting in\nthe Financial Management module. Vendor evidence confirms — only\n1/7 EAM/CMMS vendors evidence depreciation (IBM Maximo); modern\nCMMS tools (Limble, MaintainX, UpKeep, Brightly, Hexagon EAM,\nAssetWorks) push asset value to a finance system rather than\ntracking depreciation natively. SG SME asset mgmt buyers expect\ndepreciation in their accounting tool, not their CMMS.\nCross-link recorded in description (handled at the description\nlevel on a future edit pass — for now the parked cap renders\nunder Optional/Add-ons with the note explaining the redirect to\nfin.fixed_assets).\n"
+        "note": "Asset t2 cleanup. 18→13 words. Cap is parked (in_checklist:false) but t2 still cleaned for the Optional/Add-on rendering."
       }
     },
     {
@@ -2482,7 +2504,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Define maintenance strategies and generate scheduled work in advance of equipment failure. Time-based, usage-based, or condition-based"
+        "question_t2": "Define maintenance strategies and generate scheduled work before equipment fails."
       },
       "sector_relevance": {
         "generic": true,
@@ -2527,18 +2549,14 @@
       "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty.",
       "_cap_override": {
         "fields_overridden": [
-          "applicability"
+          "vendor_question_t2"
         ],
         "original": {
-          "applicability": [
-            "sme",
-            "mid_market",
-            "enterprise"
-          ]
+          "vendor_question_t2": "Define maintenance strategies and generate scheduled work in advance of equipment failure. Time-based, usage-based, or condition-based"
         },
         "author": "human-review",
         "edited_at": "2026-05-15",
-        "note": "Applicability narrowed [sme, mid_market, enterprise] →\n[mid_market, enterprise]. Tier stays Required. Reason: formal\npreventive maintenance scheduling is a mid-market+ feature. SG\nSME asset operators run reactive maintenance + recurring tasks\nin Excel/Google Calendar; PM scheduling matters once asset\nportfolio + downtime cost both grow.\n"
+        "note": "Asset t2 cleanup. 16→11 words."
       }
     },
     {
@@ -3748,7 +3766,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Channel for non-maintenance users (operators, occupants, customers) to submit service requests that are triaged into work orders."
+        "question_t2": "Submission channel for service requests from non-maintenance users, triaged into work orders."
       },
       "sector_relevance": {
         "generic": true,
@@ -3793,18 +3811,14 @@
       "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty.",
       "_cap_override": {
         "fields_overridden": [
-          "applicability"
+          "vendor_question_t2"
         ],
         "original": {
-          "applicability": [
-            "sme",
-            "mid_market",
-            "enterprise"
-          ]
+          "vendor_question_t2": "Channel for non-maintenance users (operators, occupants, customers) to submit service requests that are triaged into work orders."
         },
         "author": "human-review",
         "edited_at": "2026-05-15",
-        "note": "Applicability narrowed → [mid_market, enterprise]. Tier stays\nRequired. Reason: paired with asset.work_orders — same logic.\n"
+        "note": "Asset t2 cleanup. 17→13 words."
       }
     },
     {
@@ -4359,7 +4373,7 @@
           }
         ],
         "total_input_items": 8,
-        "question_t2": "Manage the inventory of parts and consumables used for maintenance, typically distinct from the saleable-goods inventory of an SCM module."
+        "question_t2": "Manage the inventory of maintenance parts and consumables, separate from saleable-goods inventory."
       },
       "sector_relevance": {
         "generic": true,
@@ -4404,18 +4418,14 @@
       "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty.",
       "_cap_override": {
         "fields_overridden": [
-          "applicability"
+          "vendor_question_t2"
         ],
         "original": {
-          "applicability": [
-            "sme",
-            "mid_market",
-            "enterprise"
-          ]
+          "vendor_question_t2": "Manage the inventory of parts and consumables used for maintenance, typically distinct from the saleable-goods inventory of an SCM module."
         },
         "author": "human-review",
         "edited_at": "2026-05-15",
-        "note": "Applicability narrowed → [mid_market, enterprise]. Tier stays\nRequired. Reason: formal spare-parts inventory matters at\nmid_market+ scale. Small shops run informal stockroom + Excel.\n"
+        "note": "Asset t2 cleanup. 20→13 words."
       }
     },
     {
@@ -4993,7 +5003,7 @@
           }
         ],
         "total_input_items": 8,
-        "question_t2": "Capture asset health data (manual readings or IoT sensor streams) and trigger maintenance based on measured condition rather than calendar or usage alone."
+        "question_t2": "Capture asset health data and trigger maintenance based on measured condition."
       },
       "sector_relevance": {
         "generic": false,
@@ -5035,7 +5045,18 @@
       "family": "Reliability & Compliance",
       "sub_module_id": "reliability_engineering",
       "sub_module_name": "Reliability Engineering",
-      "sub_module_desc": "Condition monitoring, predictive maintenance, RCM/FMEA, bad-actor analysis — reliability engineering specialty (distinct from compliance)."
+      "sub_module_desc": "Condition monitoring, predictive maintenance, RCM/FMEA, bad-actor analysis — reliability engineering specialty (distinct from compliance).",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Capture asset health data (manual readings or IoT sensor streams) and trigger maintenance based on measured condition rather than calendar or usage alone."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup. 23→11 words."
+      }
     },
     {
       "id": "asset.mobile_field",
@@ -5525,7 +5546,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Technicians execute work orders from a phone or tablet. Offline-capable, with barcode scanning, photo capture, and signature"
+        "question_t2": "Technicians execute work orders from phone or tablet with offline capability and barcode scanning."
       },
       "sector_relevance": {
         "generic": true,
@@ -5567,11 +5588,22 @@
       "family": "Maintenance Operations",
       "sub_module_id": "maintenance_operations",
       "sub_module_name": "Maintenance Operations (CMMS/EAM)",
-      "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty."
+      "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Technicians execute work orders from a phone or tablet. Offline-capable, with barcode scanning, photo capture, and signature"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup. 17→14 words."
+      }
     },
     {
       "id": "asset.analytics_kpi",
-      "name": "Maintenance Analytics & KPIs",
+      "name": "Maintenance Analytics and KPIs",
       "description": "Dashboard and reporting on maintenance performance and asset health, using the canonical reliability KPIs.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -6199,7 +6231,7 @@
     },
     {
       "id": "asset.compliance",
-      "name": "Inspection, Safety & Regulatory Compliance",
+      "name": "Inspection, Safety, and Regulatory Compliance",
       "description": "Manage compulsory inspections, safety checks, and certifications required by regulators, insurers, or internal policy.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -6682,7 +6714,7 @@
     },
     {
       "id": "asset.contracts_warranty",
-      "name": "Warranty & Contracts",
+      "name": "Warranty and Contracts",
       "description": "Track warranty coverage and service contracts so that repair work is correctly routed to the responsible party and costs recovered.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -6987,7 +7019,7 @@
           }
         ],
         "total_input_items": 4,
-        "question_t2": "Track warranty coverage and service contracts so that repair work is correctly routed to the responsible party and costs recovered."
+        "question_t2": "Track warranty coverage and service contracts to route repairs to the responsible party."
       },
       "sector_relevance": {
         "generic": true,
@@ -7029,11 +7061,22 @@
       "family": "Capital & Commercial",
       "sub_module_id": "capital_commercial",
       "sub_module_name": "Capital & Commercial Asset Management",
-      "sub_module_desc": "Capital projects, investment planning, warranty/SLA contracts, energy and carbon tracking per asset."
+      "sub_module_desc": "Capital projects, investment planning, warranty/SLA contracts, energy and carbon tracking per asset.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Track warranty coverage and service contracts so that repair work is correctly routed to the responsible party and costs recovered."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup. 20→13 words."
+      }
     },
     {
       "id": "asset.rcm_fmea",
-      "name": "Reliability-Centred Maintenance & FMEA",
+      "name": "Reliability-Centred Maintenance (RCM and FMEA)",
       "description": "Formalised analysis of how assets fail and which failures matter, used to pick the right maintenance strategy (run-to-fail vs PM vs predictive) per failure mode rather than per asset.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -7344,7 +7387,7 @@
       "vendor_questions": {
         "question": "Does your solution maintain a failure mode library with risk scoring and maintenance strategy assignment, linking each failure mode to its preventive maintenance plan, so you can justify and optimise maintenance decisions by failure risk?",
         "tier": "advanced",
-        "question_t2": "Formalised analysis of how assets fail and which failures matter, used to pick the right maintenance strategy (run-to-fail vs PM vs predictive) per failure mode rather than per asset."
+        "question_t2": "Formal failure-mode analysis to pick the right maintenance strategy per failure mode."
       },
       "sector_relevance": {
         "generic": false,
@@ -7390,19 +7433,19 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_t2"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_t2": "Formalised analysis of how assets fail and which failures matter, used to pick the right maintenance strategy (run-to-fail vs PM vs predictive) per failure mode rather than per asset."
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup (parked cap). 29→12 words."
       }
     },
     {
       "id": "asset.reliability_engineering",
-      "name": "Reliability Engineering & Bad-Actor Analysis",
+      "name": "Reliability Engineering (Bad-Actor Analysis)",
       "description": "Tools for reliability engineers to analyse historical failure data and identify chronically failing assets (\"bad actors\") for targeted investigation and elimination of root causes.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -7695,7 +7738,7 @@
       "vendor_questions": {
         "question": "Can your solution identify chronically failing assets using failure metrics and downtime data, support root cause analysis with corrective action tracking, maintain failure code taxonomy, and monitor reliability improvement trends, so you can eliminate repeat failures and optimise asset performance?",
         "tier": "advanced",
-        "question_t2": "Tools for reliability engineers to analyse historical failure data and identify chronically failing assets (\"bad actors\") for targeted investigation and elimination of root causes."
+        "question_t2": "Analyse historical failure data to identify chronically failing assets and eliminate root causes."
       },
       "sector_relevance": {
         "generic": false,
@@ -7741,19 +7784,19 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_t2"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_t2": "Tools for reliability engineers to analyse historical failure data and identify chronically failing assets (\"bad actors\") for targeted investigation and elimination of root causes."
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup (parked cap). 24→13 words."
       }
     },
     {
       "id": "asset.shutdown_turnaround",
-      "name": "Shutdown & Turnaround",
+      "name": "Shutdown and Turnaround",
       "description": "Planning and executing major maintenance events where the asset is taken out of service — distinct from day-to-day work orders because of the scale, critical-path scheduling, and contractor coordination involved.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -8155,7 +8198,7 @@
     },
     {
       "id": "asset.capital_projects",
-      "name": "Capital Projects & Commissioning",
+      "name": "Capital Projects and Commissioning",
       "description": "Linkage between capital project (capex) workflows and the asset register, so newly built or purchased assets flow cleanly into operational maintenance once commissioned.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -8563,7 +8606,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Linkage between capital project (capex) workflows and the asset register, so newly built or purchased assets flow cleanly into operational maintenance once commissioned."
+        "question_t2": "Linkage from capital projects to the asset register so commissioned assets enter operational maintenance."
       },
       "sector_relevance": {
         "generic": true,
@@ -8605,7 +8648,18 @@
       "family": "Capital & Commercial",
       "sub_module_id": "capital_commercial",
       "sub_module_name": "Capital & Commercial Asset Management",
-      "sub_module_desc": "Capital projects, investment planning, warranty/SLA contracts, energy and carbon tracking per asset."
+      "sub_module_desc": "Capital projects, investment planning, warranty/SLA contracts, energy and carbon tracking per asset.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Linkage between capital project (capex) workflows and the asset register, so newly built or purchased assets flow cleanly into operational maintenance once commissioned."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup. 23→14 words."
+      }
     },
     {
       "id": "asset.investment_planning",
@@ -8915,7 +8969,7 @@
       "vendor_questions": {
         "question": "Does your solution model asset replacement scenarios across multiple time horizons, calculate remaining useful life by condition and age, rank candidates by replacement risk, and compare capital impacts by asset class, so you can prioritise spending and prevent unplanned downtime?",
         "tier": "advanced",
-        "question_t2": "Long-range planning for asset replacement, refurbishment, and retirement based on remaining useful life, criticality, and replacement cost."
+        "question_t2": "Long-range planning for asset replacement based on remaining useful life and criticality."
       },
       "sector_relevance": {
         "generic": true,
@@ -8961,14 +9015,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_t2"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_t2": "Long-range planning for asset replacement, refurbishment, and retirement based on remaining useful life, criticality, and replacement cost."
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup (parked cap). 17→13 words."
       }
     },
     {
@@ -9269,7 +9323,7 @@
       "vendor_questions": {
         "question": "Can your solution manage linear assets by distance-based reference points, record condition data across segments, create work orders scoped to segment ranges, and retain historical records through segment changes, to enable visibility of asset condition and optimise spare-parts inventory?",
         "tier": "advanced",
-        "question_t2": "Specialised handling for linear/network assets where condition and work are referenced by distance along the asset rather than by a single point."
+        "question_t2": "Specialised handling for linear or network assets, referenced by distance along the asset."
       },
       "sector_relevance": {
         "generic": false,
@@ -9315,19 +9369,19 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_t2"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_t2": "Specialised handling for linear/network assets where condition and work are referenced by distance along the asset rather than by a single point."
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup (parked cap). 22→13 words. Replaced 'linear/network' '/' connector."
       }
     },
     {
       "id": "asset.geospatial_gis",
-      "name": "Geospatial & GIS Integration",
+      "name": "Geospatial and GIS Integration",
       "description": "Map-based visualisation of assets and work, with GIS layer integration for organisations whose assets are distributed across wide areas (utilities, telco, municipalities).\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -9616,7 +9670,7 @@
       "vendor_questions": {
         "question": "Does your solution display assets on an interactive map with layer control, synchronise coordinates from authoritative GIS sources, and enable work order creation and crew assignment based on asset location and geofence boundaries, for organisations managing distributed assets?",
         "tier": "preferred",
-        "question_t2": "Map-based visualisation of assets and work, with GIS layer integration for organisations whose assets are distributed across wide areas (utilities, telco, municipalities)."
+        "question_t2": "Map-based visualisation of assets with GIS layers, for utilities, telco, and municipalities."
       },
       "sector_relevance": {
         "generic": false,
@@ -9658,7 +9712,18 @@
       "family": "Analytics & Intelligence",
       "sub_module_id": "asset_analytics_digital",
       "sub_module_name": "Asset Analytics & Digital Twin",
-      "sub_module_desc": "Maintenance KPIs, spare parts optimisation, linear assets, GIS, AR/digital twin — analytics and visualisation layer."
+      "sub_module_desc": "Maintenance KPIs, spare parts optimisation, linear assets, GIS, AR/digital twin — analytics and visualisation layer.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Map-based visualisation of assets and work, with GIS layer integration for organisations whose assets are distributed across wide areas (utilities, telco, municipalities)."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup. 22→13 words."
+      }
     },
     {
       "id": "asset.sla_commercial",
@@ -10064,7 +10129,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "For organisations that lease equipment to customers or sell uptime as a service. Track contractual SLAs per asset, measure compliance, and calculate penalties or bonus payments"
+        "question_t2": "Track contractual SLAs per leased asset, measure compliance, and calculate penalties or bonuses."
       },
       "sector_relevance": {
         "generic": false,
@@ -10106,11 +10171,22 @@
       "family": "Capital & Commercial",
       "sub_module_id": "capital_commercial",
       "sub_module_name": "Capital & Commercial Asset Management",
-      "sub_module_desc": "Capital projects, investment planning, warranty/SLA contracts, energy and carbon tracking per asset."
+      "sub_module_desc": "Capital projects, investment planning, warranty/SLA contracts, energy and carbon tracking per asset.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "For organisations that lease equipment to customers or sell uptime as a service. Track contractual SLAs per asset, measure compliance, and calculate penalties or bonus payments"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup. 26→13 words."
+      }
     },
     {
       "id": "asset.energy_carbon",
-      "name": "Energy & Carbon per Asset",
+      "name": "Energy and Carbon per Asset",
       "description": "Capture energy consumption and carbon footprint at the asset level, identify anomalies, and feed sustainability reporting.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -10626,7 +10702,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Capture energy consumption and carbon footprint at the asset level, identify anomalies, and feed sustainability reporting."
+        "question_t2": "Capture energy consumption and carbon footprint per asset for sustainability reporting."
       },
       "sector_relevance": {
         "generic": false,
@@ -10668,7 +10744,18 @@
       "family": "Capital & Commercial",
       "sub_module_id": "capital_commercial",
       "sub_module_name": "Capital & Commercial Asset Management",
-      "sub_module_desc": "Capital projects, investment planning, warranty/SLA contracts, energy and carbon tracking per asset."
+      "sub_module_desc": "Capital projects, investment planning, warranty/SLA contracts, energy and carbon tracking per asset.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Capture energy consumption and carbon footprint at the asset level, identify anomalies, and feed sustainability reporting."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup. 16→12 words."
+      }
     },
     {
       "id": "asset.spares_optimization",
@@ -11005,7 +11092,7 @@
       "vendor_questions": {
         "question": "Can your solution analyse spare-parts inventory to recommend optimal stock levels and locations, calculate safety stock and economic order quantities, identify obsolescence risk, and model policy changes before deployment, so you balance stock-outs against carrying costs?",
         "tier": "preferred",
-        "question_t2": "Analytical layer on top of spare-parts inventory: what to stock, in what quantity, where. Balancing stock-out risk against carrying cost and obsolescence"
+        "question_t2": "Analyse spare-parts inventory to balance stock-out risk against carrying cost."
       },
       "sector_relevance": {
         "generic": false,
@@ -11047,7 +11134,18 @@
       "family": "Analytics & Intelligence",
       "sub_module_id": "asset_analytics_digital",
       "sub_module_name": "Asset Analytics & Digital Twin",
-      "sub_module_desc": "Maintenance KPIs, spare parts optimisation, linear assets, GIS, AR/digital twin — analytics and visualisation layer."
+      "sub_module_desc": "Maintenance KPIs, spare parts optimisation, linear assets, GIS, AR/digital twin — analytics and visualisation layer.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Analytical layer on top of spare-parts inventory: what to stock, in what quantity, where. Balancing stock-out risk against carrying cost and obsolescence"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup. 22→11 words."
+      }
     },
     {
       "id": "asset.mobile_disconnected",
@@ -11459,7 +11557,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Beyond basic mobile. Full workflows for technicians operating in remote locations with no connectivity, including multi-day disconnection and sync conflict resolution"
+        "question_t2": "Mobile workflows for technicians in remote locations with multi-day disconnection and sync resolution."
       },
       "sector_relevance": {
         "generic": false,
@@ -11501,11 +11599,22 @@
       "family": "Maintenance Operations",
       "sub_module_id": "maintenance_operations",
       "sub_module_name": "Maintenance Operations (CMMS/EAM)",
-      "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty."
+      "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Beyond basic mobile. Full workflows for technicians operating in remote locations with no connectivity, including multi-day disconnection and sync conflict resolution"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup. 21→14 words."
+      }
     },
     {
       "id": "asset.ar_vr_digital_twin",
-      "name": "AR & Digital Twin Instructions",
+      "name": "AR and Digital Twin Instructions",
       "description": "Overlay work instructions on physical assets using augmented reality or a 3D digital twin, and use the twin for maintenance simulation and remote collaboration.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -11800,7 +11909,7 @@
       "vendor_questions": {
         "question": "Can your solution maintain a 3D digital twin linked to each asset, overlay work instructions via mobile AR, and enable remote expert annotation for maintenance and training, so technicians can practise safely and collaborate in real time?",
         "tier": "advanced",
-        "question_t2": "Overlay work instructions on physical assets using augmented reality or a 3D digital twin, and use the twin for maintenance simulation and remote collaboration."
+        "question_t2": "Overlay work instructions on physical assets using AR or a 3D digital twin."
       },
       "sector_relevance": {
         "generic": false,
@@ -11846,14 +11955,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_t2"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_t2": "Overlay work instructions on physical assets using augmented reality or a 3D digital twin, and use the twin for maintenance simulation and remote collaboration."
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup (parked cap). 24→13 words."
       }
     },
     {
@@ -12669,7 +12778,7 @@
       "vendor_questions": {
         "question": "Does your solution track patch and firmware versions per OT asset, enforce approval workflows for changes, document network zones and compensating controls, and log security incidents with audit trails, so you manage OT vulnerability exposure and demonstrate compliance without production disruption?",
         "tier": "advanced",
-        "question_t2": "Operational-technology security tied to the asset register: patch status, known vulnerabilities, and incidents per connected asset."
+        "question_t2": "Operational-technology security per connected asset: patch status, vulnerabilities, and incidents."
       },
       "sector_relevance": {
         "generic": true,
@@ -12715,14 +12824,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_t2"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_t2": "Operational-technology security tied to the asset register: patch status, known vulnerabilities, and incidents per connected asset."
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-15",
+        "note": "Asset t2 cleanup (parked cap). 16→12 words."
       }
     },
     {
@@ -12735,7 +12844,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo",
         "ibm_maximo",
@@ -13172,7 +13281,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "ibm_maximo",
         "sap_s4hana_pm"
@@ -13607,7 +13716,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "ibm_maximo",
         "sap_s4hana_pm",
@@ -14127,7 +14236,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "erpnext",
         "ibm_maximo",
@@ -14965,8 +15074,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-15T16:12:21.000407+08:00",
-    "step16_applied_count": 7,
+    "step16_applied_at": "2026-05-15T17:20:04.417037+08:00",
+    "step16_applied_count": 21,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-13T16:58:33.835899+08:00",
