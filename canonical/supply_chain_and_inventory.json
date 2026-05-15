@@ -1105,7 +1105,7 @@
     },
     {
       "id": "sc.stock_levels",
-      "name": "Stock Levels & Warehouse",
+      "name": "Stock Levels and Warehouse",
       "description": "Real-time visibility of stock on hand, allocated, in transit, and available across warehouses, locations, bins, and zones. Enables staff to answer \"what do we have and where is it?\" at any moment.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -2449,7 +2449,7 @@
     },
     {
       "id": "sc.goods_receipt",
-      "name": "Goods Receipt & Putaway",
+      "name": "Goods Receipt and Putaway",
       "description": "Receive inbound goods against purchase orders, inspect quantity and quality, generate a goods receipt note (GRN), and route items to the correct storage location using putaway rules.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -2967,7 +2967,7 @@
     },
     {
       "id": "sc.stock_movements",
-      "name": "Stock Movements & Transfers",
+      "name": "Stock Movements and Transfers",
       "description": "Move stock between warehouses, locations, or status categories with full traceability. Covers inter-warehouse transfers, internal moves, and status changes (e.g. available to quarantine).\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -3465,7 +3465,7 @@
     },
     {
       "id": "sc.purchase_orders",
-      "name": "Purchase Orders & Procurement",
+      "name": "Purchase Orders and Procurement",
       "description": "Create, approve, send, and track purchase orders to suppliers. Covers the procure-to-pay cycle from requisition through PO creation, supplier confirmation, and three-way matching against receipt and invoice.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -4563,7 +4563,7 @@
     },
     {
       "id": "sc.vendor_master",
-      "name": "Vendor & Supplier Master",
+      "name": "Vendor and Supplier Master",
       "description": "Central register of all suppliers with contact details, payment terms, lead times, and performance history. Supports supplier evaluation to drive better sourcing decisions.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -5394,7 +5394,7 @@
     },
     {
       "id": "sc.stock_counting",
-      "name": "Stock Counting & Cycle Counts",
+      "name": "Stock Counting and Cycle Counts",
       "description": "Periodic and perpetual stock verification — full physical counts, scheduled cycle counts by location or ABC class, variance analysis, and adjustment posting.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -5922,7 +5922,7 @@
     },
     {
       "id": "sc.reorder_rules",
-      "name": "Reorder Rules & Replenishment",
+      "name": "Reorder Rules and Replenishment",
       "description": "Automatic or semi-automatic replenishment triggers — reorder points, min/max levels, safety stock, and lead-time-aware planning to prevent stockouts without overstocking.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -5930,7 +5930,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_inventory",
         "odoo_purchase",
@@ -6627,7 +6627,7 @@
     },
     {
       "id": "sc.delivery_dispatch",
-      "name": "Delivery & Dispatch",
+      "name": "Delivery and Dispatch",
       "description": "Pick, pack, and ship outbound orders — from sales order allocation through wave/batch picking, packing, carrier label generation, and proof of delivery.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -6635,7 +6635,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_inventory",
         "sap_mm",
@@ -7796,7 +7796,7 @@
     },
     {
       "id": "sc.inventory_valuation",
-      "name": "Inventory Valuation & Costing",
+      "name": "Inventory Valuation and Costing",
       "description": "Calculate and report the financial value of inventory using standard costing methods. Feeds directly into the general ledger for balance sheet and COGS reporting.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -8987,8 +8987,8 @@
     },
     {
       "id": "sc.barcode_scanning",
-      "name": "Inventory Data Capture",
-      "description": "Capture inventory data via any combination of barcode/QR code\nscanning, CSV/Excel batch upload, or API integration from POS,\necommerce platforms, or upstream ERP systems. Vendor question is\ntier-agnostic to acceptable input methods — SMEs with <100 SKUs\nmay not need scanners but still need a defensible inventory entry\nmethod.\n",
+      "name": "Barcode and Scanning",
+      "description": "Use barcode or QR code scanning to speed up and error-proof warehouse operations — receiving, putaway, picking, counting, and transfers — via handheld scanners or mobile devices.\n",
       "priority_proxy": "must_have",
       "applicability": [
         "sme",
@@ -9648,7 +9648,7 @@
     },
     {
       "id": "sc.lot_serial_tracking",
-      "name": "Lot & Serial Tracking",
+      "name": "Lot and Serial Tracking",
       "description": "Assign lot (batch) or serial numbers to items for end-to-end traceability from supplier through warehouse to customer. Required for regulated industries (food, pharma, electronics).\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -10159,7 +10159,7 @@
     },
     {
       "id": "sc.demand_forecasting",
-      "name": "Demand Forecasting & Planning",
+      "name": "Demand Forecasting and Planning",
       "description": "Predict future demand using historical sales, seasonal patterns, and trend analysis to drive procurement planning, safety stock settings, and production scheduling.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -10754,7 +10754,7 @@
     },
     {
       "id": "sc.dropship_crossdock",
-      "name": "Dropship & Cross-Dock",
+      "name": "Dropship and Cross-Dock",
       "description": "Fulfil customer orders directly from the supplier (dropship) or move inbound goods straight to outbound without storage (cross-dock) to reduce handling and lead time.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -11182,7 +11182,7 @@
     },
     {
       "id": "sc.returns_reverse_logistics",
-      "name": "Returns & Reverse Logistics",
+      "name": "Returns and Reverse Logistics",
       "description": "Process customer returns (RMA), supplier returns (return-to-vendor), and manage returned goods through inspection, restocking, repair, or disposal workflows.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -12669,7 +12669,7 @@
     },
     {
       "id": "sc.kit_assembly",
-      "name": "Kit & Bundle Management",
+      "name": "Kit and Bundle Management",
       "description": "Define kits or bundles made from component items and manage the assembly process — light manufacturing (pick components, assemble, put away finished kit) without a full MRP system.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -13614,7 +13614,7 @@
     },
     {
       "id": "sc.dangerous_goods",
-      "name": "Dangerous Goods & Compliance",
+      "name": "Dangerous Goods and Compliance",
       "description": "Manage storage, handling, and shipping of hazardous materials in compliance with regulations — MSDS documentation, hazmat classification, and restricted storage rules.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -14036,7 +14036,7 @@
     },
     {
       "id": "sc.warehouse_automation",
-      "name": "Warehouse Automation & WMS",
+      "name": "Warehouse Automation and WMS",
       "description": "Advanced warehouse management — pick routing optimisation, task interleaving, labour management, integration with conveyor systems, RFID, and robotics for high-volume operations.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -17325,7 +17325,7 @@
     },
     {
       "id": "sc.ai_ml_supply_chain",
-      "name": "AI / ML for Supply Chain",
+      "name": "AI and ML for Supply Chain",
       "description": "Applied AI for supply chain optimisation — demand sensing from external signals, anomaly detection in consumption patterns, intelligent replenishment, and predictive lead time estimation.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -18040,7 +18040,7 @@
     },
     {
       "id": "sc.mobile_access",
-      "name": "Cloud and Multi-Device Accessibility",
+      "name": "Mobile and Multi-Device Access",
       "description": "The solution works on phones, tablets, and desktops. Universal requirement — PSG asks every vendor \"is this cloud and multi-device accessible?\" as the first question on every sol cat. Warehouse staff need mobile access for receiving, picking, counting, and scanning on the floor.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -18048,7 +18048,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_inventory",
         "dynamics_365_scm",
@@ -18522,7 +18522,7 @@
     },
     {
       "id": "sc.data_governance",
-      "name": "Data Security, Privacy & Consent",
+      "name": "Data Security, Privacy and Consent",
       "description": "Data hygiene, consent management (PDPA / GDPR), retention policies, audit trails, and basic access security. Universal — PSG requires every pre-approved vendor to meet PDPA compliance, Cyber Essentials Mark, and VA/PT audits regardless of which module they cover.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -18530,7 +18530,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "sap_mm",
         "dynamics_365_scm",
@@ -19030,7 +19030,7 @@
     },
     {
       "id": "sc.user_access_roles",
-      "name": "User Accounts, Roles & Access Control",
+      "name": "User Accounts, Roles and Access Control",
       "description": "Multiple staff can use the system, each with their own login, role-based permissions, and audit of what they did. Universal — warehouse, procurement, and logistics staff need different access levels and PSG requires access control as part of its Cyber Essentials baseline.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -19038,7 +19038,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_inventory",
         "sap_mm",
@@ -19523,7 +19523,7 @@
     },
     {
       "id": "sc.integration_import_export",
-      "name": "Data Import, Export & Integration",
+      "name": "Data Import, Export and Integration",
       "description": "Bring in existing inventory data and push data out to other tools — spreadsheets, accounting software, GST submissions, marketplace channels. Universal — every SME already has data somewhere else and needs to export for their accountant, tax filing, or analysis. PSG asks every sol cat about data extraction and integration.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -19531,7 +19531,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_inventory",
         "erpnext_stock",

@@ -19,7 +19,7 @@
   "capabilities": [
     {
       "id": "fin.general_ledger",
-      "name": "General Ledger & Chart of Accounts",
+      "name": "General Ledger and Chart of Accounts",
       "description": "The double-entry general ledger is the spine of every finance system — a structured chart of accounts, journal postings, period and year controls, and the single source of truth for every transaction that rolls up into the financial statements.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -759,7 +759,7 @@
     },
     {
       "id": "fin.accounts_receivable",
-      "name": "Accounts Receivable & Customer Invoicing",
+      "name": "Accounts Receivable and Customer Invoicing",
       "description": "Issue customer invoices, track outstanding balances, apply payments, manage credit notes, and produce an ageing report on outstanding receivables. The revenue-side sub-ledger that every business with paying customers needs.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -1562,7 +1562,7 @@
     },
     {
       "id": "fin.accounts_payable",
-      "name": "Accounts Payable & Vendor Bills",
+      "name": "Accounts Payable and Vendor Bills",
       "description": "Record supplier bills, match against purchase orders and goods receipts, route for approval, schedule payment runs, and age the payables book. The cost-side sub-ledger mirroring AR.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -2318,7 +2318,7 @@
     },
     {
       "id": "fin.bank_cash_management",
-      "name": "Bank & Cash Management",
+      "name": "Bank and Cash Management",
       "description": "Connect to bank accounts, import statements, reconcile against the ledger, manage cash positions across multiple accounts, and track petty cash. Bank reconciliation is the most-used daily workflow for finance teams.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -3078,7 +3078,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_accounting",
         "netsuite",
@@ -3617,7 +3617,7 @@
     },
     {
       "id": "fin.financial_reporting",
-      "name": "Financial Reporting & Statements",
+      "name": "Financial Reporting and Statements",
       "description": "Generate the core financial statements — profit and loss, balance sheet, trial balance, cashflow statement — along with drill-down, comparison periods, and export. The primary output of every finance system.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -4373,7 +4373,7 @@
     },
     {
       "id": "fin.fixed_assets",
-      "name": "Fixed Assets & Depreciation",
+      "name": "Fixed Assets and Depreciation",
       "description": "Maintain the fixed-asset register, run periodic depreciation, handle additions, disposals, transfers, and revaluations, and post the accounting entries to the GL automatically.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -4902,7 +4902,7 @@
     },
     {
       "id": "fin.budgeting_forecasting",
-      "name": "Budgeting & Forecasting",
+      "name": "Budgeting and Forecasting",
       "description": "Build annual operating budgets by account, department, and project; track actual vs budget on every report; and revise forecasts as the year unfolds. Basic budgeting is SME-level, driver-based planning is mid-market and above.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -4910,7 +4910,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_accounting",
         "netsuite",
@@ -5425,7 +5425,7 @@
     },
     {
       "id": "fin.multi_currency",
-      "name": "Multi-Currency & Foreign Exchange",
+      "name": "Multi-Currency and Foreign Exchange",
       "description": "Record transactions in any currency with automatic conversion to the functional / reporting currency, revalue open AR / AP and bank balances at period end, and post realised and unrealised FX gain / loss to the GL.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -5930,7 +5930,7 @@
     },
     {
       "id": "fin.expense_management",
-      "name": "Expense Management & Staff Claims",
+      "name": "Expense Management and Staff Claims",
       "description": "Capture employee expense claims — from corporate-card feeds, mobile receipts, mileage logs — route for approval, reimburse, and post to the GL. Commonly a distinct module feeding AP.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -6909,7 +6909,7 @@
     },
     {
       "id": "fin.project_accounting",
-      "name": "Project Accounting & Cost Centres",
+      "name": "Project Accounting and Cost Centres",
       "description": "Track revenue, cost, and profitability at the project level — billable time, expenses, materials, work-in-progress, and percentage-of- completion revenue recognition. Essential for professional services, construction, and consulting firms.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -8372,7 +8372,7 @@
     },
     {
       "id": "fin.credit_collections",
-      "name": "Credit Management & Collections",
+      "name": "Credit Management and Collections",
       "description": "Set customer credit limits, monitor exposure, run dunning cycles, manage disputes, and escalate to collection agencies — the active side of accounts receivable aimed at reducing days-sales-outstanding.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -8915,7 +8915,7 @@
     },
     {
       "id": "fin.audit_controls",
-      "name": "Audit Trail & Financial Controls",
+      "name": "Audit Trail and Financial Controls",
       "description": "SOX-style internal controls — immutable audit trail on every transaction, segregation of duties, change-log retention, approval matrices, and evidence export for external auditors. Universal requirement for listed entities.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -9362,7 +9362,7 @@
     },
     {
       "id": "fin.period_close",
-      "name": "Period Close & Accrual Management",
+      "name": "Period Close and Accrual Management",
       "description": "Manage the monthly and year-end close — checklist of tasks, accruals, prepayment amortisation, inter-module reconciliation, and the eventual period lock. The most ritualised workflow in finance.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -9864,7 +9864,7 @@
     },
     {
       "id": "fin.cashflow_treasury",
-      "name": "Cashflow Forecasting & Treasury",
+      "name": "Cashflow Forecasting and Treasury",
       "description": "Forecast cash inflows and outflows across entities and bank accounts, manage short-term funding, place surplus cash, and model liquidity stress scenarios. Mid-market plus, though basic cashflow projection is useful at SME level.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -10341,7 +10341,7 @@
     },
     {
       "id": "fin.payroll_posting",
-      "name": "Payroll Integration & GL Posting",
+      "name": "Payroll Integration and GL Posting",
       "description": "Post the accounting side of payroll — salary, employer CPF, tax withholding, benefits, accruals — from the payroll system into the GL. Distinct from HR payroll calculation; this is the finance posting interface.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -10990,7 +10990,7 @@
     },
     {
       "id": "fin.einvoicing_peppol",
-      "name": "InvoiceNow-Ready Solution Provider Accreditation",
+      "name": "E-Invoicing and PEPPOL InvoiceNow",
       "description": "Send and receive invoices in structured electronic format over the PEPPOL network — the Singapore government's InvoiceNow programme mandates this for GST-registered businesses. Machine-readable, no re-keying on the receiving side.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -11431,7 +11431,7 @@
     },
     {
       "id": "fin.payment_gateways",
-      "name": "Payment Gateway & Direct Debit Integration",
+      "name": "Payment Gateway and Direct Debit Integration",
       "description": "Accept customer payments online via credit card, local schemes (PayNow, FAST, GIRO), and direct debit, and reconcile gateway settlements into the bank account.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -11439,7 +11439,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_accounting",
         "odoo_invoicing",
@@ -12132,7 +12132,7 @@
     },
     {
       "id": "fin.xbrl_reporting",
-      "name": "XBRL & Statutory Filing",
+      "name": "XBRL and Statutory Filing",
       "description": "Generate XBRL-tagged financial statements for ACRA filing (Singapore) and equivalent regulators, using the mandated taxonomy version. Mandatory for Singapore incorporated companies above certain thresholds.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -13062,7 +13062,7 @@
     },
     {
       "id": "fin.treasury_investments",
-      "name": "Treasury & Investment Management",
+      "name": "Treasury and Investment Management",
       "description": "Manage short- and long-term investments, fixed deposits, FX hedges, and interest-rate swaps — with mark-to-market valuation and hedge accounting under IFRS 9. Enterprise-tier finance.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -14295,7 +14295,7 @@
     },
     {
       "id": "fin.ai_finance",
-      "name": "AI / ML for Finance",
+      "name": "AI and ML for Finance",
       "description": "Machine learning applied to finance workflows — invoice OCR, fraud and anomaly detection, cashflow prediction, automated reconciliation, and natural-language query of financial data.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -14853,7 +14853,7 @@
     },
     {
       "id": "fin.mobile_access",
-      "name": "Cloud and Multi-Device Accessibility",
+      "name": "Mobile and Multi-Device Access",
       "description": "The finance system works on phones, tablets, and desktops. Universal requirement — PSG asks every vendor \"is this cloud and multi-device accessible?\" as the first question on every sol cat. Approvers need to sign bills from their phone, owners check cashflow on tablets.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -15305,7 +15305,7 @@
     },
     {
       "id": "fin.data_governance",
-      "name": "Data Security, Privacy & Consent",
+      "name": "Data Security, Privacy and Consent",
       "description": "Finance data is the most sensitive category in any business — PDPA consent, encryption at rest and in transit, retention policies, audit trails, and secure destruction. Universal — PSG requires every pre-approved vendor to meet PDPA compliance, Cyber Essentials Mark, and VA/PT audits regardless of which module they cover.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -15313,7 +15313,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "netsuite",
         "sap_s4hana_finance",
@@ -15850,7 +15850,7 @@
     },
     {
       "id": "fin.user_access_roles",
-      "name": "User Accounts, Roles & Access Control",
+      "name": "User Accounts, Roles and Access Control",
       "description": "Multiple staff use the finance system, each with their own login and role-based permissions — AR clerk, AP clerk, controller, CFO, auditor — with segregation of duties built into the role matrix. Universal — PSG requires access control as part of its Cyber Essentials baseline.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -15858,7 +15858,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "netsuite",
         "sap_s4hana_finance",
@@ -16345,7 +16345,7 @@
     },
     {
       "id": "fin.integration_import_export",
-      "name": "Data Import, Export & Integration",
+      "name": "Data Import, Export and Integration",
       "description": "Bring in opening balances and master data, push data out to tax authorities, auditors, and analytics tools, and integrate with banks, payroll, and upstream operational systems. PSG asks every sol cat about data extraction, integration, and interoperability.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -16353,7 +16353,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "netsuite",
         "odoo_accounting",

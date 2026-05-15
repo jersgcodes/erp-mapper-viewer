@@ -1191,7 +1191,7 @@
     },
     {
       "id": "mfg.work_orders",
-      "name": "Work Orders & Job Cards",
+      "name": "Work Orders and Job Cards",
       "description": "Create, schedule, execute, and close production work orders against BOMs and routings — the central operational artifact of a discrete manufacturing ERP.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -1816,6 +1816,7 @@
       "description": "Net-requirements explosion from demand (sales orders and forecast) through BOMs and inventory policies, generating planned purchase and production orders to meet demand without stock-outs or excess.\n",
       "priority_proxy": "must_have",
       "applicability": [
+        "sme",
         "mid_market",
         "enterprise"
       ],
@@ -2453,6 +2454,7 @@
       "description": "Assign work orders to work centers across a time horizon, respecting finite capacity and operation sequence — distinct from MRP which generates orders without regard to capacity.\n",
       "priority_proxy": "must_have",
       "applicability": [
+        "sme",
         "mid_market",
         "enterprise"
       ],
@@ -4466,7 +4468,7 @@
     },
     {
       "id": "mfg.inventory_wip",
-      "name": "Inventory & Work-in-Progress Tracking",
+      "name": "Inventory and Work-in-Progress Tracking",
       "description": "Manufacturing-specific inventory management: raw materials, WIP, and finished goods tracked by lot, serial, or bin across production locations.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -4996,7 +4998,7 @@
     },
     {
       "id": "mfg.product_costing",
-      "name": "Product Costing & Variance Analysis",
+      "name": "Product Costing and Variance Analysis",
       "description": "Calculate standard and actual cost of manufactured goods, post production variances to finance, and provide cost visibility to planners and accountants.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -6799,7 +6801,7 @@
     },
     {
       "id": "mfg.subcontracting",
-      "name": "Subcontract & Outsourced Manufacturing",
+      "name": "Subcontract and Outsourced Manufacturing",
       "description": "Send materials to an external manufacturer who performs part or all of the production and returns finished or semi-finished goods. Distinct from a simple purchase because the organisation owns the material throughout.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -7190,7 +7192,7 @@
     },
     {
       "id": "mfg.process_manufacturing",
-      "name": "Process & Batch Manufacturing",
+      "name": "Process and Batch Manufacturing",
       "description": "Manufacturing mode for industries making fluids, powders, chemicals, pharmaceuticals, and food — where production is by recipe, yields are variable, and by-products, co-products, and reverse BOMs matter.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -8206,7 +8208,7 @@
     },
     {
       "id": "mfg.demand_planning",
-      "name": "Demand Planning & Forecasting",
+      "name": "Demand Planning and Forecasting",
       "description": "Generate the demand signal that feeds MRP: statistical forecasts, sales-and-operations planning (S&OP) inputs, and collaborative planning with customers and suppliers.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -9152,7 +9154,7 @@
     },
     {
       "id": "mfg.shop_floor_iot",
-      "name": "IoT & Machine Data Collection",
+      "name": "IoT and Machine Data Collection",
       "description": "Direct integration with production equipment and sensors for automated data capture — OEE, status, output, downtime, cycle times — without operator manual entry.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -10590,7 +10592,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo",
         "netsuite",
@@ -11080,7 +11082,7 @@
     },
     {
       "id": "mfg.repair_returns",
-      "name": "Repair, Rework & Returned-Goods Manufacturing",
+      "name": "Repair, Rework and Returned-Goods Manufacturing",
       "description": "Handle goods that come back from customers or fail internal quality, and need to go through a rework or repair process — distinct from normal production because the input is a finished good, not raw material.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -11582,7 +11584,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "sap_s4hana_pp",
         "oracle_fusion_mfg",
@@ -12072,7 +12074,7 @@
     },
     {
       "id": "mfg.labor_management",
-      "name": "Labour & Shop Floor Time",
+      "name": "Labour and Shop Floor Time",
       "description": "Track operator time against operations and work orders, feed payroll and costing, and provide visibility into labour efficiency and utilisation.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -12532,7 +12534,7 @@
     },
     {
       "id": "mfg.energy_sustainability",
-      "name": "Energy, Utility & Sustainability Tracking",
+      "name": "Energy, Utility and Sustainability Tracking",
       "description": "Capture energy and utility consumption per production run, attribute to products, and feed sustainability and carbon reporting — increasingly required for CBAM, CSRD, and similar regulations.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -13604,7 +13606,7 @@
     },
     {
       "id": "mfg.digital_thread_twin",
-      "name": "Digital Thread & Digital Twin",
+      "name": "Digital Thread and Digital Twin",
       "description": "Continuous data linkage from design intent through as-planned to as-built, and a simulation model (\"digital twin\") of the production system used for scheduling, training, and continuous improvement.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -13994,7 +13996,7 @@
     },
     {
       "id": "mfg.multi_site_intercompany",
-      "name": "Multi-Site & Inter-Company Manufacturing",
+      "name": "Multi-Site and Inter-Company Manufacturing",
       "description": "Coordinate production across multiple plants within the same enterprise — network planning, cross-site transfers, intercompany sales, and global visibility.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -14466,7 +14468,7 @@
     },
     {
       "id": "mfg.ai_ml_analytics",
-      "name": "AI / ML for Manufacturing",
+      "name": "AI and ML for Manufacturing",
       "description": "Applied machine learning inside the manufacturing flow — predictive quality, yield optimisation, anomaly detection, AI-driven scheduling, and predictive maintenance of production assets.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -14943,7 +14945,7 @@
     },
     {
       "id": "mfg.mobile_access",
-      "name": "Cloud and Multi-Device Accessibility",
+      "name": "Mobile and Multi-Device Access",
       "description": "The solution works on phones, tablets, and desktops. Universal requirement — PSG asks every vendor \"is this cloud and multi-device accessible?\" as the first question on every sol cat. Factory supervisors and operators need mobile access to production data.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -15343,7 +15345,7 @@
     },
     {
       "id": "mfg.data_governance",
-      "name": "Data Security, Privacy & Consent",
+      "name": "Data Security, Privacy and Consent",
       "description": "Data hygiene, retention policies, audit trails, and basic access security. Universal — PSG requires every pre-approved vendor to meet PDPA compliance, Cyber Essentials Mark, and VA/PT audits regardless of which module they cover.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -15768,7 +15770,7 @@
     },
     {
       "id": "mfg.user_access_roles",
-      "name": "User Accounts, Roles & Access Control",
+      "name": "User Accounts, Roles and Access Control",
       "description": "Multiple staff can use the system, each with their own login, role-based permissions, and audit of what they did. Universal — any SME with more than one employee needs this, and PSG requires access control as part of its Cyber Essentials baseline.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -16236,7 +16238,7 @@
     },
     {
       "id": "mfg.integration_import_export",
-      "name": "Data Import, Export & Integration",
+      "name": "Data Import, Export and Integration",
       "description": "Bring in existing production data and push data out to other tools — spreadsheets, accounting software, other systems. Universal — every SME already has data somewhere else and needs to export for their accountant, tax filing, or business analysis. PSG asks every sol cat about data extraction and integration.\n",
       "priority_proxy": "must_have",
       "applicability": [
