@@ -9586,7 +9586,7 @@
         ],
         "total_input_items": 6,
         "question_terse": "Does your solution support inventory data capture via barcode/QR\nscanning, CSV/Excel upload, or API integration?\n",
-        "question_t2": "Inventory data capture via barcode/QR scanning, CSV/Excel upload, or API\n"
+        "question_t2": "Capture inventory data via barcode or QR scanning, CSV upload, or API."
       },
       "sector_relevance": {
         "generic": true,
@@ -9632,14 +9632,14 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "vendor_question_t2"
         ],
         "original": {
-          "sme_tier": "required"
+          "vendor_question_t2": "Inventory data capture via barcode/QR scanning, CSV/Excel upload, or API\n"
         },
         "author": "human-review",
-        "edited_at": "2026-05-14",
-        "note": "Demoted from Mandatory to Preferred + generalised the cap from\nbarcode-specific to \"any input method\" per 2026-05-14 SC walkthrough.\nReasoning: 33% of vendors marketed barcode on pricing pages, but\nreal coverage is higher (vendors don't always list barcode as a\nbullet). SMEs with <100 SKUs may not need scanners — they use\nmanual UI entry, CSV upload, or POS/ecommerce API ingest. The\nMandatory bar was too high for that audience. Generalised cap\nsurfaces all acceptable input methods as one question; vendor\nanswers which they support. Manual entry intentionally omitted\nfrom the bullet — it's implicit in any system with a UI.\n"
+        "edited_at": "2026-05-15",
+        "note": "Type 2 cleanup. Original used '/' as connector (\"barcode/QR\",\n\"CSV/Excel\"). Rewrote 'barcode/QR' → 'barcode or QR', dropped\nExcel (CSV upload covers it).\n"
       },
       "family": "Inventory Core",
       "sub_module_id": "inventory_core",
@@ -20819,8 +20819,8 @@
   "_meta": {
     "step15_generated_at": "2026-05-15T12:23:50.136069+08:00",
     "step15_processed": 0,
-    "step16_applied_at": "2026-05-15T02:59:49.820777+08:00",
-    "step16_applied_count": 2,
+    "step16_applied_at": "2026-05-15T13:08:50.357557+08:00",
+    "step16_applied_count": 3,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-14T14:34:59.630170+08:00",
