@@ -1149,7 +1149,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Defines the sequence of operations required to produce an item, the work centers each operation runs on, and the standard times for setup, run, and teardown."
+        "question_t2": "Define operation sequences, work centres, and standard run times per produced item."
       },
       "sector_relevance": {
         "generic": true,
@@ -1176,7 +1176,18 @@
       "family": "Product Engineering",
       "sub_module_id": "product_engineering",
       "sub_module_name": "Product Engineering & PLM",
-      "sub_module_desc": "BOM, routings, engineering change, PLM/product data."
+      "sub_module_desc": "BOM, routings, engineering change, PLM/product data.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Defines the sequence of operations required to produce an item, the work centers each operation runs on, and the standard times for setup, run, and teardown."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 26→12 words. Original was a noun-fragment with enumeration; rewrote as verb-led summary covering the three core concepts (operations, work centres, standard times)."
+      }
     },
     {
       "id": "mfg.work_orders",
@@ -2396,7 +2407,7 @@
           }
         ],
         "total_input_items": 9,
-        "question_t2": "Calculate net material requirements from demand (sales orders + forecast) through BOMs and inventory policies, generating planned purchase and production orders to meet demand without stock-outs or excess."
+        "question_t2": "Decompose demand through BOMs and inventory policies into planned purchase and production orders."
       },
       "sector_relevance": {
         "generic": true,
@@ -2426,18 +2437,14 @@
       "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity.",
       "_cap_override": {
         "fields_overridden": [
-          "applicability"
+          "vendor_question_t2"
         ],
         "original": {
-          "applicability": [
-            "sme",
-            "mid_market",
-            "enterprise"
-          ]
+          "vendor_question_t2": "Calculate net material requirements from demand (sales orders + forecast) through BOMs and inventory policies, generating planned purchase and production orders to meet demand without stock-outs or excess."
         },
         "author": "human-review",
         "edited_at": "2026-05-15",
-        "note": "Applicability narrowed from [sme, mid_market, enterprise] →\n[mid_market, enterprise]. Tier stays Required. Reason: formal\nnet-requirements MRP is a mid-market+ feature. SG SME job shops\nand small contract manufacturers run reorder-point + manual\nplanning; MRP would be over-engineered. The cap remains Required\nFOR THOSE IT APPLIES TO. Vendor signal (2/11 evidence) reflects\nthat only mid-market+ ERPs surface MRP as a named module — SME-\nfocused mfg ERPs (Katana, simpler tools) skip it.\n"
+        "note": "Mfg t2 cleanup. 28→13 words. Replaced '+' connector. Used 'decompose' instead of MRP-textbook 'explode' — same meaning, friendlier for SG SME audience who haven't read MRP textbooks. Kept BOMs (industry standard)."
       }
     },
     {
@@ -2917,7 +2924,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Assign work orders to work centers across a time horizon, respecting finite capacity and operation sequence."
+        "question_t2": "Assign work orders to work centres across time, respecting finite capacity."
       },
       "sector_relevance": {
         "generic": true,
@@ -2947,18 +2954,14 @@
       "sub_module_desc": "Work orders, production scheduling, shop floor execution, process/discrete modes, IoT data collection, labour tracking.",
       "_cap_override": {
         "fields_overridden": [
-          "applicability"
+          "vendor_question_t2"
         ],
         "original": {
-          "applicability": [
-            "sme",
-            "mid_market",
-            "enterprise"
-          ]
+          "vendor_question_t2": "Assign work orders to work centers across a time horizon, respecting finite capacity and operation sequence."
         },
         "author": "human-review",
         "edited_at": "2026-05-15",
-        "note": "Applicability narrowed [sme, mid_market, enterprise] →\n[mid_market, enterprise]. Tier stays Required. Reason: same as\nmfg.mrp — formal finite-capacity scheduling is mid-market+. SG\nSME mfg shops schedule on whiteboards / Excel / Gantt. PSG has\nits own AM sol cat (\"Real-Time Production Scheduling and Job\nTracking\") under Advanced Manufacturing — confirms scheduling is\na separate specialty rather than an SME baseline. Vendor signal\n(3/11 evidence: Epicor, Oracle, SAP) is mid-market-and-up.\n"
+        "note": "Mfg t2 cleanup. 16→11 words. SG spelling 'centres'."
       }
     },
     {
@@ -3688,7 +3691,7 @@
           }
         ],
         "total_input_items": 9,
-        "question_t2": "Real-time shop-floor interface for operators: start/stop operations, record output, scan materials, capture quality, report downtime."
+        "question_t2": "Operator interface to start operations, record output, scan materials, and report downtime."
       },
       "sector_relevance": {
         "generic": true,
@@ -3715,7 +3718,18 @@
       "family": "Production Execution",
       "sub_module_id": "production_execution",
       "sub_module_name": "Production Execution (MES)",
-      "sub_module_desc": "Work orders, production scheduling, shop floor execution, process/discrete modes, IoT data collection, labour tracking."
+      "sub_module_desc": "Work orders, production scheduling, shop floor execution, process/discrete modes, IoT data collection, labour tracking.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Real-time shop-floor interface for operators: start/stop operations, record output, scan materials, capture quality, report downtime."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. Replaced '/' connector ('start/stop'). 16→12 words."
+      }
     },
     {
       "id": "mfg.quality_management",
@@ -4410,7 +4424,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Plan, execute, and record quality inspections against materials, work in progress, and finished goods, with non-conformance tracking and corrective-action workflows."
+        "question_t2": "Plan, execute, and record quality inspections with non-conformance and corrective-action workflows."
       },
       "sector_relevance": {
         "generic": true,
@@ -4437,7 +4451,18 @@
       "family": "Quality & Compliance",
       "sub_module_id": "quality_compliance",
       "sub_module_name": "Quality & Compliance (QMS)",
-      "sub_module_desc": "Quality management, lot/serial traceability, safety/EHS, energy/sustainability tracking — specialist QMS vendors that also service Asset and Field Service."
+      "sub_module_desc": "Quality management, lot/serial traceability, safety/EHS, energy/sustainability tracking — specialist QMS vendors that also service Asset and Field Service.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Plan, execute, and record quality inspections against materials, work in progress, and finished goods, with non-conformance tracking and corrective-action workflows."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 20→11 words. Dropped enumeration of inspection targets (materials/WIP/finished — implied)."
+      }
     },
     {
       "id": "mfg.inventory_wip",
@@ -4929,7 +4954,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Manufacturing-specific inventory management: raw materials, WIP, and finished goods tracked by lot, serial, or bin across production locations."
+        "question_t2": "Track raw materials, WIP, and finished goods by lot, serial, or bin across production."
       },
       "sector_relevance": {
         "generic": true,
@@ -4956,7 +4981,18 @@
       "family": "Planning & Costing",
       "sub_module_id": "planning_costing",
       "sub_module_name": "Planning & Costing (Manufacturing)",
-      "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity."
+      "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Manufacturing-specific inventory management: raw materials, WIP, and finished goods tracked by lot, serial, or bin across production locations."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 18→14 words. Reframed noun-fragment as verb-led 'Track ...'."
+      }
     },
     {
       "id": "mfg.product_costing",
@@ -5427,7 +5463,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Calculate standard and actual cost of manufactured goods, post production variances to finance, and provide cost visibility to planners and accountants."
+        "question_t2": "Calculate standard and actual cost of manufactured goods and post production variances to finance."
       },
       "sector_relevance": {
         "generic": true,
@@ -5454,7 +5490,18 @@
       "family": "Planning & Costing",
       "sub_module_id": "planning_costing",
       "sub_module_name": "Planning & Costing (Manufacturing)",
-      "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity."
+      "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Calculate standard and actual cost of manufactured goods, post production variances to finance, and provide cost visibility to planners and accountants."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 21→14 words. Dropped 'and provide cost visibility to planners and accountants' (covered)."
+      }
     },
     {
       "id": "mfg.engineering_change",
@@ -5933,7 +5980,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Formal workflow for proposing, reviewing, approving, and implementing changes to BOMs, routings, and product specifications, with full audit trail and impact assessment."
+        "question_t2": "Formal workflow to propose, review, approve, and implement BOM and routing changes with audit trail."
       },
       "sector_relevance": {
         "generic": false,
@@ -5960,7 +6007,18 @@
       "family": "Product Engineering",
       "sub_module_id": "product_engineering",
       "sub_module_name": "Product Engineering & PLM",
-      "sub_module_desc": "BOM, routings, engineering change, PLM/product data."
+      "sub_module_desc": "BOM, routings, engineering change, PLM/product data.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Formal workflow for proposing, reviewing, approving, and implementing changes to BOMs, routings, and product specifications, with full audit trail and impact assessment."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 22→15 words."
+      }
     },
     {
       "id": "mfg.product_master_basic",
@@ -6334,7 +6392,7 @@
           }
         ],
         "total_input_items": 4,
-        "question_t2": "Maintain an item master with revision control, attach engineering documents like CAD drawings and specs, and track item status through the lifecycle from in-design to obsolete."
+        "question_t2": "Maintain an item master with revision control, document attachments, and lifecycle status tracking."
       },
       "sector_relevance": {
         "generic": false,
@@ -6361,7 +6419,18 @@
       "family": "Product Engineering",
       "sub_module_id": "product_engineering",
       "sub_module_name": "Product Engineering & PLM",
-      "sub_module_desc": "BOM, routings, engineering change, PLM/product data."
+      "sub_module_desc": "BOM, routings, engineering change, PLM/product data.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Maintain an item master with revision control, attach engineering documents like CAD drawings and specs, and track item status through the lifecycle from in-design to obsolete."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 26→13 words. Dropped 'specs' contraction (P1)."
+      }
     },
     {
       "id": "mfg.plm_advanced",
@@ -6687,7 +6756,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Version comparison between item revisions, classification and search by attribute, integration with external PLM systems, and compliance documentation."
+        "question_t2": "Compare revisions, classify by attribute, integrate with external PLM, and track compliance."
       },
       "sector_relevance": {
         "generic": false,
@@ -6718,14 +6787,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_t2"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_t2": "Version comparison between item revisions, classification and search by attribute, integration with external PLM systems, and compliance documentation."
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 18→12 words."
       }
     },
     {
@@ -7079,7 +7148,7 @@
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
       "vendor_questions": {
-        "question_t2": "Send materials to an external manufacturer who performs part or all of the production and returns finished or semi-finished goods."
+        "question_t2": "Send materials to external manufacturers who return finished or semi-finished goods."
       },
       "sector_relevance": {
         "generic": false,
@@ -7106,7 +7175,18 @@
       "family": "Planning & Costing",
       "sub_module_id": "planning_costing",
       "sub_module_name": "Planning & Costing (Manufacturing)",
-      "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity."
+      "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Send materials to an external manufacturer who performs part or all of the production and returns finished or semi-finished goods."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 20→11 words."
+      }
     },
     {
       "id": "mfg.process_manufacturing",
@@ -7609,7 +7689,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Manufacturing mode for industries making fluids, powders, chemicals, pharmaceuticals, and food, where production is by recipe, yields are variable, and by-products, co-products, and reverse BOMs matter."
+        "question_t2": "Recipe-based manufacturing for fluids, chemicals, food, and pharma with variable yields and co-products."
       },
       "sector_relevance": {
         "generic": false,
@@ -7636,7 +7716,18 @@
       "family": "Production Execution",
       "sub_module_id": "production_execution",
       "sub_module_name": "Production Execution (MES)",
-      "sub_module_desc": "Work orders, production scheduling, shop floor execution, process/discrete modes, IoT data collection, labour tracking."
+      "sub_module_desc": "Work orders, production scheduling, shop floor execution, process/discrete modes, IoT data collection, labour tracking.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Manufacturing mode for industries making fluids, powders, chemicals, pharmaceuticals, and food, where production is by recipe, yields are variable, and by-products, co-products, and reverse BOMs matter."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 26→14 words."
+      }
     },
     {
       "id": "mfg.discrete_modes",
@@ -8596,7 +8687,7 @@
           }
         ],
         "total_input_items": 8,
-        "question_t2": "Generate the demand signal that feeds MRP: statistical forecasts, sales-and-operations planning (S&OP) inputs, and collaborative planning with customers and suppliers."
+        "question_t2": "Generate demand forecasts that feed MRP from statistical models and customer collaboration."
       },
       "sector_relevance": {
         "generic": true,
@@ -8623,7 +8714,18 @@
       "family": "Planning & Costing",
       "sub_module_id": "planning_costing",
       "sub_module_name": "Planning & Costing (Manufacturing)",
-      "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity."
+      "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Generate the demand signal that feeds MRP: statistical forecasts, sales-and-operations planning (S&OP) inputs, and collaborative planning with customers and suppliers."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 20→12 words. Dropped S&OP reference (own cap mfg.capacity_sop)."
+      }
     },
     {
       "id": "mfg.capacity_sop",
@@ -9008,7 +9110,7 @@
           }
         ],
         "total_input_items": 4,
-        "question_t2": "High-level capacity check that validates the feasibility of the master production schedule against critical resources before MRP explodes the detail."
+        "question_t2": "Validate master production schedule feasibility against critical resources before MRP detail explosion."
       },
       "sector_relevance": {
         "generic": false,
@@ -9035,7 +9137,18 @@
       "family": "Planning & Costing",
       "sub_module_id": "planning_costing",
       "sub_module_name": "Planning & Costing (Manufacturing)",
-      "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity."
+      "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "High-level capacity check that validates the feasibility of the master production schedule against critical resources before MRP explodes the detail."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 20→12 words."
+      }
     },
     {
       "id": "mfg.shop_floor_iot",
@@ -9575,7 +9688,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Integrate directly with production equipment and sensors for automated data capture. OEE, status, output, downtime, cycle times. Without operator manual entry."
+        "question_t2": "Integrate with production equipment and sensors for automated capture of OEE, output, and downtime."
       },
       "sector_relevance": {
         "generic": false,
@@ -9602,7 +9715,18 @@
       "family": "Production Execution",
       "sub_module_id": "production_execution",
       "sub_module_name": "Production Execution (MES)",
-      "sub_module_desc": "Work orders, production scheduling, shop floor execution, process/discrete modes, IoT data collection, labour tracking."
+      "sub_module_desc": "Work orders, production scheduling, shop floor execution, process/discrete modes, IoT data collection, labour tracking.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Integrate directly with production equipment and sensors for automated data capture. OEE, status, output, downtime, cycle times. Without operator manual entry."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 21→14 words."
+      }
     },
     {
       "id": "mfg.oee_performance",
@@ -11408,7 +11532,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Handle goods that come back from customers or fail internal quality, and need to go through a rework or repair process."
+        "question_t2": "Handle returned or rejected goods through a rework or repair process."
       },
       "sector_relevance": {
         "generic": false,
@@ -11435,7 +11559,18 @@
       "family": "Maintenance & Analytics",
       "sub_module_id": "manufacturing_maintenance_analytics",
       "sub_module_name": "Manufacturing Maintenance & Analytics",
-      "sub_module_desc": "OEE, repair/rework, CMMS/EAM linkage, digital thread/twin, multi-site, AI/ML."
+      "sub_module_desc": "OEE, repair/rework, CMMS/EAM linkage, digital thread/twin, multi-site, AI/ML.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Handle goods that come back from customers or fail internal quality, and need to go through a rework or repair process."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 21→11 words."
+      }
     },
     {
       "id": "mfg.safety_compliance",
@@ -11895,7 +12030,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Environmental, health and safety integration tied to manufacturing: PPE requirements, hazardous-material handling, incident capture, and regulatory reporting."
+        "question_t2": "Manage PPE requirements, hazardous-material handling, incident capture, and regulatory reporting."
       },
       "sector_relevance": {
         "generic": true,
@@ -11925,14 +12060,14 @@
       "sub_module_desc": "Quality management, lot/serial traceability, safety/EHS, energy/sustainability tracking — specialist QMS vendors that also service Asset and Field Service.",
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "vendor_question_t2"
         ],
         "original": {
-          "sme_tier": "required"
+          "vendor_question_t2": "Environmental, health and safety integration tied to manufacturing: PPE requirements, hazardous-material handling, incident capture, and regulatory reporting."
         },
         "author": "human-review",
         "edited_at": "2026-05-15",
-        "note": "DEMOTE Required → Preferred — different reason from traceability.\nUniversal NEED across all mfg sectors (every business needs WSH\ncompliance per MOM Act in SG) BUT mfg ERP is the wrong tool —\nthis capability is covered by dedicated PSG-grant-approved WSH/EHS\nstandalone solutions in PSG's \"Smart Inspection and Management\"\ncategory: Novade Safety-HSE, Hubble Safety Mgmt, SafetyCulture\n(+ePTW), InSight QSE ePTW (Capps), Ailyssa (Ailytics), plus Fleet\nSafety variants for vehicle ops. Setting Required at module level\nwould force every mfg ERP buyer to demand a feature their vendor\ndoesn't natively provide — wrong gate.\nVendor signal: 1/11 evidence (SAP S/4HANA only). 8 mid-market\nmfg ERPs surveyed (IFS, SYSPRO, Epicor, Oracle, Plex, Infor CSI/M3,\nMS Dynamics F&SCM, Katana) showed zero EHS evidence.\n"
+        "note": "Mfg t2 cleanup. 17→11 words. Dropped EHS preamble (cap name says it)."
       }
     },
     {
@@ -12355,7 +12490,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Track operator time against operations and work orders, feed payroll and costing, and provide visibility into labour efficiency and utilisation."
+        "question_t2": "Track operator time against work orders to feed payroll, costing, and labour analytics."
       },
       "sector_relevance": {
         "generic": true,
@@ -12382,7 +12517,18 @@
       "family": "Production Execution",
       "sub_module_id": "production_execution",
       "sub_module_name": "Production Execution (MES)",
-      "sub_module_desc": "Work orders, production scheduling, shop floor execution, process/discrete modes, IoT data collection, labour tracking."
+      "sub_module_desc": "Work orders, production scheduling, shop floor execution, process/discrete modes, IoT data collection, labour tracking.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Track operator time against operations and work orders, feed payroll and costing, and provide visibility into labour efficiency and utilisation."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 20→13 words. SG spelling 'labour'."
+      }
     },
     {
       "id": "mfg.energy_sustainability",
@@ -12776,7 +12922,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Capture energy and utility consumption per production run, attribute to products, and feed sustainability and carbon reporting."
+        "question_t2": "Capture energy consumption per production run for sustainability and carbon reporting."
       },
       "sector_relevance": {
         "generic": false,
@@ -12803,7 +12949,18 @@
       "family": "Quality & Compliance",
       "sub_module_id": "quality_compliance",
       "sub_module_name": "Quality & Compliance (QMS)",
-      "sub_module_desc": "Quality management, lot/serial traceability, safety/EHS, energy/sustainability tracking — specialist QMS vendors that also service Asset and Field Service."
+      "sub_module_desc": "Quality management, lot/serial traceability, safety/EHS, energy/sustainability tracking — specialist QMS vendors that also service Asset and Field Service.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Capture energy and utility consumption per production run, attribute to products, and feed sustainability and carbon reporting."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 17→11 words."
+      }
     },
     {
       "id": "mfg.maintenance_integration",
@@ -13405,7 +13562,7 @@
           }
         ],
         "total_input_items": 8,
-        "question_t2": "Bridge between the manufacturing module and the asset/maintenance module: planned downtime for PM, automatic work requests on breakdown, shared calendar for production scheduling."
+        "question_t2": "Bridge production with the asset and maintenance module for planned downtime and breakdown work requests."
       },
       "sector_relevance": {
         "generic": false,
@@ -13432,7 +13589,18 @@
       "family": "Maintenance & Analytics",
       "sub_module_id": "manufacturing_maintenance_analytics",
       "sub_module_name": "Manufacturing Maintenance & Analytics",
-      "sub_module_desc": "OEE, repair/rework, CMMS/EAM linkage, digital thread/twin, multi-site, AI/ML."
+      "sub_module_desc": "OEE, repair/rework, CMMS/EAM linkage, digital thread/twin, multi-site, AI/ML.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Bridge between the manufacturing module and the asset/maintenance module: planned downtime for PM, automatic work requests on breakdown, shared calendar for production scheduling."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 23→15 words. Replaced '/' connector ('asset/maintenance')."
+      }
     },
     {
       "id": "mfg.digital_thread_twin",
@@ -13783,7 +13951,7 @@
           }
         ],
         "total_input_items": 3,
-        "question_t2": "Continuous data linkage from design intent through as-planned to as-built, and a simulation model (\"digital twin\") of the production system used for scheduling, training, and continuous improvement."
+        "question_t2": "Continuous data linkage from design through as-built with a simulation model of the production system."
       },
       "sector_relevance": {
         "generic": false,
@@ -13814,14 +13982,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_t2"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_t2": "Continuous data linkage from design intent through as-planned to as-built, and a simulation model (\"digital twin\") of the production system used for scheduling, training, and continuous improvement."
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 27→15 words."
       }
     },
     {
@@ -14255,7 +14423,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Coordinate production across multiple plants within the same enterprise. Network planning, cross-site transfers, intercompany sales, and global visibility"
+        "question_t2": "Coordinate production across multiple plants with network planning and cross-site transfers."
       },
       "sector_relevance": {
         "generic": true,
@@ -14286,14 +14454,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_t2"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_t2": "Coordinate production across multiple plants within the same enterprise. Network planning, cross-site transfers, intercompany sales, and global visibility"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 18→12 words."
       }
     },
     {
@@ -14732,7 +14900,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Applied machine learning inside the manufacturing flow. Predictive quality, yield optimisation, anomaly detection, AI-driven scheduling, and predictive maintenance of production assets"
+        "question_t2": "Apply machine learning to manufacturing for predictive quality, yield optimisation, and predictive maintenance."
       },
       "sector_relevance": {
         "generic": false,
@@ -14763,14 +14931,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_t2"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_t2": "Applied machine learning inside the manufacturing flow. Predictive quality, yield optimisation, anomaly detection, AI-driven scheduling, and predictive maintenance of production assets"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-15",
+        "note": "Mfg t2 cleanup. 21→13 words."
       }
     },
     {
@@ -17360,8 +17528,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-15T13:42:53.418274+08:00",
-    "step16_applied_count": 5,
+    "step16_applied_at": "2026-05-15T15:00:13.908683+08:00",
+    "step16_applied_count": 23,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-13T16:58:33.872777+08:00",
