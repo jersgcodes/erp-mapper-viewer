@@ -4187,7 +4187,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "samsara",
         "verizon_connect",
@@ -4883,14 +4883,14 @@
       "sub_module_desc": "GPS/telematics, route planning/optimisation, trip and mileage — telematics specialist vendors.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "sme_tier"
         ],
         "original": {
-          "vendor_question_t2": "Real-time vehicle location via GPS, with breadcrumb trails, geofencing, speed alerts, and integration with on-board diagnostics (OBD) for engine data."
+          "sme_tier": "preferred"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Fleet t2 cleanup. 20→15 words."
+        "edited_at": "2026-05-16",
+        "note": "PROMOTE Preferred → Required. Vendor evidence 6/6 high — universal\nacross SME-tier (Fleetio + Motive both high) AND mid+enterprise\n(Samsara, Geotab, Verizon Connect, Webfleet). Real-time vehicle\nlocation is now baseline expectation for SG SME fleet operators\n(delivery, service, taxi/ride-share). Insurance discount driver.\n"
       }
     },
     {
@@ -13178,7 +13178,7 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-15T18:47:03.614916+08:00",
+    "step16_applied_at": "2026-05-16T00:01:05.754582+08:00",
     "step16_applied_count": 1,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",

@@ -19,7 +19,7 @@
   "capabilities": [
     {
       "id": "proj.project_master",
-      "name": "Project Master & Hierarchy",
+      "name": "Project Master and Hierarchy",
       "description": "Central project record with phases, milestones, work breakdown structure (WBS), and parent-child hierarchy for programmes and sub-projects.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -647,7 +647,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Central project record with phases, milestones, work breakdown structure (WBS), and parent-child hierarchy for programmes and sub-projects."
+        "question_t2": "Central project record with phases, milestones, WBS, and parent-child hierarchy for programmes."
       },
       "sector_relevance": {
         "generic": true,
@@ -694,11 +694,22 @@
       "family": "Project Core",
       "sub_module_id": "project_core",
       "sub_module_name": "Project Core",
-      "sub_module_desc": "Project master, tasks, collaboration, Kanban/Agile, templates, notifications."
+      "sub_module_desc": "Project master, tasks, collaboration, Kanban/Agile, templates, notifications.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Central project record with phases, milestones, work breakdown structure (WBS), and parent-child hierarchy for programmes and sub-projects."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 17→13 words."
+      }
     },
     {
       "id": "proj.task_management",
-      "name": "Task Management & Assignment",
+      "name": "Task Management and Assignment",
       "description": "Create, assign, prioritise, and track tasks and subtasks with dependencies, due dates, and progress updates.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -1541,7 +1552,7 @@
     },
     {
       "id": "proj.time_tracking",
-      "name": "Time Tracking & Timesheets",
+      "name": "Time Tracking and Timesheets",
       "description": "Log hours against projects and tasks, distinguish billable from non-billable time, and route timesheets through approval before billing or payroll.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -2127,7 +2138,7 @@
           }
         ],
         "total_input_items": 8,
-        "question_t2": "Log hours against projects and tasks, distinguish billable from non-billable time, and route timesheets through approval before billing or payroll."
+        "question_t2": "Log hours against projects, distinguish billable from non-billable, and route timesheets through approval."
       },
       "sector_relevance": {
         "generic": true,
@@ -2174,11 +2185,22 @@
       "family": "Time & Resources",
       "sub_module_id": "project_time_resources",
       "sub_module_name": "Project Time & Resources",
-      "sub_module_desc": "Timesheets, resource allocation, resource pool/skills, expense tracking, contractor management."
+      "sub_module_desc": "Timesheets, resource allocation, resource pool/skills, expense tracking, contractor management.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Log hours against projects and tasks, distinguish billable from non-billable time, and route timesheets through approval before billing or payroll."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 20→13 words."
+      }
     },
     {
       "id": "proj.budget_cost",
-      "name": "Project Budget & Cost Tracking",
+      "name": "Project Budget and Cost Tracking",
       "description": "Set project budgets by cost category, track actual costs against plan, and alert when spend approaches or exceeds thresholds.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -2675,7 +2697,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Set project budgets by cost category, track actual costs against plan, and alert when spend approaches or exceeds thresholds."
+        "question_t2": "Set project budgets by category, track actuals against plan, and alert on threshold breaches."
       },
       "sector_relevance": {
         "generic": true,
@@ -2722,11 +2744,22 @@
       "family": "Financial Control",
       "sub_module_id": "project_financial_control",
       "sub_module_name": "Project Financial Control",
-      "sub_module_desc": "Project budgeting, billing, change orders, revenue recognition, rate cards — project accounting specialty."
+      "sub_module_desc": "Project budgeting, billing, change orders, revenue recognition, rate cards — project accounting specialty.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Set project budgets by cost category, track actual costs against plan, and alert when spend approaches or exceeds thresholds."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 19→14 words."
+      }
     },
     {
       "id": "proj.resource_allocation",
-      "name": "Resource Allocation & Scheduling",
+      "name": "Resource Allocation and Scheduling",
       "description": "Assign people to projects based on availability, capacity, and skills. Visualise utilisation and resolve over-allocation.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -3477,7 +3510,7 @@
     },
     {
       "id": "proj.billing_invoicing",
-      "name": "Project Billing & Invoicing",
+      "name": "Project Billing and Invoicing",
       "description": "Generate invoices from project data — time-and-materials, fixed price, milestone billing, or progress claims — and post to accounts receivable.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -4024,7 +4057,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Generate invoices from project data. Time-and-materials, fixed price, milestone billing, or progress claims, and post to accounts receivable."
+        "question_t2": "Generate invoices from project data (time-and-materials, fixed price, milestone) and post to AR."
       },
       "sector_relevance": {
         "generic": true,
@@ -4071,11 +4104,22 @@
       "family": "Financial Control",
       "sub_module_id": "project_financial_control",
       "sub_module_name": "Project Financial Control",
-      "sub_module_desc": "Project budgeting, billing, change orders, revenue recognition, rate cards — project accounting specialty."
+      "sub_module_desc": "Project budgeting, billing, change orders, revenue recognition, rate cards — project accounting specialty.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Generate invoices from project data. Time-and-materials, fixed price, milestone billing, or progress claims, and post to accounts receivable."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 18→14 words."
+      }
     },
     {
       "id": "proj.reporting_dashboards",
-      "name": "Project Reporting & Dashboards",
+      "name": "Project Reporting and Dashboards",
       "description": "Standard and custom reports for project managers and leadership: status, progress, cost, utilisation, and portfolio health.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -4904,7 +4948,7 @@
           }
         ],
         "total_input_items": 8,
-        "question_t2": "Standard and custom reports for project managers and leadership: status, progress, cost, utilisation, and portfolio health."
+        "question_t2": "Standard and custom dashboards for project status, progress, cost, utilisation, and portfolio health."
       },
       "sector_relevance": {
         "generic": true,
@@ -4951,11 +4995,22 @@
       "family": "Analytics & Reporting",
       "sub_module_id": "project_analytics",
       "sub_module_name": "Project Analytics & Profitability",
-      "sub_module_desc": "Project reporting and profitability analytics."
+      "sub_module_desc": "Project reporting and profitability analytics.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Standard and custom reports for project managers and leadership: status, progress, cost, utilisation, and portfolio health."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 16→13 words."
+      }
     },
     {
       "id": "proj.document_collaboration",
-      "name": "Document Management & Collaboration",
+      "name": "Document Management and Collaboration",
       "description": "Centralised project document storage, version control, comments, and team communication tied to project context.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -5714,7 +5769,7 @@
     },
     {
       "id": "proj.gantt_critical_path",
-      "name": "Gantt Chart & Critical Path",
+      "name": "Gantt Chart and Critical Path",
       "description": "Interactive Gantt chart with task bars, dependency arrows, critical path highlighting, and baseline comparison for schedule tracking.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -5722,7 +5777,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "ms_project",
         "oracle_primavera",
@@ -6124,7 +6179,7 @@
           }
         ],
         "total_input_items": 4,
-        "question_t2": "Interactive Gantt chart with task bars, dependency arrows, critical path highlighting, and baseline comparison for schedule tracking."
+        "question_t2": "Interactive Gantt chart with dependency arrows, critical-path highlighting, and baseline schedule comparison."
       },
       "sector_relevance": {
         "generic": true,
@@ -6171,11 +6226,22 @@
       "family": "Delivery & Tracking",
       "sub_module_id": "project_delivery",
       "sub_module_name": "Project Delivery (Gantt, EVM, Multi-Project)",
-      "sub_module_desc": "Gantt/critical path, risk register, multi-project/programme, earned value, customer portal, workflow automation, task dependencies."
+      "sub_module_desc": "Gantt/critical path, risk register, multi-project/programme, earned value, customer portal, workflow automation, task dependencies.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Interactive Gantt chart with task bars, dependency arrows, critical path highlighting, and baseline comparison for schedule tracking."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 17→12 words."
+      }
     },
     {
       "id": "proj.kanban_agile",
-      "name": "Kanban / Agile Board",
+      "name": "Kanban or Agile Board",
       "description": "Card-based board view for agile and lean workflows — columns represent stages, cards represent tasks, with WIP limits and swimlanes.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -6588,7 +6654,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Card-based board view for agile and lean workflows. Columns represent stages, cards represent tasks, with WIP limits and swimlanes"
+        "question_t2": "Card-based board view for agile workflows with WIP limits and swimlanes."
       },
       "sector_relevance": {
         "generic": false,
@@ -6635,11 +6701,22 @@
       "family": "Project Core",
       "sub_module_id": "project_core",
       "sub_module_name": "Project Core",
-      "sub_module_desc": "Project master, tasks, collaboration, Kanban/Agile, templates, notifications."
+      "sub_module_desc": "Project master, tasks, collaboration, Kanban/Agile, templates, notifications.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Card-based board view for agile and lean workflows. Columns represent stages, cards represent tasks, with WIP limits and swimlanes"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 19→12 words."
+      }
     },
     {
       "id": "proj.risk_issues",
-      "name": "Risk Register & Issue Tracking",
+      "name": "Risk Register and Issue Tracking",
       "description": "Log, assess, and mitigate project risks and issues with severity, probability, owners, and resolution tracking.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -7592,7 +7669,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Formal process for scope changes. Request, assess impact on budget and schedule, approve or reject, and update the project plan accordingly"
+        "question_t2": "Formal scope-change process: request, assess budget and schedule impact, approve, and update plan."
       },
       "sector_relevance": {
         "generic": true,
@@ -7639,11 +7716,22 @@
       "family": "Financial Control",
       "sub_module_id": "project_financial_control",
       "sub_module_name": "Project Financial Control",
-      "sub_module_desc": "Project budgeting, billing, change orders, revenue recognition, rate cards — project accounting specialty."
+      "sub_module_desc": "Project budgeting, billing, change orders, revenue recognition, rate cards — project accounting specialty.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Formal process for scope changes. Request, assess impact on budget and schedule, approve or reject, and update the project plan accordingly"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 21→14 words."
+      }
     },
     {
       "id": "proj.multi_project",
-      "name": "Multi-Project & Programme Management",
+      "name": "Multi-Project and Programme Management",
       "description": "Manage a portfolio of projects with cross-project resource sharing, consolidated reporting, and programme-level governance.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -8245,7 +8333,7 @@
     },
     {
       "id": "proj.resource_pool_skills",
-      "name": "Resource Pool & Skills Matrix",
+      "name": "Resource Pool and Skills Matrix",
       "description": "Centralised directory of people with skills, certifications, and experience — enabling skill-based resource matching for project staffing.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -8624,7 +8712,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Centralised directory of people with skills, certifications, and experience. Enabling skill-based resource matching for project staffing"
+        "question_t2": "Centralised directory of people with skills, certifications, and experience for project staffing."
       },
       "sector_relevance": {
         "generic": true,
@@ -8671,7 +8759,18 @@
       "family": "Time & Resources",
       "sub_module_id": "project_time_resources",
       "sub_module_name": "Project Time & Resources",
-      "sub_module_desc": "Timesheets, resource allocation, resource pool/skills, expense tracking, contractor management."
+      "sub_module_desc": "Timesheets, resource allocation, resource pool/skills, expense tracking, contractor management.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Centralised directory of people with skills, certifications, and experience. Enabling skill-based resource matching for project staffing"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 16→13 words."
+      }
     },
     {
       "id": "proj.earned_value",
@@ -9203,7 +9302,7 @@
           }
         ],
         "total_input_items": 4,
-        "question_t2": "Quantitative project performance measurement using planned value, earned value, and actual cost to calculate schedule and cost variance, CPI, and SPI."
+        "question_t2": "Quantitative performance measurement (planned, earned, actual) for schedule and cost variance, CPI, and SPI."
       },
       "sector_relevance": {
         "generic": false,
@@ -9254,14 +9353,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_t2"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_t2": "Quantitative project performance measurement using planned value, earned value, and actual cost to calculate schedule and cost variance, CPI, and SPI."
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 21→15 words."
       }
     },
     {
@@ -9751,7 +9850,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Capture project-level expense claims (travel, materials, meals) with receipt uploads, approval, and posting to the project cost ledger."
+        "question_t2": "Capture project-level expense claims with receipts, approval, and posting to the cost ledger."
       },
       "sector_relevance": {
         "generic": true,
@@ -9798,7 +9897,18 @@
       "family": "Time & Resources",
       "sub_module_id": "project_time_resources",
       "sub_module_name": "Project Time & Resources",
-      "sub_module_desc": "Timesheets, resource allocation, resource pool/skills, expense tracking, contractor management."
+      "sub_module_desc": "Timesheets, resource allocation, resource pool/skills, expense tracking, contractor management.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Capture project-level expense claims (travel, materials, meals) with receipt uploads, approval, and posting to the project cost ledger."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 18→13 words."
+      }
     },
     {
       "id": "proj.revenue_recognition",
@@ -10300,7 +10410,7 @@
     },
     {
       "id": "proj.customer_portal",
-      "name": "Customer Portal & Approval Workflows",
+      "name": "Customer Portal and Approval Workflows",
       "description": "External-facing portal where customers can view project progress, approve deliverables, sign off on milestones, and raise change requests.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -10704,7 +10814,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "External-facing portal where customers can view project progress, approve deliverables, sign off on milestones, and raise change requests."
+        "question_t2": "External portal where customers view progress, approve deliverables, and raise change requests."
       },
       "sector_relevance": {
         "generic": true,
@@ -10751,11 +10861,22 @@
       "family": "Delivery & Tracking",
       "sub_module_id": "project_delivery",
       "sub_module_name": "Project Delivery (Gantt, EVM, Multi-Project)",
-      "sub_module_desc": "Gantt/critical path, risk register, multi-project/programme, earned value, customer portal, workflow automation, task dependencies."
+      "sub_module_desc": "Gantt/critical path, risk register, multi-project/programme, earned value, customer portal, workflow automation, task dependencies.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "External-facing portal where customers can view project progress, approve deliverables, sign off on milestones, and raise change requests."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 18→12 words."
+      }
     },
     {
       "id": "proj.templates_repeating",
-      "name": "Template & Repeating Projects",
+      "name": "Template and Repeating Projects",
       "description": "Save project structures as templates for reuse — tasks, phases, milestones, resource plans, and checklists can be cloned to start new engagements quickly.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -11100,7 +11221,7 @@
           }
         ],
         "total_input_items": 3,
-        "question_t2": "Save project structures as templates for reuse. Tasks, phases, milestones, resource plans, and checklists can be cloned to start new engagements quickly"
+        "question_t2": "Save project structures (tasks, phases, milestones, resource plans) as templates for reuse."
       },
       "sector_relevance": {
         "generic": true,
@@ -11147,11 +11268,22 @@
       "family": "Project Core",
       "sub_module_id": "project_core",
       "sub_module_name": "Project Core",
-      "sub_module_desc": "Project master, tasks, collaboration, Kanban/Agile, templates, notifications."
+      "sub_module_desc": "Project master, tasks, collaboration, Kanban/Agile, templates, notifications.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Save project structures as templates for reuse. Tasks, phases, milestones, resource plans, and checklists can be cloned to start new engagements quickly"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 22→12 words."
+      }
     },
     {
       "id": "proj.contractor_management",
-      "name": "Contractor & Subcontractor Management",
+      "name": "Contractor and Subcontractor Management",
       "description": "Track external contractors and subcontractors working on projects — purchase orders, time capture, deliverable acceptance, and payment against the project budget.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -11626,7 +11758,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Track external contractors and subcontractors working on projects. Purchase orders, time capture, deliverable acceptance, and payment against the project budget"
+        "question_t2": "Track external contractors with purchase orders, time capture, and payment against project budget."
       },
       "sector_relevance": {
         "generic": true,
@@ -11673,11 +11805,22 @@
       "family": "Time & Resources",
       "sub_module_id": "project_time_resources",
       "sub_module_name": "Project Time & Resources",
-      "sub_module_desc": "Timesheets, resource allocation, resource pool/skills, expense tracking, contractor management."
+      "sub_module_desc": "Timesheets, resource allocation, resource pool/skills, expense tracking, contractor management.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Track external contractors and subcontractors working on projects. Purchase orders, time capture, deliverable acceptance, and payment against the project budget"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 20→13 words."
+      }
     },
     {
       "id": "proj.analytics_profitability",
-      "name": "Project Analytics & Profitability",
+      "name": "Project Analytics and Profitability",
       "description": "Cross-project analytics for leadership — profitability by project type, client, or team; utilisation trends; delivery performance; and lessons learned.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -12091,7 +12234,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Cross-project analytics for leadership. Profitability by project type, client, or team; utilisation trends; delivery performance; and lessons learned"
+        "question_t2": "Cross-project analytics: profitability by project, client, or team; utilisation; delivery performance."
       },
       "sector_relevance": {
         "generic": true,
@@ -12138,11 +12281,22 @@
       "family": "Analytics & Reporting",
       "sub_module_id": "project_analytics",
       "sub_module_name": "Project Analytics & Profitability",
-      "sub_module_desc": "Project reporting and profitability analytics."
+      "sub_module_desc": "Project reporting and profitability analytics.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Cross-project analytics for leadership. Profitability by project type, client, or team; utilisation trends; delivery performance; and lessons learned"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 18→12 words."
+      }
     },
     {
       "id": "proj.workflow_automation",
-      "name": "Workflow Automation & Approvals",
+      "name": "Workflow Automation and Approvals",
       "description": "Configurable workflow rules that automate task routing, status transitions, notifications, and multi-level approvals without custom code.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -12150,7 +12304,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "jira",
         "ms_project",
@@ -12666,7 +12820,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Configurable workflow rules that automate task routing, status transitions, notifications, and multi-level approvals without custom code."
+        "question_t2": "Configurable workflow rules to automate task routing, status transitions, and multi-level approvals."
       },
       "sector_relevance": {
         "generic": true,
@@ -12713,11 +12867,22 @@
       "family": "Delivery & Tracking",
       "sub_module_id": "project_delivery",
       "sub_module_name": "Project Delivery (Gantt, EVM, Multi-Project)",
-      "sub_module_desc": "Gantt/critical path, risk register, multi-project/programme, earned value, customer portal, workflow automation, task dependencies."
+      "sub_module_desc": "Gantt/critical path, risk register, multi-project/programme, earned value, customer portal, workflow automation, task dependencies.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Configurable workflow rules that automate task routing, status transitions, notifications, and multi-level approvals without custom code."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 16→13 words."
+      }
     },
     {
       "id": "proj.dependencies_scheduling",
-      "name": "Task Dependencies & Auto-Scheduling",
+      "name": "Task Dependencies and Auto-Scheduling",
       "description": "Define logical dependencies between tasks and let the scheduler auto-calculate dates, detect circular references, and flag schedule conflicts.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -13222,7 +13387,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Define logical dependencies between tasks and let the scheduler auto-calculate dates, detect circular references, and flag schedule conflicts."
+        "question_t2": "Define task dependencies; scheduler calculates dates, detects circular refs, and flags schedule conflicts."
       },
       "sector_relevance": {
         "generic": true,
@@ -13269,11 +13434,22 @@
       "family": "Delivery & Tracking",
       "sub_module_id": "project_delivery",
       "sub_module_name": "Project Delivery (Gantt, EVM, Multi-Project)",
-      "sub_module_desc": "Gantt/critical path, risk register, multi-project/programme, earned value, customer portal, workflow automation, task dependencies."
+      "sub_module_desc": "Gantt/critical path, risk register, multi-project/programme, earned value, customer portal, workflow automation, task dependencies.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Define logical dependencies between tasks and let the scheduler auto-calculate dates, detect circular references, and flag schedule conflicts."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 18→14 words."
+      }
     },
     {
       "id": "proj.rate_cards",
-      "name": "Rate Cards & Cost Models",
+      "name": "Rate Cards and Cost Models",
       "description": "Define billing and cost rates by role, employee, project type, or client — used by time tracking and billing to calculate revenue and cost automatically.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -13622,7 +13798,7 @@
           }
         ],
         "total_input_items": 4,
-        "question_t2": "Define billing and cost rates by role, employee, project type, or client. Used by time tracking and billing to calculate revenue and cost automatically"
+        "question_t2": "Define billing and cost rates by role, employee, or project for automated calculation."
       },
       "sector_relevance": {
         "generic": true,
@@ -13669,7 +13845,18 @@
       "family": "Financial Control",
       "sub_module_id": "project_financial_control",
       "sub_module_name": "Project Financial Control",
-      "sub_module_desc": "Project budgeting, billing, change orders, revenue recognition, rate cards — project accounting specialty."
+      "sub_module_desc": "Project budgeting, billing, change orders, revenue recognition, rate cards — project accounting specialty.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Define billing and cost rates by role, employee, or project type for revenue and cost calculation."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 24→13 words."
+      }
     },
     {
       "id": "proj.notifications_reminders",
@@ -14270,7 +14457,7 @@
           }
         ],
         "total_input_items": 8,
-        "question_t2": "Proactive alerts for approaching deadlines, overdue tasks, pending approvals, and project milestones. Delivered via email, in-app, or mobile push"
+        "question_t2": "Proactive alerts for deadlines, overdue tasks, pending approvals, and milestones via email or push."
       },
       "sector_relevance": {
         "generic": true,
@@ -14317,7 +14504,18 @@
       "family": "Project Core",
       "sub_module_id": "project_core",
       "sub_module_name": "Project Core",
-      "sub_module_desc": "Project master, tasks, collaboration, Kanban/Agile, templates, notifications."
+      "sub_module_desc": "Project master, tasks, collaboration, Kanban/Agile, templates, notifications.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Proactive alerts for approaching deadlines, overdue tasks, pending approvals, and project milestones. Delivered via email, in-app, or mobile push"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Project t2 cleanup. 19→14 words."
+      }
     },
     {
       "id": "proj.mobile_access",
@@ -14329,7 +14527,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_project",
         "jira",
@@ -14848,7 +15046,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "ms_project",
         "netsuite_srp",
@@ -15383,7 +15581,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_project",
         "jira",
@@ -15955,7 +16153,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_project",
         "erpnext_projects",
@@ -16917,8 +17115,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-15T02:59:49.495748+08:00",
-    "step16_applied_count": 0,
+    "step16_applied_at": "2026-05-16T00:03:13.234990+08:00",
+    "step16_applied_count": 1,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-13T02:57:22.090436+08:00",
