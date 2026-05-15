@@ -1860,7 +1860,19 @@
       "family": "Asset Register & Lifecycle",
       "sub_module_id": "asset_register_lifecycle",
       "sub_module_name": "Asset Register & Lifecycle",
-      "sub_module_desc": "Asset master, hierarchy, lifecycle management, depreciation, leasing."
+      "sub_module_desc": "Asset master, hierarchy, lifecycle management, depreciation, leasing.",
+      "in_checklist": false,
+      "_cap_override": {
+        "fields_overridden": [
+          "in_checklist"
+        ],
+        "original": {
+          "in_checklist": null
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "PARKED (in_checklist: false, not deleted). Reason: duplicate of\nfin.fixed_assets which already carries depreciation accounting in\nthe Financial Management module. Vendor evidence confirms — only\n1/7 EAM/CMMS vendors evidence depreciation (IBM Maximo); modern\nCMMS tools (Limble, MaintainX, UpKeep, Brightly, Hexagon EAM,\nAssetWorks) push asset value to a finance system rather than\ntracking depreciation natively. SG SME asset mgmt buyers expect\ndepreciation in their accounting tool, not their CMMS.\nCross-link recorded in description (handled at the description\nlevel on a future edit pass — for now the parked cap renders\nunder Optional/Add-ons with the note explaining the redirect to\nfin.fixed_assets).\n"
+      }
     },
     {
       "id": "asset.pm_planning",
@@ -1868,7 +1880,6 @@
       "description": "Define maintenance strategies and generate scheduled work in advance of equipment failure — time-based, usage-based, or condition-based.\n",
       "priority_proxy": "must_have",
       "applicability": [
-        "sme",
         "mid_market",
         "enterprise"
       ],
@@ -2513,7 +2524,22 @@
       "family": "Maintenance Operations",
       "sub_module_id": "maintenance_operations",
       "sub_module_name": "Maintenance Operations (CMMS/EAM)",
-      "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty."
+      "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty.",
+      "_cap_override": {
+        "fields_overridden": [
+          "applicability"
+        ],
+        "original": {
+          "applicability": [
+            "sme",
+            "mid_market",
+            "enterprise"
+          ]
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Applicability narrowed [sme, mid_market, enterprise] →\n[mid_market, enterprise]. Tier stays Required. Reason: formal\npreventive maintenance scheduling is a mid-market+ feature. SG\nSME asset operators run reactive maintenance + recurring tasks\nin Excel/Google Calendar; PM scheduling matters once asset\nportfolio + downtime cost both grow.\n"
+      }
     },
     {
       "id": "asset.work_orders",
@@ -2521,7 +2547,6 @@
       "description": "Create, plan, execute, and close work orders for corrective, preventive, and project maintenance work — the central operational artifact of any EAM system.\n",
       "priority_proxy": "must_have",
       "applicability": [
-        "sme",
         "mid_market",
         "enterprise"
       ],
@@ -3243,7 +3268,22 @@
       "family": "Maintenance Operations",
       "sub_module_id": "maintenance_operations",
       "sub_module_name": "Maintenance Operations (CMMS/EAM)",
-      "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty."
+      "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty.",
+      "_cap_override": {
+        "fields_overridden": [
+          "applicability"
+        ],
+        "original": {
+          "applicability": [
+            "sme",
+            "mid_market",
+            "enterprise"
+          ]
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Applicability narrowed → [mid_market, enterprise]. Tier stays\nRequired. Reason: formal work-order workflow (assignment, time\ntracking, parts, signoff) is mid_market+. Small shops run\nwhiteboards / Excel / WhatsApp.\n"
+      }
     },
     {
       "id": "asset.maintenance_requests",
@@ -3251,7 +3291,6 @@
       "description": "Channel for non-maintenance users (operators, occupants, customers) to submit service requests that are triaged into work orders.\n",
       "priority_proxy": "must_have",
       "applicability": [
-        "sme",
         "mid_market",
         "enterprise"
       ],
@@ -3751,7 +3790,22 @@
       "family": "Maintenance Operations",
       "sub_module_id": "maintenance_operations",
       "sub_module_name": "Maintenance Operations (CMMS/EAM)",
-      "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty."
+      "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty.",
+      "_cap_override": {
+        "fields_overridden": [
+          "applicability"
+        ],
+        "original": {
+          "applicability": [
+            "sme",
+            "mid_market",
+            "enterprise"
+          ]
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Applicability narrowed → [mid_market, enterprise]. Tier stays\nRequired. Reason: paired with asset.work_orders — same logic.\n"
+      }
     },
     {
       "id": "asset.spare_parts",
@@ -3759,7 +3813,6 @@
       "description": "Manage the inventory of parts and consumables used for maintenance, typically distinct from the saleable-goods inventory of an SCM module.\n",
       "priority_proxy": "must_have",
       "applicability": [
-        "sme",
         "mid_market",
         "enterprise"
       ],
@@ -4348,7 +4401,22 @@
       "family": "Maintenance Operations",
       "sub_module_id": "maintenance_operations",
       "sub_module_name": "Maintenance Operations (CMMS/EAM)",
-      "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty."
+      "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty.",
+      "_cap_override": {
+        "fields_overridden": [
+          "applicability"
+        ],
+        "original": {
+          "applicability": [
+            "sme",
+            "mid_market",
+            "enterprise"
+          ]
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Applicability narrowed → [mid_market, enterprise]. Tier stays\nRequired. Reason: formal spare-parts inventory matters at\nmid_market+ scale. Small shops run informal stockroom + Excel.\n"
+      }
     },
     {
       "id": "asset.condition_monitoring",
@@ -5507,7 +5575,6 @@
       "description": "Dashboard and reporting on maintenance performance and asset health, using the canonical reliability KPIs.\n",
       "priority_proxy": "standard",
       "applicability": [
-        "sme",
         "mid_market",
         "enterprise"
       ],
@@ -6113,7 +6180,22 @@
       "family": "Analytics & Intelligence",
       "sub_module_id": "asset_analytics_digital",
       "sub_module_name": "Asset Analytics & Digital Twin",
-      "sub_module_desc": "Maintenance KPIs, spare parts optimisation, linear assets, GIS, AR/digital twin — analytics and visualisation layer."
+      "sub_module_desc": "Maintenance KPIs, spare parts optimisation, linear assets, GIS, AR/digital twin — analytics and visualisation layer.",
+      "_cap_override": {
+        "fields_overridden": [
+          "applicability"
+        ],
+        "original": {
+          "applicability": [
+            "sme",
+            "mid_market",
+            "enterprise"
+          ]
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "Applicability narrowed → [mid_market, enterprise]. Tier stays\nRequired. Reason: maintenance KPIs (MTBF, MTTR, asset\navailability) need volume to matter — small SME asset portfolios\ndon't generate enough events to make the analytics meaningful.\n"
+      }
     },
     {
       "id": "asset.compliance",
@@ -6125,7 +6207,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "sap_s4hana_pm",
         "ibm_maximo",
@@ -6585,7 +6667,18 @@
       "family": "Reliability & Compliance",
       "sub_module_id": "compliance_hse_cyber",
       "sub_module_name": "Compliance, HSE & OT Cybersecurity",
-      "sub_module_desc": "Inspection, regulatory compliance, safety, OT/ICS cybersecurity — HSE & compliance specialty vendors."
+      "sub_module_desc": "Inspection, regulatory compliance, safety, OT/ICS cybersecurity — HSE & compliance specialty vendors.",
+      "_cap_override": {
+        "fields_overridden": [
+          "sme_tier"
+        ],
+        "original": {
+          "sme_tier": "required"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "DEMOTE Required → Preferred. Same pattern as mfg.safety_compliance:\nuniversal NEED but ERP/CMMS isn't the canonical tool. PSG has 2\ndedicated sol cats for this:\n  - built-environment__smart-inspection-and-management (Integrated)\n    → SafetyCulture, Ailyssa (Ailytics)\n  - built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw\n    → CSG-Novade Safety-HSE, Hubble Safety Mgmt, InSight QSE ePTW\n      (Capps), SafetyCulture (ePTW)\nPlus Fleet Safety variants (FLEET-SHIELD, MajuFleet) under the\nFleet vertical for vehicle ops.\nVendor signal: 4/7 evidence (Brightly, Maximo, Infor EAM,\nAssetWorks) but only 1 high-confidence — light EAM-native\ncompliance is \"good enough for office facilities\" but regulated\nworkplaces (food/pharma/BCA-regulated/MOM-WSH-heavy) use the\nstandalones because they're certified and audit-ready.\n\nCluster impact: asset.compliance was the anchor of the\n'Compliance & Inspection' multi-core cluster. With it demoted,\nonly asset.analytics_kpi remains in that cluster — too thin for\nits own core. Asset module switches to single-core in\nconfig/preferred_clusters.yaml. Reverses the 2026-05-08 multi-core\ndesign for Asset (vendor evidence + the wrong-tool argument\ntogether justified it).\n"
+      }
     },
     {
       "id": "asset.contracts_warranty",
@@ -14872,8 +14965,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-15T02:59:48.354727+08:00",
-    "step16_applied_count": 0,
+    "step16_applied_at": "2026-05-15T16:12:21.000407+08:00",
+    "step16_applied_count": 7,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-13T16:58:33.835899+08:00",
