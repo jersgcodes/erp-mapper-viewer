@@ -1802,7 +1802,7 @@
     {
       "id": "mfg.mrp",
       "name": "Material Requirements Planning",
-      "description": "Net-requirements explosion from demand (sales orders + forecast) through BOMs and inventory policies, generating planned purchase and production orders to meet demand without stock-outs or excess.\n",
+      "description": "Net-requirements explosion from demand (sales orders and forecast) through BOMs and inventory policies, generating planned purchase and production orders to meet demand without stock-outs or excess.\n",
       "priority_proxy": "must_have",
       "applicability": [
         "sme",
@@ -2364,7 +2364,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution consolidate demand from sales orders and forecasts, explode multi-level BOMs against inventory and on-order quantities, apply lot-sizing and safety-stock policies, and generate planned orders with lead-time offsetting and exception alerts, so you can meet customer demand without stock-outs or excess inventory?",
+        "question": "Does your solution consolidate demand from sales orders and forecasts, explode multi-level BOMs, apply lot-sizing and safety-stock policies, and generate planned orders so customer demand is met without stock-outs?",
         "free_text_prompt": "Describe how your solution consolidates demand sources, handles multi-level BOMs, applies lot-sizing rules and safety-stock policies, and generates planned orders with lead-time offsetting.",
         "covers": [
           {
@@ -2428,7 +2428,7 @@
     },
     {
       "id": "mfg.production_scheduling",
-      "name": "Production Scheduling & Capacity Planning",
+      "name": "Production Scheduling and Capacity Planning",
       "description": "Assign work orders to work centers across a time horizon, respecting finite capacity and operation sequence — distinct from MRP which generates orders without regard to capacity.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -2875,7 +2875,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution schedule work orders to work centres respecting finite capacity and operation sequence, with visual load display, automatic bottleneck identification, and conflict detection, so planners can balance demand against available capacity?",
+        "question": "Does your solution schedule work orders to work centres respecting finite capacity and sequence, with visual load display, bottleneck identification, and conflict detection, so planners balance demand against capacity?",
         "free_text_prompt": "Describe how your solution handles infinite and finite capacity modes, accounts for holidays and maintenance downtime, supports forward and backward scheduling, and enables interactive rescheduling with real-time constraint violation alerts.",
         "covers": [
           {
@@ -10431,7 +10431,7 @@
     },
     {
       "id": "mfg.traceability_genealogy",
-      "name": "Lot/Serial Traceability & Genealogy",
+      "name": "Lot and Serial Traceability and Genealogy",
       "description": "End-to-end forward and backward traceability from raw material lot through every production step to customer shipment — required for food, pharma, automotive, and aerospace. Supports recall.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -10863,7 +10863,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution track material lots bidirectionally through production and supply chain, maintain serial numbers per unit, generate recall lists by lot and customer, display genealogy across assembly levels, and monitor expiry dates, so you execute rapid recalls and prove product safety to regulators?",
+        "question": "Does your solution track material lots bidirectionally, maintain serial numbers per unit, generate recall lists, display genealogy across assembly levels, so rapid recalls execute and product safety is provable?",
         "free_text_prompt": "Describe how your solution captures and links serial numbers across production steps, displays genealogy relationships, and supports backward tracing from finished goods to raw materials.",
         "covers": [
           {
@@ -11829,7 +11829,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution manage hazardous materials on bills of materials, attach safety documentation to components, define PPE and lockout/tagout requirements per operation, track worker certifications, and capture safety incidents with corrective actions, so compliance risks and worker safety gaps are identified before harm occurs?",
+        "question": "Does your solution manage hazardous materials on BOMs, attach safety documentation, define PPE and lockout-tagout requirements, track worker certifications, and capture safety incidents, so risks surface before harm occurs?",
         "free_text_prompt": "Describe how your solution links safety data sheets to materials, enforces pre-operation verification, and generates incident records for regulatory reporting.",
         "covers": [
           {
@@ -14727,7 +14727,7 @@
     },
     {
       "id": "mfg.mobile_access",
-      "name": "Cloud and Multi-Device Accessibility",
+      "name": "Mobile and Multi-Device Access",
       "description": "The solution works on phones, tablets, and desktops. Universal requirement — PSG asks every vendor \"is this cloud and multi-device accessible?\" as the first question on every sol cat. Factory supervisors and operators need mobile access to production data.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -14735,7 +14735,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo",
         "erpnext",
@@ -15055,7 +15055,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution support cloud-based, mobile-based, and/or web-based usage so users can access core workflows across phones, tablets, and desktops?\n",
+        "question": "Does your solution deliver production data and shop floor status across phones, tablets, and desktops through responsive web interfaces, with real-time notifications and barcode capture, so supervisors monitor operations from any location?",
         "free_text_prompt": "Describe how your solution adapts to different screen sizes, which production data is accessible on mobile, what event types trigger notifications, and how barcode/QR code capture works on mobile devices.",
         "covers": [
           {
@@ -15135,7 +15135,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo",
         "netsuite",
@@ -15560,7 +15560,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo",
         "erpnext",
@@ -16028,7 +16028,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo",
         "erpnext",
