@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Compliance baseline — ERP Mapper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+<style>
+:root {
+  --bg: #fff;
+  --fg: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --accent: #2563eb;
+  --pill-mand: #fee2e2;
+  --pill-mand-fg: #b91c1c;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.5;
+  font-size: 13.5px;
+}
+.compliance-page { max-width: 1100px; margin: 0 auto; padding: 28px 32px 80px; }
+.compliance-page h1 { margin: 18px 0 6px; font-size: 26px; }
+.compliance-page .eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+}
+.compliance-page .lead {
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+.compliance-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 6px 0 24px;
+  font-size: 12px;
+}
+.compliance-stat {
+  padding: 6px 12px;
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+.compliance-stat strong { color: var(--fg); font-size: 16px; display: block; }
+.compliance-group {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 18px;
+  background: #fff;
+}
+.compliance-group-head {
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-bottom: 1px solid var(--border);
+  border-radius: 6px 6px 0 0;
+}
+.compliance-group-head h2 { margin: 0; font-size: 16px; }
+.compliance-group-head .summary { color: var(--muted); font-size: 11.5px; margin-top: 3px; }
+.compliance-item {
+  display: flex;
+  padding: 10px 16px;
+  border-top: 1px solid #f1f5f9;
+  gap: 12px;
+}
+.compliance-item:first-of-type { border-top: 0; }
+.compliance-item-box {
+  flex: 0 0 18px;
+  font-size: 16px;
+  color: #cbd5e1;
+}
+.compliance-item-text { flex: 1; }
+.compliance-item-text strong { display: block; color: var(--fg); margin-bottom: 2px; }
+.compliance-item-text .meta {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 4px;
+}
+.compliance-tag {
+  display: inline-block;
+  padding: 1px 6px;
+  background: var(--pill-mand);
+  color: var(--pill-mand-fg);
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 3px;
+  margin-right: 4px;
+}
+.tab-help {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: 0 0 22px;
+  font-size: 12.5px;
+  color: #1e3a8a;
+}
+.tab-help strong { color: #1e40af; }
+</style>
+
+</head>
+<body>
+  <style>
+  .top-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e5ea;
+    padding: 0 24px;
+    flex-shrink: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .top-bar-inner {
+    display: flex;
+    align-items: stretch;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 2px;
+  }
+  .top-bar-brand {
+    font-size: 12px;
+    color: #6b7380;
+    padding: 14px 18px 14px 0;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-right: 1px solid #e2e5ea;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .top-bar-link:hover {
+    color: #2563eb;
+    background: #f5f6f8;
+  }
+  .top-bar-link.active {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  /* Two-row nav (2026-04-29): row 1 = analysis tools, row 2 = modules. */
+  .top-bar.two-row .top-bar-row1 {
+    border-bottom: 1px solid #f1f3f6;
+  }
+  .top-bar.two-row .top-bar-row2 {
+    background: #fafbfc;
+  }
+  .top-bar.two-row .top-bar-row2 .top-bar-link {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .top-bar-row-label {
+    font-size: 10px;
+    color: #6b7380;
+    padding: 9px 14px 9px 0;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    align-self: center;
+    border-right: 1px solid #e8ebef;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .top-bar-dropdown { position: relative; display: inline-flex; }
+  .top-bar-dropdown summary {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 14px 12px 16px;
+    font-size: 13px;
+    color: #1a1f2b;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    user-select: none;
+  }
+  .top-bar-dropdown summary::-webkit-details-marker { display: none; }
+  .top-bar-dropdown summary::after {
+    content: "";
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #6b7380;
+    margin-left: 7px;
+    transition: transform 0.12s;
+  }
+  .top-bar-dropdown[open] summary::after { transform: rotate(180deg); }
+  .top-bar-dropdown summary:hover { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown[open] summary { color: #2563eb; background: #f5f6f8; }
+  .top-bar-dropdown.active summary {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    font-weight: 600;
+  }
+  .top-bar-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: -1px;
+    background: #ffffff;
+    border: 1px solid #e2e5ea;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    padding: 6px;
+    min-width: 220px;
+    z-index: 110;
+  }
+  .top-bar-dropdown-menu a {
+    display: block;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: #1a1f2b;
+    text-decoration: none;
+    border-radius: 4px;
+    line-height: 1.35;
+  }
+  .top-bar-dropdown-menu a:hover { background: #f1f5f9; color: #2563eb; }
+  .top-bar-dropdown-menu a.active { color: #2563eb; font-weight: 600; }
+  .top-bar-dropdown-menu .sub { font-size: 11px; color: #6b7380; display: block; margin-top: 2px; font-weight: 400; }
+
+  /* Build-source badge — fixed top-right so reviewers know which pipeline
+     emitted the page they're looking at (Python vs Astro). */
+  .build-badge {
+    position: fixed;
+    top: 8px;
+    right: 12px;
+    z-index: 100;
+    padding: 3px 9px;
+    border-radius: 11px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    cursor: help;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.18);
+    user-select: none;
+  }
+  .build-badge-python {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+  }
+  .build-badge-astro {
+    background: #ddd6fe;
+    color: #5b21b6;
+    border: 1px solid #c4b5fd;
+  }
+  /* Toggle pair: render PY + ASTRO side-by-side; inactive one is a clickable
+     link OR greyed-out span (no counterpart). Lives inline as the FIRST item
+     in the nav row 1 (was previously fixed top-right corner). */
+  .build-badge-toggle {
+    display: inline-flex;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12);
+    border-radius: 9px;
+    overflow: hidden;
+    cursor: help;
+    margin-right: 12px;
+  }
+  .build-badge-toggle.inline { position: static; top: auto; right: auto; }
+  .build-badge-toggle .build-badge {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 3px 9px;
+  }
+  .build-badge-toggle .build-badge-python { border-right: none; }
+  .build-badge-toggle a.build-badge { opacity: 0.6; text-decoration: none; }
+  .build-badge-toggle a.build-badge:hover { opacity: 1; }
+  .build-badge-toggle .build-badge.active { font-weight: 800; }
+  .build-badge-toggle .build-badge.no-counterpart {
+    opacity: 0.32; cursor: not-allowed; background: #f1f5f9; color: #94a3b8; border-color: #e2e8f0;
+  }
+
+  /* Greyed nav links — current build doesn't have an equivalent, but link
+     remains clickable (you'll jump out to the other build). */
+  .top-bar-link.no-counterpart { opacity: 0.42; }
+  .top-bar-link.no-counterpart:hover { opacity: 0.7; }
+  .top-bar-dropdown.no-counterpart > summary { opacity: 0.42; }
+  .top-bar-dropdown.no-counterpart > summary:hover { opacity: 0.7; }
+</style>
+<nav class="top-bar two-row">
+  <div class="top-bar-inner top-bar-row1">
+    <div class="build-badge-toggle inline" title="No Astro counterpart for this Python page"><span class="build-badge build-badge-python active" title="Python pipeline (scripts/build_*.py). Source of truth.">PY</span><span class="build-badge build-badge-astro no-counterpart" title="No Astro equivalent for this page">ASTRO</span></div>
+    <span class="top-bar-brand">PSG ERP Spec</span>
+    <a class="top-bar-link" href="index.html">Overview</a>
+    <a class="top-bar-link no-counterpart" href="dashboard.html">Dashboard</a>
+    <a class="top-bar-link" href="meeting_summary.html">Meeting Summary</a>
+    <a class="top-bar-link" href="stakeholders.html">Stakeholders</a>
+    <a class="top-bar-link" href="coverage_analysis.html">Coverage Analysis</a>
+    <a class="top-bar-link" href="integrations.html">Integrations</a>
+    <details class="top-bar-dropdown"><summary>BUILD tools</summary><div class="top-bar-dropdown-menu"><a class="" href="architecture.html">Architecture<span class="sub">Business + technical architecture diagrams (Mermaid) with status legend</span></a><a class="" href="pipeline.html">Pipeline<span class="sub">Step-by-step pipeline + audit (engineer view)</span></a><a class="" href="crosswalk_review.html">Crosswalk Review<span class="sub">PSG categories + IMDA sol cats — Haiku-drafted mappings awaiting review</span></a><a class="" href="flows_mock.html">Flows (design mock)<span class="sub">Original O2C design-review mock — reference for the flow tab layout</span></a><a class="" href="vendor_coverage.html">Vendor Coverage<span class="sub">Per-vendor scoring (legacy — vendor-level data is sparse; treat as research not stakeholder)</span></a><a class="" href="coverage_audit.html">Pipeline Coverage Audit<span class="sub">Sol cat → canonical pipeline QA — CLEAN/LEAK/LOW status per sol cat (engineering view)</span></a><a class="" href="stress_test.html">Stress Test<span class="sub">Solution + checklist stress-test with role-based verdict + coverage fingerprint diagram</span></a><a class="" href="inspection_log.html">Inspection Log<span class="sub">Per-item change log: caps, sub-modules, L2 questions — git-derived add/last-modified dates</span></a></div></details>
+  </div>
+  <div class="top-bar-inner top-bar-row2">
+    <span class="top-bar-row-label">Modules</span>
+    <a class="top-bar-link" href="canonical_financial_management.html">Financial</a>
+    <a class="top-bar-link" href="canonical_human_resources_management.html">HR</a>
+    <a class="top-bar-link" href="canonical_sales_and_crm.html">Sales & CRM</a>
+    <a class="top-bar-link" href="canonical_supply_chain_and_inventory.html">Supply Chain</a>
+    <a class="top-bar-link" href="canonical_project_management.html">Project Mgmt</a>
+    <a class="top-bar-link" href="canonical_asset_management.html">Asset Mgmt</a>
+    <a class="top-bar-link" href="canonical_manufacturing_management.html">Manufacturing</a>
+    <a class="top-bar-link" href="canonical_field_service_management.html">Field Service</a>
+    <a class="top-bar-link" href="canonical_fleet_management.html">Fleet</a>
+    <a class="top-bar-link" href="canonical_others.html">Other</a>
+  </div>
+</nav>
+  <main class="compliance-page">
+    <span class="eyebrow">PSG ERP Spec · Cross-module baseline</span>
+    <h1>Compliance baseline</h1>
+    <p class="lead">
+      The cross-module floor every PSG-listed vendor answers regardless of which modules they cover.
+      Per the "viewers connect to 1 big checklist — no repeats" rule, the baseline lives here in one
+      place — not duplicated across every module checklist viewer.
+    </p>
+    <div class="tab-help">
+      <strong>What's this for?</strong> Mandated by PSG pre-approval. Vendors attest to compliance with
+      Personal Data Protection Act (PDPA), Cyber Essentials Mark (CEM), and Vulnerability Assessment /
+      Penetration Testing (VA/PT). Identical for every module — render once.
+    </div>
+    <div class="compliance-stats">
+      <div class="compliance-stat"><strong>3</strong> groups</div>
+      <div class="compliance-stat"><strong>15</strong> checklist items</div>
+      <div class="compliance-stat"><strong>22</strong> raw PSG specs rolled up</div>
+    </div>
+    
+          <section class="compliance-group">
+            <div class="compliance-group-head">
+              <h2>CEM</h2>
+              <div class="summary">3 items · </div>
+            </div>
+            
+              <div class="compliance-item">
+                <div class="compliance-item-box">☐</div>
+                <div class="compliance-item-text">
+                  <strong>Do you hold Cyber Essentials Mark certification as the Product Principal?</strong>
+                  
+                </div>
+              </div>
+            
+              <div class="compliance-item">
+                <div class="compliance-item-box">☐</div>
+                <div class="compliance-item-text">
+                  <strong>If not Product Principal, do you hold an accepted equivalent certification?</strong>
+                  
+                </div>
+              </div>
+            
+              <div class="compliance-item">
+                <div class="compliance-item-box">☐</div>
+                <div class="compliance-item-text">
+                  <strong>Can you provide current CEM certificate or equivalent certification documentation?</strong>
+                  
+                </div>
+              </div>
+            
+          </section>
+        
+          <section class="compliance-group">
+            <div class="compliance-group-head">
+              <h2>PDPA</h2>
+              <div class="summary">6 items · </div>
+            </div>
+            
+              <div class="compliance-item">
+                <div class="compliance-item-box">☐</div>
+                <div class="compliance-item-text">
+                  <strong>Solution collects, uses, discloses, processes, or disposes of personal data</strong>
+                  
+                </div>
+              </div>
+            
+              <div class="compliance-item">
+                <div class="compliance-item-box">☐</div>
+                <div class="compliance-item-text">
+                  <strong>Vendor completed Personal Data Protection Requirements form at go.gov.sg/pdp</strong>
+                  
+                </div>
+              </div>
+            
+              <div class="compliance-item">
+                <div class="compliance-item-box">☐</div>
+                <div class="compliance-item-text">
+                  <strong>Solution enforces role-based access controls and multi-factor authentication for personal data</strong>
+                  
+                </div>
+              </div>
+            
+              <div class="compliance-item">
+                <div class="compliance-item-box">☐</div>
+                <div class="compliance-item-text">
+                  <strong>Solution encrypts personal data at rest and in transit</strong>
+                  
+                </div>
+              </div>
+            
+              <div class="compliance-item">
+                <div class="compliance-item-box">☐</div>
+                <div class="compliance-item-text">
+                  <strong>Solution implements automated data retention and deletion policies per PDPA</strong>
+                  
+                </div>
+              </div>
+            
+              <div class="compliance-item">
+                <div class="compliance-item-box">☐</div>
+                <div class="compliance-item-text">
+                  <strong>Solution maintains regular data backups with documented recovery procedures</strong>
+                  
+                </div>
+              </div>
+            
+          </section>
+        
+          <section class="compliance-group">
+            <div class="compliance-group-head">
+              <h2>VA/PT</h2>
+              <div class="summary">6 items · </div>
+            </div>
+            
+              <div class="compliance-item">
+                <div class="compliance-item-box">☐</div>
+                <div class="compliance-item-text">
+                  <strong>VA/PT report dated within 12 months before checklist submission by qualified third party.</strong>
+                  
+                </div>
+              </div>
+            
+              <div class="compliance-item">
+                <div class="compliance-item-box">☐</div>
+                <div class="compliance-item-text">
+                  <strong>VA/PT scope covers network, application, data protection, access control, and API security.</strong>
+                  
+                </div>
+              </div>
+            
+              <div class="compliance-item">
+                <div class="compliance-item-box">☐</div>
+                <div class="compliance-item-text">
+                  <strong>VA/PT assessor holds CREST certification or equivalent recognised security professional credential.</strong>
+                  
+                </div>
+              </div>
+            
+              <div class="compliance-item">
+                <div class="compliance-item-box">☐</div>
+                <div class="compliance-item-text">
+                  <strong>VA/PT report includes executive summary, detailed findings with risk ratings, and remediation recommendations.</strong>
+                  
+                </div>
+              </div>
+            
+              <div class="compliance-item">
+                <div class="compliance-item-box">☐</div>
+                <div class="compliance-item-text">
+                  <strong>Cloud security configuration review included in VA/PT scope if solution uses cloud infrastructure.</strong>
+                  
+                </div>
+              </div>
+            
+              <div class="compliance-item">
+                <div class="compliance-item-box">☐</div>
+                <div class="compliance-item-text">
+                  <strong>Resellers provide VA/PT report from product principal or SOC 2 Type II with technical details.</strong>
+                  
+                </div>
+              </div>
+            
+          </section>
+        
+  </main>
+</body>
+</html>

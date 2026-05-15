@@ -2147,7 +2147,11 @@ const VIEW_MODE_DEFAULTS = {
   build: { overviewMode: "uc_required", topView: "overview" },
 };
 const FINAL_OVERVIEW_MODES = new Set(["checklist", "detailed", "edit"]);
-const FINAL_TOP_VIEWS = new Set(["overview", "compliance"]);
+// 2026-05-15 — compliance lifted out of per-module viewers to the workspace
+// Solution-level page (/solution in SPA, output/compliance.html standalone).
+// Per the "viewers connect to 1 big checklist — no repeats" rule, the same
+// PDPA / CEM / VA-PT block should not duplicate across all 10 module viewers.
+const FINAL_TOP_VIEWS = new Set(["overview"]);
 const BUILD_TOP_VIEWS = new Set(["overview", "review", "domain"]);
 
 // Helper — new 4-boolean schema on validation.reconciled.
@@ -2485,32 +2489,8 @@ function renderSidebar() {
     });
     return;
   }
-  if (state.topView === "compliance") {
-    const baseline = DATA.compliance_baseline;
-    if (!baseline) {
-      body.innerHTML = `<div class="family-section"><div class="family-heading">Compliance</div><ul class="capability-list"><li><div style="flex:1;"><div class="cap-name">Not loaded</div></div></li></ul></div>`;
-      return;
-    }
-    body.innerHTML = `
-      <div class="family-section">
-        <div class="family-heading">Compliance groups</div>
-        <ul class="capability-list">
-          ${baseline.groups.map((g) => `
-            <li>
-              <div style="flex:1;"><div class="cap-name">${escapeHtml(g.short)}</div><div class="cap-meta">${g.checklist.length} items</div></div>
-            </li>
-          `).join("")}
-        </ul>
-      </div>
-      <div class="family-section">
-        <div class="family-heading">Summary</div>
-        <ul class="capability-list">
-          <li><div style="flex:1;"><div class="cap-name">${baseline.stats.total_checklist_items} items</div><div class="cap-meta">rolled up from ${baseline.stats.raw_items} PSG specs</div></div></li>
-        </ul>
-      </div>
-    `;
-    return;
-  }
+  // 2026-05-15 — compliance topView removed. Stale URLs with
+  // ?topView=compliance fall through to the default per-family sidebar render.
 
   // Review sidebar — respects active sector filter
   const byFamily = {};
@@ -2777,13 +2757,10 @@ function renderOverview() {
       : "<div class='empty' style='padding:40px;color:#94a3b8'>Quick Edit renderer missing — please rebuild.</div>";
   }
 
-  // D3 — Compliance banner is part of the FINAL deliverable framing; hide in BUILD.
-  const complianceBannerHtml = (state.viewMode === "final" && DATA.compliance_baseline) ? `
-    <div class="compliance-note" id="complianceBanner">
-      Plus ${DATA.compliance_baseline.stats.total_checklist_items} cross-module compliance requirements (CEM, PDPA, VA/PT) every vendor must meet.
-      <span class="compliance-note-link">View compliance →</span>
-    </div>
-  ` : "";
+  // 2026-05-15 — compliance banner removed from per-module viewers. The
+  // workspace-level compliance baseline lives on /solution (SPA) +
+  // output/compliance.html (standalone). No banner needed here.
+  const complianceBannerHtml = "";
 
   // Module-level sector applicability strip (2026-04-24 sub-module pivot)
   const sa = DATA.module_sector_applicability || {};
@@ -2941,14 +2918,7 @@ function renderOverview() {
     };
   });
 
-  // Compliance banner click → jump to Compliance view
-  const banner = body.querySelector("#complianceBanner");
-  if (banner) {
-    banner.onclick = () => {
-      state.topView = "compliance";
-      renderAll();
-    };
-  }
+  // 2026-05-15 — compliance banner removed; no click handler needed.
 
   // Detailed mode: family accordion + card expand
   body.querySelectorAll(".q-family-header").forEach((h) => {
