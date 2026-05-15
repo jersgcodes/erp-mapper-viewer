@@ -2016,7 +2016,17 @@
           "proxy_refs": [
             "View assigned work orders with job details and history"
           ],
-          "imda_refs": [],
+          "imda_refs": [
+            {
+              "id": "field-service-management-q3-000",
+              "text": "A technician updates job status with photos and e-signature while offline, which syncs once back online.",
+              "q_title": "Technician Mobile App",
+              "subsection": "Technician Mobile App",
+              "sources": [
+                "essential-business__field-service-management"
+              ]
+            }
+          ],
           "vendor_citations": [
             "dynamics_365_field_service",
             "jobber",
@@ -3753,7 +3763,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_field_service",
         "salesforce_field_service",
@@ -4268,14 +4278,14 @@
       "sub_module_desc": "Customer/site records, installed equipment, parts inventory for field, preventive maintenance scheduling, return/swap-out workflow.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "sme_tier"
         ],
         "original": {
-          "vendor_question_t2": "Manage van stock, warehouse parts, parts requests, consumption recording, and replenishment so technicians have the right parts on the truck."
+          "sme_tier": "required"
         },
         "author": "human-review",
         "edited_at": "2026-05-15",
-        "note": "FSM t2 cleanup. 20→14 words."
+        "note": "DEMOTE Required → Preferred. Vendor evidence 2/9 (ServiceTitan +\nIFS, both enterprise). Small-end FSM (Jobber, Housecall Pro,\nService Fusion, FieldEdge) doesn't evidence parts inventory —\nsmall SG SME FSM ops carry parts on van without formal inventory.\nConfirms enterprise-only signal, demote case.\n"
       }
     },
     {
@@ -4773,7 +4783,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "salesforce_field_service",
         "dynamics_365_field_service",
@@ -5172,7 +5182,18 @@
       "family": "Equipment & Inventory",
       "sub_module_id": "installed_base_parts",
       "sub_module_name": "Installed Base, Parts & PM",
-      "sub_module_desc": "Customer/site records, installed equipment, parts inventory for field, preventive maintenance scheduling, return/swap-out workflow."
+      "sub_module_desc": "Customer/site records, installed equipment, parts inventory for field, preventive maintenance scheduling, return/swap-out workflow.",
+      "_cap_override": {
+        "fields_overridden": [
+          "sme_tier"
+        ],
+        "original": {
+          "sme_tier": "required"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "DEMOTE Required → Preferred. Vendor evidence 2/9 (Salesforce FSM\nhigh, Housecall Pro medium). Small-end FSM (Jobber, Service Fusion,\nFieldEdge) doesn't surface PM as a named feature — they offer\n'recurring jobs' / 'service contracts' (terminology variance) but\nit's a clear secondary feature not the spine of FSM. SG SME FSM\nbuyers run mostly reactive callouts; PM is a growth-stage add-on.\n"
+      }
     },
     {
       "id": "fsm.sla_entitlements",
@@ -5594,7 +5615,19 @@
       "family": "Service Contracts",
       "sub_module_id": "sla_contracts_billing",
       "sub_module_name": "SLA, Contracts & Billing",
-      "sub_module_desc": "SLA entitlements, contract/warranty, quoting, billing/invoicing from the field — commercial contracts specialty."
+      "sub_module_desc": "SLA entitlements, contract/warranty, quoting, billing/invoicing from the field — commercial contracts specialty.",
+      "in_checklist": false,
+      "_cap_override": {
+        "fields_overridden": [
+          "in_checklist"
+        ],
+        "original": {
+          "in_checklist": null
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "PARK (in_checklist: false). Vendor evidence 1/9 (ServiceMax only,\nequipment FSM specialty). SLA management with formal entitlements\nis enterprise/equipment-FSM scope. Stays visible under Optional/\nAdd-ons.\n"
+      }
     },
     {
       "id": "fsm.contracts_warranty",
@@ -6017,7 +6050,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_field_service",
         "servicetitan",
@@ -6399,7 +6432,18 @@
       "family": "Service Contracts",
       "sub_module_id": "sla_contracts_billing",
       "sub_module_name": "SLA, Contracts & Billing",
-      "sub_module_desc": "SLA entitlements, contract/warranty, quoting, billing/invoicing from the field — commercial contracts specialty."
+      "sub_module_desc": "SLA entitlements, contract/warranty, quoting, billing/invoicing from the field — commercial contracts specialty.",
+      "_cap_override": {
+        "fields_overridden": [
+          "sme_tier"
+        ],
+        "original": {
+          "sme_tier": "preferred"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "PROMOTE Preferred → Required. Vendor evidence 6/9 high=5 — strong\nuniversal signal across small-end (Jobber, Housecall Pro) AND\nenterprise (ServiceTitan, Salesforce FSM, ServiceMax). Every FSM\nbusiness quotes before doing work — universal SG SME FSM workflow\n(HVAC/plumber assesses at site, generates estimate, customer\napproves, work starts). Distinct from sales.quotes_orders which\nis B2B/B2C pre-sales product quoting.\n"
+      }
     },
     {
       "id": "fsm.time_travel_tracking",
@@ -8583,7 +8627,19 @@
       "family": "Scheduling & Dispatch",
       "sub_module_id": "dispatch_scheduling",
       "sub_module_name": "Dispatch & Scheduling",
-      "sub_module_desc": "Technician dispatch, scheduling, time/travel tracking, route optimisation, subcontractor management."
+      "sub_module_desc": "Technician dispatch, scheduling, time/travel tracking, route optimisation, subcontractor management.",
+      "in_checklist": false,
+      "_cap_override": {
+        "fields_overridden": [
+          "in_checklist"
+        ],
+        "original": {
+          "in_checklist": null
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "PARK (in_checklist: false). Vendor evidence 2/9 (D365 + IFS, both\nenterprise). Subcontractor coordination is enterprise scope. Small\nSG SME FSM ops use direct contractor relationships managed in\ncontacts/communications. Stays visible under Optional/Add-ons.\n"
+      }
     },
     {
       "id": "fsm.inspection_compliance",
@@ -10384,7 +10440,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "servicetitan",
         "jobber",
@@ -10915,14 +10971,14 @@
       "sub_module_desc": "Helpdesk, case management, customer portal, telephony/comms integration — spans Sales and Field Service.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "sme_tier"
         ],
         "original": {
-          "vendor_question_t2": "Automated and manual communications to keep customers informed throughout the service lifecycle. Appointment confirmation, technician ETA, completion summary, and follow-up"
+          "sme_tier": "preferred"
         },
         "author": "human-review",
         "edited_at": "2026-05-15",
-        "note": "FSM t2 cleanup. 20→10 words."
+        "note": "PROMOTE Preferred → Required. Vendor evidence 6/9 high=5 — strong\nuniversal signal. ServiceTitan, Jobber, Housecall Pro all market\n'tech on the way' SMS / appointment confirmation / completion\nsummary as core features. Modern SG SME customer expectation —\nbooking confirmation + ETA notification is table-stakes for\nservice businesses competing on customer experience.\n"
       }
     },
     {
@@ -11252,7 +11308,19 @@
       "family": "Analytics & Intelligence",
       "sub_module_id": "fsm_analytics_iot_ai",
       "sub_module_name": "FSM Analytics, IoT & AI",
-      "sub_module_desc": "Field service KPIs, workforce capacity, job costing, IoT remote monitoring, AI/ML for field service."
+      "sub_module_desc": "Field service KPIs, workforce capacity, job costing, IoT remote monitoring, AI/ML for field service.",
+      "in_checklist": false,
+      "_cap_override": {
+        "fields_overridden": [
+          "in_checklist"
+        ],
+        "original": {
+          "in_checklist": null
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "PARK (in_checklist: false). Vendor evidence 1/9 (Salesforce FSM\nonly). Enterprise WFM scope — capacity planning across large\ntechnician fleets. Not relevant for SG SME FSM (typically 1-30\ntechs). Stays visible under Optional/Add-ons.\n"
+      }
     },
     {
       "id": "fsm.job_costing",
@@ -12813,19 +12881,20 @@
       "sub_module_desc": null,
       "_cap_override": {
         "fields_overridden": [
-          "name"
+          "in_checklist"
         ],
         "original": {
-          "name": "Mobile and Multi-Device Access"
+          "in_checklist": null
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Aligned to IMDA Q1 phrasing of essential-business__document-management- and-mobile-access-system (\"Cloud and Multi-Device Accessibility\"; req: \"For cloud-based, mobile-based, and/or web-based usage\"). Replaces the previous \"Mobile and Multi-Device Access\" name + the longer vendor question that didn't match IMDA standard wording. The IMDA trace was added separately in data/manual_imda_ref_overrides.yaml (10 entries).\n"
+        "edited_at": "2026-05-15",
+        "note": "PARK (in_checklist: false). Reason: FSM IMDA sol cat\n(essential-business__field-service-management) has NO Q1 generic\nmobile-access question — only Q3 'Technician Mobile App' which\nmaps to fsm.mobile_field_app (vendor-evidenced 8/9). The\nfsm.mobile_access cap was force-mapped by the cross-module baseline\nexpansion (other.mobile_access → fsm.mobile_access via\napply_to_all_modules) but doesn't reflect FSM IMDA reality. Same\npattern as asset.depreciation parking (duplicate of fin.fixed_assets\nthat doesn't apply to its host module). The Q3 specialty mobile app\nis the canonical FSM mobile mandate — see manual_imda_ref_overrides\nfor the FSM Q3 → fsm.mobile_field_app trace added in this batch.\n"
       },
       "_meta": {
         "demoted_by_step15": true,
         "demoted_reason": "baseline cross-module cap (Platform & Data)"
-      }
+      },
+      "in_checklist": false
     },
     {
       "id": "fsm.data_governance",
@@ -14951,8 +15020,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-15T17:56:13.869101+08:00",
-    "step16_applied_count": 12,
+    "step16_applied_at": "2026-05-15T18:32:01.430458+08:00",
+    "step16_applied_count": 8,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-13T02:57:21.988709+08:00",
