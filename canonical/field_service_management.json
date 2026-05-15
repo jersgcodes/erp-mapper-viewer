@@ -726,7 +726,7 @@
     },
     {
       "id": "fsm.dispatch_scheduling",
-      "name": "Dispatch & Scheduling",
+      "name": "Dispatch and Scheduling",
       "description": "Assign technicians to work orders based on availability, skills, location, and priority. Visual dispatch board with calendar, Gantt, and map views for dispatchers.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -1571,7 +1571,7 @@
     },
     {
       "id": "fsm.technician_management",
-      "name": "Technician & Field Worker Management",
+      "name": "Technician and Field Worker Management",
       "description": "Maintain a registry of field workers with their skills, certifications, availability, and capacity. Track who is qualified for what and who is available when.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -2601,7 +2601,7 @@
           }
         ],
         "total_input_items": 9,
-        "question_t2": "Technician-facing mobile application to view assigned work orders, navigate to site, capture data, collect signatures, take photos, and sync when offline."
+        "question_t2": "Technician-facing mobile app to view work orders, navigate to site, capture data, and sync offline."
       },
       "sector_relevance": {
         "generic": true,
@@ -2648,11 +2648,22 @@
       "family": "Work Order Core",
       "sub_module_id": "field_work_order",
       "sub_module_name": "Field Work Order Management",
-      "sub_module_desc": "Work order intake, mobile field app, service reporting, inspection checklists — core FSM."
+      "sub_module_desc": "Work order intake, mobile field app, service reporting, inspection checklists — core FSM.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Technician-facing mobile application to view assigned work orders, navigate to site, capture data, collect signatures, take photos, and sync when offline."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "FSM t2 cleanup. 21→15 words."
+      }
     },
     {
       "id": "fsm.customer_site_management",
-      "name": "Customer & Site Management",
+      "name": "Customer and Site Management",
       "description": "Maintain customer records with their service locations, equipment installed at each site, service history, and SLA entitlements.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -3115,7 +3126,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Maintain customer records with their service locations, equipment installed at each site, service history, and SLA entitlements."
+        "question_t2": "Maintain customer records with service locations, installed equipment, service history, and SLAs."
       },
       "sector_relevance": {
         "generic": true,
@@ -3162,11 +3173,22 @@
       "family": "Equipment & Inventory",
       "sub_module_id": "installed_base_parts",
       "sub_module_name": "Installed Base, Parts & PM",
-      "sub_module_desc": "Customer/site records, installed equipment, parts inventory for field, preventive maintenance scheduling, return/swap-out workflow."
+      "sub_module_desc": "Customer/site records, installed equipment, parts inventory for field, preventive maintenance scheduling, return/swap-out workflow.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Maintain customer records with their service locations, equipment installed at each site, service history, and SLA entitlements."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "FSM t2 cleanup. 17→12 words."
+      }
     },
     {
       "id": "fsm.installed_base",
-      "name": "Installed Base & Equipment Registry",
+      "name": "Installed Base and Equipment Registry",
       "description": "Track every piece of equipment the business services — serial number, model, warranty status, service history, and linked documentation. The asset backbone of field service.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -3661,7 +3683,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_t2": "Track every piece of equipment the business services. Serial number, model, warranty status, service history, and linked documentation"
+        "question_t2": "Track each piece of serviced equipment with serial, warranty status, and service history."
       },
       "sector_relevance": {
         "generic": true,
@@ -3708,11 +3730,22 @@
       "family": "Equipment & Inventory",
       "sub_module_id": "installed_base_parts",
       "sub_module_name": "Installed Base, Parts & PM",
-      "sub_module_desc": "Customer/site records, installed equipment, parts inventory for field, preventive maintenance scheduling, return/swap-out workflow."
+      "sub_module_desc": "Customer/site records, installed equipment, parts inventory for field, preventive maintenance scheduling, return/swap-out workflow.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Track every piece of equipment the business services. Serial number, model, warranty status, service history, and linked documentation"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "FSM t2 cleanup. 18→13 words."
+      }
     },
     {
       "id": "fsm.parts_inventory",
-      "name": "Parts & Inventory for Field",
+      "name": "Parts and Inventory for Field",
       "description": "Manage van stock, warehouse parts, parts requests, consumption recording, and replenishment so technicians have the right parts on the truck.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -4185,7 +4218,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Manage van stock, warehouse parts, parts requests, consumption recording, and replenishment so technicians have the right parts on the truck."
+        "question_t2": "Manage van stock, warehouse parts, requests, and replenishment so technicians have the right parts."
       },
       "sector_relevance": {
         "generic": true,
@@ -4232,11 +4265,22 @@
       "family": "Equipment & Inventory",
       "sub_module_id": "installed_base_parts",
       "sub_module_name": "Installed Base, Parts & PM",
-      "sub_module_desc": "Customer/site records, installed equipment, parts inventory for field, preventive maintenance scheduling, return/swap-out workflow."
+      "sub_module_desc": "Customer/site records, installed equipment, parts inventory for field, preventive maintenance scheduling, return/swap-out workflow.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Manage van stock, warehouse parts, parts requests, consumption recording, and replenishment so technicians have the right parts on the truck."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "FSM t2 cleanup. 20→14 words."
+      }
     },
     {
       "id": "fsm.service_reporting",
-      "name": "Service Reporting & Completion",
+      "name": "Service Reporting and Completion",
       "description": "Structured job completion workflow — checklists, worksheets, customer reports, sign-off, and handover to invoicing.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -4721,7 +4765,7 @@
     },
     {
       "id": "fsm.preventive_maintenance",
-      "name": "Preventive & Planned Maintenance Scheduling",
+      "name": "Preventive and Planned Maintenance Scheduling",
       "description": "Schedule recurring maintenance based on time intervals, usage counters, or condition triggers. Automatically generate work orders before equipment fails.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -5132,7 +5176,7 @@
     },
     {
       "id": "fsm.sla_entitlements",
-      "name": "SLA Management & Entitlements",
+      "name": "SLA Management and Entitlements",
       "description": "Define service level agreements with response time, resolution time, and coverage windows. Track SLA compliance and escalate breaches automatically.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -5554,7 +5598,7 @@
     },
     {
       "id": "fsm.contracts_warranty",
-      "name": "Contract & Warranty Management",
+      "name": "Contract and Warranty Management",
       "description": "Manage service contracts, warranty terms, and entitlements. Determine coverage before dispatching and track warranty claims.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -5965,7 +6009,7 @@
     },
     {
       "id": "fsm.quoting_estimation",
-      "name": "Quoting & Estimation",
+      "name": "Quoting and Estimation",
       "description": "Create on-site or pre-visit quotes with labour, parts, and travel costs. Convert accepted quotes into work orders.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -6359,7 +6403,7 @@
     },
     {
       "id": "fsm.time_travel_tracking",
-      "name": "Time & Travel Tracking",
+      "name": "Time and Travel Tracking",
       "description": "Track technician working hours, travel time, mileage, and expenses for payroll, costing, and customer billing.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -6909,7 +6953,7 @@
     },
     {
       "id": "fsm.route_optimization",
-      "name": "Route Optimization & GPS Tracking",
+      "name": "Route Optimisation and GPS Tracking",
       "description": "Optimise daily routes for minimum travel time and fuel cost. Track technician location in real time for dispatcher visibility and accurate ETA communication to customers.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -7328,7 +7372,7 @@
     },
     {
       "id": "fsm.knowledge_base",
-      "name": "Knowledge Base & Troubleshooting Guides",
+      "name": "Knowledge Base and Troubleshooting Guides",
       "description": "Searchable library of repair procedures, troubleshooting guides, wiring diagrams, and technical documentation accessible from the mobile app in the field.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -7734,7 +7778,7 @@
           }
         ],
         "total_input_items": 4,
-        "question_t2": "Searchable library of repair procedures, troubleshooting guides, wiring diagrams, and technical documentation accessible from the mobile app in the field."
+        "question_t2": "Searchable library of repair procedures and technical documentation accessible from the mobile app."
       },
       "sector_relevance": {
         "generic": true,
@@ -7781,7 +7825,18 @@
       "family": "Service Contracts",
       "sub_module_id": "customer_service",
       "sub_module_name": "Customer Service & Case Management",
-      "sub_module_desc": "Helpdesk, case management, customer portal, telephony/comms integration — spans Sales and Field Service."
+      "sub_module_desc": "Helpdesk, case management, customer portal, telephony/comms integration — spans Sales and Field Service.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Searchable library of repair procedures, troubleshooting guides, wiring diagrams, and technical documentation accessible from the mobile app in the field."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "FSM t2 cleanup. 20→13 words."
+      }
     },
     {
       "id": "fsm.customer_portal",
@@ -8154,7 +8209,7 @@
           }
         ],
         "total_input_items": 3,
-        "question_t2": "Portal for customers to book service, track work order status, view service history, approve quotes, and pay invoices."
+        "question_t2": "Portal for customers to book service, track work orders, approve quotes, and pay invoices."
       },
       "sector_relevance": {
         "generic": true,
@@ -8201,7 +8256,18 @@
       "family": "Service Contracts",
       "sub_module_id": "customer_service",
       "sub_module_name": "Customer Service & Case Management",
-      "sub_module_desc": "Helpdesk, case management, customer portal, telephony/comms integration — spans Sales and Field Service."
+      "sub_module_desc": "Helpdesk, case management, customer portal, telephony/comms integration — spans Sales and Field Service.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Portal for customers to book service, track work order status, view service history, approve quotes, and pay invoices."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "FSM t2 cleanup. 18→14 words."
+      }
     },
     {
       "id": "fsm.subcontractor_management",
@@ -8521,7 +8587,7 @@
     },
     {
       "id": "fsm.inspection_compliance",
-      "name": "Inspection & Compliance Checklists",
+      "name": "Inspection and Compliance Checklists",
       "description": "Structured inspection forms with pass/fail criteria, mandatory photo capture, and compliance reporting for regulatory or internal quality requirements.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -8899,7 +8965,7 @@
           }
         ],
         "total_input_items": 5,
-        "question_t2": "Structured inspection forms with pass/fail criteria, mandatory photo capture, and compliance reporting for regulatory or internal quality requirements."
+        "question_t2": "Structured inspection forms with pass-or-fail criteria, photo capture, and compliance reporting."
       },
       "sector_relevance": {
         "generic": false,
@@ -8946,11 +9012,22 @@
       "family": "Work Order Core",
       "sub_module_id": "field_work_order",
       "sub_module_name": "Field Work Order Management",
-      "sub_module_desc": "Work order intake, mobile field app, service reporting, inspection checklists — core FSM."
+      "sub_module_desc": "Work order intake, mobile field app, service reporting, inspection checklists — core FSM.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Structured inspection forms with pass/fail criteria, mandatory photo capture, and compliance reporting for regulatory or internal quality requirements."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "FSM t2 cleanup. 18→12 words. Replaced '/' connector ('pass/fail')."
+      }
     },
     {
       "id": "fsm.returns_swapout",
-      "name": "Return Merchandise & Swap-out Workflow",
+      "name": "Return Merchandise and Swap-out Workflow",
       "description": "Handle equipment replacements, swap-outs, and return-to-depot flows when on-site repair is not feasible.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -9242,7 +9319,7 @@
     },
     {
       "id": "fsm.analytics_kpis",
-      "name": "Field Service Analytics & KPIs",
+      "name": "Field Service Analytics and KPIs",
       "description": "Dashboards and reports covering first-time fix rate, mean time to repair, technician utilisation, SLA compliance, revenue per job, and customer satisfaction trends.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -9843,7 +9920,7 @@
           }
         ],
         "total_input_items": 8,
-        "question_t2": "Dashboards and reports covering first-time fix rate, mean time to repair, technician utilisation, SLA compliance, revenue per job, and customer satisfaction trends."
+        "question_t2": "Dashboards covering first-time fix rate, technician utilisation, SLA compliance, and revenue per job."
       },
       "sector_relevance": {
         "generic": true,
@@ -9890,11 +9967,22 @@
       "family": "Analytics & Intelligence",
       "sub_module_id": "fsm_analytics_iot_ai",
       "sub_module_name": "FSM Analytics, IoT & AI",
-      "sub_module_desc": "Field service KPIs, workforce capacity, job costing, IoT remote monitoring, AI/ML for field service."
+      "sub_module_desc": "Field service KPIs, workforce capacity, job costing, IoT remote monitoring, AI/ML for field service.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Dashboards and reports covering first-time fix rate, mean time to repair, technician utilisation, SLA compliance, revenue per job, and customer satisfaction trends."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "FSM t2 cleanup. 22→13 words. SG spelling 'utilisation'."
+      }
     },
     {
       "id": "fsm.billing_invoicing",
-      "name": "Billing & Invoicing from Field",
+      "name": "Billing and Invoicing from Field",
       "description": "Generate invoices from completed work orders with labour, parts, travel, and expenses automatically populated. Handle progress billing for multi-visit jobs and integration with accounting.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -10288,7 +10376,7 @@
     },
     {
       "id": "fsm.customer_notifications",
-      "name": "Customer Communication & Notifications",
+      "name": "Customer Communication and Notifications",
       "description": "Automated and manual communications to keep customers informed throughout the service lifecycle — appointment confirmation, technician ETA, completion summary, and follow-up.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -10777,7 +10865,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_t2": "Automated and manual communications to keep customers informed throughout the service lifecycle. Appointment confirmation, technician ETA, completion summary, and follow-up"
+        "question_t2": "Automated communications: appointment confirmation, technician ETA, completion summary, and follow-up."
       },
       "sector_relevance": {
         "generic": true,
@@ -10824,7 +10912,18 @@
       "family": "Service Contracts",
       "sub_module_id": "customer_service",
       "sub_module_name": "Customer Service & Case Management",
-      "sub_module_desc": "Helpdesk, case management, customer portal, telephony/comms integration — spans Sales and Field Service."
+      "sub_module_desc": "Helpdesk, case management, customer portal, telephony/comms integration — spans Sales and Field Service.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Automated and manual communications to keep customers informed throughout the service lifecycle. Appointment confirmation, technician ETA, completion summary, and follow-up"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "FSM t2 cleanup. 20→10 words."
+      }
     },
     {
       "id": "fsm.workforce_capacity",
@@ -11157,7 +11256,7 @@
     },
     {
       "id": "fsm.job_costing",
-      "name": "Project Profitability & Job Costing",
+      "name": "Project Profitability and Job Costing",
       "description": "Track the full cost of each job — labour, parts, travel, subcontractor fees — against revenue to measure profitability per job, customer, contract, and team.\n",
       "priority_proxy": "standard",
       "applicability": [
@@ -11517,7 +11616,7 @@
           }
         ],
         "total_input_items": 4,
-        "question_t2": "Track the full cost of each job. Labour, parts, travel, subcontractor fees. Against revenue to measure profitability per job, customer, contract, and team."
+        "question_t2": "Track cost of each job (labour, parts, travel, subcontractor) against revenue for profitability."
       },
       "sector_relevance": {
         "generic": true,
@@ -11564,11 +11663,22 @@
       "family": "Analytics & Intelligence",
       "sub_module_id": "fsm_analytics_iot_ai",
       "sub_module_name": "FSM Analytics, IoT & AI",
-      "sub_module_desc": "Field service KPIs, workforce capacity, job costing, IoT remote monitoring, AI/ML for field service."
+      "sub_module_desc": "Field service KPIs, workforce capacity, job costing, IoT remote monitoring, AI/ML for field service.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Track the full cost of each job. Labour, parts, travel, subcontractor fees. Against revenue to measure profitability per job, customer, contract, and team."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "FSM t2 cleanup. 23→13 words."
+      }
     },
     {
       "id": "fsm.iot_remote_monitoring",
-      "name": "IoT & Remote Monitoring",
+      "name": "IoT and Remote Monitoring",
       "description": "Ingest sensor data from connected equipment to detect anomalies, trigger preventive work orders, and enable remote diagnostics before dispatching a technician.\n",
       "priority_proxy": "advanced",
       "applicability": [
@@ -11865,7 +11975,7 @@
       "vendor_questions": {
         "question": "Can your solution ingest sensor data from connected equipment, automatically trigger work orders when thresholds are exceeded, and display real-time asset diagnostics, so technicians diagnose issues remotely before dispatch?",
         "tier": "preferred",
-        "question_t2": "Ingest sensor data from connected equipment to detect anomalies, trigger preventive work orders, and enable remote diagnostics before dispatching a technician."
+        "question_t2": "Ingest sensor data to detect anomalies, trigger preventive work orders, and enable remote diagnostics."
       },
       "sector_relevance": {
         "generic": false,
@@ -11912,7 +12022,18 @@
       "family": "Analytics & Intelligence",
       "sub_module_id": "fsm_analytics_iot_ai",
       "sub_module_name": "FSM Analytics, IoT & AI",
-      "sub_module_desc": "Field service KPIs, workforce capacity, job costing, IoT remote monitoring, AI/ML for field service."
+      "sub_module_desc": "Field service KPIs, workforce capacity, job costing, IoT remote monitoring, AI/ML for field service.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Ingest sensor data from connected equipment to detect anomalies, trigger preventive work orders, and enable remote diagnostics before dispatching a technician."
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-15",
+        "note": "FSM t2 cleanup. 21→14 words."
+      }
     },
     {
       "id": "fsm.ai_ml",
@@ -12284,7 +12405,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_field_service",
         "salesforce_field_service",
@@ -12716,7 +12837,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "salesforce_field_service",
         "dynamics_365_field_service",
@@ -13206,7 +13327,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_field_service",
         "salesforce_field_service",
@@ -13755,7 +13876,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_field_service",
         "salesforce_field_service",
@@ -14830,8 +14951,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-15T02:59:48.523659+08:00",
-    "step16_applied_count": 0,
+    "step16_applied_at": "2026-05-15T17:56:13.869101+08:00",
+    "step16_applied_count": 12,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-13T02:57:21.988709+08:00",
