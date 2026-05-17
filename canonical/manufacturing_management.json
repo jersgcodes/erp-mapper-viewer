@@ -1816,7 +1816,6 @@
       "description": "Net-requirements explosion from demand (sales orders and forecast) through BOMs and inventory policies, generating planned purchase and production orders to meet demand without stock-outs or excess.\n",
       "priority_proxy": "must_have",
       "applicability": [
-        "sme",
         "mid_market",
         "enterprise"
       ],
@@ -2438,14 +2437,18 @@
       "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "applicability"
         ],
         "original": {
-          "vendor_question_t2": "Calculate net material requirements from demand (sales orders + forecast) through BOMs and inventory policies, generating planned purchase and production orders to meet demand without stock-outs or excess."
+          "applicability": [
+            "sme",
+            "mid_market",
+            "enterprise"
+          ]
         },
         "author": "human-review",
         "edited_at": "2026-05-15",
-        "note": "Mfg t2 cleanup. 28→13 words. Replaced '+' connector. Used 'decompose' instead of MRP-textbook 'explode' — same meaning, friendlier for SG SME audience who haven't read MRP textbooks. Kept BOMs (industry standard)."
+        "note": "Applicability narrowed from [sme, mid_market, enterprise] →\n[mid_market, enterprise]. Tier stays Required. Reason: formal\nnet-requirements MRP is a mid-market+ feature. SG SME job shops\nand small contract manufacturers run reorder-point + manual\nplanning; MRP would be over-engineered. The cap remains Required\nFOR THOSE IT APPLIES TO. Vendor signal (2/11 evidence) reflects\nthat only mid-market+ ERPs surface MRP as a named module — SME-\nfocused mfg ERPs (Katana, simpler tools) skip it.\n"
       }
     },
     {
@@ -2454,7 +2457,6 @@
       "description": "Assign work orders to work centers across a time horizon, respecting finite capacity and operation sequence — distinct from MRP which generates orders without regard to capacity.\n",
       "priority_proxy": "must_have",
       "applicability": [
-        "sme",
         "mid_market",
         "enterprise"
       ],
@@ -2956,14 +2958,18 @@
       "sub_module_desc": "Work orders, production scheduling, shop floor execution, process/discrete modes, IoT data collection, labour tracking.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "applicability"
         ],
         "original": {
-          "vendor_question_t2": "Assign work orders to work centers across a time horizon, respecting finite capacity and operation sequence."
+          "applicability": [
+            "sme",
+            "mid_market",
+            "enterprise"
+          ]
         },
         "author": "human-review",
         "edited_at": "2026-05-15",
-        "note": "Mfg t2 cleanup. 16→11 words. SG spelling 'centres'."
+        "note": "Applicability narrowed [sme, mid_market, enterprise] →\n[mid_market, enterprise]. Tier stays Required. Reason: same as\nmfg.mrp — formal finite-capacity scheduling is mid-market+. SG\nSME mfg shops schedule on whiteboards / Excel / Gantt. PSG has\nits own AM sol cat (\"Real-Time Production Scheduling and Job\nTracking\") under Advanced Manufacturing — confirms scheduling is\na separate specialty rather than an SME baseline. Vendor signal\n(3/11 evidence: Epicor, Oracle, SAP) is mid-market-and-up.\n"
       }
     },
     {
@@ -10592,7 +10598,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo",
         "netsuite",
@@ -11584,7 +11590,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "sap_s4hana_pp",
         "oracle_fusion_mfg",
@@ -12062,14 +12068,14 @@
       "sub_module_desc": "Quality management, lot/serial traceability, safety/EHS, energy/sustainability tracking — specialist QMS vendors that also service Asset and Field Service.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "sme_tier"
         ],
         "original": {
-          "vendor_question_t2": "Environmental, health and safety integration tied to manufacturing: PPE requirements, hazardous-material handling, incident capture, and regulatory reporting."
+          "sme_tier": "required"
         },
         "author": "human-review",
         "edited_at": "2026-05-15",
-        "note": "Mfg t2 cleanup. 17→11 words. Dropped EHS preamble (cap name says it)."
+        "note": "DEMOTE Required → Preferred — different reason from traceability.\nUniversal NEED across all mfg sectors (every business needs WSH\ncompliance per MOM Act in SG) BUT mfg ERP is the wrong tool —\nthis capability is covered by dedicated PSG-grant-approved WSH/EHS\nstandalone solutions in PSG's \"Smart Inspection and Management\"\ncategory: Novade Safety-HSE, Hubble Safety Mgmt, SafetyCulture\n(+ePTW), InSight QSE ePTW (Capps), Ailyssa (Ailytics), plus Fleet\nSafety variants for vehicle ops. Setting Required at module level\nwould force every mfg ERP buyer to demand a feature their vendor\ndoesn't natively provide — wrong gate.\nVendor signal: 1/11 evidence (SAP S/4HANA only). 8 mid-market\nmfg ERPs surveyed (IFS, SYSPRO, Epicor, Oracle, Plex, Infor CSI/M3,\nMS Dynamics F&SCM, Katana) showed zero EHS evidence.\n"
       }
     },
     {
@@ -14945,7 +14951,7 @@
     },
     {
       "id": "mfg.mobile_access",
-      "name": "Mobile and Multi-Device Access",
+      "name": "Cloud and Multi-Device Accessibility",
       "description": "The solution works on phones, tablets, and desktops. Universal requirement — PSG asks every vendor \"is this cloud and multi-device accessible?\" as the first question on every sol cat. Factory supervisors and operators need mobile access to production data.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -17530,8 +17536,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-15T15:00:13.908683+08:00",
-    "step16_applied_count": 23,
+    "step16_applied_at": "2026-05-18T01:08:46.265193+08:00",
+    "step16_applied_count": 5,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-13T16:58:33.872777+08:00",

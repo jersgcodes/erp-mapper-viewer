@@ -3763,7 +3763,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_field_service",
         "salesforce_field_service",
@@ -4783,7 +4783,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "salesforce_field_service",
         "dynamics_365_field_service",
@@ -6050,7 +6050,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_field_service",
         "servicetitan",
@@ -10440,7 +10440,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "servicetitan",
         "jobber",
@@ -12465,7 +12465,7 @@
     },
     {
       "id": "fsm.mobile_access",
-      "name": "Mobile and Multi-Device Access",
+      "name": "Cloud and Multi-Device Accessibility",
       "description": "The solution works on phones, tablets, and desktops. Universal for any FSM — PSG asks every vendor about cloud and multi-device accessibility.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -12881,14 +12881,14 @@
       "sub_module_desc": null,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "name"
         ],
         "original": {
-          "in_checklist": null
+          "name": "Mobile and Multi-Device Access"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "PARK (in_checklist: false). Reason: FSM IMDA sol cat\n(essential-business__field-service-management) has NO Q1 generic\nmobile-access question — only Q3 'Technician Mobile App' which\nmaps to fsm.mobile_field_app (vendor-evidenced 8/9). The\nfsm.mobile_access cap was force-mapped by the cross-module baseline\nexpansion (other.mobile_access → fsm.mobile_access via\napply_to_all_modules) but doesn't reflect FSM IMDA reality. Same\npattern as asset.depreciation parking (duplicate of fin.fixed_assets\nthat doesn't apply to its host module). The Q3 specialty mobile app\nis the canonical FSM mobile mandate — see manual_imda_ref_overrides\nfor the FSM Q3 → fsm.mobile_field_app trace added in this batch.\n"
+        "edited_at": "2026-05-09",
+        "note": "Aligned to IMDA Q1 phrasing of essential-business__document-management- and-mobile-access-system (\"Cloud and Multi-Device Accessibility\"; req: \"For cloud-based, mobile-based, and/or web-based usage\"). Replaces the previous \"Mobile and Multi-Device Access\" name + the longer vendor question that didn't match IMDA standard wording. The IMDA trace was added separately in data/manual_imda_ref_overrides.yaml (10 entries).\n"
       },
       "_meta": {
         "demoted_by_step15": true,
@@ -15020,8 +15020,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-15T18:32:01.430458+08:00",
-    "step16_applied_count": 8,
+    "step16_applied_at": "2026-05-18T01:08:45.230532+08:00",
+    "step16_applied_count": 5,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-13T02:57:21.988709+08:00",

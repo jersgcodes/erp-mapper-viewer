@@ -2235,7 +2235,7 @@
           }
         ],
         "total_input_items": 10,
-        "question_terse": "Does your solution allow you to record vendor bills and schedule payments?",
+        "question_terse": "Does your solution record vendor bills and schedule payments?",
         "question_t2": "Record vendor bills and schedule payments"
       },
       "sector_relevance": {
@@ -2314,6 +2314,17 @@
             "reason": "Critical for managing supplier and distributor invoice payments"
           }
         }
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_terse"
+        ],
+        "original": {
+          "vendor_question_terse": "Does your solution allow you to record vendor bills and schedule payments?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — stripped 'allow you to' from terse."
       }
     },
     {
@@ -3078,7 +3089,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_accounting",
         "netsuite",
@@ -4910,7 +4921,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_accounting",
         "netsuite",
@@ -5331,19 +5342,19 @@
           }
         ],
         "total_input_items": 7,
-        "question_terse": "Does your solution allow you to create budgets and compare actual spending against budgeted amounts?",
+        "question_terse": "Does your solution create budgets and compare actual spending against budgeted amounts?",
         "question_t2": "Create budgets and compare actual spending against budgeted amounts"
       },
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "vendor_question_terse"
         ],
         "original": {
-          "sme_tier": "required"
+          "vendor_question_terse": "Does your solution allow you to create budgets and compare actual spending against budgeted amounts?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-14",
-        "note": "Demoted from Mandatory to Preferred per 2026-05-14 vendor evidence\nreview. Zero vendors market budgeting on pricing pages; only Xero\nmentions cash-flow forecast (and that's at every tier including\nStarter). SMEs typically do budgeting in spreadsheets, not in\ntheir accounting tool. Not splitting into separate budget +\nforecast caps — no commercial differentiation signal yet\n(revisit if AI-grounded forecasting becomes a distinct premium\ntier).\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — stripped 'allow you to' from terse."
       },
       "sector_relevance": {
         "generic": true,
@@ -5835,20 +5846,20 @@
           }
         ],
         "total_input_items": 8,
-        "question_terse": "Does your solution record transactions in multiple currencies and automatically convert them to your functional currency?",
+        "question_terse": "Does your solution record transactions in multiple currencies and automatically convert them to the functional currency?",
         "question_t2": "Record transactions in multiple currencies and automatically convert them to the functional currency"
       },
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_terse"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_terse": "Does your solution record transactions in multiple currencies and automatically convert them to your functional currency?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-08",
-        "note": "Demoted to Optional / Add-on. Not universal — most SMEs trade in SGD only; multi-currency only matters for export, regional, or franchise businesses. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — 'your functional currency' → 'the functional currency'. Layers on top of the 2026-05-08 in_checklist:false entry above."
       },
       "sector_relevance": {
         "generic": false,
@@ -9781,7 +9792,7 @@
           }
         ],
         "total_input_items": 8,
-        "question_terse": "Does your solution allow your team to complete all period-close tasks and adjustments within a defined close cycle?",
+        "question_terse": "Does your solution complete all period-close tasks and adjustments within a defined close cycle?",
         "question_t2": "Complete all period-close tasks and adjustments within a defined close cycle"
       },
       "sector_relevance": {
@@ -9860,6 +9871,17 @@
             "reason": "Inventory accruals, supplier reconciliation, goods-in-transit cutoffs"
           }
         }
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_terse"
+        ],
+        "original": {
+          "vendor_question_terse": "Does your solution allow your team to complete all period-close tasks and adjustments within a defined close cycle?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — dropped 'allow your team to' opener."
       }
     },
     {
@@ -10258,7 +10280,7 @@
           }
         ],
         "total_input_items": 8,
-        "question_terse": "Does your solution forecast future cash positions across your business entities and bank accounts?",
+        "question_terse": "Does your solution forecast future cash positions across business entities and bank accounts?",
         "question_t2": "Forecast future cash positions across the business entities and bank accounts"
       },
       "sector_relevance": {
@@ -10337,6 +10359,17 @@
             "reason": "High inventory; essential for managing supplier terms and customer credit"
           }
         }
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_terse"
+        ],
+        "original": {
+          "vendor_question_terse": "Does your solution forecast future cash positions across your business entities and bank accounts?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — 'your business entities' → 'business entities'."
       }
     },
     {
@@ -10907,7 +10940,7 @@
           }
         ],
         "total_input_items": 7,
-        "question_terse": "Does your solution post payroll costs to the general ledger from your HR system?",
+        "question_terse": "Does your solution post payroll costs to the general ledger from the HR system?",
         "question_t2": "Post payroll costs to the general ledger from the HR system"
       },
       "sector_relevance": {
@@ -10986,11 +11019,22 @@
             "reason": "Operational workforce; payroll GL posting for cost center allocation needed"
           }
         }
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_terse"
+        ],
+        "original": {
+          "vendor_question_terse": "Does your solution post payroll costs to the general ledger from your HR system?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — 'your HR system' → 'the HR system'."
       }
     },
     {
       "id": "fin.einvoicing_peppol",
-      "name": "E-Invoicing and PEPPOL InvoiceNow",
+      "name": "InvoiceNow-Ready Solution Provider Accreditation",
       "description": "Send and receive invoices in structured electronic format over the PEPPOL network — the Singapore government's InvoiceNow programme mandates this for GST-registered businesses. Machine-readable, no re-keying on the receiving side.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -11333,23 +11377,19 @@
           }
         ],
         "total_input_items": 4,
-        "question_terse": "Is your solution listed on IMDA InvoiceNow-Ready Solution Provider (IRSP) Listing?\n\n[1] If you are the Product Principal of the solution, you are required to be accredited as an IRSP by IMDA. [2] If you are the reseller of the solution, your Solution Product Principal must declare to IMDA that you are an authorised reseller of their solution.\nNote: For more information on InvoiceNow, refer to: Becoming an InvoiceNow-Ready Solution Provider | E-invoicing | IMDA (https://www.imda.gov.sg/how-we-can-help/nationwide-e-invoicing-framework/becoming-an-invoicenow-ready-solution-provider)\n",
+        "question_terse": "Is your solution listed on IMDA InvoiceNow-Ready Solution Provider (IRSP) Listing?\n\n[1] Product Principals must be accredited as an IRSP by IMDA. [2] Resellers require the Solution Product Principal to declare authorised reseller status to IMDA.\nNote: For more information on InvoiceNow, refer to: Becoming an InvoiceNow-Ready Solution Provider | E-invoicing | IMDA (https://www.imda.gov.sg/how-we-can-help/nationwide-e-invoicing-framework/becoming-an-invoicenow-ready-solution-provider)\n",
         "question_t2": "Listed on the IMDA InvoiceNow-Ready Solution Provider (IRSP) Listing\n"
       },
       "_cap_override": {
         "fields_overridden": [
-          "name",
-          "vendor_question_terse",
-          "vendor_question_t2"
+          "vendor_question_terse"
         ],
         "original": {
-          "name": "E-Invoicing & PEPPOL / InvoiceNow",
-          "vendor_question_terse": null,
-          "vendor_question_t2": null
+          "vendor_question_terse": "Is your solution listed on IMDA InvoiceNow-Ready Solution Provider (IRSP) Listing?\n\n[1] If you are the Product Principal of the solution, you are required to be accredited as an IRSP by IMDA. [2] If you are the reseller of the solution, your Solution Product Principal must declare to IMDA that you are an authorised reseller of their solution.\nNote: For more information on InvoiceNow, refer to: Becoming an InvoiceNow-Ready Solution Provider | E-invoicing | IMDA (https://www.imda.gov.sg/how-we-can-help/nationwide-e-invoicing-framework/becoming-an-invoicenow-ready-solution-provider)\n"
         },
         "author": "human-review",
-        "edited_at": "2026-05-08",
-        "note": "Renamed cap to anchor it to the IMDA accreditation programme rather than the underlying PEPPOL standard, and rewrote the Type 1.1 question to match the PSG submission language (\"Is your solution listed on IMDA IRSP Listing?\"). Tier untouched.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — rewrote IMDA accreditation explainer body from second person (\"If you are the Product Principal, you are required…\") to third person, preserving IMDA semantics. Layers on top of the 2026-05-08 rename entry above (name + t2 retained). URL slashes still flag vq_terse_uses_connector P0 — covered later in step 5/6."
       },
       "sector_relevance": {
         "generic": true,
@@ -11439,7 +11479,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_accounting",
         "odoo_invoicing",
@@ -14853,7 +14893,7 @@
     },
     {
       "id": "fin.mobile_access",
-      "name": "Mobile and Multi-Device Access",
+      "name": "Cloud and Multi-Device Accessibility",
       "description": "The finance system works on phones, tablets, and desktops. Universal requirement — PSG asks every vendor \"is this cloud and multi-device accessible?\" as the first question on every sol cat. Approvers need to sign bills from their phone, owners check cashflow on tablets.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -15216,14 +15256,14 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "name"
         ],
         "original": {
-          "sme_tier": "preferred"
+          "name": "Mobile and Multi-Device Access"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "PROMOTED from Preferred to Mandatory per 2026-05-15 mobile_access\ncross-module review (Position B: phone-mobile interpretation).\nApprovers/owner-managers in SG SMEs approve invoices, AP runs, and\nexpense claims while travelling — daily mobile activity. Parity with\nhr.mobile_access (promoted 2026-05-14). Step 15 baseline demote is\noverridden here because for SG SME finance buyers, mobile access is a\nuniversal expectation. IMDA: 3-in-1 ERP + Acct Mgmt sol cats Q1\n\"Cloud and Multi-Device Accessibility\" mandatory.\nSolution evidence (cheapest plan in_base): Odoo, ERPNext, Sage 300,\nGlobe3, Epicor. Big SaaS leaders no_data in extracts (Xero/QBO mobile\napps are flagship features per WebFetch evidence files).\nNote: sc.mobile_access and sales.mobile_access stay Preferred —\nwarehouse-handheld + field-sales-rep are specialty use cases, not\nuniversal SG SME shape.\n"
+        "edited_at": "2026-05-09",
+        "note": "Aligned to IMDA Q1 phrasing of essential-business__document-management- and-mobile-access-system (\"Cloud and Multi-Device Accessibility\"; req: \"For cloud-based, mobile-based, and/or web-based usage\"). Replaces the previous \"Mobile and Multi-Device Access\" name + the longer vendor question that didn't match IMDA standard wording. The IMDA trace was added separately in data/manual_imda_ref_overrides.yaml (10 entries).\n"
       },
       "sector_relevance": {
         "generic": true,
@@ -16353,7 +16393,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "netsuite",
         "odoo_accounting",
@@ -16994,14 +17034,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "sme_tier"
         ],
         "original": {
-          "in_checklist": null
+          "sme_tier": "required"
         },
         "author": "human-review",
         "edited_at": "2026-05-09",
-        "note": "Cross-cutting baseline — not module-specific Mandatory. Demoted to Preferred + in_checklist:false so it joins data_governance and user_access_roles under Optional / Add-ons. Universal data import/export concern; every modern ERP provides it; not a verdict gate.\n"
+        "note": "Published via editor on 2026-05-09"
       },
       "sector_relevance": {
         "generic": true,
@@ -17397,8 +17437,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-15T13:08:50.203387+08:00",
-    "step16_applied_count": 2,
+    "step16_applied_at": "2026-05-18T01:08:45.483266+08:00",
+    "step16_applied_count": 13,
     "step15_generated_at": "2026-05-15T12:33:32.883705+08:00",
     "step15_processed": 26
   }

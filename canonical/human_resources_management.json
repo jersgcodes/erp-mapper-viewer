@@ -10127,7 +10127,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "workday_hcm",
         "sap_successfactors",
@@ -10752,7 +10752,7 @@
         },
         "author": "human-review",
         "edited_at": "2026-05-14",
-        "note": "Demoted from Mandatory to Preferred per 2026-05-14 HR walkthrough.\nIMDA mandate is ZERO. Compensation planning / merit cycles are\nfull-HCM territory, not the SG payroll-baseline. Keep on\nchecklist as Preferred for vendors that offer it.\n"
+        "note": "Demoted from Mandatory to Preferred per 2026-05-14 HR walkthrough.\nTriangulated signals: IMDA mandate is ZERO in HRMS sol cat (only\nin Rewards specialist sol cat). SG SME need is low — comp set at\nhire + AWS via payroll. Full comp planning (merit, equity, bonus\npools) is enterprise HCM.\n"
       }
     },
     {
@@ -10765,7 +10765,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "bamboohr",
         "workday_hcm",
@@ -11357,7 +11357,7 @@
         },
         "author": "human-review",
         "edited_at": "2026-05-14",
-        "note": "Demoted from Mandatory to Preferred per 2026-05-14 HR walkthrough.\nIMDA mandate is ZERO — no sol cat marks benefits administration\nas mandatory. Not part of the SG pre-approval baseline.\nBelongs to full-HCM (Workday / SuccessFactors) territory.\n"
+        "note": "Demoted from Mandatory to Preferred per 2026-05-14 HR walkthrough.\nTriangulated signals: IMDA mandate is ZERO in the HRMS sol cat\n(only appears in HRSS-payroll specialist sol cat). SG context:\nhealth/dental/retirement plans are handled by external brokers,\nnot the HRIS. Full benefits-admin is enterprise HCM territory\n(Workday / SuccessFactors).\n"
       }
     },
     {
@@ -13476,7 +13476,7 @@
           }
         ],
         "total_input_items": 4,
-        "question_terse": "Does your solution allow you to forecast future headcount needs and associated labour costs?",
+        "question_terse": "Does your solution forecast future headcount needs and associated labour costs?",
         "question_t2": "Forecast future headcount needs and associated labour costs"
       },
       "sector_relevance": {
@@ -13559,7 +13559,18 @@
       "family": "Lifecycle & Analytics",
       "sub_module_id": "hr_lifecycle_analytics",
       "sub_module_name": "HR Lifecycle & Analytics",
-      "sub_module_desc": "Workforce planning, disciplinary/grievance, exit/alumni, HR dashboards, AI/ML people insights."
+      "sub_module_desc": "Workforce planning, disciplinary/grievance, exit/alumni, HR dashboards, AI/ML people insights.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_terse"
+        ],
+        "original": {
+          "vendor_question_terse": "Does your solution allow you to forecast future headcount needs and associated labour costs?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — stripped 'allow you to' from terse."
+      }
     },
     {
       "id": "hr.shift_scheduling",
@@ -19626,7 +19637,7 @@
     },
     {
       "id": "hr.mobile_access",
-      "name": "Mobile and Multi-Device Access",
+      "name": "Cloud and Multi-Device Accessibility",
       "description": "Employees, managers, and HR access the system from phones, tablets, and desktops. Universal — PSG asks every vendor about cloud and multi-device accessibility, and modern SG employees expect to apply for leave, view payslips, and clock in from their phone.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -20205,14 +20216,14 @@
       "sub_module_desc": null,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "name"
         ],
         "original": {
-          "sme_tier": "preferred"
+          "name": "Mobile and Multi-Device Access"
         },
         "author": "human-review",
-        "edited_at": "2026-05-14",
-        "note": "PROMOTED from Preferred to Mandatory per 2026-05-14 HR walkthrough\n(Cloud and Multi-Device Accessibility). Triangulated signals:\nlandscape 71% cheapest plan (every modern HRIS is cloud + mobile).\nSME need: high — employees expect to access HR on phone. Pairs\nwith hr.self_service_portal — both are about modern access\npatterns.\n"
+        "edited_at": "2026-05-09",
+        "note": "Aligned to IMDA Q1 phrasing of essential-business__document-management- and-mobile-access-system (\"Cloud and Multi-Device Accessibility\"; req: \"For cloud-based, mobile-based, and/or web-based usage\"). Replaces the previous \"Mobile and Multi-Device Access\" name + the longer vendor question that didn't match IMDA standard wording. The IMDA trace was added separately in data/manual_imda_ref_overrides.yaml (10 entries).\n"
       },
       "_meta": {
         "demoted_by_step15": true,
@@ -23302,8 +23313,8 @@
   "_meta": {
     "step15_generated_at": "2026-05-15T12:23:50.156570+08:00",
     "step15_processed": 0,
-    "step16_applied_at": "2026-05-15T02:59:49.010977+08:00",
-    "step16_applied_count": 0,
+    "step16_applied_at": "2026-05-18T01:08:46.001313+08:00",
+    "step16_applied_count": 4,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-14T10:45:03.622900+08:00",

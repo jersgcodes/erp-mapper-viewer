@@ -5777,7 +5777,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "ms_project",
         "oracle_primavera",
@@ -6229,14 +6229,14 @@
       "sub_module_desc": "Gantt/critical path, risk register, multi-project/programme, earned value, customer portal, workflow automation, task dependencies.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "sme_tier"
         ],
         "original": {
-          "vendor_question_t2": "Interactive Gantt chart with task bars, dependency arrows, critical path highlighting, and baseline comparison for schedule tracking."
+          "sme_tier": "required"
         },
         "author": "human-review",
         "edited_at": "2026-05-16",
-        "note": "Project t2 cleanup. 17→12 words."
+        "note": "DEMOTE Required → Preferred. Vendor evidence 2/5 (Asana medium +\nSmartsheet medium, no high-confidence vendor). SG SME PM tools\n(Asana, Trello, ClickUp) de-emphasise Gantt + critical-path —\nit's more a construction / large-engineering-project tool.\nStays Preferred for project-heavy SMEs (construction, civil\nengineering, large-build) that genuinely need CPM.\n"
       }
     },
     {
@@ -12304,7 +12304,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "jira",
         "ms_project",
@@ -12870,14 +12870,14 @@
       "sub_module_desc": "Gantt/critical path, risk register, multi-project/programme, earned value, customer portal, workflow automation, task dependencies.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "sme_tier"
         ],
         "original": {
-          "vendor_question_t2": "Configurable workflow rules that automate task routing, status transitions, notifications, and multi-level approvals without custom code."
+          "sme_tier": "preferred"
         },
         "author": "human-review",
         "edited_at": "2026-05-16",
-        "note": "Project t2 cleanup. 16→13 words."
+        "note": "PROMOTE Preferred → Required. Vendor evidence 5/5 (4 high) —\nstrong SME-tier substantiation: Asana high, ClickUp high, Jira\nhigh (3 SME-tier vendors at high). Workflow automation +\napprovals is now table stakes across every modern PM tool.\nSG SME PM users (consulting / agency / engineering services)\ndepend on automated routing and approval workflows.\n"
       }
     },
     {
@@ -14519,7 +14519,7 @@
     },
     {
       "id": "proj.mobile_access",
-      "name": "Mobile and Multi-Device Access",
+      "name": "Cloud and Multi-Device Accessibility",
       "description": "The solution works on phones, tablets, and desktops. Universal requirement — PSG asks every vendor about cloud and multi-device access as the first question on every sol cat.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -17115,8 +17115,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-16T00:03:13.234990+08:00",
-    "step16_applied_count": 1,
+    "step16_applied_at": "2026-05-18T01:08:46.781191+08:00",
+    "step16_applied_count": 3,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-13T02:57:22.090436+08:00",

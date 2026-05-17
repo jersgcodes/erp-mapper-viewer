@@ -6379,15 +6379,15 @@
     },
     {
       "id": "sales.pricing_discounts",
-      "name": "Pricing, Discounts and Promotions",
-      "description": "Manage the price book, customer-specific price lists, volume discounts, promotions, and coupon codes — with the approval controls needed to protect margin.\n",
+      "name": "Pricing and Discounts",
+      "description": "Maintains pricing and discount rules applied automatically per customer at quote and invoice.\n",
       "priority_proxy": "must_have",
       "applicability": [
         "sme",
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "odoo_sales",
         "netsuite",
@@ -7090,14 +7090,12 @@
         "fields_overridden": [
           "sme_tier",
           "name",
-          "description",
-          "vendor_question"
+          "description"
         ],
         "original": {
           "sme_tier": "preferred",
-          "name": "Pricing, Discounts & Promotions",
-          "description": "Manage the price book, customer-specific price lists, volume discounts, promotions, and coupon codes — with the approval controls needed to protect margin.\n",
-          "vendor_question": "Does your solution manage multiple price lists, discounts and promotions, approval workflows, and margin visibility, so pricing changes are controlled and margins are protected?"
+          "name": "Pricing, Discounts and Promotions",
+          "description": "Manage the price book, customer-specific price lists, volume discounts, promotions, and coupon codes — with the approval controls needed to protect margin.\n"
         },
         "author": "human-review",
         "edited_at": "2026-05-15",
@@ -9313,7 +9311,7 @@
           }
         ],
         "total_input_items": 10,
-        "question_terse": "Does your solution allow you to create and publish web pages that capture visitor inquiries as contact records?",
+        "question_terse": "Does your solution create and publish web pages that capture visitor inquiries as contact records?",
         "question_t2": "Create and publish web pages that capture visitor inquiries as contact records"
       },
       "sector_relevance": {
@@ -9387,6 +9385,17 @@
             "reason": "B2B order-driven; integrated marketing website not core function"
           }
         }
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_terse"
+        ],
+        "original": {
+          "vendor_question_terse": "Does your solution allow you to create and publish web pages that capture visitor inquiries as contact records?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — stripped 'allow you to' from terse."
       }
     },
     {
@@ -12409,7 +12418,7 @@
     },
     {
       "id": "sales.mobile_access",
-      "name": "Mobile and Multi-Device Access",
+      "name": "Cloud and Multi-Device Accessibility",
       "description": "The solution works on phones, tablets, and desktops. Universal requirement — PSG asks every vendor \"is this cloud and multi-device accessible?\" as the first question on every sol cat. Every modern SME expects their business software to be usable on a mobile device.\n",
       "priority_proxy": "must_have",
       "applicability": [
@@ -12880,12 +12889,10 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "name",
-          "vendor_question"
+          "name"
         ],
         "original": {
-          "name": "Mobile and Multi-Device Access",
-          "vendor_question": "Does your solution provide full customer record access and interaction logging across multiple device types and platforms, with offline capability and automatic synchronisation, so your team can work from any location?"
+          "name": "Mobile and Multi-Device Access"
         },
         "author": "human-review",
         "edited_at": "2026-05-09",
@@ -19393,20 +19400,20 @@
           }
         ],
         "total_input_items": 7,
-        "question_terse": "Does your solution allow you to create and send targeted email campaigns to segmented audiences?",
+        "question_terse": "Does your solution create and send targeted email campaigns to segmented audiences?",
         "question_t2": "Create and send targeted email campaigns to segmented audiences"
       },
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_terse"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_terse": "Does your solution allow you to create and send targeted email campaigns to segmented audiences?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-08",
-        "note": "Demoted to Optional / Add-on. Email/drip/landing-page automation is a Marketing-tool concern (Mailchimp, HubSpot Marketing) rather than core CRM — most SMEs use a separate marketing app. Stays visible under Optional / Add-ons.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — stripped 'allow you to' from terse. Layers on top of 2026-05-08 in_checklist:false entry above."
       },
       "sector_relevance": {
         "generic": false,
@@ -23980,20 +23987,20 @@
           }
         ],
         "total_input_items": 3,
-        "question_terse": "Does your solution allow you to sell products across multiple online marketplaces from a single catalogue?",
+        "question_terse": "Does your solution sell products across multiple online marketplaces from a single catalogue?",
         "question_t2": "Sell products across multiple online marketplaces from a single catalogue"
       },
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_terse"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_terse": "Does your solution allow you to sell products across multiple online marketplaces from a single catalogue?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-08",
-        "note": "Demoted to Optional / Add-on. Marketplace breadth (Amazon / Shopee / Lazada / eBay / TikTok Shop) is a niche vendor specialty, not a generic SME sales requirement. Stays visible under Optional / Add-ons.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — stripped 'allow you to' from terse. Layers on top of 2026-05-08 in_checklist:false entry above."
       },
       "sector_relevance": {
         "generic": false,
@@ -26231,7 +26238,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "netsuite",
         "odoo_crm",
@@ -27031,7 +27038,7 @@
           }
         ],
         "total_input_items": 8,
-        "question_terse": "Does your solution allow data to move between your system and external sources?",
+        "question_terse": "Does your solution move data between the system and external sources?",
         "question_t2": "Move between the system and external sources"
       },
       "_meta": {
@@ -27041,14 +27048,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "vendor_question_terse"
         ],
         "original": {
-          "sme_tier": "required"
+          "vendor_question_terse": "Does your solution allow data to move between your system and external sources?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Published via editor on 2026-05-09"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — 'between your system and external sources' → 'between the system and external sources'."
       },
       "sector_relevance": {
         "generic": true,
@@ -27456,8 +27463,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-15T13:08:50.521271+08:00",
-    "step16_applied_count": 4,
+    "step16_applied_at": "2026-05-18T01:08:47.034887+08:00",
+    "step16_applied_count": 7,
     "reorder_overrides": {
       "cap_order": {
         "required:all": [

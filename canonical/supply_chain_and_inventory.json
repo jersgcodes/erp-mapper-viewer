@@ -5059,8 +5059,19 @@
           }
         ],
         "total_input_items": 6,
-        "question_terse": "Does your solution allow you to count physical inventory and reconcile it to system records?",
+        "question_terse": "Does your solution count physical inventory and reconcile it to system records?",
         "question_t2": "Count physical inventory and reconcile it to system records"
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_terse"
+        ],
+        "original": {
+          "vendor_question_terse": "Does your solution allow you to count physical inventory and reconcile it to system records?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — stripped 'allow you to' from terse."
       }
     },
     {
@@ -7268,8 +7279,19 @@
           }
         ],
         "total_input_items": 7,
-        "question_terse": "Does your solution allow you to manage inventory across multiple warehouse locations?",
+        "question_terse": "Does your solution manage inventory across multiple warehouse locations?",
         "question_t2": "Manage inventory across multiple warehouse locations"
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_terse"
+        ],
+        "original": {
+          "vendor_question_terse": "Does your solution allow you to manage inventory across multiple warehouse locations?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — stripped 'allow you to' from terse."
       }
     },
     {
@@ -10179,8 +10201,19 @@
           }
         ],
         "total_input_items": 6,
-        "question_terse": "Does your solution allow you to define and manage product kits as single sellable units?",
+        "question_terse": "Does your solution define and manage product kits as single sellable units?",
         "question_t2": "Define and manage product kits as single sellable units"
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_terse"
+        ],
+        "original": {
+          "vendor_question_terse": "Does your solution allow you to define and manage product kits as single sellable units?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — stripped 'allow you to' from terse."
       }
     },
     {
@@ -13870,7 +13903,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_terse": "Does your solution allow you to assign user access permissions based on defined roles?",
+        "question_terse": "Does your solution assign user access permissions based on defined roles?",
         "question_t2": "Assign user access permissions based on defined roles"
       },
       "_meta": {
@@ -13880,14 +13913,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question_terse"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question_terse": "Does your solution allow you to assign user access permissions based on defined roles?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-07",
-        "note": "Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_all_modules: propagates to fin.user_access_roles, hr.user_access_roles, sales.user_access_roles, etc. Pair with other.data_governance.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 3 — stripped 'allow you to' from terse. Other modules' *.user_access_roles terses are already third-person; only the sc.* instance carried 'you'."
       }
     },
     {
@@ -14926,8 +14959,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-17T04:56:36.295601+08:00",
-    "step16_applied_count": 13,
+    "step16_applied_at": "2026-05-18T01:08:47.313504+08:00",
+    "step16_applied_count": 7,
     "reorder_overrides": {
       "cap_order": {
         "required:all": [
