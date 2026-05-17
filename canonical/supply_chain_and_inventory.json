@@ -5580,7 +5580,7 @@
     {
       "id": "sc.delivery_dispatch",
       "name": "Delivery and Dispatch",
-      "description": "Pick, pack, and ship outbound orders — from sales order allocation through wave/batch picking, packing, carrier label generation, and proof of delivery.\n",
+      "description": "Pick, pack, and ship outbound orders — from sales order allocation through wave or batch picking, packing, carrier label generation, and proof of delivery.\n",
       "priority_proxy": "must_have",
       "applicability": [
         "sme",
@@ -7297,7 +7297,7 @@
     {
       "id": "sc.barcode_scanning",
       "name": "Inventory Data Capture",
-      "description": "Capture inventory data via any combination of barcode/QR code\nscanning, CSV/Excel batch upload, or API integration from POS,\necommerce platforms, or upstream ERP systems. Vendor question is\ntier-agnostic to acceptable input methods — SMEs with <100 SKUs\nmay not need scanners but still need a defensible inventory entry\nmethod.\n",
+      "description": "Capture inventory data via any combination of barcode/QR code\nscanning, CSV or Excel batch upload, or API integration from POS,\necommerce platforms, or upstream ERP systems. Vendor question is\ntier-agnostic to acceptable input methods — SMEs with <100 SKUs\nmay not need scanners but still need a defensible inventory entry\nmethod.\n",
       "priority_proxy": "must_have",
       "applicability": [
         "sme",
@@ -7726,7 +7726,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution support multiple inventory data-capture\nmethods so SMEs can choose what fits their warehouse setup —\nbarcode / QR scanning, CSV / Excel batch upload, or API\nintegration from POS / ecommerce platforms?\n",
+        "question": "Does your solution support multiple inventory data-capture\nmethods so SMEs can choose what fits their warehouse setup —\nbarcode/QR scanning, CSV or Excel batch upload, or API\nintegration from POS or ecommerce platforms?\n",
         "free_text_prompt": "Describe which warehouse workflows (receiving, putaway, picking, counting, transfers) your scanning module covers, and how labels are generated and applied.",
         "covers": [
           {
@@ -7755,7 +7755,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_terse": "Does your solution support inventory data capture via barcode/QR\nscanning, CSV/Excel upload, or API integration?\n",
+        "question_terse": "Does your solution support inventory data capture via barcode/QR\nscanning, CSV or Excel upload, or API integration?\n",
         "question_t2": "Capture inventory data via barcode or QR scanning, CSV upload, or API."
       },
       "_cap_override": {
