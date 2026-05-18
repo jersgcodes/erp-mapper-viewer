@@ -9369,7 +9369,8 @@
             "reason": "High-volume transactions require controls and auditor-ready evidence"
           }
         }
-      }
+      },
+      "baseline": true
     },
     {
       "id": "fin.period_close",
@@ -11467,7 +11468,8 @@
             "reason": "GST-registered; high-volume invoicing; PEPPOL mandate"
           }
         }
-      }
+      },
+      "baseline": true
     },
     {
       "id": "fin.payment_gateways",
@@ -17120,6 +17122,1064 @@
           }
         }
       }
+    },
+    {
+      "id": "fin.compliance_audit",
+      "name": "Compliance and Audit Framework",
+      "description": "Cross-module audit log, compliance posture tracking, and governance controls — who did what, when, and whether it complied with policy. Supports PDPA, SOC 2, and regulatory audit requirements.\n",
+      "priority_proxy": "standard",
+      "applicability": [
+        "sme",
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "preferred",
+      "cited_sources": [
+        "ms_365",
+        "odoo_platform",
+        "erpnext_core"
+      ],
+      "requirements": [
+        {
+          "text": "Immutable audit log recording all create, update, and delete operations with username, timestamp, and action details",
+          "source": "both",
+          "proxy_refs": [
+            "Immutable audit log of all create, update, and delete operations"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00111",
+              "text": "An audit trail to track all actions and changes taken on evidence items with usernames, dates, and time stamps",
+              "q_title": "Audit Trail",
+              "subsection": "Audit Trail",
+              "sources": [
+                "legal__evidence-management-platform"
+              ]
+            },
+            {
+              "id": "req-00561",
+              "text": "Does your solution maintain an audit trail and provide a clear chain of custody for all processed data",
+              "q_title": "Audit Trail",
+              "subsection": "Audit Trail",
+              "sources": [
+                "legal__ediscovery-tool"
+              ]
+            },
+            {
+              "id": "req-00562",
+              "text": "Does your solution maintain comprehensive audit trails and activity logs for all matter-related activities, document changes, and user interactions",
+              "q_title": "Audit Trail and Activity Log",
+              "subsection": "Audit Trail and Activity Log",
+              "sources": [
+                "legal__matters-management-and-collaboration-tool"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "erpnext_core",
+            "ms_365",
+            "odoo_platform"
+          ],
+          "solcat_citations": [
+            "essential-business__document-management-and-mobile-access-system",
+            "legal__ediscovery-tool",
+            "legal__evidence-management-platform",
+            "legal__matters-management-and-collaboration-tool"
+          ],
+          "feature_id": "compliance_audit.audit_logging",
+          "feature_name": "Audit Logging",
+          "criticality": "must_have",
+          "sme_attribution": {
+            "status": "rolled_up",
+            "reason": "rolled up into SME item #1",
+            "sme_idx": 0,
+            "sme_text": "Record all create, update, and delete operations with user, timestamp, and action details immutably"
+          },
+          "sector_coverage": {
+            "vertical_count": 1,
+            "verticals": [
+              "Legal"
+            ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 3,
+            "is_generic": true,
+            "cross_cutting": [
+              "audit_trail"
+            ]
+          },
+          "verification": {
+            "method": "screenshot",
+            "instruction": "Show audit log entry with username, timestamp, record ID, and action type visible."
+          }
+        },
+        {
+          "text": "Audit log search and filtering by user, date, record type, and action",
+          "source": "proxy",
+          "proxy_refs": [
+            "Audit log search and filter by user, date, record type, and action"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext_core",
+            "ms_365",
+            "odoo_platform"
+          ],
+          "solcat_citations": [],
+          "feature_id": "compliance_audit.audit_logging",
+          "feature_name": "Audit Logging",
+          "criticality": "must_have",
+          "sme_attribution": {
+            "status": "rolled_up",
+            "reason": "rolled up into SME item #2",
+            "sme_idx": 1,
+            "sme_text": "Search and filter audit logs by user, date, record type, and action performed"
+          },
+          "sector_coverage": {
+            "vertical_count": 0,
+            "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 0,
+            "is_generic": true,
+            "cross_cutting": [
+              "audit_trail"
+            ]
+          },
+          "verification": {
+            "method": "demo",
+            "instruction": "Open audit log search, filter by user/date/record type, verify results returned."
+          }
+        },
+        {
+          "text": "Data retention and purge policies with audit trail of deletions",
+          "source": "proxy",
+          "proxy_refs": [
+            "Data retention and purge policies with audit trail"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext_core",
+            "ms_365",
+            "odoo_platform"
+          ],
+          "solcat_citations": [],
+          "feature_id": "compliance_audit.data_lifecycle",
+          "feature_name": "Data Lifecycle",
+          "criticality": "must_have",
+          "sme_attribution": {
+            "status": "rolled_up",
+            "reason": "rolled up into SME item #3",
+            "sme_idx": 2,
+            "sme_text": "Define data retention and purge policies with audit trail documenting all deletions"
+          },
+          "sector_coverage": {
+            "vertical_count": 0,
+            "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 0,
+            "is_generic": true,
+            "cross_cutting": [
+              "audit_trail"
+            ]
+          },
+          "verification": {
+            "method": "config_check",
+            "instruction": "Show data retention policy settings with purge schedule and deletion audit trail option."
+          }
+        },
+        {
+          "text": "Audit report generation for external auditors and regulatory bodies",
+          "source": "proxy",
+          "proxy_refs": [
+            "Audit report generation for external auditors"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext_core",
+            "ms_365",
+            "odoo_platform"
+          ],
+          "solcat_citations": [],
+          "feature_id": "compliance_audit.audit_reporting",
+          "feature_name": "Audit Reporting",
+          "criticality": "must_have",
+          "sme_attribution": {
+            "status": "rolled_up",
+            "reason": "rolled up into SME item #4",
+            "sme_idx": 3,
+            "sme_text": "Generate audit reports for external auditors and regulatory bodies on demand"
+          },
+          "sector_coverage": {
+            "vertical_count": 0,
+            "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 0,
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
+          },
+          "verification": {
+            "method": "screenshot",
+            "instruction": "Display audit report template with standard regulatory sections and export option."
+          }
+        },
+        {
+          "text": "Compliance checklist tracking for regulatory frameworks (PDPA, Cyber Essentials, SOC 2)",
+          "source": "proxy",
+          "proxy_refs": [
+            "Compliance checklist tracking (PDPA, Cyber Essentials, SOC 2)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext_core",
+            "ms_365",
+            "odoo_platform"
+          ],
+          "solcat_citations": [],
+          "feature_id": "compliance_audit.compliance_monitoring",
+          "feature_name": "Compliance Monitoring",
+          "criticality": "standard",
+          "sme_attribution": {
+            "status": "rolled_up",
+            "reason": "rolled up into SME item #5",
+            "sme_idx": 4,
+            "sme_text": "Track compliance status against regulatory frameworks and maintain checklist evidence"
+          },
+          "sector_coverage": {
+            "vertical_count": 0,
+            "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 0,
+            "is_generic": true,
+            "cross_cutting": [
+              "pdpa_compliance"
+            ]
+          },
+          "verification": {
+            "method": "screenshot",
+            "instruction": "Show compliance checklist screen with PDPA/Cyber Essentials/SOC 2 framework items and status."
+          }
+        },
+        {
+          "text": "Periodic access review workflow to document who has access to what resources",
+          "source": "proxy",
+          "proxy_refs": [
+            "Periodic access review workflow (who has access to what)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "erpnext_core",
+            "ms_365",
+            "odoo_platform"
+          ],
+          "solcat_citations": [],
+          "feature_id": "compliance_audit.access_governance",
+          "feature_name": "Access Governance",
+          "criticality": "standard",
+          "sme_attribution": {
+            "status": "rolled_up",
+            "reason": "rolled up into SME item #6",
+            "sme_idx": 5,
+            "sme_text": "Document periodic access reviews showing who has access to which resources"
+          },
+          "sector_coverage": {
+            "vertical_count": 0,
+            "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 0,
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
+          },
+          "verification": {
+            "method": "demo",
+            "instruction": "Initiate access review workflow, assign reviewers, show approval and documentation."
+          }
+        },
+        {
+          "text": "Document access history tracking with username, date, and timestamp",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00112",
+              "text": "An audit trail to track document access history with username, dates and time stamps",
+              "q_title": "Audit Trail",
+              "subsection": "Audit Trail",
+              "sources": [
+                "legal__document-management-system-dms"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__document-management-system-dms"
+          ],
+          "feature_id": "compliance_audit.activity_tracking",
+          "feature_name": "Activity Tracking",
+          "criticality": "standard",
+          "sme_attribution": {
+            "status": "rolled_up",
+            "reason": "rolled up into SME item #7",
+            "sme_idx": 6,
+            "sme_text": "Record document access history with username, date, and timestamp for each view"
+          },
+          "sector_coverage": {
+            "vertical_count": 1,
+            "verticals": [
+              "Legal"
+            ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 1,
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
+          },
+          "verification": {
+            "method": "screenshot",
+            "instruction": "Display document access log showing username, access date, timestamp, and action."
+          }
+        },
+        {
+          "text": "Version control and audit trail for document review activities to track changes and ensure accountability",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00565",
+              "text": "Does your solution maintain version control and provide an audit trail for all document review activities to track changes and ensure accountability",
+              "q_title": "Version Control and Audit Trail",
+              "subsection": "Version Control and Audit Trail",
+              "sources": [
+                "legal__document-review-software",
+                "legal__ediscovery-tool"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__document-review-software",
+            "legal__ediscovery-tool"
+          ],
+          "feature_id": "compliance_audit.activity_tracking",
+          "feature_name": "Activity Tracking",
+          "criticality": "standard",
+          "sme_attribution": {
+            "status": "rolled_up",
+            "reason": "rolled up into SME item #8",
+            "sme_idx": 7,
+            "sme_text": "Maintain version control and audit trail for document and template changes"
+          },
+          "sector_coverage": {
+            "vertical_count": 1,
+            "verticals": [
+              "Legal"
+            ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 1,
+            "is_generic": true,
+            "cross_cutting": [
+              "audit_trail"
+            ]
+          },
+          "verification": {
+            "method": "screenshot",
+            "instruction": "Show document version history with reviewer names, timestamps, and change annotations."
+          }
+        },
+        {
+          "text": "Version control and audit trail for template and document assembly activities to track changes and ensure accountability",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00566",
+              "text": "Does your solution maintain version control and provide an audit trail for all template and document assembly activities to track changes and ensure accountability",
+              "q_title": "Version Control and Audit Trail",
+              "subsection": "Version Control and Audit Trail",
+              "sources": [
+                "legal__document-assembly-software"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__document-assembly-software"
+          ],
+          "feature_id": "compliance_audit.activity_tracking",
+          "feature_name": "Activity Tracking",
+          "criticality": "standard",
+          "sme_attribution": {
+            "status": "rolled_up",
+            "reason": "rolled up into SME item #8",
+            "sme_idx": 7,
+            "sme_text": "Maintain version control and audit trail for document and template changes"
+          },
+          "sector_coverage": {
+            "vertical_count": 1,
+            "verticals": [
+              "Legal"
+            ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 1,
+            "is_generic": true,
+            "cross_cutting": [
+              "audit_trail"
+            ]
+          },
+          "verification": {
+            "method": "screenshot",
+            "instruction": "Show template/document assembly version control with change log and user attribution."
+          }
+        },
+        {
+          "text": "Audit trail for risk assessment modifications with username, date, and timestamp",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00113",
+              "text": "An audit trail to track modifications to the risk assessment with usernames, dates, and time stamps",
+              "q_title": "Risk Assessment Audit Trail",
+              "subsection": "Risk Assessment Audit Trail",
+              "sources": [
+                "legal__risk-assessment-solution-kyc-aml"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__risk-assessment-solution-kyc-aml"
+          ],
+          "feature_id": "compliance_audit.activity_tracking",
+          "feature_name": "Activity Tracking",
+          "criticality": "standard",
+          "sme_attribution": {
+            "status": "rolled_up",
+            "reason": "rolled up into SME item #9",
+            "sme_idx": 8,
+            "sme_text": "Record all risk assessment modifications with username, date, and timestamp"
+          },
+          "sector_coverage": {
+            "vertical_count": 1,
+            "verticals": [
+              "Legal"
+            ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 1,
+            "is_generic": true,
+            "cross_cutting": [
+              "audit_trail"
+            ]
+          },
+          "verification": {
+            "method": "screenshot",
+            "instruction": "Display risk assessment record with audit trail showing modification user, date, and timestamp."
+          }
+        },
+        {
+          "text": "Audit trail and reporting for permit-to-work applications",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00162",
+              "text": "Audit trails and generate reports on the permit-to-work applications",
+              "q_title": "Audits Trails and Report Generation",
+              "subsection": "Audits Trails and Report Generation",
+              "sources": [
+                "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw"
+          ],
+          "feature_id": "compliance_audit.activity_tracking",
+          "feature_name": "Activity Tracking",
+          "criticality": "advanced",
+          "sme_attribution": {
+            "status": "excluded",
+            "reason": "advanced-tier — not minimum"
+          },
+          "sector_coverage": {
+            "vertical_count": 1,
+            "verticals": [
+              "Built Environment"
+            ],
+            "psg_sectors": [
+              "Built Environment"
+            ],
+            "psg_sector_count": 1,
+            "sol_cat_count": 1,
+            "is_generic": true,
+            "cross_cutting": [
+              "audit_trail"
+            ]
+          },
+          "verification": {
+            "method": "demo",
+            "instruction": "Walk through permit-to-work application creation and show complete audit trail with timestamps and user actions."
+          }
+        },
+        {
+          "text": "Legal hold management to impose holds on data and prevent alteration or deletion during eDiscovery processes",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__ediscovery-tool"
+          ],
+          "feature_id": "compliance_audit.data_lifecycle",
+          "feature_name": "Data Lifecycle",
+          "criticality": "advanced",
+          "sme_attribution": {
+            "status": "excluded",
+            "reason": "advanced-tier — not minimum"
+          },
+          "sector_coverage": {
+            "vertical_count": 0,
+            "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 0,
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
+          },
+          "verification": {
+            "method": "config_check",
+            "instruction": "Show legal hold configuration settings and demonstrate hold placement on a data record with deletion prevention."
+          }
+        },
+        {
+          "text": "Chain of custody tracking for all processed data",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00561",
+              "text": "Does your solution maintain an audit trail and provide a clear chain of custody for all processed data",
+              "q_title": "Audit Trail",
+              "subsection": "Audit Trail",
+              "sources": [
+                "legal__ediscovery-tool"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__ediscovery-tool"
+          ],
+          "feature_id": "compliance_audit.access_governance",
+          "feature_name": "Access Governance",
+          "criticality": "advanced",
+          "sme_attribution": {
+            "status": "excluded",
+            "reason": "advanced-tier — not minimum"
+          },
+          "sector_coverage": {
+            "vertical_count": 1,
+            "verticals": [
+              "Legal"
+            ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 1,
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
+          },
+          "verification": {
+            "method": "screenshot",
+            "instruction": "Display chain of custody report showing data handling history with user, timestamp, and action details."
+          }
+        },
+        {
+          "text": "Real-time monitoring, alerting, and notification of compliance events, incidents, and issues with mitigation actions",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "security__security-collaboration-platform"
+          ],
+          "feature_id": "compliance_audit.compliance_monitoring",
+          "feature_name": "Compliance Monitoring",
+          "criticality": "advanced",
+          "sme_attribution": {
+            "status": "excluded",
+            "reason": "advanced-tier — not minimum"
+          },
+          "sector_coverage": {
+            "vertical_count": 0,
+            "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 0,
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
+          },
+          "verification": {
+            "method": "demo",
+            "instruction": "Trigger a compliance event and show real-time alert, notification, and mitigation action workflow."
+          }
+        },
+        {
+          "text": "Monitoring and tracking of changes to regulatory requirements with guidance on compliance updates",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "essential-business__cross-border-e-commerce-packages",
+            "estate-agency__document-management-and-transaction-records-submission-for-estate-agents"
+          ],
+          "feature_id": "compliance_audit.compliance_monitoring",
+          "feature_name": "Compliance Monitoring",
+          "criticality": "advanced",
+          "sme_attribution": {
+            "status": "excluded",
+            "reason": "advanced-tier — not minimum"
+          },
+          "sector_coverage": {
+            "vertical_count": 0,
+            "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 0,
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
+          },
+          "verification": {
+            "method": "screenshot",
+            "instruction": "Show regulatory requirement tracking dashboard with change logs and compliance guidance updates."
+          }
+        },
+        {
+          "text": "Conflict of interest detection and compliance validation against local statutory requirements",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00493",
+              "text": "Does your solution check for conflicts of interest and compliance with local statutory requirements",
+              "q_title": "Conflict of Interest and Compliance Checking",
+              "subsection": "Conflict of Interest and Compliance Checking",
+              "sources": [
+                "legal__practice-management-system-pms"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__practice-management-system-pms"
+          ],
+          "feature_id": "compliance_audit.compliance_monitoring",
+          "feature_name": "Compliance Monitoring",
+          "criticality": "advanced",
+          "sme_attribution": {
+            "status": "excluded",
+            "reason": "advanced-tier — not minimum"
+          },
+          "sector_coverage": {
+            "vertical_count": 1,
+            "verticals": [
+              "Legal"
+            ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 1,
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
+          },
+          "verification": {
+            "method": "demo",
+            "instruction": "Run conflict of interest detection on employee records and show validation results against statutory requirements."
+          }
+        },
+        {
+          "text": "Automatic enforcement of internal compliance policies and external regulatory requirements on generated documents",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-00243",
+              "text": "Can your solution apply internal compliance and external regulations to ensure that all documents generated automatically conform to the firm's governance procedures",
+              "q_title": "Regulatory Compliance Application",
+              "subsection": "Regulatory Compliance Application",
+              "sources": [
+                "legal__document-assembly-software"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__document-assembly-software"
+          ],
+          "feature_id": "compliance_audit.compliance_monitoring",
+          "feature_name": "Compliance Monitoring",
+          "criticality": "advanced",
+          "sme_attribution": {
+            "status": "excluded",
+            "reason": "advanced-tier — not minimum"
+          },
+          "sector_coverage": {
+            "vertical_count": 1,
+            "verticals": [
+              "Legal"
+            ],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 1,
+            "is_generic": true,
+            "cross_cutting": null,
+            "generic_source": "cap_inherit_7c"
+          },
+          "verification": {
+            "method": "config_check",
+            "instruction": "Show compliance policy enforcement rules applied to document generation with policy settings visible."
+          }
+        },
+        {
+          "text": "Audit trail for translation changes with modification tracking",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "legal__translation-software"
+          ],
+          "feature_id": "compliance_audit.activity_tracking",
+          "feature_name": "Activity Tracking",
+          "criticality": "advanced",
+          "sme_attribution": {
+            "status": "excluded",
+            "reason": "advanced-tier — not minimum"
+          },
+          "sector_coverage": {
+            "vertical_count": 0,
+            "verticals": [],
+            "psg_sectors": [],
+            "psg_sector_count": 0,
+            "sol_cat_count": 0,
+            "is_generic": true,
+            "cross_cutting": [
+              "audit_trail"
+            ]
+          },
+          "verification": {
+            "method": "screenshot",
+            "instruction": "Display audit trail for translation changes showing modification history with user and timestamp details."
+          }
+        }
+      ],
+      "stats": {
+        "proxy_in": 6,
+        "imda_in": 28,
+        "merged_out": 18
+      },
+      "features": [
+        {
+          "id": "compliance_audit.audit_logging",
+          "name": "Audit Logging",
+          "description": "Immutable recording and search of all system operations with user, timestamp, and action details.",
+          "req_idxs": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "compliance_audit.activity_tracking",
+          "name": "Activity Tracking",
+          "description": "Detailed audit trails for document access, version control, and modifications across workflows.",
+          "req_idxs": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            17
+          ]
+        },
+        {
+          "id": "compliance_audit.compliance_monitoring",
+          "name": "Compliance Monitoring",
+          "description": "Real-time tracking of regulatory requirements, compliance checklists, and policy enforcement.",
+          "req_idxs": [
+            7,
+            13,
+            14,
+            15,
+            16
+          ]
+        },
+        {
+          "id": "compliance_audit.access_governance",
+          "name": "Access Governance",
+          "description": "Periodic access reviews, chain of custody tracking, and documentation of resource permissions.",
+          "req_idxs": [
+            8,
+            12
+          ]
+        },
+        {
+          "id": "compliance_audit.data_lifecycle",
+          "name": "Data Lifecycle",
+          "description": "Data retention policies, legal holds, and audit trails for deletion and preservation.",
+          "req_idxs": [
+            9,
+            11
+          ]
+        },
+        {
+          "id": "compliance_audit.audit_reporting",
+          "name": "Audit Reporting",
+          "description": "Generation and delivery of audit reports for external auditors and regulatory bodies.",
+          "req_idxs": [
+            10
+          ]
+        }
+      ],
+      "sme_minimum": [
+        {
+          "text": "Record all create, update, and delete operations with user, timestamp, and action details immutably",
+          "rationale": "SMEs need a complete, tamper-proof record of who changed what and when to satisfy auditors and regulators.",
+          "source_refs": [
+            {
+              "text": "Immutable audit log recording all create, update, and delete operations with username, timestamp, and action details",
+              "criticality": "must_have",
+              "source": "both"
+            }
+          ]
+        },
+        {
+          "text": "Search and filter audit logs by user, date, record type, and action performed",
+          "rationale": "Auditors and compliance teams must quickly locate specific changes to investigate incidents or verify policy adherence.",
+          "source_refs": [
+            {
+              "text": "Audit log search and filtering by user, date, record type, and action",
+              "criticality": "must_have",
+              "source": "proxy"
+            }
+          ]
+        },
+        {
+          "text": "Define data retention and purge policies with audit trail documenting all deletions",
+          "rationale": "SMEs must comply with data minimization rules while proving they followed their own retention schedule.",
+          "source_refs": [
+            {
+              "text": "Data retention and purge policies with audit trail of deletions",
+              "criticality": "must_have",
+              "source": "proxy"
+            }
+          ]
+        },
+        {
+          "text": "Generate audit reports for external auditors and regulatory bodies on demand",
+          "rationale": "Streamlines compliance submissions and reduces manual effort in preparing evidence for PDPA, SOC 2, and similar audits.",
+          "source_refs": [
+            {
+              "text": "Audit report generation for external auditors and regulatory bodies",
+              "criticality": "must_have",
+              "source": "proxy"
+            }
+          ]
+        },
+        {
+          "text": "Track compliance status against regulatory frameworks and maintain checklist evidence",
+          "rationale": "Centralizes compliance posture visibility so SMEs know which controls are in place and which gaps remain.",
+          "source_refs": [
+            {
+              "text": "Compliance checklist tracking for regulatory frameworks (PDPA, Cyber Essentials, SOC 2)",
+              "criticality": "standard",
+              "source": "proxy"
+            }
+          ]
+        },
+        {
+          "text": "Document periodic access reviews showing who has access to which resources",
+          "rationale": "Proves to auditors that access rights are regularly validated and inappropriate permissions are removed.",
+          "source_refs": [
+            {
+              "text": "Periodic access review workflow to document who has access to what resources",
+              "criticality": "standard",
+              "source": "proxy"
+            }
+          ]
+        },
+        {
+          "text": "Record document access history with username, date, and timestamp for each view",
+          "rationale": "Demonstrates who accessed sensitive documents and when, critical for data breach investigations and compliance.",
+          "source_refs": [
+            {
+              "text": "Document access history tracking with username, date, and timestamp",
+              "criticality": "standard",
+              "source": "imda"
+            }
+          ]
+        },
+        {
+          "text": "Maintain version control and audit trail for document and template changes",
+          "rationale": "Tracks all modifications to documents and templates so SMEs can prove accountability and detect unauthorized edits.",
+          "source_refs": [
+            {
+              "text": "Version control and audit trail for document review activities to track changes and ensure accountability",
+              "criticality": "standard",
+              "source": "imda"
+            },
+            {
+              "text": "Version control and audit trail for template and document assembly activities to track changes and ensure accountability",
+              "criticality": "standard",
+              "source": "imda"
+            }
+          ]
+        },
+        {
+          "text": "Record all risk assessment modifications with username, date, and timestamp",
+          "rationale": "Ensures risk decisions are traceable and auditors can verify that risk controls were properly documented and updated.",
+          "source_refs": [
+            {
+              "text": "Audit trail for risk assessment modifications with username, date, and timestamp",
+              "criticality": "standard",
+              "source": "imda"
+            }
+          ]
+        }
+      ],
+      "sme_minimum_note": null,
+      "vendor_questions": {
+        "tier": "preferred",
+        "question": "Does your solution maintain an immutable audit log of all create, update, and delete operations with user and timestamp records, support PDPA data subject access requests, and provide reports for Cyber Essentials Mark (CEM) certification audits, so your compliance posture is provable?",
+        "free_text_prompt": "Describe how your solution records and stores audit events immutably, which regulatory frameworks it supports compliance tracking for, and how audit reports are generated and exported.",
+        "covers": [
+          {
+            "text": "Record all create, update, and delete operations with user, timestamp, and action details immutably",
+            "rationale": "SMEs need a complete, tamper-proof record of who changed what and when to satisfy auditors and regulators."
+          },
+          {
+            "text": "Search and filter audit logs by user, date, record type, and action performed",
+            "rationale": "Auditors and compliance teams must quickly locate specific changes to investigate incidents or verify policy adherence."
+          },
+          {
+            "text": "Generate audit reports for external auditors and regulatory bodies on demand",
+            "rationale": "Streamlines compliance submissions and reduces manual effort in preparing evidence for PDPA, SOC 2, and similar audits."
+          },
+          {
+            "text": "Track compliance status against regulatory frameworks and maintain checklist evidence",
+            "rationale": "Centralizes compliance posture visibility so SMEs know which controls are in place and which gaps remain."
+          }
+        ],
+        "total_input_items": 9,
+        "question_t2": "Cross-module audit log and compliance posture tracking: who did what, when, against policy."
+      },
+      "sector_relevance": {
+        "generic": true,
+        "scope_sectors": [
+          "Accountancy",
+          "Advanced Manufacturing",
+          "Built Environment",
+          "Early Childhood",
+          "Engineering Services",
+          "Environmental Services",
+          "Estate Agency",
+          "Food",
+          "Marine & Offshore",
+          "Personal Care Services",
+          "Precision Engineering",
+          "Retail",
+          "Security",
+          "Wholesale Trade"
+        ],
+        "sectors": {
+          "Accountancy": {
+            "relevant": true,
+            "reason": "Audit trails essential for client trust and regulatory compliance"
+          },
+          "Advanced Manufacturing": {
+            "relevant": true,
+            "reason": "Track production changes, quality controls, regulatory compliance"
+          },
+          "Built Environment": {
+            "relevant": true,
+            "reason": "Document project changes, safety compliance, contractual obligations"
+          },
+          "Early Childhood": {
+            "relevant": true,
+            "reason": "Child safety records, staff access controls, regulatory requirements"
+          },
+          "Engineering Services": {
+            "relevant": true,
+            "reason": "Design changes, safety standards, client project governance"
+          },
+          "Environmental Services": {
+            "relevant": true,
+            "reason": "Waste handling compliance, environmental regulations, audit trails"
+          },
+          "Estate Agency": {
+            "relevant": true,
+            "reason": "Transaction records, client data protection, regulatory compliance"
+          },
+          "Food": {
+            "relevant": true,
+            "reason": "Food safety standards, supplier compliance, traceability requirements"
+          },
+          "Marine & Offshore": {
+            "relevant": true,
+            "reason": "Safety protocols, regulatory compliance, operational governance"
+          },
+          "Personal Care Services": {
+            "relevant": true,
+            "reason": "Client data protection, staff access controls, service compliance"
+          },
+          "Precision Engineering": {
+            "relevant": true,
+            "reason": "Quality standards, process changes, regulatory documentation"
+          },
+          "Retail": {
+            "relevant": true,
+            "reason": "Transaction tracking, inventory controls, compliance monitoring"
+          },
+          "Security": {
+            "relevant": true,
+            "reason": "Access logs, incident tracking, regulatory compliance critical"
+          },
+          "Wholesale Trade": {
+            "relevant": true,
+            "reason": "Inventory controls, transaction records, regulatory compliance"
+          }
+        }
+      },
+      "family": "Intelligence & Analytics",
+      "sub_module_id": "intelligence_analytics_cross",
+      "sub_module_name": "BI, AI & Compliance (Cross-cutting)",
+      "sub_module_desc": "Business intelligence dashboards, AI assistant/copilot, compliance/audit framework — cross-module analytics.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question_t2"
+        ],
+        "original": {
+          "vendor_question_t2": "Cross-module audit log, compliance posture tracking, and governance controls. Who did what, when, and whether it complied with policy"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-16",
+        "note": "Others t2 cleanup. 19→13 words."
+      },
+      "baseline": true
     }
   ],
   "module_sme_rollup": [
@@ -17440,6 +18500,7 @@
     "step16_applied_at": "2026-05-18T01:08:45.483266+08:00",
     "step16_applied_count": 13,
     "step15_generated_at": "2026-05-15T12:33:32.883705+08:00",
-    "step15_processed": 26
+    "step15_processed": 26,
+    "others_to_fin_migration_at": "2026-05-18T09:23:57.208623+08:00"
   }
 }
