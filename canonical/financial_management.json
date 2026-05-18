@@ -14903,7 +14903,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "preferred",
+      "sme_tier": "required",
       "cited_sources": [
         "netsuite",
         "odoo_accounting",
@@ -15258,14 +15258,14 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "name"
+          "sme_tier"
         ],
         "original": {
-          "name": "Mobile and Multi-Device Access"
+          "sme_tier": "preferred"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Aligned to IMDA Q1 phrasing of essential-business__document-management- and-mobile-access-system (\"Cloud and Multi-Device Accessibility\"; req: \"For cloud-based, mobile-based, and/or web-based usage\"). Replaces the previous \"Mobile and Multi-Device Access\" name + the longer vendor question that didn't match IMDA standard wording. The IMDA trace was added separately in data/manual_imda_ref_overrides.yaml (10 entries).\n"
+        "edited_at": "2026-05-15",
+        "note": "PROMOTED from Preferred to Mandatory per 2026-05-15 mobile_access\ncross-module review (Position B: phone-mobile interpretation).\nApprovers/owner-managers in SG SMEs approve invoices, AP runs, and\nexpense claims while travelling — daily mobile activity. Parity with\nhr.mobile_access (promoted 2026-05-14). Step 15 baseline demote is\noverridden here because for SG SME finance buyers, mobile access is a\nuniversal expectation. IMDA: 3-in-1 ERP + Acct Mgmt sol cats Q1\n\"Cloud and Multi-Device Accessibility\" mandatory.\nSolution evidence (cheapest plan in_base): Odoo, ERPNext, Sage 300,\nGlobe3, Epicor. Big SaaS leaders no_data in extracts (Xero/QBO mobile\napps are flagship features per WebFetch evidence files).\nNote: sc.mobile_access and sales.mobile_access stay Preferred —\nwarehouse-handheld + field-sales-rep are specialty use cases, not\nuniversal SG SME shape.\n"
       },
       "sector_relevance": {
         "generic": true,
@@ -18497,8 +18497,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-18T01:08:45.483266+08:00",
-    "step16_applied_count": 13,
+    "step16_applied_at": "2026-05-18T14:06:54.981093+08:00",
+    "step16_applied_count": 2,
     "step15_generated_at": "2026-05-15T12:33:32.883705+08:00",
     "step15_processed": 26,
     "others_to_fin_migration_at": "2026-05-18T09:23:57.208623+08:00"

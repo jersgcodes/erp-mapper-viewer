@@ -3140,7 +3140,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain a vendor master with contact details, payment terms and lead times, segment vendors into groups for evaluation, and track performance metrics, so you can make informed sourcing decisions?",
+        "question": "Does your solution maintain a vendor master with contact details, payment terms and lead times, segment vendors into groups for evaluation, and track performance metrics, to support informed sourcing decisions?\n",
         "free_text_prompt": "Describe how your solution stores vendor master records, supports payment term configuration, tracks delivery and quality performance, and enables supplier comparison for sourcing.",
         "covers": [
           {
@@ -3167,6 +3167,17 @@
         "total_input_items": 8,
         "question_terse": "Does your solution maintain vendor records with contact details, payment terms, and lead times?",
         "question_t2": "Maintain vendor records with contact details, payment terms, and lead times"
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution maintain a vendor master with contact details, payment terms and lead times, segment vendors into groups for evaluation, and track performance metrics, so you can make informed sourcing decisions?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -3914,7 +3925,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution track inventory turnover, fill rates, order-to-delivery lead times, supplier performance, and cost-to-serve metrics with customisable dashboards and automated reporting, so you gain end-to-end visibility for informed procurement and stock decisions?",
+        "question": "Does your solution track inventory turnover, fill rates, order-to-delivery lead times, supplier performance, and cost-to-serve metrics with customisable dashboards and automated reporting, providing end-to-end visibility for informed procurement and stock decisions?\n",
         "free_text_prompt": "Describe how your solution calculates inventory metrics, monitors supplier performance, and delivers supply chain dashboards with role-based access and reporting.",
         "covers": [
           {
@@ -3969,6 +3980,17 @@
         "total_input_items": 12,
         "question_terse": "Does your solution measure inventory turnover, fill rates, lead times, and supplier performance?",
         "question_t2": "Measure inventory turnover, fill rates, lead times, and supplier performance"
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution track inventory turnover, fill rates, order-to-delivery lead times, supplier performance, and cost-to-serve metrics with customisable dashboards and automated reporting, so you gain end-to-end visibility for informed procurement and stock decisions?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -4300,7 +4322,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution receive goods against purchase orders, automatically route items to storage locations using configurable rules, detect discrepancies, capture lot and serial numbers, support partial receipts with backorder generation, place goods on hold, and generate receipt labels, so you maintain accurate inventory records with full traceability?",
+        "question": "Does your solution receive goods against purchase orders, automatically route items to storage locations using configurable rules, detect discrepancies, capture lot and serial numbers, support partial receipts with backorder generation, place goods on hold, and generate receipt labels, maintaining accurate inventory records with full traceability?\n",
         "free_text_prompt": "Describe how your solution generates goods receipt notes, applies putaway routing, handles discrepancies and quality holds, and supports partial receipts and backorders.",
         "covers": [
           {
@@ -4331,6 +4353,17 @@
         "total_input_items": 7,
         "question_terse": "Does your solution receive goods and automatically assign them to storage locations?",
         "question_t2": "Receive goods and automatically assign them to storage locations"
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution receive goods against purchase orders, automatically route items to storage locations using configurable rules, detect discrepancies, capture lot and serial numbers, support partial receipts with backorder generation, place goods on hold, and generate receipt labels, so you maintain accurate inventory records with full traceability?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -4656,7 +4689,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution track stock movements between locations, record audit trails with user and timestamp, and support batch transfers, so you maintain full traceability and can reconcile inventory across operations?",
+        "question": "Does your solution track stock movements between locations, record audit trails with user and timestamp, and support batch transfers, maintaining full traceability and enabling reconciliation of inventory across operations?\n",
         "free_text_prompt": "Describe how your solution handles in-transit visibility, status category changes (e.g. available to quarantine), and whether replenishment can be configured as push or pull.",
         "covers": [
           {
@@ -4683,6 +4716,17 @@
         "total_input_items": 5,
         "question_terse": "Does your solution record stock movements between locations with user and timestamp details?",
         "question_t2": "Record stock movements between locations with user and timestamp details"
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution track stock movements between locations, record audit trails with user and timestamp, and support batch transfers, so you maintain full traceability and can reconcile inventory across operations?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -5030,7 +5074,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution manage periodic and perpetual stock counts, schedule counts by location and item class, compare physical to system quantities, post adjustments with reason codes, and freeze movements during counts, so you maintain accurate inventory records with minimal disruption?",
+        "question": "Does your solution manage periodic and perpetual stock counts, schedule counts by location and item class, compare physical to system quantities, post adjustments with reason codes, and freeze movements during counts, maintaining accurate inventory records with minimal disruption?\n",
         "free_text_prompt": "Describe how your solution supports physical count entry (manual or barcode-assisted), variance reporting, and the adjustment posting workflow.",
         "covers": [
           {
@@ -5064,14 +5108,14 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_terse"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_terse": "Does your solution allow you to count physical inventory and reconcile it to system records?"
+          "vendor_question": "Does your solution manage periodic and perpetual stock counts, schedule counts by location and item class, compare physical to system quantities, post adjustments with reason codes, and freeze movements during counts, so you maintain accurate inventory records with minimal disruption?"
         },
         "author": "human-review",
         "edited_at": "2026-05-18",
-        "note": "Voice step 3 — stripped 'allow you to' from terse."
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -5541,7 +5585,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution manage reorder points and safety stock levels, calculate replenishment triggers based on lead times and demand, automatically generate purchase requisitions when thresholds are breached, and alert users to pending actions, so you avoid stockouts and overstocking without manual intervention?",
+        "question": "Does your solution manage reorder points and safety stock levels, calculate replenishment triggers based on lead times and demand, automatically generate purchase requisitions when thresholds are breached, and alert users to pending actions, to avoid stockouts and overstocking without manual intervention?\n",
         "free_text_prompt": "Describe how your solution sets reorder thresholds, incorporates supplier lead times into replenishment planning, and what alerts or automation are triggered when stock falls below the reorder point.",
         "covers": [
           {
@@ -5567,14 +5611,14 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "vendor_question"
         ],
         "original": {
-          "sme_tier": "required"
+          "vendor_question": "Does your solution manage reorder points and safety stock levels, calculate replenishment triggers based on lead times and demand, automatically generate purchase requisitions when thresholds are breached, and alert users to pending actions, so you avoid stockouts and overstocking without manual intervention?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-14",
-        "note": "Demoted from Mandatory to Preferred per 2026-05-14 SC walkthrough.\nIMDA mandate is weak: only 2 mandatory hits across all sol cats,\nand one of those is from \"AI Feature Examples\" (not a core\nfunction). Vendor coverage matches: 27% cheapest plan, 33% any\nplan — basic accounting / inventory tools don't include\nautomated replenishment. Better fit as a Preferred / advanced\ncapability for vendors targeting larger inventory operations.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -7246,7 +7290,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Can your solution manage multiple physical and virtual warehouses with independent inventory records, replenishment rules, and fulfilment logic, plus consolidated reporting across all locations, so you can operate distributed sites without manual reconciliation?",
+        "question": "Can your solution manage multiple physical and virtual warehouses with independent inventory records, replenishment rules, and fulfilment logic, plus consolidated reporting across all locations, supporting distributed-site operations without manual reconciliation?\n",
         "free_text_prompt": "Describe how your solution handles independent inventory records per warehouse, warehouse-specific replenishment and fulfilment rules, inter-warehouse transfer tracking, and consolidated reporting across locations.",
         "covers": [
           {
@@ -7284,20 +7328,20 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_terse"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_terse": "Does your solution allow you to manage inventory across multiple warehouse locations?"
+          "vendor_question": "Can your solution manage multiple physical and virtual warehouses with independent inventory records, replenishment rules, and fulfilment logic, plus consolidated reporting across all locations, so you can operate distributed sites without manual reconciliation?"
         },
         "author": "human-review",
         "edited_at": "2026-05-18",
-        "note": "Voice step 3 — stripped 'allow you to' from terse."
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
       "id": "sc.barcode_scanning",
       "name": "Inventory Data Capture",
-      "description": "Capture inventory data via any combination of barcode/QR code\nscanning, CSV or Excel batch upload, or API integration from POS,\necommerce platforms, or upstream ERP systems. Vendor question is\ntier-agnostic to acceptable input methods — SMEs with <100 SKUs\nmay not need scanners but still need a defensible inventory entry\nmethod.\n",
+      "description": "Capture inventory data via any combination of barcode/QR code\nscanning, CSV/Excel batch upload, or API integration from POS,\necommerce platforms, or upstream ERP systems. Vendor question is\ntier-agnostic to acceptable input methods — SMEs with <100 SKUs\nmay not need scanners but still need a defensible inventory entry\nmethod.\n",
       "priority_proxy": "must_have",
       "applicability": [
         "sme",
@@ -7726,7 +7770,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution support multiple inventory data-capture\nmethods so SMEs can choose what fits their warehouse setup —\nbarcode/QR scanning, CSV or Excel batch upload, or API\nintegration from POS or ecommerce platforms?\n",
+        "question": "Does your solution support multiple inventory data-capture\nmethods so SMEs can choose what fits their warehouse setup —\nbarcode / QR scanning, CSV / Excel batch upload, or API\nintegration from POS / ecommerce platforms?\n",
         "free_text_prompt": "Describe which warehouse workflows (receiving, putaway, picking, counting, transfers) your scanning module covers, and how labels are generated and applied.",
         "covers": [
           {
@@ -7755,7 +7799,7 @@
           }
         ],
         "total_input_items": 6,
-        "question_terse": "Does your solution support inventory data capture via barcode/QR\nscanning, CSV or Excel upload, or API integration?\n",
+        "question_terse": "Does your solution support inventory data capture via barcode/QR\nscanning, CSV/Excel upload, or API integration?\n",
         "question_t2": "Capture inventory data via barcode or QR scanning, CSV upload, or API."
       },
       "_cap_override": {
@@ -8091,7 +8135,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Can your solution assign and track lot or serial numbers to items, monitor expiry dates, trace movement across the supply chain, enforce removal rules, and support recalls by lot range, so you meet regulatory traceability requirements and respond quickly to safety issues?",
+        "question": "Can your solution assign and track lot or serial numbers to items, monitor expiry dates, trace movement across the supply chain, enforce removal rules, and support recalls by lot range, meeting regulatory traceability requirements and enabling rapid response to safety issues?\n",
         "free_text_prompt": "Describe how your solution assigns lot/serial numbers at receipt, tracks them through warehouse and outbound movements, and supports expiry-based and recall-based removal workflows.",
         "covers": [
           {
@@ -8114,6 +8158,17 @@
         "total_input_items": 4,
         "question_terse": "Does your solution assign and track lot or serial numbers to items throughout their lifecycle?",
         "question_t2": "Assign and track lot or serial numbers to items throughout their lifecycle"
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Can your solution assign and track lot or serial numbers to items, monitor expiry dates, trace movement across the supply chain, enforce removal rules, and support recalls by lot range, so you meet regulatory traceability requirements and respond quickly to safety issues?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -8502,7 +8557,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution analyse historical demand data to detect patterns, calculate safety stock based on forecast variability, link forecasts to purchase orders, and track forecast accuracy, so you optimise procurement and inventory without manual recalculation?",
+        "question": "Does your solution analyse historical demand data to detect patterns, calculate safety stock based on forecast variability, link forecasts to purchase orders, and track forecast accuracy, optimising procurement and inventory without manual recalculation?\n",
         "free_text_prompt": "Describe how your solution detects demand trends, measures forecast accuracy, and allows teams to adjust forecast parameters.",
         "covers": [
           {
@@ -8533,6 +8588,17 @@
         "total_input_items": 6,
         "question_terse": "Does your solution generate demand forecasts that inform purchase orders and inventory levels?",
         "question_t2": "Generate demand forecasts that inform purchase orders and inventory levels"
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution analyse historical demand data to detect patterns, calculate safety stock based on forecast variability, link forecasts to purchase orders, and track forecast accuracy, so you optimise procurement and inventory without manual recalculation?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -8803,7 +8869,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Can your solution manage dropship and cross-dock fulfillment by linking purchase orders to sales orders, routing inbound goods to outbound shipment, generating purchase orders for dropship items, and tracking margin separately, so you reduce warehouse handling and lead time?",
+        "question": "Can your solution manage dropship and cross-dock fulfillment by linking purchase orders to sales orders, routing inbound goods to outbound shipment, generating purchase orders for dropship items, and tracking margin separately, reducing warehouse handling and lead time?\n",
         "free_text_prompt": "Describe how your solution handles dropship purchase order creation, cross-dock routing, margin tracking, and customer notification for these fulfillment models.",
         "covers": [
           {
@@ -8834,6 +8900,17 @@
         "total_input_items": 6,
         "question_terse": "Does your solution link purchase orders to sales orders for direct shipment to customers?",
         "question_t2": "Link purchase orders to sales orders for direct shipment to customers"
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Can your solution manage dropship and cross-dock fulfillment by linking purchase orders to sales orders, routing inbound goods to outbound shipment, generating purchase orders for dropship items, and tracking margin separately, so you reduce warehouse handling and lead time?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -9183,7 +9260,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage customer and supplier returns through inspection workflows, condition assessment, automated routing to restock or repair, and credit note generation, so you track return patterns and reduce product loss?",
+        "question": "Does your solution manage customer and supplier returns through inspection workflows, condition assessment, automated routing to restock or repair, and credit note generation, to track return patterns and reduce product loss?\n",
         "free_text_prompt": "Describe how your solution handles RMA authorisation, inspection workflows, credit note or debit note generation, and return routing logic.",
         "covers": [
           {
@@ -9210,6 +9287,17 @@
         "total_input_items": 6,
         "question_terse": "Does your solution process customer and supplier returns through inspection and route items to restock or repair?",
         "question_t2": "Process customer and supplier returns through inspection and route items to restock or repair"
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution manage customer and supplier returns through inspection workflows, condition assessment, automated routing to restock or repair, and credit note generation, so you track return patterns and reduce product loss?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -9838,7 +9926,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Does your solution track consignment inventory held at warehouse or customer sites separately from owned stock, automatically transfer ownership upon consumption, and generate invoices based on actual usage, so you avoid premature payables and maintain accurate inventory valuation?",
+        "question": "Does your solution track consignment inventory held at warehouse or customer sites separately from owned stock, automatically transfer ownership upon consumption, and generate invoices based on actual usage, to avoid premature payables and maintain accurate inventory valuation?\n",
         "free_text_prompt": "Describe how your solution distinguishes consignment from owned stock, handles ownership transfer on consumption, and links usage records to supplier invoicing.",
         "covers": [
           {
@@ -9865,6 +9953,17 @@
         "total_input_items": 5,
         "question_terse": "Does your solution track consignment inventory separately and transfer ownership upon consumption?",
         "question_t2": "Track consignment inventory separately and transfer ownership upon consumption"
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution track consignment inventory held at warehouse or customer sites separately from owned stock, automatically transfer ownership upon consumption, and generate invoices based on actual usage, so you avoid premature payables and maintain accurate inventory valuation?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -10172,7 +10271,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage kit assembly and disassembly orders, verify component availability before build initiation, and calculate kit cost from component costs, so you sell bundled products as single SKUs without manual stock tracking?",
+        "question": "Does your solution manage kit assembly and disassembly orders, verify component availability before build initiation, and calculate kit cost from component costs, enabling sale of bundled products as single SKUs without manual stock tracking?\n",
         "free_text_prompt": "Describe how your solution handles bill of materials definition, assembly order creation, component reservation, and kit cost rollup.",
         "covers": [
           {
@@ -10206,14 +10305,14 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_terse"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_terse": "Does your solution allow you to define and manage product kits as single sellable units?"
+          "vendor_question": "Does your solution manage kit assembly and disassembly orders, verify component availability before build initiation, and calculate kit cost from component costs, so you sell bundled products as single SKUs without manual stock tracking?"
         },
         "author": "human-review",
         "edited_at": "2026-05-18",
-        "note": "Voice step 3 — stripped 'allow you to' from terse."
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -10514,7 +10613,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage quality inspection workflows at key supply chain touchpoints, enforce quarantine holds until approval, and track non-conformance with corrective actions, so you maintain product standards without manual intervention?",
+        "question": "Does your solution manage quality inspection workflows at key supply chain touchpoints, enforce quarantine holds until approval, and track non-conformance with corrective actions, maintaining product standards without manual intervention?\n",
         "free_text_prompt": "Describe how your solution configures inspection criteria, enforces quarantine holds, supports sampling strategies, and stores quality records for retrieval.",
         "covers": [
           {
@@ -10545,6 +10644,17 @@
         "total_input_items": 6,
         "question_terse": "Does your solution track product quality inspections and hold non-conforming items until approval?",
         "question_t2": "Track product quality inspections and hold non-conforming items until approval"
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution manage quality inspection workflows at key supply chain touchpoints, enforce quarantine holds until approval, and track non-conformance with corrective actions, so you maintain product standards without manual intervention?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -11418,7 +11528,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage cross-border shipments with tariff classification, customs declarations, export control screening, and regulatory authority integration, so you comply with trade regulations and recover eligible duties?",
+        "question": "Does your solution manage cross-border shipments with tariff classification, customs declarations, export control screening, and regulatory authority integration, supporting compliance with trade regulations and recovery of eligible duties?\n",
         "free_text_prompt": "Describe how your solution handles HS code assignment, customs document generation, restricted party screening, TradeNet submission, and Incoterms allocation for both exports and imports.",
         "covers": [
           {
@@ -11457,6 +11567,17 @@
         "total_input_items": 9,
         "question_terse": "Does your solution classify goods and generate customs declarations for cross-border shipments?",
         "question_t2": "Classify goods and generate customs declarations for cross-border shipments"
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution manage cross-border shipments with tariff classification, customs declarations, export control screening, and regulatory authority integration, so you comply with trade regulations and recover eligible duties?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -12701,7 +12822,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Can your solution expose inventory levels to authorised vendors, allow them to create replenishment orders within pre-agreed thresholds, automatically generate purchase receipts from shipment notifications, and track fill rates and stockout frequency, so you reduce manual ordering effort and maintain stock availability?",
+        "question": "Can your solution expose inventory levels to authorised vendors, allow them to create replenishment orders within pre-agreed thresholds, automatically generate purchase receipts from shipment notifications, and track fill rates and stockout frequency, reducing manual ordering effort and maintaining stock availability?\n",
         "free_text_prompt": "Describe how vendors access stock visibility, the mechanism for automated replenishment order creation, and how demand forecasts are shared to support VMI operations.",
         "covers": [
           {
@@ -12732,14 +12853,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Can your solution expose inventory levels to authorised vendors, allow them to create replenishment orders within pre-agreed thresholds, automatically generate purchase receipts from shipment notifications, and track fill rates and stockout frequency, so you reduce manual ordering effort and maintain stock availability?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -13174,7 +13295,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Does your solution forecast demand, detect consumption anomalies, estimate supplier lead times, and alert on delivery delays, so you can optimise replenishment and avoid stockouts or excess inventory?",
+        "question": "Does your solution forecast demand, detect consumption anomalies, estimate supplier lead times, and alert on delivery delays, optimising replenishment and avoiding stockouts or excess inventory?\n",
         "free_text_prompt": "Describe how your solution generates demand forecasts, identifies unusual stock movement patterns, and estimates lead time risks, and whether these trigger automated replenishment recommendations or alerts.",
         "covers": [
           {
@@ -13197,14 +13318,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Does your solution forecast demand, detect consumption anomalies, estimate supplier lead times, and alert on delivery delays, so you can optimise replenishment and avoid stockouts or excess inventory?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -13524,7 +13645,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution enforce PDPA-compliant data retention and deletion policies, encrypt data at rest and in transit, and maintain audit trails of all access to supplier and inventory data, so your supply-chain records meet Singapore's PDPA requirements?",
+        "question": "Does your solution enforce PDPA-compliant data retention and deletion policies, encrypt data at rest and in transit, and maintain audit trails of all access to supplier and inventory data, ensuring supply-chain records meet Singapore's PDPA requirements?\n",
         "free_text_prompt": "Describe your audit trail scope, retention policy enforcement mechanism, data subject deletion workflow, encryption standards, access logging coverage, and Cyber Essentials Mark certification status.",
         "covers": [
           {
@@ -13563,14 +13684,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Does your solution enforce PDPA-compliant data retention and deletion policies, encrypt data at rest and in transit, and maintain audit trails of all access to supplier and inventory data, so your supply-chain records meet Singapore's PDPA requirements?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-07",
-        "note": "Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_all_modules: each module has its own copy (fin.*, hr.*, sales.* …); flag propagates the override to every canonical. User intent: not a baseline gate; revisit later. Pair with other.user_access_roles.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -13874,7 +13995,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution manage user accounts with role-based permissions, deactivate accounts on staff departure, maintain audit logs of access and actions, and support single sign-on and multi-factor authentication, so you control access and meet compliance requirements?",
+        "question": "Does your solution manage user accounts with role-based permissions, deactivate accounts on staff departure, maintain audit logs of access and actions, and support single sign-on and multi-factor authentication, controlling access and meeting compliance requirements?\n",
         "free_text_prompt": "Describe how roles are defined, how audit logs are retained and accessed, and whether SSO or multi-factor authentication are available as optional features.",
         "covers": [
           {
@@ -13913,14 +14034,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_terse"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_terse": "Does your solution allow you to assign user access permissions based on defined roles?"
+          "vendor_question": "Does your solution manage user accounts with role-based permissions, deactivate accounts on staff departure, maintain audit logs of access and actions, and support single sign-on and multi-factor authentication, so you control access and meet compliance requirements?"
         },
         "author": "human-review",
         "edited_at": "2026-05-18",
-        "note": "Voice step 3 — stripped 'allow you to' from terse. Other modules' *.user_access_roles terses are already third-person; only the sc.* instance carried 'you'."
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -14575,7 +14696,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution synchronise data across modules automatically, import from standard file formats, export reports to common formats, and integrate with third-party business applications, so your data stays current across all tools without manual re-entry?",
+        "question": "Does your solution synchronise data across modules automatically, import from standard file formats, export reports to common formats, and integrate with third-party business applications, keeping data current across all tools without manual re-entry?\n",
         "free_text_prompt": "Describe the file formats supported for import/export, which accounting and marketplace platforms you integrate with, and how data synchronisation works across your modules.",
         "covers": [
           {
@@ -14622,14 +14743,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Does your solution synchronise data across modules automatically, import from standard file formats, export reports to common formats, and integrate with third-party business applications, so your data stays current across all tools without manual re-entry?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Cross-cutting baseline — not module-specific Mandatory. Demoted to Preferred + in_checklist:false so it joins data_governance and user_access_roles under Optional / Add-ons. Universal data import/export concern; every modern ERP provides it; not a verdict gate.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     }
   ],
@@ -14959,8 +15080,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-18T01:08:47.313504+08:00",
-    "step16_applied_count": 7,
+    "step16_applied_at": "2026-05-18T14:06:56.851266+08:00",
+    "step16_applied_count": 3,
     "reorder_overrides": {
       "cap_order": {
         "required:all": [
