@@ -15206,7 +15206,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "ms_365",
         "google_workspace",
@@ -15898,7 +15898,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "ms_365",
         "odoo_platform",
@@ -17156,7 +17156,11 @@
       "sub_module_id": null,
       "sub_module_name": null,
       "sub_module_desc": null,
-      "baseline": true
+      "baseline": true,
+      "_meta": {
+        "demoted_by_step15": true,
+        "demoted_reason": "baseline cross-module cap (Platform & Data)"
+      }
     },
     {
       "id": "generic.user_access_roles",
@@ -17168,7 +17172,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "ms_365",
         "odoo_platform",
@@ -18088,7 +18092,11 @@
       "sub_module_id": null,
       "sub_module_name": null,
       "sub_module_desc": null,
-      "baseline": true
+      "baseline": true,
+      "_meta": {
+        "demoted_by_step15": true,
+        "demoted_reason": "baseline cross-module cap (Platform & Data)"
+      }
     },
     {
       "id": "generic.integration_import_export",
@@ -18100,7 +18108,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "ms_365",
         "odoo_platform",
@@ -19076,6 +19084,10 @@
         "author": "human-review",
         "edited_at": "2026-05-09",
         "note": "Cross-cutting baseline — not module-specific Mandatory. Demoted to Preferred + in_checklist:false so it joins data_governance and user_access_roles under Optional / Add-ons. Universal data import/export concern; every modern ERP provides it; not a verdict gate.\n"
+      },
+      "_meta": {
+        "demoted_by_step15": true,
+        "demoted_reason": "baseline cross-module cap (Platform & Data)"
       }
     }
   ],

@@ -12473,7 +12473,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_field_service",
         "salesforce_field_service",
@@ -12906,7 +12906,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "salesforce_field_service",
         "dynamics_365_field_service",
@@ -13384,7 +13384,11 @@
       "family": null,
       "sub_module_id": null,
       "sub_module_name": null,
-      "sub_module_desc": null
+      "sub_module_desc": null,
+      "_meta": {
+        "demoted_by_step15": true,
+        "demoted_reason": "baseline cross-module cap (Platform & Data)"
+      }
     },
     {
       "id": "fsm.user_access_roles",
@@ -13396,7 +13400,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_field_service",
         "salesforce_field_service",
@@ -13933,7 +13937,11 @@
       "family": null,
       "sub_module_id": null,
       "sub_module_name": null,
-      "sub_module_desc": null
+      "sub_module_desc": null,
+      "_meta": {
+        "demoted_by_step15": true,
+        "demoted_reason": "baseline cross-module cap (Platform & Data)"
+      }
     },
     {
       "id": "fsm.integration_import_export",
@@ -13945,7 +13953,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": "required",
+      "sme_tier": "preferred",
       "cited_sources": [
         "odoo_field_service",
         "salesforce_field_service",
@@ -14678,6 +14686,10 @@
         "author": "human-review",
         "edited_at": "2026-05-09",
         "note": "Cross-cutting baseline — not module-specific Mandatory. Demoted to Preferred + in_checklist:false so it joins data_governance and user_access_roles under Optional / Add-ons. Universal data import/export concern; every modern ERP provides it; not a verdict gate.\n"
+      },
+      "_meta": {
+        "demoted_by_step15": true,
+        "demoted_reason": "baseline cross-module cap (Platform & Data)"
       }
     }
   ],

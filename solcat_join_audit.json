@@ -5,7 +5,7 @@
   },
   "summary": {
     "p0_violations": 0,
-    "p1_violations": 18,
+    "p1_violations": 49,
     "sol_cats_audited": 71,
     "sol_cats_excluded": 18,
     "exclusion_breakdown": {
@@ -19,7 +19,12 @@
   "p1": [
     {
       "rule": "W1",
-      "sol_cat": "essential-business__fleet-management-system",
+      "sol_cat": "essential-business__human-resource-shared-services-hrss-needs-analysis-+-hr-administrative-support-and-payroll-processin",
+      "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+    },
+    {
+      "rule": "W1",
+      "sol_cat": "essential-business__employee-rewards-and-recognition",
       "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
     },
     {
@@ -28,18 +33,28 @@
       "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
     },
     {
-      "rule": "W1",
-      "sol_cat": "essential-business__marketing-and-sales-content-generation",
-      "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+      "rule": "W2",
+      "sol_cat": "essential-business__document-management-and-mobile-access-system",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
     },
     {
       "rule": "W1",
-      "sol_cat": "essential-business__cross-border-e-commerce-packages",
+      "sol_cat": "essential-business__document-management-and-mobile-access-system",
       "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "essential-business__carbon-management-solution",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
     },
     {
       "rule": "W1",
       "sol_cat": "essential-business__gen-ai-digital-training-system",
+      "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+    },
+    {
+      "rule": "W1",
+      "sol_cat": "advanced-manufacturing__product-and-manufacturing-process-configuration",
       "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
     },
     {
@@ -51,6 +66,11 @@
       "rule": "W1",
       "sol_cat": "advanced-manufacturing__computer-aided-design-and-computer-aided-manufacturing-cad-cam",
       "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "built-environment__digital-contract-management-digital-payment",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
     },
     {
       "rule": "W1",
@@ -68,18 +88,98 @@
       "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
     },
     {
+      "rule": "W2",
+      "sol_cat": "built-environment__coordinated-regulatory-approvals-and-rule-based-model-checker",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
       "rule": "W1",
       "sol_cat": "built-environment__coordinated-regulatory-approvals-and-rule-based-model-checker",
       "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
     },
     {
-      "rule": "W1",
-      "sol_cat": "food-services__connected-business-suite",
-      "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+      "rule": "W2",
+      "sol_cat": "built-environment__data-and-ai-driven-decision-support-system",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
     },
     {
       "rule": "W1",
+      "sol_cat": "built-environment__data-and-ai-driven-decision-support-system",
+      "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "built-environment__built-environment-digital-platform",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "early-childhood__pre-school-management-system",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "early-childhood__e-forms-for-pre-school",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
+      "rule": "W1",
+      "sol_cat": "early-childhood__e-forms-for-pre-school",
+      "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "early-childhood__pre-school-management-system-+-e-forms-for-pre-school",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
+      "rule": "W1",
+      "sol_cat": "early-childhood__learning-platform-for-cpd-and-mentoring",
+      "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "early-childhood__vacancy-and-waitlist-management",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
+      "rule": "W1",
+      "sol_cat": "early-childhood__vacancy-and-waitlist-management",
+      "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "estate-agency__document-management-and-transaction-records-submission-for-estate-agents",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
+      "rule": "W2",
       "sol_cat": "legal__practice-management-system-pms",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "legal__document-management-system-dms",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "legal__matters-management-and-collaboration-tool",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
+      "rule": "W1",
+      "sol_cat": "legal__matters-management-and-collaboration-tool",
+      "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "legal__risk-assessment-solution-kyc-aml",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
+      "rule": "W1",
+      "sol_cat": "legal__risk-assessment-solution-kyc-aml",
       "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
     },
     {
@@ -89,8 +189,23 @@
     },
     {
       "rule": "W1",
-      "sol_cat": "personal-care-services__salon-management-system",
+      "sol_cat": "logistics__warehouse-management",
       "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+    },
+    {
+      "rule": "W1",
+      "sol_cat": "logistics__active-cold-chain-management",
+      "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+    },
+    {
+      "rule": "W1",
+      "sol_cat": "logistics__freight-management",
+      "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "personal-care-services__salon-management-system",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
     },
     {
       "rule": "W1",
@@ -104,7 +219,47 @@
     },
     {
       "rule": "W1",
+      "sol_cat": "retail__in-store-analytics",
+      "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+    },
+    {
+      "rule": "W1",
+      "sol_cat": "retail__omnichannel-retail-management-ocrm",
+      "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "security__mobile-enabled-patrol-and-incident-management",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
+      "rule": "W1",
+      "sol_cat": "security__mobile-enabled-patrol-and-incident-management",
+      "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "security__automated-visitor-management",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
+      "rule": "W2",
       "sol_cat": "security__security-collaboration-platform",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "tourism-travel-agent__travel-management-system-operations",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
+      "rule": "W2",
+      "sol_cat": "tourism-travel-agent__travel-evisa",
+      "msg": "family (others, Customisation & Integration) not in module_meta family_order — crosswalk references a family the module_meta doesn't declare"
+    },
+    {
+      "rule": "W1",
+      "sol_cat": "wholesale__custom-clearance",
       "msg": "zero IMDA requirements trace back to this sol cat via imda_refs.sources (sol cat has no scraped data, mismatched sol_cat_id, or wasn't tagged in step 1)"
     }
   ]
