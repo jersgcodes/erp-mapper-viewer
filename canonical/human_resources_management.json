@@ -2851,7 +2851,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution capture clock in and out across multiple channels, automatically calculate breaks and overtime against shift policy, flag exceptions, record cost centre assignments, and enable manager approval before payroll export, so you have accurate labour costs and compliant payroll processing?",
+        "question": "Does your solution capture clock in and out across multiple channels, automatically calculate breaks and overtime against shift policy, flag exceptions, record cost centre assignments, and enable manager approval before payroll export, maintaining accurate labour costs and compliant payroll processing?\n",
         "free_text_prompt": "Describe the clock capture methods supported (web, mobile, biometric, RFID), how break deductions and overtime detection work, what exceptions are flagged, and how timesheet approval and payroll export are handled.",
         "covers": [
           {
@@ -2967,7 +2967,18 @@
       "family": "Time & Attendance",
       "sub_module_id": "time_attendance",
       "sub_module_name": "Time & Attendance",
-      "sub_module_desc": "Leave management, time clock, shift scheduling, accrual engine."
+      "sub_module_desc": "Leave management, time clock, shift scheduling, accrual engine.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution capture clock in and out across multiple channels, automatically calculate breaks and overtime against shift policy, flag exceptions, record cost centre assignments, and enable manager approval before payroll export, so you have accurate labour costs and compliant payroll processing?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "hr.payroll_processing",
@@ -4290,7 +4301,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution generate MOM-compliant itemised payslips with earnings, CPF contributions, and other deductions, distribute them securely to employees, and store payslip history for audit, so employees see exactly what they earned and you meet MOM payslip rules?",
+        "question": "Does your solution generate MOM-compliant itemised payslips with earnings, CPF contributions, and other deductions, distribute them securely to employees, and store payslip history for audit, ensuring employees see exactly what they earned and the business meets MOM payslip rules?\n",
         "free_text_prompt": "Describe how payslips are generated, the distribution method(s) available, how long history is retained, and how reissuance and cancellation are tracked.",
         "covers": [
           {
@@ -4394,7 +4405,18 @@
       "family": "Payroll & Statutory",
       "sub_module_id": "payroll_statutory",
       "sub_module_name": "Payroll & Statutory (SG)",
-      "sub_module_desc": "SG payroll with CPF/SDL/FWL, payslips, overtime, IRAS IR8A/IR21 filing, work permit admin, expense claims reimbursement via payroll."
+      "sub_module_desc": "SG payroll with CPF/SDL/FWL, payslips, overtime, IRAS IR8A/IR21 filing, work permit admin, expense claims reimbursement via payroll.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution generate MOM-compliant itemised payslips with earnings, CPF contributions, and other deductions, distribute them securely to employees, and store payslip history for audit, so employees see exactly what they earned and you meet MOM payslip rules?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "hr.onboarding_offboarding",
@@ -6112,7 +6134,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution maintain an organisational chart with multi-line reporting relationships, hierarchical drill-down navigation, and dated structure versioning, so you can visualise your company hierarchy and automate approval routing?",
+        "question": "Does your solution maintain an organisational chart with multi-line reporting relationships, hierarchical drill-down navigation, and dated structure versioning, to visualise the company hierarchy and automate approval routing?\n",
         "free_text_prompt": "Describe how the system builds the organisation chart from source data, which reporting relationship types it supports, and how it handles historical versions of the hierarchy.",
         "covers": [
           {
@@ -6224,7 +6246,18 @@
       "family": "Core HR",
       "sub_module_id": "core_hr",
       "sub_module_name": "Core HR",
-      "sub_module_desc": "Employee master record (HRIS), onboarding/offboarding, self-service portal, org chart, HR document management."
+      "sub_module_desc": "Employee master record (HRIS), onboarding/offboarding, self-service portal, org chart, HR document management.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution maintain an organisational chart with multi-line reporting relationships, hierarchical drill-down navigation, and dated structure versioning, so you can visualise your company hierarchy and automate approval routing?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "hr.document_management",
@@ -6621,7 +6654,7 @@
       "sme_minimum": [],
       "sme_minimum_note": null,
       "vendor_questions": {
-        "question": "Does your solution maintain a secure, encrypted repository for employee documents with role-based access control, complete audit trails, and automated retention policies, so you meet statutory obligations and protect sensitive personnel records?",
+        "question": "Does your solution maintain a secure, encrypted repository for employee documents with role-based access control, complete audit trails, and automated retention policies, to meet statutory obligations and protect sensitive personnel records?\n",
         "question_terse": "Does your solution store and control access to employee documents?",
         "question_t2": "Store and control access to employee documents"
       },
@@ -6705,7 +6738,18 @@
       "family": "Core HR",
       "sub_module_id": "core_hr",
       "sub_module_name": "Core HR",
-      "sub_module_desc": "Employee master record (HRIS), onboarding/offboarding, self-service portal, org chart, HR document management."
+      "sub_module_desc": "Employee master record (HRIS), onboarding/offboarding, self-service portal, org chart, HR document management.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution maintain a secure, encrypted repository for employee documents with role-based access control, complete audit trails, and automated retention policies, so you meet statutory obligations and protect sensitive personnel records?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "hr.recruitment_ats",
@@ -10003,7 +10047,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage employee training records including course catalogues, enrolment tracking, completion certification, mandatory compliance assignment, and skill-gap analysis with expiry alerts, so you maintain a complete audit trail of workforce development and compliance?",
+        "question": "Does your solution manage employee training records including course catalogues, enrolment tracking, completion certification, mandatory compliance assignment, and skill-gap analysis with expiry alerts, to maintain a complete audit trail of workforce development and compliance?\n",
         "free_text_prompt": "Describe how your solution handles course delivery options, enrolment workflows, certification tracking, and skill gap analysis.",
         "covers": [
           {
@@ -10115,7 +10159,18 @@
       "family": "Talent & Growth",
       "sub_module_id": "performance_learning",
       "sub_module_name": "Performance & Learning",
-      "sub_module_desc": "Performance reviews, learning & development/LMS, succession planning, engagement surveys — employee growth specialty (distinct vendors from ATS)."
+      "sub_module_desc": "Performance reviews, learning & development/LMS, succession planning, engagement surveys — employee growth specialty (distinct vendors from ATS).",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution manage employee training records including course catalogues, enrolment tracking, completion certification, mandatory compliance assignment, and skill-gap analysis with expiry alerts, so you maintain a complete audit trail of workforce development and compliance?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "hr.compensation_benefits",
@@ -11797,7 +11852,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Can your solution identify critical roles, assess employee potential using structured grids, maintain talent pools by competency, and generate succession coverage reports with readiness gaps, so you can build and track successor pipelines with confidence?",
+        "question": "Can your solution identify critical roles, assess employee potential using structured grids, maintain talent pools by competency, and generate succession coverage reports with readiness gaps, to build and track successor pipelines with confidence?\n",
         "free_text_prompt": "Describe how your solution designates critical roles, maintains successor pools, tracks development plans, and generates succession coverage visibility for leadership decisions.",
         "covers": [
           {
@@ -11913,14 +11968,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Can your solution identify critical roles, assess employee potential using structured grids, maintain talent pools by competency, and generate succession coverage reports with readiness gaps, so you can build and track successor pipelines with confidence?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -13459,7 +13514,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Can your solution track budgeted and actual headcount, monitor recruitment progress and open requisitions, project attrition by employee segment, and model workforce scenarios with financial impact, so you can align hiring plans with budget and forecast labour costs accurately?",
+        "question": "Can your solution track budgeted and actual headcount, monitor recruitment progress and open requisitions, project attrition by employee segment, and model workforce scenarios with financial impact, to align hiring plans with budget and forecast labour costs accurately?\n",
         "free_text_prompt": "Describe how your solution handles headcount budgeting, variance analysis, and cost allocation across organisational units and projects.",
         "covers": [
           {
@@ -13562,14 +13617,14 @@
       "sub_module_desc": "Workforce planning, disciplinary/grievance, exit/alumni, HR dashboards, AI/ML people insights.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_terse"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_terse": "Does your solution allow you to forecast future headcount needs and associated labour costs?"
+          "vendor_question": "Can your solution track budgeted and actual headcount, monitor recruitment progress and open requisitions, project attrition by employee segment, and model workforce scenarios with financial impact, so you can align hiring plans with budget and forecast labour costs accurately?"
         },
         "author": "human-review",
         "edited_at": "2026-05-18",
-        "note": "Voice step 3 — stripped 'allow you to' from terse."
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -14300,7 +14355,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution generate shift rosters, enforce statutory rest and hours rules, calculate labour costs from schedules, and publish rosters to employees with mobile access, so you can balance workforce demand with compliance and cost control?",
+        "question": "Does your solution generate shift rosters, enforce statutory rest and hours rules, calculate labour costs from schedules, and publish rosters to employees with mobile access, to balance workforce demand with compliance and cost control?\n",
         "free_text_prompt": "Describe how your solution captures employee availability and skills, generates rosters based on demand, and publishes schedules to mobile devices.",
         "covers": [
           {
@@ -14412,7 +14467,18 @@
       "family": "Time & Attendance",
       "sub_module_id": "time_attendance",
       "sub_module_name": "Time & Attendance",
-      "sub_module_desc": "Leave management, time clock, shift scheduling, accrual engine."
+      "sub_module_desc": "Leave management, time clock, shift scheduling, accrual engine.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution generate shift rosters, enforce statutory rest and hours rules, calculate labour costs from schedules, and publish rosters to employees with mobile access, so you can balance workforce demand with compliance and cost control?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "hr.work_permit_foreign_worker",
@@ -15360,7 +15426,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution generate and submit mandatory statutory returns to IRAS (IR8A/AIS), CPF Board (CPF contribution submissions), and MOM (OED, foreign worker quotas), with audit trail of every submission, so your business meets SG payroll-tax filing obligations?",
+        "question": "Does your solution generate and submit mandatory statutory returns to IRAS (IR8A/AIS), CPF Board (CPF contribution submissions), and MOM (OED, foreign worker quotas), with audit trail of every submission, to meet SG payroll-tax filing obligations?\n",
         "free_text_prompt": "Describe which statutory returns your solution produces (CPF, IRAS, MOM, IR21), how submissions are filed, and how you handle amendments to previously submitted returns.",
         "covers": [
           {
@@ -15476,7 +15542,18 @@
       "family": "Payroll & Statutory",
       "sub_module_id": "payroll_statutory",
       "sub_module_name": "Payroll & Statutory (SG)",
-      "sub_module_desc": "SG payroll with CPF/SDL/FWL, payslips, overtime, IRAS IR8A/IR21 filing, work permit admin, expense claims reimbursement via payroll."
+      "sub_module_desc": "SG payroll with CPF/SDL/FWL, payslips, overtime, IRAS IR8A/IR21 filing, work permit admin, expense claims reimbursement via payroll.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution generate and submit mandatory statutory returns to IRAS (IR8A/AIS), CPF Board (CPF contribution submissions), and MOM (OED, foreign worker quotas), with audit trail of every submission, so your business meets SG payroll-tax filing obligations?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "hr.overtime_variable_pay",
@@ -17590,7 +17667,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution capture exit interview data with configurable templates, maintain alumni profiles with rehire eligibility tracking, and enable alumni engagement and referral integration, so you reduce attrition and build a source of rehires and referrals?",
+        "question": "Does your solution capture exit interview data with configurable templates, maintain alumni profiles with rehire eligibility tracking, and enable alumni engagement and referral integration, to reduce attrition and build a source of rehires and referrals?\n",
         "free_text_prompt": "Describe how your solution structures exit interview templates, categorises leaver feedback, and enables alumni relationship management for rehires and referrals.",
         "covers": [
           {
@@ -17698,7 +17775,18 @@
       "family": "Lifecycle & Analytics",
       "sub_module_id": "hr_lifecycle_analytics",
       "sub_module_name": "HR Lifecycle & Analytics",
-      "sub_module_desc": "Workforce planning, disciplinary/grievance, exit/alumni, HR dashboards, AI/ML people insights."
+      "sub_module_desc": "Workforce planning, disciplinary/grievance, exit/alumni, HR dashboards, AI/ML people insights.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution capture exit interview data with configurable templates, maintain alumni profiles with rehire eligibility tracking, and enable alumni engagement and referral integration, so you reduce attrition and build a source of rehires and referrals?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "hr.analytics_dashboards",
@@ -19501,7 +19589,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Does your solution analyse employee data to detect patterns, predict attrition risk, match skills to roles, and flag anomalies, with conversational support for HR policy questions, so you gain actionable workforce insights and reduce manual screening effort?",
+        "question": "Does your solution analyse employee data to detect patterns, predict attrition risk, match skills to roles, and flag anomalies, with conversational support for HR policy questions, to gain actionable workforce insights and reduce manual screening effort?\n",
         "free_text_prompt": "Describe which ML models or algorithms your solution uses (e.g. resume parsing, predictive analytics, sentiment analysis, chatbot framework) and how they integrate with your HR module.",
         "covers": [
           {
@@ -19625,14 +19713,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Does your solution analyse employee data to detect patterns, predict attrition risk, match skills to roles, and flag anomalies, with conversational support for HR policy questions, so you gain actionable workforce insights and reduce manual screening effort?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -23325,7 +23413,7 @@
   "_meta": {
     "step15_generated_at": "2026-05-15T12:23:50.156570+08:00",
     "step15_processed": 0,
-    "step16_applied_at": "2026-05-18T14:06:55.776934+08:00",
+    "step16_applied_at": "2026-05-18T15:46:24.725309+08:00",
     "step16_applied_count": 0,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",

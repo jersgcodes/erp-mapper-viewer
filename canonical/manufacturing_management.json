@@ -533,7 +533,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain multi-level BOM hierarchies with component relationships, alternate and substitute variants, phantom sub-assemblies, and automatic cost roll-up to finished goods, so you can plan production accurately and manage engineering changes?",
+        "question": "Does your solution maintain multi-level BOM hierarchies with component relationships, alternate and substitute variants, phantom sub-assemblies, and automatic cost roll-up to finished goods, to plan production accurately and manage engineering changes?\n",
         "free_text_prompt": "Describe how your solution handles BOM levels, component substitution rules, phantom assembly treatment, and standard cost calculation from components to finished goods.",
         "covers": [
           {
@@ -585,7 +585,18 @@
       "family": "Product Engineering",
       "sub_module_id": "product_engineering",
       "sub_module_name": "Product Engineering & PLM",
-      "sub_module_desc": "BOM, routings, engineering change, PLM/product data."
+      "sub_module_desc": "BOM, routings, engineering change, PLM/product data.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution maintain multi-level BOM hierarchies with component relationships, alternate and substitute variants, phantom sub-assemblies, and automatic cost roll-up to finished goods, so you can plan production accurately and manage engineering changes?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "mfg.routing",
@@ -1120,7 +1131,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution manage ordered manufacturing operation sequences with work centre capacity and cost data, assign resources with skill requirements, record setup and run times, support alternate paths, and maintain routing versions with effectivity dates, so you can plan production accurately and adapt to process changes?",
+        "question": "Does your solution manage ordered manufacturing operation sequences with work centre capacity and cost data, assign resources with skill requirements, record setup and run times, support alternate paths, and maintain routing versions with effectivity dates, to plan production accurately and adapt to process changes?\n",
         "free_text_prompt": "Describe how your solution structures routings, how work centers store capacity and cost information, and how operations record time elements and resource requirements.",
         "covers": [
           {
@@ -1179,14 +1190,14 @@
       "sub_module_desc": "BOM, routings, engineering change, PLM/product data.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Defines the sequence of operations required to produce an item, the work centers each operation runs on, and the standard times for setup, run, and teardown."
+          "vendor_question": "Does your solution manage ordered manufacturing operation sequences with work centre capacity and cost data, assign resources with skill requirements, record setup and run times, support alternate paths, and maintain routing versions with effectivity dates, so you can plan production accurately and adapt to process changes?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Mfg t2 cleanup. 26→12 words. Original was a noun-fragment with enumeration; rewrote as verb-led summary covering the three core concepts (operations, work centres, standard times)."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -3662,7 +3673,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution capture operator actions at the work centre, including start/stop events with timestamps, material scans, quality measurements, and downtime reasons, with real-time alerts for disruptions and specification breaches, so you have complete shop-floor visibility and traceability?",
+        "question": "Does your solution capture operator actions at the work centre, including start/stop events with timestamps, material scans, quality measurements, and downtime reasons, with real-time alerts for disruptions and specification breaches, providing complete shop-floor visibility and traceability?\n",
         "free_text_prompt": "Describe the operator interface (tablet, HMI, or mobile), how barcode/serial scanning is supported, and how downtime and quality alerts are recorded and communicated.",
         "covers": [
           {
@@ -3729,14 +3740,14 @@
       "sub_module_desc": "Work orders, production scheduling, shop floor execution, process/discrete modes, IoT data collection, labour tracking.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Real-time shop-floor interface for operators: start/stop operations, record output, scan materials, capture quality, report downtime."
+          "vendor_question": "Does your solution capture operator actions at the work centre, including start/stop events with timestamps, material scans, quality measurements, and downtime reasons, with real-time alerts for disruptions and specification breaches, so you have complete shop-floor visibility and traceability?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Mfg t2 cleanup. Replaced '/' connector ('start/stop'). 16→12 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -4399,7 +4410,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution manage quality inspections across incoming, in-process, and final stages, record non-conformances with corrective-action workflows, maintain audit trails linked to lot or serial number, and generate certificates of conformance, so you can demonstrate compliance and prevent defective goods reaching customers?",
+        "question": "Does your solution manage quality inspections across incoming, in-process, and final stages, record non-conformances with corrective-action workflows, maintain audit trails linked to lot or serial number, and generate certificates of conformance, to demonstrate compliance and prevent defective goods reaching customers?\n",
         "free_text_prompt": "Describe how your solution handles inspection data entry (manual or automated), non-conformance workflows, quarantine holds, and certificate generation, and confirm audit trail coverage by lot and serial number.",
         "covers": [
           {
@@ -4462,14 +4473,14 @@
       "sub_module_desc": "Quality management, lot/serial traceability, safety/EHS, energy/sustainability tracking — specialist QMS vendors that also service Asset and Field Service.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Plan, execute, and record quality inspections against materials, work in progress, and finished goods, with non-conformance tracking and corrective-action workflows."
+          "vendor_question": "Does your solution manage quality inspections across incoming, in-process, and final stages, record non-conformances with corrective-action workflows, maintain audit trails linked to lot or serial number, and generate certificates of conformance, so you can demonstrate compliance and prevent defective goods reaching customers?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Mfg t2 cleanup. 20→11 words. Dropped enumeration of inspection targets (materials/WIP/finished — implied)."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -4941,7 +4952,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution track raw materials, work-in-progress, and finished goods separately, maintain lot and serial traceability through production, manage bin locations across facilities, automatically consume materials on work order completion, and support quality holds and quarantine areas, so you have full visibility and control of inventory throughout your manufacturing process?",
+        "question": "Does your solution track raw materials, work-in-progress, and finished goods separately, maintain lot and serial traceability through production, manage bin locations across facilities, automatically consume materials on work order completion, and support quality holds and quarantine areas, maintaining full visibility and control of inventory throughout the manufacturing process?\n",
         "free_text_prompt": "Describe how your solution tracks inventory across production stages, manages lot/serial traceability, handles bin location assignment, and processes automatic material consumption on work order completion.",
         "covers": [
           {
@@ -4992,14 +5003,14 @@
       "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Manufacturing-specific inventory management: raw materials, WIP, and finished goods tracked by lot, serial, or bin across production locations."
+          "vendor_question": "Does your solution track raw materials, work-in-progress, and finished goods separately, maintain lot and serial traceability through production, manage bin locations across facilities, automatically consume materials on work order completion, and support quality holds and quarantine areas, so you have full visibility and control of inventory throughout your manufacturing process?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Mfg t2 cleanup. 18→14 words. Reframed noun-fragment as verb-led 'Track ...'."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -5963,7 +5974,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage engineering change requests through formal approval workflows, assess impact on product structure and routings, maintain audit trails, and support multiple effectivity methods, so you can implement product changes safely and compliantly?",
+        "question": "Does your solution manage engineering change requests through formal approval workflows, assess impact on product structure and routings, maintain audit trails, and support multiple effectivity methods, to implement product changes safely and compliantly?\n",
         "free_text_prompt": "Describe how your solution captures change proposals, routes them through authorization gates, displays affected documents and work orders, and applies date or serial-based cutover controls.",
         "covers": [
           {
@@ -6018,14 +6029,14 @@
       "sub_module_desc": "BOM, routings, engineering change, PLM/product data.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Formal workflow for proposing, reviewing, approving, and implementing changes to BOMs, routings, and product specifications, with full audit trail and impact assessment."
+          "vendor_question": "Does your solution manage engineering change requests through formal approval workflows, assess impact on product structure and routings, maintain audit trails, and support multiple effectivity methods, so you can implement product changes safely and compliantly?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Mfg t2 cleanup. 22→15 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -6379,7 +6390,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution maintain an item master with revision control, attach engineering documents, track item status through lifecycle stages, and manage manufacturing process information so you have a complete product record?",
+        "question": "Does your solution maintain an item master with revision control, attach engineering documents, track item status through lifecycle stages, and manage manufacturing process information, maintaining a complete product record?\n",
         "free_text_prompt": "Describe how your solution handles document attachment (e.g. CAD, BOM, specifications), revision tracking, lifecycle status transitions, and process data storage.",
         "covers": [
           {
@@ -6430,14 +6441,14 @@
       "sub_module_desc": "BOM, routings, engineering change, PLM/product data.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Maintain an item master with revision control, attach engineering documents like CAD drawings and specs, and track item status through the lifecycle from in-design to obsolete."
+          "vendor_question": "Does your solution maintain an item master with revision control, attach engineering documents, track item status through lifecycle stages, and manage manufacturing process information so you have a complete product record?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Mfg t2 cleanup. 26→13 words. Dropped 'specs' contraction (P1)."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -7186,15 +7197,16 @@
       "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "in_checklist"
         ],
         "original": {
-          "vendor_question_t2": "Send materials to an external manufacturer who performs part or all of the production and returns finished or semi-finished goods."
+          "in_checklist": null
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Mfg t2 cleanup. 20→11 words."
-      }
+        "edited_at": "2026-05-18",
+        "note": "Survey audit A — formal subcontract WIP tracking with material ownership is mid-market+; SMEs use simple POs for subcontract work."
+      },
+      "in_checklist": false
     },
     {
       "id": "mfg.process_manufacturing",
@@ -7672,7 +7684,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage production using recipes and formulas with batch-level tracking, yield measurement, by-product and co-product capture, genealogy traceability, and potency and shelf-life attributes, so you can manufacture and trace variable-yield batches with full compliance visibility?",
+        "question": "Does your solution manage production using recipes and formulas with batch-level tracking, yield measurement, by-product and co-product capture, genealogy traceability, and potency and shelf-life attributes, to manufacture and trace variable-yield batches with full compliance visibility?\n",
         "free_text_prompt": "Describe how your solution handles recipe-based production, batch tracking with genealogy, yield variance analysis, and potency/assay recording for batch manufacturing.",
         "covers": [
           {
@@ -7727,14 +7739,14 @@
       "sub_module_desc": "Work orders, production scheduling, shop floor execution, process/discrete modes, IoT data collection, labour tracking.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Manufacturing mode for industries making fluids, powders, chemicals, pharmaceuticals, and food, where production is by recipe, yields are variable, and by-products, co-products, and reverse BOMs matter."
+          "vendor_question": "Does your solution manage production using recipes and formulas with batch-level tracking, yield measurement, by-product and co-product capture, genealogy traceability, and potency and shelf-life attributes, so you can manufacture and trace variable-yield batches with full compliance visibility?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Mfg t2 cleanup. 26→14 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -8158,7 +8170,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage multiple manufacturing modes—discrete, repetitive, make-to-stock, make-to-order, engineer-to-order, and configure-to-order—with automatic bill of materials generation and mode-specific cost calculation, so you can fulfil diverse customer orders without switching systems?",
+        "question": "Does your solution manage multiple manufacturing modes—discrete, repetitive, make-to-stock, make-to-order, engineer-to-order, and configure-to-order—with automatic bill of materials generation and mode-specific cost calculation, to fulfil diverse customer orders without switching systems?\n",
         "free_text_prompt": "Describe how your solution assigns manufacturing modes to individual products, handles product configuration rules for variants, and calculates costs differently based on the mode assigned to each item.",
         "covers": [
           {
@@ -8210,7 +8222,18 @@
       "family": "Production Execution",
       "sub_module_id": "production_execution",
       "sub_module_name": "Production Execution (MES)",
-      "sub_module_desc": "Work orders, production scheduling, shop floor execution, process/discrete modes, IoT data collection, labour tracking."
+      "sub_module_desc": "Work orders, production scheduling, shop floor execution, process/discrete modes, IoT data collection, labour tracking.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution manage multiple manufacturing modes—discrete, repetitive, make-to-stock, make-to-order, engineer-to-order, and configure-to-order—with automatic bill of materials generation and mode-specific cost calculation, so you can fulfil diverse customer orders without switching systems?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "mfg.demand_planning",
@@ -8670,7 +8693,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution generate statistical forecasts using multiple methods, aggregate demand across dimensions, track forecast consumption against actual sales, and measure accuracy with standard metrics, so you can align supply planning with realistic demand signals?",
+        "question": "Does your solution generate statistical forecasts using multiple methods, aggregate demand across dimensions, track forecast consumption against actual sales, and measure accuracy with standard metrics, to align supply planning with realistic demand signals?\n",
         "free_text_prompt": "Describe the forecasting methods available (e.g. moving average, exponential smoothing), the levels at which forecasts can be generated (item, family, region), and how actual sales orders are used to recalibrate the forecast.",
         "covers": [
           {
@@ -8725,14 +8748,14 @@
       "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Generate the demand signal that feeds MRP: statistical forecasts, sales-and-operations planning (S&OP) inputs, and collaborative planning with customers and suppliers."
+          "vendor_question": "Does your solution generate statistical forecasts using multiple methods, aggregate demand across dimensions, track forecast consumption against actual sales, and measure accuracy with standard metrics, so you can align supply planning with realistic demand signals?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Mfg t2 cleanup. 20→12 words. Dropped S&OP reference (own cap mfg.capacity_sop)."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -9097,7 +9120,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution model rough-cut capacity constraints against critical resources, maintain resource load profiles, and generate the master production schedule from your S&OP plan, so bottlenecks are visible before detailed MRP planning begins?",
+        "question": "Does your solution model rough-cut capacity constraints against critical resources, maintain resource load profiles, and generate the master production schedule from the S&OP plan, so bottlenecks are visible before detailed MRP planning begins?\n",
         "free_text_prompt": "Describe how your solution identifies critical work centres, defines resource load profiles, models S&OP scenarios against capacity, and links the approved plan to MPS generation.",
         "covers": [
           {
@@ -9148,14 +9171,14 @@
       "sub_module_desc": "MRP, WIP tracking, product costing/variance, subcontracting, demand planning, S&OP capacity.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "High-level capacity check that validates the feasibility of the master production schedule against critical resources before MRP explodes the detail."
+          "vendor_question": "Does your solution model rough-cut capacity constraints against critical resources, maintain resource load profiles, and generate the master production schedule from your S&OP plan, so bottlenecks are visible before detailed MRP planning begins?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Mfg t2 cleanup. 20→12 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -9667,7 +9690,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Can your solution connect to production equipment using standard industrial protocols, capture machine status and cycle data automatically, store time-series telemetry for performance analysis, and generate real-time alerts on equipment anomalies, so you eliminate manual data entry and gain visibility into production performance?",
+        "question": "Can your solution connect to production equipment using standard industrial protocols, capture machine status and cycle data automatically, store time-series telemetry for performance analysis, and generate real-time alerts on equipment anomalies, to eliminate manual data entry and gain visibility into production performance?\n",
         "free_text_prompt": "Describe which industrial protocols your solution supports, how it captures data from equipment, and what types of sensor parameters and machine events it can log.",
         "covers": [
           {
@@ -9726,14 +9749,14 @@
       "sub_module_desc": "Work orders, production scheduling, shop floor execution, process/discrete modes, IoT data collection, labour tracking.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Integrate directly with production equipment and sensors for automated data capture. OEE, status, output, downtime, cycle times. Without operator manual entry."
+          "vendor_question": "Can your solution connect to production equipment using standard industrial protocols, capture machine status and cycle data automatically, store time-series telemetry for performance analysis, and generate real-time alerts on equipment anomalies, so you eliminate manual data entry and gain visibility into production performance?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Mfg t2 cleanup. 21→14 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -14402,7 +14425,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Can your solution coordinate production across multiple sites, standardise bills of material and routings, optimise material flow between plants, and calculate available-to-promise across your network, so you fulfil orders from your entire manufacturing footprint?",
+        "question": "Can your solution coordinate production across multiple sites, standardise bills of material and routings, optimise material flow between plants, and calculate available-to-promise across the production network, to fulfil orders across the manufacturing footprint?\n",
         "free_text_prompt": "Describe how your solution coordinates production planning, master data synchronisation, and inventory visibility across multiple manufacturing plants within a single enterprise.",
         "covers": [
           {
@@ -14462,14 +14485,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Coordinate production across multiple plants within the same enterprise. Network planning, cross-site transfers, intercompany sales, and global visibility"
+          "vendor_question": "Can your solution coordinate production across multiple sites, standardise bills of material and routings, optimise material flow between plants, and calculate available-to-promise across your network, so you fulfil orders from your entire manufacturing footprint?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Mfg t2 cleanup. 18→12 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -17167,7 +17190,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution import data from standard file formats, export operational data, support scheduled automated backups, and integrate with third-party systems via API, so you consolidate existing data and share information without manual re-entry?",
+        "question": "Does your solution import data from standard file formats, export operational data, support scheduled automated backups, and integrate with third-party systems via API, to consolidate existing data and share information without manual re-entry?\n",
         "free_text_prompt": "Describe the file formats supported for import and export, which accounting and HR platforms you integrate with natively, and whether you offer REST API or other integration methods for custom connections.",
         "covers": [
           {
@@ -17223,16 +17246,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier",
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "sme_tier": "required",
-          "in_checklist": null
+          "vendor_question": "Does your solution import data from standard file formats, export operational data, support scheduled automated backups, and integrate with third-party systems via API, so you consolidate existing data and share information without manual re-entry?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Cross-cutting baseline — not module-specific Mandatory. Demoted to Preferred + in_checklist:false so it joins data_governance and user_access_roles under Optional / Add-ons. Universal data import/export concern; every modern ERP provides it; not a verdict gate.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "_meta": {
         "demoted_by_step15": true,
@@ -17548,8 +17569,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-18T14:06:56.046923+08:00",
-    "step16_applied_count": 0,
+    "step16_applied_at": "2026-05-18T22:42:54.043939+08:00",
+    "step16_applied_count": 1,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-13T16:58:33.872777+08:00",

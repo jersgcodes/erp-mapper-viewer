@@ -1920,7 +1920,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain technician profiles with skills and certifications, track availability and workload, and support team grouping, so you can assign the right qualified person at the right time?",
+        "question": "Does your solution maintain technician profiles with skills and certifications, track availability and workload, and support team grouping, to assign the right qualified person at the right time?\n",
         "free_text_prompt": "Describe how your solution stores technician qualifications, monitors capacity to prevent over-allocation, and enables crew-based job assignment.",
         "covers": [
           {
@@ -1988,7 +1988,18 @@
       "family": "Scheduling & Dispatch",
       "sub_module_id": "dispatch_scheduling",
       "sub_module_name": "Dispatch & Scheduling",
-      "sub_module_desc": "Technician dispatch, scheduling, time/travel tracking, route optimisation, subcontractor management."
+      "sub_module_desc": "Technician dispatch, scheduling, time/travel tracking, route optimisation, subcontractor management.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution maintain technician profiles with skills and certifications, track availability and workload, and support team grouping, so you can assign the right qualified person at the right time?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "fsm.mobile_field_app",
@@ -3103,7 +3114,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain customer records with multiple service locations, installed equipment registry, service history, and communication logs, so you have a complete view of each customer's profile and entitlements?",
+        "question": "Does your solution maintain customer records with multiple service locations, installed equipment registry, service history, and communication logs, providing a complete view of each customer's profile and entitlements?\n",
         "free_text_prompt": "Describe how your solution stores customer master data, manages multiple sites per customer, tracks equipment and service history, and links support tickets to specific locations.",
         "covers": [
           {
@@ -3186,14 +3197,14 @@
       "sub_module_desc": "Customer/site records, installed equipment, parts inventory for field, preventive maintenance scheduling, return/swap-out workflow.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Maintain customer records with their service locations, equipment installed at each site, service history, and SLA entitlements."
+          "vendor_question": "Does your solution maintain customer records with multiple service locations, installed equipment registry, service history, and communication logs, so you have a complete view of each customer's profile and entitlements?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "FSM t2 cleanup. 17→12 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -5114,7 +5125,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage preventive maintenance scheduling based on time intervals or usage counters, automatically generate work orders at trigger points, track completion against plans, and maintain asset maintenance history with analysis, so you can prevent equipment failures and demonstrate compliance?",
+        "question": "Does your solution manage preventive maintenance scheduling based on time intervals or usage counters, automatically generate work orders at trigger points, track completion against plans, and maintain asset maintenance history with analysis, to prevent equipment failures and demonstrate compliance?\n",
         "free_text_prompt": "Describe how your solution triggers work order generation, what usage metrics it supports, and how maintenance history is captured and reported.",
         "covers": [
           {
@@ -5185,14 +5196,14 @@
       "sub_module_desc": "Customer/site records, installed equipment, parts inventory for field, preventive maintenance scheduling, return/swap-out workflow.",
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "vendor_question"
         ],
         "original": {
-          "sme_tier": "required"
+          "vendor_question": "Does your solution manage preventive maintenance scheduling based on time intervals or usage counters, automatically generate work orders at trigger points, track completion against plans, and maintain asset maintenance history with analysis, so you can prevent equipment failures and demonstrate compliance?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "DEMOTE Required → Preferred. Vendor evidence 2/9 (Salesforce FSM\nhigh, Housecall Pro medium). Small-end FSM (Jobber, Service Fusion,\nFieldEdge) doesn't surface PM as a named feature — they offer\n'recurring jobs' / 'service contracts' (terminology variance) but\nit's a clear secondary feature not the spine of FSM. SG SME FSM\nbuyers run mostly reactive callouts; PM is a growth-stage add-on.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -5543,7 +5554,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage SLA templates with response and resolution time targets, monitor elapsed time with breach alerts, configure coverage windows for business hours and holidays, and generate compliance reports, so you can track service delivery performance against commitments?",
+        "question": "Does your solution manage SLA templates with response and resolution time targets, monitor elapsed time with breach alerts, configure coverage windows for business hours and holidays, and generate compliance reports, to track service delivery performance against commitments?\n",
         "free_text_prompt": "Describe how your solution defines SLA templates, assigns them to customers or contracts, tracks elapsed time against configured windows (business hours, 24x7, holidays), and triggers breach notifications.",
         "covers": [
           {
@@ -5619,14 +5630,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Does your solution manage SLA templates with response and resolution time targets, monitor elapsed time with breach alerts, configure coverage windows for business hours and holidays, and generate compliance reports, so you can track service delivery performance against commitments?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "PARK (in_checklist: false). Vendor evidence 1/9 (ServiceMax only,\nequipment FSM specialty). SLA management with formal entitlements\nis enterprise/equipment-FSM scope. Stays visible under Optional/\nAdd-ons.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -5970,7 +5981,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution track service contract terms and coverage, validate entitlements at dispatch, record warranty claims with status progression, and notify on contract expiry for renewal, so you prevent out-of-warranty costs?",
+        "question": "Does your solution track service contract terms and coverage, validate entitlements at dispatch, record warranty claims with status progression, and notify on contract expiry for renewal, to prevent out-of-warranty costs?\n",
         "free_text_prompt": "Describe how your solution stores contract terms and renewal dates, defines coverage and exclusions, checks eligibility before dispatching work, and records warranty claims with resolution tracking.",
         "covers": [
           {
@@ -6038,7 +6049,18 @@
       "family": "Service Contracts",
       "sub_module_id": "sla_contracts_billing",
       "sub_module_name": "SLA, Contracts & Billing",
-      "sub_module_desc": "SLA entitlements, contract/warranty, quoting, billing/invoicing from the field — commercial contracts specialty."
+      "sub_module_desc": "SLA entitlements, contract/warranty, quoting, billing/invoicing from the field — commercial contracts specialty.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution track service contract terms and coverage, validate entitlements at dispatch, record warranty claims with status progression, and notify on contract expiry for renewal, so you prevent out-of-warranty costs?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "fsm.quoting_estimation",
@@ -8579,7 +8601,7 @@
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
       "vendor_questions": {
-        "question": "Does your solution manage subcontractor profiles with skills and certifications, assign work orders to external crews, track job completion and quality, maintain rate cards and payment terms, verify compliance credentials, and generate purchase orders, so you control costs and compliance?",
+        "question": "Does your solution manage subcontractor profiles with skills and certifications, assign work orders to external crews, track job completion and quality, maintain rate cards and payment terms, verify compliance credentials, and generate purchase orders, to control costs and compliance?\n",
         "question_t2": "Manage third-party field crews and subcontractors. Assign jobs, track completion, verify compliance, and process payments"
       },
       "sector_relevance": {
@@ -8631,14 +8653,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Does your solution manage subcontractor profiles with skills and certifications, assign work orders to external crews, track job completion and quality, maintain rate cards and payment terms, verify compliance credentials, and generate purchase orders, so you control costs and compliance?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "PARK (in_checklist: false). Vendor evidence 2/9 (D365 + IFS, both\nenterprise). Subcontractor coordination is enterprise scope. Small\nSG SME FSM ops use direct contractor relationships managed in\ncontacts/communications. Stays visible under Optional/Add-ons.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -12093,15 +12115,16 @@
       "sub_module_desc": "Field service KPIs, workforce capacity, job costing, IoT remote monitoring, AI/ML for field service.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "in_checklist"
         ],
         "original": {
-          "vendor_question_t2": "Ingest sensor data from connected equipment to detect anomalies, trigger preventive work orders, and enable remote diagnostics before dispatching a technician."
+          "in_checklist": null
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "FSM t2 cleanup. 21→14 words."
-      }
+        "edited_at": "2026-05-18",
+        "note": "Survey audit A — IoT remote monitoring platforms are mid-market+; SG SMEs use simple sensors, not platform-grade IoT."
+      },
+      "in_checklist": false
     },
     {
       "id": "fsm.ai_ml",
@@ -14588,7 +14611,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution import and export data in standard formats, integrate with enterprise systems via APIs and direct connectors, and support third-party connections, so you consolidate data without manual re-entry and connect to existing business tools?",
+        "question": "Does your solution import and export data in standard formats, integrate with enterprise systems via APIs and direct connectors, and support third-party connections, to consolidate data without manual re-entry and connect to existing business tools?\n",
         "free_text_prompt": "Describe the data formats supported for import and export, which ERP and accounting systems you integrate with, and how you handle real-time synchronisation across modules.",
         "covers": [
           {
@@ -14676,16 +14699,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier",
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "sme_tier": "required",
-          "in_checklist": null
+          "vendor_question": "Does your solution import and export data in standard formats, integrate with enterprise systems via APIs and direct connectors, and support third-party connections, so you consolidate data without manual re-entry and connect to existing business tools?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Cross-cutting baseline — not module-specific Mandatory. Demoted to Preferred + in_checklist:false so it joins data_governance and user_access_roles under Optional / Add-ons. Universal data import/export concern; every modern ERP provides it; not a verdict gate.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "_meta": {
         "demoted_by_step15": true,
@@ -15032,8 +15053,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-18T14:06:54.697852+08:00",
-    "step16_applied_count": 0,
+    "step16_applied_at": "2026-05-18T22:42:53.365564+08:00",
+    "step16_applied_count": 1,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-13T02:57:21.988709+08:00",

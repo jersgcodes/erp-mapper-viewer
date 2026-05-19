@@ -622,7 +622,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution manage projects with hierarchical phases and milestones, assign tasks with deadlines and resource allocation, link projects to customers and contracts, and support custom classification fields, so you can track all project work and dependencies centrally?",
+        "question": "Does your solution manage projects with hierarchical phases and milestones, assign tasks with deadlines and resource allocation, link projects to customers and contracts, and support custom classification fields, to track all project work and dependencies centrally?\n",
         "free_text_prompt": "Describe how your solution structures project hierarchies, supports task assignment with priorities and deadlines, and enables linking projects to customer and contract records.",
         "covers": [
           {
@@ -697,14 +697,14 @@
       "sub_module_desc": "Project master, tasks, collaboration, Kanban/Agile, templates, notifications.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Central project record with phases, milestones, work breakdown structure (WBS), and parent-child hierarchy for programmes and sub-projects."
+          "vendor_question": "Does your solution manage projects with hierarchical phases and milestones, assign tasks with deadlines and resource allocation, link projects to customers and contracts, and support custom classification fields, so you can track all project work and dependencies centrally?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-16",
-        "note": "Project t2 cleanup. 17→13 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -7213,7 +7213,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Can your solution track risks and issues through lifecycle states, assign owners and mitigation plans, link them to project tasks, and escalate high-severity items to stakeholders, so you maintain visibility of threats and blockers without manual status chasing?",
+        "question": "Can your solution track risks and issues through lifecycle states, assign owners and mitigation plans, link them to project tasks, and escalate high-severity items to stakeholders, to maintain visibility of threats and blockers without manual status chasing?\n",
         "free_text_prompt": "Describe how your solution records risk scores, links risks and issues to project tasks, and tracks resolution progress through closure.",
         "covers": [
           {
@@ -7293,7 +7293,18 @@
       "family": "Delivery & Tracking",
       "sub_module_id": "project_delivery",
       "sub_module_name": "Project Delivery (Gantt, EVM, Multi-Project)",
-      "sub_module_desc": "Gantt/critical path, risk register, multi-project/programme, earned value, customer portal, workflow automation, task dependencies."
+      "sub_module_desc": "Gantt/critical path, risk register, multi-project/programme, earned value, customer portal, workflow automation, task dependencies.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Can your solution track risks and issues through lifecycle states, assign owners and mitigation plans, link them to project tasks, and escalate high-severity items to stakeholders, so you maintain visibility of threats and blockers without manual status chasing?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "proj.change_orders",
@@ -8249,7 +8260,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Can your solution organise projects into programme hierarchies, allocate resources across projects with conflict detection, consolidate budget versus actual spend, and display portfolio dashboards with cross-project tracking, so you gain unified governance and visibility?",
+        "question": "Can your solution organise projects into programme hierarchies, allocate resources across projects with conflict detection, consolidate budget versus actual spend, and display portfolio dashboards with cross-project tracking, providing unified governance and visibility?\n",
         "free_text_prompt": "Describe how your solution structures programme hierarchies, detects resource conflicts, rolls up budget data across projects, and what portfolio dashboard metrics are available.",
         "covers": [
           {
@@ -8321,14 +8332,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Can your solution organise projects into programme hierarchies, allocate resources across projects with conflict detection, consolidate budget versus actual spend, and display portfolio dashboards with cross-project tracking, so you gain unified governance and visibility?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -8687,7 +8698,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Does your solution maintain a centralised directory of people with skills, certifications, and experience, track compliance expiry dates, report on resource availability and allocation, and manage cost and billing rates, so you match the right people to projects and stay on top of renewals?",
+        "question": "Does your solution maintain a centralised directory of people with skills, certifications, and experience, track compliance expiry dates, report on resource availability and allocation, and manage cost and billing rates, to match the right people to projects and stay on top of renewals?\n",
         "free_text_prompt": "Describe how your solution stores resource profiles, enables skill-based matching, manages certification expiry notifications, and reports on resource utilisation and billing rates.",
         "covers": [
           {
@@ -8762,14 +8773,14 @@
       "sub_module_desc": "Timesheets, resource allocation, resource pool/skills, expense tracking, contractor management.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Centralised directory of people with skills, certifications, and experience. Enabling skill-based resource matching for project staffing"
+          "vendor_question": "Does your solution maintain a centralised directory of people with skills, certifications, and experience, track compliance expiry dates, report on resource availability and allocation, and manage cost and billing rates, so you match the right people to projects and stay on top of renewals?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-16",
-        "note": "Project t2 cleanup. 16→13 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -10314,7 +10325,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Can your solution manage revenue recognition schedules by contract using completion, milestone, or time-based methods, track deferred revenue, allocate contract value across obligations, reconcile forecasted and recognised revenue, and generate compliance reports, so you meet statutory reporting standards without manual entries?",
+        "question": "Can your solution manage revenue recognition schedules by contract using completion, milestone, or time-based methods, track deferred revenue, allocate contract value across obligations, reconcile forecasted and recognised revenue, and generate compliance reports, to meet statutory reporting standards without manual entries?\n",
         "free_text_prompt": "Describe how your solution handles percentage-of-completion calculations, milestone recognition triggers, deferred revenue automation, and ASC 606 / IFRS 15 reporting.",
         "covers": [
           {
@@ -10398,14 +10409,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Can your solution manage revenue recognition schedules by contract using completion, milestone, or time-based methods, track deferred revenue, allocate contract value across obligations, reconcile forecasted and recognised revenue, and generate compliance reports, so you meet statutory reporting standards without manual entries?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -11204,7 +11215,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Can your solution save project structures as reusable templates with tasks, phases, and dependencies, auto-schedule them relative to a start date, and organise templates in a searchable library with categorisation, so you launch similar engagements consistently and quickly?",
+        "question": "Can your solution save project structures as reusable templates with tasks, phases, and dependencies, auto-schedule them relative to a start date, and organise templates in a searchable library with categorisation, to launch similar engagements consistently and quickly?\n",
         "free_text_prompt": "Describe how templates are created, stored, searched, and applied to new projects, including whether task scheduling adjusts automatically to the new project timeline.",
         "covers": [
           {
@@ -11271,14 +11282,14 @@
       "sub_module_desc": "Project master, tasks, collaboration, Kanban/Agile, templates, notifications.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Save project structures as templates for reuse. Tasks, phases, milestones, resource plans, and checklists can be cloned to start new engagements quickly"
+          "vendor_question": "Can your solution save project structures as reusable templates with tasks, phases, and dependencies, auto-schedule them relative to a start date, and organise templates in a searchable library with categorisation, so you launch similar engagements consistently and quickly?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-16",
-        "note": "Project t2 cleanup. 22→12 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -15485,7 +15496,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution encrypt personal data at rest and in transit, maintain audit logs with timestamps and affected records, enforce automated data retention policies, and comply with Cyber Essentials baseline controls, so you meet PDPA obligations and demonstrate security compliance?",
+        "question": "Does your solution encrypt personal data at rest and in transit, maintain audit logs with timestamps and affected records, enforce automated data retention policies, and comply with Cyber Essentials baseline controls, to meet PDPA obligations and demonstrate security compliance?\n",
         "free_text_prompt": "Describe your encryption standards, audit logging scope, retention policy automation, and backup/recovery capabilities.",
         "covers": [
           {
@@ -15557,14 +15568,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "vendor_question"
         ],
         "original": {
-          "sme_tier": "required"
+          "vendor_question": "Does your solution encrypt personal data at rest and in transit, maintain audit logs with timestamps and affected records, enforce automated data retention policies, and comply with Cyber Essentials baseline controls, so you meet PDPA obligations and demonstrate security compliance?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-07",
-        "note": "Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_all_modules: each module has its own copy (fin.*, hr.*, sales.* …); flag propagates the override to every canonical. User intent: not a baseline gate; revisit later. Pair with other.user_access_roles.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "family": null,
       "sub_module_id": null,
@@ -16065,7 +16076,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain individual user accounts with role-based permissions, restrict access by resource, log authentication and material actions, and enforce multi-factor authentication, so you can enforce security controls and maintain a complete audit trail?",
+        "question": "Does your solution maintain individual user accounts with role-based permissions, restrict access by resource, log authentication and material actions, and enforce multi-factor authentication, to enforce security controls and maintain a complete audit trail?\n",
         "free_text_prompt": "Describe how roles and permissions are configured, whether project-level access control is available, and what user actions are logged for audit purposes.",
         "covers": [
           {
@@ -16133,14 +16144,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "vendor_question"
         ],
         "original": {
-          "sme_tier": "required"
+          "vendor_question": "Does your solution maintain individual user accounts with role-based permissions, restrict access by resource, log authentication and material actions, and enforce multi-factor authentication, so you can enforce security controls and maintain a complete audit trail?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-07",
-        "note": "Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_all_modules: propagates to fin.user_access_roles, hr.user_access_roles, sales.user_access_roles, etc. Pair with other.data_governance.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "family": null,
       "sub_module_id": null,
@@ -16689,7 +16700,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution import project data from external sources, export to standard formats, synchronise records with third-party systems, and provide API access for integrations, so you can consolidate all data without manual re-entry?",
+        "question": "Does your solution import project data from external sources, export to standard formats, synchronise records with third-party systems, and provide API access for integrations, to consolidate all data without manual re-entry?\n",
         "free_text_prompt": "Describe the file formats supported for import and export, which external systems your solution integrates with natively, and whether you provide API documentation for custom integrations.",
         "covers": [
           {
@@ -16765,16 +16776,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier",
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "sme_tier": "required",
-          "in_checklist": null
+          "vendor_question": "Does your solution import project data from external sources, export to standard formats, synchronise records with third-party systems, and provide API access for integrations, so you can consolidate all data without manual re-entry?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Cross-cutting baseline — not module-specific Mandatory. Demoted to Preferred + in_checklist:false so it joins data_governance and user_access_roles under Optional / Add-ons. Universal data import/export concern; every modern ERP provides it; not a verdict gate.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "_meta": {
         "demoted_by_step15": true,
@@ -17127,7 +17136,7 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-18T14:06:56.313351+08:00",
+    "step16_applied_at": "2026-05-18T15:46:25.414718+08:00",
     "step16_applied_count": 0,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",

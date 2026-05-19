@@ -632,7 +632,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain a vehicle master record with registration, identification, insurance tracking, lifecycle status, technical specifications, and centralised document storage, so you have a single source of truth for fleet and regulatory compliance?",
+        "question": "Does your solution maintain a vehicle master record with registration, identification, insurance tracking, lifecycle status, technical specifications, and centralised document storage, providing a single source of truth for fleet and regulatory compliance?\n",
         "free_text_prompt": "Describe how your solution stores vehicle master data (make, model, VIN, registration), tracks insurance and registration expiry, manages vehicle lifecycle states, and links driver assignments.",
         "covers": [
           {
@@ -711,14 +711,14 @@
       "sub_module_desc": "Vehicle master, insurance/claims, procurement and disposal.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Central master record for every vehicle and mobile asset in the fleet, with make, model, VIN, registration, insurance, and document storage."
+          "vendor_question": "Does your solution maintain a vehicle master record with registration, identification, insurance tracking, lifecycle status, technical specifications, and centralised document storage, so you have a single source of truth for fleet and regulatory compliance?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Fleet t2 cleanup. 21→14 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -1081,7 +1081,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain driver credentials, track vehicle assignments with effective dates, record training and certification history, alert on expiry deadlines, and display availability status, so you ensure only qualified drivers operate authorised vehicles?",
+        "question": "Does your solution maintain driver credentials, track vehicle assignments with effective dates, record training and certification history, alert on expiry deadlines, and display availability status, to ensure only qualified drivers operate authorised vehicles?\n",
         "free_text_prompt": "Describe how your solution stores licence information, tracks training records, manages vehicle assignments, and notifies users of upcoming expiry dates or compliance deadlines.",
         "covers": [
           {
@@ -1156,14 +1156,14 @@
       "sub_module_desc": "Driver management, behaviour scoring, accident/incident tracking.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Maintain driver records including licence details, training history, and vehicle assignment. Ensuring the right driver is in the right vehicle with valid credentials"
+          "vendor_question": "Does your solution maintain driver credentials, track vehicle assignments with effective dates, record training and certification history, alert on expiry deadlines, and display availability status, so you ensure only qualified drivers operate authorised vehicles?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Fleet t2 cleanup. 23→12 words. Dropped 'Ensuring the right driver...' marketing tail."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -1970,7 +1970,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution manage preventive maintenance scheduling by time or distance intervals, automatically generate service reminders with escalation alerts, record service history, and display upcoming maintenance across your fleet for compliance and cost control?",
+        "question": "Does your solution manage preventive maintenance scheduling by time or distance intervals, automatically generate service reminders with escalation alerts, record service history, and display upcoming maintenance across the fleet for compliance and cost control?\n",
         "free_text_prompt": "Describe how your solution defines intervals, triggers reminders, records service history, and displays the upcoming maintenance schedule.",
         "covers": [
           {
@@ -2041,14 +2041,14 @@
       "sub_module_desc": "PM scheduling, maintenance work orders, tyre management, workshop/vendor management.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Define service intervals by time or mileage and auto-generate upcoming service reminders."
+          "vendor_question": "Does your solution manage preventive maintenance scheduling by time or distance intervals, automatically generate service reminders with escalation alerts, record service history, and display upcoming maintenance across your fleet for compliance and cost control?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Fleet t2 cleanup. 19→13 words. Spelled out 'auto-generate' → 'automatically generate' (contraction lint)."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -2982,7 +2982,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution track odometer readings and trip details including origin, destination, distance, and purpose, classify trips by use type, calculate vehicle utilisation rates, and allocate mileage costs to cost centres, so you accurately apportion vehicle expenses and plan replacement cycles?",
+        "question": "Does your solution track odometer readings and trip details including origin, destination, distance, and purpose, classify trips by use type, calculate vehicle utilisation rates, and allocate mileage costs to cost centres, to accurately apportion vehicle expenses and plan replacement cycles?\n",
         "free_text_prompt": "Describe how your solution captures odometer readings, stores trip origin/destination data, distinguishes business from personal trips, and assigns mileage-based costs to departments or cost centres.",
         "covers": [
           {
@@ -3053,14 +3053,14 @@
       "sub_module_desc": "GPS/telematics, route planning/optimisation, trip and mileage — telematics specialist vendors.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Record odometer readings, log trips with start and end points, and track vehicle utilisation to support cost allocation and replacement planning."
+          "vendor_question": "Does your solution track odometer readings and trip details including origin, destination, distance, and purpose, classify trips by use type, calculate vehicle utilisation rates, and allocate mileage costs to cost centres, so you accurately apportion vehicle expenses and plan replacement cycles?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Fleet t2 cleanup. 21→13 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -3424,7 +3424,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution track and analyse total cost of ownership per vehicle across fuel, maintenance, insurance, registration, and depreciation, compare actual costs against budget, and export results to your accounting system for financial reconciliation?",
+        "question": "Does your solution track and analyse total cost of ownership per vehicle across fuel, maintenance, insurance, registration, and depreciation, compare actual costs against budget, and export results to the accounting system for financial reconciliation?\n",
         "free_text_prompt": "Describe how your solution aggregates cost data by vehicle and category, supports budget comparison at vehicle and fleet level, and what reporting or export options are available for financial reconciliation.",
         "covers": [
           {
@@ -3503,14 +3503,14 @@
       "sub_module_desc": "Fleet cost, reporting dashboards, regulatory compliance (LTA), emissions tracking, analytics/AI.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Track total cost of ownership per vehicle. Fuel, maintenance, insurance, registration, depreciation, and compare against budget."
+          "vendor_question": "Does your solution track and analyse total cost of ownership per vehicle across fuel, maintenance, insurance, registration, and depreciation, compare actual costs against budget, and export results to your accounting system for financial reconciliation?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Fleet t2 cleanup. 16→13 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -4796,7 +4796,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution provide vehicle location tracking with historical playback, geofencing and speed monitoring, and fleet-wide visibility, so you can ensure delivery transparency?",
+        "question": "Does your solution provide vehicle location tracking with historical playback, geofencing and speed monitoring, and fleet-wide visibility, to ensure delivery transparency?\n",
         "free_text_prompt": "Describe how your solution displays vehicle positions, handles geofencing alerts, captures OBD data, and manages offline vehicle status.",
         "covers": [
           {
@@ -4883,14 +4883,14 @@
       "sub_module_desc": "GPS/telematics, route planning/optimisation, trip and mileage — telematics specialist vendors.",
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "vendor_question"
         ],
         "original": {
-          "sme_tier": "preferred"
+          "vendor_question": "Does your solution provide vehicle location tracking with historical playback, geofencing and speed monitoring, and fleet-wide visibility, so you can ensure delivery transparency?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-16",
-        "note": "PROMOTE Preferred → Required. Vendor evidence 6/6 high — universal\nacross SME-tier (Fleetio + Motive both high) AND mid+enterprise\n(Samsara, Geotab, Verizon Connect, Webfleet). Real-time vehicle\nlocation is now baseline expectation for SG SME fleet operators\n(delivery, service, taxi/ride-share). Insurance discount driver.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -5419,7 +5419,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Can your solution optimise multi-stop delivery routes by distance, time, or cost, enforce delivery time windows, support manual adjustment, and adapt to live traffic conditions, so you can reduce fuel spend and meet customer commitments reliably?",
+        "question": "Can your solution optimise multi-stop delivery routes by distance, time, or cost, enforce delivery time windows, support manual adjustment, and adapt to live traffic conditions, to reduce fuel spend and meet customer commitments reliably?\n",
         "free_text_prompt": "Describe the optimisation criteria your solution supports (distance, time, cost), how time-window and vehicle constraints are enforced, and how route performance is measured and reported.",
         "covers": [
           {
@@ -5494,14 +5494,14 @@
       "sub_module_desc": "GPS/telematics, route planning/optimisation, trip and mileage — telematics specialist vendors.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Plan multi-stop delivery or service routes, optimise for distance, time, or fuel cost, and adapt routes in real time based on traffic."
+          "vendor_question": "Can your solution optimise multi-stop delivery routes by distance, time, or cost, enforce delivery time windows, support manual adjustment, and adapt to live traffic conditions, so you can reduce fuel spend and meet customer commitments reliably?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Fleet t2 cleanup. 22→15 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -6186,7 +6186,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution calculate driver safety scores from detected events, monitor distraction and fatigue with alerts, and generate behaviour trend reports, to help you reduce accidents and lower insurance costs?",
+        "question": "Does your solution calculate driver safety scores from detected events, monitor distraction and fatigue with alerts, and generate behaviour trend reports, to reduce accidents and lower insurance costs?\n",
         "free_text_prompt": "Describe which driving events your solution detects, how safety scores are calculated, and whether alerts are sent in real-time or post-trip.",
         "covers": [
           {
@@ -6265,14 +6265,14 @@
       "sub_module_desc": "Driver management, behaviour scoring, accident/incident tracking.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Monitor driving behaviour (harsh braking, speeding, distraction) and generate safety scores to reduce accidents and insurance costs."
+          "vendor_question": "Does your solution calculate driver safety scores from detected events, monitor distraction and fatigue with alerts, and generate behaviour trend reports, to help you reduce accidents and lower insurance costs?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Fleet t2 cleanup. 17→12 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -6616,7 +6616,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution track vehicle and driver regulatory obligations, monitor expiry dates with advance alerts, log compliance hours against limits, and display compliance status, so you avoid fines and operational downtime?",
+        "question": "Does your solution track vehicle and driver regulatory obligations, monitor expiry dates with advance alerts, log compliance hours against limits, and display compliance status, to avoid fines and operational downtime?\n",
         "free_text_prompt": "Describe which regulatory obligations your solution tracks (e.g. vehicle tax, COE, inspections, driver licences, hours of work), how alerts are triggered, and what the compliance dashboard displays.",
         "covers": [
           {
@@ -6691,14 +6691,14 @@
       "sub_module_desc": "Fleet cost, reporting dashboards, regulatory compliance (LTA), emissions tracking, analytics/AI.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Track regulatory obligations. Road tax, COE (Singapore), vehicle inspections, driver hours, and certifications, with expiry alerts to avoid fines and downtime."
+          "vendor_question": "Does your solution track vehicle and driver regulatory obligations, monitor expiry dates with advance alerts, log compliance hours against limits, and display compliance status, so you avoid fines and operational downtime?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Fleet t2 cleanup. 21→12 words. SG-specific COE kept."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -7029,7 +7029,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Does your solution track tyre inventory, monitor tread depth against safety thresholds, schedule rotations by distance or calendar intervals, and maintain replacement history, so you can maximise tyre life and ensure fleet safety compliance?",
+        "question": "Does your solution track tyre inventory, monitor tread depth against safety thresholds, schedule rotations by distance or calendar intervals, and maintain replacement history, to maximise tyre life and ensure fleet safety compliance?\n",
         "free_text_prompt": "Describe how your solution tracks tyre inventory by brand and size, alerts on tread depth breaches, schedules rotations by distance or calendar interval, and records replacement history.",
         "covers": [
           {
@@ -7101,14 +7101,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Track tyre inventory, monitor tread depth, schedule rotations, and record replacements to maximise tyre life and safety."
+          "vendor_question": "Does your solution track tyre inventory, monitor tread depth against safety thresholds, schedule rotations by distance or calendar intervals, and maintain replacement history, so you can maximise tyre life and ensure fleet safety compliance?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Fleet t2 cleanup (parked cap). 17→12 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -8497,7 +8497,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution maintain a vehicle insurance policy register with provider and coverage details, track claim progress through states, alert users of renewal dates, and record excess and payout amounts, so you can manage claims end-to-end without coverage lapses?",
+        "question": "Does your solution maintain a vehicle insurance policy register with provider and coverage details, track claim progress through states, alert users of renewal dates, and record excess and payout amounts, to manage claims end-to-end without coverage lapses?\n",
         "free_text_prompt": "Describe how your solution links claims to incidents, records excess and payout amounts, and maintains an audit trail for compliance.",
         "covers": [
           {
@@ -8569,7 +8569,18 @@
       "family": "Vehicle Registry",
       "sub_module_id": "fleet_register",
       "sub_module_name": "Vehicle Register & Procurement",
-      "sub_module_desc": "Vehicle master, insurance/claims, procurement and disposal."
+      "sub_module_desc": "Vehicle master, insurance/claims, procurement and disposal.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution maintain a vehicle insurance policy register with provider and coverage details, track claim progress through states, alert users of renewal dates, and record excess and payout amounts, so you can manage claims end-to-end without coverage lapses?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "fleet.procurement_disposal",
@@ -9329,7 +9340,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Can your solution maintain a vendor register with service capabilities, generate purchase orders for repairs, assign preferred vendors by service type, and track performance metrics including turnaround time and quality, so you optimise maintenance spending and reliability?",
+        "question": "Can your solution maintain a vendor register with service capabilities, generate purchase orders for repairs, assign preferred vendors by service type, and track performance metrics including turnaround time and quality, to optimise maintenance spending and reliability?\n",
         "free_text_prompt": "Describe how your solution captures vendor contact details and service scope, manages vendor assignment rules, and what performance metrics are available for comparison and reporting.",
         "covers": [
           {
@@ -9405,14 +9416,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Maintain a register of external workshops and service vendors, track service quality, costs, and turnaround times."
+          "vendor_question": "Can your solution maintain a vendor register with service capabilities, generate purchase orders for repairs, assign preferred vendors by service type, and track performance metrics including turnaround time and quality, so you optimise maintenance spending and reliability?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Fleet t2 cleanup (parked cap). 16→13 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -9750,7 +9761,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Does your solution calculate and report CO2 emissions by vehicle and fleet total, track electric vehicle adoption, and generate sustainability reports for stakeholder communication, so you demonstrate environmental progress?",
+        "question": "Does your solution calculate and report CO2 emissions by vehicle and fleet total, track electric vehicle adoption, and generate sustainability reports for stakeholder communication, to demonstrate environmental progress?\n",
         "free_text_prompt": "Describe how your solution captures vehicle emissions data, categorises by fuel type, and what report formats and stakeholder outputs it supports.",
         "covers": [
           {
@@ -9818,14 +9829,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Does your solution calculate and report CO2 emissions by vehicle and fleet total, track electric vehicle adoption, and generate sustainability reports for stakeholder communication, so you demonstrate environmental progress?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -10580,7 +10591,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution analyse vehicle age, mileage, and maintenance costs to recommend replacement timing, forecast fleet demand, and identify fuel and usage efficiency trends, so you can optimise fleet investment and operating costs?",
+        "question": "Does your solution analyse vehicle age, mileage, and maintenance costs to recommend replacement timing, forecast fleet demand, and identify fuel and usage efficiency trends, to optimise fleet investment and operating costs?\n",
         "free_text_prompt": "Describe how your solution calculates replacement recommendations, forecasts demand by season or project, and tracks consumption metrics by vehicle.",
         "covers": [
           {
@@ -10651,14 +10662,14 @@
       "sub_module_desc": "Fleet cost, reporting dashboards, regulatory compliance (LTA), emissions tracking, analytics/AI.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Calculate optimal vehicle replacement timing, forecast fleet demand by season or project, and generate cost-saving maintenance recommendations from usage trends."
+          "vendor_question": "Does your solution analyse vehicle age, mileage, and maintenance costs to recommend replacement timing, forecast fleet demand, and identify fuel and usage efficiency trends, so you can optimise fleet investment and operating costs?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Fleet t2 cleanup. 20→12 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -12778,7 +12789,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution import and export fleet data in standard formats and integrate with third-party systems via API or direct connectors, so you synchronise information across business functions without manual re-entry?",
+        "question": "Does your solution import and export fleet data in standard formats and integrate with third-party systems via API or direct connectors, to synchronise information across business functions without manual re-entry?\n",
         "free_text_prompt": "Describe the file formats supported for import and export, which third-party systems your solution integrates with natively, and how API access is provided for custom integrations.",
         "covers": [
           {
@@ -12862,16 +12873,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier",
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "sme_tier": "required",
-          "in_checklist": null
+          "vendor_question": "Does your solution import and export fleet data in standard formats and integrate with third-party systems via API or direct connectors, so you synchronise information across business functions without manual re-entry?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Cross-cutting baseline — not module-specific Mandatory. Demoted to Preferred + in_checklist:false so it joins data_governance and user_access_roles under Optional / Add-ons. Universal data import/export concern; every modern ERP provides it; not a verdict gate.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "_meta": {
         "demoted_by_step15": true,
@@ -13190,7 +13199,7 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-18T14:06:55.247514+08:00",
+    "step16_applied_at": "2026-05-18T15:46:24.080611+08:00",
     "step16_applied_count": 0,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",

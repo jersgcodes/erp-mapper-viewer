@@ -3523,7 +3523,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution enable configuration of approval workflows with conditional routing, escalation, and audit trails across ERP modules, so you can enforce consistent governance without coding?",
+        "question": "Does your solution enable configuration of approval workflows with conditional routing, escalation, and audit trails across ERP modules, to enforce consistent governance without coding?\n",
         "free_text_prompt": "Describe how workflows are configured (visual builder, templates, or code), which ERP processes support them, and how escalation and delegation work.",
         "covers": [
           {
@@ -3634,7 +3634,18 @@
       "family": "Workflow & Automation",
       "sub_module_id": "workflow_engine",
       "sub_module_name": "Workflow & Approval Engine",
-      "sub_module_desc": "Workflow automation, notifications/alerts, approval engine."
+      "sub_module_desc": "Workflow automation, notifications/alerts, approval engine.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution enable configuration of approval workflows with conditional routing, escalation, and audit trails across ERP modules, so you can enforce consistent governance without coding?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "generic.notification_alerts",
@@ -5494,7 +5505,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage documents linked to ERP records, track changes with audit trails, organise by folder and tag, control access by permission, and search by keyword, so you can retrieve and comply with retention rules?",
+        "question": "Does your solution manage documents linked to ERP records, track changes with audit trails, organise by folder and tag, control access by permission, and search by keyword, to retrieve and comply with retention rules?\n",
         "free_text_prompt": "Describe how documents are linked to ERP entities, what audit information is captured, and which document types and search methods are supported.",
         "covers": [
           {
@@ -5601,7 +5612,18 @@
       "family": "Workflow & Automation",
       "sub_module_id": "document_forms",
       "sub_module_name": "Document Management & Forms",
-      "sub_module_desc": "Document management system, custom forms and survey builder."
+      "sub_module_desc": "Document management system, custom forms and survey builder.",
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution manage documents linked to ERP records, track changes with audit trails, organise by folder and tag, control access by permission, and search by keyword, so you can retrieve and comply with retention rules?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "generic.custom_forms_surveys",
@@ -6481,7 +6503,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution enable business users to build custom forms with drag-and-drop fields, conditional logic, and response visualisation, then share and export results, so you can collect and analyse feedback without IT involvement?",
+        "question": "Does your solution enable business users to build custom forms with drag-and-drop fields, conditional logic, and response visualisation, then share and export results, to collect and analyse feedback without IT involvement?\n",
         "free_text_prompt": "Describe the form builder interface, field types supported, conditional logic capabilities, distribution methods, and export formats available.",
         "covers": [
           {
@@ -6591,14 +6613,14 @@
       "sub_module_desc": "Document management system, custom forms and survey builder.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Build custom data-collection forms and surveys without developer involvement. For customer feedback, internal checklists, onboarding questionnaires, and ad hoc data capture"
+          "vendor_question": "Does your solution enable business users to build custom forms with drag-and-drop fields, conditional logic, and response visualisation, then share and export results, so you can collect and analyse feedback without IT involvement?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-16",
-        "note": "Others t2 cleanup. 21→9 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -9448,7 +9470,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain automated backups with encrypted offsite storage, point-in-time recovery capability, and documented recovery objectives, so your business can restore data quickly after failure or loss?",
+        "question": "Does your solution maintain automated backups with encrypted offsite storage, point-in-time recovery capability, and documented recovery objectives, to restore data quickly after failure or loss?\n",
         "free_text_prompt": "Describe your backup frequency, retention policy, recovery time objective, and how backups are physically isolated from production systems.",
         "covers": [
           {
@@ -9566,14 +9588,14 @@
       "sub_module_desc": null,
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Automated data backup, point-in-time recovery, and business continuity measures so the business can recover from hardware failure, ransomware, or accidental data loss."
+          "vendor_question": "Does your solution maintain automated backups with encrypted offsite storage, point-in-time recovery capability, and documented recovery objectives, so your business can restore data quickly after failure or loss?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-16",
-        "note": "Others t2 cleanup. 22→14 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -10622,7 +10644,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage multiple legal entities from a single instance, with separate financial books, shared master data, automatic inter-company elimination, and entity-level access controls, so you can operate your group structure without separate systems?",
+        "question": "Does your solution manage multiple legal entities from a single instance, with separate financial books, shared master data, automatic inter-company elimination, and entity-level access controls, to operate a group structure without separate systems?\n",
         "free_text_prompt": "Describe how your solution handles separate chart of accounts per entity, inter-company transaction elimination in consolidated reports, and role-based access control by entity.",
         "covers": [
           {
@@ -10736,15 +10758,16 @@
       "sub_module_desc": "Multi-company/multi-branch, master data management — multi-entity data specialty.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "in_checklist"
         ],
         "original": {
-          "vendor_question_t2": "Operate multiple legal entities or branch offices from a single ERP instance with separate books, shared master data, and consolidated reporting."
+          "in_checklist": null
         },
         "author": "human-review",
-        "edited_at": "2026-05-16",
-        "note": "Others t2 cleanup. 21→15 words."
-      }
+        "edited_at": "2026-05-18",
+        "note": "Survey audit A — formal multi-entity accounting with inter-company elimination is mid-market+; SG SMEs almost always operate one Pte Ltd."
+      },
+      "in_checklist": false
     },
     {
       "id": "generic.master_data_management",
@@ -11280,15 +11303,16 @@
       "sub_module_desc": "Multi-company/multi-branch, master data management — multi-entity data specialty.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "in_checklist"
         ],
         "original": {
-          "vendor_question_t2": "Cross-module data governance platform ensuring consistent, clean master data across all ERP modules with deduplication, validation, and stewardship workflows."
+          "in_checklist": null
         },
         "author": "human-review",
-        "edited_at": "2026-05-16",
-        "note": "Others t2 cleanup. 19→13 words."
-      }
+        "edited_at": "2026-05-18",
+        "note": "Survey audit A — formal MDM programs are mid-market+; SMEs do not run dedicated master-data governance."
+      },
+      "in_checklist": false
     },
     {
       "id": "generic.low_code",
@@ -11822,7 +11846,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Can your solution enable business administrators to create custom fields, automate conditional rules, design forms visually, and customise layouts without developer involvement, so your team can adapt the system to your needs independently?",
+        "question": "Can your solution enable business administrators to create custom fields, automate conditional rules, design forms visually, and customise layouts without developer involvement, to adapt the system to business needs independently?\n",
         "free_text_prompt": "Describe the visual tools or low-code interfaces your solution provides for custom fields, automations, forms, reports, and layout changes, and confirm whether these require code deployment or developer assistance.",
         "covers": [
           {
@@ -11940,14 +11964,14 @@
       "sub_module_desc": "Low-code/no-code customisation, API/integration platform — developer/integration specialty.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Extend the ERP without developer involvement. Custom fields, custom forms, scripted automations, and UI modifications using a visual builder or simple scripting layer"
+          "vendor_question": "Can your solution enable business administrators to create custom fields, automate conditional rules, design forms visually, and customise layouts without developer involvement, so your team can adapt the system to your needs independently?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-16",
-        "note": "Others t2 cleanup. 23→14 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -13061,7 +13085,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution offer a RESTful API with OAuth 2.0 authentication, webhook support for real-time events, bulk data import and export, pre-built connectors for external systems, and iPaaS compatibility, so you can integrate with external platforms without custom coding?",
+        "question": "Does your solution offer a RESTful API with OAuth 2.0 authentication, webhook support for real-time events, bulk data import and export, pre-built connectors for external systems, and iPaaS compatibility, to integrate with external platforms without custom coding?\n",
         "free_text_prompt": "Describe the authentication methods supported, which external platforms have pre-built connectors, and how your API documentation is structured for developers.",
         "covers": [
           {
@@ -13175,14 +13199,14 @@
       "sub_module_desc": "Low-code/no-code customisation, API/integration platform — developer/integration specialty.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Integration layer for connecting the ERP with external systems via REST API, webhooks, and pre-built connectors."
+          "vendor_question": "Does your solution offer a RESTful API with OAuth 2.0 authentication, webhook support for real-time events, bulk data import and export, pre-built connectors for external systems, and iPaaS compatibility, so you can integrate with external platforms without custom coding?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-16",
-        "note": "Others t2 cleanup. 25→14 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -14299,7 +14323,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution generate and print customised documents from ERP records, support batch operations and thermal printers, and allow preview and export to standard formats before output, so you can produce compliant documents efficiently without manual formatting?",
+        "question": "Does your solution generate and print customised documents from ERP records, support batch operations and thermal printers, and allow preview and export to standard formats before output, to produce compliant documents efficiently without manual formatting?\n",
         "free_text_prompt": "Describe which document types your solution can print (invoices, receipts, delivery orders, shipping labels, product tags), whether it supports thermal printers, and what export formats and preview options are available.",
         "covers": [
           {
@@ -14421,14 +14445,14 @@
       "sub_module_desc": "Digital signature/e-signing, print/label management, training & help system.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Generate and print receipts, shipping labels, barcode labels, product tags, and formatted reports from any ERP record, with customisable templates and batch printing support."
+          "vendor_question": "Does your solution generate and print customised documents from ERP records, support batch operations and thermal printers, and allow preview and export to standard formats before output, so you can produce compliant documents efficiently without manual formatting?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-16",
-        "note": "Others t2 cleanup. 24→13 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -17032,7 +17056,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain comprehensive audit trails of personal data consent decisions and access actions under PDPA, encrypt data at rest and in transit, enforce retention and deletion timelines, and support data subject requests, so your business meets Singapore's PDPA in full?",
+        "question": "Does your solution maintain comprehensive audit trails of personal data consent decisions and access actions under PDPA, encrypt data at rest and in transit, enforce retention and deletion timelines, and support data subject requests, to meet Singapore's PDPA requirements in full?\n",
         "free_text_prompt": "Describe your encryption standards, audit logging scope, access control mechanisms, and PDPA compliance approach, including how you handle data deletion requests and retention policies.",
         "covers": [
           {
@@ -17142,14 +17166,14 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "vendor_question"
         ],
         "original": {
-          "sme_tier": "required"
+          "vendor_question": "Does your solution maintain comprehensive audit trails of personal data consent decisions and access actions under PDPA, encrypt data at rest and in transit, enforce retention and deletion timelines, and support data subject requests, so your business meets Singapore's PDPA in full?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-07",
-        "note": "Shifted required → preferred AND removed from main checklist (in_checklist: false). Renders under Optional/Add-ons tail in Type 2. apply_to_all_modules: each module has its own copy (fin.*, hr.*, sales.* …); flag propagates the override to every canonical. User intent: not a baseline gate; revisit later. Pair with other.user_access_roles.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "in_checklist": false,
       "family": null,
@@ -18951,7 +18975,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution import data from spreadsheets, export to standard formats, integrate with external platforms, and validate data with scheduled automation, so you can consolidate business data without manual re-entry?",
+        "question": "Does your solution import data from spreadsheets, export to standard formats, integrate with external platforms, and validate data with scheduled automation, to consolidate business data without manual re-entry?\n",
         "free_text_prompt": "Describe the file formats supported for import and export, which accounting platforms you integrate with, and how data validation and scheduling work.",
         "covers": [
           {
@@ -19074,16 +19098,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier",
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "sme_tier": "required",
-          "in_checklist": null
+          "vendor_question": "Does your solution import data from spreadsheets, export to standard formats, integrate with external platforms, and validate data with scheduled automation, so you can consolidate business data without manual re-entry?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Cross-cutting baseline — not module-specific Mandatory. Demoted to Preferred + in_checklist:false so it joins data_governance and user_access_roles under Optional / Add-ons. Universal data import/export concern; every modern ERP provides it; not a verdict gate.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "_meta": {
         "demoted_by_step15": true,
@@ -19096,7 +19118,7 @@
     "created_by": "scripts/migrate_others_to_generic.py",
     "source": "migrated from others.json",
     "note": "Cross-cutting platform caps. Reachable via Cap Library only — not a top-nav viewer tab.",
-    "step16_applied_at": "2026-05-18T14:06:55.511071+08:00",
-    "step16_applied_count": 0
+    "step16_applied_at": "2026-05-18T22:42:53.709282+08:00",
+    "step16_applied_count": 2
   }
 }

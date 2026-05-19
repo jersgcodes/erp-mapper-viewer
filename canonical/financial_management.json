@@ -651,7 +651,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain a double-entry general ledger with configurable chart of accounts, period and year-end close controls, and drill-down traceability from reports to source transactions, so you have a complete audit trail and single source of truth for financial reporting?",
+        "question": "Does your solution maintain a double-entry general ledger with configurable chart of accounts, period and year-end close controls, and drill-down traceability from reports to source transactions, providing a complete audit trail and single source of truth for financial reporting?\n",
         "free_text_prompt": "Describe how your solution handles chart of accounts configuration, journal entry posting with balance validation, period controls, sub-ledger reconciliation, and bank reconciliation across payment modes.",
         "covers": [
           {
@@ -755,6 +755,17 @@
             "reason": "Fundamental for inventory and sales transaction accounting"
           }
         }
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution maintain a double-entry general ledger with configurable chart of accounts, period and year-end close controls, and drill-down traceability from reports to source transactions, so you have a complete audit trail and single source of truth for financial reporting?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -2202,7 +2213,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution capture vendor bills, match them against purchase orders and goods receipts, route them through approval workflows with configurable thresholds, schedule payments, and generate vendor ageing reports, so you maintain control over payables and cash flow?",
+        "question": "Does your solution capture vendor bills, match them against purchase orders and goods receipts, route them through approval workflows with configurable thresholds, schedule payments, and generate vendor ageing reports, to maintain control over payables and cash flow?\n",
         "free_text_prompt": "Describe how your solution handles bill capture methods, matching logic, approval routing, payment scheduling, and withholding tax tracking.",
         "covers": [
           {
@@ -2317,14 +2328,14 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_terse"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_terse": "Does your solution allow you to record vendor bills and schedule payments?"
+          "vendor_question": "Does your solution capture vendor bills, match them against purchase orders and goods receipts, route them through approval workflows with configurable thresholds, schedule payments, and generate vendor ageing reports, so you maintain control over payables and cash flow?"
         },
         "author": "human-review",
         "edited_at": "2026-05-18",
-        "note": "Voice step 3 — stripped 'allow you to' from terse."
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -3533,20 +3544,20 @@
       ],
       "sme_minimum_note": null,
       "vendor_questions": {
-        "question": "Does your solution calculate and track GST on transactions, segregate input and output GST, and generate GST F5 returns in IRAS-required format, so your business stays GST-compliant without manual calculation or filing risk?",
+        "question": "Does your solution calculate and track GST on transactions, segregate input and output GST, and generate GST F5 returns in IRAS-required format, keeping the business GST-compliant without manual calculation or filing risk?\n",
         "question_terse": "Does your solution calculate and track GST on transactions and segregate input and output GST?",
         "question_t2": "Calculate and track GST on transactions and segregate input and output GST"
       },
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "vendor_question"
         ],
         "original": {
-          "sme_tier": "required"
+          "vendor_question": "Does your solution calculate and track GST on transactions, segregate input and output GST, and generate GST F5 returns in IRAS-required format, so your business stays GST-compliant without manual calculation or filing risk?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-08",
-        "note": "Demoted required → preferred. GST/VAT compliance is universal for registered businesses but Singapore SMEs below the GST threshold ($1M revenue) don't register; demotion lets non-registered vendors pass without gating.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "sector_relevance": {
         "generic": true,
@@ -4280,7 +4291,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution generate standard financial statements with drill-down to underlying transactions, comparative period analysis, and multi-format export, so you can produce compliant reports and analyse performance without manual consolidation?",
+        "question": "Does your solution generate standard financial statements with drill-down to underlying transactions, comparative period analysis, and multi-format export, to produce compliant reports and analyse performance without manual consolidation?\n",
         "free_text_prompt": "Describe the financial statements your solution produces, the comparison and drill-down features available, and the export formats supported.",
         "covers": [
           {
@@ -4380,6 +4391,17 @@
             "reason": "Inventory valuation, margin analysis, cashflow tracking"
           }
         }
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution generate standard financial statements with drill-down to underlying transactions, comparative period analysis, and multi-format export, so you can produce compliant reports and analyse performance without manual consolidation?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -4793,7 +4815,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution maintain a fixed-asset register with categorisation and custodian tracking, calculate periodic depreciation using multiple methods, process additions and disposals with automatic gain/loss posting, and maintain audit trails, so you have complete asset accountability and accurate financial reporting?",
+        "question": "Does your solution maintain a fixed-asset register with categorisation and custodian tracking, calculate periodic depreciation using multiple methods, process additions and disposals with automatic gain/loss posting, and maintain audit trails, maintaining complete asset accountability and accurate financial reporting?\n",
         "free_text_prompt": "Describe which depreciation methods you support, how you handle asset transfers and disposals, and how depreciation entries flow to the GL.",
         "covers": [
           {
@@ -4909,6 +4931,17 @@
             "reason": "Warehouse equipment, vehicles, and handling systems require depreciation"
           }
         }
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution maintain a fixed-asset register with categorisation and custodian tracking, calculate periodic depreciation using multiple methods, process additions and disposals with automatic gain/loss posting, and maintain audit trails, so you have complete asset accountability and accurate financial reporting?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -5313,7 +5346,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain operating budgets across multiple dimensions, display actual versus budget variance on financial reports, support multiple budget versions, and enforce approval workflows with audit trails, so you can control spending and track performance against plan?",
+        "question": "Does your solution maintain operating budgets across multiple dimensions, display actual versus budget variance on financial reports, support multiple budget versions, and enforce approval workflows with audit trails, to control spending and track performance against plan?\n",
         "free_text_prompt": "Describe how your solution handles budget creation, variance reporting, version management (original/revised/forecast), approval controls, and any support for rolling forecast updates and commitment tracking.",
         "covers": [
           {
@@ -5347,14 +5380,14 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_terse"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_terse": "Does your solution allow you to create budgets and compare actual spending against budgeted amounts?"
+          "vendor_question": "Does your solution maintain operating budgets across multiple dimensions, display actual versus budget variance on financial reports, support multiple budget versions, and enforce approval workflows with audit trails, so you can control spending and track performance against plan?"
         },
         "author": "human-review",
         "edited_at": "2026-05-18",
-        "note": "Voice step 3 — stripped 'allow you to' from terse."
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "sector_relevance": {
         "generic": true,
@@ -6808,7 +6841,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage purchase orders with budget encumbrance, three-way matching of orders to receipts and invoices, and accrual of unbilled goods at period end, so you maintain financial control and accurate expense recognition?",
+        "question": "Does your solution manage purchase orders with budget encumbrance, three-way matching of orders to receipts and invoices, and accrual of unbilled goods at period end, to maintain financial control and accurate expense recognition?\n",
         "free_text_prompt": "Describe how your solution handles budget encumbrance at PO creation, three-way matching tolerance, and period-end accrual of received but uninvoiced goods.",
         "covers": [
           {
@@ -6916,6 +6949,17 @@
             "reason": "Critical for supplier invoice matching and payment control"
           }
         }
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution manage purchase orders with budget encumbrance, three-way matching of orders to receipts and invoices, and accrual of unbilled goods at period end, so you maintain financial control and accurate expense recognition?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -7411,21 +7455,21 @@
       ],
       "sme_minimum_note": null,
       "vendor_questions": {
-        "question": "Does your solution track project revenue, costs, and work-in-progress across multiple cost types, apply revenue recognition methods, and report profitability by project and cost centre, so you can monitor project margin and resource utilisation?",
+        "question": "Does your solution track project revenue, costs, and work-in-progress across multiple cost types, apply revenue recognition methods, and report profitability by project and cost centre, to monitor project margin and resource utilisation?\n",
         "question_terse": "Does your solution track project costs and revenue to calculate project profitability?",
         "question_t2": "Track project costs and revenue to calculate project profitability"
       },
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Does your solution track project revenue, costs, and work-in-progress across multiple cost types, apply revenue recognition methods, and report profitability by project and cost centre, so you can monitor project margin and resource utilisation?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-08",
-        "note": "Demoted to Optional / Add-on. Project-level P&L is essential for professional services / construction / consulting only. Generic SMEs don't track revenue at project granularity.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "sector_relevance": {
         "generic": false,
@@ -8794,7 +8838,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage customer credit limits and exposure, execute automated collection sequences by invoice age, track payment commitments with follow-up reminders, and process disputes with approval workflows, so you reduce days-sales-outstanding and bad-debt risk?",
+        "question": "Does your solution manage customer credit limits and exposure, execute automated collection sequences by invoice age, track payment commitments with follow-up reminders, and process disputes with approval workflows, to reduce days-sales-outstanding and bad-debt risk?\n",
         "free_text_prompt": "Describe how your solution handles credit limit enforcement, dunning automation (channels and aging triggers), dispute workflows, and write-off approvals.",
         "covers": [
           {
@@ -8837,14 +8881,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Does your solution manage customer credit limits and exposure, execute automated collection sequences by invoice age, track payment commitments with follow-up reminders, and process disputes with approval workflows, so you reduce days-sales-outstanding and bad-debt risk?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "sector_relevance": {
         "generic": false,
@@ -9265,7 +9309,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution maintain an immutable audit trail of transactions and changes, enforce configurable approval workflows, prevent incompatible role assignments, lock closed periods with change logging, and generate audit evidence exports for external auditors, so you demonstrate financial controls compliance?",
+        "question": "Does your solution maintain an immutable audit trail of transactions and changes, enforce configurable approval workflows, prevent incompatible role assignments, lock closed periods with change logging, and generate audit evidence exports for external auditors, to demonstrate financial controls compliance?\n",
         "free_text_prompt": "Describe how your solution records transaction history, implements approval controls, prevents incompatible role assignments, and supports audit evidence export.",
         "covers": [
           {
@@ -9370,7 +9414,18 @@
           }
         }
       },
-      "baseline": true
+      "baseline": true,
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution maintain an immutable audit trail of transactions and changes, enforce configurable approval workflows, prevent incompatible role assignments, lock closed periods with change logging, and generate audit evidence exports for external auditors, so you demonstrate financial controls compliance?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
+      }
     },
     {
       "id": "fin.period_close",
@@ -9772,7 +9827,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution manage period-close tasks with assignment and completion tracking, reconcile sub-ledgers to general ledger, progress through close stages with audit trail, and automatically calculate period-end adjustments such as depreciation and revaluation, so your team completes close on schedule with full visibility?",
+        "question": "Does your solution manage period-close tasks with assignment and completion tracking, reconcile sub-ledgers to general ledger, progress through close stages with audit trail, and automatically calculate period-end adjustments such as depreciation and revaluation, enabling close completion on schedule with full visibility?\n",
         "free_text_prompt": "Describe how your solution supports task assignment and tracking, journal template reuse, reconciliation workflows, and the soft-to-hard close progression.",
         "covers": [
           {
@@ -9875,14 +9930,14 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_terse"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_terse": "Does your solution allow your team to complete all period-close tasks and adjustments within a defined close cycle?"
+          "vendor_question": "Does your solution manage period-close tasks with assignment and completion tracking, reconcile sub-ledgers to general ledger, progress through close stages with audit trail, and automatically calculate period-end adjustments such as depreciation and revaluation, so your team completes close on schedule with full visibility?"
         },
         "author": "human-review",
         "edited_at": "2026-05-18",
-        "note": "Voice step 3 — dropped 'allow your team to' opener."
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -10908,7 +10963,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution import payroll journal entries from your HR system, map salary, CPF contributions, and other statutory deductions to the correct GL accounts, and post entries with full audit trail, so payroll cost lands accurately in the financial statements?",
+        "question": "Does your solution import payroll journal entries from the HR system, map salary, CPF contributions, and other statutory deductions to the correct GL accounts, and post entries with full audit trail, so payroll cost lands accurately in the financial statements?\n",
         "free_text_prompt": "Describe how your solution handles the import of payroll data from HR systems, the mapping of payroll elements (salary, CPF, tax, benefits, accruals) to GL accounts, and reconciliation of payroll clearing accounts to source data.",
         "covers": [
           {
@@ -11023,14 +11078,14 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_terse"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_terse": "Does your solution post payroll costs to the general ledger from your HR system?"
+          "vendor_question": "Does your solution import payroll journal entries from your HR system, map salary, CPF contributions, and other statutory deductions to the correct GL accounts, and post entries with full audit trail, so payroll cost lands accurately in the financial statements?"
         },
         "author": "human-review",
         "edited_at": "2026-05-18",
-        "note": "Voice step 3 — 'your HR system' → 'the HR system'."
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -11357,7 +11412,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution generate and validate invoices in PEPPOL BIS Billing 3.0 format, submit and receive them via the InvoiceNow network through a certified access point, and track transmission status, so you meet IMDA's InvoiceNow mandate without manual re-keying?",
+        "question": "Does your solution generate and validate invoices in PEPPOL BIS Billing 3.0 format, submit and receive them via the InvoiceNow network through a certified access point, and track transmission status, to meet IMDA's InvoiceNow mandate without manual re-keying?\n",
         "free_text_prompt": "Describe how your solution generates PEPPOL BIS Billing 3.0 invoices, connects to certified PEPPOL access points, monitors transmission status, and populates accounts payable from inbound invoices.",
         "covers": [
           {
@@ -12051,7 +12106,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution accept multiple payment methods including cards, digital transfers, and direct debits, automatically reconcile settlements to your bank account and invoices, and generate payment confirmations, so customers can pay online and your cash position stays accurate?",
+        "question": "Does your solution accept multiple payment methods including cards, digital transfers, and direct debits, automatically reconcile settlements to the bank account and invoices, and generate payment confirmations, so customers can pay online and cash position stays current?\n",
         "free_text_prompt": "Describe which payment methods you support (credit card, PayNow, FAST, GIRO, direct debit, digital wallets) and how settlement reconciliation works in your system.",
         "covers": [
           {
@@ -12085,14 +12140,14 @@
       },
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "vendor_question"
         ],
         "original": {
-          "sme_tier": "required"
+          "vendor_question": "Does your solution accept multiple payment methods including cards, digital transfers, and direct debits, automatically reconcile settlements to your bank account and invoices, and generate payment confirmations, so customers can pay online and your cash position stays accurate?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-08",
-        "note": "Demoted required → preferred. Online payment acceptance only matters for B2C / e-commerce / subscription business models; B2B and service-only SMEs invoice + collect via bank transfer.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "sector_relevance": {
         "generic": false,
@@ -12513,7 +12568,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution map general ledger accounts to ACRA XBRL taxonomy concepts, automatically tag trial balance items, validate against ACRA's BizFile schema, and generate the XBRL file ready for submission, so your annual financial filing is compliant without manual taxonomy work?",
+        "question": "Does your solution map general ledger accounts to ACRA XBRL taxonomy concepts, automatically tag trial balance items, validate against ACRA's BizFile schema, and generate the XBRL file ready for submission, to keep annual financial filing compliant without manual taxonomy work?\n",
         "free_text_prompt": "Describe how your solution handles ACRA taxonomy mapping, validation rules, document generation, and the approval workflow for digital sign-off.",
         "covers": [
           {
@@ -12621,6 +12676,17 @@
             "reason": "Incorporated wholesalers subject to mandatory XBRL filing"
           }
         }
+      },
+      "_cap_override": {
+        "fields_overridden": [
+          "vendor_question"
+        ],
+        "original": {
+          "vendor_question": "Does your solution map general ledger accounts to ACRA XBRL taxonomy concepts, automatically tag trial balance items, validate against ACRA's BizFile schema, and generate the XBRL file ready for submission, so your annual financial filing is compliant without manual taxonomy work?"
+        },
+        "author": "human-review",
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -12976,7 +13042,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Does your solution maintain a lease register, capitalise right-of-use assets and liabilities at commencement, calculate periodic amortisation and interest, remeasure on modifications, and generate disclosure reports with payment schedules, so you can meet lease accounting standards without manual journal entries?",
+        "question": "Does your solution maintain a lease register, capitalise right-of-use assets and liabilities at commencement, calculate periodic amortisation and interest, remeasure on modifications, and generate disclosure reports with payment schedules, to meet lease accounting standards without manual journal entries?\n",
         "free_text_prompt": "Describe how your solution handles lease classification, discount rate application, remeasurement on lease modifications, and exemptions for short-term or low-value leases.",
         "covers": [
           {
@@ -13015,14 +13081,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Does your solution maintain a lease register, capitalise right-of-use assets and liabilities at commencement, calculate periodic amortisation and interest, remeasure on modifications, and generate disclosure reports with payment schedules, so you can meet lease accounting standards without manual journal entries?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "sector_relevance": {
         "generic": false,
@@ -13454,7 +13520,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "advanced",
-        "question": "Does your solution maintain an investment register with instrument classification and counterparty detail, calculate mark-to-market valuations at reporting dates, track derivative contracts with settlement terms, and automate interest accrual and maturity events, so you can meet investment accounting standards and monitor credit exposure?",
+        "question": "Does your solution maintain an investment register with instrument classification and counterparty detail, calculate mark-to-market valuations at reporting dates, track derivative contracts with settlement terms, and automate interest accrual and maturity events, to meet investment accounting standards and monitor credit exposure?\n",
         "free_text_prompt": "Describe how your solution handles investment classification under IFRS 9, calculates expected credit loss impairment, and supports hedge accounting workflows.",
         "covers": [
           {
@@ -13493,14 +13559,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Does your solution maintain an investment register with instrument classification and counterparty detail, calculate mark-to-market valuations at reporting dates, track derivative contracts with settlement terms, and automate interest accrual and maturity events, so you can meet investment accounting standards and monitor credit exposure?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "sector_relevance": {
         "generic": false,
@@ -18064,7 +18130,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution maintain an immutable audit log of all create, update, and delete operations with user and timestamp records, support PDPA data subject access requests, and provide reports for Cyber Essentials Mark (CEM) certification audits, so your compliance posture is provable?",
+        "question": "Does your solution maintain an immutable audit log of all create, update, and delete operations with user and timestamp records, support PDPA data subject access requests, and provide reports for Cyber Essentials Mark (CEM) certification audits, to demonstrate a provable compliance posture?\n",
         "free_text_prompt": "Describe how your solution records and stores audit events immutably, which regulatory frameworks it supports compliance tracking for, and how audit reports are generated and exported.",
         "covers": [
           {
@@ -18170,14 +18236,14 @@
       "sub_module_desc": "Business intelligence dashboards, AI assistant/copilot, compliance/audit framework — cross-module analytics.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Cross-module audit log, compliance posture tracking, and governance controls. Who did what, when, and whether it complied with policy"
+          "vendor_question": "Does your solution maintain an immutable audit log of all create, update, and delete operations with user and timestamp records, support PDPA data subject access requests, and provide reports for Cyber Essentials Mark (CEM) certification audits, so your compliance posture is provable?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-16",
-        "note": "Others t2 cleanup. 19→13 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "baseline": true
     }
@@ -18497,7 +18563,7 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-18T14:06:54.981093+08:00",
+    "step16_applied_at": "2026-05-18T15:46:23.746073+08:00",
     "step16_applied_count": 2,
     "step15_generated_at": "2026-05-15T12:33:32.883705+08:00",
     "step15_processed": 26,

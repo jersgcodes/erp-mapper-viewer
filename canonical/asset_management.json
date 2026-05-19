@@ -719,7 +719,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain a centralised asset register with hierarchical classification, unique identifiers, technical specifications, custodian tracking, and lifecycle metadata, so you have complete visibility for maintenance planning and compliance?",
+        "question": "Does your solution maintain a centralised asset register with hierarchical classification, unique identifiers, technical specifications, custodian tracking, and lifecycle metadata, providing complete visibility for maintenance planning and compliance?\n",
         "free_text_prompt": "Describe how your solution generates asset identifiers, organises assets hierarchically, captures technical and warranty details, and links supporting documents.",
         "covers": [
           {
@@ -809,14 +809,14 @@
       "sub_module_desc": "Asset master, hierarchy, lifecycle management, depreciation, leasing.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Centralised inventory of every asset the organisation owns or manages, with hierarchical structure, classification, and identifying metadata."
+          "vendor_question": "Does your solution maintain a centralised asset register with hierarchical classification, unique identifiers, technical specifications, custodian tracking, and lifecycle metadata, so you have complete visibility for maintenance planning and compliance?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Asset t2 cleanup. 17→12 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -1276,7 +1276,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution track asset states through their full lifecycle, record key dates and transfers with audit trail, and retain complete historical records, so you maintain compliance and visibility across acquisition to retirement?",
+        "question": "Does your solution track asset states through their full lifecycle, record key dates and transfers with audit trail, and retain complete historical records, to maintain compliance and visibility across acquisition to retirement?\n",
         "free_text_prompt": "Describe how your solution auto-creates asset records from purchase documents, handles asset reinstatement after repair, and provides asset managers access to full lifecycle history and maintenance records.",
         "covers": [
           {
@@ -1346,14 +1346,14 @@
       "sub_module_desc": "Asset master, hierarchy, lifecycle management, depreciation, leasing.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Track each asset through its full lifecycle: acquisition, commissioning, operation, retirement, and disposal, with an audit trail of every state change."
+          "vendor_question": "Does your solution track asset states through their full lifecycle, record key dates and transfers with audit trail, and retain complete historical records, so you maintain compliance and visibility across acquisition to retirement?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Asset t2 cleanup. 21→12 words. Dropped 'with an audit trail of every state change' (implied by 'track')."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -1819,7 +1819,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution calculate depreciation using multiple methods, maintain separate book and tax schedules, automatically post entries to the general ledger, and track revaluations with audit trail, so you manage asset values accurately across reporting periods?",
+        "question": "Does your solution calculate depreciation using multiple methods, maintain separate book and tax schedules, automatically post entries to the general ledger, and track revaluations with audit trail, to manage asset values accurately across reporting periods?\n",
         "free_text_prompt": "Describe which depreciation methods are supported, how book and tax schedules are kept separate, and how revaluations and impairments are recorded and audited.",
         "covers": [
           {
@@ -1886,14 +1886,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Calculate book and tax depreciation across multiple methods, track accumulated depreciation, handle revaluations, and feed the GL automatically."
+          "vendor_question": "Does your solution calculate depreciation using multiple methods, maintain separate book and tax schedules, automatically post entries to the general ledger, and track revaluations with audit trail, so you manage asset values accurately across reporting periods?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Asset t2 cleanup. 18→13 words. Cap is parked (in_checklist:false) but t2 still cleaned for the Optional/Add-on rendering."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -2475,7 +2475,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution generate scheduled work orders from preventive maintenance plans, support multiple maintenance strategies, and display upcoming activities with completion status, so you avoid unplanned equipment downtime?",
+        "question": "Does your solution generate scheduled work orders from preventive maintenance plans, support multiple maintenance strategies, and display upcoming activities with completion status, to avoid unplanned equipment downtime?\n",
         "free_text_prompt": "Describe how your solution supports time-based, usage-based, and condition-based maintenance triggers, and how preventive and unplanned maintenance are scheduled together.",
         "covers": [
           {
@@ -2549,18 +2549,14 @@
       "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty.",
       "_cap_override": {
         "fields_overridden": [
-          "applicability"
+          "vendor_question"
         ],
         "original": {
-          "applicability": [
-            "sme",
-            "mid_market",
-            "enterprise"
-          ]
+          "vendor_question": "Does your solution generate scheduled work orders from preventive maintenance plans, support multiple maintenance strategies, and display upcoming activities with completion status, so you avoid unplanned equipment downtime?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Applicability narrowed [sme, mid_market, enterprise] →\n[mid_market, enterprise]. Tier stays Required. Reason: formal\npreventive maintenance scheduling is a mid-market+ feature. SG\nSME asset operators run reactive maintenance + recurring tasks\nin Excel/Google Calendar; PM scheduling matters once asset\nportfolio + downtime cost both grow.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -4352,7 +4348,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution maintain a spare parts catalogue with multi-location tracking, automatic reorder alerts, work order reservations, and consumption history by asset, so you prevent stockouts and optimise maintenance spending?",
+        "question": "Does your solution maintain a spare parts catalogue with multi-location tracking, automatic reorder alerts, work order reservations, and consumption history by asset, to prevent stockouts and optimise maintenance spending?\n",
         "free_text_prompt": "Describe how your solution manages spare parts catalogues, storeroom locations, stock controls, work order linkage, and parts reservations.",
         "covers": [
           {
@@ -4426,18 +4422,14 @@
       "sub_module_desc": "Preventive maintenance, work orders, service desk, spare parts, mobile field work, shutdown/turnaround — core CMMS/EAM specialty.",
       "_cap_override": {
         "fields_overridden": [
-          "applicability"
+          "vendor_question"
         ],
         "original": {
-          "applicability": [
-            "sme",
-            "mid_market",
-            "enterprise"
-          ]
+          "vendor_question": "Does your solution maintain a spare parts catalogue with multi-location tracking, automatic reorder alerts, work order reservations, and consumption history by asset, so you prevent stockouts and optimise maintenance spending?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Applicability narrowed → [mid_market, enterprise]. Tier stays\nRequired. Reason: formal spare-parts inventory matters at\nmid_market+ scale. Small shops run informal stockroom + Excel.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -4990,7 +4982,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution capture asset condition data from multiple sources, configure independent thresholds, automatically create maintenance work orders when limits are exceeded, and display historical trends with real-time alerts, so you shift from calendar-based to condition-based maintenance?",
+        "question": "Does your solution capture asset condition data from multiple sources, configure independent thresholds, automatically create maintenance work orders when limits are exceeded, and display historical trends with real-time alerts, to shift from calendar-based to condition-based maintenance?\n",
         "free_text_prompt": "Describe the measurement sources your solution accepts (manual, barcode, IoT), how thresholds trigger work orders, and what condition data is retained in the asset record.",
         "covers": [
           {
@@ -5060,14 +5052,14 @@
       "sub_module_desc": "Condition monitoring, predictive maintenance, RCM/FMEA, bad-actor analysis — reliability engineering specialty (distinct from compliance).",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Capture asset health data (manual readings or IoT sensor streams) and trigger maintenance based on measured condition rather than calendar or usage alone."
+          "vendor_question": "Does your solution capture asset condition data from multiple sources, configure independent thresholds, automatically create maintenance work orders when limits are exceeded, and display historical trends with real-time alerts, so you shift from calendar-based to condition-based maintenance?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Asset t2 cleanup. 23→11 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -6153,7 +6145,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution calculate and report maintenance KPIs including asset and labour cost analysis, preventive schedule compliance, and downtime tracking by failure category, so you can monitor asset health and optimise maintenance planning?",
+        "question": "Does your solution calculate and report maintenance KPIs including asset and labour cost analysis, preventive schedule compliance, and downtime tracking by failure category, to monitor asset health and optimise maintenance planning?\n",
         "free_text_prompt": "Describe which reliability KPIs your solution calculates (e.g. MTBF, MTTR, OEE), how cost and compliance data are reported, and what drill-down capabilities the dashboards provide.",
         "covers": [
           {
@@ -6227,18 +6219,14 @@
       "sub_module_desc": "Maintenance KPIs, spare parts optimisation, linear assets, GIS, AR/digital twin — analytics and visualisation layer.",
       "_cap_override": {
         "fields_overridden": [
-          "applicability"
+          "vendor_question"
         ],
         "original": {
-          "applicability": [
-            "sme",
-            "mid_market",
-            "enterprise"
-          ]
+          "vendor_question": "Does your solution calculate and report maintenance KPIs including asset and labour cost analysis, preventive schedule compliance, and downtime tracking by failure category, so you can monitor asset health and optimise maintenance planning?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Applicability narrowed → [mid_market, enterprise]. Tier stays\nRequired. Reason: maintenance KPIs (MTBF, MTTR, asset\navailability) need volume to matter — small SME asset portfolios\ndon't generate enough events to make the analytics meaningful.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -6648,7 +6636,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution manage inspections and safety checks with configurable types and frequencies, record pass/fail outcomes, maintain audit trails, and generate expiry alerts, so you stay compliant with regulatory and insurance requirements?",
+        "question": "Does your solution manage inspections and safety checks with configurable types and frequencies, record pass/fail outcomes, maintain audit trails, and generate expiry alerts, to stay compliant with regulatory and insurance requirements?\n",
         "free_text_prompt": "Describe how your solution handles inspection scheduling, checklist execution, non-conformance tracking, and permit-to-work control, including audit trail capture.",
         "covers": [
           {
@@ -6714,14 +6702,14 @@
       "sub_module_desc": "Inspection, regulatory compliance, safety, OT/ICS cybersecurity — HSE & compliance specialty vendors.",
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier"
+          "vendor_question"
         ],
         "original": {
-          "sme_tier": "required"
+          "vendor_question": "Does your solution manage inspections and safety checks with configurable types and frequencies, record pass/fail outcomes, maintain audit trails, and generate expiry alerts, so you stay compliant with regulatory and insurance requirements?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "DEMOTE Required → Preferred. Same pattern as mfg.safety_compliance:\nuniversal NEED but ERP/CMMS isn't the canonical tool. PSG has 2\ndedicated sol cats for this:\n  - built-environment__smart-inspection-and-management (Integrated)\n    → SafetyCulture, Ailyssa (Ailytics)\n  - built-environment__smart-inspection-and-management-e-permit-to-work-e-ptw\n    → CSG-Novade Safety-HSE, Hubble Safety Mgmt, InSight QSE ePTW\n      (Capps), SafetyCulture (ePTW)\nPlus Fleet Safety variants (FLEET-SHIELD, MajuFleet) under the\nFleet vertical for vehicle ops.\nVendor signal: 4/7 evidence (Brightly, Maximo, Infor EAM,\nAssetWorks) but only 1 high-confidence — light EAM-native\ncompliance is \"good enough for office facilities\" but regulated\nworkplaces (food/pharma/BCA-regulated/MOM-WSH-heavy) use the\nstandalones because they're certified and audit-ready.\n\nCluster impact: asset.compliance was the anchor of the\n'Compliance & Inspection' multi-core cluster. With it demoted,\nonly asset.analytics_kpi remains in that cluster — too thin for\nits own core. Asset module switches to single-core in\nconfig/preferred_clusters.yaml. Reverses the 2026-05-08 multi-core\ndesign for Asset (vendor evidence + the wrong-tool argument\ntogether justified it).\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -7397,7 +7385,7 @@
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
       "vendor_questions": {
-        "question": "Does your solution maintain a failure mode library with risk scoring and maintenance strategy assignment, linking each failure mode to its preventive maintenance plan, so you can justify and optimise maintenance decisions by failure risk?",
+        "question": "Does your solution maintain a failure mode library with risk scoring and maintenance strategy assignment, linking each failure mode to its preventive maintenance plan, to justify and optimise maintenance decisions by failure risk?\n",
         "tier": "advanced",
         "question_t2": "Formal failure-mode analysis to pick the right maintenance strategy per failure mode."
       },
@@ -7445,14 +7433,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Formalised analysis of how assets fail and which failures matter, used to pick the right maintenance strategy (run-to-fail vs PM vs predictive) per failure mode rather than per asset."
+          "vendor_question": "Does your solution maintain a failure mode library with risk scoring and maintenance strategy assignment, linking each failure mode to its preventive maintenance plan, so you can justify and optimise maintenance decisions by failure risk?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Asset t2 cleanup (parked cap). 29→12 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -7748,7 +7736,7 @@
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
       "vendor_questions": {
-        "question": "Can your solution identify chronically failing assets using failure metrics and downtime data, support root cause analysis with corrective action tracking, maintain failure code taxonomy, and monitor reliability improvement trends, so you can eliminate repeat failures and optimise asset performance?",
+        "question": "Can your solution identify chronically failing assets using failure metrics and downtime data, support root cause analysis with corrective action tracking, maintain failure code taxonomy, and monitor reliability improvement trends, to eliminate repeat failures and optimise asset performance?\n",
         "tier": "advanced",
         "question_t2": "Analyse historical failure data to identify chronically failing assets and eliminate root causes."
       },
@@ -7796,14 +7784,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Tools for reliability engineers to analyse historical failure data and identify chronically failing assets (\"bad actors\") for targeted investigation and elimination of root causes."
+          "vendor_question": "Can your solution identify chronically failing assets using failure metrics and downtime data, support root cause analysis with corrective action tracking, maintain failure code taxonomy, and monitor reliability improvement trends, so you can eliminate repeat failures and optimise asset performance?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Asset t2 cleanup (parked cap). 24→13 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -8150,7 +8138,7 @@
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
       "vendor_questions": {
-        "question": "Does your solution manage shutdown events as distinct planning objects with aggregated work orders, critical-path scheduling, resource allocation, event-level approvals, progress tracking, and post-event reporting, so you can execute major maintenance with full cost control and audit visibility?",
+        "question": "Does your solution manage shutdown events as distinct planning objects with aggregated work orders, critical-path scheduling, resource allocation, event-level approvals, progress tracking, and post-event reporting, to execute major maintenance with full cost control and audit visibility?\n",
         "tier": "advanced",
         "question_t2": "Planning and executing major maintenance events where the asset is taken out of service."
       },
@@ -8198,14 +8186,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "in_checklist": null
+          "vendor_question": "Does your solution manage shutdown events as distinct planning objects with aggregated work orders, critical-path scheduling, resource allocation, event-level approvals, progress tracking, and post-event reporting, so you can execute major maintenance with full cost control and audit visibility?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Demoted to Optional / Add-on. Advanced-tier capability — enterprise or threshold-gated; not part of the SME-baseline Mandatory + Preferred checklist. Stays visible under Optional / Add-ons in Type 2.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -8979,7 +8967,7 @@
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
       "vendor_questions": {
-        "question": "Does your solution model asset replacement scenarios across multiple time horizons, calculate remaining useful life by condition and age, rank candidates by replacement risk, and compare capital impacts by asset class, so you can prioritise spending and prevent unplanned downtime?",
+        "question": "Does your solution model asset replacement scenarios across multiple time horizons, calculate remaining useful life by condition and age, rank candidates by replacement risk, and compare capital impacts by asset class, to prioritise spending and prevent unplanned downtime?\n",
         "tier": "advanced",
         "question_t2": "Long-range planning for asset replacement based on remaining useful life and criticality."
       },
@@ -9027,14 +9015,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Long-range planning for asset replacement, refurbishment, and retirement based on remaining useful life, criticality, and replacement cost."
+          "vendor_question": "Does your solution model asset replacement scenarios across multiple time horizons, calculate remaining useful life by condition and age, rank candidates by replacement risk, and compare capital impacts by asset class, so you can prioritise spending and prevent unplanned downtime?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Asset t2 cleanup (parked cap). 17→13 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -9727,15 +9715,16 @@
       "sub_module_desc": "Maintenance KPIs, spare parts optimisation, linear assets, GIS, AR/digital twin — analytics and visualisation layer.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "in_checklist"
         ],
         "original": {
-          "vendor_question_t2": "Map-based visualisation of assets and work, with GIS layer integration for organisations whose assets are distributed across wide areas (utilities, telco, municipalities)."
+          "in_checklist": null
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Asset t2 cleanup. 22→13 words."
-      }
+        "edited_at": "2026-05-18",
+        "note": "Survey audit A — formal GIS integration is mid-market+; SG SMEs use Google Maps integrations, not real GIS systems."
+      },
+      "in_checklist": false
     },
     {
       "id": "asset.sla_commercial",
@@ -10116,7 +10105,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "preferred",
-        "question": "Does your solution track contractual SLA terms per asset, calculate real-time uptime compliance excluding planned maintenance, monitor breach thresholds, and generate customer-facing compliance reports, so you can bill penalties or bonuses accurately?",
+        "question": "Does your solution track contractual SLA terms per asset, calculate real-time uptime compliance excluding planned maintenance, monitor breach thresholds, and generate customer-facing compliance reports, to bill penalties or bonuses accurately?\n",
         "free_text_prompt": "Describe how your solution defines SLA targets per asset, measures uptime from operational data, calculates financial adjustments for breaches or over-performance, and delivers compliance visibility to customers.",
         "covers": [
           {
@@ -10186,14 +10175,14 @@
       "sub_module_desc": "Capital projects, investment planning, warranty/SLA contracts, energy and carbon tracking per asset.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "For organisations that lease equipment to customers or sell uptime as a service. Track contractual SLAs per asset, measure compliance, and calculate penalties or bonus payments"
+          "vendor_question": "Does your solution track contractual SLA terms per asset, calculate real-time uptime compliance excluding planned maintenance, monitor breach thresholds, and generate customer-facing compliance reports, so you can bill penalties or bonuses accurately?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Asset t2 cleanup. 26→13 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -11102,7 +11091,7 @@
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
       "vendor_questions": {
-        "question": "Can your solution analyse spare-parts inventory to recommend optimal stock levels and locations, calculate safety stock and economic order quantities, identify obsolescence risk, and model policy changes before deployment, so you balance stock-outs against carrying costs?",
+        "question": "Can your solution analyse spare-parts inventory to recommend optimal stock levels and locations, calculate safety stock and economic order quantities, identify obsolescence risk, and model policy changes before deployment, to balance stock-outs against carrying costs?\n",
         "tier": "preferred",
         "question_t2": "Analyse spare-parts inventory to balance stock-out risk against carrying cost."
       },
@@ -11149,15 +11138,16 @@
       "sub_module_desc": "Maintenance KPIs, spare parts optimisation, linear assets, GIS, AR/digital twin — analytics and visualisation layer.",
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "in_checklist"
         ],
         "original": {
-          "vendor_question_t2": "Analytical layer on top of spare-parts inventory: what to stock, in what quantity, where. Balancing stock-out risk against carrying cost and obsolescence"
+          "in_checklist": null
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Asset t2 cleanup. 22→11 words."
-      }
+        "edited_at": "2026-05-18",
+        "note": "Survey audit A — ML-driven spares optimisation is mid-market+; SMEs do manual reorder min/max."
+      },
+      "in_checklist": false
     },
     {
       "id": "asset.mobile_disconnected",
@@ -12788,7 +12778,7 @@
       "sme_minimum": null,
       "sme_minimum_note": "capability not applicable to SMEs",
       "vendor_questions": {
-        "question": "Does your solution track patch and firmware versions per OT asset, enforce approval workflows for changes, document network zones and compensating controls, and log security incidents with audit trails, so you manage OT vulnerability exposure and demonstrate compliance without production disruption?",
+        "question": "Does your solution track patch and firmware versions per OT asset, enforce approval workflows for changes, document network zones and compensating controls, and log security incidents with audit trails, to manage OT vulnerability exposure and demonstrate compliance without production disruption?\n",
         "tier": "advanced",
         "question_t2": "Operational-technology security per connected asset: patch status, vulnerabilities, and incidents."
       },
@@ -12836,14 +12826,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "vendor_question_t2"
+          "vendor_question"
         ],
         "original": {
-          "vendor_question_t2": "Operational-technology security tied to the asset register: patch status, known vulnerabilities, and incidents per connected asset."
+          "vendor_question": "Does your solution track patch and firmware versions per OT asset, enforce approval workflows for changes, document network zones and compensating controls, and log security incidents with audit trails, so you manage OT vulnerability exposure and demonstrate compliance without production disruption?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-15",
-        "note": "Asset t2 cleanup (parked cap). 16→12 words."
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       }
     },
     {
@@ -14724,7 +14714,7 @@
       "sme_minimum_note": null,
       "vendor_questions": {
         "tier": "required",
-        "question": "Does your solution import asset registers from standard file formats, export asset and work order data to standard formats, post depreciation automatically to accounting systems, and provide API access for third-party integrations, so you can migrate from spreadsheets and connect seamlessly with finance and enterprise platforms?",
+        "question": "Does your solution import asset registers from standard file formats, export asset and work order data to standard formats, post depreciation automatically to accounting systems, and provide API access for third-party integrations, to migrate from spreadsheets and connect seamlessly with finance and enterprise platforms?\n",
         "free_text_prompt": "Describe the file formats supported for import, the systems you integrate with natively, and whether you offer REST API or equivalent for custom integrations.",
         "covers": [
           {
@@ -14795,16 +14785,14 @@
       "in_checklist": false,
       "_cap_override": {
         "fields_overridden": [
-          "sme_tier",
-          "in_checklist"
+          "vendor_question"
         ],
         "original": {
-          "sme_tier": "required",
-          "in_checklist": null
+          "vendor_question": "Does your solution import asset registers from standard file formats, export asset and work order data to standard formats, post depreciation automatically to accounting systems, and provide API access for third-party integrations, so you can migrate from spreadsheets and connect seamlessly with finance and enterprise platforms?"
         },
         "author": "human-review",
-        "edited_at": "2026-05-09",
-        "note": "Cross-cutting baseline — not module-specific Mandatory. Demoted to Preferred + in_checklist:false so it joins data_governance and user_access_roles under Optional / Add-ons. Universal data import/export concern; every modern ERP provides it; not a verdict gate.\n"
+        "edited_at": "2026-05-18",
+        "note": "Voice step 7 — strip second-person from vq.question body."
       },
       "_meta": {
         "demoted_by_step15": true,
@@ -15098,8 +15086,8 @@
     }
   },
   "_meta": {
-    "step16_applied_at": "2026-05-18T14:06:54.429681+08:00",
-    "step16_applied_count": 0,
+    "step16_applied_at": "2026-05-18T22:42:53.032954+08:00",
+    "step16_applied_count": 2,
     "preferred_clusters_embed": {
       "from": "config/preferred_clusters.yaml",
       "applied_at": "2026-05-13T16:58:33.835899+08:00",

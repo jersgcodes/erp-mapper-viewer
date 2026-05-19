@@ -1,0 +1,235 @@
+{
+  "_meta": {
+    "source": "Hand-curated from IMDA PSG pre-approval guide Qs + verified against data/raw scrapes (2026-05-19)",
+    "schema_version": 2
+  },
+  "questions": [
+    {
+      "id": "pdpa",
+      "tier": "mandatory",
+      "topic": "Personal Data Protection",
+      "question": "Can your solution demonstrate compliance with the following Personal Data Protection requirements?",
+      "body_sections": [
+        {
+          "heading": "Compliance Requirements",
+          "paragraph": "Digital solutions that collect, use, disclose, process or dispose\npersonal data should incorporate features that support the\nobligations under the Personal Data Protection Act (2020).\n"
+        },
+        {
+          "paragraph": "To comply with this requirement, you MUST complete the Personal\nData Protection Requirements form at https://go.gov.sg/pdp.\n"
+        }
+      ],
+      "inputs": [
+        {
+          "id": "pdp_form_ref",
+          "kind": "text",
+          "label": "PDP form submission reference",
+          "placeholder": "e.g. Submission ID 12345, or 'Completed 2026-05-15'"
+        },
+        {
+          "id": "pdp_form_date",
+          "kind": "date",
+          "label": "PDP form submission date"
+        },
+        {
+          "id": "pdp_supporting_doc",
+          "kind": "upload",
+          "label": "Supporting document (optional)"
+        }
+      ]
+    },
+    {
+      "id": "vapt",
+      "tier": "mandatory",
+      "topic": "Vulnerability Assessment / Penetration Testing (VA/PT)",
+      "question": "Has your solution undergone a comprehensive security vulnerability\nassessment/penetration testing (VA/PT) conducted by a qualified\nthird-party within the last 12 months? The scope of the VA/PT must\ncover network security; application security; data protection\nmeasures and access control (if applicable); API security testing\n(if applicable); Cloud security configuration review (if applicable).\nSpecifically, for web application security, the scope must cover\nminimally all OWASP Top 10 vulnerabilities.\n",
+      "body_sections": [
+        {
+          "heading": "Submission Requirements",
+          "paragraph": "Please submit the VA/PT report (dated maximum 1 year from the\nchecklist submission date). The VA/PT Report must include:\n",
+          "bullets": [
+            "Executive summary",
+            "Detailed findings and risk ratings",
+            "Remediation recommendations",
+            "Evidence of vulnerability fixes or mitigation plans",
+            "Testing methodology used",
+            "Scope of assessment",
+            "Assessor's qualifications and certifications"
+          ]
+        },
+        {
+          "paragraph": "If you are the reseller of the solution, please obtain the VA/PT\nreport from your product principal.\n"
+        },
+        {
+          "paragraph": "SOC 2 Type II report can be accepted if the detailed technical\nvulnerability assessment results are part of the SOC2 Type II\nscope.\n"
+        },
+        {
+          "heading": "Qualified Third-party Definition",
+          "paragraph": "CREST-certified companies (https://www.crest-approved.org/members/)\nor companies with security professionals holding relevant CREST\ncertifications; security professionals with recognised\ncertifications such as Offensive Security Certified Professional\n(OSCP), EC-Council Certified Penetration Testing Professional\n(CPENT), GIAC Penetration Tester (GPEN), or other equivalent\nindustry-recognised certifications.\n"
+        }
+      ],
+      "inputs": [
+        {
+          "id": "vapt_assessor",
+          "kind": "text",
+          "label": "Assessor / firm name + CREST (or equivalent) certification",
+          "placeholder": "e.g. Acme Security Pte Ltd, CREST-certified"
+        },
+        {
+          "id": "vapt_scope_summary",
+          "kind": "text",
+          "label": "Brief scope summary",
+          "placeholder": "e.g. Network + application + API + cloud config; OWASP Top 10 covered"
+        },
+        {
+          "id": "vapt_report_date",
+          "kind": "date",
+          "label": "VA/PT report date"
+        },
+        {
+          "id": "vapt_report_upload",
+          "kind": "upload",
+          "label": "VA/PT report (optional)"
+        }
+      ]
+    },
+    {
+      "id": "cem_role",
+      "tier": "preferred",
+      "topic": "Cyber Essentials Mark (CEM)",
+      "question": "Are you the Product Principal of the solution that you are submitting for pre-approval?",
+      "answer_kind": "role_picker",
+      "answer_required": true,
+      "role_options": [
+        {
+          "id": "principal",
+          "label": "Product Principal"
+        },
+        {
+          "id": "reseller",
+          "label": "Reseller"
+        }
+      ]
+    },
+    {
+      "id": "cem_principal",
+      "tier": "preferred",
+      "topic": "CEM for Product Principal",
+      "applies_when": {
+        "cem_role": "principal"
+      },
+      "question": "Has your organisation achieved CSA Cyber Essentials for ICT Vendor\nMark certification or equivalent recognised cybersecurity\ncertifications (including but not limited to Cyber Trust Mark or\nISO27001) that validate the implementation of appropriate security\ncontrols against common cyber threats in your organisation and the\nsolution you are submitting for pre-approval?\n",
+      "body_sections": [
+        {
+          "heading": "Compliance Note",
+          "paragraph": "Vendors are encouraged to comply at application and are required\nto meet this requirement by the Annual Review, where it will be\nassessed as mandatory.\n"
+        },
+        {
+          "heading": "Reference",
+          "paragraph": "For more information on the Cyber Essentials Mark, refer to\nhttps://www.csa.gov.sg/cyber-essentials/.\n"
+        }
+      ]
+    },
+    {
+      "id": "cem_principal_elaboration",
+      "tier": "mandatory_followup",
+      "topic": "CEM for Product Principal — Elaboration",
+      "applies_when": {
+        "cem_principal": "yes"
+      },
+      "question": "Please specify the following information.",
+      "question_extras": [
+        {
+          "heading": "Certification Requirements",
+          "bullets": [
+            "The certificate demonstrating your organisation has attained Cyber Essentials for ICT Vendors",
+            "The cybersecurity certification the organisation has met",
+            "The scope of the certification"
+          ]
+        }
+      ],
+      "body_sections": [
+        {
+          "paragraph": "Please also upload a copy of the Certification and indicate the\nCertification Issuance Date in the date field. (Final upload\nhappens at PSG submission, not in this survey.)\n"
+        }
+      ],
+      "inputs": [
+        {
+          "id": "cert_description",
+          "kind": "text",
+          "label": "Description / Details",
+          "placeholder": "e.g. ISO 27001:2022 covering cloud-hosted ERP services for Customer Master, Sales, Finance modules"
+        },
+        {
+          "id": "cert_issued_at",
+          "kind": "date",
+          "label": "Date of Issue"
+        },
+        {
+          "id": "cert_upload",
+          "kind": "upload",
+          "label": "Supporting Document"
+        }
+      ]
+    },
+    {
+      "id": "cem_reseller",
+      "tier": "preferred",
+      "topic": "CEM for Resellers",
+      "applies_when": {
+        "cem_role": "reseller"
+      },
+      "question": "Has your organisation achieved CSA Cyber Essentials Mark certification\nor equivalent recognised cybersecurity certifications (including but\nnot limited to Cyber Trust Mark or ISO27001) that validate the\nimplementation of appropriate security controls against common cyber\nthreats in your organisation and the solution you are submitting for\npre-approval?\n",
+      "body_sections": [
+        {
+          "heading": "Compliance Note",
+          "paragraph": "Vendors are encouraged to comply at application and are required\nto meet this requirement by the Annual Review, where it will be\nassessed as mandatory.\n"
+        },
+        {
+          "heading": "Reference",
+          "paragraph": "For more information on the Cyber Essentials Mark, refer to\nhttps://www.csa.gov.sg/cyber-essentials/.\n"
+        }
+      ]
+    },
+    {
+      "id": "cem_reseller_elaboration",
+      "tier": "mandatory_followup",
+      "topic": "CEM for Resellers — Elaboration",
+      "applies_when": {
+        "cem_reseller": "yes"
+      },
+      "question": "Please specify the following information.",
+      "question_extras": [
+        {
+          "heading": "Certification Requirements",
+          "bullets": [
+            "The cybersecurity certification the organisation has met",
+            "The scope of the certification"
+          ]
+        }
+      ],
+      "body_sections": [
+        {
+          "paragraph": "Please also upload a copy of the Certification and indicate the\nCertification Issuance Date in the date field. (Final upload\nhappens at PSG submission, not in this survey.)\n"
+        }
+      ],
+      "inputs": [
+        {
+          "id": "cert_description",
+          "kind": "text",
+          "label": "Description / Details",
+          "placeholder": "e.g. ISO 27001:2022 covering hosted ERP platform for all modules in scope"
+        },
+        {
+          "id": "cert_issued_at",
+          "kind": "date",
+          "label": "Date of Issue"
+        },
+        {
+          "id": "cert_upload",
+          "kind": "upload",
+          "label": "Supporting Document"
+        }
+      ]
+    }
+  ]
+}

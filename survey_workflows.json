@@ -1,0 +1,100 @@
+{
+  "_meta": {
+    "description": "Inter-module workflow checklist — vendor self-attestation that named module pairs are stitched without re-entry.",
+    "source": "Hand-curated from common ERP O2C / P2P / P2Prod / Asset Lifecycle / Returns flows (2026-05-19)."
+  },
+  "workflows": [
+    {
+      "id": "order_to_cash",
+      "name": "Order-to-Cash",
+      "required_modules": [
+        "sales_and_crm",
+        "supply_chain_and_inventory",
+        "financial_management"
+      ],
+      "questions": [
+        {
+          "id": "stock_commits_on_order",
+          "text": "When a sales order is confirmed, does inventory automatically commit or deduct stock without re-entry into a separate inventory system?"
+        },
+        {
+          "id": "payment_updates_ledger",
+          "text": "When a customer payment is received, does the receivable balance and the GL update from one record, without separate journal entry?"
+        }
+      ]
+    },
+    {
+      "id": "procure_to_pay",
+      "name": "Procure-to-Pay",
+      "required_modules": [
+        "supply_chain_and_inventory",
+        "financial_management"
+      ],
+      "questions": [
+        {
+          "id": "invoice_matches_po",
+          "text": "When goods are received against a PO, does the supplier invoice match line items against the PO and GRN, then route to AP without manual matching?"
+        },
+        {
+          "id": "payment_reconciles_bank",
+          "text": "When AP pays a supplier, does the payment post to the AP ledger and reconcile against the bank line from the same record?"
+        }
+      ]
+    },
+    {
+      "id": "plan_to_produce",
+      "name": "Plan-to-Produce",
+      "required_modules": [
+        "manufacturing_management",
+        "supply_chain_and_inventory"
+      ],
+      "questions": [
+        {
+          "id": "mrp_sees_live_stock",
+          "text": "When a production order is created, does MRP plan raw-material consumption against your live inventory levels (not a separate stock spreadsheet)?"
+        },
+        {
+          "id": "finished_goods_available",
+          "text": "When production completes, do finished goods appear in inventory and become available to Sales without a manual stock adjustment?"
+        }
+      ]
+    },
+    {
+      "id": "asset_lifecycle",
+      "name": "Asset Lifecycle",
+      "required_modules": [
+        "asset_management",
+        "financial_management"
+      ],
+      "questions": [
+        {
+          "id": "depreciation_auto_posts",
+          "text": "Does monthly depreciation post to the GL automatically from the asset's depreciation schedule, without separate journal entries?"
+        },
+        {
+          "id": "disposal_one_step",
+          "text": "When an asset is disposed, does the gain or loss post to the GL and the asset retire from the depreciation run in one step?"
+        }
+      ]
+    },
+    {
+      "id": "returns_rma",
+      "name": "Returns / RMA",
+      "required_modules": [
+        "sales_and_crm",
+        "supply_chain_and_inventory",
+        "financial_management"
+      ],
+      "questions": [
+        {
+          "id": "credit_note_from_sale",
+          "text": "When returned goods are received, is the credit note generated from the original sales record reflecting the original prices and quantities?"
+        },
+        {
+          "id": "refund_posts_both",
+          "text": "When a refund is issued, does it post to both the AR balance and the customer's transaction history in one step?"
+        }
+      ]
+    }
+  ]
+}
