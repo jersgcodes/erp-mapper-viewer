@@ -8,7 +8,8 @@
       "id": "order_to_cash",
       "name": "Order-to-Cash",
       "tier": "mandatory",
-      "description": "From confirmed sales order through fulfilment to cash receipt. Tests whether Sales, inventory, and Finance share a single record so stock commits, invoice raises, and payments post in one chain — not three disconnected systems.",
+      "t2_bullet": "Stitch order, inventory, invoice, and payment across Sales, SC, and Finance in one record",
+      "description": "From confirmed sales order through fulfilment to cash receipt. Tests whether Sales, inventory, and Finance share a single record so stock commits, invoice raises, and payments post in one chain (not three disconnected systems).",
       "required_modules": [
         "sales_and_crm",
         "supply_chain_and_inventory",
@@ -29,6 +30,7 @@
       "id": "procure_to_pay",
       "name": "Procure-to-Pay",
       "tier": "mandatory",
+      "t2_bullet": "Match PO, GRN, and supplier invoice three ways; AP hands off to bank reconciliation automatically",
       "description": "From purchase requisition through goods receipt to supplier payment. Tests three-way matching (PO + GRN + invoice) and whether AP cleanly hands off to bank reconciliation without manual journals.",
       "required_modules": [
         "supply_chain_and_inventory",
@@ -49,7 +51,8 @@
       "id": "lead_to_cash",
       "name": "Lead-to-Cash",
       "tier": "preferred",
-      "description": "From first contact (web form, inbound lead) through qualification, opportunity, won deal, to invoiced sale. Wider than O2C — adds the prospecting + qualification stages before the order forms. Tests whether your CRM hands cleanly to Sales/Finance without re-keying.",
+      "t2_bullet": "Hand lead → opportunity → order → invoice across CRM and Finance without re-keying",
+      "description": "From first contact (web form, inbound lead) through qualification, opportunity, won deal, to invoiced sale. Wider than O2C, adds the prospecting + qualification stages before the order forms. Tests whether your CRM hands cleanly to Sales/Finance without re-keying.",
       "required_modules": [
         "sales_and_crm",
         "financial_management"
@@ -69,6 +72,7 @@
       "id": "hire_to_retire",
       "name": "Hire-to-Retire",
       "tier": "mandatory",
+      "t2_bullet": "Share employee master, payroll, and termination data across HR and Finance from a single record",
       "description": "From offer-letter through onboarding, payroll cycles, performance reviews, to offboarding. Tests whether HR shares employee master data with Finance for payroll posting and cost allocation without separate spreadsheet upload.",
       "required_modules": [
         "human_resources_management",
@@ -89,6 +93,7 @@
       "id": "record_to_report",
       "name": "Record-to-Report",
       "tier": "mandatory",
+      "t2_bullet": "Run period close with subledger lock and one-click TB/P&L/BS, no Excel consolidation",
       "description": "Month-end and year-end close cycle. From subledger close (AR / AP / inventory / fixed-assets) through GL close to management reports. Tests whether Finance orchestrates the close without separate Excel-based consolidation.",
       "required_modules": [
         "financial_management",
@@ -109,6 +114,7 @@
       "id": "plan_to_produce",
       "name": "Plan-to-Produce",
       "tier": "preferred",
+      "t2_bullet": "Run MRP against live inventory; finished goods become available to Sales without manual stock adjustment",
       "description": "From sales-driven demand plan through MRP, production orders, raw-material consumption, to finished-goods receipt. Manufacturing-specific. Tests whether MRP sees live inventory and whether finished goods are immediately available to Sales without a manual stock adjustment.",
       "required_modules": [
         "manufacturing_management",
@@ -129,6 +135,7 @@
       "id": "asset_lifecycle",
       "name": "Asset Lifecycle",
       "tier": "preferred",
+      "t2_bullet": "Post depreciation and disposal gain/loss from the asset register directly to GL",
       "description": "From asset acquisition through depreciation, maintenance, to disposal. Asset-heavy industries (logistics, manufacturing, F&B equipment). Tests whether the asset register drives Finance postings (depreciation, gain/loss on disposal) without manual journals.",
       "required_modules": [
         "asset_management",
@@ -149,6 +156,7 @@
       "id": "returns_rma",
       "name": "Returns / RMA",
       "tier": "mandatory",
+      "t2_bullet": "Generate credit note from the original sales record; refund posts to AR and customer history in one step",
       "description": "From customer return request through receipt of returned goods, credit note, refund. Tests whether the credit note pulls the original sales record (not re-keyed) and whether refunds post to both AR and the customer transaction history in one step.",
       "required_modules": [
         "sales_and_crm",
@@ -170,6 +178,7 @@
       "id": "request_to_resolution",
       "name": "Request-to-Resolution (Field Service)",
       "tier": "preferred",
+      "t2_bullet": "Tie service ticket to inventory consumption and customer invoice from one record",
       "description": "From customer service request through technician dispatch, on-site work, parts consumption, to customer invoice. Service-business specific (HVAC, equipment maintenance, IT support). Tests whether the service ticket ties to inventory consumption and customer invoicing without manual handoff.",
       "required_modules": [
         "field_service_management",
