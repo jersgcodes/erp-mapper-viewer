@@ -1,0 +1,1841 @@
+{
+  "_meta": {
+    "generated_at": "2026-05-24T01:03:37.715028+08:00",
+    "source_files": [
+      "config/cap_input_variants.yaml",
+      "output/canonical/*.json"
+    ],
+    "cap_count": 20,
+    "variant_count": 79,
+    "bundle_count": 20
+  },
+  "progressions": {
+    "fin.general_ledger": {
+      "cap_name": "General Ledger and Chart of Accounts",
+      "module": "financial_management",
+      "sme_tier": "required",
+      "sub_module_id": "",
+      "sub_module_name": "",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Paper ledger book",
+            "cost_indicator": "free",
+            "example": "Hand-written entries in a physical accounts book. Common for hawkers, family-run F&B, and very small services businesses that have not yet appointed an external bookkeeper.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Single-tab Excel GL",
+            "cost_indicator": "free",
+            "example": "Excel sheet with debit / credit columns and a running balance, often emailed to an external bookkeeper monthly for review. Typical for sole proprietorships and pre-revenue SMEs.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "Cloud accounting",
+            "cost_indicator": "cheap",
+            "example": "Xero, QuickBooks Online, or AutoCount Cloud. Bank-feed integration auto-imports transactions; user categorises in the UI; reports run on-demand. PSG-grant-eligible for most SG SMEs.\n",
+            "products": [
+              "Xero",
+              "QuickBooks Online",
+              "AutoCount"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "Integrated ERP GL",
+            "cost_indicator": "expensive",
+            "example": "NetSuite, Sage Intacct, or Microsoft Dynamics 365 Business Central. Multi-entity consolidation, multi-currency, audit trail across all sub-ledgers. Typical for mid-market SG SMEs with international operations.\n",
+            "products": [
+              "NetSuite",
+              "Sage Intacct",
+              "Microsoft Dynamics 365 Business Central"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "cheap",
+          "cost_jump": 1
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "cheap",
+          "to_cost": "expensive",
+          "cost_jump": 2
+        }
+      ],
+      "products_mentioned": [
+        "Xero",
+        "QuickBooks Online",
+        "AutoCount",
+        "NetSuite",
+        "Sage Intacct",
+        "Microsoft Dynamics 365 Business Central"
+      ]
+    },
+    "fin.accounts_receivable": {
+      "cap_name": "Accounts Receivable and Customer Invoicing",
+      "module": "financial_management",
+      "sme_tier": "required",
+      "sub_module_id": "",
+      "sub_module_name": "",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Hand-written invoices + paper receipts",
+            "cost_indicator": "free",
+            "example": "Carbon-copy invoice book or printed Word-doc invoices, with payment ticked off in a physical ledger. Cash and PayNow receipts captured on receipt slips.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Excel AR tracker",
+            "cost_indicator": "free",
+            "example": "Excel sheet listing invoices with paid / unpaid columns, aging buckets calculated manually. Owner sends reminder emails by hand.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "Cloud AR with bank reconciliation",
+            "cost_indicator": "cheap",
+            "example": "Xero / QuickBooks AR module. Auto-matches PayNow / bank transfers to invoices, sends automated reminders, surfaces aging dashboard.\n",
+            "products": [
+              "Xero",
+              "QuickBooks"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "Integrated AR with credit + dunning automation",
+            "cost_indicator": "expensive",
+            "example": "NetSuite / Sage Intacct AR. Credit-limit checks block order entry; multi-step dunning workflows escalate to collections; DSO reports tied to sales-commission calcs.\n",
+            "products": [
+              "NetSuite",
+              "Sage Intacct"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "cheap",
+          "cost_jump": 1
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "cheap",
+          "to_cost": "expensive",
+          "cost_jump": 2
+        }
+      ],
+      "products_mentioned": [
+        "Xero",
+        "QuickBooks",
+        "NetSuite",
+        "Sage Intacct"
+      ]
+    },
+    "fin.accounts_payable": {
+      "cap_name": "Accounts Payable and Vendor Bills",
+      "module": "financial_management",
+      "sme_tier": "required",
+      "sub_module_id": "",
+      "sub_module_name": "",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Paper bill pile + manual GL posting",
+            "cost_indicator": "free",
+            "example": "Vendor invoices arrive by post or email PDF, sit in a tray, and get hand-entered into the bookkeeper's monthly summary. Common for SMEs with low vendor count + cash-led ops.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Excel bills tracker",
+            "cost_indicator": "free",
+            "example": "Excel sheet with vendor, bill date, amount, due date, paid flag. Owner manually flags overdue bills weekly. Common stopgap between paper and cloud accounting.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "ai_extract",
+            "label": "Cloud AP with AI invoice OCR",
+            "cost_indicator": "cheap",
+            "example": "Cloud accounting AP (Xero, QuickBooks) paired with AI invoice OCR (Dext, Hubdoc, Veryfi). Photograph or forward a PDF; AI extracts line items, vendor, amount, GST; user reviews and posts. Often the first AI workflow SMEs adopt.\n",
+            "products": [
+              "Xero",
+              "QuickBooks",
+              "Dext",
+              "Hubdoc",
+              "Veryfi"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "Integrated AP with PO matching",
+            "cost_indicator": "expensive",
+            "example": "NetSuite / Sage Intacct AP. Three-way match between PO, goods-received, and invoice; multi-step approval routing by amount + cost-centre; vendor portal for self-service status.\n",
+            "products": [
+              "NetSuite",
+              "Sage Intacct"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "cheap",
+          "cost_jump": 1
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "cheap",
+          "to_cost": "expensive",
+          "cost_jump": 2
+        }
+      ],
+      "products_mentioned": [
+        "Xero",
+        "QuickBooks",
+        "Dext",
+        "Hubdoc",
+        "Veryfi",
+        "NetSuite",
+        "Sage Intacct"
+      ]
+    },
+    "fin.bank_cash_management": {
+      "cap_name": "Bank and Cash Management",
+      "module": "financial_management",
+      "sme_tier": "required",
+      "sub_module_id": "",
+      "sub_module_name": "",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Paper bank book + cash log",
+            "cost_indicator": "free",
+            "example": "Physical bank passbook updated weekly; cash float counted at shift end and noted in a logbook. Common for hawker stalls, small retail, single-outlet F&B.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Excel reconciliation sheet",
+            "cost_indicator": "free",
+            "example": "Download bank statement CSV, paste into Excel, match line items against GL transactions by date + amount. Manual but structured. Used by many SMEs pre-Xero.\n",
+            "products": [
+              "Xero"
+            ]
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "Cloud accounting bank feed",
+            "cost_indicator": "cheap",
+            "example": "Xero / QuickBooks / AutoCount Cloud connects directly to DBS, OCBC, UOB, Maybank, Standard Chartered SG via Plaid / Tink-equivalent feeds. Auto-imports transactions; user categorises with one-click rules.\n",
+            "products": [
+              "Xero",
+              "QuickBooks",
+              "AutoCount"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "Treasury management with multi-bank",
+            "cost_indicator": "expensive",
+            "example": "NetSuite, Kyriba, or Sage Intacct treasury. Multi-bank cash pooling, FX exposure dashboards, automated payment runs via host-to-host bank integration. Typical for SG SMEs with multi-entity overseas operations.\n",
+            "products": [
+              "NetSuite",
+              "Kyriba",
+              "Sage Intacct"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "cheap",
+          "cost_jump": 1
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "cheap",
+          "to_cost": "expensive",
+          "cost_jump": 2
+        }
+      ],
+      "products_mentioned": [
+        "Xero",
+        "QuickBooks",
+        "AutoCount",
+        "NetSuite",
+        "Kyriba",
+        "Sage Intacct"
+      ]
+    },
+    "fin.einvoicing_peppol": {
+      "cap_name": "InvoiceNow-Ready Solution Provider Accreditation",
+      "module": "financial_management",
+      "sme_tier": "required",
+      "sub_module_id": "",
+      "sub_module_name": "",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "PDF invoices via email",
+            "cost_indicator": "free",
+            "example": "Invoices generated in Word / Excel, exported to PDF, emailed to customers. Common starting point; not InvoiceNow-compliant but still widespread among very small SMEs.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "InvoiceNow via cloud accounting",
+            "cost_indicator": "cheap",
+            "example": "IMDA IRSP-listed cloud accounting (Xero SG, QuickBooks SG, ABSS, AutoCount, Million). PEPPOL-compliant e-invoices sent via the access point automatically when \"send via InvoiceNow\" is ticked. PSG-eligible.\n",
+            "products": [
+              "Xero",
+              "QuickBooks",
+              "ABSS",
+              "AutoCount",
+              "Million"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "ERP-native PEPPOL access point",
+            "cost_indicator": "expensive",
+            "example": "NetSuite, SAP Business One, or Sage Intacct with native PEPPOL access-point integration (often via Storecove / Tickstar providers). Multi-entity routing, custom UBL field mappings, full audit trail for IRAS GST reporting.\n",
+            "products": [
+              "NetSuite",
+              "SAP Business One",
+              "Sage Intacct"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "cheap",
+          "cost_jump": 1
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "cheap",
+          "to_cost": "expensive",
+          "cost_jump": 2
+        }
+      ],
+      "products_mentioned": [
+        "Xero",
+        "QuickBooks",
+        "ABSS",
+        "AutoCount",
+        "Million",
+        "NetSuite",
+        "SAP Business One",
+        "Sage Intacct"
+      ]
+    },
+    "sales.contacts_accounts": {
+      "cap_name": "Contact, Account and Customer Master",
+      "module": "sales_and_crm",
+      "sme_tier": "required",
+      "sub_module_id": "",
+      "sub_module_name": "",
+      "stages": {
+        "entry": [
+          {
+            "name": "manual",
+            "label": "Phone contacts and WhatsApp",
+            "cost_indicator": "free",
+            "example": "Customer info lives in the founder's phone contacts + WhatsApp chat history. Pricing quoted ad-hoc; no structured record of past quotes.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Customer Excel / Google Sheet",
+            "cost_indicator": "free",
+            "example": "Shared Google Sheet listing customer name, contact, last purchase. Updated by sales staff manually when they remember.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "Cloud CRM (free / low tier)",
+            "cost_indicator": "cheap",
+            "example": "HubSpot Free, Zoho CRM, or Pipedrive. Contact + activity timeline, email tracking, basic pipelines. Often the first SaaS subscription after accounting.\n",
+            "products": [
+              "HubSpot",
+              "Zoho CRM",
+              "Pipedrive"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "Enterprise CRM with hierarchies",
+            "cost_indicator": "expensive",
+            "example": "Salesforce, Microsoft Dynamics 365 CE, or HubSpot Pro+. Account hierarchies (parent / child / division), territory management, integrated marketing automation. Also adopted by small-but-sales-led businesses (6-15 person B2B consultancies, recruitment agencies) that skip the cloud-CRM tier and go straight here because pipeline visibility is load-bearing.\n",
+            "products": [
+              "Salesforce",
+              "Microsoft Dynamics 365",
+              "HubSpot"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "cheap",
+          "cost_jump": 1
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "cheap",
+          "to_cost": "expensive",
+          "cost_jump": 2
+        }
+      ],
+      "products_mentioned": [
+        "HubSpot",
+        "Zoho CRM",
+        "Pipedrive",
+        "Salesforce",
+        "Microsoft Dynamics 365"
+      ]
+    },
+    "sales.leads": {
+      "cap_name": "Lead Management",
+      "module": "sales_and_crm",
+      "sme_tier": "required",
+      "sub_module_id": "",
+      "sub_module_name": "",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Notebook + business cards",
+            "cost_indicator": "free",
+            "example": "Leads scribbled in a notebook after networking events; cards stored in a Rolodex / business card holder. Common for owner-operator services businesses, B2B trades.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Lead Excel tracker",
+            "cost_indicator": "free",
+            "example": "Excel sheet with columns for source, contact, status (cold / warm / hot), next-action date. Often shared via Google Sheets when there are 2-3 sales staff.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "Cloud CRM lead pipeline",
+            "cost_indicator": "cheap",
+            "example": "HubSpot Free, Pipedrive, Zoho CRM. Web-to-lead forms, basic lead scoring, automated email nurture sequences. Standard kit for B2B SMEs with 5+ sales staff.\n",
+            "products": [
+              "HubSpot",
+              "Pipedrive",
+              "Zoho CRM"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "Marketing automation + lead scoring",
+            "cost_indicator": "expensive",
+            "example": "Salesforce + Pardot / Marketing Cloud, or HubSpot Marketing Pro+. Multi-touch attribution, predictive lead scoring, integrated SDR-to-AE handoff workflows. Typical for SaaS / B2B SMEs with dedicated marketing team.\n",
+            "products": [
+              "Salesforce",
+              "HubSpot"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "cheap",
+          "cost_jump": 1
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "cheap",
+          "to_cost": "expensive",
+          "cost_jump": 2
+        }
+      ],
+      "products_mentioned": [
+        "HubSpot",
+        "Pipedrive",
+        "Zoho CRM",
+        "Salesforce"
+      ]
+    },
+    "sales.quotes_orders": {
+      "cap_name": "Orders and Invoicing",
+      "module": "sales_and_crm",
+      "sme_tier": "required",
+      "sub_module_id": "",
+      "sub_module_name": "",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Word-doc quotes + email orders",
+            "cost_indicator": "free",
+            "example": "Quotes drafted in Word from a template, emailed to customer, orders confirmed by email reply. Order list maintained mentally or on a paper pad. Common for trades, consultancies, one-off project work.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Excel quote + order book",
+            "cost_indicator": "free",
+            "example": "Excel template with line items + auto-totals; orders tracked in a separate sheet with status column. Manual handoff to accounting for invoicing.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "Cloud quoting + order tool",
+            "cost_indicator": "cheap",
+            "example": "Xero quotes, QuickBooks estimates, QuoteWerks, or Better Proposals. Branded PDF output, quote-to-invoice conversion one-click, optional e-signature. Integrated with cloud accounting AR.\n",
+            "products": [
+              "Xero",
+              "QuickBooks",
+              "QuoteWerks",
+              "Better Proposals"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "CPQ + ERP order management",
+            "cost_indicator": "expensive",
+            "example": "NetSuite Order Mgmt, Salesforce CPQ, or SAP Business One Sales. Rule-based pricing + discount approval workflows, product configurator for bundled SKUs, real-time inventory allocation on order entry.\n",
+            "products": [
+              "NetSuite",
+              "Salesforce CPQ",
+              "SAP Business One"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "cheap",
+          "cost_jump": 1
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "cheap",
+          "to_cost": "expensive",
+          "cost_jump": 2
+        }
+      ],
+      "products_mentioned": [
+        "Xero",
+        "QuickBooks",
+        "QuoteWerks",
+        "Better Proposals",
+        "NetSuite",
+        "Salesforce CPQ",
+        "SAP Business One"
+      ]
+    },
+    "sc.stock_levels": {
+      "cap_name": "Stock Levels and Warehouse",
+      "module": "supply_chain_and_inventory",
+      "sme_tier": "required",
+      "sub_module_id": "",
+      "sub_module_name": "",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Physical stock cards",
+            "cost_indicator": "free",
+            "example": "Pen-and-paper stock cards stuck on shelves; manual cycle counts at month-end. Typical for very small retail / F&B with low SKU count.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Excel SKU register",
+            "cost_indicator": "free",
+            "example": "Excel sheet with SKU, opening qty, in, out, closing qty columns. Staff updates after each delivery / sale. Reconciliation gaps are common.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "barcode",
+            "label": "POS-driven barcode inventory",
+            "cost_indicator": "paid",
+            "example": "POS terminal (Vend, Square, EposNow) auto-decrements stock on each sale; goods-in scanned via handheld terminal. Real-time qty across one or two outlets.\n",
+            "products": [
+              "Vend",
+              "Square",
+              "EposNow"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "WMS / ERP-integrated stock",
+            "cost_indicator": "expensive",
+            "example": "NetSuite, SAP Business One, or a dedicated WMS (Manhattan, Blue Yonder Lite). Multi-warehouse, bin / lot / serial tracking, real-time stock across e-commerce + POS + B2B channels via API.\n",
+            "products": [
+              "NetSuite",
+              "SAP Business One"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "paid",
+          "cost_jump": 2
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "paid",
+          "to_cost": "expensive",
+          "cost_jump": 1
+        }
+      ],
+      "products_mentioned": [
+        "Vend",
+        "Square",
+        "EposNow",
+        "NetSuite",
+        "SAP Business One"
+      ]
+    },
+    "sc.item_master": {
+      "cap_name": "Item Master Management",
+      "module": "supply_chain_and_inventory",
+      "sme_tier": "required",
+      "sub_module_id": "",
+      "sub_module_name": "",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Paper SKU list / printed catalogue",
+            "cost_indicator": "free",
+            "example": "Printed price list / product catalogue used as the source of truth; updated by reprint when prices change. Common for F&B menus and small retail.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Excel item catalogue",
+            "cost_indicator": "free",
+            "example": "Excel sheet with SKU, name, description, cost, list price, category. Often emailed to procurement / sales for reference. Updated when new SKUs are added.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "Cloud inventory item master",
+            "cost_indicator": "cheap",
+            "example": "Zoho Inventory, Vend, AutoCount Cloud, or Cin7 Core. SKU with variants (size / colour / unit), barcode, supplier link, re-order point. Often synced to e-commerce (Shopify, Lazada) and POS.\n",
+            "products": [
+              "Zoho Inventory",
+              "Vend",
+              "AutoCount",
+              "Cin7 Core"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "PIM + ERP-integrated item master",
+            "cost_indicator": "expensive",
+            "example": "NetSuite or SAP Business One item master, or a dedicated PIM (Akeneo, Pimcore). Multi-attribute schemas, multi-currency pricing, BOM relationships, where-used queries, channel-specific variants.\n",
+            "products": [
+              "NetSuite",
+              "SAP Business One"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "cheap",
+          "cost_jump": 1
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "cheap",
+          "to_cost": "expensive",
+          "cost_jump": 2
+        }
+      ],
+      "products_mentioned": [
+        "Zoho Inventory",
+        "Vend",
+        "AutoCount",
+        "Cin7 Core",
+        "NetSuite",
+        "SAP Business One"
+      ]
+    },
+    "sc.purchase_orders": {
+      "cap_name": "Purchase Orders and Procurement",
+      "module": "supply_chain_and_inventory",
+      "sme_tier": "required",
+      "sub_module_id": "",
+      "sub_module_name": "",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Paper PO pad / email PO",
+            "cost_indicator": "free",
+            "example": "Three-ply paper PO booklet (top copy to supplier, second to warehouse, third filed). Or a Word doc / WhatsApp message sent to supplier. Common for small trades + project work.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Excel PO log",
+            "cost_indicator": "free",
+            "example": "Excel sheet logging PO number, supplier, items, total, status (sent / received / paid). Manual reconciliation against supplier invoice + bank payment.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "Cloud accounting PO module",
+            "cost_indicator": "cheap",
+            "example": "Xero / QuickBooks / AutoCount Cloud PO module. PO emailed from the system as PDF; convert PO → bill on goods-received; basic supplier history.\n",
+            "products": [
+              "Xero",
+              "QuickBooks",
+              "AutoCount"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "ERP P2P with vendor portals",
+            "cost_indicator": "expensive",
+            "example": "NetSuite Procurement, SAP Business One P2P, or a dedicated P2P platform (Coupa, Ariba SMB). Multi-step approval routing, vendor self-service portal, blanket POs, three-way match tied to AP.\n",
+            "products": [
+              "NetSuite",
+              "SAP Business One",
+              "Coupa",
+              "Ariba"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "cheap",
+          "cost_jump": 1
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "cheap",
+          "to_cost": "expensive",
+          "cost_jump": 2
+        }
+      ],
+      "products_mentioned": [
+        "Xero",
+        "QuickBooks",
+        "AutoCount",
+        "NetSuite",
+        "SAP Business One",
+        "Coupa",
+        "Ariba"
+      ]
+    },
+    "hr.employee_master": {
+      "cap_name": "Employee Master and HRIS",
+      "module": "human_resources_management",
+      "sme_tier": "required",
+      "sub_module_id": "core_hr",
+      "sub_module_name": "Core HR",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Physical HR folders",
+            "cost_indicator": "free",
+            "example": "Manila folders per employee with photocopied NRIC, work permit (if applicable), and signed offer letter. Locked in the owner's drawer; no digital backup.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "HR master Excel",
+            "cost_indicator": "free",
+            "example": "Single Excel sheet listing name, NRIC, role, start date, basic salary. Updated when hires / leavers happen. Used as the source for monthly payroll prep.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "SG-local cloud HRIS",
+            "cost_indicator": "cheap",
+            "example": "Talenox, HReasily, or Payboy. Employee self-service for leave / claims, integrated payroll with CPF / IRAS submissions, contract templates. Designed for SG SME statutory needs.\n",
+            "products": [
+              "Talenox",
+              "HReasily",
+              "Payboy"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "Enterprise HRIS",
+            "cost_indicator": "expensive",
+            "example": "Workday, SAP SuccessFactors, or BambooHR (mid-market). Performance reviews, succession planning, learning & development modules; integrates with finance and headcount planning.\n",
+            "products": [
+              "Workday",
+              "SAP SuccessFactors",
+              "BambooHR"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "cheap",
+          "cost_jump": 1
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "cheap",
+          "to_cost": "expensive",
+          "cost_jump": 2
+        }
+      ],
+      "products_mentioned": [
+        "Talenox",
+        "HReasily",
+        "Payboy",
+        "Workday",
+        "SAP SuccessFactors",
+        "BambooHR"
+      ]
+    },
+    "hr.leave_management": {
+      "cap_name": "Leave Management",
+      "module": "human_resources_management",
+      "sme_tier": "required",
+      "sub_module_id": "time_attendance",
+      "sub_module_name": "Time & Attendance",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Paper leave forms",
+            "cost_indicator": "free",
+            "example": "Pre-printed leave application form filled in, signed by manager, filed in HR. Annual entitlement tracked manually on a wall chart or in HR's Excel.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Excel leave tracker",
+            "cost_indicator": "free",
+            "example": "Shared spreadsheet with employee × month grid; cells coloured for AL / MC / unpaid. Manual balance calculation. Workable for small headcounts but error-prone.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "Cloud HRIS leave module",
+            "cost_indicator": "cheap",
+            "example": "Talenox, HReasily, Payboy, or QuickHR leave module. Employee applies via mobile app or browser; manager approves; balance auto-decrements. Statutory leave (AL / MC / parental) with SG defaults built in.\n",
+            "products": [
+              "Talenox",
+              "HReasily",
+              "Payboy",
+              "QuickHR"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "Enterprise HRIS with policy engine",
+            "cost_indicator": "expensive",
+            "example": "Workday, SAP SuccessFactors, BambooHR Pro. Configurable leave policies (tenure-based accruals, regional variations, carry-forward rules), integration with time / attendance and payroll, real-time absence dashboards.\n",
+            "products": [
+              "Workday",
+              "SAP SuccessFactors",
+              "BambooHR"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "cheap",
+          "cost_jump": 1
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "cheap",
+          "to_cost": "expensive",
+          "cost_jump": 2
+        }
+      ],
+      "products_mentioned": [
+        "Talenox",
+        "HReasily",
+        "Payboy",
+        "QuickHR",
+        "Workday",
+        "SAP SuccessFactors",
+        "BambooHR"
+      ]
+    },
+    "hr.payroll_processing": {
+      "cap_name": "Payroll Processing",
+      "module": "human_resources_management",
+      "sme_tier": "required",
+      "sub_module_id": "payroll_statutory",
+      "sub_module_name": "Payroll & Statutory (SG)",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Hand-calculated payroll",
+            "cost_indicator": "free",
+            "example": "Owner / bookkeeper calculates monthly pay + CPF on a calculator, writes payslip on a pre-printed slip, hands out cash or schedules bank transfer manually. Rare now, but still seen in very small family businesses.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Excel payroll with manual CPF",
+            "cost_indicator": "free",
+            "example": "Excel payroll template with formulas for OW / AW, employer + employee CPF, CDAC / SINDA / MBMF. Manual upload to CPF e-submission portal. Common for very small SMEs not yet on a payroll SaaS.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "SG-local cloud payroll",
+            "cost_indicator": "cheap",
+            "example": "Talenox, HReasily, Payboy, or QuickHR payroll. Auto-calculates CPF contributions, generates IR8A / Appendix 8A / IR21, submits CPF / IRAS electronically, integrates with SG bank GIRO payroll batches.\n",
+            "products": [
+              "Talenox",
+              "HReasily",
+              "Payboy",
+              "QuickHR"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "Enterprise HRIS payroll",
+            "cost_indicator": "expensive",
+            "example": "Workday, SAP SuccessFactors Employee Central Payroll, or ADP. Multi-country payroll engine, integration with finance + time + benefits, custom pay components for variable pay / commission / equity plans.\n",
+            "products": [
+              "Workday",
+              "SAP SuccessFactors"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "cheap",
+          "cost_jump": 1
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "cheap",
+          "to_cost": "expensive",
+          "cost_jump": 2
+        }
+      ],
+      "products_mentioned": [
+        "Talenox",
+        "HReasily",
+        "Payboy",
+        "QuickHR",
+        "Workday",
+        "SAP SuccessFactors"
+      ]
+    },
+    "asset.register": {
+      "cap_name": "Asset Register and Hierarchy",
+      "module": "asset_management",
+      "sme_tier": "required",
+      "sub_module_id": "asset_register_lifecycle",
+      "sub_module_name": "Asset Register & Lifecycle",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Paper asset list + physical tags",
+            "cost_indicator": "free",
+            "example": "Asset inventory in a binder; each asset has a hand-written number sticker. Common for small workshops, gyms, F&B with a dozen tagged items (fryers, ovens, equipment).\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Excel asset register",
+            "cost_indicator": "free",
+            "example": "Excel sheet with asset code, description, purchase date, cost, depreciation method, current location. Maintained by finance for tax / audit purposes; often disconnected from ops use of the assets.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "Cloud CMMS / asset management",
+            "cost_indicator": "paid",
+            "example": "Limble, UpKeep, Fiix, or MaintainX. Asset tree with parent / child relationships, QR-code labels for mobile scanning, work-order history per asset. Designed for SME maintenance teams.\n",
+            "products": [
+              "Limble",
+              "UpKeep",
+              "Fiix",
+              "MaintainX"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "iot",
+            "label": "EAM with RFID + IoT condition monitoring",
+            "cost_indicator": "expensive",
+            "example": "IBM Maximo, SAP EAM, or Infor EAM with RFID asset tags and connected sensors (vibration, temperature, runtime hours). Predictive maintenance triggers, real-time condition dashboards. Typical for capital-intensive SG SMEs in manufacturing / logistics.\n",
+            "products": [
+              "IBM Maximo",
+              "Infor EAM"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "paid",
+          "cost_jump": 2
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "paid",
+          "to_cost": "expensive",
+          "cost_jump": 1
+        }
+      ],
+      "products_mentioned": [
+        "Limble",
+        "UpKeep",
+        "Fiix",
+        "MaintainX",
+        "IBM Maximo",
+        "Infor EAM"
+      ]
+    },
+    "fsm.work_orders": {
+      "cap_name": "Work Order Management",
+      "module": "field_service_management",
+      "sme_tier": "required",
+      "sub_module_id": "field_work_order",
+      "sub_module_name": "Field Work Order Management",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Paper job sheets",
+            "cost_indicator": "free",
+            "example": "Carbon-copy job sheet pad; technician keeps top copy, customer signs second, office files third. Common for trades, repair shops, small contractors.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "WhatsApp + Excel job log",
+            "cost_indicator": "free",
+            "example": "Office WhatsApps job details to technician; technician sends photo of completed job back. Office logs everything in Excel for invoicing. Surprisingly common in SG trades.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "Cloud FSM platform",
+            "cost_indicator": "paid",
+            "example": "Jobber, Housecall Pro, ServiceM8, or Fergus. Mobile app for technicians, GPS dispatch, quote / invoice generation, payment collection on-site. Built for sub-50-tech home services businesses.\n",
+            "products": [
+              "Jobber",
+              "Housecall Pro",
+              "ServiceM8",
+              "Fergus"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "Enterprise FSM with integrations",
+            "cost_indicator": "expensive",
+            "example": "ServiceMax, Salesforce Field Service, Microsoft Dynamics 365 Field Service, or IFS FSM. Integration with CRM / ERP / inventory, complex scheduling optimisation, contract + warranty handling, customer self-service portal.\n",
+            "products": [
+              "ServiceMax",
+              "Salesforce Field Service",
+              "Microsoft Dynamics 365"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "paid",
+          "cost_jump": 2
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "paid",
+          "to_cost": "expensive",
+          "cost_jump": 1
+        }
+      ],
+      "products_mentioned": [
+        "Jobber",
+        "Housecall Pro",
+        "ServiceM8",
+        "Fergus",
+        "ServiceMax",
+        "Salesforce Field Service",
+        "Microsoft Dynamics 365"
+      ]
+    },
+    "fleet.vehicle_register": {
+      "cap_name": "Vehicle and Asset Register",
+      "module": "fleet_management",
+      "sme_tier": "required",
+      "sub_module_id": "fleet_register",
+      "sub_module_name": "Vehicle Register & Procurement",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Paper logbook in each vehicle",
+            "cost_indicator": "free",
+            "example": "Physical logbook in each van / truck for driver to record mileage, fuel, maintenance. Common for small fleets (< 5 vehicles) — trades, food delivery, school transport.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Excel fleet master",
+            "cost_indicator": "free",
+            "example": "Excel sheet listing each vehicle by plate, year, model, COE expiry, road tax expiry, insurance renewal, last service date. Manual reminders / calendar entries for renewals.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "Cloud fleet management",
+            "cost_indicator": "paid",
+            "example": "Fleetio, AUTOsist, or Whip Around. Web + mobile app, mileage logging, maintenance scheduling, expiry alerts, fuel tracking. Some integrations with telematics dongles for basic GPS.\n",
+            "products": [
+              "Fleetio",
+              "AUTOsist",
+              "Whip Around"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "iot",
+            "label": "Telematics + IoT fleet platform",
+            "cost_indicator": "expensive",
+            "example": "Geotab, Samsara, Verizon Connect, or Cartrack. Real-time GPS, driver behaviour scoring (harsh braking / speeding), predictive maintenance from OBD diagnostics, integration with fuel cards + dashcams. Standard for SG logistics / delivery SMEs > 20 vehicles.\n",
+            "products": [
+              "Geotab",
+              "Samsara",
+              "Verizon Connect",
+              "Cartrack"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "paid",
+          "cost_jump": 2
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "paid",
+          "to_cost": "expensive",
+          "cost_jump": 1
+        }
+      ],
+      "products_mentioned": [
+        "Fleetio",
+        "AUTOsist",
+        "Whip Around",
+        "Geotab",
+        "Samsara",
+        "Verizon Connect",
+        "Cartrack"
+      ]
+    },
+    "mfg.bom": {
+      "cap_name": "Bill of Materials",
+      "module": "manufacturing_management",
+      "sme_tier": "required",
+      "sub_module_id": "product_engineering",
+      "sub_module_name": "Product Engineering & PLM",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Paper recipe / process card",
+            "cost_indicator": "free",
+            "example": "Hand-written or printed recipe card listing ingredients / components and quantities. Used by F&B kitchens, small food manufacturers, custom job shops.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Excel BOM",
+            "cost_indicator": "free",
+            "example": "Excel sheet listing parent SKU, components, quantities, unit cost. Often a separate file per finished good. Hard to maintain when revisions happen.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "Cloud manufacturing BOM",
+            "cost_indicator": "paid",
+            "example": "Katana, MRPeasy, Cin7 Core, or Odoo Manufacturing. Multi-level BOM with auto-cost rollup from component prices, revision history, simple where-used queries. Targeted at SG SME contract manufacturers + food producers.\n",
+            "products": [
+              "Katana",
+              "MRPeasy",
+              "Cin7 Core",
+              "Odoo"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "ERP BOM with engineering change control",
+            "cost_indicator": "expensive",
+            "example": "NetSuite Manufacturing, SAP Business One Production, or Microsoft Dynamics 365 SCM. Phantom BOMs, by-products, alternates, formal ECN workflow, integration with CAD / PLM for engineered products.\n",
+            "products": [
+              "NetSuite",
+              "SAP Business One",
+              "Microsoft Dynamics 365"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "paid",
+          "cost_jump": 2
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "paid",
+          "to_cost": "expensive",
+          "cost_jump": 1
+        }
+      ],
+      "products_mentioned": [
+        "Katana",
+        "MRPeasy",
+        "Cin7 Core",
+        "Odoo",
+        "NetSuite",
+        "SAP Business One",
+        "Microsoft Dynamics 365"
+      ]
+    },
+    "proj.task_management": {
+      "cap_name": "Task Management and Assignment",
+      "module": "project_management",
+      "sme_tier": "required",
+      "sub_module_id": "project_core",
+      "sub_module_name": "Project Core",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Sticky notes / paper task list",
+            "cost_indicator": "free",
+            "example": "Whiteboard with sticky notes per task / per person, or a paper to-do list updated daily. Common for very small creative / services teams.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Excel / Google Sheets task tracker",
+            "cost_indicator": "free",
+            "example": "Spreadsheet with task, owner, status, due date columns. Often one tab per project. Workable up to maybe 5 active projects before maintenance friction kicks in.\n",
+            "products": []
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "Cloud project tool",
+            "cost_indicator": "cheap",
+            "example": "Trello, Asana, ClickUp, Notion, or Monday.com. Kanban / list / Gantt views, task dependencies, file attachments, notifications. The default first-SaaS-after-accounting for many service SMEs.\n",
+            "products": [
+              "Trello",
+              "Asana",
+              "ClickUp",
+              "Notion",
+              "Monday.com"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "PPM / ERP project module",
+            "cost_indicator": "expensive",
+            "example": "NetSuite OpenAir, Microsoft Project Online, Wrike Enterprise, or Smartsheet Advance. Resource capacity planning, portfolio dashboards, integration with timesheets / billing / finance. Typical for SG consultancies + agencies with 30+ staff billing on projects.\n",
+            "products": [
+              "NetSuite",
+              "Microsoft Project",
+              "Wrike",
+              "Smartsheet"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "cheap",
+          "cost_jump": 1
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "cheap",
+          "to_cost": "expensive",
+          "cost_jump": 2
+        }
+      ],
+      "products_mentioned": [
+        "Trello",
+        "Asana",
+        "ClickUp",
+        "Notion",
+        "Monday.com",
+        "NetSuite",
+        "Microsoft Project",
+        "Wrike",
+        "Smartsheet"
+      ]
+    },
+    "generic.document_management": {
+      "cap_name": "Document Management System",
+      "module": "generic",
+      "sme_tier": "required",
+      "sub_module_id": "document_forms",
+      "sub_module_name": "Document Management & Forms",
+      "stages": {
+        "entry": [
+          {
+            "name": "paper",
+            "label": "Paper filing cabinet",
+            "cost_indicator": "free",
+            "example": "Physical filing cabinet with labelled folders for invoices, contracts, HR records. Common for any small business that predates the cloud era and hasn't migrated.\n",
+            "products": []
+          },
+          {
+            "name": "spreadsheet",
+            "label": "Shared cloud drive (personal-tier)",
+            "cost_indicator": "free",
+            "example": "Dropbox Personal, Google Drive personal, OneDrive, or a NAS shared between staff. Folders by department / project. Works but lacks access control, retention policies, audit.\n",
+            "products": [
+              "Dropbox"
+            ]
+          }
+        ],
+        "established": [
+          {
+            "name": "api",
+            "label": "Cloud DMS (business tier)",
+            "cost_indicator": "cheap",
+            "example": "Google Workspace, Microsoft 365 Business, or Dropbox Business. Per-user access, shared team drives, basic version control, mobile app. Standard kit for any SG SME with > 10 staff.\n",
+            "products": [
+              "Google Workspace",
+              "Microsoft 365",
+              "Dropbox Business"
+            ]
+          }
+        ],
+        "integrated": [
+          {
+            "name": "api",
+            "label": "Enterprise DMS with retention + audit",
+            "cost_indicator": "expensive",
+            "example": "SharePoint Online (with retention labels), Box, M-Files, or DocuWare. Records-management policies, version + check-in / check-out, audit trail of access, integration with ERP / CRM / HR for source-of-record linking.\n",
+            "products": [
+              "SharePoint Online",
+              "Box",
+              "M-Files",
+              "DocuWare"
+            ]
+          }
+        ]
+      },
+      "transitions": [
+        {
+          "from": "entry",
+          "to": "established",
+          "from_cost": "free",
+          "to_cost": "cheap",
+          "cost_jump": 1
+        },
+        {
+          "from": "established",
+          "to": "integrated",
+          "from_cost": "cheap",
+          "to_cost": "expensive",
+          "cost_jump": 2
+        }
+      ],
+      "products_mentioned": [
+        "Dropbox",
+        "Google Workspace",
+        "Microsoft 365",
+        "Dropbox Business",
+        "SharePoint Online",
+        "Box",
+        "M-Files",
+        "DocuWare"
+      ]
+    }
+  },
+  "product_bundles": {
+    "NetSuite": {
+      "caps": [
+        "fin.accounts_payable",
+        "fin.accounts_receivable",
+        "fin.bank_cash_management",
+        "fin.einvoicing_peppol",
+        "fin.general_ledger",
+        "mfg.bom",
+        "proj.task_management",
+        "sales.quotes_orders",
+        "sc.item_master",
+        "sc.purchase_orders",
+        "sc.stock_levels"
+      ],
+      "stages": [
+        "integrated"
+      ],
+      "modules": [
+        "financial_management",
+        "manufacturing_management",
+        "project_management",
+        "sales_and_crm",
+        "supply_chain_and_inventory"
+      ],
+      "match_count": 11
+    },
+    "Xero": {
+      "caps": [
+        "fin.accounts_payable",
+        "fin.accounts_receivable",
+        "fin.bank_cash_management",
+        "fin.einvoicing_peppol",
+        "fin.general_ledger",
+        "sales.quotes_orders",
+        "sc.purchase_orders"
+      ],
+      "stages": [
+        "entry",
+        "established"
+      ],
+      "modules": [
+        "financial_management",
+        "sales_and_crm",
+        "supply_chain_and_inventory"
+      ],
+      "match_count": 7
+    },
+    "QuickBooks": {
+      "caps": [
+        "fin.accounts_payable",
+        "fin.accounts_receivable",
+        "fin.bank_cash_management",
+        "fin.einvoicing_peppol",
+        "sales.quotes_orders",
+        "sc.purchase_orders"
+      ],
+      "stages": [
+        "established"
+      ],
+      "modules": [
+        "financial_management",
+        "sales_and_crm",
+        "supply_chain_and_inventory"
+      ],
+      "match_count": 6
+    },
+    "SAP Business One": {
+      "caps": [
+        "fin.einvoicing_peppol",
+        "mfg.bom",
+        "sales.quotes_orders",
+        "sc.item_master",
+        "sc.purchase_orders",
+        "sc.stock_levels"
+      ],
+      "stages": [
+        "integrated"
+      ],
+      "modules": [
+        "financial_management",
+        "manufacturing_management",
+        "sales_and_crm",
+        "supply_chain_and_inventory"
+      ],
+      "match_count": 6
+    },
+    "AutoCount": {
+      "caps": [
+        "fin.bank_cash_management",
+        "fin.einvoicing_peppol",
+        "fin.general_ledger",
+        "sc.item_master",
+        "sc.purchase_orders"
+      ],
+      "stages": [
+        "established"
+      ],
+      "modules": [
+        "financial_management",
+        "supply_chain_and_inventory"
+      ],
+      "match_count": 5
+    },
+    "Sage Intacct": {
+      "caps": [
+        "fin.accounts_payable",
+        "fin.accounts_receivable",
+        "fin.bank_cash_management",
+        "fin.einvoicing_peppol",
+        "fin.general_ledger"
+      ],
+      "stages": [
+        "integrated"
+      ],
+      "modules": [
+        "financial_management"
+      ],
+      "match_count": 5
+    },
+    "Microsoft Dynamics 365": {
+      "caps": [
+        "fsm.work_orders",
+        "mfg.bom",
+        "sales.contacts_accounts"
+      ],
+      "stages": [
+        "integrated"
+      ],
+      "modules": [
+        "field_service_management",
+        "manufacturing_management",
+        "sales_and_crm"
+      ],
+      "match_count": 3
+    },
+    "Talenox": {
+      "caps": [
+        "hr.employee_master",
+        "hr.leave_management",
+        "hr.payroll_processing"
+      ],
+      "stages": [
+        "established"
+      ],
+      "modules": [
+        "human_resources_management"
+      ],
+      "match_count": 3
+    },
+    "HReasily": {
+      "caps": [
+        "hr.employee_master",
+        "hr.leave_management",
+        "hr.payroll_processing"
+      ],
+      "stages": [
+        "established"
+      ],
+      "modules": [
+        "human_resources_management"
+      ],
+      "match_count": 3
+    },
+    "Payboy": {
+      "caps": [
+        "hr.employee_master",
+        "hr.leave_management",
+        "hr.payroll_processing"
+      ],
+      "stages": [
+        "established"
+      ],
+      "modules": [
+        "human_resources_management"
+      ],
+      "match_count": 3
+    },
+    "Workday": {
+      "caps": [
+        "hr.employee_master",
+        "hr.leave_management",
+        "hr.payroll_processing"
+      ],
+      "stages": [
+        "integrated"
+      ],
+      "modules": [
+        "human_resources_management"
+      ],
+      "match_count": 3
+    },
+    "SAP SuccessFactors": {
+      "caps": [
+        "hr.employee_master",
+        "hr.leave_management",
+        "hr.payroll_processing"
+      ],
+      "stages": [
+        "integrated"
+      ],
+      "modules": [
+        "human_resources_management"
+      ],
+      "match_count": 3
+    },
+    "HubSpot": {
+      "caps": [
+        "sales.contacts_accounts",
+        "sales.leads"
+      ],
+      "stages": [
+        "established",
+        "integrated"
+      ],
+      "modules": [
+        "sales_and_crm"
+      ],
+      "match_count": 2
+    },
+    "Zoho CRM": {
+      "caps": [
+        "sales.contacts_accounts",
+        "sales.leads"
+      ],
+      "stages": [
+        "established"
+      ],
+      "modules": [
+        "sales_and_crm"
+      ],
+      "match_count": 2
+    },
+    "Pipedrive": {
+      "caps": [
+        "sales.contacts_accounts",
+        "sales.leads"
+      ],
+      "stages": [
+        "established"
+      ],
+      "modules": [
+        "sales_and_crm"
+      ],
+      "match_count": 2
+    },
+    "Salesforce": {
+      "caps": [
+        "sales.contacts_accounts",
+        "sales.leads"
+      ],
+      "stages": [
+        "integrated"
+      ],
+      "modules": [
+        "sales_and_crm"
+      ],
+      "match_count": 2
+    },
+    "Vend": {
+      "caps": [
+        "sc.item_master",
+        "sc.stock_levels"
+      ],
+      "stages": [
+        "established"
+      ],
+      "modules": [
+        "supply_chain_and_inventory"
+      ],
+      "match_count": 2
+    },
+    "Cin7 Core": {
+      "caps": [
+        "mfg.bom",
+        "sc.item_master"
+      ],
+      "stages": [
+        "established"
+      ],
+      "modules": [
+        "manufacturing_management",
+        "supply_chain_and_inventory"
+      ],
+      "match_count": 2
+    },
+    "BambooHR": {
+      "caps": [
+        "hr.employee_master",
+        "hr.leave_management"
+      ],
+      "stages": [
+        "integrated"
+      ],
+      "modules": [
+        "human_resources_management"
+      ],
+      "match_count": 2
+    },
+    "QuickHR": {
+      "caps": [
+        "hr.leave_management",
+        "hr.payroll_processing"
+      ],
+      "stages": [
+        "established"
+      ],
+      "modules": [
+        "human_resources_management"
+      ],
+      "match_count": 2
+    }
+  }
+}
