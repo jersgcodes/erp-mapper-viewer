@@ -1,11 +1,12 @@
 {
   "_meta": {
-    "description": "Solution-level agentic AI umbrella — vendor self-attests to the listed cross-module AI capabilities operating consistently across modules in this submission.",
-    "source": "Caps 1.03 (LLM Layer) + 1.04 (Others) sourced verbatim from IMDA\n\"ERP-Wide AI Features\" template provided by user 2026-06-03.\n7 additional caps (cross_module_copilot through cross_module_recommendations)\ndrafted by Claude to surface common cross-module AI patterns in SG SME\nERP solutions (anomaly detection, predictive forecasting, agentic workflow\norchestration, IDP, AI-assisted reconciliation, recommendation engine).\nAll caps Preferred per IMDA's Importance column on the source rows.\n",
-    "ships_when": "Caps populated 2026-06-03. Excel export wiring + DraftsContext editor support still pending — see TASKS.md."
+    "description": "Solution-level ERP-Wide AI Features umbrella. Per-feature Y/N (multi_select)\nso vendors pick the subset of AI capabilities their solution provides.\nAll features Preferred per IMDA's Importance column.\n",
+    "source": "IMDA \"ERP-Wide AI Features\" template — caps 1.03 (LLM Layer) and 1.04\n(Others) verbatim from the template provided 2026-06-03. 7 additional\nfeature definitions (Cross-Module AI Copilot, Anomaly Detection,\nPredictive Forecasting, Agentic Workflow Orchestration, Intelligent\nDocument Processing, AI-Assisted Reconciliation, Recommendation Engine)\ndrafted by Claude in IMDA's short descriptive style. Descriptions\nfollow noun-phrase form without em-dashes or \"for example\" asides.\n",
+    "ships_when": "Multi-select shape + per-cap Y/N + Others gate-and-textarea shipped\n2026-06-03 (commit pending). Excel export wiring still pending — see\nTASKS.md.\n"
   },
-  "umbrella_question": "Does your solution incorporate any form of artificial intelligence that operates across some or all of your ERP modules in this submission?",
+  "umbrella_question": "Does your solution incorporate any form of artificial intelligence across some or all of your ERP modules in this submission?",
   "tier": "preferred",
+  "format": "multi_select",
   "caps": [
     {
       "id": "llm_layer",
@@ -14,43 +15,43 @@
     },
     {
       "id": "cross_module_copilot",
-      "name": "Cross-Module AI Copilot / Assistant",
-      "description": "An AI assistant that drafts and coordinates actions spanning multiple\nERP modules — for example, from a customer email, drafting a quote in\nSales, checking inventory in Supply Chain, and generating the AR\ninvoice in Financial, with human review at each handoff.\n"
+      "name": "Cross-Module AI Copilot",
+      "description": "An AI assistant that drafts and coordinates actions spanning multiple\nERP modules, with human approval gates between steps.\n"
     },
     {
       "id": "anomaly_detection",
       "name": "Cross-Sub-Ledger Anomaly Detection",
-      "description": "AI that flags unusual patterns by combining data across sub-ledgers\n— for example, AP invoice anomalies cross-referenced with purchase-\norder history, vendor master, and historical spend patterns to\nsurface potential duplicate payments or vendor master tampering.\n"
+      "description": "AI that flags unusual patterns by combining data across multiple\nsub-ledgers (such as AP invoices cross-referenced with purchase\norders, vendor master records, and historical spend patterns).\n"
     },
     {
       "id": "predictive_forecasting",
       "name": "Cross-Module Predictive Forecasting",
-      "description": "Forecasting that integrates inputs from AR aging, sales pipeline,\ninventory levels, and AP commitments into unified projections such\nas 13-week cash flow, demand forecasts, or headcount-cost runways\nthat draw on data from more than one module.\n"
+      "description": "AI-driven forecasting that integrates inputs from multiple modules\n(such as AR aging, sales pipeline, inventory levels, and AP\ncommitments) into unified projections like cash flow or demand.\n"
     },
     {
       "id": "workflow_orchestration",
       "name": "Agentic Workflow Orchestration",
-      "description": "An AI agent that coordinates multi-step workflows spanning modules\n— for example, period close (drafts journal entries, runs sub-ledger\nreconciliations, prepares variance commentary, assembles the board\npack) or new-vendor onboarding (validates registration, runs\ncompliance checks, creates the vendor master record, sends welcome\npacket) with human approval gates between steps.\n"
+      "description": "An AI agent that coordinates multi-step workflows spanning modules\n(such as period close, new-vendor onboarding, or order-to-cash\nautomation), with human approval gates between steps.\n"
     },
     {
       "id": "intelligent_document_processing",
-      "name": "Intelligent Document Processing (IDP)",
-      "description": "AI that extracts structured data from documents (purchase orders,\nvendor invoices, contracts, customer emails, expense receipts) and\nroutes the extracted fields to the appropriate modules with\nconfidence scoring and reviewer queues for low-confidence matches.\n"
+      "name": "Intelligent Document Processing",
+      "description": "AI that extracts structured data from documents (purchase orders,\nvendor invoices, contracts, expense receipts) and routes the\nextracted fields to the appropriate modules with confidence scoring.\n"
     },
     {
       "id": "ai_reconciliation",
       "name": "AI-Assisted Cross-Ledger Reconciliation",
-      "description": "AI that matches records across sub-ledgers — bank statements versus\ncash sub-ledger, AR aging versus CRM opportunity stages, inventory\ncycle counts versus sales velocity, payroll posting versus GL — and\nsurfaces matches plus exceptions for human review.\n"
+      "description": "AI that matches records across sub-ledgers (such as bank statements\nagainst cash, AR aging against CRM stages, or inventory counts\nagainst sales velocity) and surfaces matches plus exceptions for\nhuman review.\n"
     },
     {
       "id": "cross_module_recommendations",
       "name": "Cross-Module Recommendation Engine",
-      "description": "AI that recommends next actions based on context spanning modules —\nfor example, flagging customers likely to churn by combining payment\nhistory (Financial), support tickets (FSM), and sales engagement\nsignals (CRM), or recommending re-order quantities by combining\nsales velocity (Sales) with supplier lead times (Supply Chain).\n"
+      "description": "AI that recommends next actions based on context spanning multiple\nmodules (such as churn-risk customers identified by combining\npayment history, support tickets, and sales engagement signals).\n"
     },
     {
       "id": "others",
       "name": "Other ERP-Wide AI Features",
-      "description": "Please define any other cross-module AI capabilities your solution\nprovides that are not covered above.\n",
+      "description": "Please define any other ERP-wide AI capabilities your solution\nprovides that are not covered above.\n",
       "kind": "free_text"
     }
   ]
