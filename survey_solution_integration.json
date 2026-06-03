@@ -1,10 +1,41 @@
 {
   "_meta": {
-    "description": "Solution-level integration umbrella — vendor self-attests the listed cross-cutting integration capabilities apply across all of their modules.",
-    "source": "Hand-curated scaffolding (2026-05-26). Content TBD.",
-    "ships_when": "Caps populated in data/survey_solution_integration.yaml + Excel export wiring + DraftsContext editor support added."
+    "description": "Solution-level integration umbrella — vendor self-attests to the listed cross-cutting integration capabilities across both internal (own application) and externally-integrated (third-party) modules.",
+    "source": "IMDA \"User Discovery — Overall Integration Requirements V2\" template\n(provided by user 2026-06-03). 6 mandatory caps spanning Internal\nModules (3) + Externally-Integrated Modules (3). All tier=mandatory\nper the IMDA \"Importance\" column.\n",
+    "ships_when": "Caps populated 2026-06-03. Excel export wiring + DraftsContext editor support still pending — see TASKS.md."
   },
-  "umbrella_question": "Does your solution provide the following integration capabilities consistently across every module included in the submission?",
+  "umbrella_question": "Does your solution provide robust cross-module integration capabilities — across both your own application's internal modules and any externally-integrated third-party modules — consistent across every module in this submission?",
   "tier": "mandatory",
-  "caps": []
+  "caps": [
+    {
+      "id": "erp_interoperability_internal",
+      "name": "ERP Interoperability (Internal)",
+      "description": "Your solution provides data integration for all ERP modules within\nyour own application, ensuring a seamless and consistent information\nflow across all business functions without manual intervention.\n"
+    },
+    {
+      "id": "user_documentation_internal",
+      "name": "User Documentation (Internal)",
+      "description": "Your solution provides documentation for all inter-module workflows\nwithin your application, for ease of referencing and troubleshooting.\n"
+    },
+    {
+      "id": "data_health_monitoring",
+      "name": "Data Health Monitoring",
+      "description": "Your solution implements methods to prevent data transfer failures\nbetween internal modules — for example, user-facing error messages\nand error-tracking dashboards.\n"
+    },
+    {
+      "id": "erp_interoperability_integration",
+      "name": "ERP Interoperability (Integration)",
+      "description": "Your solution provides data integration with all externally-integrated\nERP modules (third-party systems integrated at the customer's request),\nensuring a seamless and consistent information flow across all\nbusiness functions without manual intervention.\n"
+    },
+    {
+      "id": "user_documentation_integration",
+      "name": "User Documentation (Integration)",
+      "description": "Your solution documents all integrated data fields exchanged with\nthird-party modules, for ease of reference and troubleshooting.\n"
+    },
+    {
+      "id": "audit_logging_monitoring",
+      "name": "Audit Logging and Monitoring",
+      "description": "Your solution provides a dashboard to track connection health and\ndata transmission status across third-party integrations, and\nautomatically captures logs of any errors encountered.\n"
+    }
+  ]
 }
