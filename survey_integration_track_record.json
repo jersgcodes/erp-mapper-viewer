@@ -1,0 +1,102 @@
+{
+  "_meta": {
+    "description": "Per-module third-party integration track-record qualifiers (IMDA \"[EDGE ERP]\n<Module> Module\" 101-block). Vendor demonstrates real integration experience.\n",
+    "source": "IMDA integration block, captured 2026-06-08 from the Finance-module\nscreenshot (rows 101, 101.1, 101.2, 101.3, 101.4). Qualifier wording is\nIMDA-verbatim. The Sector qualifier options are the 14 PSG sectors,\nderived at build time from config/psg_sectors.yaml (single source of\ntruth) rather than the partial list shown in the screenshot.\n",
+    "applies": "per_module"
+  },
+  "umbrella": {
+    "tier": "preferred",
+    "title": "Integration Services",
+    "question": "Do you provide integration services to other {module} modules?",
+    "body": "You provide the capability to integrate to {module}-type modules or applications provided by other software providers."
+  },
+  "qualifiers": [
+    {
+      "id": "overall",
+      "tier": "mandatory",
+      "title": "Overall Integration Track Record Qualifier",
+      "body": "Do you have at least 1 completed project proposal that includes the following information?\n\n1) Scope of work clearly indicating the integration of the module or application\n2) Clear proof of project completion (e.g. signed handover form, signed completion letter, etc.)\n\nNote 1: Please ensure that all project proposals are for companies based in Singapore\nNote 2: Please ensure that at least 1 of your own software module that you've submitted for this application, is listed in the proposal\n",
+      "answer": "confirm",
+      "file": true
+    },
+    {
+      "id": "completion",
+      "tier": "mandatory",
+      "title": "Project Completion Track Record Qualifier",
+      "body": "Please indicate the page number for the proof of project completion.\n\nClick \"Yes\" to confirm you have completed the instruction(s).\n",
+      "answer": "text"
+    },
+    {
+      "id": "sector",
+      "tier": "mandatory",
+      "title": "Sector Record Qualifier",
+      "body": "Please indicate the industry(s) of the client, to the best of your knowledge.",
+      "answer": "multi_select",
+      "options": [
+        {
+          "value": "accountancy",
+          "label": "Accountancy"
+        },
+        {
+          "value": "advanced_manufacturing",
+          "label": "Advanced Manufacturing"
+        },
+        {
+          "value": "built_environment",
+          "label": "Built Environment"
+        },
+        {
+          "value": "early_childhood",
+          "label": "Early Childhood"
+        },
+        {
+          "value": "engineering_services",
+          "label": "Engineering Services"
+        },
+        {
+          "value": "environmental_services",
+          "label": "Environmental Services"
+        },
+        {
+          "value": "estate_agency",
+          "label": "Estate Agency"
+        },
+        {
+          "value": "food",
+          "label": "Food"
+        },
+        {
+          "value": "marine_offshore",
+          "label": "Marine & Offshore"
+        },
+        {
+          "value": "personal_care_services",
+          "label": "Personal Care Services"
+        },
+        {
+          "value": "precision_engineering",
+          "label": "Precision Engineering"
+        },
+        {
+          "value": "retail",
+          "label": "Retail"
+        },
+        {
+          "value": "security",
+          "label": "Security"
+        },
+        {
+          "value": "wholesale_trade",
+          "label": "Wholesale Trade"
+        }
+      ]
+    },
+    {
+      "id": "brands",
+      "tier": "mandatory",
+      "title": "Brand & Software Integration Track Record Qualifier",
+      "body": "Please clearly indicate ALL (1) brand(s) & (2) software name(s) of the module(s) and/or application(s) that you are able to integrate to.\n\nClick \"Yes\" to confirm you have completed the instruction(s).\n",
+      "answer": "text"
+    }
+  ]
+}
