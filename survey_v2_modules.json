@@ -1,0 +1,381 @@
+{
+  "modules": [
+    {
+      "id": "100",
+      "slug": "financial_management",
+      "name": "Finance Module",
+      "description": "The Finance Module is the core financial management component of an Enterprise Resource Planning system that centralises and automates an organisation's financial processes and accounting functions.",
+      "sub_modules": [
+        {
+          "name": "Core Finance Module Features",
+          "gated": false,
+          "umbrella_question": "Does your finance module provide the following functions?",
+          "features": [
+            "General Ledger & Chart of Accounts - Record all business transactions in a double-entry general ledger with a configurable chart of accounts",
+            "Accounts Receivable & Customer Invoicing - Record customer invoices and track payments received against them",
+            "Accounts Payable & Vendor Bills - Record vendor bills and schedule payments",
+            "Bank & Cash Management - Be matched to ledger records",
+            "Budgeting & Forecasting - Create budgets and compare actual spending against budgeted amounts",
+            "InvoiceNow-Ready Solution Provider Accreditation - Creates budgets, forecasts performance, and compares actual versus planned spending",
+            "Financial Analytics & Dashboards - View financial performance data and drill down to transaction details"
+          ]
+        }
+      ],
+      "standalone": [
+        {
+          "id": "100.02",
+          "title": "InvoiceNow-Ready Solution Provider Accreditation",
+          "tier": "mandatory",
+          "body": "Is your solution listed on IMDA InvoiceNow-Ready Solution Provider (IRSP) Listing?\n\n[1] If you are the Product Principal of the solution, you are required to be accredited as an IRSP by IMDA. [2] If you are the reseller of the solution, your Solution Product Principal must declare to IMDA that you are an authorised reseller of their solution.\n\nNote: For more information on InvoiceNow, refer to: Becoming an InvoiceNow-Ready Solution Provider | E-invoicing | IMDA (https://www.imda.gov.sg/how-we-can-help/nationwide-e-invoicing-framework/becoming-an-invoicenow-ready-solution-provider)\n"
+        }
+      ],
+      "ai_features": {
+        "tier": "preferred",
+        "umbrella": "Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?",
+        "examples": [
+          "Automated Invoice Processing - AI-powered optical character recognition (OCR) extracts data from invoices, automatically matches them to purchase orders, and routes for approval, reducing manual data entry",
+          "Automated Journal Entry Suggestions - AI learns from historical accounting patterns to suggest appropriate account codes, cost centre allocations, and journal entries for recurring transactions",
+          "Anomaly Detection and Fraud Prevention - AI monitors transaction patterns to identify unusual activities, duplicate payments, vendor fraud, or accounting errors in real-time, flagging suspicious transactions for review"
+        ],
+        "others": true
+      }
+    },
+    {
+      "id": "101",
+      "slug": "sales_and_crm",
+      "name": "Sales & CRM Module",
+      "description": "Integrates sales tracking with customer data to streamline lead management, improve retention, and drive revenue growth through personalized engagement.",
+      "sub_modules": [
+        {
+          "name": "Sales",
+          "gated": true,
+          "umbrella_question": "Do you provide Sales features?",
+          "features": [
+            "Orders & Invoicing - Record customer orders and generate invoices linked to payment status",
+            "Sales Reporting, Analytics & Dashboards - View sales performance data and forecasts through customizable reports"
+          ]
+        },
+        {
+          "name": "CRM",
+          "gated": true,
+          "umbrella_question": "Does your Sales and/or CRM Module provide the following CRM features?",
+          "features": [
+            "Contact, Account & Customer Master - Maintain unified contact and account records with relationship hierarchies and interaction history",
+            "Customer Interaction Log - Record and track all customer interactions in a single timeline",
+            "Lead Management - Capture leads and convert qualified ones to opportunities",
+            "Opportunity & Pipeline Management - Manage active opportunities through a stage-based pipeline"
+          ]
+        }
+      ],
+      "ai_features": {
+        "tier": "preferred",
+        "umbrella": "Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?",
+        "examples": [
+          "Predictive Lead Scoring - AI ranks inbound leads by win probability based on firmographic and behavioural signals, helping sales prioritise the highest-value prospects",
+          "Opportunity Win-Probability Modeling - AI forecasts deal closure likelihood per opportunity, surfacing pipeline risks and supporting more accurate revenue forecasts",
+          "Next Best Action Recommendation - AI analyses each customer's history and stage to suggest the most effective follow-up action for the rep, improving engagement consistency"
+        ],
+        "others": true
+      }
+    },
+    {
+      "id": "102",
+      "slug": "supply_chain_and_inventory",
+      "name": "Supply Chain & Inventory Management Module",
+      "description": "Optimizes logistics and stock levels by tracking goods from procurement to delivery, ensuring efficient fulfillment and reduced operational costs.",
+      "sub_modules": [
+        {
+          "name": "Procurement & Purchasing",
+          "gated": true,
+          "umbrella_question": "Does your Supply Chain & Inventory Management Module provide Procurement & Purchasing features?",
+          "features": [
+            "Purchase Orders & Procurement - Track purchase orders from creation through invoice payment",
+            "Vendor & Supplier Master - Maintain vendor records with contact details, payment terms, and lead times"
+          ]
+        },
+        {
+          "name": "Warehouse & Inventory",
+          "gated": true,
+          "umbrella_question": "Does your Supply Chain & Inventory Management Module provide Warehouse & Inventory features?",
+          "features": [
+            "Inventory Master & Item Management - Maintain a central registry of items with unique identifiers and track their key attributes",
+            "Stock Levels & Warehouse Management - Track inventory quantities across multiple locations and bins",
+            "Reorder Rules & Replenishment - Automatically trigger purchase requisitions when inventory falls below defined reorder points",
+            "Multi-Warehouse Management - Track & allocate stock levels across multiple physical warehouse locations",
+            "Stock Movement Report Generation - Generate real-time, audit-ready reports tracking all stock inflows, transfers, and outflows",
+            "Supply Chain Analytics & Dashboards - Provide visibility into inventory, order, and supplier performance metrics"
+          ]
+        },
+        {
+          "name": "Material Requirements Planning (MRP)",
+          "gated": true,
+          "umbrella_question": "Does your Supply Chain & Inventory Management Module provide Material Requirements Planning (MRP) features?",
+          "features": [
+            "Demand Forecasting - Dynamically calculate raw material needs based on demand, supply and production schedules",
+            "Real-Time Inventory Reordering - Automatically trigger purchase requisitions when stock drops below safety-stock thresholds"
+          ]
+        }
+      ],
+      "ai_features": {
+        "tier": "preferred",
+        "umbrella": "Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?",
+        "examples": [
+          "Stock Anomaly Detection - AI identifies unusual consumption patterns, theft indicators, or expiry-driven write-off risks, flagging items for review before they hit financial impact"
+        ],
+        "others": true
+      }
+    },
+    {
+      "id": "103",
+      "slug": "human_resources_management",
+      "name": "Human Resources Management Module",
+      "description": "Manage employee data, payroll, recruitment, performance evaluation, training, and workforce planning.",
+      "sub_modules": [
+        {
+          "name": "Human Resource Management System (HRMS)",
+          "gated": true,
+          "umbrella_question": "Do you provide HRMS features?",
+          "features": [
+            "Personnel Management - Maintain a single employee master record and allow for employee self-service for self-updating",
+            "Payroll Management - Process e-payroll, generate Ministry of Manpower (MOM)-standard payslips and comply to policy & statutory requirements",
+            "Leave Management - Configure leave policy and allow for the management of leave applications",
+            "Benefits and Claims Management - Process medical and transport claims & support multiple payment processing (Payroll, GIRO, cheque, and cash payment)",
+            "Performance Appraisal Management - Set KPIs for individual employees for each appraisal cycle, and provide online built-in self-service appraisal forms with employee tagging and manager routing for approval and scoring",
+            "HRMS Dashboards and Reports - Create, customise & view dashboards and/or reports that provide an at-a-glance overview of common HR metrics/indicators to help analyse data through data visualisation"
+          ]
+        },
+        {
+          "name": "Human Resource e-Scheduling",
+          "gated": true,
+          "umbrella_question": "Do you provide Human Resource e-Scheduling features?",
+          "features": [
+            "Roster Scheduling - Create employee scheduling based on business demand & employee availability",
+            "Employee Access - Allows for mobile cloud-based access for employees to access schedules and rosters",
+            "Employee Notification - Allows for the receiving of push messages/notifications for scheduling and roster reminders",
+            "System Setup - Setup user accounts for the administrator and all employee users, manage business units for different employee categories (e.g. geography, division, tenure, etc), and other interface customisations",
+            "HR e-Scheduling Dashboards and Reports - Create, customise & view dashboards and/or reports that provide an at-a-glance overview of overall scheduling statuses, attendance, overtime reporting, and generate attendance & overtime reports"
+          ]
+        },
+        {
+          "name": "Applicant Tracking & Sourcing",
+          "gated": true,
+          "umbrella_question": "Do you provide Applicant Tracking & Sourcing features?",
+          "features": [
+            "Manage Jobs & Postings - Create and edit positions with approval workflows, and publish them to multiple job boards (e.g. LinkedIn, Jobstreet, MyCareersFuture, IHLs, etc.)",
+            "Track & Tag Candidates - Update application statuses, tag candidates, and add recruitment notes directly in the system",
+            "Customise Forms & Communications - Configure application forms with custom questions, and bulk-send templated emails (e.g. for scheduling of interviews, job offers, rejections, etc.) using role-based privacy settings (i.e. HR can determine level of information visible to hiring managers and peer interviewers)",
+            "Offers & Documentation - Accept candidate document uploads and send official job offers directly through the system",
+            "Applicant Tracking & Sourcing Dashboards and Reports - Create, customise & view dashboards and/or reports that provide an overview of all job posts and application statuses, candidate application tracking and recruitment performance analysis (e.g., Application to Vacancies Ratio (AVR), Job Offer Rate, etc.)"
+          ]
+        },
+        {
+          "name": "Employee Rewards and Recognition",
+          "gated": true,
+          "umbrella_question": "Do you provide Employee Rewards and Recognition features?",
+          "features": [
+            "Award Points & Recognition - Employers can award points or dollar value ad-hoc or for specific occasions, and send words of appreciation which can be tagged to the core values of the company",
+            "Merchant Reward Redemption - Employees can redeem points across a diverse network of over 100 Singapore-based retail, F&B, and recreation merchants",
+            "Social Appreciation Board - Features a public posting board to openly announce and celebrate employee appreciations",
+            "Employee Rewards and Recognition Dashboards and Reports - Create, customise & view dashboards and/or reports that allowing for the viewing and tracking of points awarded, redeemed, and balance points as well as rewards utilisation"
+          ]
+        }
+      ],
+      "ai_features": {
+        "tier": "preferred",
+        "umbrella": "Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?",
+        "examples": [
+          "HR Chatbot - A HR chatbot answers FAQs on company policies, allow Leave and Claims applications to be submitted, approved & automatically updated",
+          "Roster Scheduling - AI automates and optimises roster scheduling, as well as perform data analytics on scheduling patterns and recommend predictive measures (e.g. prompt to schedule manpower ahead of peak hours in restaurant, etc)",
+          "Recruitment and Talent Matching - AI automatically recommends candidates based on job requirements"
+        ],
+        "others": true
+      }
+    },
+    {
+      "id": "104",
+      "slug": "manufacturing_management",
+      "name": "Manufacturing Operations Management",
+      "description": "Controls production operations including shop floor management, work order processing, product lifecycle management and quality management throughout the manufacturing process.",
+      "sub_modules": [
+        {
+          "name": "Manufacturing Execution System (MES)",
+          "gated": true,
+          "umbrella_question": "Do you provide MES features?",
+          "features": [
+            "Work Order Management - Create, dispatch, manage work orders that include information such as execution sequence, work instructions, resources, etc.",
+            "Work Order Scheduling (Basic) - Plan and modify work order sequences in the relevant shopfloor stations",
+            "Shopfloor Data Entry - Allow operators to view work orders and detailed information of each task, as well as do data input (e.g. via barcode scanners, etc.)",
+            "Work-in-Progress (WIP) Tracking - Track and display real-time work completion status for each operation, based on data input from the shopfloor",
+            "MES Dashboards & Reports - Create, customise & view dashboards and/or reports that provide an at-a-glance overview of various production indicators (e.g. Shopfloor Equipment Status, WIP Tracker, Overall Equipment Efficiency (OEE), etc.)"
+          ]
+        },
+        {
+          "name": "MES Shopfloor Data Collection",
+          "gated": true,
+          "umbrella_question": "Do you provide the following MES Shopfloor Data Collection features?",
+          "features": [
+            "Real-time Equipment Status Monitoring - Monitor equipment status and downtime reason(s) via operator manual input or automatically via integration into equipment",
+            "Equipment Data Management - Maintain the details and status of each equipment",
+            "Notification Alerts - Trigger notification alerts (e.g. via email, Whatsapp, SMS etc.) when equipments go down or shows signs of being disrupted"
+          ]
+        },
+        {
+          "name": "Quality Management (QM)",
+          "gated": true,
+          "umbrella_question": "Do you provide QM features?",
+          "features": [
+            "Inspection Plan Configuration - Allow for the configuration of quality standards required (e.g. attributes to record, frequencies, sample sizes, etc.)",
+            "Quality Data Collection - Facilitate the collection of quality data either through manual keying of information on screen by the operator or automatically via an interfaced connection with measurement equipment",
+            "Non-Conformance (NC) Alerting - Notifications and/or alarms are triggered when measurements are out of specification, and NCs are highlighted to user(s) for follow-ups",
+            "Root Cause and Corrective Action (RCCA) Recording - Allows users to record causes and required actions of NCs",
+            "Data Analytics - Allow for the performance of statistical analysis and the detection of trends & deviations for the conclusion of significant influences",
+            "QM Dashboards & Reports - Create, customise & view dashboards and/or reports for recorded quality checks, statistical analysis and/or other relevant QM indicators"
+          ]
+        },
+        {
+          "name": "Product Lifecycle Management (PLM)",
+          "gated": true,
+          "umbrella_question": "Do you provide PLM features?",
+          "features": [
+            "Routing & Work Instruction Management - Provide a centralized source of information on the sequence of processes involved to manufacture or assemble a product (e.g. technical drawings, Bill of Materials (BOM), materials required, and manufacturing processes such as tools, equipment, and work instructions used to build the product, etc.)",
+            "Engineering Drawing Management - Provide the relevant technical drawings of components and materials used in each process",
+            "Work Instruction Management - Provide relevant information on tools, equipment, manpower and instructions that is required in each process",
+            "Engineering Change Management - Manage revisions to product design and update relevant manufacturing process changes that are impacted by the product design change",
+            "PLM Dashboards & Reports - Create, customise & view dashboards and/or reports for the PLM processes"
+          ]
+        }
+      ],
+      "ai_features": {
+        "tier": "preferred",
+        "umbrella": "Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?",
+        "examples": [
+          "Dynamic Dispatching for Work Order Scheduling - The system autonomously shifts the production sequence, re-routing urgent jobs to alternative work centers and updating operator digital work whenever issues arise that delay existing schedules",
+          "Dynamic Root Cause Assistance - AI-driven QMS uses Natural Language Processing (NLP) and machine learning to scan historical records, automatically suggesting root causes and proven corrective actions",
+          "Engineering Change Impact Analysis - AI-driven PLM instantly scans master data to automatically flag downstream assets, tools, contracts, and compliance rules affected by design changes"
+        ],
+        "others": true
+      }
+    },
+    {
+      "id": "105",
+      "slug": "fleet_management",
+      "name": "Fleet Management Module",
+      "description": "Manages vehicle fleets including but not limited to vehicle tracking, maintenance scheduling, fuel management, driver assignments, compliance monitoring, and fleet cost optimization.",
+      "sub_modules": [
+        {
+          "name": "Fleet Management Module Features",
+          "gated": false,
+          "umbrella_question": "Do you provide the following features?",
+          "features": [
+            "Fleet Tracking via Telematics & GPS - Utilise telematics and GPS tracking to provide a complete real-time fleet overview, especially",
+            "Dispatch Management - Manage the fleet's journey and associated costs",
+            "Dynamic Route Planning - Automate optimised route planning using real-time traffic and historical data",
+            "Fleet Management Dashboards & Reports - Create, customise & view dashboards and/or reports that provide an at-a-glance overview of fleet indicators (e.g. mileage and fuel consumption, vehicle maintenance and servicing tasks, etc.)"
+          ]
+        },
+        {
+          "name": "Fleet Management Module Safety Features",
+          "gated": true,
+          "umbrella_question": "Do you provide the following safety features?",
+          "features": [
+            "Driver Status Monitoring System (DSMS) - Detect and alert the driver of fatigue events (e.g. closing of eyes) and distractions (e.g. making phone calls)",
+            "Advanced Driver Assistance System (ADAS) - Alert the driver of potential collisions (e.g. forward collision warning, lane departure warning, and pedestrian or cyclist collision warning, etc.)",
+            "Blind Spot Detection System - Improve situational awareness by alerting the driver of pedestrians, cyclists, motorcyclists, or workers in the vehicle's blind spots"
+          ]
+        }
+      ],
+      "ai_features": {
+        "tier": "preferred",
+        "umbrella": "Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?",
+        "examples": [
+          "Predictive Vehicle Maintenance - Machine learning predicts mechanical issues using telematics data points (e.g. fluctuations in battery voltage, engine temperature, etc.)",
+          "Dynamic Dispatching & Route Optimization - AI continuously calculates routes by cross-referencing live variables (e.g. traffic bottlenecks, severe weather, changing customer delivery windows, etc.) with historical operational patterns"
+        ],
+        "others": true
+      }
+    },
+    {
+      "id": "106",
+      "slug": "field_service_management",
+      "name": "Field Service Management Module",
+      "description": "Coordinates on-site service operations, technician scheduling, mobile workforce management, and service contract administration.",
+      "sub_modules": [
+        {
+          "name": "Field Service Management (FSM) Module Features",
+          "gated": false,
+          "umbrella_question": "Do you provide the following features?",
+          "features": [
+            "Work Order Management - Create, assign, and track work orders from initiation to completion, including details such as customer information, job location, required skills and equipment, priority level, etc",
+            "Work Order Scheduling - Schedule technicians based on their profile such as skill level, availability, or proximity to the job",
+            "Mobile Field Worker App - View work orders, update job status with a digital record (e.g. text, e-signature, images, videos, etc.), receive push notifications and offline/online data entry w/ cloud synchronisation",
+            "FSM Dashboards & Reports - Create, customise & view dashboards and/or reports that provide real-time monitoring of FSM indicators (E.g. job status, technician availability and current locations, scheduling status, attendance and overtime reports, etc.)"
+          ]
+        }
+      ],
+      "ai_features": {
+        "tier": "preferred",
+        "umbrella": "Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?",
+        "examples": [
+          "Gen-AI Generated Summaries - Generate work order summaries that transform rough notes taken by mobile field workers, into well-organised, concise and easy-to-understand",
+          "Auto-Scheduling & Dispatch - AI scheduling engine continuously optimizes the daily schedule autonomously"
+        ],
+        "others": true
+      }
+    },
+    {
+      "id": "107",
+      "slug": "project_management",
+      "name": "Project Management Module",
+      "description": "Manages project planning, resource allocation, timeline tracking and budgeting",
+      "sub_modules": [
+        {
+          "name": "Project Management (PM) Module Features",
+          "gated": false,
+          "umbrella_question": "Do you provide the following features?",
+          "features": [
+            "Task Management and Scheduling - Easily create, organize, and assign tasks with clear deadlines and dependencies",
+            "Resource Allocation Tracking - Monitor team workloads and manage budget distribution",
+            "Team Collaboration Tools - Share feedback, discuss updates, and co-edit documents instantly within the team",
+            "PM Dashboards & Reports - Create, customise & view dashboards and/or reports that provide real-time monitoring of PM indicators (e.g. Track project health, milestones, project performance metrics, etc.)"
+          ]
+        }
+      ],
+      "ai_features": {
+        "tier": "preferred",
+        "umbrella": "Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?",
+        "examples": [
+          "Automated Progress & Status Reporting - AI reads task titles, activity logs, descriptions, comments, etc. across entire project boards and compresses information into structured reports",
+          "Predictive Risk Detection - AI continuously analyzes historical completion rates, current velocity, task dependencies, team capacity, etc. and alerts potential delays ahead of time, proactively"
+        ],
+        "others": true
+      }
+    },
+    {
+      "id": "108",
+      "slug": "asset_management",
+      "name": "Asset Management Module",
+      "description": "Tracks and manages fixed assets throughout their lifecycle, including asset registration, depreciation calculations, maintenance scheduling, and disposal processes.",
+      "sub_modules": [
+        {
+          "name": "Asset Management Module Features",
+          "gated": false,
+          "umbrella_question": "Do you provide the following features?",
+          "features": [
+            "Centralized Asset Lifecycle Tracking - Monitor an asset's journey from procurement through maintenance histories down to final decommissioning disposal",
+            "Maintenance Schedule Alerts - Set automated triggers based on time, usage and/or sensor thresholds to service equipment before it breaks down",
+            "Equipment Utilization Monitoring - Continuously track active, idle, or misplaced physical tools and machinery across multiple job sites",
+            "Compliance Tracking - Maintain detailed digital histories of safety audits, calibrations, and protocol approvals to remain audit-ready",
+            "Historical Equipment Maintenance Records - Centralize all past repair data and technician notes to optimize future service lifecycle decisions",
+            "Asset Management Dashboards & Reports - Create, customise & view dashboards and/or reports that provide real-time monitoring of PM indicators (e.g. Track asset health & reliability, maintenance backlogs, etc.)"
+          ]
+        }
+      ],
+      "ai_features": {
+        "tier": "preferred",
+        "umbrella": "Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?",
+        "examples": [],
+        "others": true
+      }
+    }
+  ]
+}
