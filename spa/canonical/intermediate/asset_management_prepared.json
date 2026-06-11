@@ -1,0 +1,332 @@
+{
+  "module": "asset_management",
+  "stats": {
+    "raw_in_module": 23,
+    "after_noise_filter": 23,
+    "dropped_noise": 0,
+    "after_fuzzy_dedupe": 23,
+    "merged_via_fuzzy": 0
+  },
+  "requirements": [
+    {
+      "id": "req-00070",
+      "text": "Ad hoc or scheduled notifications for users to initiate repairs or maintenance",
+      "q_title": "Maintenance Request",
+      "subsection": "Maintenance Request",
+      "sources": [
+        "security__security-collaboration-platform"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-00110",
+      "text": "An asset manager accesses lifecycle data and technical manuals for maintenance planning.",
+      "q_title": "Asset Management",
+      "subsection": "Example",
+      "sources": [
+        "essential-business__field-service-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-00119",
+      "text": "An IoT sensor detects a malfunction in equipment and automatically generates a work order for repair.",
+      "q_title": "Work Order Automation using IoT",
+      "subsection": "Example",
+      "sources": [
+        "essential-business__field-service-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management",
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00146",
+      "text": "Are the modules above tightly integrated such that information can be pulled from all modules to the dashboard",
+      "q_title": "Module Integration",
+      "subsection": "Module Integration",
+      "sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "financial_management",
+        "human_resources_management",
+        "sales_and_crm",
+        "supply_chain_and_inventory",
+        "project_management",
+        "asset_management",
+        "manufacturing_management",
+        "field_service_management",
+        "fleet_management"
+      ]
+    },
+    {
+      "id": "req-00155",
+      "text": "Asset tracking, with visibility of the Lot/Serial number",
+      "q_title": "Inventory Management Integration",
+      "subsection": "Required Functions",
+      "sources": [
+        "logistics__warehouse-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management",
+        "supply_chain_and_inventory"
+      ]
+    },
+    {
+      "id": "req-00205",
+      "text": "buildings, levels, rooms) for technicians to locate assets during service calls",
+      "q_title": "Client and Contract Management",
+      "subsection": "",
+      "sources": [
+        "essential-business__field-service-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management",
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-00282",
+      "text": "Capital goods",
+      "q_title": "Organisation-level Scope 3 Emissions Calculation",
+      "subsection": "Examples",
+      "sources": [
+        "essential-business__carbon-management-solution"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-00543",
+      "text": "Does your solution generate notification alerts (e.g., via email or SMS) when equipment is down or shows signs of disruption",
+      "q_title": "Notification Alerts",
+      "subsection": "Notification Alerts",
+      "sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management",
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00563",
+      "text": "Does your solution maintain the details and status of each equipment",
+      "q_title": "Equipment Data Management",
+      "subsection": "Equipment Data Management",
+      "sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-00569",
+      "text": "Does your solution monitor equipment status and downtime reason in real time via operator manual key in or automatic link with the equipment",
+      "q_title": "Real-time Equipment Status Monitoring",
+      "subsection": "Real-time Equipment Status Monitoring",
+      "sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management",
+        "manufacturing_management"
+      ]
+    },
+    {
+      "id": "req-00673",
+      "text": "For real-time stock-taking of inventory and assets via integration with RFID hardware (e.g. installed with RFID reader, tags, tunnel gantry, etc)",
+      "q_title": "RFID Integration",
+      "subsection": "RFID Integration",
+      "sources": [
+        "essential-business__accounting-management-+-inventory-management-+-sales-management-system",
+        "essential-business__accounting-management-+-sales-management-system",
+        "wholesale__enterprise-resource-planning-erp-software-for-wholesale",
+        "wholesale__inventory-management"
+      ],
+      "variant_count": 4,
+      "modules_llm": [
+        "supply_chain_and_inventory",
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-00674",
+      "text": "For real-time stock-taking of inventory and assets via integration with with Barcode/RFID/QR Code Scanning hardware (e.g. installed with RFID reader, tags, tunnel gantry, etc)",
+      "q_title": "Barcode/RFID/QR Code Scanning Integration",
+      "subsection": "Barcode/RFID/QR Code Scanning Integration",
+      "sources": [
+        "essential-business__inventory-management-and-sales-management-system"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "supply_chain_and_inventory",
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-00734",
+      "text": "Identify and facilitate removal of assets without proper approval dates",
+      "q_title": "IT Asset Management",
+      "subsection": "Asset Management Requirements",
+      "sources": [
+        "cybersecurity__integrated-anti-malware-firewall-and-backup"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-00735",
+      "text": "Identify and flag unauthorised assets or those reaching End-of-Support for replacement action",
+      "q_title": "IT Asset Management",
+      "subsection": "Asset Management Requirements",
+      "sources": [
+        "cybersecurity__integrated-anti-malware-firewall-and-backup"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-00851",
+      "text": "Leased assets",
+      "q_title": "Organisation-level Scope 3 Emissions Calculation",
+      "subsection": "Examples",
+      "sources": [
+        "essential-business__carbon-management-solution"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-00874",
+      "text": "Maintenance planning and monitoring (e.g. cleaning, pest control, fixtures, etc.)",
+      "q_title": "School Operations Management - Preferred Features",
+      "subsection": "",
+      "sources": [
+        "early-childhood__pre-school-management-system",
+        "early-childhood__pre-school-management-system-+-e-forms-for-pre-school"
+      ],
+      "variant_count": 2,
+      "modules_llm": [
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-01102",
+      "text": "Real time stock taking of inventory and/or assets via integration with RFID hardware, e.g. installed with RFID reader, tags, tunnel gate, or weight based inventory tracking solution",
+      "q_title": "RFID Inventory Tracking",
+      "subsection": "RFID Inventory Tracking",
+      "sources": [
+        "wholesale__inventory-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "supply_chain_and_inventory",
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-01111",
+      "text": "Record authorisation dates in the asset inventory following dispensation approval",
+      "q_title": "IT Asset Management",
+      "subsection": "Asset Management Requirements",
+      "sources": [
+        "cybersecurity__integrated-anti-malware-firewall-and-backup"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-01146",
+      "text": "S to define quality checks required (e.g. attributes to record, frequencies, and sample sizes)",
+      "q_title": "Quality Check Configuration",
+      "subsection": "Quality Check Configuration",
+      "sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-01148",
+      "text": "S to manage the scope and staff in charge of maintenance for the equipment",
+      "q_title": "Maintenance Staff Management",
+      "subsection": "Maintenance Staff Management",
+      "sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-01150",
+      "text": "S to record causes and actions when problems arise",
+      "q_title": "Problem Resolution Recording",
+      "subsection": "Problem Resolution Recording",
+      "sources": [
+        "advanced-manufacturing__manufacturing-quality-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-01151",
+      "text": "S to report an equipment breakdown or problem and dispatch non-scheduled repairs",
+      "q_title": "Equipment Repair Management",
+      "subsection": "Equipment Repair Management",
+      "sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-01153",
+      "text": "S to schedule equipment maintenance on an ad-hoc basis or automatically based on pre-defined requirements (e.g. work hours)",
+      "q_title": "Equipment Maintenance Scheduling",
+      "subsection": "Equipment Maintenance Scheduling",
+      "sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management"
+      ]
+    }
+  ],
+  "dropped_noise": []
+}

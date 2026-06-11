@@ -1,0 +1,57 @@
+{
+  "_meta": {
+    "description": "Solution-level integration umbrella — split into Internal Modules and\nExternally-Integrated Modules per IMDA's User Discovery V2 template.\nEach sub-section has its own Mandatory Y/N gate; vendor commits to all\ncaps within a sub-section with one Y/N.\n",
+    "source": "IMDA \"User Discovery — Overall Integration Requirements V2\" template\n(provided by user 2026-06-03). 6 mandatory caps total (3 per sub-\nsection). All tier=mandatory per the IMDA \"Importance\" column.\n",
+    "ships_when": "Caps populated 2026-06-03. Sub-section split applied 2026-06-03 (was\na single combined umbrella before). Excel export wiring + DraftsContext\neditor support still pending — see TASKS.md.\n"
+  },
+  "sub_sections": [
+    {
+      "id": "internal",
+      "title": "Internal Modules",
+      "subtitle": "Vendor's Own Modules / Software",
+      "umbrella_question": "Does your solution provide robust data integration across all ERP modules within your own application, ensuring a seamless and consistent information flow across all business functions without manual intervention?",
+      "tier": "mandatory",
+      "caps": [
+        {
+          "id": "erp_interoperability_internal",
+          "name": "ERP Interoperability (Internal)",
+          "description": "Your solution provides data integration for all ERP modules within\nyour own application, ensuring a seamless and consistent\ninformation flow across all business functions without manual\nintervention.\n"
+        },
+        {
+          "id": "user_documentation_internal",
+          "name": "User Documentation (Internal)",
+          "description": "Your solution provides documentation for all inter-module\nworkflows within your application, for ease of referencing and\ntroubleshooting.\n"
+        },
+        {
+          "id": "audit_logging_monitoring_internal",
+          "name": "Audit Logging and Monitoring",
+          "description": "Your solution provides a dashboard to track data health and\ntransmission status across internal modules, and automatically\ncaptures logs of any errors encountered (such as user-facing\nerror messages and error-tracking dashboards).\n"
+        }
+      ]
+    },
+    {
+      "id": "external",
+      "title": "Externally-Integrated Modules",
+      "subtitle": "Third-Party Software, Integrated at the Customer's Request",
+      "umbrella_question": "Does your solution provide robust data integration with any externally-integrated third-party ERP modules (integrated at the customer's request), ensuring a seamless and consistent information flow across all business functions without manual intervention?",
+      "tier": "mandatory",
+      "caps": [
+        {
+          "id": "erp_interoperability_integration",
+          "name": "ERP Interoperability (Integration)",
+          "description": "Your solution provides data integration with all externally-\nintegrated ERP modules (third-party systems integrated at the\ncustomer's request), ensuring a seamless and consistent\ninformation flow across all business functions without manual\nintervention.\n"
+        },
+        {
+          "id": "user_documentation_integration",
+          "name": "User Documentation (Integration)",
+          "description": "Your solution documents all integrated data fields exchanged\nwith third-party modules, for ease of reference and\ntroubleshooting.\n"
+        },
+        {
+          "id": "audit_logging_monitoring",
+          "name": "Audit Logging and Monitoring",
+          "description": "Your solution provides a dashboard to track connection health\nand data transmission status across third-party integrations,\nand automatically captures logs of any errors encountered.\n"
+        }
+      ]
+    }
+  ]
+}

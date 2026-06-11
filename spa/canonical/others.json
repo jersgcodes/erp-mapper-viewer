@@ -1,0 +1,17 @@
+{
+  "module": "others",
+  "module_name": "Others (Cross-Cutting)",
+  "capabilities": [],
+  "_meta": {
+    "step16_applied_at": "2026-05-18T14:06:36.678411+08:00",
+    "step16_applied_count": 0,
+    "preferred_clusters_embed": {
+      "from": "config/preferred_clusters.yaml",
+      "applied_at": "2026-05-13T02:57:22.073373+08:00",
+      "removed": false
+    },
+    "incubator_migration_at": "2026-05-18T09:23:57.208625+08:00",
+    "note": "Module-incubator for future caps with subcategory sub-tabs (marketing / esg_carbon / misc). Starts empty after the 2026-05-18 others→generic migration. New caps land here with `subcategory:` field set.",
+    "esg_carbon_reporting_pending": "data/proxy/others.yaml carries other.esg_carbon_reporting under subcategory: esg_carbon. Investigation 2026-05-18 found this cap is in proxy but never canonicalised — no intermediate file (output/canonical/intermediate/others_step*.json) contains it. Likely added to proxy AFTER the last canonicalise rerun for `others`. Will surface in this canonical on next intentional `python3 -m pipeline.canonicalise others` run. Deferred; not blocking."
+  }
+}

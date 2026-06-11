@@ -1,0 +1,341 @@
+{
+  "module": "field_service_management",
+  "stats": {
+    "raw_in_module": 24,
+    "after_noise_filter": 24,
+    "dropped_noise": 0,
+    "after_fuzzy_dedupe": 24,
+    "merged_via_fuzzy": 0
+  },
+  "requirements": [
+    {
+      "id": "req-00003",
+      "text": "A Booking Management Module",
+      "q_title": "Booking Management",
+      "subsection": "Booking Management",
+      "sources": [
+        "personal-care-services__salon-management-system"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00014",
+      "text": "A manager assigns a technician to a high-priority job based on proximity and skill set.",
+      "q_title": "Work Order Management and Scheduling",
+      "subsection": "Example",
+      "sources": [
+        "essential-business__field-service-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00015",
+      "text": "A manager reviews real-time job status and technician availability on a dashboard.",
+      "q_title": "Dashboards and Reports (FSM)",
+      "subsection": "Example",
+      "sources": [
+        "essential-business__field-service-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00028",
+      "text": "A technician's rough notes are transformed into a clear and concise report.",
+      "q_title": "GenAI Automated Summaries",
+      "subsection": "Example",
+      "sources": [
+        "essential-business__field-service-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00029",
+      "text": "A technician updates job status with photos and e-signature while offline, which syncs once back online.",
+      "q_title": "Technician Mobile App",
+      "subsection": "Example",
+      "sources": [
+        "essential-business__field-service-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00032",
+      "text": "Ability to allow supervision of multiple sites and teams (including location tracking) remotely through a centralised command centre",
+      "q_title": "Centralised Command Centre",
+      "subsection": "Centralised Command Centre",
+      "sources": [
+        "security__mobile-enabled-patrol-and-incident-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management",
+        "fleet_management"
+      ]
+    },
+    {
+      "id": "req-00119",
+      "text": "An IoT sensor detects a malfunction in equipment and automatically generates a work order for repair.",
+      "q_title": "Work Order Automation using IoT",
+      "subsection": "Example",
+      "sources": [
+        "essential-business__field-service-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "asset_management",
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00141",
+      "text": "appointment scheduling such as appointment fulfillment rate, missed appointments",
+      "q_title": "Dashboards and Reports (Salon)",
+      "subsection": "Analytics Areas",
+      "sources": [
+        "personal-care-services__salon-management-system"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00146",
+      "text": "Are the modules above tightly integrated such that information can be pulled from all modules to the dashboard",
+      "q_title": "Module Integration",
+      "subsection": "Module Integration",
+      "sources": [
+        "legal__practice-management-system-pms"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "financial_management",
+        "human_resources_management",
+        "sales_and_crm",
+        "supply_chain_and_inventory",
+        "project_management",
+        "asset_management",
+        "manufacturing_management",
+        "field_service_management",
+        "fleet_management"
+      ]
+    },
+    {
+      "id": "req-00205",
+      "text": "buildings, levels, rooms) for technicians to locate assets during service calls",
+      "q_title": "Client and Contract Management",
+      "subsection": "",
+      "sources": [
+        "essential-business__field-service-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management",
+        "asset_management"
+      ]
+    },
+    {
+      "id": "req-00285",
+      "text": "Capturing digital records (such as videos, images, etc) for remote inspection and monitoring",
+      "q_title": "Worksite Inspection Capabilities",
+      "subsection": "",
+      "sources": [
+        "built-environment__smart-inspection-and-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00286",
+      "text": "capturing of signatures and photos",
+      "q_title": "Transport Job Management",
+      "subsection": "Electronic Proof Examples",
+      "sources": [
+        "logistics__transport-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00530",
+      "text": "Does your solution create and dispatch daily work orders that include information such as execution sequence, work instructions, resources, etc",
+      "q_title": "Work Order Management",
+      "subsection": "Work Order Management",
+      "sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management",
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00557",
+      "text": "Does your solution integrate with third-party systems (e.g. ERP, CAD/CAM/PDM, MES and BI systems)",
+      "q_title": "System Integration and Connectivity",
+      "subsection": "System Integration and Connectivity",
+      "sources": [
+        "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "manufacturing_management",
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00634",
+      "text": "Employee receives automatic notifications about new assignments, schedule changes, or urgent repair requests, and checks these updates on their mobile device or desktop.",
+      "q_title": "User Access and Reminder Management",
+      "subsection": "Example",
+      "sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00719",
+      "text": "Handover checklist documentation",
+      "q_title": "Digital Marketing Packages Requirement",
+      "subsection": "",
+      "sources": [
+        "essential-business__digital-marketing-packages"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00759",
+      "text": "Information on tools, equipment, manpower and instructions that may be used in each process",
+      "q_title": "Process Management",
+      "subsection": "Process Management",
+      "sources": [
+        "advanced-manufacturing__product-and-manufacturing-process-configuration"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "project_management",
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00791",
+      "text": "Integration with third-party systems such as messaging apps (e.g. WhatsApp, Telegram, Facebook Messenger), emails, calendars, or case management systems to access and update case information, schedules, appointments, and deadlines",
+      "q_title": "System Integration",
+      "subsection": "System Integration",
+      "sources": [
+        "legal__legal-chatbot"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "sales_and_crm",
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00878",
+      "text": "Manage customer support tickets and service requests",
+      "q_title": "Customer Relationship Management",
+      "subsection": "Core CRM Functionality Requirements",
+      "sources": [
+        "essential-business__customer-relationship-management-crm"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00911",
+      "text": "Mobile access for attendance, patrol and incident management for security officers",
+      "q_title": "Mobile Accessibility",
+      "subsection": "Mobile Accessibility",
+      "sources": [
+        "security__mobile-enabled-patrol-and-incident-management"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00946",
+      "text": "Operators to view daily work orders and detailed information of each task",
+      "q_title": "Work Order Viewing",
+      "subsection": "Work Order Viewing",
+      "sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-00991",
+      "text": "Planning and coordination of change in work order sequences, postponing or incorporating urgent tasks due to unplanned issues",
+      "q_title": "Work Order Scheduling",
+      "subsection": "Work Order Scheduling",
+      "sources": [
+        "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management",
+        "project_management"
+      ]
+    },
+    {
+      "id": "req-01325",
+      "text": "The admin sets up user accounts for different team members, customising access levels based on roles. The platform integrates to existing scheduling software used by different subcontractors.",
+      "q_title": "User Account and Scheduling Management",
+      "subsection": "Example",
+      "sources": [
+        "built-environment__built-environment-digital-platform"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management"
+      ]
+    },
+    {
+      "id": "req-01377",
+      "text": "Track supplier on-ground fulfilment (e.g. driver updates system when customer is picked-up at airport and dropped-off)",
+      "q_title": "Operations",
+      "subsection": "Functional Requirements",
+      "sources": [
+        "tourism-travel-agent__travel-management-system-operations"
+      ],
+      "variant_count": 1,
+      "modules_llm": [
+        "field_service_management"
+      ]
+    }
+  ],
+  "dropped_noise": []
+}

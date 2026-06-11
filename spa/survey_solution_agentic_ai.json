@@ -1,0 +1,58 @@
+{
+  "_meta": {
+    "description": "Solution-level ERP-Wide AI Features umbrella. Per-feature Y/N (multi_select)\nso vendors pick the subset of AI capabilities their solution provides.\nAll features Preferred per IMDA's Importance column.\n",
+    "source": "IMDA \"ERP-Wide AI Features\" template — caps 1.03 (LLM Layer) and 1.04\n(Others) verbatim from the template provided 2026-06-03. 7 additional\nfeature definitions (AI Copilot, Anomaly Detection,\nPredictive Forecasting, Agentic Workflow Orchestration, Intelligent\nDocument Processing, AI-Assisted Reconciliation, Recommendation Engine)\ndrafted by Claude in IMDA's short descriptive style. Descriptions\nfollow noun-phrase form without em-dashes or \"for example\" asides.\n",
+    "ships_when": "Multi-select shape + per-cap Y/N + Others gate-and-textarea shipped\n2026-06-03 (commit pending). Excel export wiring still pending — see\nTASKS.md.\n"
+  },
+  "umbrella_question": "Does your solution incorporate any form of artificial intelligence across some or all of your ERP modules in this submission?",
+  "tier": "preferred",
+  "format": "multi_select",
+  "caps": [
+    {
+      "id": "llm_layer",
+      "name": "AI-Enabled Large-Language Model Layer",
+      "description": "An intelligent interface enabling the access and translation of\ncomplex, structured ERP data via prompting through natural language.\n"
+    },
+    {
+      "id": "cross_module_copilot",
+      "name": "AI Copilot",
+      "description": "An AI assistant that drafts and coordinates actions spanning multiple\nERP modules, with human approval gates between steps.\n"
+    },
+    {
+      "id": "anomaly_detection",
+      "name": "AI Anomaly Detection",
+      "description": "AI that flags unusual patterns by combining data across multiple\nsub-ledgers (such as AP invoices cross-referenced with purchase\norders, vendor master records, and historical spend patterns).\n"
+    },
+    {
+      "id": "predictive_forecasting",
+      "name": "Predictive Forecasting",
+      "description": "AI-driven forecasting that integrates inputs from multiple modules\n(such as AR aging, sales pipeline, inventory levels, and AP\ncommitments) into unified projections like cash flow or demand.\n"
+    },
+    {
+      "id": "workflow_orchestration",
+      "name": "Agentic Workflow Orchestration",
+      "description": "An AI agent that coordinates multi-step workflows spanning modules\n(such as new-vendor onboarding or order-to-cash automation), with\nhuman approval gates between steps.\n"
+    },
+    {
+      "id": "intelligent_document_processing",
+      "name": "Intelligent Document Processing",
+      "description": "AI that extracts structured data from documents (purchase orders,\nvendor invoices, contracts, expense receipts) and routes the\nextracted fields to the appropriate modules with confidence scoring.\n"
+    },
+    {
+      "id": "ai_reconciliation",
+      "name": "AI-Assisted Reconciliation",
+      "description": "AI that matches records across sub-ledgers (such as AR aging against\nCRM stages, or inventory counts against sales velocity) and surfaces\nmatches plus exceptions for human review.\n"
+    },
+    {
+      "id": "cross_module_recommendations",
+      "name": "Recommendation Engine",
+      "description": "AI that recommends next actions based on context spanning multiple\nmodules (such as churn-risk customers identified by combining\npayment history, support tickets, and sales engagement signals).\n"
+    },
+    {
+      "id": "others",
+      "name": "Other ERP-Wide AI Features",
+      "description": "Please define any other ERP-wide AI capabilities your solution\nprovides that are not covered above.\n",
+      "kind": "free_text"
+    }
+  ]
+}

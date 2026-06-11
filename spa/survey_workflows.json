@@ -1,0 +1,200 @@
+{
+  "_meta": {
+    "description": "Inter-module workflow checklist — vendor self-attestation that named module pairs are stitched without re-entry. 9 canonical E2E workflows.",
+    "source": "Hand-curated from common ERP E2E patterns (O2C / P2P / L2C / H2R / R2R / P2Prod / Asset-Lifecycle / RMA / R2R-svc). Bolstered 2026-05-19 with tier + description per workflow."
+  },
+  "workflows": [
+    {
+      "id": "order_to_cash",
+      "name": "Order-to-Cash",
+      "tier": "mandatory",
+      "t2_bullet": "Stitch order, inventory, invoice, and payment across Sales, SC, and Finance in one record",
+      "description": "From confirmed sales order through fulfilment to cash receipt. Tests whether Sales, inventory, and Finance share a single record so stock commits, invoice raises, and payments post in one chain (not three disconnected systems).",
+      "required_modules": [
+        "sales_and_crm",
+        "supply_chain_and_inventory",
+        "financial_management"
+      ],
+      "questions": [
+        {
+          "id": "stock_commits_on_order",
+          "text": "When a sales order is confirmed, does inventory automatically commit or deduct stock without re-entry into a separate inventory system?"
+        },
+        {
+          "id": "payment_updates_ledger",
+          "text": "When a customer payment is received, does the receivable balance and the GL update from one record, without separate journal entry?"
+        }
+      ]
+    },
+    {
+      "id": "procure_to_pay",
+      "name": "Procure-to-Pay",
+      "tier": "mandatory",
+      "t2_bullet": "Match PO, GRN, and supplier invoice three ways; AP hands off to bank reconciliation automatically",
+      "description": "From purchase requisition through goods receipt to supplier payment. Tests three-way matching (PO + GRN + invoice) and whether AP cleanly hands off to bank reconciliation without manual journals.",
+      "required_modules": [
+        "supply_chain_and_inventory",
+        "financial_management"
+      ],
+      "questions": [
+        {
+          "id": "invoice_matches_po",
+          "text": "When goods are received against a PO, does the supplier invoice match line items against the PO and GRN, then route to AP without manual matching?"
+        },
+        {
+          "id": "payment_reconciles_bank",
+          "text": "When AP pays a supplier, does the payment post to the AP ledger and reconcile against the bank line from the same record?"
+        }
+      ]
+    },
+    {
+      "id": "lead_to_cash",
+      "name": "Lead-to-Cash",
+      "tier": "preferred",
+      "t2_bullet": "Hand lead → opportunity → order → invoice across CRM and Finance without re-keying",
+      "description": "From first contact (web form, inbound lead) through qualification, opportunity, won deal, to invoiced sale. Wider than O2C, adds the prospecting + qualification stages before the order forms. Tests whether your CRM hands cleanly to Sales/Finance without re-keying.",
+      "required_modules": [
+        "sales_and_crm",
+        "financial_management"
+      ],
+      "questions": [
+        {
+          "id": "lead_converts_no_reentry",
+          "text": "When a qualified lead becomes an opportunity and the opportunity wins, do the contact, account, and product line details flow forward to the order without re-keying?"
+        },
+        {
+          "id": "invoice_links_to_source",
+          "text": "When the deal closes, does the resulting invoice or receivable carry the original lead source and owner so reporting can trace revenue back to the campaign or rep?"
+        }
+      ]
+    },
+    {
+      "id": "hire_to_retire",
+      "name": "Hire-to-Retire",
+      "tier": "mandatory",
+      "t2_bullet": "Share employee master, payroll, and termination data across HR and Finance from a single record",
+      "description": "From offer-letter through onboarding, payroll cycles, performance reviews, to offboarding. Tests whether HR shares employee master data with Finance for payroll posting and cost allocation without separate spreadsheet upload.",
+      "required_modules": [
+        "human_resources_management",
+        "financial_management"
+      ],
+      "questions": [
+        {
+          "id": "payroll_posts_gl",
+          "text": "When payroll runs, do the salary and statutory contributions (CPF, SDL) post to the GL by department or cost centre automatically, without a manual JV upload?"
+        },
+        {
+          "id": "terminations_clean_access",
+          "text": "When an employee is terminated, do system accesses and payroll cycles deactivate from one record, without back-channel emails to IT or Finance teams?"
+        }
+      ]
+    },
+    {
+      "id": "record_to_report",
+      "name": "Record-to-Report",
+      "tier": "mandatory",
+      "t2_bullet": "Run period close with subledger lock and one-click TB/P&L/BS, no Excel consolidation",
+      "description": "Month-end and year-end close cycle. From subledger close (AR / AP / inventory / fixed-assets) through GL close to management reports. Tests whether Finance orchestrates the close without separate Excel-based consolidation.",
+      "required_modules": [
+        "financial_management",
+        "supply_chain_and_inventory"
+      ],
+      "questions": [
+        {
+          "id": "subledgers_lock_on_close",
+          "text": "At period-close, do AR, AP, inventory, and fixed-asset subledgers lock automatically once the period is closed in the GL — preventing back-dated postings?"
+        },
+        {
+          "id": "trial_balance_one_click",
+          "text": "Can you generate a trial balance, P&L, and balance sheet directly from the system at any point in the close, without exporting to Excel for adjustments?"
+        }
+      ]
+    },
+    {
+      "id": "plan_to_produce",
+      "name": "Plan-to-Produce",
+      "tier": "preferred",
+      "t2_bullet": "Run MRP against live inventory; finished goods become available to Sales without manual stock adjustment",
+      "description": "From sales-driven demand plan through MRP, production orders, raw-material consumption, to finished-goods receipt. Manufacturing-specific. Tests whether MRP sees live inventory and whether finished goods are immediately available to Sales without a manual stock adjustment.",
+      "required_modules": [
+        "manufacturing_management",
+        "supply_chain_and_inventory"
+      ],
+      "questions": [
+        {
+          "id": "mrp_sees_live_stock",
+          "text": "When a production order is created, does MRP plan raw-material consumption against your live inventory levels (not a separate stock spreadsheet)?"
+        },
+        {
+          "id": "finished_goods_available",
+          "text": "When production completes, do finished goods appear in inventory and become available to Sales without a manual stock adjustment?"
+        }
+      ]
+    },
+    {
+      "id": "asset_lifecycle",
+      "name": "Asset Lifecycle",
+      "tier": "preferred",
+      "t2_bullet": "Post depreciation and disposal gain/loss from the asset register directly to GL",
+      "description": "From asset acquisition through depreciation, maintenance, to disposal. Asset-heavy industries (logistics, manufacturing, F&B equipment). Tests whether the asset register drives Finance postings (depreciation, gain/loss on disposal) without manual journals.",
+      "required_modules": [
+        "asset_management",
+        "financial_management"
+      ],
+      "questions": [
+        {
+          "id": "depreciation_auto_posts",
+          "text": "Does monthly depreciation post to the GL automatically from the asset's depreciation schedule, without separate journal entries?"
+        },
+        {
+          "id": "disposal_one_step",
+          "text": "When an asset is disposed, does the gain or loss post to the GL and the asset retire from the depreciation run in one step?"
+        }
+      ]
+    },
+    {
+      "id": "returns_rma",
+      "name": "Returns / RMA",
+      "tier": "mandatory",
+      "t2_bullet": "Generate credit note from the original sales record; refund posts to AR and customer history in one step",
+      "description": "From customer return request through receipt of returned goods, credit note, refund. Tests whether the credit note pulls the original sales record (not re-keyed) and whether refunds post to both AR and the customer transaction history in one step.",
+      "required_modules": [
+        "sales_and_crm",
+        "supply_chain_and_inventory",
+        "financial_management"
+      ],
+      "questions": [
+        {
+          "id": "credit_note_from_sale",
+          "text": "When returned goods are received, is the credit note generated from the original sales record reflecting the original prices and quantities?"
+        },
+        {
+          "id": "refund_posts_both",
+          "text": "When a refund is issued, does it post to both the AR balance and the customer's transaction history in one step?"
+        }
+      ]
+    },
+    {
+      "id": "request_to_resolution",
+      "name": "Request-to-Resolution (Field Service)",
+      "tier": "preferred",
+      "t2_bullet": "Tie service ticket to inventory consumption and customer invoice from one record",
+      "description": "From customer service request through technician dispatch, on-site work, parts consumption, to customer invoice. Service-business specific (HVAC, equipment maintenance, IT support). Tests whether the service ticket ties to inventory consumption and customer invoicing without manual handoff.",
+      "required_modules": [
+        "field_service_management",
+        "sales_and_crm",
+        "financial_management"
+      ],
+      "questions": [
+        {
+          "id": "parts_deplete_on_use",
+          "text": "When a technician consumes a part on a service job, does inventory deduct AND the part charge appear on the customer invoice from the same record?"
+        },
+        {
+          "id": "ticket_to_invoice",
+          "text": "When a service ticket is closed, does the labour time and parts auto-generate an invoice draft for the customer, without a separate billing step?"
+        }
+      ]
+    }
+  ]
+}

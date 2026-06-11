@@ -1,0 +1,479 @@
+{
+  "module": "field_service_management",
+  "stats": {
+    "input_reqs": 24,
+    "unique_section_pairs": 24,
+    "placed_via_section_lookup": 20,
+    "placed_via_fallback": 5,
+    "unmapped": 0,
+    "total_placements": 31,
+    "unique_reqs_placed": 24
+  },
+  "placements": {
+    "fsm.work_orders": [
+      {
+        "id": "req-00014",
+        "text": "A manager assigns a technician to a high-priority job based on proximity and skill set.",
+        "q_title": "Work Order Management and Scheduling",
+        "subsection": "Example",
+        "sources": [
+          "essential-business__field-service-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.work_orders",
+          "fsm.dispatch_scheduling"
+        ]
+      },
+      {
+        "id": "req-00119",
+        "text": "An IoT sensor detects a malfunction in equipment and automatically generates a work order for repair.",
+        "q_title": "Work Order Automation using IoT",
+        "subsection": "Example",
+        "sources": [
+          "essential-business__field-service-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.iot_remote_monitoring",
+          "fsm.work_orders"
+        ]
+      },
+      {
+        "id": "req-00286",
+        "text": "capturing of signatures and photos",
+        "q_title": "Transport Job Management",
+        "subsection": "Electronic Proof Examples",
+        "sources": [
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.work_orders",
+          "fsm.time_travel_tracking"
+        ]
+      },
+      {
+        "id": "req-00530",
+        "text": "Does your solution create and dispatch daily work orders that include information such as execution sequence, work instructions, resources, etc",
+        "q_title": "Work Order Management",
+        "subsection": "Work Order Management",
+        "sources": [
+          "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.work_orders"
+        ]
+      },
+      {
+        "id": "req-00946",
+        "text": "Operators to view daily work orders and detailed information of each task",
+        "q_title": "Work Order Viewing",
+        "subsection": "Work Order Viewing",
+        "sources": [
+          "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.work_orders"
+        ]
+      }
+    ],
+    "fsm.dispatch_scheduling": [
+      {
+        "id": "req-00014",
+        "text": "A manager assigns a technician to a high-priority job based on proximity and skill set.",
+        "q_title": "Work Order Management and Scheduling",
+        "subsection": "Example",
+        "sources": [
+          "essential-business__field-service-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.work_orders",
+          "fsm.dispatch_scheduling"
+        ]
+      },
+      {
+        "id": "req-00032",
+        "text": "Ability to allow supervision of multiple sites and teams (including location tracking) remotely through a centralised command centre",
+        "q_title": "Centralised Command Centre",
+        "subsection": "Centralised Command Centre",
+        "sources": [
+          "security__mobile-enabled-patrol-and-incident-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.dispatch_scheduling"
+        ]
+      },
+      {
+        "id": "req-00991",
+        "text": "Planning and coordination of change in work order sequences, postponing or incorporating urgent tasks due to unplanned issues",
+        "q_title": "Work Order Scheduling",
+        "subsection": "Work Order Scheduling",
+        "sources": [
+          "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.dispatch_scheduling"
+        ]
+      },
+      {
+        "id": "req-01325",
+        "text": "The admin sets up user accounts for different team members, customising access levels based on roles. The platform integrates to existing scheduling software used by different subcontractors.",
+        "q_title": "User Account and Scheduling Management",
+        "subsection": "Example",
+        "sources": [
+          "built-environment__built-environment-digital-platform"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.user_access_roles",
+          "fsm.dispatch_scheduling"
+        ]
+      }
+    ],
+    "fsm.technician_management": [],
+    "fsm.mobile_field_app": [
+      {
+        "id": "req-00029",
+        "text": "A technician updates job status with photos and e-signature while offline, which syncs once back online.",
+        "q_title": "Technician Mobile App",
+        "subsection": "Example",
+        "sources": [
+          "essential-business__field-service-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.mobile_field_app"
+        ]
+      },
+      {
+        "id": "req-01377",
+        "text": "Track supplier on-ground fulfilment (e.g. driver updates system when customer is picked-up at airport and dropped-off)",
+        "q_title": "Operations",
+        "subsection": "Functional Requirements",
+        "sources": [
+          "tourism-travel-agent__travel-management-system-operations"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fsm.mobile_field_app",
+          "fsm.time_travel_tracking"
+        ]
+      }
+    ],
+    "fsm.customer_site_management": [
+      {
+        "id": "req-00205",
+        "text": "buildings, levels, rooms) for technicians to locate assets during service calls",
+        "q_title": "Client and Contract Management",
+        "subsection": "",
+        "sources": [
+          "essential-business__field-service-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.customer_site_management",
+          "fsm.contracts_warranty"
+        ]
+      },
+      {
+        "id": "req-00878",
+        "text": "Manage customer support tickets and service requests",
+        "q_title": "Customer Relationship Management",
+        "subsection": "Core CRM Functionality Requirements",
+        "sources": [
+          "essential-business__customer-relationship-management-crm"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.customer_site_management"
+        ]
+      }
+    ],
+    "fsm.installed_base": [],
+    "fsm.parts_inventory": [],
+    "fsm.service_reporting": [
+      {
+        "id": "req-00719",
+        "text": "Handover checklist documentation",
+        "q_title": "Digital Marketing Packages Requirement",
+        "subsection": "",
+        "sources": [
+          "essential-business__digital-marketing-packages"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fsm.service_reporting"
+        ]
+      }
+    ],
+    "fsm.preventive_maintenance": [],
+    "fsm.sla_entitlements": [],
+    "fsm.contracts_warranty": [
+      {
+        "id": "req-00205",
+        "text": "buildings, levels, rooms) for technicians to locate assets during service calls",
+        "q_title": "Client and Contract Management",
+        "subsection": "",
+        "sources": [
+          "essential-business__field-service-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.customer_site_management",
+          "fsm.contracts_warranty"
+        ]
+      }
+    ],
+    "fsm.quoting_estimation": [],
+    "fsm.time_travel_tracking": [
+      {
+        "id": "req-00286",
+        "text": "capturing of signatures and photos",
+        "q_title": "Transport Job Management",
+        "subsection": "Electronic Proof Examples",
+        "sources": [
+          "logistics__transport-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.work_orders",
+          "fsm.time_travel_tracking"
+        ]
+      },
+      {
+        "id": "req-01377",
+        "text": "Track supplier on-ground fulfilment (e.g. driver updates system when customer is picked-up at airport and dropped-off)",
+        "q_title": "Operations",
+        "subsection": "Functional Requirements",
+        "sources": [
+          "tourism-travel-agent__travel-management-system-operations"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fsm.mobile_field_app",
+          "fsm.time_travel_tracking"
+        ]
+      }
+    ],
+    "fsm.route_optimization": [],
+    "fsm.knowledge_base": [
+      {
+        "id": "req-00759",
+        "text": "Information on tools, equipment, manpower and instructions that may be used in each process",
+        "q_title": "Process Management",
+        "subsection": "Process Management",
+        "sources": [
+          "advanced-manufacturing__product-and-manufacturing-process-configuration"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fsm.knowledge_base"
+        ]
+      }
+    ],
+    "fsm.customer_portal": [
+      {
+        "id": "req-00003",
+        "text": "A Booking Management Module",
+        "q_title": "Booking Management",
+        "subsection": "Booking Management",
+        "sources": [
+          "personal-care-services__salon-management-system"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.customer_portal"
+        ]
+      }
+    ],
+    "fsm.subcontractor_management": [],
+    "fsm.inspection_compliance": [
+      {
+        "id": "req-00285",
+        "text": "Capturing digital records (such as videos, images, etc) for remote inspection and monitoring",
+        "q_title": "Worksite Inspection Capabilities",
+        "subsection": "",
+        "sources": [
+          "built-environment__smart-inspection-and-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.inspection_compliance"
+        ]
+      }
+    ],
+    "fsm.returns_swapout": [],
+    "fsm.analytics_kpis": [
+      {
+        "id": "req-00015",
+        "text": "A manager reviews real-time job status and technician availability on a dashboard.",
+        "q_title": "Dashboards and Reports (FSM)",
+        "subsection": "Example",
+        "sources": [
+          "essential-business__field-service-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.analytics_kpis"
+        ]
+      },
+      {
+        "id": "req-00141",
+        "text": "appointment scheduling such as appointment fulfillment rate, missed appointments",
+        "q_title": "Dashboards and Reports (Salon)",
+        "subsection": "Analytics Areas",
+        "sources": [
+          "personal-care-services__salon-management-system"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "fsm.analytics_kpis"
+        ]
+      }
+    ],
+    "fsm.billing_invoicing": [],
+    "fsm.customer_notifications": [
+      {
+        "id": "req-00634",
+        "text": "Employee receives automatic notifications about new assignments, schedule changes, or urgent repair requests, and checks these updates on their mobile device or desktop.",
+        "q_title": "User Access and Reminder Management",
+        "subsection": "Example",
+        "sources": [
+          "built-environment__built-environment-digital-platform"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.user_access_roles",
+          "fsm.customer_notifications"
+        ]
+      }
+    ],
+    "fsm.workforce_capacity": [],
+    "fsm.job_costing": [],
+    "fsm.iot_remote_monitoring": [
+      {
+        "id": "req-00119",
+        "text": "An IoT sensor detects a malfunction in equipment and automatically generates a work order for repair.",
+        "q_title": "Work Order Automation using IoT",
+        "subsection": "Example",
+        "sources": [
+          "essential-business__field-service-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.iot_remote_monitoring",
+          "fsm.work_orders"
+        ]
+      }
+    ],
+    "fsm.ai_ml": [
+      {
+        "id": "req-00028",
+        "text": "A technician's rough notes are transformed into a clear and concise report.",
+        "q_title": "GenAI Automated Summaries",
+        "subsection": "Example",
+        "sources": [
+          "essential-business__field-service-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.ai_ml"
+        ]
+      }
+    ],
+    "fsm.mobile_access": [
+      {
+        "id": "req-00911",
+        "text": "Mobile access for attendance, patrol and incident management for security officers",
+        "q_title": "Mobile Accessibility",
+        "subsection": "Mobile Accessibility",
+        "sources": [
+          "security__mobile-enabled-patrol-and-incident-management"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.mobile_access"
+        ]
+      }
+    ],
+    "fsm.data_governance": [],
+    "fsm.user_access_roles": [
+      {
+        "id": "req-00634",
+        "text": "Employee receives automatic notifications about new assignments, schedule changes, or urgent repair requests, and checks these updates on their mobile device or desktop.",
+        "q_title": "User Access and Reminder Management",
+        "subsection": "Example",
+        "sources": [
+          "built-environment__built-environment-digital-platform"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.user_access_roles",
+          "fsm.customer_notifications"
+        ]
+      },
+      {
+        "id": "req-01325",
+        "text": "The admin sets up user accounts for different team members, customising access levels based on roles. The platform integrates to existing scheduling software used by different subcontractors.",
+        "q_title": "User Account and Scheduling Management",
+        "subsection": "Example",
+        "sources": [
+          "built-environment__built-environment-digital-platform"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.user_access_roles",
+          "fsm.dispatch_scheduling"
+        ]
+      }
+    ],
+    "fsm.integration_import_export": [
+      {
+        "id": "req-00146",
+        "text": "Are the modules above tightly integrated such that information can be pulled from all modules to the dashboard",
+        "q_title": "Module Integration",
+        "subsection": "Module Integration",
+        "sources": [
+          "legal__practice-management-system-pms"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.integration_import_export"
+        ]
+      },
+      {
+        "id": "req-00557",
+        "text": "Does your solution integrate with third-party systems (e.g. ERP, CAD/CAM/PDM, MES and BI systems)",
+        "q_title": "System Integration and Connectivity",
+        "subsection": "System Integration and Connectivity",
+        "sources": [
+          "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.integration_import_export"
+        ]
+      },
+      {
+        "id": "req-00791",
+        "text": "Integration with third-party systems such as messaging apps (e.g. WhatsApp, Telegram, Facebook Messenger), emails, calendars, or case management systems to access and update case information, schedules, appointments, and deadlines",
+        "q_title": "System Integration",
+        "subsection": "System Integration",
+        "sources": [
+          "legal__legal-chatbot"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "fsm.integration_import_export"
+        ]
+      }
+    ]
+  },
+  "unmapped": []
+}
