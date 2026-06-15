@@ -12,7 +12,7 @@ Magic Form Builder imports **fields only**. After it runs, open the form's **Log
 
 ## Show-fields logic (target hidden by default; shown when the condition holds)
 ### §1a Compliance
-- WHEN "Cyber Essentials Mark (CEM)" = Principal → SHOW **CEM for Product Principal**
+- WHEN "Cyber Essentials Mark (CEM)" = Product Principal → SHOW **CEM for Product Principal**
 - WHEN "CEM for Product Principal" = Yes → SHOW **CEM for Product Principal: Elaboration**
 - WHEN "Cyber Essentials Mark (CEM)" = Reseller → SHOW **CEM for Resellers**
 - WHEN "CEM for Resellers" = Yes → SHOW **CEM for Resellers: Elaboration**
@@ -20,16 +20,17 @@ Magic Form Builder imports **fields only**. After it runs, open the form's **Log
 - WHEN **ERP-Wide AI Features umbrella** = Yes → SHOW the AI-features checkbox
 - WHEN that checkbox includes **Others — please specify** → SHOW the Others free-text
 ### §2 Modules — reveal each module's questions when it is selected
-- WHEN **module scope** includes **Financial Management** → SHOW the Financial Management questions
-- WHEN **module scope** includes **Sales & CRM** → SHOW the Sales & CRM questions
-- WHEN **module scope** includes **Supply Chain & Inventory** → SHOW the Supply Chain & Inventory questions
-- WHEN **module scope** includes **Human Resources** → SHOW the Human Resources questions
-- WHEN **module scope** includes **Manufacturing** → SHOW the Manufacturing questions
-- WHEN **module scope** includes **Asset Management** → SHOW the Asset Management questions
-- WHEN **module scope** includes **Field Service** → SHOW the Field Service questions
-- WHEN **module scope** includes **Fleet Management** → SHOW the Fleet Management questions
-- WHEN **module scope** includes **Project Management** → SHOW the Project Management questions
-- WHEN **module scope** includes **Others / Cross-cutting** → SHOW the Others / Cross-cutting questions
+_FormSG Show rules don't cascade: in each rule select the module's **Section header**, the questions listed, **and any supporting date/upload fields** shown beneath them._
+- WHEN **module scope** includes **Financial Management** → SHOW: Core Finance Module Features; InvoiceNow-Ready Solution Provider Accreditation; Finance Module — AI Features — umbrella; Finance Module — AI Features — features; Finance Module — AI Features — Others
+- WHEN **module scope** includes **Sales & CRM** → SHOW: Sales & CRM Module — Sub-modules; Sales & CRM Module — AI Features — umbrella; Sales & CRM Module — AI Features — features; Sales & CRM Module — AI Features — Others
+- WHEN **module scope** includes **Supply Chain & Inventory** → SHOW: Supply Chain & Inventory Management Module — Sub-modules; Supply Chain & Inventory Management Module — AI Features — umbrella; Supply Chain & Inventory Management Module — AI Features — features; Supply Chain & Inventory Management Module — AI Features — Others
+- WHEN **module scope** includes **Human Resources** → SHOW: Human Resources Management Module — Sub-modules; Human Resources Management Module — AI Features — umbrella; Human Resources Management Module — AI Features — features; Human Resources Management Module — AI Features — Others
+- WHEN **module scope** includes **Manufacturing** → SHOW: Manufacturing Operations Management — Sub-modules; Manufacturing Operations Management — AI Features — umbrella; Manufacturing Operations Management — AI Features — features; Manufacturing Operations Management — AI Features — Others
+- WHEN **module scope** includes **Asset Management** → SHOW: Asset Management Module Features; Asset Management Module — AI Features — umbrella; Asset Management Module — AI Features — features; Asset Management Module — AI Features — Others
+- WHEN **module scope** includes **Field Service** → SHOW: Field Service Management (FSM) Module Features; Field Service Management Module — AI Features — umbrella; Field Service Management Module — AI Features — features; Field Service Management Module — AI Features — Others
+- WHEN **module scope** includes **Fleet Management** → SHOW: Fleet Management Module — Sub-modules; Fleet Management Module — AI Features — umbrella; Fleet Management Module — AI Features — features; Fleet Management Module — AI Features — Others
+- WHEN **module scope** includes **Project Management** → SHOW: Project Management (PM) Module Features; Project Management Module — AI Features — umbrella; Project Management Module — AI Features — features; Project Management Module — AI Features — Others
+- WHEN **module scope** includes **Others / Cross-cutting** → SHOW: Describe the other module(s); Evidence — Track Record; Clients' Sector(s)
 ### §2 per-module AI Features
 - For each module: WHEN its **AI Features umbrella** = Yes → SHOW that module's AI-features checkbox (and the Others free-text when Others is ticked)
 ### §3 Third-Party Integration
