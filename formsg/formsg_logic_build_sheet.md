@@ -19,26 +19,26 @@ _Each rule's **Show** action takes a **list** of fields - select them all in one
 - WHEN "Cyber Essentials Mark (CEM)" = Reseller → SHOW: CEM for Resellers
 - WHEN "CEM for Resellers" = Yes → SHOW: CEM for Resellers: Elaboration
 ### §1c ERP-Wide AI Features
-- WHEN **ERP-Wide AI Features - umbrella** = Yes → SHOW: ERP-Wide AI Features - features; ERP-Wide AI Features - Others (optional)
+- WHEN **ERP-Wide AI Features - does your solution use AI here?** = Yes → SHOW: ERP-Wide AI Features - features; ERP-Wide AI Features - Others (optional)
 ### §2 Modules - two levels (gate → module fields; AI umbrella → AI features)
-- **L1** WHEN **Does your solution provide the Financial Management module?** = Yes → SHOW: Core Finance Module Features; InvoiceNow-Ready Solution Provider Accreditation; Finance Module - AI Features - umbrella
-    - **L2** WHEN **Finance Module - AI Features - umbrella** = Yes → SHOW: Finance Module - AI Features - features; Finance Module - AI Features - Others (optional)
-- **L1** WHEN **Does your solution provide the Sales & CRM module?** = Yes → SHOW: Sales & CRM Module - Sub-modules; Sales & CRM Module - AI Features - umbrella
-    - **L2** WHEN **Sales & CRM Module - AI Features - umbrella** = Yes → SHOW: Sales & CRM Module - AI Features - features; Sales & CRM Module - AI Features - Others (optional)
-- **L1** WHEN **Does your solution provide the Supply Chain & Inventory module?** = Yes → SHOW: Supply Chain & Inventory Management Module - Sub-modules; Supply Chain & Inventory Management Module - AI Features - umbrella
-    - **L2** WHEN **Supply Chain & Inventory Management Module - AI Features - umbrella** = Yes → SHOW: Supply Chain & Inventory Management Module - AI Features - features; Supply Chain & Inventory Management Module - AI Features - Others (optional)
-- **L1** WHEN **Does your solution provide the Human Resources module?** = Yes → SHOW: Human Resources Management Module - Sub-modules; Human Resources Management Module - AI Features - umbrella
-    - **L2** WHEN **Human Resources Management Module - AI Features - umbrella** = Yes → SHOW: Human Resources Management Module - AI Features - features; Human Resources Management Module - AI Features - Others (optional)
-- **L1** WHEN **Does your solution provide the Manufacturing module?** = Yes → SHOW: Manufacturing Operations Management - Sub-modules; Manufacturing Operations Management - AI Features - umbrella
-    - **L2** WHEN **Manufacturing Operations Management - AI Features - umbrella** = Yes → SHOW: Manufacturing Operations Management - AI Features - features; Manufacturing Operations Management - AI Features - Others (optional)
-- **L1** WHEN **Does your solution provide the Asset Management module?** = Yes → SHOW: Asset Management Module Features; Asset Management Module - AI Features - umbrella
-    - **L2** WHEN **Asset Management Module - AI Features - umbrella** = Yes → SHOW: Asset Management Module - AI Features - features; Asset Management Module - AI Features - Others (optional)
-- **L1** WHEN **Does your solution provide the Field Service module?** = Yes → SHOW: Field Service Management (FSM) Module Features; Field Service Management Module - AI Features - umbrella
-    - **L2** WHEN **Field Service Management Module - AI Features - umbrella** = Yes → SHOW: Field Service Management Module - AI Features - features; Field Service Management Module - AI Features - Others (optional)
-- **L1** WHEN **Does your solution provide the Fleet Management module?** = Yes → SHOW: Fleet Management Module - Sub-modules; Fleet Management Module - AI Features - umbrella
-    - **L2** WHEN **Fleet Management Module - AI Features - umbrella** = Yes → SHOW: Fleet Management Module - AI Features - features; Fleet Management Module - AI Features - Others (optional)
-- **L1** WHEN **Does your solution provide the Project Management module?** = Yes → SHOW: Project Management (PM) Module Features; Project Management Module - AI Features - umbrella
-    - **L2** WHEN **Project Management Module - AI Features - umbrella** = Yes → SHOW: Project Management Module - AI Features - features; Project Management Module - AI Features - Others (optional)
+- **L1** WHEN **Does your solution provide the Financial Management module?** = Yes → SHOW: Core Finance Module Features; InvoiceNow-Ready Solution Provider Accreditation; Finance Module - AI Features - does your solution use AI here?
+    - **L2** WHEN **Finance Module - AI Features - does your solution use AI here?** = Yes → SHOW: Finance Module - AI Features - features; Finance Module - AI Features - Others (optional)
+- **L1** WHEN **Does your solution provide the Sales & CRM module?** = Yes → SHOW: Sales & CRM Module - Sub-modules; Sales & CRM Module - AI Features - does your solution use AI here?
+    - **L2** WHEN **Sales & CRM Module - AI Features - does your solution use AI here?** = Yes → SHOW: Sales & CRM Module - AI Features - features; Sales & CRM Module - AI Features - Others (optional)
+- **L1** WHEN **Does your solution provide the Supply Chain & Inventory module?** = Yes → SHOW: Supply Chain & Inventory Management Module - Sub-modules; Supply Chain & Inventory Management Module - AI Features - does your solution use AI here?
+    - **L2** WHEN **Supply Chain & Inventory Management Module - AI Features - does your solution use AI here?** = Yes → SHOW: Supply Chain & Inventory Management Module - AI Features - features; Supply Chain & Inventory Management Module - AI Features - Others (optional)
+- **L1** WHEN **Does your solution provide the Human Resources module?** = Yes → SHOW: Human Resources Management Module - Sub-modules; Human Resources Management Module - AI Features - does your solution use AI here?
+    - **L2** WHEN **Human Resources Management Module - AI Features - does your solution use AI here?** = Yes → SHOW: Human Resources Management Module - AI Features - features; Human Resources Management Module - AI Features - Others (optional)
+- **L1** WHEN **Does your solution provide the Manufacturing module?** = Yes → SHOW: Manufacturing Operations Management - Sub-modules; Manufacturing Operations Management - AI Features - does your solution use AI here?
+    - **L2** WHEN **Manufacturing Operations Management - AI Features - does your solution use AI here?** = Yes → SHOW: Manufacturing Operations Management - AI Features - features; Manufacturing Operations Management - AI Features - Others (optional)
+- **L1** WHEN **Does your solution provide the Asset Management module?** = Yes → SHOW: Asset Management Module Features; Asset Management Module - AI Features - does your solution use AI here?
+    - **L2** WHEN **Asset Management Module - AI Features - does your solution use AI here?** = Yes → SHOW: Asset Management Module - AI Features - features; Asset Management Module - AI Features - Others (optional)
+- **L1** WHEN **Does your solution provide the Field Service module?** = Yes → SHOW: Field Service Management (FSM) Module Features; Field Service Management Module - AI Features - does your solution use AI here?
+    - **L2** WHEN **Field Service Management Module - AI Features - does your solution use AI here?** = Yes → SHOW: Field Service Management Module - AI Features - features; Field Service Management Module - AI Features - Others (optional)
+- **L1** WHEN **Does your solution provide the Fleet Management module?** = Yes → SHOW: Fleet Management Module - Sub-modules; Fleet Management Module - AI Features - does your solution use AI here?
+    - **L2** WHEN **Fleet Management Module - AI Features - does your solution use AI here?** = Yes → SHOW: Fleet Management Module - AI Features - features; Fleet Management Module - AI Features - Others (optional)
+- **L1** WHEN **Does your solution provide the Project Management module?** = Yes → SHOW: Project Management (PM) Module Features; Project Management Module - AI Features - does your solution use AI here?
+    - **L2** WHEN **Project Management Module - AI Features - does your solution use AI here?** = Yes → SHOW: Project Management Module - AI Features - features; Project Management Module - AI Features - Others (optional)
 - **L1** WHEN **Does your solution provide the Others / Cross-cutting module?** = Yes → SHOW: Describe the other module(s); Evidence - Track Record; Clients' Sector(s)
 ### §3 Third-Party Integration
 - WHEN **Third-Party Integration Experience** = Yes → SHOW: Third-party ERP module types; Externally-Integrated Modules; Overall Integration Track Record; Project Completion - proof page number; Integration Method; Third-Party Application name(s); Sector Record Qualifier

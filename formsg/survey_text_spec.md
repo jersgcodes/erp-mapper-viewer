@@ -120,9 +120,7 @@ _Answer:_ [ ] Yes   [ ] No
 
 ## §1c · ERP-Wide AI Features
 
-### 1c.1 ERP-Wide AI Features - umbrella  _(Preferred)_
-
-Does your solution incorporate any form of artificial intelligence across some or all of your ERP modules in this submission?
+### 1c.1 ERP-Wide AI Features - does your solution use AI here?  _(Preferred)_
 
 _Answer:_ [ ] Yes   [ ] No
 
@@ -217,9 +215,7 @@ Note: For more information on InvoiceNow, refer to: Becoming an InvoiceNow-Ready
 
 _Answer:_ [ ] Yes   [ ] No
 
-### 100.3 Finance Module - AI Features - umbrella  _(Preferred)_
-
-Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?
+### 100.3 Finance Module - AI Features - does your solution use AI here?  _(Preferred)_
 
 _Answer:_ [ ] Yes   [ ] No
 
@@ -261,9 +257,7 @@ _Answer:_ (select all that apply)
 - [ ] Sales
 - [ ] CRM
 
-### 101.2 Sales & CRM Module - AI Features - umbrella  _(Preferred)_
-
-Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?
+### 101.2 Sales & CRM Module - AI Features - does your solution use AI here?  _(Preferred)_
 
 _Answer:_ [ ] Yes   [ ] No
 
@@ -312,9 +306,7 @@ _Answer:_ (select all that apply)
 - [ ] Warehouse & Inventory
 - [ ] Material Requirements Planning (MRP)
 
-### 102.2 Supply Chain & Inventory Management Module - AI Features - umbrella  _(Preferred)_
-
-Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?
+### 102.2 Supply Chain & Inventory Management Module - AI Features - does your solution use AI here?  _(Preferred)_
 
 _Answer:_ [ ] Yes   [ ] No
 
@@ -374,9 +366,7 @@ _Answer:_ (select all that apply)
 - [ ] Applicant Tracking & Sourcing
 - [ ] Employee Rewards and Recognition
 
-### 103.2 Human Resources Management Module - AI Features - umbrella  _(Preferred)_
-
-Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?
+### 103.2 Human Resources Management Module - AI Features - does your solution use AI here?  _(Preferred)_
 
 _Answer:_ [ ] Yes   [ ] No
 
@@ -437,9 +427,7 @@ _Answer:_ (select all that apply)
 - [ ] Quality Management (QM)
 - [ ] Product Lifecycle Management (PLM)
 
-### 104.2 Manufacturing Operations Management - AI Features - umbrella  _(Preferred)_
-
-Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?
+### 104.2 Manufacturing Operations Management - AI Features - does your solution use AI here?  _(Preferred)_
 
 _Answer:_ [ ] Yes   [ ] No
 
@@ -475,9 +463,7 @@ Do you provide the following features?
 
 _Answer:_ [ ] Yes   [ ] No
 
-### 108.2 Asset Management Module - AI Features - umbrella  _(Preferred)_
-
-Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?
+### 108.2 Asset Management Module - AI Features - does your solution use AI here?  _(Preferred)_
 
 _Answer:_ [ ] Yes   [ ] No
 
@@ -508,9 +494,7 @@ Do you provide the following features?
 
 _Answer:_ [ ] Yes   [ ] No
 
-### 106.2 Field Service Management Module - AI Features - umbrella  _(Preferred)_
-
-Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?
+### 106.2 Field Service Management Module - AI Features - does your solution use AI here?  _(Preferred)_
 
 _Answer:_ [ ] Yes   [ ] No
 
@@ -552,9 +536,7 @@ _Answer:_ (select all that apply)
 - [ ] Fleet Management Module Features
 - [ ] Fleet Management Module Safety Features
 
-### 105.2 Fleet Management Module - AI Features - umbrella  _(Preferred)_
-
-Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?
+### 105.2 Fleet Management Module - AI Features - does your solution use AI here?  _(Preferred)_
 
 _Answer:_ [ ] Yes   [ ] No
 
@@ -587,9 +569,7 @@ Do you provide the following features?
 
 _Answer:_ [ ] Yes   [ ] No
 
-### 107.2 Project Management Module - AI Features - umbrella  _(Preferred)_
-
-Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?
+### 107.2 Project Management Module - AI Features - does your solution use AI here?  _(Preferred)_
 
 _Answer:_ [ ] Yes   [ ] No
 
