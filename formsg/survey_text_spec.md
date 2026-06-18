@@ -135,9 +135,6 @@ _Answer:_ (select all that apply)
 - [ ] AI Anomaly Detection
 - [ ] Predictive Forecasting
 - [ ] Agentic Workflow Orchestration
-- [ ] Intelligent Document Processing
-- [ ] AI-Assisted Reconciliation
-- [ ] Recommendation Engine
 
 ### 1c.3 ERP-Wide AI Features - Others (optional)  _(Preferred)_
 > Display: shown only when the umbrella above = Yes.
