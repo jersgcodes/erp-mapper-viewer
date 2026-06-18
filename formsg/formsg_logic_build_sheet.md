@@ -5,9 +5,6 @@ Magic Form Builder imports **fields only**. After it runs, open the form's **Log
 ## Selection limits (set on the field, not in Logic)
 - **Sales & CRM Module - Sub-modules** → Checkbox, **min 1**
 - **Supply Chain & Inventory Management Module - Sub-modules** → Checkbox, **min 1**
-- **Human Resources Management Module - Sub-modules** → Checkbox, **min 1**
-- **Manufacturing Operations Management - Sub-modules** → Checkbox, **min 1**
-- **Fleet Management Module - Sub-modules** → Checkbox, **min 1**
 - Module scope is **10 Yes/No** questions (a checkbox can't be a logic source), so the "at least 3 modules" floor is **not auto-enforced** - state it as an instruction in the §2 intro.
 
 ## Show-fields logic
@@ -27,15 +24,15 @@ _Each rule's **Show** action takes a **list** of fields - select them all in one
     - **L2** WHEN **Sales & CRM Module - AI Features - does your solution use AI here?** = Yes → SHOW: Sales & CRM Module - AI Features - features; Sales & CRM Module - AI Features - Others (optional)
 - **L1** WHEN **Does your solution provide the Supply Chain & Inventory module?** = Yes → SHOW: Supply Chain & Inventory Management Module - Sub-modules; Supply Chain & Inventory Management Module - AI Features - does your solution use AI here?
     - **L2** WHEN **Supply Chain & Inventory Management Module - AI Features - does your solution use AI here?** = Yes → SHOW: Supply Chain & Inventory Management Module - AI Features - features; Supply Chain & Inventory Management Module - AI Features - Others (optional)
-- **L1** WHEN **Does your solution provide the Human Resources module?** = Yes → SHOW: Human Resources Management Module - Sub-modules; Human Resources Management Module - AI Features - does your solution use AI here?
+- **L1** WHEN **Does your solution provide the Human Resources module?** = Yes → SHOW: Human Resource Management System (HRMS); Human Resource e-Scheduling; Applicant Tracking & Sourcing; Employee Rewards and Recognition; Finance Module Integration for Payroll; IRAS Auto-Inclusion Scheme (AIS) Compliance; Human Resources Management Module - AI Features - does your solution use AI here?
     - **L2** WHEN **Human Resources Management Module - AI Features - does your solution use AI here?** = Yes → SHOW: Human Resources Management Module - AI Features - features; Human Resources Management Module - AI Features - Others (optional)
-- **L1** WHEN **Does your solution provide the Manufacturing module?** = Yes → SHOW: Manufacturing Operations Management - Sub-modules; Manufacturing Operations Management - AI Features - does your solution use AI here?
+- **L1** WHEN **Does your solution provide the Manufacturing module?** = Yes → SHOW: Manufacturing Execution System (MES); MES Shopfloor Data Collection (Manual); MES Shopfloor Data Collection (Automated); Quality Management (QM); Product Lifecycle Management (PLM); Manufacturing Operations Management - AI Features - does your solution use AI here?
     - **L2** WHEN **Manufacturing Operations Management - AI Features - does your solution use AI here?** = Yes → SHOW: Manufacturing Operations Management - AI Features - features; Manufacturing Operations Management - AI Features - Others (optional)
 - **L1** WHEN **Does your solution provide the Asset Management module?** = Yes → SHOW: Asset Management Module Features; Asset Management Module - AI Features - does your solution use AI here?
     - **L2** WHEN **Asset Management Module - AI Features - does your solution use AI here?** = Yes → SHOW: Asset Management Module - AI Features - features; Asset Management Module - AI Features - Others (optional)
 - **L1** WHEN **Does your solution provide the Field Service module?** = Yes → SHOW: Field Service Management (FSM) Module Features; Field Service Management Module - AI Features - does your solution use AI here?
     - **L2** WHEN **Field Service Management Module - AI Features - does your solution use AI here?** = Yes → SHOW: Field Service Management Module - AI Features - features; Field Service Management Module - AI Features - Others (optional)
-- **L1** WHEN **Does your solution provide the Fleet Management module?** = Yes → SHOW: Fleet Management Module - Sub-modules; Fleet Management Module - AI Features - does your solution use AI here?
+- **L1** WHEN **Does your solution provide the Fleet Management module?** = Yes → SHOW: Fleet Management Module Features; Fleet Management Module Safety Features; Fleet Management Module - AI Features - does your solution use AI here?
     - **L2** WHEN **Fleet Management Module - AI Features - does your solution use AI here?** = Yes → SHOW: Fleet Management Module - AI Features - features; Fleet Management Module - AI Features - Others (optional)
 - **L1** WHEN **Does your solution provide the Project Management module?** = Yes → SHOW: Project Management (PM) Module Features; Project Management Module - AI Features - does your solution use AI here?
     - **L2** WHEN **Project Management Module - AI Features - does your solution use AI here?** = Yes → SHOW: Project Management Module - AI Features - features; Project Management Module - AI Features - Others (optional)
@@ -49,8 +46,13 @@ _FormSG disables the whole form's submit while the condition holds - set a clear
 - WHEN **Vulnerability Assessment / Penetration Testing (VA/PT)** = No → DISABLE submission
 - WHEN **Core Finance Module Features** (Finance Module) = No → DISABLE submission
 - WHEN **InvoiceNow-Ready Solution Provider Accreditation** (Finance Module) = No → DISABLE submission
+- WHEN **Human Resource Management System (HRMS)** (Human Resources Management Module) = No → DISABLE submission
+- WHEN **Finance Module Integration for Payroll** (Human Resources Management Module) = No → DISABLE submission
+- WHEN **IRAS Auto-Inclusion Scheme (AIS) Compliance** (Human Resources Management Module) = No → DISABLE submission
+- WHEN **Manufacturing Execution System (MES)** (Manufacturing Operations Management) = No → DISABLE submission
 - WHEN **Asset Management Module Features** (Asset Management Module) = No → DISABLE submission
 - WHEN **Field Service Management (FSM) Module Features** (Field Service Management Module) = No → DISABLE submission
+- WHEN **Fleet Management Module Features** (Fleet Management Module) = No → DISABLE submission
 - WHEN **Project Management (PM) Module Features** (Project Management Module) = No → DISABLE submission
 - WHEN **Evidence - Track Record** (Others) = No → DISABLE submission
 

@@ -327,50 +327,72 @@ _Answer:_ Answer: __________________________________________________
 
 ## §2 · Human Resources
 
-### 103.1 Human Resources Management Module - Sub-modules  _(Mandatory)_
-> Gating: select at least 1.
+### 103.1 Human Resource Management System (HRMS)  _(Mandatory)_
+> Gating: a “No” here disqualifies this module (it cannot be submitted).
 
-Which Human Resources Management Module sub-modules does your solution provide? Select at least one to qualify for this module.
-
-Human Resource Management System (HRMS): Do you provide HRMS features?
-  • Personnel Management - Maintain a single employee master record and allow for employee self-service for self-updating
-  • Payroll Management - Process e-payroll, generate Ministry of Manpower (MOM)-standard payslips and comply to policy & statutory requirements
-  • Leave Management - Configure leave policy and allow for the management of leave applications
-  • Benefits and Claims Management - Process medical and transport claims & support multiple payment processing (Payroll, GIRO, cheque, and cash payment)
-  • Performance Appraisal Management - Set KPIs for individual employees for each appraisal cycle, and provide online built-in self-service appraisal forms with employee tagging and manager routing for approval and scoring
-  • HRMS Dashboards and Reports - Create, customise & view dashboards and/or reports that provide an at-a-glance overview of common HR metrics/indicators to help analyse data through data visualisation
-
-Human Resource e-Scheduling: Do you provide Human Resource e-Scheduling features?
-  • Roster Scheduling - Create employee scheduling based on business demand & employee availability
-  • Employee Access - Allows for mobile cloud-based access for employees to access schedules and rosters
-  • Employee Notification - Allows for the receiving of push messages/notifications for scheduling and roster reminders
-  • System Setup - Setup user accounts for the administrator and all employee users, manage business units for different employee categories (e.g. geography, division, tenure, etc), and other interface customisations
-  • HR e-Scheduling Dashboards and Reports - Create, customise & view dashboards and/or reports that provide an at-a-glance overview of overall scheduling statuses, attendance, overtime reporting, and generate attendance & overtime reports
-
-Applicant Tracking & Sourcing: Do you provide Applicant Tracking & Sourcing features?
-  • Manage Jobs & Postings - Create and edit positions with approval workflows, and publish them to multiple job boards (e.g. LinkedIn, Jobstreet, MyCareersFuture, IHLs, etc.)
-  • Track & Tag Candidates - Update application statuses, tag candidates, and add recruitment notes directly in the system
-  • Customise Forms & Communications - Configure application forms with custom questions, and bulk-send templated emails (e.g. for scheduling of interviews, job offers, rejections, etc.) using role-based privacy settings (i.e. HR can determine level of information visible to hiring managers and peer interviewers)
-  • Offers & Documentation - Accept candidate document uploads and send official job offers directly through the system
-  • Applicant Tracking & Sourcing Dashboards and Reports - Create, customise & view dashboards and/or reports that provide an overview of all job posts and application statuses, candidate application tracking and recruitment performance analysis (e.g., Application to Vacancies Ratio (AVR), Job Offer Rate, etc.)
-
-Employee Rewards and Recognition: Do you provide Employee Rewards and Recognition features?
-  • Award Points & Recognition - Employers can award points or dollar value ad-hoc or for specific occasions, and send words of appreciation which can be tagged to the core values of the company
-  • Merchant Reward Redemption - Employees can redeem points across a diverse network of over 100 Singapore-based retail, F&B, and recreation merchants
-  • Social Appreciation Board - Features a public posting board to openly announce and celebrate employee appreciations
-  • Employee Rewards and Recognition Dashboards and Reports - Create, customise & view dashboards and/or reports that allowing for the viewing and tracking of points awarded, redeemed, and balance points as well as rewards utilisation
-
-_Answer:_ (select all that apply)
-- [ ] Human Resource Management System (HRMS)
-- [ ] Human Resource e-Scheduling
-- [ ] Applicant Tracking & Sourcing
-- [ ] Employee Rewards and Recognition
-
-### 103.2 Human Resources Management Module - AI Features - does your solution use AI here?  _(Preferred)_
+Do you provide HRMS features?
+• Personnel Management - Maintain a single employee master record and allow for employee self-service for self-updating
+• Payroll Management - Process e-payroll, generate Ministry of Manpower (MOM)-standard payslips and comply to policy & statutory requirements
+• Leave Management - Configure leave policy and allow for the management of leave applications
+• Benefits and Claims Management - Process medical and transport claims & support multiple payment processing (Payroll, GIRO, cheque, and cash payment)
+• Performance Appraisal Management - Set KPIs for individual employees for each appraisal cycle, and provide online built-in self-service appraisal forms with employee tagging and manager routing for approval and scoring
+• HRMS Dashboards and Reports - Create, customise & view dashboards and/or reports that provide an at-a-glance overview of common HR metrics/indicators to help analyse data through data visualisation
 
 _Answer:_ [ ] Yes   [ ] No
 
-### 103.3 Human Resources Management Module - AI Features - features  _(Preferred)_
+### 103.2 Human Resource e-Scheduling  _(Preferred)_
+
+Do you provide Human Resource e-Scheduling features?
+• Roster Scheduling - Create employee scheduling based on business demand & employee availability
+• Employee Access - Allows for mobile cloud-based access for employees to access schedules and rosters
+• Employee Notification - Allows for the receiving of push messages/notifications for scheduling and roster reminders
+• System Setup - Setup user accounts for the administrator and all employee users, manage business units for different employee categories (e.g. geography, division, tenure, etc), and other interface customisations
+• HR e-Scheduling Dashboards and Reports - Create, customise & view dashboards and/or reports that provide an at-a-glance overview of overall scheduling statuses, attendance, overtime reporting, and generate attendance & overtime reports
+
+_Answer:_ [ ] Yes   [ ] No
+
+### 103.3 Applicant Tracking & Sourcing  _(Preferred)_
+
+Do you provide Applicant Tracking & Sourcing features?
+• Manage Jobs & Postings - Create and edit positions with approval workflows, and publish them to multiple job boards (e.g. LinkedIn, Jobstreet, MyCareersFuture, IHLs, etc.)
+• Track & Tag Candidates - Update application statuses, tag candidates, and add recruitment notes directly in the system
+• Customise Forms & Communications - Configure application forms with custom questions, and bulk-send templated emails (e.g. for scheduling of interviews, job offers, rejections, etc.) using role-based privacy settings (i.e. HR can determine level of information visible to hiring managers and peer interviewers)
+• Offers & Documentation - Accept candidate document uploads and send official job offers directly through the system
+• Applicant Tracking & Sourcing Dashboards and Reports - Create, customise & view dashboards and/or reports that provide an overview of all job posts and application statuses, candidate application tracking and recruitment performance analysis (e.g., Application to Vacancies Ratio (AVR), Job Offer Rate, etc.)
+
+_Answer:_ [ ] Yes   [ ] No
+
+### 103.4 Employee Rewards and Recognition  _(Preferred)_
+
+Do you provide Employee Rewards and Recognition features?
+• Award Points & Recognition - Employers can award points or dollar value ad-hoc or for specific occasions, and send words of appreciation which can be tagged to the core values of the company
+• Merchant Reward Redemption - Employees can redeem points across a diverse network of over 100 Singapore-based retail, F&B, and recreation merchants
+• Social Appreciation Board - Features a public posting board to openly announce and celebrate employee appreciations
+• Employee Rewards and Recognition Dashboards and Reports - Create, customise & view dashboards and/or reports that allowing for the viewing and tracking of points awarded, redeemed, and balance points as well as rewards utilisation
+
+_Answer:_ [ ] Yes   [ ] No
+
+### 103.5 Finance Module Integration for Payroll  _(Mandatory)_
+> Gating: a “No” here disqualifies this module (it cannot be submitted).
+
+Is your module integrated with the Finance Management module to facilitate processing of employees' payroll?
+
+
+_Answer:_ [ ] Yes   [ ] No
+
+### 103.6 IRAS Auto-Inclusion Scheme (AIS) Compliance  _(Mandatory)_
+> Gating: a “No” here disqualifies this module (it cannot be submitted).
+
+Is your solution listed on IRAS's List of Supporting Payroll Software Vendors for the Auto-Inclusion Scheme (AIS) for employment income? (AIS submission auto-includes employees' IR8A income to IRAS.)
+
+
+_Answer:_ [ ] Yes   [ ] No
+
+### 103.7 Human Resources Management Module - AI Features - does your solution use AI here?  _(Preferred)_
+
+_Answer:_ [ ] Yes   [ ] No
+
+### 103.8 Human Resources Management Module - AI Features - features  _(Preferred)_
 > Display: shown only when the umbrella above = Yes.
 
 Select all that apply.
@@ -380,7 +402,7 @@ _Answer:_ (select all that apply)
 - [ ] Roster Scheduling - AI automates and optimises roster scheduling, as well as perform data analytics on scheduling patterns and recommend predictive measures (e.g. prompt to schedule manpower ahead of peak hours in restaurant, etc)
 - [ ] Recruitment and Talent Matching - AI automatically recommends candidates based on job requirements
 
-### 103.4 Human Resources Management Module - AI Features - Others (optional)  _(Preferred)_
+### 103.9 Human Resources Management Module - AI Features - Others (optional)  _(Preferred)_
 > Display: shown only when the umbrella above = Yes.
 
 Describe any other AI feature(s).
@@ -389,49 +411,63 @@ _Answer:_ Answer: __________________________________________________
 
 ## §2 · Manufacturing
 
-### 104.1 Manufacturing Operations Management - Sub-modules  _(Mandatory)_
-> Gating: select at least 1.
+### 104.1 Manufacturing Execution System (MES)  _(Mandatory)_
+> Gating: a “No” here disqualifies this module (it cannot be submitted).
 
-Which Manufacturing Operations Management sub-modules does your solution provide? Select at least one to qualify for this module.
-
-Manufacturing Execution System (MES): Do you provide MES features?
-  • Work Order Management - Create, dispatch, manage work orders that include information such as execution sequence, work instructions, resources, etc.
-  • Work Order Scheduling (Basic) - Plan and modify work order sequences in the relevant shopfloor stations
-  • Shopfloor Data Entry - Allow operators to view work orders and detailed information of each task, as well as do data input (e.g. via barcode scanners, etc.)
-  • Work-in-Progress (WIP) Tracking - Track and display real-time work completion status for each operation, based on data input from the shopfloor
-  • MES Dashboards & Reports - Create, customise & view dashboards and/or reports that provide an at-a-glance overview of various production indicators (e.g. Shopfloor Equipment Status, WIP Tracker, Overall Equipment Efficiency (OEE), etc.)
-
-MES Shopfloor Data Collection: Do you provide the following MES Shopfloor Data Collection features?
-  • Real-time Equipment Status Monitoring - Monitor equipment status and downtime reason(s) via operator manual input or automatically via integration into equipment
-  • Equipment Data Management - Maintain the details and status of each equipment
-  • Notification Alerts - Trigger notification alerts (e.g. via email, Whatsapp, SMS etc.) when equipments go down or shows signs of being disrupted
-
-Quality Management (QM): Do you provide QM features?
-  • Inspection Plan Configuration - Allow for the configuration of quality standards required (e.g. attributes to record, frequencies, sample sizes, etc.)
-  • Quality Data Collection - Facilitate the collection of quality data either through manual keying of information on screen by the operator or automatically via an interfaced connection with measurement equipment
-  • Non-Conformance (NC) Alerting - Notifications and/or alarms are triggered when measurements are out of specification, and NCs are highlighted to user(s) for follow-ups
-  • Root Cause and Corrective Action (RCCA) Recording - Allows users to record causes and required actions of NCs
-  • Data Analytics - Allow for the performance of statistical analysis and the detection of trends & deviations for the conclusion of significant influences
-  • QM Dashboards & Reports - Create, customise & view dashboards and/or reports for recorded quality checks, statistical analysis and/or other relevant QM indicators
-
-Product Lifecycle Management (PLM): Do you provide PLM features?
-  • Routing & Work Instruction Management - Provide a centralized source of information on the sequence of processes involved to manufacture or assemble a product (e.g. technical drawings, Bill of Materials (BOM), materials required, and manufacturing processes such as tools, equipment, and work instructions used to build the product, etc.)
-  • Engineering Drawing Management - Provide the relevant technical drawings of components and materials used in each process
-  • Work Instruction Management - Provide relevant information on tools, equipment, manpower and instructions that is required in each process
-  • Engineering Change Management - Manage revisions to product design and update relevant manufacturing process changes that are impacted by the product design change
-  • PLM Dashboards & Reports - Create, customise & view dashboards and/or reports for the PLM processes
-
-_Answer:_ (select all that apply)
-- [ ] Manufacturing Execution System (MES)
-- [ ] MES Shopfloor Data Collection
-- [ ] Quality Management (QM)
-- [ ] Product Lifecycle Management (PLM)
-
-### 104.2 Manufacturing Operations Management - AI Features - does your solution use AI here?  _(Preferred)_
+Do you provide MES features?
+• Work Order Management - Create, dispatch, manage work orders that include information such as execution sequence, work instructions, resources, etc.
+• Work Order Scheduling (Basic) - Plan and modify work order sequences in the relevant shopfloor stations
+• Shopfloor Data Entry - Allow operators to view work orders and detailed information of each task, as well as do data input (e.g. via barcode scanners, etc.)
+• Work-in-Progress (WIP) Tracking - Track and display real-time work completion status for each operation, based on data input from the shopfloor
+• MES Dashboards & Reports - Create, customise & view dashboards and/or reports that provide an at-a-glance overview of various production indicators (e.g. Shopfloor Equipment Status, WIP Tracker, Overall Equipment Efficiency (OEE), etc.)
 
 _Answer:_ [ ] Yes   [ ] No
 
-### 104.3 Manufacturing Operations Management - AI Features - features  _(Preferred)_
+### 104.2 MES Shopfloor Data Collection (Manual)  _(Preferred)_
+
+Do you provide the following manual shopfloor data collection features?
+• Shopfloor Data Entry - Operators view detailed task information and input production data on the shopfloor (e.g. via barcode scanners)
+• Work-in-Progress (WIP) Tracking - Track and display real-time work completion status for each operation, based on operator input
+
+_Answer:_ [ ] Yes   [ ] No
+
+### 104.3 MES Shopfloor Data Collection (Automated)  _(Preferred)_
+
+Do you provide the following automated shopfloor data collection features?
+• Real-time Equipment Status Monitoring - Monitor equipment status and downtime reason(s) automatically via integration into equipment
+• Equipment Data Management - Maintain the details and status of each equipment
+• Notification Alerts - Trigger notification alerts (e.g. via email, Whatsapp, SMS etc.) when equipments go down or shows signs of being disrupted
+
+_Answer:_ [ ] Yes   [ ] No
+
+### 104.4 Quality Management (QM)  _(Preferred)_
+
+Do you provide QM features?
+• Inspection Plan Configuration - Allow for the configuration of quality standards required (e.g. attributes to record, frequencies, sample sizes, etc.)
+• Quality Data Collection - Facilitate the collection of quality data either through manual keying of information on screen by the operator or automatically via an interfaced connection with measurement equipment
+• Non-Conformance (NC) Alerting - Notifications and/or alarms are triggered when measurements are out of specification, and NCs are highlighted to user(s) for follow-ups
+• Root Cause and Corrective Action (RCCA) Recording - Allows users to record causes and required actions of NCs
+• Data Analytics - Allow for the performance of statistical analysis and the detection of trends & deviations for the conclusion of significant influences
+• QM Dashboards & Reports - Create, customise & view dashboards and/or reports for recorded quality checks, statistical analysis and/or other relevant QM indicators
+
+_Answer:_ [ ] Yes   [ ] No
+
+### 104.5 Product Lifecycle Management (PLM)  _(Preferred)_
+
+Do you provide PLM features?
+• Routing & Work Instruction Management - Provide a centralized source of information on the sequence of processes involved to manufacture or assemble a product (e.g. technical drawings, Bill of Materials (BOM), materials required, and manufacturing processes such as tools, equipment, and work instructions used to build the product, etc.)
+• Engineering Drawing Management - Provide the relevant technical drawings of components and materials used in each process
+• Work Instruction Management - Provide relevant information on tools, equipment, manpower and instructions that is required in each process
+• Engineering Change Management - Manage revisions to product design and update relevant manufacturing process changes that are impacted by the product design change
+• PLM Dashboards & Reports - Create, customise & view dashboards and/or reports for the PLM processes
+
+_Answer:_ [ ] Yes   [ ] No
+
+### 104.6 Manufacturing Operations Management - AI Features - does your solution use AI here?  _(Preferred)_
+
+_Answer:_ [ ] Yes   [ ] No
+
+### 104.7 Manufacturing Operations Management - AI Features - features  _(Preferred)_
 > Display: shown only when the umbrella above = Yes.
 
 Select all that apply.
@@ -441,7 +477,7 @@ _Answer:_ (select all that apply)
 - [ ] Dynamic Root Cause Assistance - AI-driven QMS uses Natural Language Processing (NLP) and machine learning to scan historical records, automatically suggesting root causes and proven corrective actions
 - [ ] Engineering Change Impact Analysis - AI-driven PLM instantly scans master data to automatically flag downstream assets, tools, contracts, and compliance rules affected by design changes
 
-### 104.4 Manufacturing Operations Management - AI Features - Others (optional)  _(Preferred)_
+### 104.8 Manufacturing Operations Management - AI Features - Others (optional)  _(Preferred)_
 > Display: shown only when the umbrella above = Yes.
 
 Describe any other AI feature(s).
@@ -516,31 +552,31 @@ _Answer:_ Answer: __________________________________________________
 
 ## §2 · Fleet Management
 
-### 105.1 Fleet Management Module - Sub-modules  _(Mandatory)_
-> Gating: select at least 1.
+### 105.1 Fleet Management Module Features  _(Mandatory)_
+> Gating: a “No” here disqualifies this module (it cannot be submitted).
 
-Which Fleet Management Module sub-modules does your solution provide? Select at least one to qualify for this module.
-
-Fleet Management Module Features: Do you provide the following features?
-  • Fleet Tracking via Telematics & GPS - Utilise telematics and GPS tracking to provide a complete real-time fleet overview
-  • Dispatch Management - Manage the fleet's journey and associated costs
-  • Dynamic Route Planning - Automate optimised route planning using real-time traffic and historical data
-  • Fleet Management Dashboards & Reports - Create, customise & view dashboards and/or reports that provide an at-a-glance overview of fleet indicators (e.g. mileage and fuel consumption, vehicle maintenance and servicing tasks, etc.)
-
-Fleet Management Module Safety Features: Do you provide the following safety features?
-  • Driver Status Monitoring System (DSMS) - Detect and alert the driver of fatigue events (e.g. closing of eyes) and distractions (e.g. making phone calls)
-  • Advanced Driver Assistance System (ADAS) - Alert the driver of potential collisions (e.g. forward collision warning, lane departure warning, and pedestrian or cyclist collision warning, etc.)
-  • Blind Spot Detection System - Improve situational awareness by alerting the driver of pedestrians, cyclists, motorcyclists, or workers in the vehicle's blind spots
-
-_Answer:_ (select all that apply)
-- [ ] Fleet Management Module Features
-- [ ] Fleet Management Module Safety Features
-
-### 105.2 Fleet Management Module - AI Features - does your solution use AI here?  _(Preferred)_
+Do you provide the following features?
+• Fleet Tracking via Telematics & GPS - Utilise telematics and GPS tracking to provide a complete real-time fleet overview
+• Dispatch Management - Manage the fleet's journey and associated costs
+• Dynamic Route Planning - Automate optimised route planning using real-time traffic and historical data
+• Fleet Management Dashboards & Reports - Create, customise & view dashboards and/or reports that provide an at-a-glance overview of fleet indicators (e.g. mileage and fuel consumption, vehicle maintenance and servicing tasks, etc.)
 
 _Answer:_ [ ] Yes   [ ] No
 
-### 105.3 Fleet Management Module - AI Features - features  _(Preferred)_
+### 105.2 Fleet Management Module Safety Features  _(Preferred)_
+
+Do you provide the following safety features?
+• Driver Status Monitoring System (DSMS) - Detect and alert the driver of fatigue events (e.g. closing of eyes) and distractions (e.g. making phone calls)
+• Advanced Driver Assistance System (ADAS) - Alert the driver of potential collisions (e.g. forward collision warning, lane departure warning, and pedestrian or cyclist collision warning, etc.)
+• Blind Spot Detection System - Improve situational awareness by alerting the driver of pedestrians, cyclists, motorcyclists, or workers in the vehicle's blind spots
+
+_Answer:_ [ ] Yes   [ ] No
+
+### 105.3 Fleet Management Module - AI Features - does your solution use AI here?  _(Preferred)_
+
+_Answer:_ [ ] Yes   [ ] No
+
+### 105.4 Fleet Management Module - AI Features - features  _(Preferred)_
 > Display: shown only when the umbrella above = Yes.
 
 Select all that apply.
@@ -549,7 +585,7 @@ _Answer:_ (select all that apply)
 - [ ] Predictive Vehicle Maintenance - Machine learning predicts mechanical issues using telematics data points (e.g. fluctuations in battery voltage, engine temperature, etc.)
 - [ ] Dynamic Dispatching & Route Optimization - AI continuously calculates routes by cross-referencing live variables (e.g. traffic bottlenecks, severe weather, changing customer delivery windows, etc.) with historical operational patterns
 
-### 105.4 Fleet Management Module - AI Features - Others (optional)  _(Preferred)_
+### 105.5 Fleet Management Module - AI Features - Others (optional)  _(Preferred)_
 > Display: shown only when the umbrella above = Yes.
 
 Describe any other AI feature(s).

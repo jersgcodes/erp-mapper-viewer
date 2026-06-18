@@ -132,7 +132,7 @@
       "sub_modules": [
         {
           "name": "Human Resource Management System (HRMS)",
-          "gated": true,
+          "gated": false,
           "umbrella_question": "Do you provide HRMS features?",
           "features": [
             "Personnel Management - Maintain a single employee master record and allow for employee self-service for self-updating",
@@ -179,6 +179,20 @@
           ]
         }
       ],
+      "standalone": [
+        {
+          "id": "103.03",
+          "title": "Finance Module Integration for Payroll",
+          "tier": "mandatory",
+          "body": "Is your module integrated with the Finance Management module to facilitate processing of employees' payroll?\n"
+        },
+        {
+          "id": "103.04",
+          "title": "IRAS Auto-Inclusion Scheme (AIS) Compliance",
+          "tier": "mandatory",
+          "body": "Is your solution listed on IRAS's List of Supporting Payroll Software Vendors for the Auto-Inclusion Scheme (AIS) for employment income? (AIS submission auto-includes employees' IR8A income to IRAS.)\n"
+        }
+      ],
       "ai_features": {
         "tier": "preferred",
         "umbrella": "Does your solution incorporate any form of artificial intelligence in your ERP module with the ultimate goal of enhancing operational efficiency/productivity and/or improve decision-making?",
@@ -198,7 +212,7 @@
       "sub_modules": [
         {
           "name": "Manufacturing Execution System (MES)",
-          "gated": true,
+          "gated": false,
           "umbrella_question": "Do you provide MES features?",
           "features": [
             "Work Order Management - Create, dispatch, manage work orders that include information such as execution sequence, work instructions, resources, etc.",
@@ -209,11 +223,20 @@
           ]
         },
         {
-          "name": "MES Shopfloor Data Collection",
+          "name": "MES Shopfloor Data Collection (Manual)",
           "gated": true,
-          "umbrella_question": "Do you provide the following MES Shopfloor Data Collection features?",
+          "umbrella_question": "Do you provide the following manual shopfloor data collection features?",
           "features": [
-            "Real-time Equipment Status Monitoring - Monitor equipment status and downtime reason(s) via operator manual input or automatically via integration into equipment",
+            "Shopfloor Data Entry - Operators view detailed task information and input production data on the shopfloor (e.g. via barcode scanners)",
+            "Work-in-Progress (WIP) Tracking - Track and display real-time work completion status for each operation, based on operator input"
+          ]
+        },
+        {
+          "name": "MES Shopfloor Data Collection (Automated)",
+          "gated": true,
+          "umbrella_question": "Do you provide the following automated shopfloor data collection features?",
+          "features": [
+            "Real-time Equipment Status Monitoring - Monitor equipment status and downtime reason(s) automatically via integration into equipment",
             "Equipment Data Management - Maintain the details and status of each equipment",
             "Notification Alerts - Trigger notification alerts (e.g. via email, Whatsapp, SMS etc.) when equipments go down or shows signs of being disrupted"
           ]
@@ -263,7 +286,7 @@
       "sub_modules": [
         {
           "name": "Fleet Management Module Features",
-          "gated": true,
+          "gated": false,
           "umbrella_question": "Do you provide the following features?",
           "features": [
             "Fleet Tracking via Telematics & GPS - Utilise telematics and GPS tracking to provide a complete real-time fleet overview",
