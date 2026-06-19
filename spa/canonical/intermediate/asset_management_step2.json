@@ -2,13 +2,13 @@
   "module": "asset_management",
   "module_name": "Asset Management",
   "stats": {
-    "haiku_calls": 30,
-    "total_merged_reqs": 238
+    "haiku_calls": 31,
+    "total_merged_reqs": 243
   },
   "capabilities": [
     {
       "id": "asset.register",
-      "name": "Asset Register & Hierarchy",
+      "name": "Asset Register and Hierarchy",
       "description": "Centralised inventory of every asset the organisation owns or manages, with hierarchical structure, classification, and identifying metadata.",
       "priority_proxy": "must_have",
       "applicability": [
@@ -74,7 +74,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Classify assets by category, class, and criticality level",
+          "text": "Classify assets by category, class, and criticality level for operational prioritization and governance",
           "source": "proxy",
           "proxy_refs": [
             "Asset classification by category, class, and criticality"
@@ -106,7 +106,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track warranty and service contract details linked to each asset",
+          "text": "Link warranty and service contract information to asset records for lifecycle and support planning",
           "source": "proxy",
           "proxy_refs": [
             "Warranty and service contract linkage"
@@ -122,7 +122,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Record current custodian (person and/or department) and physical location for each asset",
+          "text": "Track current custodian (person and/or department) and physical location for accountability and asset recovery",
           "source": "proxy",
           "proxy_refs": [
             "Current custodian (person and/or department) and physical location"
@@ -138,7 +138,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Attach and manage supporting documents to asset records including manuals, drawings, and certificates",
+          "text": "Attach and manage supporting documents such as manuals, drawings, and certificates to asset records",
           "source": "proxy",
           "proxy_refs": [
             "Supporting documents attached to asset record (manuals, drawings, certificates)"
@@ -154,7 +154,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Maintain equipment status and lifecycle data accessible for maintenance planning and decision-making",
+          "text": "Maintain equipment status and lifecycle data accessible for maintenance planning and technical reference",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -204,7 +204,7 @@
           ]
         },
         {
-          "text": "Identify and flag assets lacking proper approval documentation or authorization dates for remediation",
+          "text": "Identify and flag assets lacking proper removal approval dates for governance and audit compliance",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -224,7 +224,7 @@
           ]
         },
         {
-          "text": "Identify and flag unauthorized assets or those reaching end-of-support status to trigger replacement action",
+          "text": "Identify and flag unauthorized assets or those reaching end-of-support status to trigger replacement or remediation actions",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -299,7 +299,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Record and track asset commissioning date and in-service date.",
+          "text": "Record and track asset commissioning date and commissioning details.",
           "source": "proxy",
           "proxy_refs": [
             "In-service date and commissioning record"
@@ -374,7 +374,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Provide asset managers access to lifecycle data and technical documentation for maintenance planning.",
+          "text": "Provide access to asset lifecycle data and technical documentation for maintenance planning.",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -402,7 +402,7 @@
     },
     {
       "id": "asset.depreciation",
-      "name": "Depreciation & Valuation",
+      "name": "Depreciation and Valuation",
       "description": "Calculate book and tax depreciation across multiple methods, track accumulated depreciation, handle revaluations, and feed the GL automatically.",
       "priority_proxy": "must_have",
       "applicability": [
@@ -446,7 +446,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Calculate depreciation on a daily pro-rata basis to support mid-period asset acquisitions and disposals.",
+          "text": "Calculate depreciation on a daily pro-rata basis to handle mid-period asset acquisitions and disposals.",
           "source": "proxy",
           "proxy_refs": [
             "Daily pro-rata depreciation calculation"
@@ -474,7 +474,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Automatically post depreciation journal entries to the general ledger at period close.",
+          "text": "Automatically post depreciation journal entries to the general ledger at scheduled intervals.",
           "source": "proxy",
           "proxy_refs": [
             "Automatic GL posting of depreciation journals"
@@ -502,7 +502,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Report accumulated depreciation and net book value by asset, asset class, and cost center.",
+          "text": "Report accumulated depreciation and net book value by asset, class, and period.",
           "source": "proxy",
           "proxy_refs": [
             "Accumulated depreciation and net book value reporting"
@@ -516,7 +516,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Import opening balances and accumulated depreciation for legacy assets to support mid-life asset onboarding.",
+          "text": "Import opening balances and accumulated depreciation for legacy assets acquired in prior periods.",
           "source": "proxy",
           "proxy_refs": [
             "Opening balance import for legacy assets mid-life"
@@ -539,7 +539,7 @@
     {
       "id": "asset.pm_planning",
       "name": "Preventive Maintenance Planning",
-      "description": "Define maintenance strategies and generate scheduled work in advance of equipment failure — time-based, usage-based, or condition-based.",
+      "description": "Define maintenance strategies and generate scheduled work in advance of equipment failure (time-based, usage-based, or condition-based).",
       "priority_proxy": "must_have",
       "applicability": [
         "sme",
@@ -572,7 +572,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support usage-based preventive maintenance triggers based on asset operating hours, cycles, or distance travelled",
+          "text": "Support usage-based preventive maintenance triggers based on operating hours, cycles, or distance travelled",
           "source": "proxy",
           "proxy_refs": [
             "Usage-based PM triggers (every N operating hours, cycles, or kilometres)"
@@ -664,7 +664,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate compliance reports showing preventive maintenance plans completed versus those due",
+          "text": "Generate compliance reports comparing planned preventive maintenance completion status against due dates",
           "source": "proxy",
           "proxy_refs": [
             "PM compliance reporting (plans completed vs due)"
@@ -696,27 +696,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support ad-hoc maintenance scheduling in addition to automated preventive maintenance plans",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-01153",
-              "text": "S to schedule equipment maintenance on an ad-hoc basis or automatically based on pre-defined requirements (e.g. work hours)",
-              "q_title": "Equipment Maintenance Scheduling",
-              "subsection": "Equipment Maintenance Scheduling",
-              "sources": [
-                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
-          ]
-        },
-        {
-          "text": "Enable maintenance planning and monitoring for facility-related assets such as cleaning, pest control, and fixtures",
+          "text": "Support preventive maintenance planning for facility-related assets such as cleaning, pest control, and fixture maintenance",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -741,7 +721,7 @@
       "stats": {
         "proxy_in": 8,
         "imda_in": 2,
-        "merged_out": 10
+        "merged_out": 9
       }
     },
     {
@@ -844,7 +824,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Define and execute task-level checklists within work orders",
+          "text": "Define and track task-level checklists within work orders",
           "source": "proxy",
           "proxy_refs": [
             "Task-level checklists within a work order"
@@ -876,7 +856,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Record labour time and technician effort against work orders",
+          "text": "Record labour time and hours worked against work orders",
           "source": "proxy",
           "proxy_refs": [
             "Labour time booking against work orders"
@@ -924,7 +904,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Capture failure codes, root causes, and corrective actions on work order closure",
+          "text": "Capture failure codes and root-cause analysis on work order closure",
           "source": "both",
           "proxy_refs": [
             "Failure code and root-cause capture on closure"
@@ -952,7 +932,7 @@
           ]
         },
         {
-          "text": "Plan and monitor routine maintenance activities (cleaning, pest control, fixture maintenance, etc.)",
+          "text": "Support planned maintenance activities such as cleaning, pest control, and fixture maintenance",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -982,7 +962,7 @@
     },
     {
       "id": "asset.maintenance_requests",
-      "name": "Maintenance Requests & Service Desk",
+      "name": "Maintenance Requests",
       "description": "Channel for non-maintenance users (operators, occupants, customers) to submit service requests that are triaged into work orders.",
       "priority_proxy": "must_have",
       "applicability": [
@@ -998,7 +978,7 @@
       ],
       "requirements": [
         {
-          "text": "Self-service request submission portal accessible via web and mobile interfaces",
+          "text": "Provide self-service request submission portal accessible via web and mobile interfaces",
           "source": "proxy",
           "proxy_refs": [
             "Self-service request submission portal (web and mobile)"
@@ -1012,7 +992,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Request categorization and priority selection by submitter at point of submission",
+          "text": "Allow submitters to categorize requests and assign priority levels",
           "source": "proxy",
           "proxy_refs": [
             "Request categorisation and priority selection by submitter"
@@ -1026,7 +1006,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Triage workflow to review, approve, and convert requests into work orders",
+          "text": "Implement triage workflow to review, approve, and convert requests into work orders",
           "source": "proxy",
           "proxy_refs": [
             "Triage workflow: request → approved → converted to work order"
@@ -1040,7 +1020,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Real-time request status tracking visible to submitter throughout lifecycle",
+          "text": "Enable submitters to track request status in real-time",
           "source": "proxy",
           "proxy_refs": [
             "Request status tracking visible to the submitter"
@@ -1054,7 +1034,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Attachment support for photos and supporting documentation on requests",
+          "text": "Support attachment of photos and supporting documentation to requests",
           "source": "proxy",
           "proxy_refs": [
             "Photos and supporting files attached to the request"
@@ -1068,7 +1048,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Automated notifications to submitter on request status changes",
+          "text": "Send automatic notifications to submitters on request status changes",
           "source": "proxy",
           "proxy_refs": [
             "Auto-notification on status change"
@@ -1082,7 +1062,7 @@
           "solcat_citations": []
         },
         {
-          "text": "SLA tracking for response and resolution time targets",
+          "text": "Track and enforce SLA timers for request response and resolution",
           "source": "proxy",
           "proxy_refs": [
             "SLA clock for response and resolution time"
@@ -1096,7 +1076,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Scheduled and ad hoc notification capability to prompt users to initiate maintenance requests",
+          "text": "Support ad hoc and scheduled notifications to users to initiate maintenance activities",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1124,7 +1104,7 @@
     },
     {
       "id": "asset.spare_parts",
-      "name": "Spare Parts & Maintenance Inventory",
+      "name": "Spare Parts Management",
       "description": "Manage the inventory of parts and consumables used for maintenance, typically distinct from the saleable-goods inventory of an SCM module.",
       "priority_proxy": "must_have",
       "applicability": [
@@ -1154,7 +1134,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support multi-location storerooms and bin-level location tracking for spare parts",
+          "text": "Support multi-location storerooms and bin-level location tracking for spare parts inventory",
           "source": "proxy",
           "proxy_refs": [
             "Multi-location storerooms and bin locations"
@@ -1168,7 +1148,77 @@
           "solcat_citations": []
         },
         {
-          "text": "Track lot and serial numbers for spare parts and assets",
+          "text": "Define and enforce minimum and maximum stock levels with automatic reorder point alerts",
+          "source": "proxy",
+          "proxy_refs": [
+            "Min/max stock levels with automatic reorder alerts"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "ibm_maximo",
+            "sap_s4hana_pm",
+            "wikipedia_eam"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Reserve spare parts against planned work orders to prevent over-allocation",
+          "source": "proxy",
+          "proxy_refs": [
+            "Parts reservation against planned work orders"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "ibm_maximo",
+            "sap_s4hana_pm",
+            "wikipedia_eam"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Record parts issue and return transactions linked to work orders for audit and traceability",
+          "source": "proxy",
+          "proxy_refs": [
+            "Parts issue and return transactions tied to work orders"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "ibm_maximo",
+            "sap_s4hana_pm",
+            "wikipedia_eam"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Track parts consumption history by asset to support maintenance analytics and forecasting",
+          "source": "proxy",
+          "proxy_refs": [
+            "Parts consumption history per asset"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "ibm_maximo",
+            "sap_s4hana_pm",
+            "wikipedia_eam"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Integrate with procurement to automatically generate replenishment purchase requests based on stock levels",
+          "source": "proxy",
+          "proxy_refs": [
+            "Integration with procurement for replenishment PRs"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "ibm_maximo",
+            "sap_s4hana_pm",
+            "wikipedia_eam"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Track lot and serial numbers for spare parts to enable traceability and recall management",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1188,77 +1238,27 @@
           ]
         },
         {
-          "text": "Define and enforce minimum and maximum stock levels with automatic reorder point alerts",
-          "source": "proxy",
-          "proxy_refs": [
-            "Min/max stock levels with automatic reorder alerts"
+          "text": "Support real-time inventory stock-taking through integration with RFID hardware, including readers, tags, and automated gates",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01102",
+              "text": "Real time stock taking of inventory and/or assets via integration with RFID hardware, e.g. installed with RFID reader, tags, tunnel gate, or weight based inventory tracking solution",
+              "q_title": "RFID Inventory Tracking",
+              "subsection": "RFID Inventory Tracking",
+              "sources": [
+                "wholesale__inventory-management"
+              ]
+            }
           ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "ibm_maximo",
-            "sap_s4hana_pm",
-            "wikipedia_eam"
-          ],
-          "solcat_citations": []
+          "vendor_citations": [],
+          "solcat_citations": [
+            "wholesale__inventory-management"
+          ]
         },
         {
-          "text": "Reserve spare parts against planned work orders",
-          "source": "proxy",
-          "proxy_refs": [
-            "Parts reservation against planned work orders"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "ibm_maximo",
-            "sap_s4hana_pm",
-            "wikipedia_eam"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Record parts issue and return transactions linked to work orders",
-          "source": "proxy",
-          "proxy_refs": [
-            "Parts issue and return transactions tied to work orders"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "ibm_maximo",
-            "sap_s4hana_pm",
-            "wikipedia_eam"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Maintain parts consumption history per asset for maintenance tracking and analysis",
-          "source": "proxy",
-          "proxy_refs": [
-            "Parts consumption history per asset"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "ibm_maximo",
-            "sap_s4hana_pm",
-            "wikipedia_eam"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Integrate with procurement module to automatically generate replenishment purchase requisitions based on stock levels",
-          "source": "proxy",
-          "proxy_refs": [
-            "Integration with procurement for replenishment PRs"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "ibm_maximo",
-            "sap_s4hana_pm",
-            "wikipedia_eam"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Support real-time inventory stock-taking via integration with RFID hardware (readers, tags, tunnel gates) or weight-based tracking solutions",
+          "text": "Support weight-based inventory tracking as an alternative to manual or barcode-based counting methods",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1281,12 +1281,12 @@
       "stats": {
         "proxy_in": 7,
         "imda_in": 2,
-        "merged_out": 9
+        "merged_out": 10
       }
     },
     {
       "id": "asset.condition_monitoring",
-      "name": "Condition Monitoring & Predictive Maintenance",
+      "name": "Condition Monitoring",
       "description": "Capture asset health data (manual readings or IoT sensor streams) and trigger maintenance based on measured condition rather than calendar or usage alone.",
       "priority_proxy": "standard",
       "applicability": [
@@ -1302,7 +1302,7 @@
       ],
       "requirements": [
         {
-          "text": "Capture meter readings from multiple sources: manual entry, barcode/QR scanning, and direct IoT sensor integration.",
+          "text": "Capture meter readings from multiple sources: manual entry, barcode/QR scanning, or direct IoT sensor integration",
           "source": "both",
           "proxy_refs": [
             "Meter reading capture (manual, scanned, or IoT-integrated)"
@@ -1328,7 +1328,7 @@
           ]
         },
         {
-          "text": "Define measurement points and associated measurement documents on asset master records.",
+          "text": "Define measurement points on assets with associated measurement documents and metadata",
           "source": "proxy",
           "proxy_refs": [
             "Measurement points and measurement documents on assets"
@@ -1342,7 +1342,21 @@
           "solcat_citations": []
         },
         {
-          "text": "Configure threshold-based alerts (warning and critical levels) for each measurement type.",
+          "text": "Support standard measurement types including vibration, temperature, pressure, and flow",
+          "source": "proxy",
+          "proxy_refs": [
+            "Vibration, temperature, pressure, and flow as standard measurement types"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "ibm_maximo",
+            "sap_s4hana_pm",
+            "wikipedia_eam"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Configure warning and critical thresholds per measurement type with automatic alert generation when thresholds are crossed",
           "source": "both",
           "proxy_refs": [
             "Threshold alerts (warning / critical) per measurement type"
@@ -1368,7 +1382,7 @@
           ]
         },
         {
-          "text": "Automatically generate maintenance work orders when a measurement crosses a configured threshold.",
+          "text": "Automatically generate maintenance work orders when equipment condition thresholds are exceeded",
           "source": "both",
           "proxy_refs": [
             "Automatic PM trigger when a threshold is crossed"
@@ -1394,49 +1408,7 @@
           ]
         },
         {
-          "text": "Support standard measurement types including vibration, temperature, pressure, and flow.",
-          "source": "proxy",
-          "proxy_refs": [
-            "Vibration, temperature, pressure, and flow as standard measurement types"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "ibm_maximo",
-            "sap_s4hana_pm",
-            "wikipedia_eam"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Display trend charts and historical analysis of measurements over time.",
-          "source": "proxy",
-          "proxy_refs": [
-            "Trend charting of measurements over time"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "ibm_maximo",
-            "sap_s4hana_pm",
-            "wikipedia_eam"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Integrate with IoT platforms and sensor networks via standard protocols (MQTT, OPC-UA, REST).",
-          "source": "proxy",
-          "proxy_refs": [
-            "Integration point for IoT platforms (MQTT, OPC-UA, REST)"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "ibm_maximo",
-            "sap_s4hana_pm",
-            "wikipedia_eam"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Monitor equipment status and downtime reasons in real time via operator manual entry or automatic sensor linkage.",
+          "text": "Monitor equipment status and downtime reasons in real time via operator manual entry or automatic sensor data link",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1456,7 +1428,7 @@
           ]
         },
         {
-          "text": "Send notification alerts (email, SMS, or in-app) when equipment is down or shows signs of malfunction or disruption.",
+          "text": "Send notification alerts via email, SMS, or other channels when equipment is down or shows signs of disruption",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1474,6 +1446,34 @@
           "solcat_citations": [
             "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
           ]
+        },
+        {
+          "text": "Display trend charts and historical analysis of measurements over time to support predictive maintenance decisions",
+          "source": "proxy",
+          "proxy_refs": [
+            "Trend charting of measurements over time"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "ibm_maximo",
+            "sap_s4hana_pm",
+            "wikipedia_eam"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Integrate with IoT platforms and protocols including MQTT, OPC-UA, and REST APIs for sensor data ingestion",
+          "source": "proxy",
+          "proxy_refs": [
+            "Integration point for IoT platforms (MQTT, OPC-UA, REST)"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "ibm_maximo",
+            "sap_s4hana_pm",
+            "wikipedia_eam"
+          ],
+          "solcat_citations": []
         }
       ],
       "stats": {
@@ -1485,7 +1485,7 @@
     {
       "id": "asset.mobile_field",
       "name": "Mobile Field Work",
-      "description": "Technicians execute work orders from a phone or tablet — offline-capable, with barcode scanning, photo capture, and signature.",
+      "description": "Technicians execute work orders from a phone or tablet (offline-capable, with barcode scanning, photo capture, and signature).",
       "priority_proxy": "standard",
       "applicability": [
         "sme",
@@ -1516,7 +1516,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Barcode and QR code scanning capability to identify and validate assets during field work",
+          "text": "Barcode and QR code scanning capability to identify and link assets to work orders",
           "source": "both",
           "proxy_refs": [
             "Barcode and QR code scanning to identify assets"
@@ -1543,7 +1543,7 @@
           ]
         },
         {
-          "text": "RFID tag reading capability integrated with mobile application for asset identification and inventory tracking",
+          "text": "RFID tag reading capability for asset identification and inventory tracking during field work",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1579,7 +1579,7 @@
           ]
         },
         {
-          "text": "Photo capture functionality to attach images to work order steps and completion records",
+          "text": "Photo capture and attachment to work order records at task steps or completion",
           "source": "proxy",
           "proxy_refs": [
             "Photo capture attached to work order steps"
@@ -1609,7 +1609,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Step-by-step task checklists with pass/fail validation at each step",
+          "text": "Step-by-step task checklists with pass/fail status recording for each step",
           "source": "proxy",
           "proxy_refs": [
             "Step-by-step task checklists with pass/fail on each step"
@@ -1624,7 +1624,7 @@
           "solcat_citations": []
         },
         {
-          "text": "GPS location stamping to record the geographic coordinates of work activities",
+          "text": "GPS location stamping on work activities for geolocation tracking and audit purposes",
           "source": "proxy",
           "proxy_refs": [
             "GPS location stamp on work activity"
@@ -1639,7 +1639,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Voice-to-text entry capability for capturing failure notes and work observations",
+          "text": "Voice-to-text entry for failure notes and work observations to reduce manual data entry",
           "source": "proxy",
           "proxy_refs": [
             "Voice-to-text entry for failure notes"
@@ -1662,7 +1662,7 @@
     },
     {
       "id": "asset.analytics_kpi",
-      "name": "Maintenance Analytics & KPIs",
+      "name": "Maintenance Analytics and KPIs",
       "description": "Dashboard and reporting on maintenance performance and asset health, using the canonical reliability KPIs.",
       "priority_proxy": "standard",
       "applicability": [
@@ -1734,7 +1734,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Report preventive maintenance schedule compliance (percentage of planned maintenance completed on time)",
+          "text": "Report schedule compliance for preventive maintenance plans",
           "source": "proxy",
           "proxy_refs": [
             "Schedule compliance (PM plans completed on time)"
@@ -1748,7 +1748,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Report maintenance backlog with aging and priority indicators",
+          "text": "Report maintenance backlog status and aging",
           "source": "proxy",
           "proxy_refs": [
             "Maintenance backlog reporting"
@@ -1776,7 +1776,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Report maintenance cost per asset (labour, parts, and contractor costs) over configurable periods",
+          "text": "Report maintenance cost per asset, including labour, parts, and contractor expenses over a period",
           "source": "proxy",
           "proxy_refs": [
             "Cost per asset (labour + parts + contractors) over a period"
@@ -1790,7 +1790,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Provide configurable dashboards with drill-down capability to underlying maintenance records and asset details",
+          "text": "Provide configurable dashboards with drill-down capability for maintenance KPIs",
           "source": "proxy",
           "proxy_refs": [
             "Configurable dashboards and drill-down"
@@ -1804,7 +1804,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate and send notification alerts (email, SMS, or in-app) when equipment is down or shows signs of disruption",
+          "text": "Generate and send notification alerts via email or SMS when equipment is down or shows signs of disruption",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -1832,7 +1832,7 @@
     },
     {
       "id": "asset.compliance",
-      "name": "Inspection, Safety & Regulatory Compliance",
+      "name": "Inspection, Safety, and Regulatory Compliance",
       "description": "Manage compulsory inspections, safety checks, and certifications required by regulators, insurers, or internal policy.",
       "priority_proxy": "standard",
       "applicability": [
@@ -1848,8 +1848,8 @@
       ],
       "requirements": [
         {
-          "text": "Schedule and track regulatory inspections (e.g. lifts, fire safety systems, pressure vessels) with configurable frequencies and inspection types.",
-          "source": "both",
+          "text": "Schedule and track regulatory inspections (e.g. lifts, fire panels, pressure vessels) with due dates and renewal reminders.",
+          "source": "proxy",
           "proxy_refs": [
             "Scheduled regulatory inspections (lift, fire panel, pressure vessel, etc.)"
           ],
@@ -1862,7 +1862,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Maintain a registry of compliance certificates and certifications with expiry date tracking and automated renewal alerts.",
+          "text": "Maintain a registry of compliance certificates and certifications with expiry date tracking and automated alerts before expiration.",
           "source": "proxy",
           "proxy_refs": [
             "Certificate of compliance tracking with expiry alerts"
@@ -1896,7 +1896,7 @@
           ]
         },
         {
-          "text": "Execute inspection checklists with pass/fail outcomes and capture remedial actions for non-conformances.",
+          "text": "Execute inspections using configurable checklists with pass/fail outcomes and capture remedial actions for non-conformances.",
           "source": "proxy",
           "proxy_refs": [
             "Inspection checklists with pass/fail and remedial action"
@@ -1910,7 +1910,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Manage permit-to-work issuance and lockout-tagout workflows for controlled asset maintenance and shutdown.",
+          "text": "Manage permit-to-work issuance and lockout-tagout workflows for controlled asset maintenance and shutdown activities.",
           "source": "proxy",
           "proxy_refs": [
             "Permit-to-work issuance and lockout-tagout workflow"
@@ -1938,7 +1938,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Maintain a complete audit trail recording who performed each inspection, when it occurred, and the documented result.",
+          "text": "Maintain a complete audit trail documenting who performed each inspection, when it occurred, and the recorded results.",
           "source": "proxy",
           "proxy_refs": [
             "Audit trail of who inspected what, when, with what result"
@@ -1960,7 +1960,7 @@
     },
     {
       "id": "asset.contracts_warranty",
-      "name": "Warranty & Service Contracts",
+      "name": "Warranty and Contracts",
       "description": "Track warranty coverage and service contracts so that repair work is correctly routed to the responsible party and costs recovered.",
       "priority_proxy": "standard",
       "applicability": [
@@ -2004,7 +2004,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Define and maintain service contracts with coverage scope, service levels, and renewal dates",
+          "text": "Define service contracts with coverage scope, included services, renewal dates, and contract terms",
           "source": "proxy",
           "proxy_refs": [
             "Service contract with coverage scope and renewal date"
@@ -2018,7 +2018,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Automatically route in-warranty work orders to the responsible vendor or service provider based on warranty terms",
+          "text": "Automatically route in-warranty work orders to the responsible vendor or service provider based on warranty coverage",
           "source": "proxy",
           "proxy_refs": [
             "Automatic routing of in-warranty work to vendor"
@@ -2054,13 +2054,13 @@
     },
     {
       "id": "asset.rcm_fmea",
-      "name": "Reliability-Centred Maintenance & FMEA",
+      "name": "Reliability-Centred Maintenance (RCM and FMEA)",
       "description": "Formalised analysis of how assets fail and which failures matter, used to pick the right maintenance strategy (run-to-fail vs PM vs predictive) per failure mode rather than per asset.",
       "priority_proxy": "advanced",
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "advanced",
       "cited_sources": [
         "sap_s4hana_pm",
         "ibm_maximo",
@@ -2124,7 +2124,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Maintain a reusable library of standard failure modes that can be applied across multiple asset classes to accelerate FMEA development.",
+          "text": "Provide a reusable library of standard failure modes that can be applied across multiple asset classes to accelerate FMEA development.",
           "source": "proxy",
           "proxy_refs": [
             "Library of standard failure modes reusable across asset classes"
@@ -2152,7 +2152,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Implement a formal review workflow to periodically update and validate FMEA analyses.",
+          "text": "Support periodic review and update workflows for FMEA registers to reflect operational experience and design changes.",
           "source": "proxy",
           "proxy_refs": [
             "Review workflow for periodic FMEA updates"
@@ -2174,13 +2174,13 @@
     },
     {
       "id": "asset.reliability_engineering",
-      "name": "Reliability Engineering & Bad-Actor Analysis",
+      "name": "Reliability Engineering (Bad-Actor Analysis)",
       "description": "Tools for reliability engineers to analyse historical failure data and identify chronically failing assets (\"bad actors\") for targeted investigation and elimination of root causes.",
       "priority_proxy": "advanced",
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "advanced",
       "cited_sources": [
         "ibm_maximo",
         "sap_s4hana_pm"
@@ -2200,7 +2200,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Identify chronically failing assets (bad actors) using metrics such as MTBF, total cost of failure, or cumulative downtime",
+          "text": "Identify bad-actor assets using configurable criteria such as MTBF, total cost of failures, or cumulative downtime",
           "source": "proxy",
           "proxy_refs": [
             "Bad-actor identification by MTBF, cost, or downtime"
@@ -2213,7 +2213,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support structured root cause analysis workflows with templates including 5-whys and fishbone diagram methods",
+          "text": "Support structured root cause analysis workflows with built-in templates (5-whys, fishbone diagram)",
           "source": "proxy",
           "proxy_refs": [
             "Root cause analysis (RCA) workflow with 5-whys / fishbone templates"
@@ -2226,7 +2226,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Assign corrective actions from root cause analysis investigations and track follow-up completion",
+          "text": "Assign corrective actions from root cause analysis investigations and track completion status",
           "source": "proxy",
           "proxy_refs": [
             "Corrective action assignment and follow-up from RCA"
@@ -2265,7 +2265,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Perform Weibull analysis on historical failure data to model time-to-failure distributions and predict failure patterns",
+          "text": "Perform Weibull analysis on failure data to model time-to-failure distributions and predict failure patterns",
           "source": "proxy",
           "proxy_refs": [
             "Weibull analysis for time-to-failure modelling"
@@ -2286,21 +2286,22 @@
     },
     {
       "id": "asset.shutdown_turnaround",
-      "name": "Shutdown, Turnaround & Outage Management",
-      "description": "Planning and executing major maintenance events where the asset is taken out of service — distinct from day-to-day work orders because of the scale, critical-path scheduling, and contractor coordination involved.",
+      "name": "Shutdown and Turnaround",
+      "description": "Planning and executing major maintenance events where the asset is taken out of service (distinct from day-to-day work orders because of the scale, critical-path scheduling, and contractor coordination involved).",
       "priority_proxy": "advanced",
       "applicability": [
-        "enterprise",
-        "industry_specific"
+        "sme",
+        "mid_market",
+        "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "advanced",
       "cited_sources": [
         "sap_s4hana_pm",
         "ibm_maximo"
       ],
       "requirements": [
         {
-          "text": "Create and manage shutdown/turnaround/outage events as distinct planning objects, separate from routine work orders",
+          "text": "Create and manage shutdown/turnaround/outage events as distinct planning objects separate from routine work orders",
           "source": "proxy",
           "proxy_refs": [
             "Shutdown / turnaround / outage event as a distinct planning object"
@@ -2326,7 +2327,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Schedule work on a critical path basis across the shutdown event window to identify and manage bottlenecks",
+          "text": "Schedule work across the shutdown window using critical path analysis to identify and manage dependencies",
           "source": "proxy",
           "proxy_refs": [
             "Critical path scheduling across the event window"
@@ -2339,7 +2340,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Level resources (labour, tools, contractors) across the event to optimize availability and utilization",
+          "text": "Level resources (labour, tools, contractors) across the event to balance demand and availability",
           "source": "proxy",
           "proxy_refs": [
             "Resource levelling for labour, tools, and contractors"
@@ -2352,7 +2353,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Enforce event-wide approval workflows distinct from individual work order approvals",
+          "text": "Execute event-wide approval workflows distinct from individual work order approvals",
           "source": "proxy",
           "proxy_refs": [
             "Event-wide approval workflow separate from individual WOs"
@@ -2365,7 +2366,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track and control costs against a fixed event budget with real-time visibility",
+          "text": "Track and control costs against a fixed event budget with visibility to actual spend",
           "source": "proxy",
           "proxy_refs": [
             "Budget tracking and cost control against a fixed event budget"
@@ -2378,7 +2379,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Provide daily progress dashboards and status reporting during the shutdown execution",
+          "text": "Display real-time progress dashboards during the shutdown event",
           "source": "proxy",
           "proxy_refs": [
             "Daily progress dashboards during the shutdown"
@@ -2391,7 +2392,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Capture post-event reports and lessons-learned documentation for continuous improvement",
+          "text": "Capture post-event reports and lessons learned for continuous improvement",
           "source": "proxy",
           "proxy_refs": [
             "Post-event report and lessons-learned capture"
@@ -2412,7 +2413,7 @@
     },
     {
       "id": "asset.capital_projects",
-      "name": "Capital Projects & New Asset Commissioning",
+      "name": "Capital Projects and Commissioning",
       "description": "Linkage between capital project (capex) workflows and the asset register, so newly built or purchased assets flow cleanly into operational maintenance once commissioned.",
       "priority_proxy": "standard",
       "applicability": [
@@ -2428,7 +2429,7 @@
       ],
       "requirements": [
         {
-          "text": "Capital project serves as parent entity linking all assets being built, purchased, or installed as part of that project",
+          "text": "Capital project serves as parent entity linking all assets being built, purchased, or installed under that project",
           "source": "proxy",
           "proxy_refs": [
             "Capital project as parent for the asset(s) being built or installed"
@@ -2442,7 +2443,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Capture and accumulate costs against capital projects prior to asset capitalisation",
+          "text": "Capture and accumulate costs against capital project prior to asset capitalisation",
           "source": "proxy",
           "proxy_refs": [
             "Cost capture against the project prior to capitalisation"
@@ -2456,7 +2457,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support progressive capitalisation of sub-assets as they individually enter service, rather than requiring full project completion",
+          "text": "Support progressive capitalisation of sub-assets as they individually enter service, rather than lump-sum capitalisation at project completion",
           "source": "proxy",
           "proxy_refs": [
             "Progressive capitalisation as sub-assets enter service"
@@ -2470,7 +2471,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Provide structured handover checklist from project team to operations team at asset commissioning",
+          "text": "Handover checklist mechanism to formally transfer asset custody from project team to operations team upon commissioning",
           "source": "proxy",
           "proxy_refs": [
             "Handover checklist from project team to operations team"
@@ -2484,7 +2485,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Transfer as-built bill of materials and technical documentation from project to asset record upon commissioning",
+          "text": "Transfer as-built bill of materials and technical documentation from project records into the asset register upon commissioning",
           "source": "proxy",
           "proxy_refs": [
             "As-built BOM and technical documentation transferred to the asset record"
@@ -2512,7 +2513,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Integrate capital project workflows with project management module work breakdown structure",
+          "text": "Integration with project management module to align capital project work breakdown structure with asset creation and commissioning workflows",
           "source": "proxy",
           "proxy_refs": [
             "Integration with PM module for project-level work breakdown"
@@ -2534,20 +2535,20 @@
     },
     {
       "id": "asset.investment_planning",
-      "name": "Asset Investment Planning & Replacement Strategy",
+      "name": "Asset Investment Planning",
       "description": "Long-range planning for asset replacement, refurbishment, and retirement based on remaining useful life, criticality, and replacement cost — the \"strategic\" layer above tactical maintenance.",
       "priority_proxy": "advanced",
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "advanced",
       "cited_sources": [
         "ibm_maximo",
         "sap_s4hana_pm"
       ],
       "requirements": [
         {
-          "text": "Calculate remaining useful life (RUL) for each asset based on age, condition assessment, and manufacturer specifications",
+          "text": "Calculate remaining useful life (RUL) for each asset based on age, condition assessment, and degradation patterns",
           "source": "proxy",
           "proxy_refs": [
             "Remaining useful life (RUL) per asset from age + condition"
@@ -2560,7 +2561,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Maintain replacement cost and lead-time data by asset class to support investment planning",
+          "text": "Maintain replacement cost and procurement lead-time data by asset class",
           "source": "proxy",
           "proxy_refs": [
             "Replacement cost and lead-time per asset class"
@@ -2586,7 +2587,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Compare replacement scenarios (immediate replacement, refurbishment, deferral) with cost and risk outcomes",
+          "text": "Compare investment scenarios for candidate assets (replace, refurbish, defer) with cost and timeline impacts",
           "source": "proxy",
           "proxy_refs": [
             "Scenario comparison (e.g. replace now vs refurbish vs defer)"
@@ -2599,7 +2600,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Prioritize asset replacement candidates using risk and cost criteria to optimize capital allocation",
+          "text": "Prioritize replacement candidates using risk and cost criteria to optimize capital allocation",
           "source": "proxy",
           "proxy_refs": [
             "Risk × cost prioritisation of candidate replacements"
@@ -2612,7 +2613,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Integrate approved replacement plans with capital project creation and budgeting workflows",
+          "text": "Integrate approved investment plans with capital project creation workflows",
           "source": "proxy",
           "proxy_refs": [
             "Integration with capital project creation"
@@ -2625,7 +2626,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Provide portfolio-level dashboard of asset health status and aggregate investment requirements",
+          "text": "Provide portfolio-level dashboards showing aggregate asset health, investment needs, and capital requirements",
           "source": "proxy",
           "proxy_refs": [
             "Portfolio-level view of asset health and investment need"
@@ -2647,12 +2648,12 @@
     {
       "id": "asset.linear_assets",
       "name": "Linear Assets",
-      "description": "Specialised handling for linear/network assets (pipelines, rail track, roads, cables, tunnels) where condition and work are referenced by distance along the asset rather than by a single point.",
+      "description": "Specialised handling for linear and network assets (pipelines, rail track, roads, cables, tunnels) where condition and work are referenced by distance along the asset rather than by a single point.",
       "priority_proxy": "advanced",
       "applicability": [
-        "industry_specific"
+        "mid_market"
       ],
-      "sme_tier": null,
+      "sme_tier": "advanced",
       "cited_sources": [
         "ibm_maximo",
         "sap_s4hana_pm"
@@ -2672,7 +2673,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Record asset measurements using distance-based references (km, mile markers) rather than point coordinates",
+          "text": "Allow measurement and referencing of linear assets using distance-based markers (km, mile markers) rather than point coordinates",
           "source": "proxy",
           "proxy_refs": [
             "Measurement in km or mile markers rather than coordinates"
@@ -2685,7 +2686,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Attach condition data to linear segments with from-to distance ranges",
+          "text": "Attach condition data to linear segments defined by from-to distance ranges",
           "source": "proxy",
           "proxy_refs": [
             "Condition data attached to linear segments (from-to ranges)"
@@ -2758,14 +2759,14 @@
     },
     {
       "id": "asset.geospatial_gis",
-      "name": "Geospatial Asset Visualisation & GIS Integration",
+      "name": "Geospatial and GIS Integration",
       "description": "Map-based visualisation of assets and work, with GIS layer integration for organisations whose assets are distributed across wide areas (utilities, telco, municipalities).",
       "priority_proxy": "advanced",
       "applicability": [
         "enterprise",
-        "industry_specific"
+        "mid_market"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "ibm_maximo",
         "sap_s4hana_pm"
@@ -2811,7 +2812,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support geofence-based work assignment to dispatch crews to nearest or optimal assets",
+          "text": "Support geofenced work assignment to dispatch crews to nearest or optimal asset locations",
           "source": "proxy",
           "proxy_refs": [
             "Geofenced work assignment (dispatch crew to nearest asset)"
@@ -2837,7 +2838,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Overlay contextual GIS layers (land ownership, environmental zones, hazard areas) on asset map",
+          "text": "Overlay contextual GIS layers including land ownership, environmental zones, and hazard areas",
           "source": "proxy",
           "proxy_refs": [
             "GIS layers for land ownership, environmental zones, hazards"
@@ -2871,8 +2872,8 @@
     },
     {
       "id": "asset.sla_commercial",
-      "name": "Asset SLA & Commercial Uptime Management",
-      "description": "For organisations that lease equipment to customers or sell uptime as a service — track contractual SLAs per asset, measure compliance, and calculate penalties or bonus payments.",
+      "name": "Asset SLA Management",
+      "description": "For organisations that lease equipment to customers or sell uptime as a service (track contractual SLAs per asset, measure compliance, and calculate penalties or bonus payments).",
       "priority_proxy": "advanced",
       "applicability": [
         "sme",
@@ -2912,7 +2913,20 @@
           "solcat_citations": []
         },
         {
-          "text": "Detect SLA breaches and trigger automated alerts with escalation workflows.",
+          "text": "Exclude scheduled downtime windows from SLA compliance calculations.",
+          "source": "proxy",
+          "proxy_refs": [
+            "Scheduled downtime exclusions from SLA clock"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "ibm_maximo",
+            "sap_s4hana_pm"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Detect SLA breaches and trigger automated escalation alerts to relevant stakeholders.",
           "source": "proxy",
           "proxy_refs": [
             "SLA breach alerting with auto-escalation"
@@ -2938,7 +2952,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Generate customer-facing SLA compliance reports accessible via portal or scheduled delivery.",
+          "text": "Generate customer-facing SLA compliance reports via portal or scheduled delivery.",
           "source": "proxy",
           "proxy_refs": [
             "Customer-facing SLA reporting (portal or scheduled report)"
@@ -2951,20 +2965,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Exclude scheduled maintenance windows and planned downtime from SLA compliance calculations.",
-          "source": "proxy",
-          "proxy_refs": [
-            "Scheduled downtime exclusions from SLA clock"
-          ],
-          "imda_refs": [],
-          "vendor_citations": [
-            "ibm_maximo",
-            "sap_s4hana_pm"
-          ],
-          "solcat_citations": []
-        },
-        {
-          "text": "Maintain complete audit trail of SLA term changes, renegotiations, and approvals.",
+          "text": "Maintain audit trail of SLA term changes, renegotiations, and approvals.",
           "source": "proxy",
           "proxy_refs": [
             "SLA renegotiation history with audit trail"
@@ -2985,7 +2986,7 @@
     },
     {
       "id": "asset.energy_carbon",
-      "name": "Energy & Carbon Tracking per Asset",
+      "name": "Energy and Carbon per Asset",
       "description": "Capture energy consumption and carbon footprint at the asset level, identify anomalies, and feed sustainability reporting.",
       "priority_proxy": "standard",
       "applicability": [
@@ -3000,8 +3001,8 @@
       ],
       "requirements": [
         {
-          "text": "Record energy consumption measurements per asset in multiple units (kWh, therms, litres) with timestamp and meter source",
-          "source": "proxy",
+          "text": "Record energy consumption measurements per asset in standard units (kWh, therms, litres)",
+          "source": "both",
           "proxy_refs": [
             "Energy consumption meter per asset (kWh, therms, litres)"
           ],
@@ -3013,7 +3014,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Establish and maintain baseline consumption profiles by asset class to support performance benchmarking",
+          "text": "Establish and maintain baseline consumption profiles by asset class for comparison and variance analysis",
           "source": "proxy",
           "proxy_refs": [
             "Baseline consumption profile by asset class"
@@ -3026,7 +3027,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Detect and flag anomalies when asset energy consumption falls outside expected baseline band",
+          "text": "Detect and flag anomalies when asset consumption falls outside expected baseline bands",
           "source": "proxy",
           "proxy_refs": [
             "Anomaly detection (consumption outside expected band)"
@@ -3039,7 +3040,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Apply carbon conversion factors by energy source type and calculate CO₂e emissions per asset",
+          "text": "Apply carbon emission factors by energy source type and calculate CO₂e equivalents per asset",
           "source": "proxy",
           "proxy_refs": [
             "Carbon factor per energy source with CO₂e calculation"
@@ -3052,7 +3053,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Aggregate energy consumption and carbon emissions from asset level to site, division, and enterprise levels",
+          "text": "Aggregate energy consumption and carbon footprint from asset level to site, division, and enterprise levels",
           "source": "proxy",
           "proxy_refs": [
             "Rollup of energy and carbon to site, division, enterprise level"
@@ -3091,7 +3092,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track energy and carbon metrics for capital goods assets",
+          "text": "Support energy and carbon tracking for capital goods assets",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -3111,7 +3112,7 @@
           ]
         },
         {
-          "text": "Track energy and carbon metrics for leased assets",
+          "text": "Support energy and carbon tracking for leased assets",
           "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
@@ -3146,7 +3147,7 @@
         "mid_market",
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "preferred",
       "cited_sources": [
         "sap_s4hana_pm",
         "ibm_maximo"
@@ -3205,7 +3206,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Identify slow-moving and obsolete inventory to reduce carrying costs and write-off risk",
+          "text": "Identify slow-moving and obsolete inventory to reduce carrying costs and obsolescence risk",
           "source": "proxy",
           "proxy_refs": [
             "Obsolescence tracking (slow-moving and dead-stock identification)"
@@ -3231,7 +3232,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track supersession and alternate-part relationships to optimize stock consolidation and reduce redundant inventory",
+          "text": "Track supersession and alternate-part relationships to optimize stock coverage and reduce redundant inventory",
           "source": "proxy",
           "proxy_refs": [
             "Supersession and alternate-part chaining"
@@ -3244,7 +3245,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Perform what-if scenario analysis to evaluate the impact of stocking-policy changes on cost and service levels",
+          "text": "Perform what-if analysis on stocking policies to evaluate impact of changes before implementation",
           "source": "proxy",
           "proxy_refs": [
             "What-if analysis for stocking-policy changes"
@@ -3265,8 +3266,8 @@
     },
     {
       "id": "asset.mobile_disconnected",
-      "name": "Disconnected / Offline Field Operations",
-      "description": "Beyond basic mobile — full workflows for technicians operating in remote locations with no connectivity, including multi-day disconnection and sync conflict resolution.",
+      "name": "Offline Field Operations",
+      "description": "Beyond basic mobile (full workflows for technicians operating in remote locations with no connectivity, including multi-day disconnection and sync conflict resolution).",
       "priority_proxy": "standard",
       "applicability": [
         "sme",
@@ -3293,7 +3294,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support bulk pre-download of assets, work orders, and related master data before field technicians go offline",
+          "text": "Support bulk pre-download of assets, work orders, and related data before field technicians go offline",
           "source": "proxy",
           "proxy_refs": [
             "Bulk download of relevant assets and work orders before going offline"
@@ -3306,7 +3307,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Detect and resolve data conflicts automatically or with user guidance when syncing after offline work",
+          "text": "Detect and resolve data conflicts when syncing after offline work",
           "source": "proxy",
           "proxy_refs": [
             "Local conflict detection and resolution on sync"
@@ -3319,7 +3320,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Prioritize sync of critical data when bandwidth is constrained or connectivity is intermittent",
+          "text": "Prioritize sync of critical data when bandwidth is constrained",
           "source": "proxy",
           "proxy_refs": [
             "Priority-based sync when bandwidth is limited"
@@ -3332,7 +3333,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Queue attachments (photos, videos, documents) locally and defer upload until connectivity is available",
+          "text": "Queue attachments (photos, videos) locally and defer upload until connectivity is available",
           "source": "proxy",
           "proxy_refs": [
             "Attachment queue (photos, videos) with deferred upload"
@@ -3358,7 +3359,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Provide offline map tiles and navigation capability for remote site access without live connectivity",
+          "text": "Provide offline map tiles for navigation at remote sites without connectivity",
           "source": "proxy",
           "proxy_refs": [
             "Offline map tiles for remote-site navigation"
@@ -3379,20 +3380,20 @@
     },
     {
       "id": "asset.ar_vr_digital_twin",
-      "name": "AR / Digital Twin Work Instruction",
+      "name": "AR and Digital Twin Instructions",
       "description": "Overlay work instructions on physical assets using augmented reality or a 3D digital twin, and use the twin for maintenance simulation and remote collaboration.",
       "priority_proxy": "advanced",
       "applicability": [
         "enterprise"
       ],
-      "sme_tier": null,
+      "sme_tier": "advanced",
       "cited_sources": [
         "ibm_maximo",
         "sap_s4hana_pm"
       ],
       "requirements": [
         {
-          "text": "Create and maintain a 3D digital twin of physical assets linked to their master records",
+          "text": "Create and maintain a 3D digital twin of the asset linked to its master record",
           "source": "proxy",
           "proxy_refs": [
             "3D digital twin of the asset linked to its record"
@@ -3405,7 +3406,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Display work instructions as AR overlays on physical assets via tablet or headset devices",
+          "text": "Overlay work instructions on the physical asset using augmented reality via tablet or headset",
           "source": "proxy",
           "proxy_refs": [
             "AR overlay of work instructions on the physical asset via tablet or headset"
@@ -3418,7 +3419,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Provide step-by-step AR guidance with hands-free navigation for work execution",
+          "text": "Provide step-by-step AR guidance with hands-free navigation for technicians",
           "source": "proxy",
           "proxy_refs": [
             "Step-by-step AR guidance with hands-free navigation"
@@ -3431,7 +3432,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Enable remote expert collaboration via video call with real-time AR annotations on the asset or twin",
+          "text": "Enable remote expert collaboration through video call with AR annotations on the asset or twin",
           "source": "proxy",
           "proxy_refs": [
             "Remote-expert video call with AR annotations"
@@ -3457,7 +3458,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Ingest and synchronize 3D geometry from CAD and BIM sources for twin creation and updates",
+          "text": "Integrate CAD and BIM sources to populate and update the digital twin geometry",
           "source": "proxy",
           "proxy_refs": [
             "Integration with CAD/BIM sources for the twin geometry"
@@ -3470,7 +3471,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Provide training mode allowing users to practice procedures on the digital twin without affecting the physical asset",
+          "text": "Provide training mode using the digital twin to allow technicians to practice without affecting the real asset",
           "source": "proxy",
           "proxy_refs": [
             "Training mode using the twin without touching the real asset"
@@ -3491,7 +3492,7 @@
     },
     {
       "id": "asset.leasing",
-      "name": "Asset Leasing & Lease Accounting",
+      "name": "Asset Leasing",
       "description": "Handle assets that are leased in (the organisation is the lessee) or leased out (the organisation is the lessor), including compliance with IFRS 16 / ASC 842 lease accounting standards which require even operating leases to be capitalised.",
       "priority_proxy": "advanced",
       "applicability": [
@@ -3584,7 +3585,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support lessor revenue recognition for assets leased out to third parties.",
+          "text": "Support lessor revenue recognition accounting for leased-out assets.",
           "source": "proxy",
           "proxy_refs": [
             "Lessor revenue recognition for leased-out assets"
@@ -3618,14 +3619,14 @@
     },
     {
       "id": "asset.cybersecurity_ot",
-      "name": "OT / ICS Cybersecurity & Asset Vulnerability",
+      "name": "OT Cybersecurity",
       "description": "Operational-technology security tied to the asset register: patch status, known vulnerabilities, and incidents per connected asset (PLCs, SCADA, ICS gateways, industrial IoT). Distinct from IT cybersecurity because the threat model prioritises availability and safety over confidentiality.",
       "priority_proxy": "advanced",
       "applicability": [
         "enterprise",
-        "industry_specific"
+        "mid_market"
       ],
-      "sme_tier": null,
+      "sme_tier": "advanced",
       "cited_sources": [
         "ibm_maximo",
         "sap_s4hana_pm"
@@ -3645,7 +3646,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Integrate CVE feeds and map known vulnerabilities to each asset",
+          "text": "Integrate CVE feed data and expose vulnerability status per asset",
           "source": "proxy",
           "proxy_refs": [
             "CVE feed integration with vulnerability exposure per asset"
@@ -3658,7 +3659,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Map OT network zones and conduits (per IEC 62443) to asset locations",
+          "text": "Map OT network zones and conduits (per IEC 62443) and link to asset locations",
           "source": "proxy",
           "proxy_refs": [
             "OT network zone and conduit mapping (IEC 62443) linked to asset locations"
@@ -3743,6 +3744,114 @@
       }
     },
     {
+      "id": "asset.ai_ml",
+      "name": "AI and ML for Asset Management",
+      "description": "Artificial intelligence applied to asset management - predictive maintenance from condition and sensor data, anomaly detection, and remaining-useful-life estimation.",
+      "priority_proxy": "advanced",
+      "applicability": [
+        "mid_market",
+        "enterprise"
+      ],
+      "sme_tier": "advanced",
+      "cited_sources": [
+        "ibm_maximo",
+        "sap_eam",
+        "infor_eam",
+        "fiix"
+      ],
+      "requirements": [
+        {
+          "text": "Predict maintenance needs using condition monitoring and sensor data to generate maintenance scores",
+          "source": "both",
+          "proxy_refs": [
+            "Predictive maintenance scoring from condition and sensor data"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00119",
+              "text": "An IoT sensor detects a malfunction in equipment and automatically generates a work order for repair.",
+              "q_title": "Work Order Automation using IoT",
+              "subsection": "Example",
+              "sources": [
+                "essential-business__field-service-management"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "ibm_maximo"
+          ],
+          "solcat_citations": [
+            "essential-business__field-service-management"
+          ]
+        },
+        {
+          "text": "Detect anomalies in equipment telemetry to identify unexpected behavior or degradation",
+          "source": "proxy",
+          "proxy_refs": [
+            "Anomaly detection on equipment telemetry"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "ibm_maximo"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Estimate remaining useful life and failure risk for assets based on historical and real-time data",
+          "source": "proxy",
+          "proxy_refs": [
+            "Remaining-useful-life and failure-risk estimation"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "ibm_maximo"
+          ],
+          "solcat_citations": []
+        },
+        {
+          "text": "Automatically generate work orders when sensor data or anomaly detection triggers maintenance thresholds",
+          "source": "both",
+          "proxy_refs": [
+            "AI-driven maintenance scheduling and spare-parts optimisation"
+          ],
+          "imda_refs": [
+            {
+              "id": "req-00119",
+              "text": "An IoT sensor detects a malfunction in equipment and automatically generates a work order for repair.",
+              "q_title": "Work Order Automation using IoT",
+              "subsection": "Example",
+              "sources": [
+                "essential-business__field-service-management"
+              ]
+            }
+          ],
+          "vendor_citations": [
+            "ibm_maximo"
+          ],
+          "solcat_citations": [
+            "essential-business__field-service-management"
+          ]
+        },
+        {
+          "text": "Optimize maintenance scheduling and spare-parts procurement based on predictive insights",
+          "source": "proxy",
+          "proxy_refs": [
+            "AI-driven maintenance scheduling and spare-parts optimisation"
+          ],
+          "imda_refs": [],
+          "vendor_citations": [
+            "ibm_maximo"
+          ],
+          "solcat_citations": []
+        }
+      ],
+      "stats": {
+        "proxy_in": 4,
+        "imda_in": 1,
+        "merged_out": 5
+      }
+    },
+    {
       "id": "asset.mobile_access",
       "name": "Mobile and Multi-Device Access",
       "description": "The solution works on phones, tablets, and desktops so maintenance teams, supervisors, and field technicians can access asset data and work orders from any device.",
@@ -3775,7 +3884,7 @@
           "solcat_citations": []
         },
         {
-          "text": "User interface employs responsive design that adapts to all screen sizes and device orientations",
+          "text": "User interface uses responsive design to adapt to all screen sizes and device orientations",
           "source": "proxy",
           "proxy_refs": [
             "Responsive design adapting to all screen sizes"
@@ -3789,7 +3898,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Users can view and update asset records from mobile devices",
+          "text": "Users can view and update asset records on mobile devices",
           "source": "proxy",
           "proxy_refs": [
             "View and update asset records on a mobile device"
@@ -3831,7 +3940,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Application supports offline mode with automatic synchronization when network connectivity is restored",
+          "text": "Application supports offline mode on mobile devices with automatic data synchronization when connectivity is restored",
           "source": "proxy",
           "proxy_refs": [
             "Offline mode with sync when reconnected for field use"
@@ -3853,7 +3962,7 @@
     },
     {
       "id": "asset.data_governance",
-      "name": "Data Security, Privacy & Governance",
+      "name": "Data Security, Privacy and Governance",
       "description": "Data hygiene, consent management (PDPA), retention policies, audit trails, and encryption for the asset register, work order history, and maintenance records.",
       "priority_proxy": "must_have",
       "applicability": [
@@ -3907,7 +4016,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support data deletion and anonymization workflows to fulfill personal data removal requests in asset records",
+          "text": "Support data deletion and anonymization workflows to fulfill personal data removal requests in compliance with privacy regulations",
           "source": "proxy",
           "proxy_refs": [
             "Handle data deletion requests for personal data in asset records"
@@ -3920,7 +4029,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Track and manage PDPA-compliant consent for processing contractor and tenant personal data",
+          "text": "Track and manage consent records for contractor and tenant personal data in accordance with PDPA requirements",
           "source": "proxy",
           "proxy_refs": [
             "PDPA-compliant consent tracking for contractor and tenant data"
@@ -3933,7 +4042,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Comply with PSG Cyber Essentials Mark baseline security controls",
+          "text": "Align security controls and data governance practices with PSG Cyber Essentials Mark baseline requirements",
           "source": "proxy",
           "proxy_refs": [
             "Compliant with PSG Cyber Essentials Mark baseline"
@@ -3954,8 +4063,8 @@
     },
     {
       "id": "asset.user_access_roles",
-      "name": "User Accounts, Roles & Access Control",
-      "description": "Multiple staff roles — maintenance planners, technicians, supervisors, finance — each with their own login, role-based permissions, and audit of what they accessed or changed.",
+      "name": "User Accounts, Roles and Access Control",
+      "description": "Multiple staff roles (maintenance planners, technicians, supervisors, finance) each with their own login, role-based permissions, and audit of what they accessed or changed.",
       "priority_proxy": "must_have",
       "applicability": [
         "sme",
@@ -3984,7 +4093,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Role-based access control with predefined roles (e.g., planner, technician, supervisor, read-only)",
+          "text": "Role-based access control with predefined roles (e.g., maintenance planner, technician, supervisor, read-only)",
           "source": "proxy",
           "proxy_refs": [
             "Role-based permissions (planner, technician, supervisor, read-only)"
@@ -3998,7 +4107,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Restrict user access by asset location, department, or cost centre",
+          "text": "Restrict data and feature access by asset location, department, or cost centre",
           "source": "proxy",
           "proxy_refs": [
             "Restrict access by asset location, department, or cost centre"
@@ -4012,27 +4121,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Assign and manage staff responsibility for maintenance of specific equipment",
-          "source": "imda",
-          "proxy_refs": [],
-          "imda_refs": [
-            {
-              "id": "req-01148",
-              "text": "S to manage the scope and staff in charge of maintenance for the equipment",
-              "q_title": "Maintenance Staff Management",
-              "subsection": "Maintenance Staff Management",
-              "sources": [
-                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
-              ]
-            }
-          ],
-          "vendor_citations": [],
-          "solcat_citations": [
-            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
-          ]
-        },
-        {
-          "text": "Deactivate user accounts when staff leave the organisation",
+          "text": "Deactivate or revoke user accounts when staff leave the organisation",
           "source": "proxy",
           "proxy_refs": [
             "Deactivate users when they leave the organisation"
@@ -4046,7 +4135,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Support single sign-on integration with external identity providers (Google, Microsoft, SAML)",
+          "text": "Support single sign-on integration (e.g., Google, Microsoft, SAML)",
           "source": "proxy",
           "proxy_refs": [
             "Single sign-on support (Google, Microsoft, SAML)"
@@ -4074,7 +4163,7 @@
           "solcat_citations": []
         },
         {
-          "text": "Maintain audit log of user logins and permission changes",
+          "text": "Maintain audit log of user logins, permission changes, and data access",
           "source": "proxy",
           "proxy_refs": [
             "Audit log of user logins and permission changes"
@@ -4086,6 +4175,26 @@
             "sap_s4hana_pm"
           ],
           "solcat_citations": []
+        },
+        {
+          "text": "Assign staff members to maintenance scopes and equipment responsibilities",
+          "source": "imda",
+          "proxy_refs": [],
+          "imda_refs": [
+            {
+              "id": "req-01148",
+              "text": "S to manage the scope and staff in charge of maintenance for the equipment",
+              "q_title": "Maintenance Staff Management",
+              "subsection": "Maintenance Staff Management",
+              "sources": [
+                "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+              ]
+            }
+          ],
+          "vendor_citations": [],
+          "solcat_citations": [
+            "advanced-manufacturing__equipment-monitoring-and-manufacturing-data-collection"
+          ]
         }
       ],
       "stats": {
@@ -4096,7 +4205,7 @@
     },
     {
       "id": "asset.integration_import_export",
-      "name": "Data Import, Export & Integration",
+      "name": "Data Import, Export and Integration",
       "description": "Bring in existing asset registers and push data out to finance, procurement, IoT platforms, and other enterprise systems. Every SME migrating from spreadsheets needs bulk import; every growing business needs API-level integration.",
       "priority_proxy": "must_have",
       "applicability": [
@@ -4113,7 +4222,7 @@
       "requirements": [
         {
           "text": "Bulk import of asset registers from CSV or Excel files",
-          "source": "both",
+          "source": "proxy",
           "proxy_refs": [
             "Bulk import of asset register from CSV or Excel"
           ],
@@ -4127,7 +4236,7 @@
         },
         {
           "text": "Export asset, work order, and spare parts data to CSV, Excel, or PDF formats",
-          "source": "both",
+          "source": "proxy",
           "proxy_refs": [
             "Export asset, work order, and spare parts data to CSV, Excel, or PDF"
           ],
@@ -4141,7 +4250,7 @@
         },
         {
           "text": "RESTful API access for custom integrations with third-party systems",
-          "source": "both",
+          "source": "proxy",
           "proxy_refs": [
             "API access for custom integrations with other systems"
           ],
@@ -4155,7 +4264,7 @@
         },
         {
           "text": "Integration with accounting or ERP systems for depreciation and cost posting",
-          "source": "both",
+          "source": "proxy",
           "proxy_refs": [
             "Integration with accounting or ERP for depreciation and cost posting"
           ],
@@ -4169,7 +4278,7 @@
         },
         {
           "text": "Integration with procurement systems for spare parts purchase order generation",
-          "source": "both",
+          "source": "proxy",
           "proxy_refs": [
             "Integration with procurement for spare parts purchase orders"
           ],
@@ -4183,7 +4292,7 @@
         },
         {
           "text": "Webhook or event-based integration for IoT sensor platforms and real-time data ingestion",
-          "source": "both",
+          "source": "proxy",
           "proxy_refs": [
             "Webhook or event-based integration for IoT sensor platforms"
           ],
@@ -4196,8 +4305,8 @@
           "solcat_citations": []
         },
         {
-          "text": "Scheduled automated data backups and exports",
-          "source": "both",
+          "text": "Scheduled data backups and automated exports",
+          "source": "proxy",
           "proxy_refs": [
             "Scheduled data backups and export"
           ],
@@ -4210,8 +4319,8 @@
           "solcat_citations": []
         },
         {
-          "text": "Cross-module data integration enabling consolidated dashboard views across asset, work order, and spare parts modules",
-          "source": "both",
+          "text": "Cross-module data integration enabling consolidated dashboard visibility across all modules",
+          "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {
@@ -4230,8 +4339,8 @@
           ]
         },
         {
-          "text": "Asset tracking with visibility of lot and serial number information",
-          "source": "both",
+          "text": "Asset tracking with visibility of lot and serial number attributes",
+          "source": "imda",
           "proxy_refs": [],
           "imda_refs": [
             {

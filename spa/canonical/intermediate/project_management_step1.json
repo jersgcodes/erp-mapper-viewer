@@ -3,28 +3,14 @@
   "stats": {
     "input_reqs": 48,
     "unique_section_pairs": 46,
-    "placed_via_section_lookup": 36,
-    "placed_via_fallback": 20,
+    "placed_via_section_lookup": 35,
+    "placed_via_fallback": 23,
     "unmapped": 0,
-    "total_placements": 72,
+    "total_placements": 63,
     "unique_reqs_placed": 48
   },
   "placements": {
     "proj.project_master": [
-      {
-        "id": "req-01047",
-        "text": "Project managers can access site progress checklists, site coordination meetings, stock level of materials, and payment records in one place.",
-        "q_title": "Centralised Project Information",
-        "subsection": "Example",
-        "sources": [
-          "built-environment__built-environment-digital-platform"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.document_collaboration",
-          "proj.project_master"
-        ]
-      },
       {
         "id": "req-01345",
         "text": "The project manager assigns tasks to team members, setting priorities and deadlines, and outlining all the scheduled and planned resources.",
@@ -35,8 +21,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.project_master",
-          "proj.task_management"
+          "proj.project_master"
         ]
       },
       {
@@ -50,7 +35,7 @@
         "placed_via": "fallback_llm",
         "capabilities": [
           "proj.project_master",
-          "proj.gantt_critical_path"
+          "proj.task_management"
         ]
       },
       {
@@ -84,19 +69,6 @@
     ],
     "proj.task_management": [
       {
-        "id": "req-00215",
-        "text": "Calendar functions with scheduling, reminders, and notifications pertaining to case management",
-        "q_title": "Calendar Management",
-        "subsection": "Calendar Management",
-        "sources": [
-          "legal__practice-management-system-pms"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.task_management"
-        ]
-      },
-      {
         "id": "req-00527",
         "text": "Does your solution come with Project Management functions to help the firm estimate project costs, monitor work in progress, and monitor staff performance",
         "q_title": "Case Management and Task Tracking",
@@ -111,30 +83,17 @@
         ]
       },
       {
-        "id": "req-00905",
-        "text": "Matter progress tracking with status updates, milestone tracking, and reporting capabilities",
-        "q_title": "Progress Tracking and Reporting",
-        "subsection": "Progress Tracking and Reporting",
+        "id": "req-00991",
+        "text": "Planning and coordination of change in work order sequences, postponing or incorporating urgent tasks due to unplanned issues",
+        "q_title": "Work Order Scheduling",
+        "subsection": "Work Order Scheduling",
         "sources": [
-          "legal__matters-management-and-collaboration-tool"
+          "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.reporting_dashboards",
-          "proj.task_management"
-        ]
-      },
-      {
-        "id": "req-01072",
-        "text": "Provide integrated calendar and scheduling features for room, and equipment management",
-        "q_title": "Appointment Scheduling",
-        "subsection": "Scheduling Features",
-        "sources": [
-          "personal-care-services__salon-management-system"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.task_management"
+          "proj.task_management",
+          "proj.dependencies_scheduling"
         ]
       },
       {
@@ -147,34 +106,6 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.task_management"
-        ]
-      },
-      {
-        "id": "req-01342",
-        "text": "The platform provides a real-time dashboard for the main contractor to monitor work progress, while the project manager can generate reports on project status such as concrete poured, or man-hours worked, to share the data with internal and external stakeholders.",
-        "q_title": "Project Monitoring",
-        "subsection": "Example",
-        "sources": [
-          "built-environment__built-environment-digital-platform"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.reporting_dashboards",
-          "proj.task_management"
-        ]
-      },
-      {
-        "id": "req-01345",
-        "text": "The project manager assigns tasks to team members, setting priorities and deadlines, and outlining all the scheduled and planned resources.",
-        "q_title": "Project Management",
-        "subsection": "Example",
-        "sources": [
-          "built-environment__built-environment-digital-platform"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.project_master",
           "proj.task_management"
         ]
       },
@@ -194,6 +125,20 @@
         ]
       },
       {
+        "id": "req-00215",
+        "text": "Calendar functions with scheduling, reminders, and notifications pertaining to case management",
+        "q_title": "Calendar Management",
+        "subsection": "Calendar Management",
+        "sources": [
+          "legal__practice-management-system-pms"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "proj.notifications_reminders",
+          "proj.task_management"
+        ]
+      },
+      {
         "id": "req-00373",
         "text": "creation and posting of jobs, job transfer, job scheduling and assignment, job monitoring, etc.",
         "q_title": "Electronic Proof of Delivery",
@@ -205,6 +150,20 @@
         "capabilities": [
           "proj.task_management",
           "proj.resource_allocation"
+        ]
+      },
+      {
+        "id": "req-00744",
+        "text": "Implementation timeline with key milestones",
+        "q_title": "Cross-border E-commerce Strategy Development",
+        "subsection": "",
+        "sources": [
+          "essential-business__cross-border-e-commerce-packages"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "proj.project_master",
+          "proj.task_management"
         ]
       },
       {
@@ -221,6 +180,20 @@
           "proj.task_management",
           "proj.budget_cost"
         ]
+      },
+      {
+        "id": "req-01072",
+        "text": "Provide integrated calendar and scheduling features for room, and equipment management",
+        "q_title": "Appointment Scheduling",
+        "subsection": "Scheduling Features",
+        "sources": [
+          "personal-care-services__salon-management-system"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "proj.task_management",
+          "proj.resource_allocation"
+        ]
       }
     ],
     "proj.time_tracking": [
@@ -234,8 +207,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.time_tracking",
-          "proj.integration_import_export"
+          "proj.time_tracking"
         ]
       },
       {
@@ -264,6 +236,20 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
+          "proj.budget_cost"
+        ]
+      },
+      {
+        "id": "req-00546",
+        "text": "Does your solution handle progress claims, work verification, and payment settlement processes",
+        "q_title": "BE Payment Management",
+        "subsection": "BE Payment Management",
+        "sources": [
+          "built-environment__digital-contract-management-digital-payment"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "proj.billing_invoicing",
           "proj.budget_cost"
         ]
       },
@@ -298,58 +284,16 @@
     ],
     "proj.resource_allocation": [
       {
-        "id": "req-00096",
-        "text": "Allow integration with any existing project scheduling and management system",
-        "q_title": "User Account and Scheduling Management",
-        "subsection": "Required Functions",
+        "id": "req-01275",
+        "text": "special assignments and projects)",
+        "q_title": "Staff Management Insights",
+        "subsection": "",
         "sources": [
-          "built-environment__built-environment-digital-platform"
+          "early-childhood__data-mining-and-analytics-centre-operations",
+          "early-childhood__data-mining-and-analytics-centre-operations-and-child-development"
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.user_access_roles",
-          "proj.resource_allocation"
-        ]
-      },
-      {
-        "id": "req-00991",
-        "text": "Planning and coordination of change in work order sequences, postponing or incorporating urgent tasks due to unplanned issues",
-        "q_title": "Work Order Scheduling",
-        "subsection": "Work Order Scheduling",
-        "sources": [
-          "advanced-manufacturing__real-time-production-scheduling-and-job-tracking"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.resource_allocation",
-          "proj.dependencies_scheduling"
-        ]
-      },
-      {
-        "id": "req-01212",
-        "text": "Set up admin and end user accounts for all project members",
-        "q_title": "User Account and Scheduling Management",
-        "subsection": "Required Functions",
-        "sources": [
-          "built-environment__built-environment-digital-platform"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.user_access_roles",
-          "proj.resource_allocation"
-        ]
-      },
-      {
-        "id": "req-01217",
-        "text": "Set up and edit business units for different team member profiles",
-        "q_title": "User Account and Scheduling Management",
-        "subsection": "Required Functions",
-        "sources": [
-          "built-environment__built-environment-digital-platform"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.user_access_roles",
           "proj.resource_allocation"
         ]
       },
@@ -381,6 +325,20 @@
           "proj.task_management",
           "proj.resource_allocation"
         ]
+      },
+      {
+        "id": "req-01072",
+        "text": "Provide integrated calendar and scheduling features for room, and equipment management",
+        "q_title": "Appointment Scheduling",
+        "subsection": "Scheduling Features",
+        "sources": [
+          "personal-care-services__salon-management-system"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "proj.task_management",
+          "proj.resource_allocation"
+        ]
       }
     ],
     "proj.billing_invoicing": [
@@ -395,7 +353,7 @@
         "placed_via": "fallback_llm",
         "capabilities": [
           "proj.billing_invoicing",
-          "proj.earned_value"
+          "proj.budget_cost"
         ]
       }
     ],
@@ -423,21 +381,6 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.reporting_dashboards",
-          "proj.task_management"
-        ]
-      },
-      {
-        "id": "req-01337",
-        "text": "The platform allows the firm to oversee multiple projects simultaneously, if workers complete their work on one project earlier than expected, the resource manager can reallocate these workers to another project. The platform also provides overall budget performance for budget reallocation.",
-        "q_title": "Portfolio-wide Visibility",
-        "subsection": "Example",
-        "sources": [
-          "built-environment__built-environment-digital-platform"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.multi_project",
           "proj.reporting_dashboards"
         ]
       },
@@ -451,8 +394,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.reporting_dashboards",
-          "proj.task_management"
+          "proj.reporting_dashboards"
         ]
       },
       {
@@ -522,8 +464,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.document_collaboration",
-          "proj.project_master"
+          "proj.document_collaboration"
         ]
       },
       {
@@ -566,22 +507,7 @@
         ]
       }
     ],
-    "proj.gantt_critical_path": [
-      {
-        "id": "req-00744",
-        "text": "Implementation timeline with key milestones",
-        "q_title": "Cross-border E-commerce Strategy Development",
-        "subsection": "",
-        "sources": [
-          "essential-business__cross-border-e-commerce-packages"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "proj.project_master",
-          "proj.gantt_critical_path"
-        ]
-      }
-    ],
+    "proj.gantt_critical_path": [],
     "proj.kanban_agile": [],
     "proj.risk_issues": [
       {
@@ -595,20 +521,6 @@
         "placed_via": "section_lookup",
         "capabilities": [
           "proj.risk_issues"
-        ]
-      },
-      {
-        "id": "req-00086",
-        "text": "Alerts the project team if material delivery delays could impact the installation timeline for precast panels.",
-        "q_title": "Automated Schedule Risk Analysis",
-        "subsection": "Example",
-        "sources": [
-          "built-environment__built-environment-digital-platform"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.risk_issues",
-          "proj.dependencies_scheduling"
         ]
       },
       {
@@ -638,44 +550,12 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.multi_project",
-          "proj.reporting_dashboards"
+          "proj.multi_project"
         ]
       }
     ],
-    "proj.resource_pool_skills": [
-      {
-        "id": "req-01275",
-        "text": "special assignments and projects)",
-        "q_title": "Staff Management Insights",
-        "subsection": "",
-        "sources": [
-          "early-childhood__data-mining-and-analytics-centre-operations",
-          "early-childhood__data-mining-and-analytics-centre-operations-and-child-development"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.resource_pool_skills",
-          "proj.analytics_profitability"
-        ]
-      }
-    ],
-    "proj.earned_value": [
-      {
-        "id": "req-00546",
-        "text": "Does your solution handle progress claims, work verification, and payment settlement processes",
-        "q_title": "BE Payment Management",
-        "subsection": "BE Payment Management",
-        "sources": [
-          "built-environment__digital-contract-management-digital-payment"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "proj.billing_invoicing",
-          "proj.earned_value"
-        ]
-      }
-    ],
+    "proj.resource_pool_skills": [],
+    "proj.earned_value": [],
     "proj.expense_tracking": [
       {
         "id": "req-00594",
@@ -724,23 +604,7 @@
         ]
       }
     ],
-    "proj.analytics_profitability": [
-      {
-        "id": "req-01275",
-        "text": "special assignments and projects)",
-        "q_title": "Staff Management Insights",
-        "subsection": "",
-        "sources": [
-          "early-childhood__data-mining-and-analytics-centre-operations",
-          "early-childhood__data-mining-and-analytics-centre-operations-and-child-development"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.resource_pool_skills",
-          "proj.analytics_profitability"
-        ]
-      }
-    ],
+    "proj.analytics_profitability": [],
     "proj.workflow_automation": [
       {
         "id": "req-00759",
@@ -767,50 +631,9 @@
         "capabilities": [
           "proj.workflow_automation"
         ]
-      },
-      {
-        "id": "req-00171",
-        "text": "Automated identification of recurring activities",
-        "q_title": "AI Features Integrated POS - Elaboration",
-        "subsection": "AI Feature Examples",
-        "sources": [
-          "retail__integrated-pos-with-mobile-features"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "proj.workflow_automation"
-        ]
-      },
-      {
-        "id": "req-00731",
-        "text": "Highlights that a crane is overbooked for overlapping tasks and proposes rescheduling one task to a different time slot.",
-        "q_title": "Automated Resolution Recommendation",
-        "subsection": "Example",
-        "sources": [
-          "built-environment__built-environment-digital-platform"
-        ],
-        "placed_via": "fallback_llm",
-        "capabilities": [
-          "proj.dependencies_scheduling",
-          "proj.workflow_automation"
-        ]
       }
     ],
     "proj.dependencies_scheduling": [
-      {
-        "id": "req-00086",
-        "text": "Alerts the project team if material delivery delays could impact the installation timeline for precast panels.",
-        "q_title": "Automated Schedule Risk Analysis",
-        "subsection": "Example",
-        "sources": [
-          "built-environment__built-environment-digital-platform"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.risk_issues",
-          "proj.dependencies_scheduling"
-        ]
-      },
       {
         "id": "req-00991",
         "text": "Planning and coordination of change in work order sequences, postponing or incorporating urgent tasks due to unplanned issues",
@@ -821,7 +644,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.resource_allocation",
+          "proj.task_management",
           "proj.dependencies_scheduling"
         ]
       },
@@ -835,8 +658,8 @@
         ],
         "placed_via": "fallback_llm",
         "capabilities": [
-          "proj.dependencies_scheduling",
-          "proj.workflow_automation"
+          "proj.ai_ml",
+          "proj.dependencies_scheduling"
         ]
       }
     ],
@@ -881,6 +704,62 @@
         "placed_via": "section_lookup",
         "capabilities": [
           "proj.notifications_reminders"
+        ]
+      },
+      {
+        "id": "req-00215",
+        "text": "Calendar functions with scheduling, reminders, and notifications pertaining to case management",
+        "q_title": "Calendar Management",
+        "subsection": "Calendar Management",
+        "sources": [
+          "legal__practice-management-system-pms"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "proj.notifications_reminders",
+          "proj.task_management"
+        ]
+      }
+    ],
+    "proj.ai_ml": [
+      {
+        "id": "req-00086",
+        "text": "Alerts the project team if material delivery delays could impact the installation timeline for precast panels.",
+        "q_title": "Automated Schedule Risk Analysis",
+        "subsection": "Example",
+        "sources": [
+          "built-environment__built-environment-digital-platform"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "proj.ai_ml"
+        ]
+      },
+      {
+        "id": "req-00171",
+        "text": "Automated identification of recurring activities",
+        "q_title": "AI Features Integrated POS - Elaboration",
+        "subsection": "AI Feature Examples",
+        "sources": [
+          "retail__integrated-pos-with-mobile-features"
+        ],
+        "placed_via": "section_lookup",
+        "capabilities": [
+          "proj.ai_ml"
+        ]
+      },
+      {
+        "id": "req-00731",
+        "text": "Highlights that a crane is overbooked for overlapping tasks and proposes rescheduling one task to a different time slot.",
+        "q_title": "Automated Resolution Recommendation",
+        "subsection": "Example",
+        "sources": [
+          "built-environment__built-environment-digital-platform"
+        ],
+        "placed_via": "fallback_llm",
+        "capabilities": [
+          "proj.ai_ml",
+          "proj.dependencies_scheduling"
         ]
       }
     ],
@@ -939,8 +818,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.user_access_roles",
-          "proj.resource_allocation"
+          "proj.user_access_roles"
         ]
       },
       {
@@ -981,8 +859,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.user_access_roles",
-          "proj.resource_allocation"
+          "proj.user_access_roles"
         ]
       },
       {
@@ -995,8 +872,7 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.user_access_roles",
-          "proj.resource_allocation"
+          "proj.user_access_roles"
         ]
       }
     ],
@@ -1011,20 +887,6 @@
         ],
         "placed_via": "section_lookup",
         "capabilities": [
-          "proj.integration_import_export"
-        ]
-      },
-      {
-        "id": "req-00552",
-        "text": "Does your solution integrate time tracking functionality for billable hours within the collaboration workspace",
-        "q_title": "Time Tracking Integration",
-        "subsection": "Time Tracking Integration",
-        "sources": [
-          "legal__matters-management-and-collaboration-tool"
-        ],
-        "placed_via": "section_lookup",
-        "capabilities": [
-          "proj.time_tracking",
           "proj.integration_import_export"
         ]
       },
